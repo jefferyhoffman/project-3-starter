@@ -34,8 +34,6 @@ class AuthDropdown extends Component {
           <Gravatar className="rounded-circle" email={user.email} size={30} /> {user.email}
         </button>
         <div className={dropdownMenuClass} aria-labelledby="navbarDropdown">
-          <Link className="dropdown-item" to="/settings">Settings</Link>
-          <div className="dropdown-divider"></div>
           <div className="dropdown-item" onClick={this.handleLogout}>Logout</div>
         </div>
       </li>

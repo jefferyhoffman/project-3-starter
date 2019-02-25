@@ -5,11 +5,11 @@ import AuthContext from '../../contexts/AuthContext';
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <AuthContext.Consumer>
-    {({ user }) => (
+    {({ authToken }) => (
       <Route
         {...rest}
         render={props =>
-          user ? (
+          authToken ? (
             <Component {...props} />
           ) : (
               <Redirect
