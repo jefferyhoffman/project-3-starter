@@ -1,0 +1,18 @@
+{
+  "name": "project-3-server",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "server.js",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.0",
+    "morgan": "^1.9.1",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0"
+  },
+  "scripts": {
+    "start": "node server",
+    "start:dev": "nodemon"
+  }
+}
