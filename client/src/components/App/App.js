@@ -19,35 +19,37 @@ class App extends Component {
 
     this.handleLogin = (user, authToken) => {
       TokenStore.setToken(authToken);
-      this.setState({ user, authToken });
+      this.setState(prevState => ({ auth: { ...prevState.auth, user, authToken } }));
     };
 
     this.handleLogout = () => {
       TokenStore.clearToken();
-      this.setState({ user: undefined, authToken: undefined });
+      this.setState(prevState => ({ auth: { ...prevState.auth, user: undefined, authToken: undefined } }));
     }
 
     this.state = {
-      user: undefined,
-      authToken: undefined,
-      onLogin: this.handleLogin,
-      onLogout: this.handleLogout
+      auth: {
+        user: undefined,
+        authToken: TokenStore.getToken(),
+        onLogin: this.handleLogin,
+        onLogout: this.handleLogout
+      }
     }
   }
 
   componentDidMount() {
-    const authToken = TokenStore.getToken();
+    const { authToken } = this.state.auth;
     if (!authToken) return;
 
     API.Users.getMe(authToken)
       .then(response => response.data)
-      .then(user => this.setState({ user, authToken }))
+      .then(user => this.setState(prevState => ({ auth: { ...prevState.auth, user } })))
       .catch(err => console.log(err));
   }
 
   render() {
     return (
-      <AuthContext.Provider value={this.state}>
+      <AuthContext.Provider value={this.state.auth}>
         <div className='App'>
           <Navigation />
           <div className='container'>
