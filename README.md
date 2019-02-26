@@ -1,7 +1,9 @@
 # Mongoose & Project 3 Starter
 
 *All models are imported too and exported out of index*
+
 **Via the mongo shell, you will need to insert a message into your secret model**
+
 **All uses can be created via the registration form on the site**
 * Models
     * index
