@@ -56,15 +56,15 @@ client
         └── Secret
 ```
 
-#### /client/public
+#### client/public
 
 The `public` folder contains the one-and-only HTML file used on the client: `index.html`. The only modification I made from the default is to add a link to the Bootstrap CDN.
 
-#### /client/src
+#### client/src
 
 The `src` folder contains all the JavaScript code, organized into `components`, `contexts`, `lib`, and `pages`.
 
-#### /client/src/components
+#### client/src/components
 
 Inside the `components` folder you'll find most of the React components used on the client:
 
@@ -78,19 +78,55 @@ Then we have the `Navigation` component, which is used at the top of the page to
 
 Lastly, we have the `PrivateRoute` component. Never seen by the user, this is a high-order component that protects private routes from being accessed by logged-out users. It's used in `App` to designate any routes that should not be publicly accessible, and consumes `AuthContext` to know whether or not it should redirect.
 
-#### /client/src/contexts
+#### client/src/contexts
 
-#### /client/src/lib
+`AuthContext` provides authentication state and functions to modify that state. This is used by the `App` component to pass authentication data to its children without prop-drilling. Any child component may consume this data as follows:
 
-#### /client/src/pages
+```javascript
+import AuthContext from '../../contexts/AuthContext';
+
+const StatelessChildWithAuth = props => (
+  <AuthContext.Consumer>
+    {({ authToken, user, onLogin, onLogout }) => (
+      <div>{user.email}</div>
+    )}
+  </AuthContext.Consumer>
+);
+
+class ContainerWithAuth extends React.Component {
+  static contextType = AuthContext;
+
+  componentDidMount() {
+    API.someCall(this.context.authToken)
+      .then(res => console.log(res))
+      .catch(err => console.log(err));
+  }
+
+  render() {
+    return (
+      <div>{this.context.user.email}</div>
+    );
+  }
+}
+```
+
+#### client/src/lib
+
+The `API` module wraps all axios calls to the express server, providing one convenient place to look for anything API-related. 
+
+As you build out your app's features and add more API routes to your server, you will add corresponding client-side code in `client/src/lib/API.js`. For every API route on your server, there should be a function in this module that hits the route and returns the result.
+
+#### client/src/pages
+
+This is a personal preference, but I like to organize my "page" components into their own folder. These are the top-level components rendered by React Router when the user goes to a specific URL. Doing this separates "components" (which are intended to be reused) from pages (which generally aren't.)
 
 ### Server
 
-#### /server/controllers
+#### server/controllers
 
-#### /server/lib
+#### server/lib
 
-#### /server/models
+#### server/models
 
 ## Scripts
 
