@@ -80,6 +80,8 @@ Lastly, we have the `PrivateRoute` component. Never seen by the user, this is a 
 
 #### /client/src/contexts
 
+Mentioned above, contexts are a great way to "pass down" values in 
+
 #### /client/src/lib
 
 #### /client/src/pages
