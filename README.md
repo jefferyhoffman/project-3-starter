@@ -85,7 +85,7 @@ Lastly, we have the `PrivateRoute` component. Never seen by the user, this is a 
 ```javascript
 import AuthContext from '../../contexts/AuthContext';
 
-const StatelessChildWithAuth = props => (
+const MyStatelessChildWithAuth = props => (
   <AuthContext.Consumer>
     {({ authToken, user, onLogin, onLogout }) => (
       <div>{user.email}</div>
@@ -93,7 +93,7 @@ const StatelessChildWithAuth = props => (
   </AuthContext.Consumer>
 );
 
-class ContainerWithAuth extends React.Component {
+class MyContainerWithAuth extends React.Component {
   static contextType = AuthContext;
 
   componentDidMount() {
