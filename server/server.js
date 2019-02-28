@@ -1,7 +1,3 @@
-/**
- * Project 3 Starter
- * UNC Charlotte Full-Stack Coding Bootcamp
- */
 
 //-- .env --------------------------------------------------------------------
 const path = require('path');
