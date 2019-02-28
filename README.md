@@ -122,12 +122,45 @@ This is a personal preference, but I like to organize my "page" components into 
 
 ### Server
 
-#### server/controllers
+The `server` folder is organized as follows:
+
+```
+server
+├── controllers
+│   └── api
+├── lib
+└── models
+```
+
+#### server/controllers/api
+
+Since React Router is handling all of our client-side routing, the only server routes we need to worry about are for our API. In this folder, you'll find those routes.
+
+Divided into controllers, one for each model, they are all loaded into Express via `server/controllers/api/index.js`. If you add a controller, make sure to import and register its URL-stub there.
+
+Inside each controller, you'll see the routes to get, create, update and delete one kind of model:
+
+- `usersController` has routes to register, login, and get the currently authenticated user.
+- `secretsController` has one route to get an array of Secrets (a dummy model I created to demonstrate protected data.)
+
+Each time you create a new model, remember to create a new controller for its API routes. And remember to import and use it in `index.js`.
 
 #### server/lib
 
+This folder holds modules that don't belong anywhere else in the MVC structure. Currently, that's only one file: `passport.js`.
+
+Passport is used for user authentication, and for protecting API routes against unauthorized access. In `server/lib/passport.js`, you'll find the primary Passport configuration for the server.
+
+Importantly, the logic that verifies each user's authentication token resides here. Depending on which database you end up storing your users in, you'll want to customize this logic to query the correct user data.
+
 #### server/models
 
+In the `master` branch, these models are just simple JS mocks that return hard-coded data. They are there to act as placeholders for a real database. See the `sequelize` or `mongoose` branches for Sequelize and Mongoose implementations, respectively.
+
 ## Scripts
+
+### client
+
+### server
 
 ## Deployment
