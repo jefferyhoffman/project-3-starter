@@ -21,9 +21,20 @@ class Login extends Component {
         this.setState({ redirectToReferrer: true, error: "" });
       })
       .catch(err => {
-        if (err.response.status === 401) {
-          this.setState({ error: "Sorry, that email/password combination is not valid. Please try again." });
+        let message;
+
+        switch (err.response.status) {
+          case 401:
+            message = 'Sorry, that email/password combination is not valid. Please try again.';
+            break;
+          case 500:
+            message = 'Server error. Please try again later.';
+            break;
+          default:
+            message = 'Unknown error.';
         }
+
+        this.setState({ error: message });
       });
   }
 

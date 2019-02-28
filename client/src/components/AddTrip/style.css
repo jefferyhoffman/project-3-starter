@@ -1,0 +1,26 @@
+/* addform.js */
+
+#itList {
+    top: 20px;
+    box-shadow:5px 5px 5px 5px #999;
+}
+
+#formList {
+    top: 20px;
+    left:20px;
+    box-shadow:5px 5px 5px 5px #999;
+    
+}
+
+#btnComplete {
+    float:right;
+}
+
+/* form.js */
+
+.destForm, .tripDays, .shortDescription, .itinForm{
+    width: 100%;
+}
+
+
+

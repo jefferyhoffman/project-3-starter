@@ -13,7 +13,7 @@ usersController.post('/login', (req, res) => {
 
   db.Users.findOne({ email })
     .then(user => {
-      if (!user.comparePassword(password)) {
+      if (!user || !user.comparePassword(password)) {
         return res.status(401).send("Unauthorized");
       }
 
