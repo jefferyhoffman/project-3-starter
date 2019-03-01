@@ -1,5 +1,5 @@
 import React from "react";
-import ResultDetails from "./resultsDetail"
+import ResultsDetails from "./resultsDetail"
 
 function ResultList(props) {
   return (

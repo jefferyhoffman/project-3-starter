@@ -11,6 +11,9 @@ import Register from '../../pages/Register/Register';
 import Secret from '../../pages/Secret/Secret';
 import Home from '../../pages/Home/Home';
 import NotFound from '../../pages/NotFound/NotFound';
+import AddTripPage from '../../pages/NewTrip/AddTrip';
+import UserTrips from '../../pages/UserTrips/userTrips';
+import Browse from '../../pages/Browse/browse';
 
 import './App.css';
 
@@ -57,7 +60,10 @@ class App extends Component {
             <Switch>
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />
-              <PrivateRoute path='/secret' component={Secret} />
+              <PrivateRoute path='/myaccount' component={Secret} />
+              <PrivateRoute path='/add' component={AddTripPage} />
+              <PrivateRoute path='/mytrips' component={UserTrips} />
+              <PrivateRoute path='/browse' component={Browse} />
               <Route exact path='/' component={Home} />
               <Route component={NotFound} />
             </Switch>

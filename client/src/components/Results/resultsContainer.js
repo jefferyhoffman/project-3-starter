@@ -10,16 +10,16 @@ class ResultContainer extends Component {
   };
 
   // When this component mounts, search the Giphy API for pictures of kittens
-  componentDidMount() {
-    this.searchGiphy("kittens");
-    //this makes kittens show when page is loaded
-  }
+//   componentDidMount() {
+//     this.searchGiphy("kittens");
+//     //this makes kittens show when page is loaded
+//   }
 
-  searchGiphy = query => {
-    API.search(query)
-      .then(res => this.setState({ results: res.data.data }))
-      .catch(err => console.log(err));
-  };
+//   searchGiphy = query => {
+//     API.search(query)
+//       .then(res => this.setState({ results: res.data.data }))
+//       .catch(err => console.log(err));
+//   };
 
   
 

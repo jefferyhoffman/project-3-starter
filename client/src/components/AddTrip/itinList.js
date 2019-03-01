@@ -38,8 +38,9 @@ export default class ItinList extends Component {
 
   render() {
     return (
-      <div>
-        <h4>Add to Your Itinerary</h4>
+        <div className ="container" style={{boxShadow:"5px 5px 5px 5px #999"}}>
+      <br/>
+        <h4>Add Your Itinerary</h4>
         <hr />
         <ItinForm onSubmit={this.addItin} />
         {this.state.itins.map(itin => (
@@ -59,7 +60,7 @@ export default class ItinList extends Component {
           </div>
         ))}
         <hr />
-        <button className="btn btn-primary" style={{ float: "right" }}>
+        <button className="btn btn-primary btn-lg" style={{ float: "right" }}>
           Submit Itinerary
         </button>
 

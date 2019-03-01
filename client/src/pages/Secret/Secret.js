@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
+import SideNav from "../../components/Sidebar/Sidebar"
 
 class Secret extends Component {
   static contextType = AuthContext;
@@ -36,10 +37,10 @@ class Secret extends Component {
               : this.state.error
                 ? <div className='alert alert-danger'>{this.state.error}</div>
                 : <div>
-                  <p>Shh, the secret is...</p>
-                  <p><em>{this.state.secrets[0].message}</em></p>
+                  <p style={{textAlign:"center"}}><em>{this.state.secrets[0].message}</em></p>
                 </div>}
           </div>
+          <SideNav />
         </div>
       </div>
     );
