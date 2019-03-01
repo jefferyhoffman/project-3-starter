@@ -16,7 +16,7 @@
 
 5. Launch the client and server in development mode:
    ```bash
-   $ yarn start
+   $ yarn start:dev
    ```
 
 ## Organization
@@ -93,7 +93,7 @@ const MyStatelessChildWithAuth = props => (
   </AuthContext.Consumer>
 );
 
-class MyContainerWithAuth extends React.Component {
+class MyStatefulChildWithAuth extends React.Component {
   static contextType = AuthContext;
 
   componentDidMount() {
