@@ -5,7 +5,8 @@ class Form extends Component {
   state = {
     destination: "",
     tripDays: "",
-    shortDescription: ""
+    shortDescription: "",
+    tripImages: []
   };
 
   handleInputChange = event => {
@@ -20,19 +21,24 @@ class Form extends Component {
     this.setState({
       destination: "",
       tripDays: "",
-      shortDescription: ""
+      shortDescription: "",
+      tripImages: []
     });
     alert("Trip Information Submited");
   };
   render() {
     return (
+        <div className ="container" style={{boxShadow:"5px 5px 5px 5px #999"}}>
       <div className="form-group">
+      <br/>
+     
         <h4>Enter New Trip</h4>
         <hr />
         <form onSubmit={this.handleFormSubmit}>
-          <div className="col-md-12">
+         <div className="row">
+          <div className="col-md-7">
             <label>
-              <h4>Destination:</h4>
+              <h5>Destination:</h5>
             </label>
             <input
               className="destForm"
@@ -43,10 +49,9 @@ class Form extends Component {
               placeholder="Enter Destination"
             />
           </div>
-          <hr />
-          <div className="col-md-12">
+          <div className="col-md-5">
             <label>
-              <h4>Trip Days:</h4>
+              <h5>Trip Days:</h5>
             </label>
             <input
               className="tripDays"
@@ -57,13 +62,16 @@ class Form extends Component {
               placeholder="Total Days of Trip"
             />
           </div>
+          </div>
           <hr />
+          <div className="row">
           <div className="col-md-12">
             <label>
-              <h4>Short Description:</h4>
+              <h5>Short Description:</h5>
             </label>
             <textarea
               className="shortDescription"
+              rows="5"
               value={this.state.shortDescription}
               name="shortDescription"
               onChange={this.handleInputChange}
@@ -71,10 +79,11 @@ class Form extends Component {
               placeholder="Brief Description of your trip"
             />
           </div>
+          </div>
           <hr />
           <div className="col-md-6">
             <label>
-              <h4>Upload Images:</h4>
+              <h4>Upload Images: </h4>
             </label>
             <input
               value={this.state.tripImages}
@@ -84,8 +93,12 @@ class Form extends Component {
             />
           </div>
           <hr />
-          <button className="btn btn-primary">Submit Trip</button>
+          <button className="btn btn-primary  btn-lg" style={{float:"right"}}>Submit Trip</button>
+          <br/>
+          <br/>
+          <hr/>
         </form>
+      </div>
       </div>
     );
   }
