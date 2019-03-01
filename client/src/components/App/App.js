@@ -4,7 +4,8 @@ import { Switch, Route } from 'react-router-dom';
 import API from '../../lib/API';
 import TokenStore from '../../lib/TokenStore';
 import AuthContext from '../../contexts/AuthContext';
-import Navigation from '../../components/Navigation/Navigation';
+// import Navigation from '../../components/Navigation/Navigation';
+import NaviBar from "../Navbar/navbar"
 import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
 import Login from '../../pages/Login/Login';
 import Register from '../../pages/Register/Register';
@@ -55,8 +56,12 @@ class App extends Component {
     return (
       <AuthContext.Provider value={this.state.auth}>
         <div className='App'>
-          <Navigation />
+          <NaviBar />
           <div className='container'>
+          <div className="row">
+          <div className="col-lg-1">
+          </div>
+          <div className="col-lg-11">
             <Switch>
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />
@@ -67,6 +72,8 @@ class App extends Component {
               <Route exact path='/' component={Home} />
               <Route component={NotFound} />
             </Switch>
+             </div>
+            </div>
           </div>
         </div>
       </AuthContext.Provider>

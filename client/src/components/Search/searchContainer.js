@@ -38,7 +38,7 @@ class SearchContainer extends Component {
   render() {
     return (
       <div>
-        <Card heading ={this.state.result.destination || "Destination"}></Card>
+        {/* <Card heading ={this.state.result.destination || "Destination"}></Card> */}
         <SearchForm
           search={this.state.search}
           handleFormSubmit={this.handleFormSubmit}

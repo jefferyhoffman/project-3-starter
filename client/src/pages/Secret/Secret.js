@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
-import SideNav from "../../components/Sidebar/Sidebar"
+import SearchForm from "../../components/Search/searchContainer"
+
 
 class Secret extends Component {
   static contextType = AuthContext;
@@ -29,7 +30,14 @@ class Secret extends Component {
 
   render() {
     return (
-      <div className='Secret'>
+      <div className='container'> <div className='Secret'>
+      <div className="jumbotron" style={{textAlign:"center"}}> 
+       <h1>Welcome to My Account</h1>
+       </div>
+    
+    
+     
+     
         <div className='row'>
           <div className='col'>
             {this.state.isLoading
@@ -40,7 +48,10 @@ class Secret extends Component {
                   <p style={{textAlign:"center"}}><em>{this.state.secrets[0].message}</em></p>
                 </div>}
           </div>
-          <SideNav />
+           <hr/>
+       
+      </div>
+         <SearchForm />
         </div>
       </div>
     );

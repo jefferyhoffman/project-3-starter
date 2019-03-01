@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+// import { SideNav, Nav } from 'react-sidenav'
 
 import AuthContext from '../../contexts/AuthContext';
 import AuthDropdown from '../../components/AuthDropdown/AuthDropdown';
+import "./navbar.css"
 
-class Navigation extends Component {
+class Navibar extends Component {
   static contextType = AuthContext;
 
   state = {
@@ -20,22 +22,20 @@ class Navigation extends Component {
   render() {
     const { user } = this.context;
     const { collapsed } = this.state;
-    const targetClass = `collapse navbar-collapse ${!collapsed && 'show'}`;
-    const togglerClass = `navbar-toggler ${collapsed && 'collapsed'}`;
+    // const targetClass = `collapse navbar-collapse ${!collapsed && 'show'}`;
+    // const togglerClass = `navbar-toggler ${collapsed && 'collapsed'}`;
 
     return (
-      <div className='Navigation'>
-        <nav className='navbar navbar-expand-lg navbar-light bg-light mb-3' style={{backgroundColor:"orange"}}>
-          <Link className='navbar-brand' to='/'>Travel'd</Link>
-          <button className={togglerClass} onClick={this.toggleCollapse} data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
-            <span className='navbar-toggler-icon'></span>
-          </button>
+      <div className="sidenav">
+        <nav className='navbar' >
+          <Link className='navbar-header' to='/'><h3>Travel'd</h3><hr/></Link>
+          <br></br>
+          {/* <button className={togglerClass} onClick={this.toggleCollapse} data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
+            <span className='navbar-toggler-icon' style={{backgroundColor:"black"}}></span>
+          </button> */}
 
-          <div className={targetClass} id='navbarSupportedContent'>
-            <ul className='navbar-nav mr-auto'>
-              <li className='nav-item'>
-                <Link className='nav-link' to='/' onClick={this.toggleCollapse}>Home</Link>
-              </li>
+          {/* <div className={targetClass} id='navbarSupportedContent'> */}
+            <ul className='navbar-nav'>
               {user &&
                 <li className='nav-item'>
                   <Link className='nav-link' to='/myaccount' onClick={this.toggleCollapse}>My Account</Link>
@@ -62,11 +62,12 @@ class Navigation extends Component {
                   <li className='nav-item'><Link className='nav-link' to='/register' onClick={this.toggleCollapse}>Register</Link></li>
                   </>}
             </ul>
-          </div>
+          {/* </div> */}
         </nav>
       </div>
+      
     );
   }
 }
 
-export default Navigation;
+export default Navibar;

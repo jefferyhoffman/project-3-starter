@@ -34,10 +34,10 @@ class Sidebar extends Component {
   }
 
   render() {
-    const { user } = this.context;
+    // const { user } = this.context;
     const { collapsed } = this.state;
-    const targetClass = `collapse navbar-collapse ${!collapsed && 'show'}`;
-    const togglerClass = `navbar-toggler ${collapsed && 'collapsed'}`;
+    // const targetClass = `collapse navbar-collapse ${!collapsed && 'show'}`;
+    // const togglerClass = `navbar-toggler ${collapsed && 'collapsed'}`;
 
     const routes = [
         {

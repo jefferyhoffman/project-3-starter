@@ -2095,6 +2095,11 @@ react-prop-types@^0.4.0:
   dependencies:
     warning "^3.0.0"
 
+react-sidenav@^3.1.7:
+  version "3.1.7"
+  resolved "https://registry.yarnpkg.com/react-sidenav/-/react-sidenav-3.1.7.tgz#944e8384b441690aa8aedb7e87b6c3eba31fdfb2"
+  integrity sha512-h28O7gAhlNuY1peX9/Fv/agEp0nDbA0cGpxgvwbTJL1ZDMLx6KDiMdLAyKcprFQ+8nvUcCwHOX9A21dn01NCAA==
+
 react-transition-group@^2.5.1:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-2.6.0.tgz#3c41cbdd9c044c5f8604d4e8d319e860919c9fae"
