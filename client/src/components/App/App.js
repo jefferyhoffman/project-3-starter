@@ -57,24 +57,16 @@ class App extends Component {
       <AuthContext.Provider value={this.state.auth}>
         <div className='App'>
           <NaviBar />
-          <div className='container'>
-          <div className="row">
-          <div className="col-lg-1">
-          </div>
-          <div className="col-lg-11">
-            <Switch>
-              <Route path='/login' component={Login} />
-              <Route path='/register' component={Register} />
-              <PrivateRoute path='/myaccount' component={Secret} />
-              <PrivateRoute path='/add' component={AddTripPage} />
-              <PrivateRoute path='/mytrips' component={UserTrips} />
-              <PrivateRoute path='/browse' component={Browse} />
-              <Route exact path='/' component={Home} />
-              <Route component={NotFound} />
-            </Switch>
-             </div>
-            </div>
-          </div>
+              <Switch>
+                <Route path='/login' component={Login} />
+                <Route path='/register' component={Register} />
+                <PrivateRoute path='/myaccount' component={Secret} />
+                <PrivateRoute path='/add' component={AddTripPage} />
+                <PrivateRoute path='/mytrips' component={UserTrips} />
+                <PrivateRoute path='/browse' component={Browse} />
+                <Route exact path='/' component={Home} />
+                <Route component={NotFound} />
+              </Switch>
         </div>
       </AuthContext.Provider>
     );
