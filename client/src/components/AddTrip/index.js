@@ -8,14 +8,12 @@ import "./style.css";
 function AddNewTrip() {
   return (
     <Router>
-      <div>
-          <div className="row">
-          <div className="col-md-1"></div>
-          <div className="col-md-11">
+      <div className="container"> 
+        <h1>Add a New Trip</h1> <hr/>
         <NewTripNavTabs />
         <Route exact path="/add" component={Form} />
         <Route exact path="/add/additinerary" component={ItinList} />
-        </div></div>
+        
       </div>
     </Router>
   );

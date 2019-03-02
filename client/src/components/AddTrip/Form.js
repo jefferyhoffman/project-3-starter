@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./style.css";
 
 class Form extends Component {
@@ -93,7 +94,11 @@ class Form extends Component {
             />
           </div>
           <hr />
-          <button className="btn btn-primary  btn-lg" style={{float:"right"}}>Submit Trip</button>
+          <Link
+          to="/add/additinerary"
+          className={window.location.pathname === "/add/additinerary" ? "nav-link active" : "nav-link"}
+        >
+          <button className="btn btn-primary  btn-lg" style={{float:"right"}}>Next</button></Link>
           <br/>
           <br/>
           <hr/>
