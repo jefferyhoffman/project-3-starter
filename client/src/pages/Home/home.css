@@ -1,0 +1,32 @@
+
+body {
+    background: url("zoran-zonde-stojanovski-44791-unsplash.jpg") center center;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+}
+
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    color:  #F4EADE;
+}
+
+h3 {
+    font-family: 'Permanent Marker', cursive;
+    color: #F4EADE;
+}
+
+.homecontainer {
+    text-align: center;
+    align-items: center;
+    width: 50%;
+    position: absolute;
+    top: 25%;
+    right: 17.5%;
+
+}
+
+.searchDiv {
+    align-content: center;
+}
+

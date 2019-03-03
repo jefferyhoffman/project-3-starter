@@ -1,0 +1,25 @@
+
+.searchbtn {
+    background-color: #6AB187;
+    color: #F4EADE;
+    font-family: 'Permanent Marker', cursive;
+    border-left:  3px solid rgb(74, 124, 95);
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+}
+
+.searchbtn:hover,
+.searchbtn:focus {
+    background: rgb(74, 124, 95);
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.input-group {
+    width: 100%;
+    border: 3px solid rgb(74, 124, 95);
+    border-radius: 5px;
+}
