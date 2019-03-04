@@ -1,42 +1,18 @@
 import React, { Component } from "react";
 import ItinForm from "./itinForm";
-import Itin from "./itin";
+import { Link } from "react-router-dom";
 
 export default class ItinList extends Component {
   state = {
     itins: [],
-    itinToShow: "all"
   };
 
   addItin = itin => {
     this.setState({
-      itins: [itin, ...this.state.itins]  
+      itins: [itin, ...this.state.itins]
     });
     localStorage.setItem("Itinerary", JSON.stringify(this.state.itins))
-
   };
-
-  toggleComplete = id => {
-    this.setState({
-      itins: this.state.itins.map(itin => {
-        if (itin.id === id) {
-          //suppose to update
-          return {
-            ...itin,
-            complete: !itin.complete
-          };
-        } else {
-          return itin;
-        }
-      })
-    });
-  };
-
-  removeItin = id => {
-    this.setState({
-      itins: this.state.itins.filter(itin => itin.id !== id)
-    })
-  }
 
   render() {
     return (
@@ -44,42 +20,32 @@ export default class ItinList extends Component {
       <br/>
         <h4>Add Your Itinerary</h4>
         <hr />
-        <ItinForm onSubmit={this.addItin} />
+        <ItinForm onSubmit={this.addItin}  />
         {this.state.itins.map(itin => (
-          
           <div
             style={{
               background: "white",
               boxShadow: " 0 3px 6px #999, 0 3px 6px #999"
-            }}
-            id= {itin.id}
-            key={itin.id}
-            // onRemove={this.removeItin}
+            }} 
+             key ={itin.id}
+            id = {itin.id}
           > {itin.text}
-          <span className="remove" style={{float:"right"}} >𝘅</span> 
             <hr />
-            {/* check this out from old activity  */}
           </div>
         ))}
         <hr />
-        <button className="btn btn-primary btn-lg" onClick={this.addItin} style={{ float: "right" }}>
-          Submit Itinerary
-        </button>
-
-         {/* {this.state.itins.map(itin => (
-                <Itin
-                key={itin.id} 
-                toggleComplete={() => this.toggleComplete(itin.id)}
-                 itin={itin}
-                 />
-                ))}
-         <div> Todos left: 
-                {this.state.itins.filter(
-                    itin => !itin.complete.length)}
-                    </div>  */}
-        {/* <button>All</button>
-                    <button>Active</button>
-                    <button>Complete</button> */}
+        <div className="row">
+        <div className="col-md-12">
+        <Link
+          to="/add/review"
+          className={window.location.pathname === "/add/review" ? "nav-link active" : "nav-link"}
+        >
+        <button className="btn btn-primary  btn-lg" style={{float:"right"}} onClick={this.addItin}>
+         Next / Review</button> </Link>
+         <br/>
+         <br/>
+         </div>
+         </div>
       </div>
     );
   }
