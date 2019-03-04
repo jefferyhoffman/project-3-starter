@@ -35,6 +35,14 @@ class Navibar extends Component {
           </button> */}
 
           {/* <div className={targetClass} id='navbarSupportedContent'> */}
+          <ul className='navbar-nav'>
+              {user
+                ? <AuthDropdown onClick={this.toggleCollapse} />
+                : <>
+                  <li className='nav-item'><Link className='nav-link' to='/login' onClick={this.toggleCollapse}>Login</Link></li>
+                  <li className='nav-item'><Link className='nav-link' to='/register' onClick={this.toggleCollapse}>Register</Link></li>
+                  </>}
+            </ul>
             <ul className='navbar-nav'>
               {user &&
                 <li className='nav-item'>
@@ -54,14 +62,7 @@ class Navibar extends Component {
                   <Link className='nav-link' to='/browse' onClick={this.toggleCollapse}>Browse</Link>
                 </li>}
             </ul>
-            <ul className='navbar-nav'>
-              {user
-                ? <AuthDropdown onClick={this.toggleCollapse} />
-                : <>
-                  <li className='nav-item'><Link className='nav-link' to='/login' onClick={this.toggleCollapse}>Login</Link></li>
-                  <li className='nav-item'><Link className='nav-link' to='/register' onClick={this.toggleCollapse}>Register</Link></li>
-                  </>}
-            </ul>
+           
           {/* </div> */}
         </nav>
       </div>
