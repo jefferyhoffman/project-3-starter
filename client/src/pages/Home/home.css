@@ -1,14 +1,16 @@
 
 body {
-    background: url("zoran-zonde-stojanovski-44791-unsplash.jpg") center center;
-    height: auto;
-    width: 100%;
-    justify-content: center;
+    background: url('guillermo-alvarez-631481-unsplash.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 h1 {
     font-family: 'Permanent Marker', cursive;
     color:  #F4EADE;
+    font-size: 60px;
 }
 
 h3 {
@@ -21,8 +23,8 @@ h3 {
     align-items: center;
     width: 50%;
     position: absolute;
-    top: 25%;
-    right: 17.5%;
+    top: 32%;
+    right: 25%;
 
 }
 

@@ -15,10 +15,8 @@ export default class ItinForm extends Component {
   handleSubmit = event => {
     event.preventDefault();
     this.props.onSubmit({
-      //do an npm i shortid go back and listen to video at 8:46
       id: shortid.generate(),
       text: this.state.text,
-      complete: false
     });
     this.setState({
       text: ""

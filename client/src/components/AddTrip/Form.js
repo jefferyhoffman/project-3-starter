@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import "./style.css";
 
 class Form extends Component {
@@ -25,8 +24,15 @@ class Form extends Component {
       shortDescription: "",
       tripImages: []
     });
-    alert("Trip Information Submited");
+    this.props.history.push("/add/additinerary");
+
+    localStorage.setItem("Destination", this.state.destination)
+    localStorage.setItem("tripDays", this.state.tripDays)
+    localStorage.setItem("shortDescription", this.state.shortDescription)
+    localStorage.setItem("tripImages", this.state.tripImages)
   };
+
+
   render() {
     return (
       <div className="formz">
@@ -98,7 +104,7 @@ class Form extends Component {
               type="file"
             />
           </div>
-           
+       
           </div>
           <hr />
           <Link

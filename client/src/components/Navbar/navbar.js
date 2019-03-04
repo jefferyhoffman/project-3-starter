@@ -19,22 +19,17 @@ class Navibar extends Component {
     });
   }
 
+  
+
   render() {
     const { user } = this.context;
     const { collapsed } = this.state;
-    // const targetClass = `collapse navbar-collapse ${!collapsed && 'show'}`;
-    // const togglerClass = `navbar-toggler ${collapsed && 'collapsed'}`;
 
     return (
       <div className="sidenav">
-        <nav className='navbar' >
-          <Link className='navbar-header' to='/'><h3>Travel'd</h3><hr/></Link>
-          <br></br>
-          {/* <button className={togglerClass} onClick={this.toggleCollapse} data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
-            <span className='navbar-toggler-icon' style={{backgroundColor:"black"}}></span>
-          </button> */}
+        <nav id='navbar' class={collapsed ? "active" : "inactive"}>
+          <Link className='navbar-header' to='/' id="logo"><h3>Travel'd</h3><hr/></Link>
 
-          {/* <div className={targetClass} id='navbarSupportedContent'> */}
             <ul className='navbar-nav'>
               {user &&
                 <li className='nav-item'>
@@ -62,8 +57,16 @@ class Navibar extends Component {
                   <li className='nav-item'><Link className='nav-link' to='/register' onClick={this.toggleCollapse}>Register</Link></li>
                   </>}
             </ul>
-          {/* </div> */}
+
         </nav>
+
+        <div id="content">
+            <button type="button" id="sidebarCollapse" class="navbar-btn" onClick={this.toggleCollapse}>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
       </div>
       
     );

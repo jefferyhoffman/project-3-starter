@@ -1,45 +1,78 @@
 .sidenav {
-    height: 100%;
-    width: 15%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color:#6AB187;
-    overflow-x: hidden;
-    padding-top: 20px;
-    border-radius:5px;
-  }
-  
-  .sidenav a {
-    
-    text-decoration: none;
-    font-size: 18px;
-    color: white;
-    display: block;
+    display: flex;
+    align-items: stretch;
+    perspective: 1500px;
     text-align: center;
-  }
-  
- 
-  .sidenav a:hover {
-    color: orange;
+    height: 100vh;
   }
 
-  
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+.sidenav:hover {
+    text-decoration: none;
   }
 
-  .navbar {
-      justify-content: center;
+#navbar.inactive {
+    min-width: 250px;
+    max-width: 250px;
+    background: #6AB187;
+    color: #fff;
+    transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
+    transform-origin: center left;
+    text-decoration: none;
   }
 
-  .navbar-header {
+#navbar.active {
+    margin-left: -110px;
+    transform: rotateY(100deg);
+  }
+
+.navbar-nav {
+    width: 100%;
+  }
+
+.navbar-header {
       width: 100%;
   }
 
-  nav {
-      width: 100%;
-    
+.navbar-header:hover {
+    text-decoration: none;
   }
+
+.nav-item {
+    width: 100%;
+
+  }
+
+.nav-item:hover {
+    background-color: rgb(74, 124, 95);
+  }
+
+.nav-link {
+    width: 100%;
+    color: white;
+  }
+
+.nav-link:hover {
+    text-decoration: none;
+    color: white;
+  }
+
+#sidebarCollapse {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.25);
+    border: none;
+}
+
+#sidebarCollapse span {
+  width: 80%;
+  height: 2px;
+  margin: 2px;
+  display: block;
+  background: #555;
+  transition: all 0.8s cubic-bezier(0.810, -0.330, 0.345, 1.375);
+}
+
+h3 {
+  padding-top: 15px;
+}
+
