@@ -16,26 +16,24 @@ export default class ItinList extends Component {
 
   render() {
     return (
-        <div className ="container" style={{boxShadow:"5px 5px 5px 5px #999"}}>
+      <div className="hopefully">
+      <div className ="container" style={{boxShadow:"5px 5px 5px 5px #999"}}>
       <br/>
-        <h4>Add Your Itinerary</h4>
+        <h4 className="addIT">Add Your Itinerary</h4>
         <hr />
         <ItinForm onSubmit={this.addItin}  />
         {this.state.itins.map(itin => (
           <div
-            style={{
-              background: "white",
-              boxShadow: " 0 3px 6px #999, 0 3px 6px #999"
-            }} 
-             key ={itin.id}
-            id = {itin.id}
+            className="addB"
+            id= {itin.id}
+            key={itin.id}
+            // onRemove={this.removeItin}
           > {itin.text}
             <hr />
           </div>
         ))}
         <hr />
-        <div className="row">
-        <div className="col-md-12">
+       <div className="sbmtBtn">
         <Link
           to="/add/review"
           className={window.location.pathname === "/add/review" ? "nav-link active" : "nav-link"}
@@ -47,6 +45,9 @@ export default class ItinList extends Component {
          </div>
          </div>
       </div>
+      
+      </div>
+        
     );
   }
 }

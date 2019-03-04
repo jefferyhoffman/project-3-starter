@@ -11,7 +11,7 @@ function AddNewTrip() {
   return (
     <Router>
       <div className="container"> 
-        <h1>Add a New Trip</h1> <hr/>
+        <h1 className="aann">Add a New Trip</h1> <hr/>
         <NewTripNavTabs />
         <Route exact path="/add" component={Form} />
         <Route exact path="/add/additinerary" component={ItinList} />

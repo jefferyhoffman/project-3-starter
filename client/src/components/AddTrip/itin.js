@@ -2,6 +2,7 @@ import React from "react";
 
 function Itin(props) {
   return (
+    <div className="itin">
     <div
       style={{
               background: "white",
@@ -11,6 +12,8 @@ function Itin(props) {
     >
 
     </div>
+    </div>
+    
   );
 }
 

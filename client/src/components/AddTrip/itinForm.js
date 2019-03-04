@@ -24,6 +24,7 @@ export default class ItinForm extends Component {
   };
   render() {
     return (
+      <div className="itinform">
       <form onSubmit={this.handleSubmit}>
         <input
           className="itinForm"
@@ -32,9 +33,13 @@ export default class ItinForm extends Component {
           onChange={this.handleChange}
           placeholder="todo..."
         />
-        <button onClick={this.handleSubmit}>Add</button>
+        <br/>
+        <button className="addItin" onClick={this.handleSubmit}>Add</button>
         <hr />
+        <br/>
       </form>
+      </div>
+      
     );
   }
 }
