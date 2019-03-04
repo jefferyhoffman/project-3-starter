@@ -17,6 +17,14 @@ function NewTripNavTabs() {
           Add Itinerary
         </Link>
       </li>
+      <li className="nav-item">
+        <Link
+          to="/add/review"
+          className={window.location.pathname === "/add/review" ? "nav-link active" : "nav-link"}
+        >
+          Review
+        </Link>
+      </li>
     </ul>
   );
 }
