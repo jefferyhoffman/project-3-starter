@@ -1,10 +1,10 @@
 
 .LoginForm {
-    width: 80%;
-    margin-left: 10%;
-    margin-top: 15%;
+    width: 50%;
+    margin-left: 25%;
     text-align: center;
-    
+    position: fixed;
+    top: 30%;
 }
 
 .loginbutton {
