@@ -29,10 +29,11 @@ class Form extends Component {
   };
   render() {
     return (
+      <div className="formz">
+        
         <div className ="container" style={{boxShadow:"5px 5px 5px 5px #999"}}>
       <div className="form-group">
       <br/>
-     
         <h4>Enter New Trip</h4>
         <hr />
         <form onSubmit={this.handleFormSubmit}>
@@ -68,8 +69,9 @@ class Form extends Component {
           <div className="row">
           <div className="col-md-12">
             <label>
-              <h5>Short Description:</h5>
+              <h5 className="short">Short Description:</h5>
             </label>
+            <br/>
             <textarea
               className="shortDescription"
               rows="5"
@@ -82,16 +84,21 @@ class Form extends Component {
           </div>
           </div>
           <hr />
-          <div className="col-md-6">
-            <label>
+        
+          <div className="row">
+          <div className="col-lg-6">
+           <label>
               <h4>Upload Images: </h4>
             </label>
             <input
+              className="img-input"
               value={this.state.tripImages}
               name="tripImages"
               onChange={this.handleInputChange}
               type="file"
             />
+          </div>
+           
           </div>
           <hr />
           <Link
@@ -103,6 +110,7 @@ class Form extends Component {
           <br/>
           <hr/>
         </form>
+      </div>
       </div>
       </div>
     );

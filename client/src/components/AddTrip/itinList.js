@@ -38,18 +38,16 @@ export default class ItinList extends Component {
 
   render() {
     return (
-        <div className ="container" style={{boxShadow:"5px 5px 5px 5px #999"}}>
+      <div className="hopefully">
+      <div className ="container" style={{boxShadow:"5px 5px 5px 5px #999"}}>
       <br/>
-        <h4>Add Your Itinerary</h4>
+        <h4 className="addIT">Add Your Itinerary</h4>
         <hr />
         <ItinForm onSubmit={this.addItin} />
         {this.state.itins.map(itin => (
           
           <div
-            style={{
-              background: "white",
-              boxShadow: " 0 3px 6px #999, 0 3px 6px #999"
-            }}
+            className="addB"
             id= {itin.id}
             key={itin.id}
             // onRemove={this.removeItin}
@@ -60,9 +58,12 @@ export default class ItinList extends Component {
           </div>
         ))}
         <hr />
+        <div className="sbmtBtn">
         <button className="btn btn-primary btn-lg" style={{ float: "right" }}>
           Submit Itinerary
         </button>
+        </div>
+        
 
          {/* {this.state.itins.map(itin => (
                 <Itin
@@ -79,6 +80,9 @@ export default class ItinList extends Component {
                     <button>Active</button>
                     <button>Complete</button> */}
       </div>
+      
+      </div>
+        
     );
   }
 }

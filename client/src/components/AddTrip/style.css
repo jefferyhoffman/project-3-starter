@@ -1,25 +1,299 @@
 /* addform.js */
+body {
 
+    
+    color: #2F496E;
+
+}
 #itList {
- 
-    box-shadow:5px 5px 5px 5px #999;
+
+    box-shadow: 5px 5px 5px 5px #999;
 }
 
 #formList {
-   
-    box-shadow:5px 5px 5px 5px #999;
-    
+
+    box-shadow: 5px 5px 5px 5px #999;
+
 }
 
 #btnComplete {
-    float:right;
+    float: right;
 }
 
 /* form.js */
 
-.destForm, .tripDays, .shortDescription, .itinForm, #itList{
+.destForm,
+.tripDays,
+.shortDescription,
+.itinForm,
+#itList {
     width: 100%;
 }
 
 
 
+.formz {
+    font-family: 'Permanent Marker', cursive;
+    color: #F4EADE;
+    /* background-color:#2F496E;
+    opacity: .7; */
+    background: rgba(47, 73, 110, 0.7);
+    
+}
+
+.form-container {
+    background: white;
+    opacity: .6;
+}
+
+.newtriptab {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 20px;
+}
+
+/* Cool Input Field Styles */
+
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+
+    font-size: 0.875em;
+}
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+    color: black;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: black;
+    font-size: 0.875em;
+}
+
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+    color: black;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: black;
+    font-size: 0.875em;
+}
+
+input:focus::placeholder,
+textarea::focus:placeholder {
+    color: black;
+}
+
+input::-ms-placeholder,
+textarea::-ms-placeholder {
+    color: black;
+    font-size: 0.875em;
+}
+
+input:focus::-ms-placeholder,
+textarea:focus::-ms-placeholder {
+    color: black;
+}
+
+/* on hover placeholder */
+
+input:hover::-webkit-input-placeholder,
+textarea:hover::-webkit-input-placeholder {
+    color: #ED8C72;
+    font-size: 0.875em;
+}
+
+input:hover:focus::-webkit-input-placeholder,
+textarea:hover:focus::-webkit-input-placeholder {
+    color: #ED8C72;
+}
+
+input:hover::-moz-placeholder,
+textarea:hover::-moz-placeholder {
+    color: #ED8C72;
+    font-size: 0.875em;
+}
+
+input:hover:focus::-moz-placeholder,
+textarea:hover:focus::-moz-placeholder {
+    color: #ED8C72;
+}
+
+input:hover::placeholder,
+textarea:hover::placeholder {
+    color: #ED8C72;
+    font-size: 0.875em;
+}
+
+input:hover:focus::placeholder,
+textarea:hover:focus::placeholder {
+    color: #ED8C72;
+}
+
+input:hover::placeholder,
+textarea:hover::placeholder {
+    color: #ED8C72;
+    font-size: 0.875em;
+}
+
+input:hover:focus::-ms-placeholder,
+textarea:hover::focus:-ms-placeholder {
+    color: #ED8C72;
+}
+
+
+
+header {
+    position: relative;
+    margin: 100px 0 25px 0;
+    font-size: 2.3em;
+    text-align: center;
+    letter-spacing: 7px;
+    color: #2F496E;
+}
+
+#form {
+    position: relative;
+    width: 500px;
+    margin: 50px auto 100px auto;
+}
+
+input {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 0.875em;
+    width: 470px;
+    height: 50px;
+    padding: 0px 15px 0px 15px;
+    color: black;
+
+    outline: none;
+    background-color: #ED8C72;
+
+
+
+    border: solid .5px #ED8C72;
+    border-bottom: none;
+    border-radius: 25px;
+
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}
+
+input.img-input {
+    width: 470px;
+    max-width: 470px;
+    height: 40px;
+    max-height: 40px;
+    padding: 5px;
+    padding-left: 10px;
+    right: 30%;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}
+
+input:hover {
+    background: #2988BC;
+    color: #e2dedb;
+}
+
+textarea {
+    width: 470px;
+    max-width: 470px;
+    height: 110px;
+    max-height: 110px;
+    padding: 15px;
+    right: 30%;
+    outline: none;
+
+    color: black;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 0.875em;
+    background-color: #ED8C72;
+
+    border: solid 1px #ED8C72;
+    border-radius: 25px;
+
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+}
+
+textarea:hover {
+    background: #2988BC;
+    color: #F4EADE;
+}
+
+#submit {
+    width: 502px;
+
+    padding: 0;
+    margin: -5px 0px 0px 0px;
+
+    font-family: 'Lato', sans-serif;
+    font-size: 0.875em;
+    color: #b3aca7;
+
+    outline: none;
+    cursor: pointer;
+
+    border: solid 1px #ED8C72;
+    border-top: none;
+}
+
+#submit:hover {
+    color: #e2dedb;
+}
+
+/*      */
+
+.aann {
+    color: #2988BC;
+    text-align: center;
+}
+.addIT{
+    color:#e2dedb;
+    font-family: 'Permanent Marker', cursive;
+}
+
+/* 
+
+
+
+*/
+
+
+.addItin{
+    border-radius: 25px;
+    color:#e2dedb;
+    background-color:#2988BC;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.newTrip{
+    background-image: url('./greek.jpg');
+    height:100vh;
+}
+.hopefully{
+    background: rgba(47, 73, 110, 0.7);
+}
+.sbmtBtn{
+    font-family: 'Permanent Marker', cursive;
+}
+.addB{
+    background: rgba(41, 136, 188, 1);
+    color:#e2dedb;
+    font-family: 'Permanent Marker', cursive;
+    padding-left:10px;
+    border-radius: 25px;
+    padding-top:5px;
+}
