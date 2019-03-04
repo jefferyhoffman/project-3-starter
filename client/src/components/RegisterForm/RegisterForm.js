@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./registerform.css"
 
 class RegisterForm extends Component {
   state = {
@@ -26,43 +27,43 @@ class RegisterForm extends Component {
 
     return (
       <div className='RegisterForm'>
-        <div className='card'>
-          <div className='card-body'>
-            <form className='LoginForm' onSubmit={this.handleSubmit}>
-              <div className='input-group mb-3'>
-                <div className="input-group-prepend">
-                  <span className="input-group-text">@</span>
-                </div>
-                <input
-                  className='form-control'
-                  id='email'
-                  type='email'
-                  name='email'
-                  placeholder='email@provider.com'
-                  value={email}
-                  onChange={this.handleInputChange}
-                />
-              </div>
 
-              <div className='input-group mb-3'>
-                <div className="input-group-prepend">
-                  <span className="input-group-text">a3b</span>
-                </div>
-                <input
-                  className='form-control'
-                  id='password'
-                  type='password'
-                  name='password'
-                  placeholder='password'
-                  value={password}
-                  onChange={this.handleInputChange}
-                />
-              </div>
-
-              <button className='btn btn-primary' type='submit'>Register</button>
-            </form>
+        <h1>Register Account</h1>
+        <h3>Get Started on Your Journey!</h3>
+        
+        <form onSubmit={this.handleSubmit}>
+          <div className='input-group mb-3'>
+            <div className="input-group-prepend">
+              <span className="input-group-text">@</span>
+            </div>
+            <input
+              className='form-control'
+              id='email'
+              type='email'
+              name='email'
+              placeholder='email@provider.com'
+              value={email}
+              onChange={this.handleInputChange}
+            />
           </div>
-        </div>
+
+          <div className='input-group mb-3'>
+            <div className="input-group-prepend">
+              <span className="input-group-text">a3b</span>
+            </div>
+            <input
+              className='form-control'
+              id='password'
+              type='password'
+              name='password'
+              placeholder='password'
+              value={password}
+              onChange={this.handleInputChange}
+            />
+          </div>
+
+          <button className='registerbutton' type='submit'>Register</button>
+        </form>
       </div>
     )
   }
