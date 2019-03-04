@@ -34,12 +34,7 @@ class Register extends Component {
     }
 
     return (
-      <div className='Login'>
-        <div className='row'>
-          <div className='col'>
-            <h1>Register Account</h1>
-          </div>
-        </div>
+      <div className='Register'>
         {this.state.error &&
           <div className='row'>
             <div className='col'>
@@ -48,11 +43,10 @@ class Register extends Component {
               </div>
             </div>
           </div>}
-        <div className='row'>
+        
           <div className='col'>
             <RegisterForm onSubmit={this.handleSubmit} />
           </div>
-        </div>
       </div>
     );
   }

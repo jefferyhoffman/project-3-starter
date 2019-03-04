@@ -28,7 +28,7 @@ class Navibar extends Component {
     return (
       <div className="sidenav">
         <nav className='navbar' >
-          <Link className='navbar-header' to='/'><h3>Travel'd</h3><hr/></Link>
+          <Link className='navbar-header' to='/' id="logo"><h3>Travel'd</h3><hr/></Link>
           <br></br>
           {/* <button className={togglerClass} onClick={this.toggleCollapse} data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
             <span className='navbar-toggler-icon' style={{backgroundColor:"black"}}></span>
