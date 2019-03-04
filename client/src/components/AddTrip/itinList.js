@@ -45,8 +45,6 @@ export default class ItinList extends Component {
          </div>
          </div>
       </div>
-      
-      </div>
         
     );
   }

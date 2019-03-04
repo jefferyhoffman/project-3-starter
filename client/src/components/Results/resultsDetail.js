@@ -4,7 +4,7 @@ function ResultsDetail(props) {
   return (
     <div className="text-center">
       
-      <h3>Destination: {props.destination}</h3>
+      <h3>Destination: {props.location}</h3>
       <h3>Days of Trip: {props.tripDays}</h3>
       <h3>Trip Description: {props.shortDescription}</h3>
       

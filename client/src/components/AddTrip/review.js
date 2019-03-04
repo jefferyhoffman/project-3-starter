@@ -9,7 +9,7 @@ export default class Review extends Component {
   };
 
 
-  componentDidMount(itin){
+  componentDidMount(){
     this.setState({
       itins: JSON.parse(localStorage.getItem('Itinerary'))
     });
@@ -39,7 +39,8 @@ export default class Review extends Component {
             }} 
              key ={itin.id}
             id = {itin.id}
-          > {itin.text} <br/> </div>))}
+          > {itin.text}</div>))}
+          <br/>
        </div></div>
 
 
