@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const Trip = require('../models/trip')
 
 const UserSchema = new Schema({
   email: {
@@ -18,6 +19,7 @@ const UserSchema = new Schema({
       'Password should be four characters or longer'
     ]
   },
+  trips:[{type: Schema.Types.ObjectId, ref: Trip }]
 })
 
 class newUser {

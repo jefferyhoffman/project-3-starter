@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 let Schema = mongoose.Schema;
+const User = require('../models/user')
 
 const tripSchema = new Schema({
   location: {
@@ -16,9 +17,10 @@ const tripSchema = new Schema({
   description: {
     type: String,
   },
-  // images: {
-  //   type: mongoose.Schema.Types.Mixed,
-  // }
+  images: {
+    type: mongoose.Schema.Types.Mixed,
+  },
+  user: [{type: Schema.Types.ObjectId, ref: User }]
 });
 const Trip = mongoose.model('Trip', tripSchema);
 module.exports = Trip;

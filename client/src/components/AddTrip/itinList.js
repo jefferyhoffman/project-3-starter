@@ -10,8 +10,10 @@ export default class ItinList extends Component {
 
   addItin = itin => {
     this.setState({
-      itins: [itin, ...this.state.itins]
+      itins: [itin, ...this.state.itins]  
     });
+    localStorage.setItem("Itinerary", JSON.stringify(this.state.itins))
+
   };
 
   toggleComplete = id => {
@@ -60,7 +62,7 @@ export default class ItinList extends Component {
           </div>
         ))}
         <hr />
-        <button className="btn btn-primary btn-lg" style={{ float: "right" }}>
+        <button className="btn btn-primary btn-lg" onClick={this.addItin} style={{ float: "right" }}>
           Submit Itinerary
         </button>
 

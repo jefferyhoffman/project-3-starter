@@ -14,6 +14,7 @@ tripsController.get('/', function(req, res) {
 
 tripsController.post('/', function(req, res, next) {
     let trip = {
+        user: req.body.user,
         location: req.body.location,
         trip_length: req.body.trip_length,
         itinerary: req.body.itinerary,
@@ -22,6 +23,7 @@ tripsController.post('/', function(req, res, next) {
     };
     db.Trips.create(trip)
     .then(function(results) {
+        console.log(results);
         res.send('trip successfully added');
     })
     .catch(function(err) {
@@ -29,12 +31,6 @@ tripsController.post('/', function(req, res, next) {
             console.log(err);
         }
     });
-    // db.Trips.save(trip, function(err, result) {
-    //     if(err) {
-    //         console.log(err);
-    //     }
-    //     res.send('trip successfully added');
 });
 
-// Defining methods for the tripsController
 module.exports = tripsController;
