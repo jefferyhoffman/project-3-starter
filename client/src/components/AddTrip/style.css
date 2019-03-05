@@ -53,101 +53,101 @@ body {
 
 /* Cool Input Field Styles */
 
-@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
 
-input::-webkit-input-placeholder,
+
+ .formz.input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
 
     font-size: 0.875em;
 }
 
-input:focus::-webkit-input-placeholder,
+.formz.input:focus::-webkit-input-placeholder,
 textarea:focus::-webkit-input-placeholder {
     color: black;
 }
 
-input::-moz-placeholder,
+.formz.input::-moz-placeholder,
 textarea::-moz-placeholder {
     color: black;
     font-size: 0.875em;
 }
 
-input:focus::-moz-placeholder,
+.formz.input:focus::-moz-placeholder,
 textarea:focus::-moz-placeholder {
     color: black;
 }
 
-input::placeholder,
+.formz.input::placeholder,
 textarea::placeholder {
     color: black;
     font-size: 0.875em;
 }
 
-input:focus::placeholder,
+.formz.input:focus::placeholder,
 textarea::focus:placeholder {
     color: black;
 }
 
-input::-ms-placeholder,
+.formz.input::-ms-placeholder,
 textarea::-ms-placeholder {
     color: black;
     font-size: 0.875em;
 }
 
-input:focus::-ms-placeholder,
+.formz.input:focus::-ms-placeholder,
 textarea:focus::-ms-placeholder {
     color: black;
 }
 
 /* on hover placeholder */
 
-input:hover::-webkit-input-placeholder,
+.formz.input:hover::-webkit-input-placeholder,
 textarea:hover::-webkit-input-placeholder {
     color: #ED8C72;
     font-size: 0.875em;
 }
 
-input:hover:focus::-webkit-input-placeholder,
+.formz.input:hover:focus::-webkit-input-placeholder,
 textarea:hover:focus::-webkit-input-placeholder {
     color: #ED8C72;
 }
 
-input:hover::-moz-placeholder,
+.formz.input:hover::-moz-placeholder,
 textarea:hover::-moz-placeholder {
     color: #ED8C72;
     font-size: 0.875em;
 }
 
-input:hover:focus::-moz-placeholder,
+.formz.input:hover:focus::-moz-placeholder,
 textarea:hover:focus::-moz-placeholder {
     color: #ED8C72;
 }
 
-input:hover::placeholder,
+.formz.input:hover::placeholder,
 textarea:hover::placeholder {
     color: #ED8C72;
     font-size: 0.875em;
 }
 
-input:hover:focus::placeholder,
+.formz.input:hover:focus::placeholder,
 textarea:hover:focus::placeholder {
     color: #ED8C72;
 }
 
-input:hover::placeholder,
+.formz.input:hover::placeholder,
 textarea:hover::placeholder {
     color: #ED8C72;
     font-size: 0.875em;
 }
 
-input:hover:focus::-ms-placeholder,
+.formz.input:hover:focus::-ms-placeholder,
 textarea:hover::focus:-ms-placeholder {
     color: #ED8C72;
-}
+} 
 
 
 
-header {
+.formz.header {
     position: relative;
     margin: 100px 0 25px 0;
     font-size: 2.3em;
@@ -162,7 +162,7 @@ header {
     margin: 50px auto 100px auto;
 }
 
-input {
+.formz.input {
     font-family: 'Permanent Marker', cursive;
     font-size: 0.875em;
     width: 470px;
@@ -185,7 +185,7 @@ input {
     -ms-transition: all 0.3s ease-in-out;
 }
 
-input.img-input {
+.formz.input.img-input {
     width: 470px;
     max-width: 470px;
     height: 40px;
@@ -200,13 +200,21 @@ input.img-input {
     -ms-transition: all 0.3s ease-in-out;
 }
 
-input:hover {
+.formz.input:hover {
     background: #2988BC;
     color: #e2dedb;
 }
 
+<<<<<<< HEAD
 textarea {
     width: 100%;
+=======
+.formz.textarea {
+    width: 470px;
+    max-width: 470px;
+    height: 110px;
+    max-height: 110px;
+>>>>>>> ce39981b4defb4070c5f8ba46beb6d2380037c1c
     padding: 15px;
     right: 30%;
     outline: none;
@@ -225,7 +233,7 @@ textarea {
     -ms-transition: all 0.3s ease-in-out;
 }
 
-textarea:hover {
+.formz.textarea:hover {
     background: #2988BC;
     color: #F4EADE;
 }

@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import "./style.css";
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
+=======
+import { Link } from "react-router-dom"
+
+>>>>>>> ce39981b4defb4070c5f8ba46beb6d2380037c1c
 
 class Form extends Component {
   state = {
@@ -102,19 +107,20 @@ class Form extends Component {
           </div>
        
           </div>
-          <hr />
-          <Link
-          to="/add/additinerary"
-          className={window.location.pathname === "/add/additinerary" ? "nav-link active" : "nav-link"}
-        >
-          <button className="btn btn-primary  btn-lg" style={{float:"right"}}>Next</button></Link>
-          <br/>
-          <br/>
-          <hr/>
-        </form>
+            <hr />
+              <Link
+              to="/add/additinerary"
+              className={window.location.pathname === "/add/additinerary" ? "nav-link active" : "nav-link"}
+              >
+                 <button className="btn btn-primary  btn-lg" style={{float:"right"}}>Next</button></Link>
+               <br/>
+              <br/>
+              <hr/>
+           </form>
+          </div>
+        </div>
       </div>
-      </div>
-      </div>
+      
     );
   }
 }
