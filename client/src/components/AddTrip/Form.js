@@ -132,6 +132,7 @@ import "./style.css";
 import ItinForm from "./itinForm";
 import axios from "axios";
 
+
 class Form extends Component {
   state = {
     user: localStorage.getItem('token'),
@@ -297,6 +298,7 @@ class Form extends Component {
           </div>
         </div>
       </div>
+      
     );
   }
 }
