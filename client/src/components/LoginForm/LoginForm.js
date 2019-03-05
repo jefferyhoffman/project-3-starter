@@ -28,8 +28,8 @@ class LoginForm extends Component {
     return (
       <div className='LoginForm'>
         
-          <h1>Login</h1>
-          <h3>View and Manage your Trips!</h3>
+          <h1 id="loginh1">Login</h1>
+          <h3 id="loginh3">View and Manage your Trips!</h3>
         
         <form onSubmit={this.handleSubmit}>
           <div className='input-group mb-3' id="loginemail">

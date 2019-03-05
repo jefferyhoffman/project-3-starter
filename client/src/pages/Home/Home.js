@@ -7,9 +7,9 @@ class HomePage extends Component {
     return (
       <div className="homehtml">
       <div className='homecontainer'>
-        <div>
-          <h1>Welcome to Travel'd</h1>
-          <h3>Your destination for vacation inspiration!</h3>
+        <div id="headingcontainer">
+          <h1 id="homeh1">Welcome to Travel'd</h1>
+          <h3 id="homeh3">Your destination for vacation inspiration!</h3>
         </div>
         <hr />
         <div className="searchDiv">

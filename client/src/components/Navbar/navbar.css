@@ -87,5 +87,21 @@ h3 {
 
 #logo {
   color: black;
+  font-family: 'Permanent Marker', cursive;
+}
+
+
+@media only screen and (max-width: 415px) {
+  /* phones */
+  #navbar.inactive {
+    min-width: 80vw;
+    max-width: 80vw;
+    background: #F4EADE;
+    color: black;
+    transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
+    transform-origin: center left;
+    text-decoration: none;
+    border-right: 3px solid rgb(219, 207, 192);
+  }
 }
 
