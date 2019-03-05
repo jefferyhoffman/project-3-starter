@@ -21,7 +21,8 @@ export default class Review extends Component {
       <h4>Review</h4>
         <hr />
         
-       <div> Destination: <span/><div className="displayDestination">{localStorage.getItem('Destination')}</div></div>
+       <div> Destination: <span/><div className="displayDestination">
+       {localStorage.getItem('Destination')}</div></div>
       
        <div> # of Trip Days: <span/> <div className="displayTripDays">{localStorage.getItem('tripDays')}</div></div>
        

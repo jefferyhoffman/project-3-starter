@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
+import ItinForm from "./itinForm";
 
 class Form extends Component {
   state = {
     destination: "",
     tripDays: "",
     shortDescription: "",
+    itins: [],
     tripImages: []
   };
 
@@ -33,11 +35,17 @@ class Form extends Component {
     localStorage.setItem("tripImages", this.state.tripImages)
   };
 
+  addItin = itin => {
+    this.setState({
+      itins: [itin, ...this.state.itins]
+    });
+    localStorage.setItem("Itinerary", JSON.stringify(this.state.itins))
+  };
+
 
   render() {
     return (
       <div className="formz">
-        
         <div className ="container" style={{boxShadow:"5px 5px 5px 5px #999"}}>
       <div className="form-group">
       <br/>
@@ -117,7 +125,36 @@ class Form extends Component {
           <br/>
           <hr/>
         </form>
+        
       </div>
+      </div>
+      <div className="hopefully">
+      <div className ="container" style={{boxShadow:"5px 5px 5px 5px #999"}}>
+      <br/>
+        <h4 className="addIT">Add Your Itinerary</h4>
+        <hr />
+        <ItinForm onSubmit={this.addItin}  />
+        {this.state.itins.map(itin => (
+          <div
+            className="addB"
+            id= {itin.id}
+            key={itin.id}
+          > {itin.text}
+            <hr />
+          </div>
+        ))}
+        <hr />
+       <div className="sbmtBtn">
+        <Link
+          to="/add/review"
+          className={window.location.pathname === "/add/review" ? "nav-link active" : "nav-link"}
+        >
+        <button className="btn btn-primary  btn-lg" style={{float:"right"}} onClick={this.addItin}>
+         Next / Review</button> </Link>
+         <br/>
+         <br/>
+         </div>
+         </div>
       </div>
       </div>
     );

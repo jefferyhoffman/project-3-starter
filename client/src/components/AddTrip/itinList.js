@@ -27,7 +27,6 @@ export default class ItinList extends Component {
             className="addB"
             id= {itin.id}
             key={itin.id}
-            // onRemove={this.removeItin}
           > {itin.text}
             <hr />
           </div>
