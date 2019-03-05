@@ -12,7 +12,7 @@ function NewTripNavTabs() {
         </Link>
       </li>
       <div className="addbtn">
-      <li className="nav-item">
+      {/* <li className="nav-item">
         <Link
         
           to="/add/additinerary"
@@ -28,7 +28,7 @@ function NewTripNavTabs() {
         >
           Review
         </Link>
-      </li>
+      </li> */}
     </div>
     </ul>
     </div>

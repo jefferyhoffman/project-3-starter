@@ -35,7 +35,7 @@ export default class Review extends Component {
     })
       .then(function (response) {
         console.log(response);
-
+        localStorage.clear();
       })
       .catch(function (err) {
         console.log(err);
