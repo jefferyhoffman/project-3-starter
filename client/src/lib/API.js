@@ -32,7 +32,6 @@ export default {
     tripResults: function (trip){
      return axios.get('/api/trips', {trip})
     }
-    
     }
   }
 

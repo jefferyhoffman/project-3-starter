@@ -205,16 +205,11 @@ textarea:hover::focus:-ms-placeholder {
     color: #e2dedb;
 }
 
-<<<<<<< HEAD
-textarea {
-    width: 100%;
-=======
 .formz.textarea {
     width: 470px;
     max-width: 470px;
     height: 110px;
     max-height: 110px;
->>>>>>> ce39981b4defb4070c5f8ba46beb6d2380037c1c
     padding: 15px;
     right: 30%;
     outline: none;

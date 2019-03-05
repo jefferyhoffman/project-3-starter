@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import ResultList from "./viewResults";
 import Card from "./Card";
-import API from "../../../../server/controllers/api/tripsController"
 
 class ResultContainer extends Component {
   state = {
@@ -9,17 +8,15 @@ class ResultContainer extends Component {
     results: []
   };
 
-  // When this component mounts, search the Giphy API for pictures of kittens
-//   componentDidMount() {
-//     this.searchGiphy("kittens");
-//     //this makes kittens show when page is loaded
-//   }
+  // componentDidMount() {
+  //   this.searchGiphy("kittens");
+  // }
 
-//   searchGiphy = query => {
-//     API.search(query)
-//       .then(res => this.setState({ results: res.data.data }))
-//       .catch(err => console.log(err));
-//   };
+  // searchTrips = query => {
+  //   API.search(query)
+  //     .then(res => this.setState({ results: res.data.data }))
+  //     .catch(err => console.log(err));
+  // };
 
   
 
