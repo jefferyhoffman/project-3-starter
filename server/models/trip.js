@@ -20,7 +20,9 @@ const tripSchema = new Schema({
   images: {
     type: mongoose.Schema.Types.Mixed,
   },
-  user: [{type: Schema.Types.ObjectId, ref: User }]
+  user: {
+    type: String
+  }
 });
 const Trip = mongoose.model('Trip', tripSchema);
 module.exports = Trip;
