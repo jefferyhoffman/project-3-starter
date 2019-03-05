@@ -10,7 +10,7 @@ class Navibar extends Component {
   static contextType = AuthContext;
 
   state = {
-    collapsed: true
+    collapsed: false
   }
 
   toggleCollapse = () => {
@@ -27,7 +27,7 @@ class Navibar extends Component {
 
     return (
       <div className="sidenav">
-        <nav id='navbar' className={collapsed ? "active" : "inactive"}>
+        <nav id='navbar' className={collapsed ? "inactive" : "active"}>
           <Link className='navbar-header' to='/' id="logo"><h3>Travel'd</h3><hr/></Link>
 
             <ul className='navbar-nav'>

@@ -6,6 +6,7 @@ import "./home.css"
 class HomePage extends Component {
   render() {
     return (
+      <div className="homehtml">
       <div className='homecontainer'>
         <div>
           <h1>Welcome to Travel'd</h1>
@@ -15,6 +16,7 @@ class HomePage extends Component {
         <div className="searchDiv">
           <SearchForm />
         </div>
+      </div>
       </div>
     );
   }
