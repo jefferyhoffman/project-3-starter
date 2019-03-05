@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ResultList from "./viewResults";
 import Card from "./Card";
-// import API from "../utils/API";
+import API from "../../../../server/controllers/api/tripsController"
 
 class ResultContainer extends Component {
   state = {

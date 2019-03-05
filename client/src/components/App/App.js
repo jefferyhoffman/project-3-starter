@@ -15,13 +15,11 @@ import NotFound from '../../pages/NotFound/NotFound';
 import AddTripPage from '../../pages/NewTrip/AddTrip';
 import UserTrips from '../../pages/UserTrips/userTrips';
 import Browse from '../../pages/Browse/browse';
-
 import './App.css';
 
 class App extends Component {
   constructor(props) {
     super(props);
-
     this.handleLogin = (user, authToken) => {
       TokenStore.setToken(authToken);
       this.setState(prevState => ({ auth: { ...prevState.auth, user, authToken } }));
