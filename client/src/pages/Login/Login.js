@@ -47,19 +47,21 @@ class Login extends Component {
     }
 
     return (
-      <div className='Login'>
-        {this.state.error &&
-          <div className='row'>
-            <div className='col'>
-              <div className='alert alert-danger mb-3' role='alert'>
-                {this.state.error}
+      <div className="loginhtml">
+        <div className='Login'>
+          {this.state.error &&
+            <div className='row'>
+              <div className='col'>
+                <div className='alert alert-danger mb-3' role='alert'>
+                  {this.state.error}
+                </div>
               </div>
-            </div>
-          </div>}
-        
+            </div>}
+
           <div className='col'>
             <LoginForm onSubmit={this.handleSubmit} />
           </div>
+        </div>
       </div>
     );
   }

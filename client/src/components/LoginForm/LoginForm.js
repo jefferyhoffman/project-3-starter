@@ -32,7 +32,7 @@ class LoginForm extends Component {
           <h3>View and Manage your Trips!</h3>
         
         <form onSubmit={this.handleSubmit}>
-          <div className='input-group mb-3'>
+          <div className='input-group mb-3' id="loginemail">
             <div className="input-group-prepend">
               <span className="input-group-text">@</span>
             </div>
@@ -47,7 +47,7 @@ class LoginForm extends Component {
             />
           </div>
 
-          <div className='input-group mb-3'>
+          <div className='input-group mb-3' id="loginpass">
             <div className="input-group-prepend">
               <span className="input-group-text">a3b</span>
             </div>
