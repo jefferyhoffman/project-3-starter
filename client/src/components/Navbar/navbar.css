@@ -4,6 +4,8 @@
     perspective: 1500px;
     text-align: center;
     height: 100vh;
+    position: absolute;
+    z-index: 2;
   }
 
 .sidenav:hover {
@@ -13,16 +15,19 @@
 #navbar.inactive {
     min-width: 250px;
     max-width: 250px;
-    background: #6AB187;
-    color: #fff;
+    background: #F4EADE;
+    color: black;
     transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
     transform-origin: center left;
     text-decoration: none;
+    border-right: 3px solid rgb(219, 207, 192);
   }
 
 #navbar.active {
     margin-left: -110px;
-    transform: rotateY(100deg);
+    transform: rotateY(90deg);
+    width:110px;
+    height: 50%;
   }
 
 .navbar-nav {
@@ -37,30 +42,34 @@
     text-decoration: none;
   }
 
-.nav-item {
+#navitems {
     width: 100%;
 
   }
 
-.nav-item:hover {
-    background-color: rgb(74, 124, 95);
+#navitems:hover {
+    background-color: rgb(219, 207, 192);
   }
 
 .nav-link {
     width: 100%;
-    color: white;
+    color: black;
   }
 
 .nav-link:hover {
     text-decoration: none;
-    color: white;
+    color: black;
   }
 
 #sidebarCollapse {
     width: 40px;
     height: 40px;
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.75);
     border: none;
+}
+
+#sidebarCollapse:focus {
+  outline: none;
 }
 
 #sidebarCollapse span {
@@ -74,5 +83,9 @@
 
 h3 {
   padding-top: 15px;
+}
+
+#logo {
+  color: black;
 }
 

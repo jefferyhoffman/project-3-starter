@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import "./style.css";
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import ItinForm from "./itinForm";
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> 9273d253509c789af8b8887b8f1a591ed25e9ecd
 
 class Form extends Component {
   state = {

@@ -1,10 +1,13 @@
 
-body {
+
+.homehtml {
     background: url('guillermo-alvarez-631481-unsplash.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    min-width: 100vh;
+    min-height: 100vh;
 }
 
 h1 {
@@ -25,7 +28,6 @@ h3 {
     position: absolute;
     top: 32%;
     right: 25%;
-
 }
 
 .searchDiv {
