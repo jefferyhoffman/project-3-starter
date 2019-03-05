@@ -16,7 +16,7 @@ class Register extends Component {
   handleSubmit = (email, password) => {
     API.Users.register(email, password)
       .then(response => {
-          this.setState({ redirectToReferrer: true })
+        this.setState({ redirectToReferrer: true })
       })
       .catch(err => {
         if (err.response.status === 401) {
@@ -34,19 +34,21 @@ class Register extends Component {
     }
 
     return (
-      <div className='Register'>
-        {this.state.error &&
-          <div className='row'>
-            <div className='col'>
-              <div className='alert alert-danger mb-3' role='alert'>
-                {this.state.error}
+      <div className="registerhtml">
+        <div className='Register'>
+          {this.state.error &&
+            <div className='row'>
+              <div className='col'>
+                <div className='alert alert-danger mb-3' role='alert'>
+                  {this.state.error}
+                </div>
               </div>
-            </div>
-          </div>}
-        
+            </div>}
+
           <div className='col'>
             <RegisterForm onSubmit={this.handleSubmit} />
           </div>
+        </div>
       </div>
     );
   }
