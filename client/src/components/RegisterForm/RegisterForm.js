@@ -28,8 +28,8 @@ class RegisterForm extends Component {
     return (
       <div className='RegisterForm'>
 
-        <h1>Register Account</h1>
-        <h3>Get Started on Your Journey!</h3>
+        <h1 id="registerh1">Register Account</h1>
+        <h3 id="registerh3">Get Started on Your Journey!</h3>
         
         <form onSubmit={this.handleSubmit}>
           <div className='input-group mb-3' id="registeremail">
