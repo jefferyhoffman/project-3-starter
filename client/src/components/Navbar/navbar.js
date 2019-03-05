@@ -29,6 +29,7 @@ class Navibar extends Component {
       <div className="sidenav">
         <nav id='navbar' className={collapsed ? "inactive" : "active"}>
           <Link className='navbar-header' to='/' id="logo"><h3>Travel'd</h3><hr/></Link>
+
             <ul className='navbar-nav'>
               {user &&
                 <li className='nav-item'>
@@ -56,6 +57,7 @@ class Navibar extends Component {
                   <li className='nav-item'><Link className='nav-link' to='/register' onClick={this.toggleCollapse}>Register</Link></li>
                   </>}
             </ul>
+
         </nav>
 
         <div id="content">
