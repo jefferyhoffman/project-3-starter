@@ -28,11 +28,11 @@ class RegisterForm extends Component {
     return (
       <div className='RegisterForm'>
 
-        <h1>Register Account</h1>
-        <h3>Get Started on Your Journey!</h3>
+        <h1 id="registerh1">Register Account</h1>
+        <h3 id="registerh3">Get Started on Your Journey!</h3>
         
         <form onSubmit={this.handleSubmit}>
-          <div className='input-group mb-3'>
+          <div className='input-group mb-3' id="registeremail">
             <div className="input-group-prepend">
               <span className="input-group-text">@</span>
             </div>
@@ -47,7 +47,7 @@ class RegisterForm extends Component {
             />
           </div>
 
-          <div className='input-group mb-3'>
+          <div className='input-group mb-3' id="registerpass">
             <div className="input-group-prepend">
               <span className="input-group-text">a3b</span>
             </div>
