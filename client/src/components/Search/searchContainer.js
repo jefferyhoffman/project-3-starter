@@ -35,11 +35,6 @@ class SearchContainer extends Component {
     this.searchTrips(this.state.search);
   };
 
-  // displaySearch = () => {
-  //   if (this.state.search === trip.location) {
-  //   }
-  // }
-
   render() {
     return (
      <div className="container" >

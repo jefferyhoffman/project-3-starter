@@ -13,9 +13,6 @@ class ResultContainer extends Component {
       this.setState({
         trips: res.data
       });
-      // console.log(res.data);
-      // console.log(res);
-      // console.log(this.state.trips);
     });
   }
   render() {
