@@ -91,7 +91,7 @@ h3 {
 }
 
 @media only screen and (min-width: 416px) and (max-width: 1025px) {
-    /* phones */
+    /* tablets */
     .loginhtml {
         background: url('sorasak-253206-unsplash.jpg') no-repeat center center fixed;
         -webkit-background-size: cover;

@@ -92,7 +92,7 @@ h3 {
 }
 
 @media only screen and (min-width: 416px) and (max-width: 1025px) {
-    /* tablet */
+    /* tablets */
     .registerhtml {
         background: url('anton-repponen-99624-unsplash.jpg') no-repeat center center fixed;
         -webkit-background-size: cover;

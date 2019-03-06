@@ -56,6 +56,7 @@
         height: 90%;
         top: 20%;
         right: 5%;
+        z-index: 0;
     }
 
     #homeh1 {
@@ -69,15 +70,10 @@
         color: #F4EADE;
         font-size: 20px;
     }
-
-    .searchDiv {
-        align-content: center;
-        
-    }
 }
 
 @media only screen and (min-width: 416px) and (max-width: 1025px) {
-    /* phones */
+    /* tablets */
     .homehtml {
         background: url('anita-shepperd-523621-unsplash.jpg') no-repeat center center fixed;
         -webkit-background-size: cover;
