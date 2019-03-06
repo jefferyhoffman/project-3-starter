@@ -1,0 +1,100 @@
+
+.resulthtml {
+    background: rgb(247, 243, 238);
+    min-width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.jumbotron {
+    background: url('simon-john-mchaffie-1398923-unsplash-cropped.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 40vh;
+}
+
+#resultsh1 {
+    font-family: 'Permanent Marker', cursive;
+    color:  black;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 70px;
+}
+
+#resultcontainer{
+    padding: 0;
+    background: rgb(247, 243, 238);
+    height: auto;
+    overflow: hidden;
+}
+
+#resultcard {
+    float: left;
+    width: 30%;
+    margin-right: 1.66%;
+    margin-left: 1.66%;
+    margin-bottom: 3.33%;
+    border: 3px solid #2988BC;
+}
+
+#cardhead {
+    background-color: rgb(112, 175, 209);
+    color: #F4EADE;
+    font-family: 'Permanent Marker', cursive;
+    border-bottom: 3px solid #2988BC;
+    border-radius: 0;
+}
+
+#modalbutton {
+    border: 3px solid rgb(148, 148, 148);
+    background-color: rgb(180, 180, 180);
+    margin-bottom: 25px;
+    width: 80%;
+    margin-left: 10%;
+}
+
+#modalbutton:hover {
+    background-color: rgb(148, 148, 148);
+}
+
+#resultsh5 {
+    font-size: 25px;
+}
+
+@media only screen and (max-width: 415px) {
+    /* phones */
+    .jumbotron {
+        background: url('simon-john-mchaffie-1398923-unsplash.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 25vh;
+    }
+
+    #resultcard {
+        float: left;
+        width: 90%;
+        margin-right: 5%;
+        margin-left: 5%;
+        margin-bottom: 3.33%;
+    }
+
+
+}
+
+@media only screen and (min-width: 416px) and (max-width: 1025px) {
+    /* tablets */
+    .jumbotron {
+        background: url('simon-john-mchaffie-1398923-unsplash.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 25vh;
+    }
+    
+}
