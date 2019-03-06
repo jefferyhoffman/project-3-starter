@@ -5,12 +5,22 @@
     text-align: center;
     height: 100vh;
     position: absolute;
-    z-index: 2;
+    z-index: 4;
+    position: fixed;
   }
+
 
 .sidenav:hover {
     text-decoration: none;
   }
+
+#greyout.inactive {
+  position: absolute;
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(15, 15, 15, 0.4);
+}
 
 #navbar.inactive {
     min-width: 250px;
@@ -121,4 +131,3 @@ h3 {
 }
 
 }
-

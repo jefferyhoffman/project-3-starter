@@ -51,13 +51,13 @@ class IModal extends React.Component {
 
     return (
       <div className="row">
-      <div className="col-lg-2">
+      <div className="col-lg-12">
       <ButtonToolbar>
         <Button
-          variant="primary"
+          id="modalbutton"
           onClick={() => this.setState({ modalShow: true })}
         >
-         Trip Itinerary
+         View Itinerary
         </Button>
 
         <MyVerticallyCenteredModal
