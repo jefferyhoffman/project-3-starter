@@ -28,7 +28,7 @@ class Navibar extends Component {
     return (
       <div className="sidenav">
         <nav id='navbar' className={collapsed ? "inactive" : "active"}>
-          <Link className='navbar-header' to='/'><h3 id="logo">Travel'd</h3><hr/></Link>
+          <Link className='navbar-header' to='/' onClick={this.toggleCollapse}><h3 id="logo">Travel'd</h3><hr/></Link>
 
             <ul className='navbar-nav'>
               {user &&
@@ -61,7 +61,7 @@ class Navibar extends Component {
         </nav>
 
         <div id="content">
-            <button type="button" id="sidebarCollapse" className="navbar-btn" onClick={this.toggleCollapse}>
+            <button type="button" id="sidebarCollapse" className={collapsed ? "inactive" : "active"} onClick={this.toggleCollapse}>
                 <span></span>
                 <span></span>
                 <span></span>
