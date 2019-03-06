@@ -214,7 +214,7 @@ class Form extends Component {
             <hr />
             <form onSubmit={this.handleFormSubmit}>
               <div className="row">
-                <div className="col-md-7">
+                <div className="col-md-6">
                   <label>
                     <h5>Destination:</h5>
                   </label>
@@ -225,9 +225,10 @@ class Form extends Component {
                     onChange={this.handleInputChange}
                     type="text"
                     placeholder="Enter Destination"
+                    
                   />
                 </div>
-                <div className="col-md-5">
+                <div className="col-md-4">
                   <label>
                     <h5>Trip Days:</h5>
                   </label>
@@ -241,7 +242,7 @@ class Form extends Component {
                   />
                 </div>
               </div>
-              <hr />
+              <br />
               <div className="row">
                 <div className="col-md-12">
                   <label>
@@ -259,7 +260,7 @@ class Form extends Component {
                   />
                 </div>
               </div>
-              <hr />
+              <br />
 
               <div className="row">
                 <div className="col-lg-6">
