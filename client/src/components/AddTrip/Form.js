@@ -156,9 +156,10 @@ class Form extends Component {
       destination: "",
       tripDays: "",
       shortDescription: "",
-      tripImages: []
+      tripImages: [],
+      itins:[],
     });
-    this.props.history.push("/add/addItin");
+    this.props.history.push("/mytrips");
 
     localStorage.setItem("Destination", this.state.destination)
     localStorage.setItem("tripDays", this.state.tripDays)
@@ -174,7 +175,8 @@ class Form extends Component {
         location: this.state.destination,
         trip_length: this.state.tripDays,
         description: this.state.shortDescription,
-        images: this.state.tripImages
+        images: this.state.tripImages,
+        itinerary: this.state.itins
       }
     })
       .then(function (response) {
@@ -200,7 +202,7 @@ class Form extends Component {
     this.setState({
       itins: [...this.state.itins, itin]
     });
-    // localStorage.setItem("Itinerary", JSON.stringify(this.state.itins))
+    localStorage.setItem("Itinerary", JSON.stringify(this.state.itins))
   };
   
   render() {
@@ -290,7 +292,7 @@ class Form extends Component {
                 </div>
               ))}
               <div className="sbmtBtn">
-                <button type="submit" className="btn btn-primary" onClick={this.handleFormSubmit}>Submit</button>
+                <button type="submit" className="btn btn-primary" onClick={this.addItin}>Submit</button>
               </div>
               <hr />
             </form>

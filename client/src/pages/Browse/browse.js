@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import SearchForm from "../../components/Search/searchForm"
+import SearchContainer from "../../components/Search/searchContainer"
 
 
 class Browse extends Component {
@@ -9,7 +9,7 @@ class Browse extends Component {
       <div className='container'>
       <h1>Browse Trips</h1>
       <hr/>
-      <SearchForm />
+      <SearchContainer />
       </div>
     );
   }
