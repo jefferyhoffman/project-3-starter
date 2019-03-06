@@ -20,26 +20,6 @@ class ResultContainer extends Component {
   }
   render() {
     return (
-<<<<<<< HEAD
-      <div className="container" >
-        <h1 style={{ textAlign: "center" }}>My Trips</h1>
-        {this.state.trips.map(trip =>
-        <div className="card"  style={{ width: "40vh", float: "left" }} key ={trip.user}>
-          <div className="card-header text-center">
-            <h5>{trip.location}</h5>
-          </div>
-          <div className="card-body">
-            <h5 key={trip.user}>Days of Trip:</h5> <div> {trip.trip_length} </div>
-            <hr />
-            <h5>Trip Description: </h5>{" "}
-            <div> {trip.description} </div>
-          </div>
-         <IModal key={trip.user} tripInfo={trip.itinerary}/>
-          
-        </div>  
-        )}
-</div>
-=======
       <div className="resulthtml">
         <div className="jumbotron">
           <h1 id="resultsh1">My Trips</h1>
@@ -62,7 +42,6 @@ class ResultContainer extends Component {
           )}
         </div>
       </div>
->>>>>>> d2cbfa45c28092bfbf6a6f0de7185120447749b4
     );
   }
 }
