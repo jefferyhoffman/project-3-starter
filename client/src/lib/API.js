@@ -29,23 +29,17 @@ export default {
   },
 
   Trips: {
-    tripResults: function(
-      user,
-      location,
-      trip_length,
-      itinerary,
-      description,
-      images
-    ) {
-      return axios.get("/api/trips", {
-        user,
-        location,
-        trip_length,
-        itinerary,
-        description,
-        images
-      });
+    tripResults: function() {
+      return axios.get("/api/trips");
     }
   },
 
-}
+  Search:{
+    searchResults: async function(location) {
+      return axios.get("/api/trips/" + location);
+    }
+  }
+};
+
+
+
