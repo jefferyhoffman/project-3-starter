@@ -94,24 +94,30 @@ h3 {
 
 @media only screen and (max-width: 415px) {
   /* phones */
+  .sidenav {
+    width: 100vw;
+  }
+
   #navbar.inactive {
-    min-width: 100vw;
-    max-width: 100vw;
+    min-width: 100%;
+    max-width: 100%;
     background: #F4EADE;
     color: black;
     transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
     transform-origin: center left;
     text-decoration: none;
     border-right: 3px solid rgb(219, 207, 192);
+    z-index: 2
   }
 
-  #sidebarCollapse.inactive {
+  #content.inactive {
     width: 40px;
     height: 40px;
     background: rgba(255, 255, 255, 0.75);
     border: none;
     position: relative;
     right: 44px;
+    z-index: 3;
 }
 
 }

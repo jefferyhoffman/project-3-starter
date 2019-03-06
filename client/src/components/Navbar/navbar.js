@@ -60,8 +60,8 @@ class Navibar extends Component {
 
         </nav>
 
-        <div id="content">
-            <button type="button" id="sidebarCollapse" className={collapsed ? "inactive" : "active"} onClick={this.toggleCollapse}>
+        <div id="content" className={collapsed ? "inactive" : "active"}>
+            <button type="button" id="sidebarCollapse" onClick={this.toggleCollapse}>
                 <span></span>
                 <span></span>
                 <span></span>
