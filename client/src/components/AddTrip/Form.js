@@ -179,7 +179,7 @@ class Form extends Component {
       }
     })
       .then(function (response) {
-        console.log(response);
+        // console.log(response);
       })
       .then(() => {
         // this.setState({
