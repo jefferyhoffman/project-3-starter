@@ -1,25 +1,23 @@
 import React, { Component } from "react";
 import SearchForm from "./searchForm";
+import API from '../../lib/API';
 
-// import API from "../utils/API";
 
 class SearchContainer extends Component {
   state = {
     search: "",
-   
   };
 
-  // When this component mounts, search the Giphy API for pictures of kittens
-  componentDidMount() {
-    // this.searchGiphy("kittens");
-    //this makes kittens show when page is loaded
-  }
 
-//   searchGiphy = query => {
-//     API.search(query)
-//       .then(res => this.setState({ results: res.data.data }))
-//       .catch(err => console.log(err));
-//   };
+  // do a search here by making the location === this.state.search and show only ones that have that location.
+    searchTrips= () => {
+      API.Trips.tripResults(this.context.trip).then(res => {
+        this.setState({
+          trips: res.data});
+        console.log(res.data);
+      
+    })
+  };
 
   handleInputChange = event => {
     const name = event.target.name;
@@ -32,21 +30,20 @@ class SearchContainer extends Component {
   // When the form is submitted, search the Giphy API for `this.state.search`
   handleFormSubmit = event => {
     event.preventDefault();
-    this.searchGiphy(this.state.search);
+    this.searchTrips(this.state.search);
+    console.log(this.state.search)
   };
 
   render() {
     return (
       <div>
-        {/* <Card heading ={this.state.result.destination || "Destination"}></Card> */}
         <SearchForm
           search={this.state.search}
           handleFormSubmit={this.handleFormSubmit}
           handleInputChange={this.handleInputChange}
         />
-        
       </div>
-    );
+    )
   }
 }
 

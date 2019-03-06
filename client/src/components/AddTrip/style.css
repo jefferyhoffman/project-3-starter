@@ -215,7 +215,7 @@ textarea:hover::focus:-ms-placeholder {
     outline: none;
 
     color: black;
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Permanent Marker', cursive, Arial, Helvetica, sans-serif;
     font-size: 0.875em;
     background-color: #ED8C72;
 
