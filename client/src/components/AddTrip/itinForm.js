@@ -25,7 +25,6 @@ export default class ItinForm extends Component {
   render() {
     return (
       <div className="itinform">
-      <form onSubmit={this.handleSubmit}>
         <input
           className="itinForm"
           name="text"
@@ -37,7 +36,6 @@ export default class ItinForm extends Component {
         <button className="addItin" onClick={this.handleSubmit}>Add</button>
         <hr />
         <br/>
-      </form>
       </div>
       
     );

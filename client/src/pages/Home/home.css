@@ -1,19 +1,22 @@
 
-body {
+
+.homehtml {
     background: url('guillermo-alvarez-631481-unsplash.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    min-width: 100vh;
+    min-height: 100vh;
 }
 
-h1 {
+#homeh1 {
     font-family: 'Permanent Marker', cursive;
     color:  #F4EADE;
     font-size: 60px;
 }
 
-h3 {
+#homeh3 {
     font-family: 'Permanent Marker', cursive;
     color: #F4EADE;
 }
@@ -25,10 +28,88 @@ h3 {
     position: absolute;
     top: 32%;
     right: 25%;
-
 }
 
 .searchDiv {
     align-content: center;
 }
 
+@media only screen and (max-width: 415px) {
+    /* phones */
+    .homehtml {
+        background: url('anita-shepperd-523621-unsplash.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-width: 100vh;
+        min-height: 100vh;
+        position: fixed;
+    }
+
+    .homecontainer {
+        position: fixed;
+        text-align: center;
+        align-items: center;
+        margin: 0;
+        width: 90%;
+        height: 90%;
+        top: 20%;
+        right: 5%;
+        z-index: 0;
+    }
+
+    #homeh1 {
+        font-family: 'Permanent Marker', cursive;
+        color:  #F4EADE;
+        width: 100%;
+    }
+    
+    #homeh3 {
+        font-family: 'Permanent Marker', cursive;
+        color: #F4EADE;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 416px) and (max-width: 1025px) {
+    /* tablets */
+    .homehtml {
+        background: url('anita-shepperd-523621-unsplash.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-width: 100vh;
+        min-height: 100vh;
+        position: fixed;
+    }
+
+    .homecontainer {
+        position: fixed;
+        text-align: center;
+        align-items: center;
+        margin: 0;
+        width: 80%;
+        height: 90%;
+        top: 30%;
+        right: 10%;
+    }
+
+    #homeh1 {
+        font-family: 'Permanent Marker', cursive;
+        color:  #F4EADE;
+        width: 100%;
+    }
+    
+    #homeh3 {
+        font-family: 'Permanent Marker', cursive;
+        color: #F4EADE;
+        font-size: 20px;
+    }
+
+    .searchDiv {
+        align-content: center;
+        
+    }
+}

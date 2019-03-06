@@ -1,6 +1,17 @@
+
+.registerhtml {
+    background: url('kelly-arnold-528645-unsplash.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-width: 100vh;
+    min-height: 100vh;
+}
+
 .RegisterForm {
     width: 50%;
-    margin-left: 25%;
+    margin-left: 22.5%;
     text-align: center;
     position: fixed;
     top: 30%;
@@ -8,19 +19,112 @@
 }
 
 .registerbutton {
-    background-color: #6AB187;
+    background-color: rgb(238, 185, 79);
     color: #F4EADE;
     font-family: 'Permanent Marker', cursive;
     width: 200px;
     height: 40px;
-    border: 3px solid rgb(74, 124, 95);
+    border: 3px solid rgb(202,137,3);
     border-radius: 5px;
 }
 
 .registerbutton:hover {
-    background-color: rgb(74, 124, 95);
+    background-color: rgb(202,137,3);
 }
 
 h3 {
     margin-bottom: 15px;
 }
+
+#registeremail {
+    border: 3px solid rgb(63, 63, 63);
+}
+
+#registerpass {
+    border: 3px solid rgb(63, 63, 63);
+}
+
+#registerh1 {
+    font-family: 'Permanent Marker', cursive;
+    color:  #F4EADE;
+}
+
+#registerh3 {
+    font-family: 'Permanent Marker', cursive;
+    color:  #F4EADE;
+}
+
+@media only screen and (max-width: 415px) {
+    /* phones */
+    .registerhtml {
+        background: url('anton-repponen-99624-unsplash.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-width: 100vh;
+        min-height: 100vh;
+        position: fixed;
+    }
+
+    .RegisterForm {
+        position: fixed;
+        text-align: center;
+        align-items: center;
+        margin: 0;
+        width: 90%;
+        height: 90%;
+        top: 20%;
+        right: 5%;
+    }
+
+    #registerh1 {
+        font-family: 'Permanent Marker', cursive;
+        color:  #F4EADE;
+        width: 100%;
+    }
+    
+    #registerh3 {
+        font-family: 'Permanent Marker', cursive;
+        color: #F4EADE;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 416px) and (max-width: 1025px) {
+    /* tablets */
+    .registerhtml {
+        background: url('anton-repponen-99624-unsplash.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-width: 100vh;
+        min-height: 100vh;
+        position: fixed;
+    }
+
+    .RegisterForm {
+        position: fixed;
+        text-align: center;
+        align-items: center;
+        margin: 0;
+        width: 80%;
+        height: 90%;
+        top: 30%;
+        right: 10%;
+    }
+
+    #registerh1 {
+        font-family: 'Permanent Marker', cursive;
+        color:  #F4EADE;
+        width: 100%;
+    }
+    
+    #registerh3 {
+        font-family: 'Permanent Marker', cursive;
+        color: #F4EADE;
+        font-size: 20px;
+    }
+}
+

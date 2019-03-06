@@ -8,7 +8,6 @@ import SearchForm from "../../components/Search/searchContainer"
 
 class Secret extends Component {
   static contextType = AuthContext;
-
   state = {
     isLoading: true,
     error: ""
@@ -22,7 +21,6 @@ class Secret extends Component {
         if (err.response.status === 401) {
           return this.setState({ error: "Unauthorized. Please login." });
         }
-
         console.log(err);
       })
       .finally(() => this.setState({ isLoading: false }));
@@ -34,10 +32,6 @@ class Secret extends Component {
       <div className="jumbotron" style={{textAlign:"center"}}> 
        <h1>Welcome to My Account</h1>
        </div>
-    
-    
-     
-     
         <div className='row'>
           <div className='col'>
             {this.state.isLoading

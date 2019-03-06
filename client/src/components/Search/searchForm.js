@@ -12,7 +12,7 @@ function SearchForm  (props) {
             name="search"
             type="text"
             className="form-control"
-            placeholder=""
+            placeholder="Search by City"
             id="search"
           />
           

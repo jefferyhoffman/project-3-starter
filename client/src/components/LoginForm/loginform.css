@@ -1,26 +1,133 @@
 
 .LoginForm {
     width: 50%;
-    margin-left: 25%;
+    margin-left: 22.5%;
     text-align: center;
     position: fixed;
     top: 30%;
 }
 
 .loginbutton {
-    background-color: #6AB187;
+    background-color: rgb(240, 99, 99);
     color: #F4EADE;
     font-family: 'Permanent Marker', cursive;
     width: 200px;
     height: 40px;
-    border: 3px solid rgb(74, 124, 95);
+    border: 3px solid rgba(230, 23, 23);
     border-radius: 5px;
 }
 
 .loginbutton:hover {
-    background-color: rgb(74, 124, 95);
+    background-color: rgba(230, 23, 23);
 }
 
 h3 {
     margin-bottom: 15px;
+}
+
+.loginhtml {
+    background: url('lin-mei-159435-unsplash.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-width: 100vh;
+    min-height: 100vh;
+}
+
+#loginemail {
+    border: 3px solid black
+}
+
+#loginpass {
+    border: 3px solid black
+}
+
+#loginh1 {
+    font-family: 'Permanent Marker', cursive;
+    color:  #F4EADE;
+}
+
+#loginh3 {
+    font-family: 'Permanent Marker', cursive;
+    color:  #F4EADE;
+}
+
+@media only screen and (max-width: 415px) {
+    /* phones */
+    .loginhtml {
+        background: url('sorasak-253206-unsplash.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-width: 100vh;
+        min-height: 100vh;
+        position: fixed;
+    }
+
+    .LoginForm {
+        position: fixed;
+        text-align: center;
+        align-items: center;
+        margin: 0;
+        width: 90%;
+        height: 90%;
+        top: 20%;
+        right: 5%;
+    }
+
+    #loginh1 {
+        font-family: 'Permanent Marker', cursive;
+        color:  #F4EADE;
+        width: 100%;
+    }
+    
+    #loginh3 {
+        font-family: 'Permanent Marker', cursive;
+        color: #F4EADE;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 416px) and (max-width: 1025px) {
+    /* tablets */
+    .loginhtml {
+        background: url('sorasak-253206-unsplash.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-width: 100vh;
+        min-height: 100vh;
+        position: fixed;
+    }
+
+    .LoginForm {
+        position: fixed;
+        text-align: center;
+        align-items: center;
+        margin: 0;
+        width: 80%;
+        height: 90%;
+        top: 30%;
+        right: 10%;
+    }
+
+    #loginh1 {
+        font-family: 'Permanent Marker', cursive;
+        color:  #F4EADE;
+        width: 100%;
+    }
+    
+    #loginh3 {
+        font-family: 'Permanent Marker', cursive;
+        color: #F4EADE;
+        font-size: 20px;
+    }
+
+    .searchDiv {
+        align-content: center;
+        
+    }
 }
