@@ -6,8 +6,8 @@ import API from '../../lib/API';
 class SearchContainer extends Component {
   state = {
     search: "",
+    trips:[],
   };
-
 
   // do a search here by making the location === this.state.search and show only ones that have that location.
     searchTrips= () => {
@@ -15,7 +15,6 @@ class SearchContainer extends Component {
         this.setState({
           trips: res.data});
         console.log(res.data);
-      
     })
   };
 
@@ -27,12 +26,17 @@ class SearchContainer extends Component {
     });
   };
 
-  // When the form is submitted, search the Giphy API for `this.state.search`
+ 
   handleFormSubmit = event => {
     event.preventDefault();
     this.searchTrips(this.state.search);
     console.log(this.state.search)
   };
+
+  // displaySearch = query => {
+  //   if (this.state.search === query) {
+  //   }
+  // }
 
   render() {
     return (

@@ -43,26 +43,8 @@ export default class ItinList extends Component {
             <br />
             <br />
           </div>
-<<<<<<< HEAD
-        ))}
-        <hr />
-       <div className="sbmtBtn">
-        <Link
-          to="/add/review"
-          className={window.location.pathname === "/add/review" ? "nav-link active" : "nav-link"}
-        >
-        <button className="btn btn-primary  btn-lg" style={{float:"right"}} onClick={this.addItin}>
-         Next / Review</button> </Link>
-         <br/>
-         <br/>
-         </div>
-         </div>
-      </div>
-        
-=======
         </div>
       </div>        
->>>>>>> 8b4dc32a31d351231e90c456fc96d2e8e0714b62
     );
   }
 }

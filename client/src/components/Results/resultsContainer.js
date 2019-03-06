@@ -19,20 +19,20 @@ class ResultContainer extends Component {
   }
   render() {
     return (
-      <div className="container">
+      <div className="container" >
         <h1 style={{ textAlign: "center" }}>My Trips</h1>
         {this.state.trips.map(trip =>
-        <div className="card" style={{ width: "40vh", float: "left" }}>
+        <div className="card"  style={{ width: "40vh", float: "left" }} key ={trip.user}>
           <div className="card-header text-center">
-            <h5 key={trip.user}>{trip.location}</h5>
+            <h5>{trip.location}</h5>
           </div>
           <div className="card-body">
             <h5 key={trip.user}>Days of Trip:</h5> <div> {trip.trip_length} </div>
             <hr />
             <h5>Trip Description: </h5>{" "}
-            <div key={trip.user}> {trip.description} </div>
+            <div> {trip.description} </div>
           </div>
-         <IModal tripInfo={trip.itinerary}/>
+         <IModal key={trip.user} tripInfo={trip.itinerary}/>
           
         </div>  
         )}
