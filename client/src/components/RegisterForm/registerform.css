@@ -47,6 +47,7 @@ h3 {
 #registerh1 {
     font-family: 'Permanent Marker', cursive;
     color:  #F4EADE;
+    font-size: 80px;
 }
 
 #registerh3 {
@@ -87,7 +88,7 @@ h3 {
     #registerh1 {
         font-family: 'Permanent Marker', cursive;
         color:  #F4EADE;
-        width: 100%;
+        font-size: 50px;
     }
     
     #registerh3 {
