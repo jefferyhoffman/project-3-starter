@@ -89,13 +89,14 @@ h3 {
     #loginh1 {
         font-family: 'Permanent Marker', cursive;
         color:  #F4EADE;
-        width: 100%;
+        font-size: 50px;
     }
     
     #loginh3 {
         font-family: 'Permanent Marker', cursive;
         color: #F4EADE;
-        font-size: 50px;
+        font-size: 20px;
+        margin-bottom: 20px;
     }
 
     #loginerror {

@@ -34,7 +34,7 @@ class ResultContainer extends Component {
                 <div> {trip.trip_length} </div>
                 <hr />
                 <h5>Trip Description: </h5>{" "}
-                <div key={trip.user}> {trip.description} </div>
+                <div key={trip.user} id="descript"> {trip.description} </div>
               </div>
               <IModal tripInfo={trip.itinerary} />
             </div>
