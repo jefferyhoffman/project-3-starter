@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 //import { Redirect } from 'react-router-dom';
+import "./style.css";
 
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
@@ -28,10 +29,12 @@ class Secret extends Component {
 
   render() {
     return (
+      <div className="secretP">
       <div className='container'> <div className='Secret'>
       <div className="jumbotron" style={{textAlign:"center"}}> 
-       <h1>Welcome to My Account</h1>
+       <h1 className="wtma">Welcome!</h1>
        </div>
+       <h2 className="VI">Search for your Vacation Inspiraton</h2>
         <div className='row'>
           <div className='col'>
             {this.state.isLoading
@@ -39,15 +42,46 @@ class Secret extends Component {
               : this.state.error
                 ? <div className='alert alert-danger'>{this.state.error}</div>
                 : <div>
-                  <p style={{textAlign:"center"}}><em>{this.state.secrets[0].message}</em></p>
                 </div>}
           </div>
            <hr/>
+           
        
       </div>
          <SearchForm />
         </div>
       </div>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+
+      
+      
+      <br/>
+      <div className="container">
+      <div className="row">
+      <div className="col-lg-12">
+      <a href="https://clarkf704.github.io/thisistheoutDoor/"><button className="hike">Get Inspired!</button></a>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      </div>
+      </div>
+      </div>
+     
+
+      </div>
+      
     );
   }
 }
