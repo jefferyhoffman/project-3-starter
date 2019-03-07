@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import API from "../../lib/API";
 import IModal from "./modal";
+import ImagesModal from "./ImageModal";
 import "./results.css";
 
 class ResultContainer extends Component {
+
   state = {
     trips: []
   };
@@ -13,6 +15,7 @@ class ResultContainer extends Component {
       this.setState({
         trips: res.data
       });
+      console.log(res.data)
     });
   }
   render() {
@@ -37,6 +40,7 @@ class ResultContainer extends Component {
                 <div key={trip.user} id="descript"> {trip.description} </div>
               </div>
               <IModal tripInfo={trip.itinerary} />
+              <ImagesModal tripInfo={trip} />
             </div>
           ))}
         </div>

@@ -39,6 +39,8 @@ class Secret extends Component {
               : this.state.error
                 ? <div className='alert alert-danger'>{this.state.error}</div>
                 : <div>
+                  <p>Shh, the secret is...</p>
+                  <p><em>{this.state.secrets[0].message}</em></p>
                 </div>}
           </div>
            <hr/>

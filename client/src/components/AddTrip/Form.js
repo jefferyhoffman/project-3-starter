@@ -126,7 +126,6 @@
 // export default Form;
 
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import "./style.css";
 import ItinForm from "./itinForm";
 import axios from "axios";
@@ -138,7 +137,7 @@ class Form extends Component {
     tripDays: "",
     shortDescription: "",
     itins: [],
-    tripImages: []
+    images: []
   };
 
   handleInputChange = event => {
@@ -154,14 +153,14 @@ class Form extends Component {
       destination: "",
       tripDays: "",
       shortDescription: "",
-      tripImages: [],
+      images: [],
       itins: []
     });
 
     localStorage.setItem("Destination", this.state.destination);
     localStorage.setItem("tripDays", this.state.tripDays);
     localStorage.setItem("shortDescription", this.state.shortDescription);
-    localStorage.setItem("tripImages", this.state.tripImages);
+    localStorage.setItem("tripImages", this.state.images);
 
     axios({
       method: "POST",
@@ -171,7 +170,7 @@ class Form extends Component {
         location: this.state.destination,
         trip_length: this.state.tripDays,
         description: this.state.shortDescription,
-        images: this.state.tripImages,
+        images: this.state.images,
         itinerary: this.state.itins
       }
     })
@@ -259,10 +258,10 @@ class Form extends Component {
                   </label>
                   <input
                     className="img-input"
-                    value={this.state.tripImages}
-                    name="tripImages"
+                    value={this.state.images}
+                    name="images"
                     onChange={this.handleInputChange}
-                    type="file"
+                    type="text"
                   />
                 </div>
               </div>
