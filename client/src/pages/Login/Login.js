@@ -5,6 +5,7 @@ import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
 import LoginForm from '../../components/LoginForm/LoginForm';
 
+
 class Login extends Component {
   static contextType = AuthContext;
 
@@ -52,12 +53,11 @@ class Login extends Component {
           {this.state.error &&
             <div className='row'>
               <div className='col'>
-                <div className='alert alert-danger mb-3' role='alert'>
+                <div className='alert alert-danger mb-3' role='alert' id="loginerror">
                   {this.state.error}
                 </div>
               </div>
             </div>}
-
           <div className='col'>
             <LoginForm onSubmit={this.handleSubmit} />
           </div>
