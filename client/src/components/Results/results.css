@@ -86,7 +86,7 @@
 
 }
 
-@media only screen and (min-width: 416px) and (max-width: 1025px) {
+@media only screen and (min-width: 416px) and (max-width: 1080px) {
     /* tablets */
     .jumbotron {
         background: url('simon-john-mchaffie-1398923-unsplash.jpg');

@@ -61,6 +61,7 @@ h3 {
     margin-left: 30%;
     border-radius: 5px; 
 }
+
 @media only screen and (max-width: 415px) {
     /* phones */
     .registerhtml {
@@ -96,9 +97,16 @@ h3 {
         color: #F4EADE;
         font-size: 20px;
     }
+
+    #formerrors {
+        background-color: rgb(255, 255, 255, .75);
+        width: 70%;
+        margin-left: 15%;
+        border-radius: 5px; 
+    }
 }
 
-@media only screen and (min-width: 416px) and (max-width: 1025px) {
+@media only screen and (min-width: 416px) and (max-width: 1080px) {
     /* tablets */
     .registerhtml {
         background: url('anton-repponen-99624-unsplash.jpg') no-repeat center center fixed;
