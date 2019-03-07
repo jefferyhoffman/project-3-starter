@@ -46,11 +46,20 @@ h3 {
 #loginh1 {
     font-family: 'Permanent Marker', cursive;
     color:  #F4EADE;
+    font-size: 80px;
+    
 }
 
 #loginh3 {
     font-family: 'Permanent Marker', cursive;
     color:  #F4EADE;
+}
+
+#loginerror {
+    width: 60%;
+    margin-left: 20%;
+    position: fixed;
+    text-align: center;
 }
 
 @media only screen and (max-width: 415px) {
@@ -86,7 +95,14 @@ h3 {
     #loginh3 {
         font-family: 'Permanent Marker', cursive;
         color: #F4EADE;
-        font-size: 20px;
+        font-size: 50px;
+    }
+
+    #loginerror {
+        width: 80%;
+        margin-left: 10%;
+        position: fixed;
+        text-align: center;
     }
 }
 
