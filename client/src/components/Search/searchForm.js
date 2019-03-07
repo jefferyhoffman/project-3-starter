@@ -16,11 +16,9 @@ function SearchForm  (props) {
             id="search"
             
           />
-          
           <button onClick={props.handleFormSubmit} className="searchbtn">
             Let's Go!
           </button>
-          
         </div>
       </form>
     );

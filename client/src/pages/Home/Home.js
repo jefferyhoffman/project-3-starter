@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SearchForm from "../../components/Search/searchForm"
+import SearchContainer from "../../components/Search/searchContainer"
 import "./home.css"
 
 class HomePage extends Component {
@@ -13,7 +13,7 @@ class HomePage extends Component {
         </div>
         <hr />
         <div className="searchDiv">
-          <SearchForm />
+          <SearchContainer />
         </div>
       </div>
       </div>

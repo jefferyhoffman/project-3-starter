@@ -3,7 +3,6 @@ import SearchForm from "./searchForm";
 import API from '../../lib/API';
 import IModal from "../Results/modal";
 
-
 class SearchContainer extends Component {
   state = {
     search: "",
@@ -29,7 +28,6 @@ class SearchContainer extends Component {
     });
   };
 
- 
   handleFormSubmit = event => {
     event.preventDefault();
     this.searchTrips(this.state.search);
@@ -43,8 +41,7 @@ class SearchContainer extends Component {
           handleFormSubmit={this.handleFormSubmit}
           handleInputChange={this.handleInputChange}
         />
-       
-        <h1 style={{ textAlign: "center" }}>Trips</h1>
+       <br/>
         {this.state.trips.map(trip =>
         <div className="card"  style={{ width: "40vh", float: "left" }} key ={trip.user}>
           <div className="card-header text-center">
@@ -57,13 +54,8 @@ class SearchContainer extends Component {
             <div> {trip.description} </div>
           </div>
          <IModal key={trip.user} tripInfo={trip.itinerary}/>
-          
         </div> 
-        
-
-    )
-    
-  }
+    )}
   </div>
     )
 }
