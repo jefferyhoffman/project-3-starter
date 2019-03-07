@@ -72,7 +72,7 @@
     }
 }
 
-@media only screen and (min-width: 416px) and (max-width: 1080px) {
+@media only screen and (min-width: 416px) and (max-width: 1000px) {
     /* tablets */
     .homehtml {
         background: url('anita-shepperd-523621-unsplash.jpg') no-repeat center center fixed;

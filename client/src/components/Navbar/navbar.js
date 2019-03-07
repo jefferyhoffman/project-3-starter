@@ -60,19 +60,18 @@ class Navibar extends Component {
             )}
           </ul>
           <ul className="navbar-nav">
-            {user && (
+          {user && (
               <li className="nav-item">
                 <Link
                   className="nav-link"
-                  to="/myaccount"
+                  to="/mytrips"
                   onClick={this.toggleCollapse}
                   id="navitems"
                 >
-                  My Account
+                  My Trips
                 </Link>
               </li>
             )}
-
             {user && (
               <li className="nav-item">
                 <Link
@@ -89,16 +88,16 @@ class Navibar extends Component {
               <li className="nav-item">
                 <Link
                   className="nav-link"
-                  to="/mytrips"
+                  to="/myaccount"
                   onClick={this.toggleCollapse}
                   id="navitems"
                 >
-                  My Trips
+                  Browse Trips
                 </Link>
               </li>
             )}
 
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link
                 className="nav-link"
                 to="/browse"
@@ -107,7 +106,7 @@ class Navibar extends Component {
               >
                 Browse
               </Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
         <div id="content" className={collapsed ? "inactive" : "active"}>
