@@ -33,7 +33,6 @@
 //     localStorage.setItem("tripImages", this.state.tripImages)
 //   };
 
-
 //   render() {
 //     return (
 //       <div className="formz">
@@ -127,15 +126,14 @@
 // export default Form;
 
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./style.css";
-// import { Link } from "react-router-dom";
 import ItinForm from "./itinForm";
 import axios from "axios";
 
-
 class Form extends Component {
   state = {
-    user: localStorage.getItem('token'),
+    user: localStorage.getItem("token"),
     destination: "",
     tripDays: "",
     shortDescription: "",
@@ -157,21 +155,19 @@ class Form extends Component {
       tripDays: "",
       shortDescription: "",
       tripImages: [],
-      itins:[],
+      itins: []
     });
-    this.props.history.push("/mytrips");
 
-    localStorage.setItem("Destination", this.state.destination)
-    localStorage.setItem("tripDays", this.state.tripDays)
-    localStorage.setItem("shortDescription", this.state.shortDescription)
-    localStorage.setItem("tripImages", this.state.tripImages)
-
+    localStorage.setItem("Destination", this.state.destination);
+    localStorage.setItem("tripDays", this.state.tripDays);
+    localStorage.setItem("shortDescription", this.state.shortDescription);
+    localStorage.setItem("tripImages", this.state.tripImages);
 
     axios({
-      method: 'POST',
-      url: '/api/trips',
+      method: "POST",
+      url: "/api/trips",
       data: {
-        user: localStorage.getItem('token'),
+        user: localStorage.getItem("token"),
         location: this.state.destination,
         trip_length: this.state.tripDays,
         description: this.state.shortDescription,
@@ -179,36 +175,30 @@ class Form extends Component {
         itinerary: this.state.itins
       }
     })
-      .then(function (response) {
-        console.log(response);
-      })
+      .then(function(response) {})
       .then(() => {
-        // this.setState({
-        //   location: "",
-        //   trip_length: "",
-        //   itinerary: [],
-        //   shortDescription: "",
-        //   images: []
-        // })
         localStorage.clear();
       })
-      .catch(function (err) {
+      .catch(function(err) {
         console.log(err);
-      })
-  }
-
+      });
+      this.props.history.push("/mytrips")
+  };
 
   addItin = itin => {
     this.setState({
       itins: [...this.state.itins, itin]
     });
-    localStorage.setItem("Itinerary", JSON.stringify(this.state.itins))
+    localStorage.setItem("Itinerary", JSON.stringify(this.state.itins));
   };
-  
+
   render() {
     return (
       <div className="formz">
-        <div className="container" style={{ boxShadow: "5px 5px 5px 5px #999" }}>
+        <div
+          className="container"
+          style={{ boxShadow: "5px 5px 5px 5px #999" }}
+        >
           <div className="form-group">
             <br />
             <h4>Enter New Trip</h4>
@@ -226,7 +216,6 @@ class Form extends Component {
                     onChange={this.handleInputChange}
                     type="text"
                     placeholder="Enter Destination"
-                    
                   />
                 </div>
                 <div className="col-md-4">
@@ -276,7 +265,6 @@ class Form extends Component {
                     type="file"
                   />
                 </div>
-
               </div>
               <hr />
               <br />
@@ -284,25 +272,24 @@ class Form extends Component {
               <hr />
               <ItinForm onSubmit={this.addItin} />
               {this.state.itins.map(itin => (
-                <div
-                  className="addB"
-                  id={itin.id}
-                  key={itin.id}
-                > {itin.text}
+                <div className="addB" id={itin.id} key={itin.id}>
+                  {" "}
+                  {itin.text}
                   <hr />
                 </div>
               ))}
               <div className="sbmtBtn">
-                <button type="submit" className="btn btn-primary" onClick={this.addItin}>Submit</button>
+                <button type="submit" className="btn btn-primary">
+                 Submit
+                </button>
               </div>
               <hr />
             </form>
           </div>
         </div>
       </div>
-      
     );
   }
 }
 
-  export default Form;
+export default Form;

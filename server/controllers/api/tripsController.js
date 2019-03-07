@@ -32,5 +32,17 @@ tripsController.post('/', function(req, res, next) {
         }
     });
 });
+tripsController.get("/:location", function(req, res){
+    console.log(req.params.location)
+    db.Trips.find({
+        "location": req.params.location
+    })
+    .then(function(results){
+        res.json(results)
+    })
+    .catch(function(err){
+        if(err) throw err;
+    })
+})
 
 module.exports = tripsController;
