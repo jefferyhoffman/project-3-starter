@@ -23,3 +23,87 @@
     border: 3px solid rgb(74, 124, 95);
     border-radius: 5px;
 }
+
+.homesearchcontainer {
+    width: 100%;
+    margin-right: 30%;
+}
+
+#homesearchcard {
+    float: left;
+    width: 30%;
+    min-height: 60vh;
+    max-height: 60vh;
+    margin-right: 1.66%;
+    margin-left: 1.66%;
+    margin-bottom: 3.33%;
+    border: 3px solid rgb(74, 124, 95);
+    overflow: hidden;
+}
+
+#homesearchhead {
+    background-color: #6AB187;
+    color: #F4EADE;
+    font-family: 'Permanent Marker', cursive;
+    border-bottom: 3px solid rgb(74, 124, 95);
+    border-radius: 0;
+}
+
+#homesearch {
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 415px) {
+    /* phones */
+
+    #homesearchcard {
+        float: left;
+        width: 100%;
+        margin-right: 0%;
+        margin-left: 2.5%;
+        margin-bottom: 3.33%;
+        max-height: none;
+        border-radius: 5px;
+    }
+
+    #homesearch {
+        width: 100%;
+        margin-bottom: 20px;
+        margin-left: 2.5%;
+    }
+
+}
+
+@media only screen and (min-width: 416px) and (max-width: 1080px) {
+    /* tablets */
+    #homesearch {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #homesearchcard {
+        float: left;
+        width: 30%;
+        min-height: 50vh;
+        max-height: 50vh;
+        margin-right: 0%;
+        margin-left: 2.5%;
+        margin-bottom: 3.33%;
+        max-height: none;
+        border-radius: 5px;
+    }
+
+    #homesearch {
+        width: 100%;
+        margin-bottom: 20px;
+        margin-left: 2.5%;
+    }
+
+    .homesearchcontainer {
+        width: 100%;
+
+    }
+    
+}

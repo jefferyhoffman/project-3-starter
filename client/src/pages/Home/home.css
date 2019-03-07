@@ -1,6 +1,6 @@
 
 
-.homehtml {
+.homehtmlbackground {
     background: url('guillermo-alvarez-631481-unsplash.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -8,6 +8,12 @@
     background-size: cover;
     min-width: 100vh;
     min-height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
 }
 
 #homeh1 {
@@ -22,21 +28,26 @@
 }
 
 .homecontainer {
+    margin-top: 15%;
     text-align: center;
     align-items: center;
-    width: 50%;
+    width: 100%;
     position: absolute;
-    top: 32%;
-    right: 25%;
 }
 
 .searchDiv {
+    width: 70%;
+    margin-left: 15%;
     align-content: center;
+}
+
+#moveallhome {
+    overflow: hidden;
 }
 
 @media only screen and (max-width: 415px) {
     /* phones */
-    .homehtml {
+    .homehtmlbackground {
         background: url('anita-shepperd-523621-unsplash.jpg') no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -45,17 +56,17 @@
         min-width: 100vh;
         min-height: 100vh;
         position: fixed;
+        overflow: hidden;
     }
 
     .homecontainer {
-        position: fixed;
+        position: absolute;
         text-align: center;
-        align-items: center;
         margin: 0;
-        width: 90%;
+        width: 95%;
+        margin-left: 2.5%;
         height: 90%;
         top: 20%;
-        right: 5%;
         z-index: 0;
     }
 
@@ -70,11 +81,17 @@
         color: #F4EADE;
         font-size: 20px;
     }
+
+    .searchDiv {
+        align-content: center;
+        width: 95%; 
+        margin: 0;
+    }
 }
 
 @media only screen and (min-width: 416px) and (max-width: 1000px) {
     /* tablets */
-    .homehtml {
+    .homehtmlbackground {
         background: url('anita-shepperd-523621-unsplash.jpg') no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -83,17 +100,16 @@
         min-width: 100vh;
         min-height: 100vh;
         position: fixed;
+        overflow: hidden;
     }
 
     .homecontainer {
-        position: fixed;
         text-align: center;
         align-items: center;
         margin: 0;
-        width: 80%;
+        width: 100%;
         height: 90%;
         top: 30%;
-        right: 10%;
     }
 
     #homeh1 {
@@ -110,6 +126,12 @@
 
     .searchDiv {
         align-content: center;
-        
+        width: 100%; 
+        margin: 0;
+    }
+
+    #homesearch {
+        width: 70%;
+        margin-left: 15%;
     }
 }

@@ -5,7 +5,7 @@ import "./searchform.css"
 function SearchForm  (props) {
     return (
       <form>
-        <div className="input-group">
+        <div className="input-group" id="homesearch">
           <input
             onChange={props.handleInputChange}
             value={props.search}
