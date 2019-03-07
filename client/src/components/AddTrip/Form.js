@@ -127,8 +127,8 @@
 // export default Form;
 
 import React, { Component } from "react";
-import "./style.css";
 // import { Link } from "react-router-dom";
+import "./style.css";
 import ItinForm from "./itinForm";
 import axios from "axios";
 
@@ -158,8 +158,7 @@ class Form extends Component {
       shortDescription: "",
       tripImages: [],
       itins:[],
-    });
-    this.props.history.push("/mytrips");
+    })
 
     localStorage.setItem("Destination", this.state.destination)
     localStorage.setItem("tripDays", this.state.tripDays)
@@ -180,7 +179,7 @@ class Form extends Component {
       }
     })
       .then(function (response) {
-        console.log(response);
+        // console.log(response);
       })
       .then(() => {
         // this.setState({
@@ -293,7 +292,8 @@ class Form extends Component {
                 </div>
               ))}
               <div className="sbmtBtn">
-                <button type="submit" className="btn btn-primary" onClick={this.addItin}>Submit</button>
+            <button type="submit" className="btn btn-primary">Submit</button>
+                
               </div>
               <hr />
             </form>

@@ -26,7 +26,9 @@ class Navibar extends Component {
     const { collapsed } = this.state;
 
     return (
+
       <div className="sidenav">
+      <div className={collapsed ? "inactive" : "active"} id="greyout" onClick={this.toggleCollapse}></div>
         <nav id='navbar' className={collapsed ? "inactive" : "active"}>
           <Link className='navbar-header' to='/' onClick={this.toggleCollapse}><h3 id="logo">Travel'd</h3><hr/></Link>
 

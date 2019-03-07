@@ -47,6 +47,7 @@ h3 {
 #registerh1 {
     font-family: 'Permanent Marker', cursive;
     color:  #F4EADE;
+    font-size: 80px;
 }
 
 #registerh3 {
@@ -54,6 +55,12 @@ h3 {
     color:  #F4EADE;
 }
 
+#formerrors {
+    background-color: rgb(255, 255, 255, .75);
+    width: 40%;
+    margin-left: 30%;
+    border-radius: 5px; 
+}
 @media only screen and (max-width: 415px) {
     /* phones */
     .registerhtml {
@@ -81,7 +88,7 @@ h3 {
     #registerh1 {
         font-family: 'Permanent Marker', cursive;
         color:  #F4EADE;
-        width: 100%;
+        font-size: 50px;
     }
     
     #registerh3 {

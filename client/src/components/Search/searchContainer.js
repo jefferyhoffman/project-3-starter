@@ -1,21 +1,23 @@
 import React, { Component } from "react";
 import SearchForm from "./searchForm";
 import API from '../../lib/API';
+import IModal from "../Results/modal";
 
 
 class SearchContainer extends Component {
   state = {
     search: "",
+    trips:[],
   };
 
-
   // do a search here by making the location === this.state.search and show only ones that have that location.
-    searchTrips= () => {
-      API.Trips.tripResults(this.context.trip).then(res => {
-        this.setState({
-          trips: res.data});
-        console.log(res.data);
-      
+  searchTrips= (search) => {
+    console.log(search)
+    API.Search.searchResults(search).then(res => {
+      console.log(res.data)
+      this.setState({
+        trips: res.data
+      });    
     })
   };
 
@@ -27,24 +29,44 @@ class SearchContainer extends Component {
     });
   };
 
-  // When the form is submitted, search the Giphy API for `this.state.search`
+ 
   handleFormSubmit = event => {
     event.preventDefault();
     this.searchTrips(this.state.search);
-    console.log(this.state.search)
   };
 
   render() {
     return (
-      <div>
+     <div className="container" >
         <SearchForm
           search={this.state.search}
           handleFormSubmit={this.handleFormSubmit}
           handleInputChange={this.handleInputChange}
         />
-      </div>
+       
+        <h1 style={{ textAlign: "center" }}>Trips</h1>
+        {this.state.trips.map(trip =>
+        <div className="card"  style={{ width: "40vh", float: "left" }} key ={trip.user}>
+          <div className="card-header text-center">
+            <h5>{trip.location}</h5>
+          </div>
+          <div className="card-body">
+            <h5 key={trip.user}>Days of Trip:</h5> <div> {trip.trip_length} </div>
+            <hr />
+            <h5>Trip Description: </h5>{" "}
+            <div> {trip.description} </div>
+          </div>
+         <IModal key={trip.user} tripInfo={trip.itinerary}/>
+          
+        </div> 
+        
+
     )
+    
   }
+  </div>
+    )
+}
 }
 
 export default SearchContainer;
