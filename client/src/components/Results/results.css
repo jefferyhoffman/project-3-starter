@@ -34,10 +34,13 @@
 #resultcard {
     float: left;
     width: 30%;
+    min-height: 60vh;
+    max-height: 60vh;
     margin-right: 1.66%;
     margin-left: 1.66%;
     margin-bottom: 3.33%;
     border: 3px solid #2988BC;
+    overflow: hidden;
 }
 
 #cardhead {
@@ -64,6 +67,23 @@
     font-size: 25px;
 }
 
+#descript {
+    overflow: hidden;
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+    max-height: 18vh;
+    min-height: 18vh;
+    border: 1px solid rgb(148, 148, 148);
+    border-radius: 5px;
+    padding: 8px;
+}
+
+#descript::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+
 @media only screen and (max-width: 415px) {
     /* phones */
     .jumbotron {
@@ -81,9 +101,16 @@
         margin-right: 5%;
         margin-left: 5%;
         margin-bottom: 3.33%;
+        max-height: none;
     }
 
-
+    #descript {
+        border: 1px solid rgb(148, 148, 148);
+        border-radius: 5px;
+        padding: 8px;
+        min-height: 18vh;
+        max-height: none;
+    }
 }
 
 @media only screen and (min-width: 416px) and (max-width: 1080px) {
