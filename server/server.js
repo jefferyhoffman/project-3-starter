@@ -40,6 +40,11 @@ if (process.env.NODE_ENV === 'production') {
 //-- Controller Routes -------------------------------------------------------
 app.use(require('./controllers'));
 
+//-- React catch-all ---------------------------------------------------------
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
+
 //-- Main --------------------------------------------------------------------
 app.listen(PORT, () => {
   console.log(`🚀 Server listening on port ${PORT}...`);
