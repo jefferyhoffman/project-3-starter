@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
-//import { Redirect } from 'react-router-dom';
-
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
 import SearchForm from "../../components/Search/searchContainer"
-
 
 class Secret extends Component {
   static contextType = AuthContext;
   state = {
     isLoading: true,
     error: ""
-  }
+  };
 
   componentDidMount() {
     API.Secrets.getAll(this.context.authToken)
@@ -24,7 +21,7 @@ class Secret extends Component {
         console.log(err);
       })
       .finally(() => this.setState({ isLoading: false }));
-  }
+  };
 
   render() {
     return (

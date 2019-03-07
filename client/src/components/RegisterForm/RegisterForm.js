@@ -9,7 +9,6 @@ class RegisterForm extends Component {
 
   handleInputChange = event => {
     const { name, value } = event.target;
-
     this.setState({
       [name]: value
     });
@@ -17,7 +16,6 @@ class RegisterForm extends Component {
 
   handleSubmit = event => {
     const { email, password } = this.state;
-
     this.props.onSubmit(email, password);
     event.preventDefault();
   }
