@@ -10,7 +10,7 @@ class AddNewTrip extends Component {
     return (
       <Router>
         <div className="container">
-          <h1 className="aann">My Trips</h1> <hr />
+          <h1 className="aann">Add A Trip</h1> <hr />
           <NewTripNavTabs  />
           <Route exact path="/add" component={Form} />
           <Route exact path="/mytrips" component={UserTrips} />

@@ -18,9 +18,9 @@ class ResultContainer extends Component {
   render() {
     return (
       <div className="resulthtml">
-        <div className="jumbotron">
-          <h1 id="resultsh1">My Trips</h1>
-        </div>
+
+      
+      <h1 id="resultsh1">My Trips</h1>
         <div className="container" id="resultcontainer">
           {this.state.trips.map(trip => (
             <div className="card" id="resultcard">
@@ -40,6 +40,12 @@ class ResultContainer extends Component {
             </div>
           ))}
         </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
       </div>
     );
   }
