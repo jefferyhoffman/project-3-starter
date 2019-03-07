@@ -74,9 +74,10 @@
     -ms-overflow-style: none;  /* IE 10+ */
     max-height: 18vh;
     min-height: 18vh;
-    border: 1px solid rgb(148, 148, 148);
+    border: 2px solid rgb(148, 148, 148);
     border-radius: 5px;
     padding: 8px;
+    text-align: left;
 }
 
 #descript::-webkit-scrollbar { /* WebKit */
@@ -122,6 +123,19 @@
         -o-background-size: cover;
         background-size: cover;
         height: 25vh;
+    }
+
+    #resultcard {
+        text-align: center;
+        float: left;
+        width: 30%;
+        min-height: 50vh;
+        max-height: 50vh;
+        margin-right: 1.66%;
+        margin-left: 1.66%;
+        margin-bottom: 3.33%;
+        border: 3px solid #2988BC;
+        overflow: hidden;
     }
     
 }

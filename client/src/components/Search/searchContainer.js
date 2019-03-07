@@ -6,17 +6,17 @@ import IModal from "../Results/modal";
 class SearchContainer extends Component {
   state = {
     search: "",
-    trips:[],
+    trips: [],
   };
 
   // do a search here by making the location === this.state.search and show only ones that have that location.
-  searchTrips= (search) => {
+  searchTrips = (search) => {
     console.log(search)
     API.Search.searchResults(search).then(res => {
       console.log(res.data)
       this.setState({
         trips: res.data
-      });    
+      });
     })
   };
 
@@ -35,30 +35,32 @@ class SearchContainer extends Component {
 
   render() {
     return (
-     <div className="container" >
+      <div className="homesearchcontainer" >
         <SearchForm
           search={this.state.search}
           handleFormSubmit={this.handleFormSubmit}
           handleInputChange={this.handleInputChange}
         />
-       <br/>
-        {this.state.trips.map(trip =>
-        <div className="card"  style={{ width: "40vh", float: "left" }} key ={trip.user}>
-          <div className="card-header text-center">
-            <h5>{trip.location}</h5>
-          </div>
-          <div className="card-body">
-            <h5 key={trip.user}>Days of Trip:</h5> <div> {trip.trip_length} </div>
-            <hr />
-            <h5>Trip Description: </h5>{" "}
-            <div> {trip.description} </div>
-          </div>
-         <IModal key={trip.user} tripInfo={trip.itinerary}/>
-        </div> 
-    )}
-  </div>
+        <br />
+        <div>
+          {this.state.trips.map(trip =>
+            <div className="card" key={trip.user} id="homesearchcard">
+              <div className="card-header text-center" id="homesearchhead">
+                <h5>{trip.location}</h5>
+              </div>
+              <div className="card-body">
+                <h5 key={trip.user}>Days of Trip:</h5> <div> {trip.trip_length} </div>
+                <hr />
+                <h5>Trip Description: </h5>{" "}
+                <div id="descript"> {trip.description} </div>
+              </div>
+              <IModal key={trip.user} tripInfo={trip.itinerary} />
+            </div>
+          )}
+        </div>
+      </div>
     )
-}
+  }
 }
 
 export default SearchContainer;
