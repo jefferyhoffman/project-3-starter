@@ -4,7 +4,6 @@ import { Switch, Route } from 'react-router-dom';
 import API from '../../lib/API';
 import TokenStore from '../../lib/TokenStore';
 import AuthContext from '../../contexts/AuthContext';
-// import Navigation from '../../components/Navigation/Navigation';
 import NaviBar from "../Navbar/navbar"
 import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
 import Login from '../../pages/Login/Login';
@@ -58,10 +57,10 @@ class App extends Component {
               <Switch>
                 <Route path='/login' component={Login} />
                 <Route path='/register' component={Register} />
+                <Route path='/browse' component={Browse} />
                 <PrivateRoute path='/myaccount' component={Secret} />
                 <PrivateRoute path='/add' component={AddTripPage} />
                 <PrivateRoute path='/mytrips' component={UserTrips} />
-                <PrivateRoute path='/browse' component={Browse} />
                 <Route exact path='/' component={Home} />
                 <Route component={NotFound} />
               </Switch>
