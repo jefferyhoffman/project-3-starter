@@ -48,7 +48,7 @@ class SearchContainer extends Component {
           {this.state.trips.map(trip =>
             <div className="card" key={trip.user} id="homesearchcard">
               <div className="card-header text-center" id="homesearchhead">
-                <h5>{trip.location}</h5>
+                <h5 id="homesearchh5">{trip.location}</h5>
               </div>
               <div className="card-body">
                 <h5 key={trip.user}>Days of Trip:</h5> <div> {trip.trip_length} </div>

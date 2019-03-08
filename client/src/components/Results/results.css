@@ -35,8 +35,8 @@
     text-align: center;
     float: left;
     width: 30%;
-    min-height: 60vh;
-    max-height: 60vh;
+    min-height: 68vh;
+    max-height: 68vh;
     margin-right: 1.66%;
     margin-left: 1.66%;
     margin-bottom: 3.33%;
@@ -130,9 +130,9 @@
     #resultcard {
         text-align: center;
         float: left;
-        width: 30%;
-        min-height: 50vh;
-        max-height: 50vh;
+        width: 46.5%;
+        min-height: 55vh;
+        max-height: 55vh;
         margin-right: 1.66%;
         margin-left: 1.66%;
         margin-bottom: 3.33%;
