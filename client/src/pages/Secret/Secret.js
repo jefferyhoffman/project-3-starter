@@ -28,9 +28,12 @@ class Secret extends Component {
     return (
       <div className="secretP">
       <div className='container'> <div className='Secret'>
+      <div className="jum1">
       <div className="jumbotron" style={{textAlign:"center"}}> 
        <h1 className="wtma">Welcome!</h1>
        </div>
+      </div>
+      
        <h2 className="VI">Search for your Vacation Inspiraton</h2>
         <div className='row'>
           <div className='col'>
@@ -39,6 +42,8 @@ class Secret extends Component {
               : this.state.error
                 ? <div className='alert alert-danger'>{this.state.error}</div>
                 : <div>
+                  {/* <p>Shh, the secret is...</p> */}
+                  {/* <p><em>{this.state.secrets[0].message}</em></p> */}
                 </div>}
           </div>
            <hr/>

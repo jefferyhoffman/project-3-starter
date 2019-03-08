@@ -4,6 +4,8 @@ import API from '../../lib/API';
 import IModal from "../Results/modal";
 
 class SearchContainer extends Component {
+ 
+
   state = {
     search: "",
     trips: [],

@@ -1,34 +1,50 @@
 
 .resulthtml {
-    background: rgb(247, 243, 238);
+    background: rgba(47, 73, 110, 0.7);
     min-width: 100%;
     min-height: 100%;
     overflow: hidden;
 }
 
-.jumbotron {
-    background: url('simon-john-mchaffie-1398923-unsplash-cropped.jpg');
+.jum {
+    background-image: url('simon-john-mchaffie-1398923-unsplash-cropped.jpg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 40vh;
+    height: 32vh;
+    
 }
-
+.work{
+    
+}
 #resultsh1 {
+    background-color:rgb(107,171,199,0);
     font-family: 'Permanent Marker', cursive;
-    color:  black;
+    color:#F4EADE;
     width: 100%;
     text-align: center;
     padding-top: 20px;
     font-size: 70px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 32vh;
+    background-position: center;
+    border-radius:3px;
+    
+
 }
 
 #resultcontainer{
     padding: 0;
-    background: rgb(247, 243, 238);
+    /* background-color:rgb(237, 140, 114,0.5); */
+    background-position: center;
     height: auto;
     overflow: hidden;
+    border-radius:5px;
 }
 
 #resultcard {
