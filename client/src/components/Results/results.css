@@ -48,6 +48,7 @@
 }
 
 #resultcard {
+    text-align: center;
     float: left;
     width: 30%;
     min-height: 60vh;
@@ -113,6 +114,7 @@
     }
 
     #resultcard {
+        text-align: center;
         float: left;
         width: 90%;
         margin-right: 5%;
