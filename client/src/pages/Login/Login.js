@@ -5,6 +5,7 @@ import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
 import LoginForm from '../../components/LoginForm/LoginForm';
 
+
 class Login extends Component {
   static contextType = AuthContext;
 
@@ -39,7 +40,7 @@ class Login extends Component {
   }
 
   render() {
-    const { from } = this.props.location.state || { from: { pathname: "/secret" } };
+    const { from } = this.props.location.state || { from: { pathname: "/myaccount" } };
     const { redirectToReferrer } = this.state;
 
     if (redirectToReferrer) {
@@ -47,21 +48,16 @@ class Login extends Component {
     }
 
     return (
-      <div className='Login'>
-        <div className='row'>
-          <div className='col'>
-            <h1>Login</h1>
-          </div>
-        </div>
-        {this.state.error &&
-          <div className='row'>
-            <div className='col'>
-              <div className='alert alert-danger mb-3' role='alert'>
-                {this.state.error}
+      <div className="loginhtml">
+        <div className='Login'>
+          {this.state.error &&
+            <div className='row'>
+              <div className='col'>
+                <div className='alert alert-danger mb-3' role='alert' id="loginerror">
+                  {this.state.error}
+                </div>
               </div>
-            </div>
-          </div>}
-        <div className='row'>
+            </div>}
           <div className='col'>
             <LoginForm onSubmit={this.handleSubmit} />
           </div>

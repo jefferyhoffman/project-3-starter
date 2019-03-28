@@ -1,0 +1,137 @@
+
+
+.homehtmlbackground {
+    background: url('guillermo-alvarez-631481-unsplash.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-width: 100vh;
+    min-height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+#homeh1 {
+    font-family: 'Permanent Marker', cursive;
+    color:  #F4EADE;
+    font-size: 70px;
+}
+
+#homeh3 {
+    font-family: 'Permanent Marker', cursive;
+    color: #F4EADE;
+}
+
+.homecontainer {
+    margin-top: 15%;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+}
+
+.searchDiv {
+    width: 70%;
+    margin-left: 15%;
+    align-content: center;
+}
+
+#homesearchhead {
+
+}
+
+@media only screen and (max-width: 415px) {
+    /* phones */
+    .homehtmlbackground {
+        background: url('anita-shepperd-523621-unsplash.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-width: 100vh;
+        min-height: 100vh;
+        position: fixed;
+        overflow: hidden;
+    }
+
+    .homecontainer {
+        position: absolute;
+        text-align: center;
+        margin: 0;
+        width: 95%;
+        margin-left: 2.5%;
+        height: 90%;
+        top: 20%;
+        z-index: 0;
+    }
+
+    #homeh1 {
+        font-family: 'Permanent Marker', cursive;
+        color:  #F4EADE;
+        font-size: 50px;
+    }
+    
+    #homeh3 {
+        font-family: 'Permanent Marker', cursive;
+        color: #F4EADE;
+        font-size: 20px;
+    }
+
+    .searchDiv {
+        align-content: center;
+        width: 95%; 
+        margin: 0;
+    }
+}
+
+@media only screen and (min-width: 416px) and (max-width: 1000px) {
+    /* tablets */
+    .homehtmlbackground {
+        background: url('anita-shepperd-523621-unsplash.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-width: 100vh;
+        min-height: 100vh;
+        position: fixed;
+        overflow: hidden;
+    }
+
+    .homecontainer {
+        text-align: center;
+        align-items: center;
+        margin: 0;
+        width: 100%;
+        height: 90%;
+        top: 30%;
+    }
+
+    #homeh1 {
+        font-family: 'Permanent Marker', cursive;
+        color:  #F4EADE;
+        width: 100%;
+    }
+    
+    #homeh3 {
+        font-family: 'Permanent Marker', cursive;
+        color: #F4EADE;
+        font-size: 20px;
+    }
+
+    .searchDiv {
+        align-content: center;
+        width: 100%; 
+        margin: 0;
+    }
+
+    #homesearch {
+        width: 70%;
+        margin-left: 15%;
+    }
+}

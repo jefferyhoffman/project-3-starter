@@ -1,27 +1,21 @@
 import React, { Component } from 'react';
-
-import logo from './logo.svg';
+import SearchContainer from "../../components/Search/searchContainer"
+import "./home.css"
 
 class HomePage extends Component {
   render() {
     return (
-      <div className='Home'>
-        <div className='row'>
-          <div className='col'>
-            <img src={logo} className='App-logo' alt='logo' />
-            <p>
-              Edit <code>src/pages/Home.js</code> and save to reload.
-            </p>
-            <a
-              className='App-link'
-              href='https://reactjs.org'
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
+      <div className="homehtml">
+      <div className="homehtmlbackground"></div>
+          <div className='homecontainer'>
+            <div id="headingcontainer">
+              <h1 id="homeh1">Welcome to Travel'd</h1>
+              <h3 id="homeh3">Your destination for vacation inspiration!</h3>
+            </div>
+            <div className="searchDiv">
+              <SearchContainer />
+            </div>
           </div>
-        </div>
       </div>
     );
   }

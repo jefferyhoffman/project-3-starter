@@ -1,0 +1,138 @@
+#sidenav {
+    display: flex;
+    align-items: stretch;
+    perspective: 1500px;
+    text-align: center;
+    height: 100vh;
+    width: 1%;
+    position: absolute;
+    z-index: 4;
+    position: fixed;
+  }
+
+
+#sidenav:hover {
+    text-decoration: none;
+  }
+
+#greyout.inactive {
+  position: absolute;
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(15, 15, 15, 0.4);
+}
+
+#navbar.inactive {
+    min-width: 250px;
+    max-width: 250px;
+    background: #F4EADE;
+    color: black;
+    transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
+    transform-origin: center left;
+    text-decoration: none;
+    border-right: 3px solid rgb(219, 207, 192);
+  }
+
+#navbar.active {
+    margin-left: -110px;
+    transform: rotateY(90deg);
+    width:110px;
+    height: 50%;
+  }
+
+.navbar-nav {
+    width: 100%;
+  }
+
+.navbar-header {
+      width: 100%;
+  }
+
+.navbar-header:hover {
+    text-decoration: none;
+  }
+
+#navitems {
+    width: 100%;
+    font-family: 'Permanent Marker', cursive;
+
+  }
+
+#navitems:hover {
+    background-color: rgb(219, 207, 192);
+  }
+
+.nav-link {
+    width: 100%;
+    color: black;
+  }
+
+.nav-link:hover {
+    text-decoration: none;
+    color: black;
+  }
+
+#sidebarCollapse {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.75);
+    border: none;
+}
+
+#sidebarCollapse:focus {
+  outline: none;
+}
+
+#sidebarCollapse span {
+  width: 80%;
+  height: 2px;
+  margin: 2px;
+  display: block;
+  background: #555;
+  transition: all 0.8s cubic-bezier(0.810, -0.330, 0.345, 1.375);
+}
+
+h3 {
+  padding-top: 15px;
+}
+
+#logo {
+  color: black;
+  font-family: 'Permanent Marker', cursive;
+}
+
+
+@media only screen and (max-width: 415px) {
+  /* phones */
+  #sidenav {
+    width: 100%;
+  }
+
+  #sidenav.active {
+    width: 0%;
+  }
+
+  #navbar.inactive {
+    min-width: 100%;
+    max-width: 100%;
+    background: #F4EADE;
+    color: black;
+    transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
+    transform-origin: center left;
+    text-decoration: none;
+    border-right: 3px solid rgb(219, 207, 192);
+    z-index: 2
+  }
+
+  #content.inactive {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.75);
+    border: none;
+    position: relative;
+    right: 44px;
+    z-index: 3;
+}
+
+}

@@ -1,0 +1,143 @@
+
+.resulthtml {
+    background: rgb(247, 243, 238);
+    min-width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.jumbotron {
+    background: url('simon-john-mchaffie-1398923-unsplash-cropped.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 40vh;
+}
+
+#resultsh1 {
+    font-family: 'Permanent Marker', cursive;
+    color:  black;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 70px;
+}
+
+#resultcontainer{
+    padding: 0;
+    background: rgb(247, 243, 238);
+    height: auto;
+    overflow: hidden;
+}
+
+#resultcard {
+    text-align: center;
+    float: left;
+    width: 30%;
+    min-height: 68vh;
+    max-height: 68vh;
+    margin-right: 1.66%;
+    margin-left: 1.66%;
+    margin-bottom: 3.33%;
+    border: 3px solid #2988BC;
+    overflow: hidden;
+}
+
+#cardhead {
+    background-color: rgb(112, 175, 209);
+    color: #F4EADE;
+    font-family: 'Permanent Marker', cursive;
+    border-bottom: 3px solid #2988BC;
+    border-radius: 0;
+}
+
+#modalbutton {
+    border: 3px solid rgb(148, 148, 148);
+    background-color: rgb(180, 180, 180);
+    margin-bottom: 25px;
+    width: 80%;
+    margin-left: 10%;
+}
+
+#modalbutton:hover {
+    background-color: rgb(148, 148, 148);
+}
+
+#resultsh5 {
+    font-size: 25px;
+}
+
+#descript {
+    overflow: hidden;
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+    max-height: 18vh;
+    min-height: 18vh;
+    border: 2px solid rgb(148, 148, 148);
+    border-radius: 5px;
+    padding: 8px;
+    text-align: left;
+}
+
+#descript::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+
+@media only screen and (max-width: 415px) {
+    /* phones */
+    .jumbotron {
+        background: url('simon-john-mchaffie-1398923-unsplash.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 25vh;
+    }
+
+    #resultcard {
+        text-align: center;
+        float: left;
+        width: 90%;
+        margin-right: 5%;
+        margin-left: 5%;
+        margin-bottom: 3.33%;
+        max-height: none;
+    }
+
+    #descript {
+        border: 1px solid rgb(148, 148, 148);
+        border-radius: 5px;
+        padding: 8px;
+        min-height: 18vh;
+        max-height: none;
+    }
+}
+
+@media only screen and (min-width: 416px) and (max-width: 1080px) {
+    /* tablets */
+    .jumbotron {
+        background: url('simon-john-mchaffie-1398923-unsplash.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 25vh;
+    }
+
+    #resultcard {
+        text-align: center;
+        float: left;
+        width: 46.5%;
+        min-height: 55vh;
+        max-height: 55vh;
+        margin-right: 1.66%;
+        margin-left: 1.66%;
+        margin-bottom: 3.33%;
+        border: 3px solid #2988BC;
+        overflow: hidden;
+    }
+    
+}

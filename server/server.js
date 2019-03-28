@@ -1,7 +1,3 @@
-/**
- * Project 3 Starter
- * UNC Charlotte Full-Stack Coding Bootcamp
- */
 
 //-- .env --------------------------------------------------------------------
 const path = require('path');
@@ -14,6 +10,7 @@ if (process.env.NODE_ENV !== 'production') {
 //-- Dependencies ------------------------------------------------------------
 const express = require('express');
 const logger = require('morgan');
+const mongoose = require('mongoose');
 
 const { passport } = require('./lib/passport');
 
@@ -23,6 +20,15 @@ const LOG_MODE = process.env.NODE_ENV === 'production' ? 'common' : 'dev';
 
 //-- Express -----------------------------------------------------------------
 const app = express();
+
+//-- Mongoose Setup ----------------------------------------------------------
+mongoose.connect(
+  process.env.MONGODB_URI ||
+  'mongodb://localhost/ProjectThree'
+)
+mongoose.connection.on('error', err => {
+  console.log(`Mongoose connection err:\n${err}`)
+})
 
 //-- Middleware --------------------------------------------------------------
 app.use(logger(LOG_MODE));
