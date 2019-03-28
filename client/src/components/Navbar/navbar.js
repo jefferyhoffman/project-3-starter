@@ -20,7 +20,7 @@ class Navibar extends Component {
     const { user } = this.context;
     const { collapsed } = this.state;
     return (
-      <div className="sidenav">
+      <div className={collapsed ? "inactive" : "active"} id="sidenav">
         <div
           className={collapsed ? "inactive" : "active"}
           id="greyout"

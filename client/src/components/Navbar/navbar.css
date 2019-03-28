@@ -1,16 +1,17 @@
-.sidenav {
+#sidenav {
     display: flex;
     align-items: stretch;
     perspective: 1500px;
     text-align: center;
     height: 100vh;
+    width: 1%;
     position: absolute;
     z-index: 4;
     position: fixed;
   }
 
 
-.sidenav:hover {
+#sidenav:hover {
     text-decoration: none;
   }
 
@@ -104,8 +105,12 @@ h3 {
 
 @media only screen and (max-width: 415px) {
   /* phones */
-  .sidenav {
-    width: 100vw;
+  #sidenav {
+    width: 100%;
+  }
+
+  #sidenav.active {
+    width: 0%;
   }
 
   #navbar.inactive {
