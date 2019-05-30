@@ -14,7 +14,6 @@ if (process.env.NODE_ENV !== 'production') {
 //-- Dependencies ------------------------------------------------------------
 const express = require('express');
 const logger = require('morgan');
-
 const { passport } = require('./lib/passport');
 
 //-- Constants ---------------------------------------------------------------
@@ -23,6 +22,7 @@ const LOG_MODE = process.env.NODE_ENV === 'production' ? 'common' : 'dev';
 
 //-- Express -----------------------------------------------------------------
 const app = express();
+require("./config/index")
 
 //-- Middleware --------------------------------------------------------------
 app.use(logger(LOG_MODE));

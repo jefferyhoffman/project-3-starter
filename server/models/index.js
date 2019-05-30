@@ -32,5 +32,6 @@ module.exports = {
         }
       ]);
     }
-  }
+  },
+  Drinks: require("./drink")
 }
