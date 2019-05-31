@@ -14,11 +14,8 @@ if (process.env.NODE_ENV !== 'production') {
 //-- Dependencies ------------------------------------------------------------
 const express = require('express');
 const logger = require('morgan');
-<<<<<<< HEAD
-=======
 const mongoose = require('mongoose');
 
->>>>>>> origin/mongoose
 const { passport } = require('./lib/passport');
 
 //-- Constants ---------------------------------------------------------------
