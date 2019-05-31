@@ -1,6 +1,7 @@
 const User = require('./user');
 
 module.exports = {
+<<<<<<< HEAD
   Users: {
     findAll: function () {
       return Promise.resolve(
@@ -34,4 +35,8 @@ module.exports = {
     }
   },
   Drinks: require("./drink")
+=======
+  Users: require('./user'),
+  Secrets: require('./secret')
+>>>>>>> origin/mongoose
 }
