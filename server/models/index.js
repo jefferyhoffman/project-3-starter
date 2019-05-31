@@ -11,7 +11,7 @@ module.exports = {
         })
       );
     },
-
+    
     findOne: function () {
       return Promise.resolve(
         new User({
