@@ -20,7 +20,10 @@
     "nodemon": "^1.19.1"
   },
   "dependencies": {
+    "mongo-seeding": "^3.1.1",
     "mongoose": "^5.5.11",
+    "node-mongo-seeds": "^3.1.0",
+    "unirest": "^0.6.0",
     "react-dom": "^16.8.6"
   }
 }
