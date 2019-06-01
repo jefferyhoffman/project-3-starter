@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Project 3 Starter
 
 ## Getting Started
@@ -165,7 +164,6 @@ In the `master` branch, these models are just simple JS mocks that return hard-c
 ### server
 
 ## Deployment
-=======
 # Mongoose & Project 3 Starter
 
 *All models are imported too and exported out of index*
@@ -184,4 +182,3 @@ __*Mastery of a skill requires you to fail more than any novice has succeeded*__
 
 
 
->>>>>>> origin/mongoose
