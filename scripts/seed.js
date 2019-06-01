@@ -29,13 +29,14 @@ const drinkseed = [
 //  if (err) throw err;
 
   console.log("inserting drinks");
-  db.Drinks.insertMany(drinkseed)
-    .then(data => {
-      console.log(data.result.n + " records inserted!");
-      process.exit(0);
-    })
-    .catch(err => {
-      console.error(err);
-      process.exit(1);
-    });
+  db.Drinks.insertMany([
+    {
+      name: 'Test',
+    }
+  ], function(err, docs) {
+    console.log('test');
+    if (err) throw err;
+    console.log(docs.length + " records inserted!");
+    process.exit(0);
+  })
 //});
