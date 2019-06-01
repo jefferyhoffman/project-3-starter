@@ -16,9 +16,10 @@
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
-    "nodemon": "^1.18.10"
+    "nodemon": "^1.19.1"
   },
   "dependencies": {
-    "mongoose": "^5.5.11"
+    "mongoose": "^5.5.11",
+    "react-dom": "^16.8.6"
   }
 }
