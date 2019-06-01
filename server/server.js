@@ -24,12 +24,11 @@ const LOG_MODE = process.env.NODE_ENV === 'production' ? 'common' : 'dev';
 
 //-- Express -----------------------------------------------------------------
 const app = express();
-require("./config/index")
 
 //-- Mongoose Setup ----------------------------------------------------------
 mongoose.connect(
   process.env.MONGODB_URI ||
-  'mongodb://localhost/ProjectThree'
+  'mongodb://localhost/drinks'
 )
 mongoose.connection.on('error', err => {
   console.log(`Mongoose connection err:\n${err}`)
