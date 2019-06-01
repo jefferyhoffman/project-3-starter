@@ -1,0 +1,99 @@
+body{
+    margin: 0;
+}
+html {
+    margin: 0;
+}
+
+.row {
+    height: 640px;
+    width: 100%;
+    margin: 0;
+   
+}
+#row1, #row2, #row3, #row4 {
+    margin: 0;
+}
+
+#row1 {
+    background: rgb(121, 49, 49);
+    
+   
+}
+
+/* #row2 {
+    background: gray;
+  
+} */
+#row2sec1 {
+    background: pink;
+    height: auto;
+    width: auto;
+   
+    
+}
+#row2sec2 {
+    background: rgb(46, 46, 46);
+    height: auto;
+    width: auto;
+   
+   
+}
+
+
+/* 
+#row3 {
+    background: gray;
+} */
+#row3sec1 {
+    background: rgb(255, 255, 116);
+    height: auto;
+    width: auto;
+    
+}
+#row3sec2 {
+    background: rgb(167, 129, 132);
+    height: auto;
+    width: auto;
+    
+}
+#row3sec3 {
+    background: pink;
+    height: auto;
+    width: auto;
+
+}
+
+
+/* #row4 {
+    background: gray;
+    
+} */
+#row4sec1 {
+    background: purple;
+    height: auto;
+    width: auto;
+  
+    
+}
+#row4sec2 {
+    background: silver;
+    height: auto;
+    width: auto;
+    
+}
+
+nav {
+    background: rgba(128, 128, 128, 0);
+    position: fixed;
+    z-index: 2;
+}
+.navbar-brand {
+    color: white;
+    font-weight: bold;
+    font-size: 35px !important;
+}
+.container {
+    background: rgb(121, 49, 49);
+   
+}
