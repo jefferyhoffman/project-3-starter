@@ -1,3 +1,4 @@
+-- seeds
 INSERT INTO brand (inventory_name, store) VALUES ('id-01', true);
 INSERT INTO brand (inventory_name, store) VALUES ('id-02', true);
 INSERT INTO brand (inventory_name, store) VALUES ('id-03', true);
