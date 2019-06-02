@@ -10,6 +10,8 @@ import Login from '../../pages/Login/Login';
 import Secret from '../../pages/Secret/Secret';
 import Home from '../../pages/Home/Home';
 import NotFound from '../../pages/NotFound/NotFound';
+import { BrowserRouter } from 'react-router-dom';
+
 
 import './App.css';
 
@@ -49,8 +51,9 @@ class App extends Component {
 
   render() {
     return (
+      <BrowserRouter>
       <AuthContext.Provider value={this.state.auth}>
-        <div className='App'>
+          <div className='App'>
           <Navigation />
           <div className='container'>
             <Switch>
@@ -61,7 +64,8 @@ class App extends Component {
             </Switch>
           </div>
         </div>
-      </AuthContext.Provider>
+      </AuthContext.Provider>,
+      </BrowserRouter>
     );
   }
 }
