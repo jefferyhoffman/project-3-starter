@@ -6,7 +6,7 @@ module.exports = {
       return Promise.resolve(
         new User({
           id: 1,
-          email: 'jhoffman@trilogyed.com',
+          email: 'test@gmail.com',
           password: 'test'
         })
       );
@@ -16,7 +16,7 @@ module.exports = {
       return Promise.resolve(
         new User({
           id: 1,
-          email: 'jhoffman@trilogyed.com',
+          email: 'test@gmail.com',
           password: 'test'
         })
       );
