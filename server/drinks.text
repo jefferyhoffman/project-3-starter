@@ -1,0 +1,756 @@
+{ name: 'Arizona Stingers',
+  category: 'Cocktail',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/y7w0721493068255.jpg',
+  instructions:
+   'Place ice cubes in the hurricane glass . Add the 2 HEAPING shots of Absolute Vodka (Note:
+You can add as many shots of Absolute as you want!) Fill the rest of glass with the Arizona Icetea with lemon. Stir to mix using a spoon. Drink up and enjoy!!!!!!!',
+  ingredient1: 'Absolut Vodka, 2 shots ',
+  ingredient2: 'Iced tea, 12 oz lemon ',
+  ingredient3: ',  ',
+  ingredient4: ',  ',
+  ingredient5: ',  ',
+  glass: 'Hurricane glass' }
+{ name: 'Apricot punch',
+  category: 'Punch / Party Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/tuxxtp1472668667.jpg',
+  instructions:
+   'Pour all ingrediants into a large punch bowl. Add ice and 4 oranges that are peeled and divided.',
+  ingredient1: 'Apricot brandy, 1 qt ',
+  ingredient2: 'Champagne, 4 fifth ',
+  ingredient3: 'Vodka, 1 fifth ',
+  ingredient4: '7-Up, 4 L ',
+  ingredient5: 'Orange juice, 1/2 gal ',
+  glass: 'Punch bowl' }
+{ name: 'Cream Soda',
+  category: 'Cocktail',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/yqstxr1479209367.jpg',
+  instructions:
+   'Pour 1oz of Spiced Rum into a highball glass with ice. Fill with Ginger Ale.',
+  ingredient1: 'Spiced rum, 1 oz ',
+  ingredient2: 'Ginger ale, \n',
+  ingredient3: ', \n',
+  ingredient4: ', \n',
+  ingredient5: ', \n',
+  glass: 'Highball glass' }
+{ name: 'Army special',
+  category: 'Cocktail',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/55muhh1493068062.jpg',
+  instructions:
+   'Pour Vodka, Gin and lime cordial into glass, and top up with crushed ice. Wait for ice to
+melt slightly and sip without a straw.',
+  ingredient1: 'Vodka, 30 ml ',
+  ingredient2: 'Gin, 30 ml ',
+  ingredient3: 'Lime juice cordial, 45 ml ',
+  ingredient4: 'Ice, 1/2 glass crushed ',
+  ingredient5: ',  ',
+  glass: 'Cocktail glass' }
+{ name: 'Arise My Love',
+  category: 'Ordinary Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/wyrrwv1441207432.jpg',
+  instructions:
+   'Put creme de menthe into a champagne flute. Fill with chilled champagne and serve.',
+  ingredient1: 'Champagne, Chilled ',
+  ingredient2: 'Green Creme de Menthe, 1 tsp ',
+  ingredient3: ',  ',
+  ingredient4: ',  ',
+  ingredient5: ',  ',
+  glass: 'Champagne flute' }
+{ name: 'Arizona Antifreeze',
+  category: 'Shot',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/dbtylp1493067262.jpg',
+  instructions: 'Pour all ingredients into shot glass and slam !!!!',
+  ingredient1: 'Vodka, 1/3 oz ',
+  ingredient2: 'Midori melon liqueur, 1/3 oz ',
+  ingredient3: 'Sweet and sour, 1/3 oz ',
+  ingredient4: ',  ',
+  ingredient5: ',  ',
+  glass: 'Shot glass' }
+{ name: '3 Wise Men',
+  category: 'Shot',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/wxqpyw1468877677.jpg',
+  instructions: 'put them them in a glass... and slam it to tha head.',
+  ingredient1: 'Jack Daniels, 1/3 oz ',
+  ingredient2: 'Johnnie Walker, 1/3 oz ',
+  ingredient3: 'Jim Beam, 1/3 oz ',
+  ingredient4: ',  ',
+  ingredient5: ',  ',
+  glass: 'Collins glass' }
+{ name: 'Champagne Cocktail',
+  category: 'Ordinary Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/ehh5df1504366811.jpg',
+  instructions:
+   'Add dash of Angostura bitter onto sugar cube and drop it into champagne flute. Add cognac
+followed by gently pouring chilled champagne. Garnish with orange slice and maraschino cherry.',
+  ingredient1: 'Champagne, Chilled ',
+  ingredient2: 'Sugar, 1 piece ',
+  ingredient3: 'Bitters, 2 dashes ',
+  ingredient4: 'Lemon peel, 1 twist of ',
+  ingredient5: 'Cognac, 1 dash',
+  glass: 'Champagne flute' }
+{ name: 'Abilene',
+  category: 'Ordinary Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/ysqwwt1461919465.jpg',
+  instructions:
+   'Pour all of the ingredients into a highball glass almost filled with ice cubes. Stir well.',
+  ingredient1: 'Dark rum, 1 1/2 oz ',
+  ingredient2: 'Peach nectar, 2 oz ',
+  ingredient3: 'Orange juice, 3 oz ',
+  ingredient4: ',  ',
+  ingredient5: ',  ',
+  glass: 'Highball glass' }
+{ name: '69 Special',
+  category: 'Ordinary Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/vqyxqx1472669095.jpg',
+  instructions:
+   'Pour 2 oz. gin. Add 4 oz. 7-up. Add Lemon Juice for flavor. If you are weak, top up glass
+with more 7-Up.',
+  ingredient1: 'Gin, 2 oz dry ',
+  ingredient2: '7-Up, 4 oz ',
+  ingredient3: 'Lemon juice, 0.75 oz ',
+  ingredient4: ',  ',
+  ingredient5: ',  ',
+  glass: 'Collins Glass' }
+{ name: 'Addington',
+  category: 'Cocktail',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/ib0b7g1504818925.jpg',
+  instructions:
+   'Mix both the vermouth\'s in a shaker and strain into a cold glass. Top up with a squirt of Soda Water. ',
+  ingredient1: 'Sweet Vermouth, 2 shots ',
+  ingredient2: 'Dry Vermouth, 1 shot ',
+  ingredient3: 'Soda Water, Top up with\r\n',
+  ingredient4: ', \r\n',
+  ingredient5: ', \r\n',
+  glass: 'Cocktail glass' }
+{ name: 'Addison',
+  category: 'Cocktail',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/yzva7x1504820300.jpg',
+  instructions:
+   'Shake together all the ingredients and strain into a cold glass.',
+  ingredient1: 'Gin, 1 1/2 shot ',
+  ingredient2: 'Vermouth, 1 1/2 shot ',
+  ingredient3: ', \r\n',
+  ingredient4: ', \r\n',
+  ingredient5: ', \r\n',
+  glass: 'Martini Glass' }
+{ name: 'Absolutely Cranberry Smash',
+  category: 'Ordinary Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/vqwstv1472811884.jpg',
+  instructions: 'Stir ingredients together. Serve over ice.',
+  ingredient1: 'Absolut Vodka, 2 oz ',
+  ingredient2: 'Cranberry juice, 4 oz ',
+  ingredient3: 'Ginger ale, 2 oz ',
+  ingredient4: 'Ice, Add ',
+  ingredient5: ',  ',
+  glass: 'Cocktail glass' }
+{ name: '151 Florida Bushwacker',
+  category: 'Milk / Float / Shake',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/rvwrvv1468877323.jpg',
+  instructions:
+   'Combine all ingredients. Blend until smooth. Garnish with chocolate shavings if desired.',  ingredient1: 'Malibu rum, 1/2 oz ',
+  ingredient2: 'Light rum, 1/2 oz ',
+  ingredient3: '151 proof rum, 1/2 oz Bacardi ',
+  ingredient4: 'Dark Creme de Cacao, 1 oz ',
+  ingredient5: 'Cointreau, 1 oz ',
+  glass: 'Beer mug' }
+{ name: 'Ace',
+  category: 'Cocktail',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/l3cd7f1504818306.jpg',
+  instructions:
+   'Shake all the ingredients in a cocktail shaker and ice then strain in a cold glass.',
+  ingredient1: 'Gin, 2 shots ',
+  ingredient2: 'Grenadine, 1/2 shot ',
+  ingredient3: 'Heavy cream, 1/2 shot ',
+  ingredient4: 'Milk, 1/2 shot ',
+  ingredient5: 'Egg White, 1/2 Fresh',
+  glass: 'Martini Glass' }
+{ name: 'A. J.',
+  category: 'Ordinary Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/uryyrr1472811418.jpg',
+  instructions:
+   'Shake ingredients with ice, strain into a cocktail glass, and serve.',
+  ingredient1: 'Applejack, 1 1/2 oz ',
+  ingredient2: 'Grapefruit juice, 1 oz ',
+  ingredient3: ',  ',
+  ingredient4: ',  ',
+  ingredient5: ',  ',
+  glass: 'Cocktail glass' }
+{ name: 'Acapulco',
+  category: 'Ordinary Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/vtpsvr1472811976.jpg',
+  instructions:
+   'Combine and shake all ingredients (except mint) with ice and strain into an old-fashioned
+glass over ice cubes. Add the sprig of mint and serve.',
+  ingredient1: 'Light rum, 1 1/2 oz ',
+  ingredient2: 'Triple sec, 1 1/2 tsp ',
+  ingredient3: 'Lime juice, 1 tblsp ',
+  ingredient4: 'Sugar, 1 tsp ',
+  ingredient5: 'Egg white, 1 ',
+  glass: 'Old-fashioned glass' }
+{ name: 'Angel Face',
+  category: 'Ordinary Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/vqpptp1478253178.jpg',
+  instructions:
+   'Shake all ingredients with ice and strain contents into a cocktail glass.',
+  ingredient1: 'Apricot brandy, 1/2 oz ',
+  ingredient2: 'Apple brandy, 1/2 oz ',
+  ingredient3: 'Gin, 1 oz ',
+  ingredient4: ',  ',
+  ingredient5: ',  ',
+  glass: 'Cocktail glass' }
+{ name: 'Artillery Punch',
+  category: 'Punch / Party Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/9a4vqb1493067692.jpg',
+  instructions:
+   'Combine all the ingredients in a large punch bowl with a block of ice. If found too dry, sugar syrup may be added. Decorate with twists of lemon peel.',
+  ingredient1: 'Tea, 1 quart black ',
+  ingredient2: 'Rye whiskey, 1 quart ',
+  ingredient3: 'Red wine, 1 fifth ',
+  ingredient4: 'Rum, 1 pint Jamaican ',
+  ingredient5: 'Brandy, 1/2 pint ',
+  glass: 'Punch bowl' }
+{ name: 'Citrus Coke',
+  category: 'Soft Drink / Soda',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/uyrvut1479473214.jpg',
+  instructions:
+   'Pour half of coke in a glass. Then add Bacardi and top it off with the remaining coke. Stir and drink up!',
+  ingredient1: 'Bacardi Limon, 1 part ',
+  ingredient2: 'Coca-Cola, 2 parts ',
+  ingredient3: ',  ',
+  ingredient4: ',  ',
+  ingredient5: ',  ',
+  glass: 'Highball Glass' }
+{ name: 'A midsummernight dream',
+  category: 'Ordinary Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/ysqvqp1461867292.jpg',
+  instructions:
+   'Mix the strawberrys in a blender Pour it together with the vodka,kirch and strawberry liquer over ice in a shaker. Shake well and pour in a highballglass. Fill up with the Russchian water',
+  ingredient1: 'Vodka, 2 oz ',
+  ingredient2: 'Kirschwasser, 1 oz ',
+  ingredient3: 'Strawberry liqueur, 1 tsp ',
+  ingredient4: 'Strawberries, 5 ',
+  ingredient5: 'Schweppes Russchian, \n',
+  glass: 'Collins Glass' }
+{ name: 'Bahama Mama',
+  category: 'Cocktail',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/tyb4a41515793339.jpg',
+  instructions:
+   'Add 2 parts club soda or more or less to taste.\r\n\r\nMix it all together and pour over a bunch of ice. Drink with a straw.',
+  ingredient1: 'Rum, 3 parts',
+  ingredient2: 'Dark Rum, 1 part',
+  ingredient3: 'Banana liqueur, 1 part',
+  ingredient4: 'Grenadine, 1 part',
+  ingredient5: 'Pineapple Juice, 2 parts',
+  glass: 'Highball glass' }
+{ name: 'Autodafé',
+  category: 'Ordinary Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/7dkf0i1487602928.jpg',
+  instructions:
+   'Mix and fill up with soda water. Drunk by finns on a sunny day any time of the year and day.',
+  ingredient1: 'Vodka, 4 cl ',
+  ingredient2: 'Lime juice, 1 dash ',
+  ingredient3: 'Soda water, \n',
+  ingredient4: ', \n',
+  ingredient5: ', \n',
+  glass: 'Highball glass' }
+{ name: 'Balmoral',
+  category: 'Ordinary Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/vysuyq1441206297.jpg',
+  instructions:
+   'In a mixing glass half-filled with ice cubes, combine all of the ingredients. Stir well. Strain into a cocktail glass.',
+  ingredient1: 'Scotch, 1 1/2 oz ',
+  ingredient2: 'Sweet Vermouth, 1/2 oz ',
+  ingredient3: 'Dry Vermouth, 1/2 oz ',
+  ingredient4: 'Bitters, 2 dashes ',
+  ingredient5: ',  ',
+  glass: 'Cocktail glass' }
+{ name: 'Almond Chocolate Coffee',
+  category: 'Ordinary Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/jls02c1493069441.jpg',
+  instructions:
+   'Pour in order into coffee cup. Top with whipped creme and chocolate shcvings.',
+  ingredient1: 'Amaretto, 3/4 oz ',
+  ingredient2: 'Dark Creme de Cacao, 1/2 oz ',
+  ingredient3: 'Coffee, 8 oz ',
+  ingredient4: ',  ',
+  ingredient5: ',  ',
+  glass: 'Coffee mug' }
+{ name: 'Bleeding Surgeon',
+  category: 'Soft Drink / Soda',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/usuvvr1472719118.jpg',
+  instructions:
+   'Pour Shot of Rum over slice of orange. Fill the remaining space in glass half way full of
+surge or similar drink. Finish off glass with cranberry juice. Be carefull, warm surge may foam over the glass.',
+  ingredient1: 'Dark rum, 1 shot ',
+  ingredient2: 'Orange, 1 slice ',
+  ingredient3: 'Surge, 1/2 glass ',
+  ingredient4: 'Cranberry juice, 1/2 glass ',
+  ingredient5: ',  ',
+  glass: 'Collins glass' }
+{ name: 'Almeria',
+  category: 'Ordinary Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/rwsyyu1483388181.jpg',
+  instructions:
+   'In a shaker half-filled with ice cubes, combine all of the ingredients. Shake well. Strain into a cocktail glass.',
+  ingredient1: 'Dark rum, 2 oz ',
+  ingredient2: 'Kahlua, 1 oz ',
+  ingredient3: 'Egg white, 1 ',
+  ingredient4: ',  ',
+  ingredient5: ',  ',
+  glass: 'Cocktail glass' }
+{ name: 'A Night In Old Mandalay',
+  category: 'Ordinary Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/vyrvxt1461919380.jpg',
+  instructions:
+   'In a shaker half-filled with ice cubes, combine the light rum, añejo rum, orange juice, and lemon juice. Shake well. Strain into a highball glass almost filled with ice cubes. Top with the ginger ale. Garnish with the lemon twist.',
+  ingredient1: 'Light rum, 1 oz ',
+  ingredient2: 'Añejo rum, 1 oz ',
+  ingredient3: 'Orange juice, 1 oz ',
+  ingredient4: 'Lemon juice, 1/2 oz ',
+  ingredient5: 'Ginger ale, 3 oz ',
+  glass: 'Highball glass' }
+{ name: 'Amaretto Shake',
+  category: 'Ordinary Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/xk79al1493069655.jpg',
+  instructions:
+   'Combine all ingredients in a blender and blend at high speed until smooth. Serve in chilled glass garnished with bittersweet chocolate shavings.',
+  ingredient1: 'Chocolate ice-cream, 2 scoops ',
+  ingredient2: 'Brandy, 2 oz ',
+  ingredient3: 'Amaretto, 2 oz ',
+  ingredient4: ',  ',
+  ingredient5: ',  ',
+  glass: 'Collins Glass' }
+{ name: 'Algonquin',
+  category: 'Ordinary Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/uwryxx1483387873.jpg',
+  instructions:
+   'Combine and shake all ingredients with ice, strain contents into a cocktail glass, and serve.',
+  ingredient1: 'Blended whiskey, 1 1/2 oz ',
+  ingredient2: 'Dry Vermouth, 1 oz ',
+  ingredient3: 'Pineapple juice, 1 oz ',
+  ingredient4: ',  ',
+  ingredient5: ',  ',
+  glass: 'Cocktail glass' }
+{ name: 'Bellini',
+  category: 'Ordinary Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/eaag491504367543.jpg',
+  instructions:
+   'Pour peach purée into chilled flute, add sparkling wine. Stir gently.',
+  ingredient1: 'Champagne, 6 oz ',
+  ingredient2: 'Peach schnapps, 1 oz ',
+  ingredient3: ',  ',
+  ingredient4: ',  ',
+  ingredient5: ',  ',
+  glass: 'Champagne Flute' }
+{ name: 'Affinity',
+  category: 'Ordinary Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/nwatpb1504817045.jpg',
+  instructions:
+   'In a mixing glass half-filled with ice cubes, combine all of the ingredients. Stir well. Strain into a cocktail glass.',
+  ingredient1: 'Scotch, 1 1/2 oz ',
+  ingredient2: 'Sweet Vermouth, 1 oz ',
+  ingredient3: 'Dry Vermouth, 1 oz ',
+  ingredient4: 'Orange bitters, 2 dashes ',
+  ingredient5: ',  ',
+  glass: 'Cocktail glass' }
+{ name: '3-Mile Long Island Iced Tea',
+  category: 'Ordinary Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/rrtssw1472668972.jpg',
+  instructions:
+   'Fill 14oz glass with ice and alcohol. Fill 2/3 glass with cola and remainder with sweet &
+sour. Top with dash of bitters and lemon wedge.',
+  ingredient1: 'Gin, 1/2 oz ',
+  ingredient2: 'Light rum, 1/2 oz ',
+  ingredient3: 'Tequila, 1/2 oz ',
+  ingredient4: 'Triple sec, 1/2 oz ',
+  ingredient5: 'Vodka, 1/2 oz ',
+  glass: 'Collins Glass' }
+{ name: 'Corn n Oil',
+  category: 'Cocktail',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/jfvyog1530108909.jpg',
+  instructions:
+   'Cut the half lime in half again. Add the lime, falernum, and bitters to a rocks glass. Muddle. Add the rum. (Aged Barbados rum such as Plantation 5 Year is recommended). Add ice and stir. Float the blackstrap rum on top. Serve with a straw.',
+  ingredient1: 'Lime, 1/2',
+  ingredient2: 'Falernum, 1/3 oz',
+  ingredient3: 'Angostura Bitters, 2 dashes',
+  ingredient4: 'Añejo rum, 1 oz',
+  ingredient5: 'blackstrap rum, 1 oz',
+  glass: 'Old-fashioned glass' }
+{ name: 'Auburn Headbanger',
+  category: 'Shot',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/vw7iv91493067320.jpg',
+  instructions:
+   'Mix in spread glass over ice. Strain and pour in shot glass. Sit down before shotting. ENJOY!!',
+  ingredient1: 'Jägermeister, 1 oz ',
+  ingredient2: 'Goldschlager, 1 oz ',
+  ingredient3: ',  ',
+  ingredient4: ',  ',
+  ingredient5: ',  ',
+  glass: 'Shot glass' }
+{ name: 'Adam',
+  category: 'Ordinary Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/rwuxsv1472812169.jpg',
+  instructions:
+   'In a shaker half-filled with ice cubes, combine all of the ingredients. Shake well. Strain into a cocktail glass.',
+  ingredient1: 'Dark rum, 2 oz ',
+  ingredient2: 'Lemon juice, 1 oz ',
+  ingredient3: 'Grenadine, 1 tsp ',
+  ingredient4: ',  ',
+  ingredient5: ',  ',
+  glass: 'Cocktail glass' }
+{ name: 'Blue Hurricane',
+  category: 'Cocktail',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/nwx02s1515795822.jpg',
+  instructions:
+   'If each part is 1/2 oz then use about 2.5 cups of ice.\r\n\r\nBlend it all together. \r\nDrink it with a big straw if you have one.\r\n\r\n',
+  ingredient1: 'Rum, 4 parts',
+  ingredient2: 'Dark Rum, 2 parts',
+  ingredient3: 'Passoa, 1 part',
+  ingredient4: 'Blue Curacao, 1 part',
+  ingredient5: 'Sweet and Sour, 6 parts',
+  glass: 'Highball glass' }
+{ name: 'Berry Deadly',
+  category: 'Punch / Party Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/xqutpr1461867477.jpg',
+  instructions:
+   'Add all ingredients to large bowl. Stir gently. Serve chilled.',
+  ingredient1: 'Everclear, 2 pint ',
+  ingredient2: 'Wine, 1 bottle Boone Strawberry Hill ',
+  ingredient3: 'Orange juice, 1/2 gal ',
+  ingredient4: 'Kool-Aid, 1 gal Tropical Berry ',
+  ingredient5: ',  ',
+  glass: 'Collins Glass' }
+{ name: 'Blue Lagoon',
+  category: 'Ordinary Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/vak0e51504389504.jpg',
+  instructions:
+   'Pour vodka and curacao over ice in a highball glass. Fill with lemonade, top with the cherry, and serve.',
+  ingredient1: 'Vodka, 1 oz ',
+  ingredient2: 'Blue Curacao, 1 oz ',
+  ingredient3: 'Lemonade, \n',
+  ingredient4: 'Cherry, \n',
+  ingredient5: ', \n',
+  glass: 'Highball glass' }
+{ name: 'Banana Daiquiri',
+  category: 'Ordinary Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/k1xatq1504389300.jpg',
+  instructions:
+   'Pour all ingredients into shaker with ice cubes. Shake well. Strain in chilled cocktail glass.',
+  ingredient1: 'Light rum, 1 1/2 oz ',
+  ingredient2: 'Triple sec, 1 tblsp ',
+  ingredient3: 'Banana, 1 ',
+  ingredient4: 'Lime juice, 1 1/2 oz ',
+  ingredient5: 'Sugar, 1 tsp ',
+  glass: 'Champagne flute' }
+{ name: 'Foxy Lady',
+  category: 'Ordinary Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/r9cz3q1504519844.jpg',
+  instructions:
+   'Shake all ingredients with ice, strain into a chilled cocktail glass, and serve.',
+  ingredient1: 'Amaretto, 1/2 oz ',
+  ingredient2: 'Creme de Cacao, 1/2 oz ',
+  ingredient3: 'Light cream, 2 oz ',
+  ingredient4: ',  ',
+  ingredient5: ',  ',
+  glass: 'Cocktail glass' }
+{ name: 'Allegheny',
+  category: 'Ordinary Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/uwvyts1483387934.jpg',
+  instructions:
+   'Shake all ingredients (except lemon peel) with ice and strain into a cocktail glass. Top with the twist of lemon peel and serve.',
+  ingredient1: 'Dry Vermouth, 1 oz ',
+  ingredient2: 'Bourbon, 1 oz ',
+  ingredient3: 'Blackberry brandy, 1 1/2 tsp ',
+  ingredient4: 'Lemon juice, 1 1/2 tsp ',
+  ingredient5: 'Lemon peel, 1 twist of ',
+  glass: 'Cocktail glass' }
+{ name: 'Frozen Pineapple Daiquiri',
+  category: 'Ordinary Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/j2mqsb1504736097.jpg',
+  instructions:
+   'Combine all ingredients with 1 cup of crushed ice in an electric blender. Blend at a low speed for a short length of time. Pour into a champagne flute and serve.',
+  ingredient1: 'Light rum, 1 1/2 oz ',
+  ingredient2: 'Pineapple, 4 chunks ',
+  ingredient3: 'Lime juice, 1 tblsp ',
+  ingredient4: 'Sugar, 1/2 tsp ',
+  ingredient5: ',  ',
+  glass: 'Champagne flute' }
+{ name: 'Fuzzy Asshole',
+  category: 'Coffee / Tea',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/wrvpuu1472667898.jpg',
+  instructions:
+   'fill coffe mug half full of coffee. Fill the other half full of Peach Schnapps. Stir and drink while hot.',
+  ingredient1: 'Coffee, 1/2 ',
+  ingredient2: 'Peach schnapps, 1/2 ',
+  ingredient3: ',  ',
+  ingredient4: ',  ',
+  ingredient5: ',  ',
+  glass: 'Coffee mug' }
+{ name: 'Boulevardier',
+  category: 'Cocktail',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/km84qi1513705868.jpg',
+  instructions: 'Stir with ice, strain, garnish and serve.',
+  ingredient1: 'Campari, 1 oz',
+  ingredient2: 'Sweet Vermouth, 1 oz',
+  ingredient3: 'Rye whiskey, 1 1/4 oz',
+  ingredient4: 'Orange Peel, 1',
+  ingredient5: ', ',
+  glass: 'Martini Glass' }
+{ name: 'Between The Sheets',
+  category: 'Ordinary Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/of1rj41504348346.jpg',
+  instructions:
+   'Pour all ingredients into shaker with ice cubes, shake, strain into chilled cocktail glass.',
+  ingredient1: 'Brandy, 1 oz ',
+  ingredient2: 'Light rum, 1 oz ',
+  ingredient3: 'Triple sec, 1 oz ',
+  ingredient4: 'Lemon juice, 1 oz ',
+  ingredient5: ',  ',
+  glass: 'Cocktail glass' }
+{ name: 'Absinthe #2',
+  category: 'Homemade Liqueur',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/uxxtrt1472667197.jpg',
+  instructions:
+   'Mix together and let sit a few days. Strain through a coffee filter. To serve mix 1 part absinthe to 4 parts water, add ice, enjoy.',
+  ingredient1: 'Vodka, 1 bottle ',
+  ingredient2: 'Sugar, 50 gr ',
+  ingredient3: 'Anise, 50 ml pure ',
+  ingredient4: 'Licorice root, 1 tblsp ',
+  ingredient5: 'Wormwood, 1 ',
+  glass: 'Jar' }
+{ name: 'Gin Fizz',
+  category: 'Ordinary Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/xhl8q31504351772.jpg',
+  instructions:
+   'Shake all ingredients with ice cubes, except soda water. Pour into glass. Top with soda water.',
+  ingredient1: 'Gin, 2 oz ',
+  ingredient2: 'Lemon, Juice of 1/2 ',
+  ingredient3: 'Powdered sugar, 1 tsp ',
+  ingredient4: 'Carbonated water, ',
+  ingredient5: ', ',
+  glass: 'Highball glass' }
+{ name: 'After Supper Cocktail',
+  category: 'Ordinary Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/quyxwu1483387610.jpg',
+  instructions:
+   'Shake all ingredients with ice, strain into a cocktail glass, and serve.',
+  ingredient1: 'Triple sec, 1 oz ',
+  ingredient2: 'Apricot brandy, 1 oz ',
+  ingredient3: 'Lemon juice, 1/2 tsp ',
+  ingredient4: ',  ',
+  ingredient5: ',  ',
+  glass: 'Cocktail glass' }
+{ name: 'Absolut Sex',
+  category: 'Shot',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/xtrvtx1472668436.jpg',
+  instructions:
+   'Shake Absolut Kurant, Midori, and Cranberry juice in shaker with ice: Strain into rocks glass: Splash of seven on top.Absolut Sex.',
+  ingredient1: 'Absolut Kurant, 3/4 oz ',
+  ingredient2: 'Midori melon liqueur, 3/4 oz ',
+  ingredient3: 'Cranberry juice, 1 oz ',
+  ingredient4: 'Sprite, 1 splash ',
+  ingredient5: ',  ',
+  glass: 'Old-fashioned glass' }
+{ name: 'Aviation',
+  category: 'Cocktail',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/ruutxt1478253328.jpg',
+  instructions:
+   'Add all ingredients into cocktail shaker filled with ice. Shake well and strain into cocktail glass. Garnish with a cherry.',
+  ingredient1: 'Gin, 4.5 cl',
+  ingredient2: 'lemon juice, 1.5 cl',
+  ingredient3: 'maraschino liqueur, 1.5 cl',
+  ingredient4: ', ',
+  ingredient5: ', ',
+  glass: 'Cocktail glass' }
+{ name: 'Amaretto And Cream',
+  category: 'Ordinary Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/dj8n0r1504375018.jpg',
+  instructions:
+   'Shake well with cracked ice, strain contents into a cocktail glass, and serve.',
+  ingredient1: 'Amaretto, 1 1/2 oz ',
+  ingredient2: 'Light cream, 1 1/2 oz ',
+  ingredient3: ',  ',
+  ingredient4: ',  ',
+  ingredient5: ',  ',
+  glass: 'Cocktail glass' }
+{ name: 'Atlantic Sun',
+  category: 'Ordinary Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/doyxqb1493067556.jpg',
+  instructions:
+   'Shake all the ingredients, top the drink with soda. Garnish with a slice of orange.',
+  ingredient1: 'Vodka, 2 cl Smirnoff ',
+  ingredient2: 'Southern Comfort, 2 cl ',
+  ingredient3: 'Passion fruit syrup, 2 cl ',
+  ingredient4: 'Sweet and sour, 6 cl ',
+  ingredient5: 'Club soda, 1 dash ',
+  glass: 'Collins Glass' }
+{ name: 'Belgian Blue',
+  category: 'Soft Drink / Soda',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/rttsxw1441245419.jpg',
+  instructions: 'Just pour all ingredients in the glass and stir...',
+  ingredient1: 'Vodka, 2 cl ',
+  ingredient2: 'Coconut liqueur, 1 cl ',
+  ingredient3: 'Blue Curacao, 1 cl ',
+  ingredient4: 'Sprite, Fill with ',
+  ingredient5: ',  ',
+  glass: 'Highball glass' }
+{ name: 'Barracuda',
+  category: 'Ordinary Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/jwmr1x1504372337.jpg',
+  instructions:
+   'Shake pour ingredients with ice. Strain into glass, top with Sparkling wine.',
+  ingredient1: 'Rum, 4.5 cl',
+  ingredient2: 'Galliano, 1.5 cl',
+  ingredient3: 'Pineapple Juice, 6 cl',
+  ingredient4: 'Lime Juice,  1 dash',
+  ingredient5: 'Prosecco, top up ',
+  glass: 'Margarita glass' }
+{ name: 'Applecar',
+  category: 'Ordinary Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/sbffau1504389764.jpg',
+  instructions:
+   'Shake all ingredients with ice, strain into a cocktail glass, and serve.',
+  ingredient1: 'Applejack, 1 oz ',
+  ingredient2: 'Triple sec, 1 oz ',
+  ingredient3: 'Lemon juice, 1 oz ',
+  ingredient4: ',  ',
+  ingredient5: ',  ',
+  glass: 'Cocktail glass' }
+{ name: 'Adonis Cocktail',
+  category: 'Ordinary Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/xrvruq1472812030.jpg',
+  instructions:
+   'Stir all ingredients with ice, strain contents into a cocktail glass, and serve.',
+  ingredient1: 'Sweet Vermouth, 3/4 oz ',
+  ingredient2: 'Sherry, 1 1/2 oz dry ',
+  ingredient3: 'Orange bitters, 1 dash ',
+  ingredient4: ',  ',
+  ingredient5: ',  ',
+  glass: 'Cocktail glass' }
+{ name: 'Americano',
+  category: 'Ordinary Drink',
+  kind: 'Alcoholic',
+  image:
+   'https://www.thecocktaildb.com/images/media/drink/trwruu1478253126.jpg',
+  instructions:
+   'Pour the Campari and vermouth over ice into glass, add a splash of soda water and garnish
+with half orange slice.',
+  ingredient1: 'Campari, 1 oz ',
+  ingredient2: 'Sweet Vermouth, 1 oz red ',
+  ingredient3: 'Lemon peel, Twist of ',
+  ingredient4: 'Orange peel, Twist of ',
+  ingredient5: ',  ',
+  glass: 'Collins glass' }
