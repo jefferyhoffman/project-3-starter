@@ -1,0 +1,19 @@
+.Navigation {
+    background: rgb(131, 131, 131) !important;
+}
+nav.navbar {
+    background: rgba(0, 0, 0, 0) !important;
+    margin: 0 !important;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+nav.navbar:hover {
+    background-color: white !important;
+    
+}
+a.navbar-brand {
+   color: rgb(0, 0, 0) !important;
+   font-weight: bold;
+   font-size: 30px;
+}
