@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-
-import logo from './logo.svg';
+import Jumbotron from "../../components/Jumbotron";
 
 class HomePage extends Component {
   render() {
@@ -8,18 +7,10 @@ class HomePage extends Component {
       <div className='Home'>
         <div className='row'>
           <div className='col'>
-            <img src={logo} className='App-logo' alt='logo' />
-            <p>
-              Edit <code>src/pages/Home.js</code> and save to reload.
-            </p>
-            <a
-              className='App-link'
-              href='https://reactjs.org'
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
+          <Jumbotron>
+              <h1>What Books Should I Read?</h1>
+            </Jumbotron>
+            HomePage
           </div>
         </div>
       </div>
