@@ -7,6 +7,7 @@ import AuthContext from '../../contexts/AuthContext';
 import Navigation from '../../components/Navigation/Navigation';
 import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
 import Login from '../../pages/Login/Login';
+import Register from '../../pages/Register/Register';
 import Secret from '../../pages/Secret/Secret';
 import Home from '../../pages/Home/Home';
 import Scheduling from '../../pages/Scheduling/Scheduling';
@@ -56,6 +57,7 @@ class App extends Component {
           <div className='container'>
             <Switch>
               <Route path='/login' component={Login} />
+              <Route path='/register' component={Register} />
               <PrivateRoute path='/secret' component={Secret} />
               <Route exact path='/Scheduling' component={Scheduling} />
               <Route exact path='/' component={Home} />
