@@ -6,8 +6,6 @@ import Form from '../../components/Form/Form.js';
 
 
 
-
-
 // const data = [
 // 	{ service: 'Lawn Maintenance', price: '+ $50.00'},
 // 	{ service: 'Aeration', price: '+ $50.00'},

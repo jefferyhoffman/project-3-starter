@@ -26,7 +26,7 @@ class Register extends Component {
   }
 
   render() {
-    const { from } = this.props.location.state || { from: { pathname: "/secret" } };
+    const { from } = this.props.location.state || { from: { pathname: "/login" } };
     const { redirectToReferrer } = this.state;
 
     if (redirectToReferrer) {
