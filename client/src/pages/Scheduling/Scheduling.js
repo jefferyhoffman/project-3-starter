@@ -6,7 +6,6 @@ class SchedulingPage extends Component {
       <div className='Scheduling'>
         <div className='row'>
           <div className='col'>
-
           </div>
         </div>
       </div>
