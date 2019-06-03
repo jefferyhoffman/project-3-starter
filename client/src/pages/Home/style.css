@@ -1,0 +1,33 @@
+.container {
+    margin: 0;
+}
+.row {
+    height: 700px;
+}
+#row1 {
+    background: red;
+}
+#row2sec1{
+    background: pink;
+}
+#row2sec2 {
+    background: purple;
+}
+
+#row3sec1 {
+    background: green;
+}
+#row3sec2 {
+    background: yellow
+}
+#row3sec3 {
+    background: blue;
+}
+#row4sec1 {
+    background: gray;
+}
+#row4sec2 {
+    background: pink;
+}
+
+

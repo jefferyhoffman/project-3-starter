@@ -3,6 +3,11 @@ import React, { Component } from 'react';
 
 import logo from './logo.svg';
 import id01 from './id-01.jpg';
+import "./style.css"
+
+
+
+
 
 class HomePage extends Component {
   constructor(props) {
@@ -25,10 +30,11 @@ class HomePage extends Component {
         <div className='row'>
           <div className='col'>
             
-            <img src={logo} className='App-logo' alt='logo' />
+            {/* <img src={logo} className='App-logo' alt='logo' />
             <p>
               Edit <code>src/pages/Home.js</code> and save to reload.
-            </p>
+            </p> */}
+            <div class="titleSection"><h1>HELLO</h1></div>
             <a
               className='App-link'
               href='https://reactjs.org'
@@ -49,12 +55,43 @@ class HomePage extends Component {
                   Due to its small nature this is the perfect watch to stack with a statement bracelet. Water resistant to 50m.</p>
                   <a href="/" class="btn btn-primary">Add to Shopping Cart</a>
                 </div>
+      <div className="container-fluid">
+        <div className="row" id="row1">
+          
+        </div>
+        <div className="row" id="row2">
+            <div className="col-6" id="row2sec1">
+        testing
             </div>
+            <div className="col-6" id="row2sec2">
+        testing
             </div>
+        </div>
+        <div className="row" id="row3">
+          <div className="col-4" id="row3sec1">
+
+          </div>
+          <div className="col-4" id="row3sec2">
+
+          </div>
+          <div className="col-4" id="row3sec3">
+
           </div>
         </div>
-        );
-      }
+        <div className="row" id="row4">
+          <div className="col-6" id="row4sec1">
+
+          </div>
+          <div className="col-6" id="row4sec2">
+
+          </div>
+        </div>
+
+     </div>
+
+
+      );
     }
+}
     
 export default HomePage;
