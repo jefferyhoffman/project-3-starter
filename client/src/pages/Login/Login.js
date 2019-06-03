@@ -49,8 +49,7 @@ class Login extends Component {
     return (
       <div className='Login'>
         <div className='row'>
-          <div className='col'>
-            <h1>Login</h1>
+          <div className='col-sm-6'>
           </div>
         </div>
         {this.state.error &&
