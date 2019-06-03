@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Button } from 'reactstrap';
+// import { Button } from 'reactstrap';
+import "./style.css"
 
 
 
-import logo from './logo.svg';
+
 
 class HomePage extends Component {
   constructor(props) {
@@ -22,36 +23,43 @@ class HomePage extends Component {
 
   render() {
     return (
-      <div className='Home'>
-        <div className='row'>
-          <div className='col'>
-            <img src={logo} className='App-logo' alt='logo' />
-            <p>
-              Edit <code>src/pages/Home.js</code> and save to reload.
-            </p>
-            <a
-              className='App-link'
-              href='https://reactjs.org'
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-              </a>
-            <Button color="danger" onClick = {this.handleclick} > Danger!</Button>
+      <div className="container-fluid">
+        <div className="row" id="row1">
+          
+        </div>
+        <div className="row" id="row2">
+            <div className="col-6" id="row2sec1">
+        testing
+            </div>
+            <div className="col-6" id="row2sec2">
+        testing
+            </div>
+        </div>
+        <div className="row" id="row3">
+          <div className="col-4" id="row3sec1">
 
-            <div class="card">
-              <img src="..." class="card-img-top" alt="..."/>
-                <div className="card-body">
-                  <h5 className="card-title">Card title</h5>
-                  <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="/" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            </div>
+          </div>
+          <div className="col-4" id="row3sec2">
+
+          </div>
+          <div className="col-4" id="row3sec3">
+
           </div>
         </div>
-        );
-      }
+        <div className="row" id="row4">
+          <div className="col-6" id="row4sec1">
+
+          </div>
+          <div className="col-6" id="row4sec2">
+
+          </div>
+        </div>
+
+     </div>
+
+
+      );
     }
+}
     
 export default HomePage;
