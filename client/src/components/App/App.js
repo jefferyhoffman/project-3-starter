@@ -9,6 +9,7 @@ import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
 import Login from '../../pages/Login/Login';
 import Secret from '../../pages/Secret/Secret';
 import Home from '../../pages/Home/Home';
+import Scheduling from '../../pages/Scheduling/Scheduling';
 import NotFound from '../../pages/NotFound/NotFound';
 
 import './App.css';
@@ -56,6 +57,7 @@ class App extends Component {
             <Switch>
               <Route path='/login' component={Login} />
               <PrivateRoute path='/secret' component={Secret} />
+              <Route exact path='/Scheduling' component={Scheduling} />
               <Route exact path='/' component={Home} />
               <Route component={NotFound} />
             </Switch>
