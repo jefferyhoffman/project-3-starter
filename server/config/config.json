@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "root",
-    "database": "project3_development",
+    "database": "watches_db",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
