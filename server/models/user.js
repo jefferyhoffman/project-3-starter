@@ -51,7 +51,7 @@ const UserSchema = new Schema({
 })
 
 class newUser {
-  constructor({ name, id, email, password, address, phone, cart, upcoming, completed }) {
+  constructor({ id, name, email, password, address, phone, cart, upcoming, completed }) {
     this.name = name;
     this.id = id;
     this.email = email;
