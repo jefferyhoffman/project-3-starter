@@ -4,7 +4,7 @@ import Watch from "./watch";
 class loadingWatches extends Component {
   render() {
     return (
-      <div className="Watchs loading">
+      <div className="Watches loading">
         <Watch />
         <Watch />
         <Watch />
