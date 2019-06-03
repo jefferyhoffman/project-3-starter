@@ -2,9 +2,14 @@
 .titleSection {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
     font-weight: 300;
-    font-size: 600;
+    font-size: 60;
     position: relative, center;
     color: white;
+}
+#productImage {
+    height: 300px;
+    width:200px;
+    position: relative, center !important;
 }
 
 body{
@@ -43,6 +48,12 @@ html {
     background: rgb(46, 46, 46);
     height: auto;
     width: auto;
+
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+    font-size: 60;
+    position: relative, center;
+    color: white;
 }
 
 /* 
