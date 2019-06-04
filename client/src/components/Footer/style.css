@@ -1,0 +1,19 @@
+.row#footer {
+    height: 400px;
+    width: 100%;
+    background: white;
+    display: none;
+}
+button {
+    width: 300px;
+    height: 100px;
+    background: red;
+    position: relative;
+    bottom: 40px;
+    left: 45%;
+    margin: 0;
+}
+.btn-holder {
+    z-index: 2;
+    height: 100px;
+}

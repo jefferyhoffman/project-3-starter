@@ -15,8 +15,7 @@ import id02 from "./id-02.jpg";
 import "./style.css";
 import WatchWrapper from "../../components/Products/WatchWrapper";
 // import WatchCard from '../../components/Products/watch';
-
-// const watchImgs = require("../../../public/images");
+import watchVid from "./vidBg.mp4";
 
 
 
@@ -37,10 +36,12 @@ class HomePage extends Component {
   }
 
   render() {
+     
     return (
       <div className="container-fluid">
         <div className="row" id="row1">
-
+          <video autoPlay muted loop id="videoBg" src={watchVid} type="video/mp4"></video>
+          <div class="text-overlay">KOSCOWIX</div>
         </div>
         <div className="row" id="row2">
           <div className="col-6" id="row2sec1">
