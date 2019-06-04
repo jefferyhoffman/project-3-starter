@@ -5,8 +5,8 @@ import Register from '../Register/Register'
 class HomePage extends Component {
   render() {
     return (
-      <div>
-              {/* <Register something='this'/> */}
+      <div className="row">
+     
       </div>
     );
   }

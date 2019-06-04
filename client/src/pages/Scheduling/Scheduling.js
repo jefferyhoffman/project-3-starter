@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Calendar from 'react-calendar';
 import './Scheduling.css';
 import '../../components/Form/Form.css';
-import Form from '../../components/Form/Form.js';
+// import Form from '../../components/Form/Form.js';
 import Modal from '../../components/Modal/modal.js';
 
 

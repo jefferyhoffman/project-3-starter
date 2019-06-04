@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PaymentInfo from "../../components/PaymentInfo/PaymentInfo"
-import API from "../../lib/API";
+// import API from "../../lib/API";
 
 const CheckoutList = (props) => {
     return props.products.map((productObject, index) => (
