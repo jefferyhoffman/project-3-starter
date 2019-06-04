@@ -3,10 +3,11 @@ import "./style.css";
 
 class Footer extends Component {
 
-   DisplayFooter() {
+  handleClick(e) {
+     e.preventDefault();
     let DpF = document.getElementById("footer");
     if (DpF.style.display === "none") {
-      DpF.style.display = "block";
+      DpF.style.display = "show";
     } else {
       DpF.style.display = "none";
     }
@@ -19,7 +20,7 @@ class Footer extends Component {
        
         
         <div className="container">
-        <div className="btn-holder"><button>click me</button></div>
+        <div className="btn-holder"><button>+</button></div>
             <div className="row" id="footer">
             
                 <div className="col-2">testing</div>

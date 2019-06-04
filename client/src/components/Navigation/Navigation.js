@@ -28,7 +28,7 @@ class Navigation extends Component {
     return (
       <div className='Navigation'>
         <nav className='navbar navbar-expand-lg navbar-light bg-light mb-3'>
-          <Link className='navbar-brand' to='#'>Koscowix</Link>
+          <Link className='navbar-brand' to='/'>Koscowix</Link>
           <button className={togglerClass} onClick={this.toggleCollapse} data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
             <span className='navbar-toggler-icon'></span>
           </button>
@@ -36,7 +36,7 @@ class Navigation extends Component {
           <div className={targetClass} id='navbarSupportedContent'>
             <ul className='navbar-nav mr-auto'>
               <li className='nav-item'>
-                <Link className='nav-link' to='/' onClick={this.toggleCollapse}>Home</Link>
+                <Link className='nav-link' to='/' onClick={this.toggleCollapse}></Link>
               </li>
               {user &&
                 <li className='nav-item'>

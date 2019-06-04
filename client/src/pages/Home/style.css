@@ -24,9 +24,13 @@ rgb(243,110,45)
 - skyblue
 rgb(138,190,235)
 */
+body {
+    font-family: "Montserrat", sans-serif !important;
+}
 
-.container {
+.container-fluid {
     margin: 0;
+    padding: 0 !important;
 }
 .row {
     height: 680px;
@@ -37,11 +41,12 @@ video {
    position: absolute;
    width: 100%;
    bottom: 260px;
+   left: 15px;
 }
 .text-overlay {
     z-index: 1;
     color: rgb(255, 255, 255);
-    font-weight: bold;
+    font-weight: 600;
     font-size: 80px !important;
     position: absolute;
     top: 150px;
@@ -61,28 +66,68 @@ video {
 #row2sec1{
     background: rgb(70, 50, 40);
     /* background: rgb(63,36,98); */
+    height: auto;
+    width: auto; 
+    text-align: center;
+    color: white;
 }
 #row2sec2 {
     background: rgb(30, 30, 40);
     /* background: rgb(67,16,50); */
+    height: auto;
+    width: auto; 
+    text-align: center;
+    color: white;
 }
 
 #row3sec1 {
     background: rgb(103, 81, 60);
+    height: auto;
+    width: auto; 
+    text-align: center;
+    color: white;
 }
 #row3sec2 {
     background: rgb(30, 30, 40);
+    height: auto;
+    width: auto; 
+    text-align: center;
+    color: white;
 }
 #row3sec3 {
     background: rgb(150, 110, 76);
     /* background: rgb(63,36,98); */
+    height: auto;
+    width: auto; 
+    text-align: center;
+    color: white;
 }
 #row4sec1 {
     background: rgb(174, 159, 159);
     /* background: rgb(138,190,235); */
+    height: auto;
+    width: auto; 
+    text-align: center;
+    color: white;
 }
 #row4sec2 {
     background: rgb(116, 116, 116);
+    height: auto;
+    width: auto; 
+    text-align: center;
+    color: white;
+}
+.content {
+    /* width: 60%; */
+    margin-top: 40px;
 }
 
+img {
+    margin: 20px;
+}
 
+.productImage {
+    height: 300px;
+    width: 200px;
+    text-align: center;
+}

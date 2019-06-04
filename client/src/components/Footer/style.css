@@ -5,15 +5,25 @@
     display: none;
 }
 button {
-    width: 300px;
-    height: 100px;
-    background: red;
+    width: 100px;
+    height: 80px;
+    background: rgb(50, 50, 50);
     position: relative;
     bottom: 40px;
-    left: 45%;
+    left: 55%;
     margin: 0;
+    border-radius: 70px;
+    color: white;
+    font-weight: 600;
 }
 .btn-holder {
     z-index: 2;
-    height: 100px;
+    height: 50px;
+    /* background: rgb(94, 94, 94); */
+    width: 100%;
+}
+.container {
+    margin: 0;
+    width: 100%;
+    padding: 0;
 }
