@@ -8,10 +8,6 @@ usersController.get('/me', JWTVerifier, (req, res) => {
   res.json(req.user);
 });
 
-usersController.get('/test', (req, res) => {
-  res.send('Hello, world.')
-})
-
 usersController.post('/login', (req, res) => {
   const { email, password } = req.body;
 
