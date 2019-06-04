@@ -7,74 +7,71 @@ class Modal extends Component {
     render() {
         return (
             <div className="App">
-                <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#modalQuickView">Launch
-                  modal</button>
 
 
-                <div className="modal fade" id="modalQuickView" tabindex="-1" role="dialog"
-                    aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div className="modal-dialog modal-lg" role="document">
-                        <div className="modal-content">
-                            <div className="modal-body">
-                                <div className="row">
-                                    <div className="col-lg-5" />
-                                    <div id="carousel-thumb" className="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel" />
-                                    <div className="carousel-inner" role="listbox">
-                                        <div className="carousel-item active">
-                                            <img className="d-block w-100" src="./images/cobra.jpg" alt="First slide" />
-                                        </div>
-                                        <div className="carousel-item">
-                                            <img className="d-block w-100" src="./images/lawnmower.jpg" alt="Second slide" />
-                                        </div>
-                                        <div className="carousel-item">
-                                            <img className="d-block w-100" src="./images/puglawn.jpg" alt="Third slide" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                {/* //         <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#modalQuickView">Launch
+        //           modal</button>
+
+
+        //         <div className="modal fade" id="modalQuickView" tabindex="-1" role="dialog" */}
+                {/* //             aria-labelledby="exampleModalLabel" aria-hidden="true">
+        //             <div className="modal-dialog modal-lg" role="document">
+        //                 <div className="modal-content">
+        //                     <div className="modal-body">
+        //                         <div className="row">
+        //                             <div className="col-lg-5" />
+        //                             <div id="carousel-thumb" className="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel" />
+        //                             <div className="carousel-inner" role="listbox">
+        //                                 <div className="carousel-item active">
+        //                                     <img className="d-block w-100" src="./images/cobra.jpg" alt="First slide" />
+        //                                 </div>
+        //                                 <div className="carousel-item">
+        //                                     <img className="d-block w-100" src="./images/lawnmower.jpg" alt="Second slide" />
+        //                                 </div>
+        //                                 <div className="carousel-item">
+        //                                     <img className="d-block w-100" src="./images/puglawn.jpg" alt="Third slide" />
+        //                                 </div>
+        //                             </div>
+        //                         </div>
+        //                     </div>
+        //                 </div>
+        //             </div>
 
 
 
-                    <a className="carousel-control-prev" href="#carousel-thumb" role="button" data-slide="prev">
-                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span className="sr-only">Previous</span>
-                    </a>
-                    <a className="carousel-control-next" href="#carousel-thumb" role="button" data-slide="next">
-                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span className="sr-only">Next</span>
-                    </a>
+        //             <a className="carousel-control-prev" href="#carousel-thumb" role="button" data-slide="prev">
+        //                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+        //                 <span className="sr-only">Previous</span>
+        //             </a>
+        //             <a className="carousel-control-next" href="#carousel-thumb" role="button" data-slide="next">
+        //                 <span className="carousel-control-next-icon" aria-hidden="true"></span>
+        //                 <span className="sr-only">Next</span>
+        //             </a>
 
 
-                    <ol className="carousel-indicators">
-                        <li data-target="#carousel-thumb" data-slide-to="0" className="active">
-                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/img%20(23).jpg"
-                                width="60" />
-                        </li>
-                        <li data-target="#carousel-thumb" data-slide-to="1">
-                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/img%20(24).jpg"
-                                width="60" />
-                        </li>
-                        <li data-target="#carousel-thumb" data-slide-to="2">
-                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/img%20(25).jpg"
-                                width="60" />
-                        </li>
-                    </ol>
-                </div >
+        //             <ol className="carousel-indicators">
+        //                 <li data-target="#carousel-thumb" data-slide-to="0" className="active">
+        //                     <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/img%20(23).jpg"
+        //                         width="60" />
+        //                 </li>
+        //                 <li data-target="#carousel-thumb" data-slide-to="1">
+        //                     <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/img%20(24).jpg"
+        //                         width="60" />
+        //                 </li>
+        //                 <li data-target="#carousel-thumb" data-slide-to="2">
+        //                     <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/img%20(25).jpg"
+        //                         width="60" />
+        //                 </li>
+        //             </ol>
+        //         </div > */}
 
-                <div className="col-lg-7" >
-                    <h2 className="h2-responsive product-name">
-                        <strong>June Special! All individual treatments are only $50!</strong>
+                <div className="col-lg" >
+                    <h2 className="h2-responsive product-name" >
+                        <strong >June Special! All individual treatments are only $50!</strong>
                     </h2>
                 </div>
-
                 <div className="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true" >
-
-
-
                     <div className="card">
-
 
                         <div className="card-header" role="tab" id="headingOne1">
                             <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="true"
@@ -95,7 +92,7 @@ class Modal extends Component {
                             data-parent="#accordionEx">
                             <div className="card-body">
                                 <div className="form-check mb-4">
-                                    <input className="form-check-input" name="group1" type="checkbox" id="radio-579" value="option10" />
+                                    <input className="form-check-input" name="group1" type="checkbox" id="radio-579" value="option1" />
                                     <label className="form-check-label" for="radio-579"></label>
                                     You'll be the envy of all the neighbors with our premium package.
                                     This full coverage lawn care coverage package includes aeration, mowing, seeding, weed
@@ -113,22 +110,23 @@ class Modal extends Component {
 
                     <div className="card-header" role="tab" id="headingTwo2">
                         <a className="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseTwo2"
-                            aria-expanded="false" aria-controls="collapseTwo2" style={{ color: "#336600" }} />
-                        <h5 className="mb-0">
-                            <h4 className="h4-responsive" style={{ color: "#336600" }}>
-                                <span className="green-text">
-                                    <strong>$200</strong>
-                                </span>
-                            </h4>
-                            Upgraded Maintance Package <i className="fas fa-angle-down rotate-icon"></i>
-                        </h5>
+                            aria-expanded="false" aria-controls="collapseTwo2" style={{ color: "#336600" }} >
+                            <h5 className="mb-0">
+                                <h4 className="h4-responsive" style={{ color: "#336600" }}>
+                                    <span className="green-text">
+                                        <strong>$200</strong>
+                                    </span>
+                                </h4>
+                                Upgraded Maintance Package <i className="fas fa-angle-down rotate-icon"></i>
+                            </h5>
+                        </a>
                     </div>
 
                     <div id="collapseTwo2" className="collapse" role="tabpanel" aria-labelledby="headingTwo2"
                         data-parent="#accordionEx" >
                         <div className="card-body">
                             <div className="form-check mb-4">
-                                <input className="form-check-input" name="group1" type="checkbox" id="radio-579" value="option10" />
+                                <input className="form-check-input" name="group1" type="checkbox" id="radio-579" value="option2" />
                                 <label className="form-check-label" for="radio-579"></label>
                                 Enjoy our standard package but looking to do a little less work this summer? The upgraded
                                 package
@@ -144,13 +142,16 @@ class Modal extends Component {
 
                     <div className="card-header" role="tab" id="headingThree3">
                         <a className="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseThree3"
-                            aria-expanded="false" aria-controls="collapseThree3" style={{ color: "#336600" }} />
-                        <h5 className="mb-0" />
-                        <h4 className="h4-responsive" style={{ color: "#336600" }} />
-                        <span className="green-text">
-                            <strong>$100</strong>
-                        </span>
-                        Standard Maintance Package<i className="fas fa-angle-down rotate-icon"></i>
+                            aria-expanded="false" aria-controls="collapseThree3" style={{ color: "#336600" }} >
+                            <h5 className="mb-0" >
+                                <h4 className="h4-responsive" style={{ color: "#336600" }}>
+                                    <span className="green-text">
+                                        <strong>$100</strong>
+                                    </span>
+                                </h4>
+                                Standard Maintance Package<i className="fas fa-angle-down rotate-icon"></i>
+                            </h5>
+                        </a>
                     </div>
 
 
@@ -159,7 +160,7 @@ class Modal extends Component {
                         <div className="card-body">
                             <div className="form-check mb-4">
                                 <input className="form-check-input" name="group1" type="checkbox" id="radio-579"
-                                    value="option10" />
+                                    value="option3" />
                                 <label className="form-check-label" for="radio-579"></label>
                                 Just need the basics covered? We've got you with our standard maintance package. This covers
                                 mowing, tree/hedge trimming and weed prevention treatments.
@@ -176,30 +177,29 @@ class Modal extends Component {
                         <div className="col">
 
                             <div className="form-check mb-4">
-                                <input className="form-check-input" name="group1" type="checkbox" id="radio-179" value="option1"
-                                    checked />
+                                <input className="form-check-input" name="group1" type="checkbox" id="radio-179" value="option4" />
                                 <label className="form-check-label" for="radio-179">Core Aeration</label>
                             </div>
 
                             <div className="form-check mb-4">
                                 <input className="form-check-input" name="group2" type="checkbox" id="radio-279"
-                                    value="option2" />
+                                    value="option5" />
                                 <label className="form-check-label" for="radio-279">Reseeding-fescue and Bermuda </label>
                             </div>
 
                             <div className="form-check mb-4">
                                 <input className="form-check-input" name="group1" type="checkbox" id="radio-379"
-                                    value="option3" />
+                                    value="option6" />
                                 <label className="form-check-label" for="radio-379">Hedge Trimming/Shaping</label>
                             </div>
                             <div className="form-check mb-4">
                                 <input className="form-check-input" name="group1" type="checkbox" id="radio-479"
-                                    value="option4" />
+                                    value="option7" />
                                 <label className="form-check-label" for="radio-479">Pine Needle</label>
                             </div>
                             <div className="form-check mb-4">
                                 <input className="form-check-input" name="group1" type="checkbox" id="radio-579"
-                                    value="option5" />
+                                    value="option8" />
                                 <label className="form-check-label" for="radio-579">Leaf Removal</label>
                             </div>
                         </div>
@@ -207,28 +207,28 @@ class Modal extends Component {
                         <div className="col">
                             <div className="form-check mb-4">
                                 <input className="form-check-input" name="group1" type="checkbox" id="radio-179"
-                                    value="option6" checked />
+                                    value="option9" />
                                 <label className="form-check-label" for="radio-179">Pesticide Treatment</label>
                             </div>
                             <div className="form-check mb-4">
                                 <input className="form-check-input" name="group1" type="checkbox" id="radio-279"
-                                    value="option7" />
+                                    value="option10" />
                                 <label className="form-check-label" for="radio-279">Artistic Topiary Design</label>
                             </div>
 
                             <div className="form-check mb-4">
                                 <input className="form-check-input" name="group1" type="checkbox" id="radio-379"
-                                    value="option8" />
+                                    value="option11" />
                                 <label className="form-check-label" for="radio-379">Pesticide Applications</label>
                             </div>
                             <div className="form-check mb-4">
                                 <input className="form-check-input" name="group1" type="checkbox" id="radio-479"
-                                    value="option9" />
+                                    value="option12" />
                                 <label className="form-check-label" for="radio-479">Soil Testing</label>
                             </div>
                             <div className="form-check mb-4">
                                 <input className="form-check-input" name="group1" type="checkbox" id="radio-579"
-                                    value="option10" />
+                                    value="option13" />
                                 <label className="form-check-label" for="radio-579">Mulch</label>
                             </div>
                         </div>
@@ -237,7 +237,7 @@ class Modal extends Component {
                 <br />
 
                 <button type="button" id="btn" className="btn btn-outline-warning" data-toggle="modal"
-                    data-target="#modalPoll-1" style= {{color: "#336600"}}>Book Services</button>
+                    data-target="#modalPoll-1" style={{ color: "#336600" }}>Book Services</button>
 
                 <div className="card-body">
                     <div className="row">
@@ -262,7 +262,7 @@ class Modal extends Component {
                                                 rows="3"></textarea>
                                         </div>
                                         <a type="button" className="btn btn-outline-secondary waves-effect"
-                                            data-dismiss="modal">Book</a>
+                                            data-dismiss="modal">Checkout</a>
                                     </div>
                                 </div>
                             </div>
