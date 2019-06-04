@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { Input, TextArea, FormBtn } from "../../components/Form";
 import API from '../../lib/API';
+import AuthContext from '../../contexts/AuthContext';
 
 class Add extends Component {
+static contextType = AuthContext;
+
   state = {
     image: '',
     name: '',
@@ -21,20 +24,22 @@ class Add extends Component {
     });
   }
 
-  handleSubmit = event => {
-    event.preventDefault();
+  handleSubmit(authToken) {
 
     API.Drinks.createDrink({
       image: this.state.image,
       name: this.state.name,
       instructions: this.state.name,
       ingredients_measurements: this.state.name
-    })
+    }, authToken)
       .then(() => this.setState({ isComplete: true }))
       .catch(err => console.log(err));
   }
 
   render() {
+    console.log(this.context)
+    let { authToken } = this.context
+    
     if (this.state.isComplete) {
       return <Redirect to="/" />;
     }
@@ -47,7 +52,7 @@ class Add extends Component {
               <Input name="name" onChange={this.handleInputChange} value={this.state.name} placeholder="Name (required)" />
               <TextArea name="instructions" onChange={this.handleInputChange} value={this.state.instructions} placeholder="Instructions (required)" />
               <TextArea name="ingredients_measurements" onChange={this.handleInputChange} value={this.state.ingredients_measurements} placeholder="Ingredients/Measureements" />
-              <FormBtn>Submit Drink</FormBtn>
+              <FormBtn onClick={() => this.handleSubmit(authToken)}>Submit Drink</FormBtn>
         </form>
       </div>
     );

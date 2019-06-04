@@ -1,11 +1,14 @@
 const drinksController = require('express').Router();
+const db = require('../../models')
 
 const { JWTVerifier } = require('../../lib/passport');
 
-drinksController.get('/', (req, res) => {
+drinksController.get('/', JWTVerifier, (req, res) => {
   db.Drinks
   .find(req.query)
-  .then(dbModel => res.json(dbModel))
+  .then(dbModel => {
+    console.log(dbModel)
+    res.json(dbModel)})
   .catch(err => res.status(422).json(err));
 });
 
@@ -13,7 +16,7 @@ drinksController.post('/', JWTVerifier, (req, res) => {
   db.Drinks
   .create(req.body)
   .then(dbModel => res.json(dbModel))
-  .catch(err => res.status(422).json(err));
+  .catch(err => console.log(err));
   
 });
 
