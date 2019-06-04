@@ -10,6 +10,7 @@ import Wrapper from "../../components/Products/Wrapper"
 import Products from "../../components/Products/Products"
 
 
+
 class Collections extends Component {
 
   state = {

@@ -5,13 +5,7 @@ import id02 from "./id-02.png";
 import id03 from "./id-03.png";
 import id04 from "./id-04.png";
 import id05 from "./id-05.png";
-import id06 from "./id-06.png";
-import id07 from "./id-07.png";
-// import id08 from "./id-08.jpg";
-// import id09 from "./id-09.jpg";
-// import id10 from "./id-10.jpg";
-// import id11 from "./id-11.jpg";
-// import id12 from "./id-12.jpg";
+import gif from "./product.gif";
 import "./style.css";
 // import WatchWrapper from "../../components/Products/WatchWrapper";
 // import WatchCard from '../../components/Products/watch';
@@ -39,8 +33,7 @@ class HomePage extends Component {
       <div className="container-fluid">
         <div className="row" id="row1">
           <video autoPlay muted loop id="videoBg" src={watchVid} type="video/mp4"></video>
-          <div className="text-overlay">KOSCOWIX</div>
-
+          <div className="text-overlay">KOSCOWIX</div>  
         </div>
         <div className="row" id="row2">
           <div className="col-6" id="row2sec1">
@@ -49,7 +42,8 @@ class HomePage extends Component {
             <p className="card-text">The STORM Kong-X watch is a small thin strapped watch that is an effortlessly stylish addition to any wardrobe.
             Made from stainless steel this watch combines modern design with the latest trends with its multi-strap of both bangle and mesh.
                 Due to its small nature this is the perfect watch to stack with a statement bracelet. Water resistant to 50m.</p>
-            <a href="/" className="btn btn-light card-text">Add to Shopping Cart</a></div>
+            <a href="/" className="btn btn-light card-text">Add to Shopping Cart</a>
+          </div>
 
 
           <div className="col-6" id="row2sec2">
@@ -61,7 +55,6 @@ class HomePage extends Component {
             <a href="/" className="btn btn-light">Add to Shopping Cart</a>
           </div>
         </div>
-
 
         <div className="row" id="row3">
           <div className="col-4" id="row3sec1">
@@ -81,7 +74,7 @@ class HomePage extends Component {
               <p className="card-text">The STORM Yang-X is a sporty looking watch with multifunction features.
               The  Yang-X has a dual time function meaning you can keep track of the time in 2 time zones.
               The 24 hour and date features make this watch a very useful accessory.
-          Made from brushed stainless steel with a deep green dial and waterproof to 50m.</p>
+              Made from brushed stainless steel with a deep green dial and waterproof to 50m.</p>
               <a href="/" className="btn btn-light">Add to Shopping Cart</a>
             </div>
           </div>
@@ -100,30 +93,11 @@ class HomePage extends Component {
         </div>
         <div className="row" id="row4">
           <div className="col-6" id="row4sec1">
-            <div className="content">
-              <h1 className="card-text">STORM Razar LTE </h1>
-              <img src={id06} className="productImage" alt="product-6" />
-              <p className="card-text">The STORM Razar LTE is the latest statement STORM LED watch.
-              It’s futuristic rounded case features a sleek glass display with silver LED lights displaying date,
-              hour, minute and seconds at the press of a button.
-              The Razar LTE is made of high grade brushed stainless steel.</p>
-              <a href="/" className="btn btn-light">Add to Shopping Cart</a>
-            </div>
+          <img src={gif} className="productGIF" alt="product-GIF" />
           </div>
           <div className="col-6" id="row4sec2">
-            <div className="content">
-              <h1 className="card-text">STORM Razar BLD </h1>
-              <img src={id07} className="productImage" alt="product-7" />
-              <p className="card-text">The STORM Razar BLD is the latest statement STORM LED watch.
-              It’s futuristic rounded case features a sleek glass display with black LED lights displaying date,
-              hour, minute and seconds at the press of a button.
-              The Razar BLD is made of high grade brushed stainless steel.</p>
-              <a href="/" className="btn btn-light">Add to Shopping Cart</a>
-            </div>
+           
           </div>
-
-
-
       </div></div>
         );
       }
