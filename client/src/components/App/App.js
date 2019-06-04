@@ -4,6 +4,7 @@ import API from '../../lib/API';
 import TokenStore from '../../lib/TokenStore';
 import AuthContext from '../../contexts/AuthContext';
 import Navigation from '../../components/Navigation/Navigation';
+import Footer from "../../components/Footer/Footer.js";
 import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
 import Login from '../../pages/Login/Login';
 import Secret from '../../pages/Secret/Secret';
@@ -51,6 +52,7 @@ class App extends Component {
       <AuthContext.Provider value={this.state.auth}>
         <div className='App'>
           <Navigation />
+          
           {/* <div className='container-fluid'> */}
             <Switch>
               <Route path='/login' component={Login} />
@@ -58,6 +60,7 @@ class App extends Component {
               <Route exact path='/' component={Home} />
               <Route component={NotFound} />
             </Switch>
+            <Footer />
           {/* </div> */}
         </div>
       </AuthContext.Provider>

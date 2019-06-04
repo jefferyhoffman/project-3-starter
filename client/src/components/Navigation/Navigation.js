@@ -44,11 +44,15 @@ class Navigation extends Component {
                 </li>}
             </ul>
             <ul className='navbar-nav'>
+            <li className="nav-item">
+                    <Link className="nav-link" to="/collections" onClick={this.toggleCollapse}>Collections</Link>
+                </li>
+                <li className='nav-link'>Search</li>
+                <li className="nav-link">Cart</li>
               {user
                 ? <AuthDropdown onClick={this.toggleCollapse} />
                 : <li className='nav-item'><Link className='nav-link' to='/login' onClick={this.toggleCollapse}>Login/Register</Link></li>}
-                <li className='nav-link'>Search</li>
-                <li className="nav-link">Cart</li>
+             
             </ul>
           </div>
         </nav>
