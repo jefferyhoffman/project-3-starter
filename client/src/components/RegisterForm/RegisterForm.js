@@ -25,13 +25,36 @@ class RegisterForm extends Component {
     const { email, password } = this.state;
 
     return (
-      <div className='RegisterForm'>
+      <div className="row">
+      <div className="col-3"></div>
+      <div className='col-6 RegisterForm'>
         <div className='card'>
           <div className='card-body'>
+          <h2 className="card-title text-success">Create an Account with GreenSpace</h2>
+          <br />
+          <form>
+            <div className="row">
+              <div className="col-6">
+                <input type="text" className="form-control" placeholder="First name" />
+              </div>
+              <div className="col-6">
+                <input type="text" className="form-control" placeholder="Last name" />
+              </div>
+            </div>
+            <br />
+            <div className="row">
+              <div className="col-6">
+                <input type="text" className="form-control" placeholder="Address" />
+              </div>
+              <div className="col-6">
+                <input type="text" className="form-control" placeholder="Phone Number" />
+              </div>
+            </div>
+            <br />
             <form className='LoginForm' onSubmit={this.handleSubmit}>
               <div className='input-group mb-3'>
                 <div className="input-group-prepend">
-                  <span className="input-group-text">@</span>
+                  <span className="input-group-text">Email</span>
                 </div>
                 <input
                   className='form-control'
@@ -46,7 +69,7 @@ class RegisterForm extends Component {
 
               <div className='input-group mb-3'>
                 <div className="input-group-prepend">
-                  <span className="input-group-text">a3b</span>
+                  <span className="input-group-text">Password</span>
                 </div>
                 <input
                   className='form-control'
@@ -59,10 +82,13 @@ class RegisterForm extends Component {
                 />
               </div>
 
-              <button className='btn btn-primary' type='submit'>Register</button>
+              <button className='btn btn-success float-left' type='submit'>Register</button>
             </form>
-          </div>
+          </form>
         </div>
+      </div>
+      <div className="col-3"></div>
+      </div>
       </div>
     )
   }
