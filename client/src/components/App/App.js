@@ -103,7 +103,7 @@ class App extends Component {
               <Route path="/admin/files" exact component={Files} />
               <Route component={NotFound} /> */}
             </Switch>
-            {/* <Footer /> */}
+            <Footer />
           {/* </div> */}
         </div>
       </AuthContext.Provider>
