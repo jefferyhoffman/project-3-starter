@@ -33,9 +33,10 @@ itemsController.put('/:name', (req, res) => {
 
 // delete existing item by ID
 itemsController.delete('/:id', (req, res) => {
-  const { name, price, brand, quantity, img } = req.body;
+  const { id, name, price, brand, quantity, img } = req.body;
 
   db.Item.destroy(
+    // { id, name, price, brand, quantity, img },
     { where: {id: req.params.id} })
     .then(item => res.json(item))
     .catch(err => res.json(err));
