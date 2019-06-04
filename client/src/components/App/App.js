@@ -11,6 +11,7 @@ import Login from '../../pages/Login/Login';
 import Secret from '../../pages/Secret/Secret';
 import Home from '../../pages/Home/Home';
 import NotFound from '../../pages/NotFound/NotFound';
+import Cart from '../../components/CartForm/Cart.js';
 
 import './App.css';
 
@@ -60,6 +61,7 @@ class App extends Component {
               <PrivateRoute path='/secret' component={Secret} />
               <Route exact path='/' component={Home} />
               <Route exact path='/collections' component={Collections} />
+              <Route exact path='/cart' component={Cart} />
               <Route component={NotFound} />
             
               {/* <Route path="/admin/" exact component={Home} />
