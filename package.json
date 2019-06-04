@@ -18,5 +18,8 @@
     "concurrently": "^4.1.0",
     "nodemon": "^1.18.10"
   },
-  "dependencies": {}
+  "dependencies": {
+    "react-bootstrap4-modal": "^1.7.1",
+    "sequelize": "^5.8.7"
+  }
 }

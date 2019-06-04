@@ -4,7 +4,11 @@ import "./Collections.css";
 // import WatchCard from '../../components/Products/watch';
 import watchVid from "../Home/vidBg.mp4";
 
+// import "./collections.css";
+// import "./style.css";
+// import WatchCard from '../../components/Products/watch';
 
+import API from "../../utils/API";
 
 
 class Collections extends Component {
@@ -14,17 +18,18 @@ class Collections extends Component {
       counter: 0
     }
   }
-  
-  handleclick = (event) => {
-    console.log("click")
-    let { counter } = this.state
-    counter++
-    this.setState({ counter })
-    console.log(this.state.counter)
+
+  componentDidMount() {
+    this.loadItems();
+  }
+
+  loadItems = () => {
+    API.getItems()
+    .then(res => this.setState({ items: res.data}))
+    .catch(err => console.log(err))
   }
 
   render() {
-     
     return (
       <div className="container-fluid">
         <div className="row" id="row1-c">
@@ -34,27 +39,27 @@ class Collections extends Component {
         </div>
         <div className="row" id="row2">
           <div className="col-4" id="row2sec1">
-           
-            </div>
-            <div className="col-4" id="row2sec2">
-              
-            </div>
-            <div className="col-4" id="row2sec3">
-
-            </div>
+            TEST
           </div>
-          <div className="row" id="row3">
-            <div className="col-4" id="row3sec1">
+          <div className="col-4" id="row2sec2">
 
-            </div>
-            <div className="col-4" id="row3sec2">
-
-            </div>
-            <div className="col-4" id="row3sec3">
-
-            </div>
           </div>
-          <div className="row" id="row4">
+          <div className="col-4" id="row2sec3">
+            LETS SEE
+          </div>
+        </div>
+        <div className="row" id="row3">
+          <div className="col-4" id="row3sec1">
+
+          </div>
+          <div className="col-4" id="row3sec2">
+
+          </div>
+          <div className="col-4" id="row3sec3">
+
+          </div>
+        </div>
+        <div className="row" id="row4">
             <div className="col-4" id="row4sec1">
 
             </div>
@@ -62,15 +67,20 @@ class Collections extends Component {
 
             </div>
             <div className="col-4" id="row4sec3">
-
-            </div>
-          </div>
+        </div>
+        
+       
 
         </div>
+      </div>
 
-
-        );
-      }
-  }
+ 
+   
       
+
+
+    );
+  }
+}
+
 export default Collections;

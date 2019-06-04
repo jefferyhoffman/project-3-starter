@@ -1,5 +1,5 @@
-.row#footer {
-    height: 400px;
+#footer {
+    height: 300px;
     width: 100%;
     background: white;
     display: none;
@@ -26,4 +26,7 @@ button {
     margin: 0;
     width: 100%;
     padding: 0;
+}
+.row {
+    height: 200px;
 }
