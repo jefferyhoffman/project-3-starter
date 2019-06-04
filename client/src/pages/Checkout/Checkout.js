@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PaymentInfo from "../../components/PaymentInfo/PaymentInfo"
-import API from "../../lib/API";
+// import API from "../../lib/API";
 
 const CheckoutList = (props) => {
     return props.products.map((productObject, index) => (
@@ -33,9 +33,9 @@ class Checkout extends Component {
 
     };
 
-    componentDidMount() {
-        API.getusersProducts
-    }
+    // componentDidMount() {
+    //     API.getusersProducts
+    // }
 
     render() {
         return (
