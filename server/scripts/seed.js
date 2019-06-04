@@ -2,6 +2,17 @@ const mongoose = require("mongoose");
 const db = require("../models");
 
 const unirest = require("unirest");
+
+const keys = require("../../keys.js");
+
+// const rapidapi = process.env.RAPIDAPI_ID;
+
+
+const rapidapi = keys.rapid_api_key;
+
+console.log(keys);
+
+
 // var action = process.argv[2];
 
 mongoose.connect(
@@ -35,7 +46,7 @@ function apiInput() {
   unirest.get("https://the-cocktail-db.p.rapidapi.com/filter.php?a=Alcoholic")
 
     .header("X-RapidAPI-Host", "the-cocktail-db.p.rapidapi.com")
-    .header("X-RapidAPI-Key", "d5eea51a4dmshb5755efe64417d5p1c39eejsn17d8259170e3")
+    .header("X-RapidAPI-Key", rapidapi)
 
     .end(function (result) {
 
@@ -45,7 +56,7 @@ function apiInput() {
         unirest.get("https://the-cocktail-db.p.rapidapi.com/lookup.php?i=" + drinkId)
 
           .header("X-RapidAPI-Host", "the-cocktail-db.p.rapidapi.com")
-          .header("X-RapidAPI-Key", "d5eea51a4dmshb5755efe64417d5p1c39eejsn17d8259170e3")
+          .header("X-RapidAPI-Key", rapidapi)
 
           .end(function (result) {
             // console.log(result.body.drinks);

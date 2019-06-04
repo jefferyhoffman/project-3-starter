@@ -13,7 +13,7 @@ const DrinkSchema = new Schema({
     // ingredient2: { type: String },
     // ingredient3: { type: String },
     // ingredient4: { type: String },
-    // ingredient5: { type: String },s
+    // ingredient5: { type: String },
     glass: { type: String },
   });
 
