@@ -3,6 +3,7 @@ import Calendar from 'react-calendar';
 import './Scheduling.css';
 import '../../components/Form/Form.css';
 import Form from '../../components/Form/Form.js';
+import Modal from '../../components/Modal/modal.js';
 
 
 
@@ -58,7 +59,8 @@ class App extends Component {
 				<div id="myModal" className="modal" style={this.state.showModal ? { display: 'block' } : { display: 'none' }}>
 					<div className="modal-content">
 						<span className="close" onClick={this.closeModal}>&times;</span>
-            <Form></Form>
+			{/* <Form></Form> */}
+			<Modal></Modal>
 						{/* <p>{this.state.modalMessage}</p>
 						{data.map(info =>
 							<Info {...info} />)} */}
