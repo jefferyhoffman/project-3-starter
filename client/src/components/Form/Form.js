@@ -39,28 +39,28 @@ class Form extends Component {
                             value={this.state.firstName}
                             onChange={e => this.change(e)}
                         />
-                        <br></br>
+                        <br />
                         <input
                             name="lastName"
                             placeholder='Last Name'
                             value={this.state.lastName}
                             onChange={e => this.change(e)}
                         />
-                        <br></br>
+                        <br />
                         <input
                             name="username"
                             placeholder='Username'
                             value={this.state.username}
                             onChange={e => this.change(e)}
                         />
-                        <br></br>
+                        <br />
                         <input
                             name="email"
                             placeholder='E-mail'
                             value={this.state.email}
                             onChange={e => this.change(e)}
                         />
-                        <br></br>
+                        <br />
                         <input
                             name="password"
                             type="password"
@@ -68,7 +68,7 @@ class Form extends Component {
                             value={this.state.password}
                             onChange={e => this.change(e)}
                         />
-                        <br></br>
+                        <br />
                         <button onClick={e => this.onSubmit(e)}>Submit</button>
             </form >
                     );
