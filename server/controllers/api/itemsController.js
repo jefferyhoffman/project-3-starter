@@ -12,7 +12,7 @@ itemsController.get('/', (req, res) => {
 });
 
 // Create a new item
-itemsController.post('/create', (req, res) => {
+itemsController.post('/create', JWTVerifier,(req, res) => {
   const { name, price, brand, quantity, img } = req.body;
 
   db.Item.create({ name, price, brand, quantity, img })
