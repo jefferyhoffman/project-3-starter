@@ -13,8 +13,8 @@ export default {
         }
       });
     },
-    register: function (email, password) {
-      return axios.post('/api/users/register', { email, password });
+    register: function (email, password, firstName, lastName, phone, address) {
+      return axios.post('/api/users/register', { email, password, firstName, lastName, phone, address });
     }
   },
 

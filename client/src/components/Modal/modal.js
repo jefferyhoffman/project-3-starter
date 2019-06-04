@@ -170,7 +170,7 @@ class Modal extends Component {
                 </div>
 
                 <p className="text-center">
-                    <strong>Service Options</strong>
+                    <strong>Add On Additional Services</strong>
                 </p>
                 <div className="container">
                     <div className="row">

@@ -17,14 +17,33 @@ class PaymentInfo extends Component {
                                 <h3>Billing Address</h3> */}
                                 <div className="col-50">
                                 <label for="fname"><i className="fa fa-user"></i> Full Name</label>
-                                <input type="text" id="fname" name="firstname" placeholder="John M. Doe" />
+                                <input
+                                    type="text"
+                                    id="fname"
+                                    name="firstname"
+                                    placeholder=
+                                    "John M. Doe" />
+                                    
                                 <label for="email"><i className="fa fa-envelope"></i> Email</label>
-                                <input type="text" id="email" name="email" placeholder="john@example.com" />
+                                <input
+                                    type="text"
+                                    id="email"
+                                    name="email"
+                                    placeholder="john@example.com" />
+
                                 <label for="adr"><i className="fa fa-address-card-o"></i> Address</label>
-                                <input type="text" id="adr" name="address" placeholder="542 W. 15th Street" />
+                                <input
+                                    type="text"
+                                    id="adr"
+                                    name="address"
+                                    placeholder="542 W. 15th Street" />
+
                                 <label for="city"><i className="fa fa-institution"></i> City</label>
-                                <input type="text" id="city" name="city" placeholder="New York"></input>
-                                </div>
+                                <input
+                                    type="text"
+                                    id="city"
+                                    name="city"
+                                    placeholder="New York" />
 
                                 <div className="row">
                                     <div className="col-50">
@@ -69,6 +88,7 @@ class PaymentInfo extends Component {
                             </label>
                             <input type="submit" value="Checkout" class="btn" />
                             <input type="submit" value="Keep Shopping" class="btn" id="keepshopping" />
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -79,4 +99,4 @@ class PaymentInfo extends Component {
     }
 }
 
-export default PaymentInfo
+export default PaymentInfo;
