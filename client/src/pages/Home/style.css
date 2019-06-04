@@ -5,6 +5,12 @@ body{
   background-attachment: fixed;
   background-position: center center;
 }
+
+.card-body{
+  padding: 1.85rem;
+}
+
+
   #form{
     background-color: white;
     color: black;
