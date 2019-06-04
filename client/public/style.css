@@ -1,19 +1,20 @@
 /* titleSection */
-.titleSection {
+/* .titleSection {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
     font-weight: 300;
     font-size: 60;
     position: relative, center;
     color: white;
-}
-#productImage {
+} */
+.productImage {
     height: 300px;
     width: 200px;
-    text-align: center !important;
-}
-/* #productCard {
     text-align: center;
-    color: center;
+}
+/* 
+.card-text{
+    color:white;
+    text-align: center;
 } */
 
 body{
@@ -47,7 +48,7 @@ html {
     height: auto;
     width: auto; 
     text-align: center;
-    color: center;
+    color: white;
 }
 
 #row2sec2 {
@@ -55,13 +56,8 @@ html {
     height: auto;
     width: auto;
     text-align: center;
-    color: center;
-
-    /* font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-    font-weight: 300;
-    font-size: 60;
-    position: relative, center;
-    color: white; */
+    color: white;
+    position: relative;
 }
 
 /* 
@@ -72,18 +68,24 @@ html {
     background: rgb(255, 255, 116);
     height: auto;
     width: auto;
+    text-align: center;
+    color: white;
 }
 
 #row3sec2 {
     background: rgb(167, 129, 132);
     height: auto;
     width: auto;
+    text-align: center;
+    color: white;
 }
 
 #row3sec3 {
     background: pink;
     height: auto;
     width: auto;
+    text-align: center;
+    color: white;
 }
 
 
@@ -95,12 +97,16 @@ html {
     background: purple;
     height: auto;
     width: auto;
+    text-align: center;
+    color: white;
 }
 
 #row4sec2 {
     background: silver;
     height: auto;
     width: auto;
+    text-align: center;
+    color: white;
 }
 
 nav {
