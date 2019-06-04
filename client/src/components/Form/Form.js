@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import './Form.css';
+
 
 class Form extends Component {
     state = {
@@ -31,45 +33,46 @@ class Form extends Component {
     render() {
         return (
             <form>
-                <input
-                    name="firstName"
-                    placeholder='First Name'
-                    value={this.state.firstName}
-                    onChange={e => this.change(e)}
-                />
-                <br></br>
-                <input
-                    name="lastName"
-                    placeholder='Last Name'
-                    value={this.state.lastName}
-                    onChange={e => this.change(e)}
-                />
-                <br></br>
-                <input
-                    name="username"
-                    placeholder='Username'
-                    value={this.state.username}
-                    onChange={e => this.change(e)}
-                />
-                <br></br>
-                <input
-                    name="email"
-                    placeholder='E-mail'
-                    value={this.state.email}
-                    onChange={e => this.change(e)}
-                />
-                <br></br>
-                <input
-                    name="password"
-                    type="password"
-                    placeholder='Password'
-                    value={this.state.password}
-                    onChange={e => this.change(e)}
-                />
-                <button onClick={e => this.onSubmit(e)}>Submit</button>
+                        <input
+                            name="firstName"
+                            placeholder='First Name'
+                            value={this.state.firstName}
+                            onChange={e => this.change(e)}
+                        />
+                        <br></br>
+                        <input
+                            name="lastName"
+                            placeholder='Last Name'
+                            value={this.state.lastName}
+                            onChange={e => this.change(e)}
+                        />
+                        <br></br>
+                        <input
+                            name="username"
+                            placeholder='Username'
+                            value={this.state.username}
+                            onChange={e => this.change(e)}
+                        />
+                        <br></br>
+                        <input
+                            name="email"
+                            placeholder='E-mail'
+                            value={this.state.email}
+                            onChange={e => this.change(e)}
+                        />
+                        <br></br>
+                        <input
+                            name="password"
+                            type="password"
+                            placeholder='Password'
+                            value={this.state.password}
+                            onChange={e => this.change(e)}
+                        />
+                        <br></br>
+                        <button onClick={e => this.onSubmit(e)}>Submit</button>
             </form >
-        );
-    }
-};
-
+                    );
+                }
+            };
+            
 export default Form;
