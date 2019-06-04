@@ -5,10 +5,10 @@ import API from '../../lib/API';
 import TokenStore from '../../lib/TokenStore';
 import AuthContext from '../../contexts/AuthContext';
 import Navigation from '../../components/Navigation/Navigation';
-// import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
+import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
 import Login from '../../pages/Login/Login';
 import Register from '../../pages/Register/Register';
-// import Secret from '../../pages/Secret/Secret';
+import Secret from '../../pages/Secret/Secret';
 import Home from '../../pages/Home/Home';
 import About from '../../pages/About/About';
 import Portfolio from '../../pages/Portfolio/Portfolio';
@@ -56,6 +56,7 @@ class App extends Component {
 
 
   render() {
+    let authToken = this.state.auth
     return (
       <AuthContext.Provider value={this.state.auth}>
         <div className='App'>
@@ -64,14 +65,14 @@ class App extends Component {
             <Switch>
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />
-              {/* <PrivateRoute path='/secret' component={Secret} /> */}
+              <PrivateRoute path='/secret' component={Secret} />
               <Route exact path='/' component={Home} />
               <Route exact path='/about' component={About} />
-              <Route exact path='/portfolio' component={Portfolio} />
-              <Route exact path='/drink' component={Drink} />
-              <Route exact path='/add' component={Add} />
+              <PrivateRoute exact path='/portfolio' component={Portfolio} />
+              <PrivateRoute exact path='/drink' component={Drink} />
+              <PrivateRoute exact path='/add' props={authToken} component={Add} />
               <Route exact path='/search' component={Search} />
-               <Route component={NotFound} />
+              <Route component={NotFound} />
             </Switch>
           </div>
         </div>

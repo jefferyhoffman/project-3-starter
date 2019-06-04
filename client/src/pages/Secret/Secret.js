@@ -13,6 +13,7 @@ class Secret extends Component {
   }
 
   componentDidMount() {
+    console.log(this.context.authToken)
     API.Secrets.getAll(this.context.authToken)
       .then(response => response.data)
       .then(secrets => this.setState({ secrets }))

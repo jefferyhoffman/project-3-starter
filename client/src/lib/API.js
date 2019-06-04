@@ -26,7 +26,26 @@ export default {
         }
       });
     }
+  },
 
-    
+  Drinks: {
+    createDrink: function (drink, authToken) {
+      console.log(authToken);
+      return axios({
+        method: 'post',
+        url: '/api/drinks',
+        data: drink,
+        headers: {
+          'Authorization': `Bearer ${authToken}`
+        }
+      });
+    },
+    getAll: function (authToken) {
+      return axios.get('/api/drinks', {
+        headers: {
+          'Authorization': `Bearer ${authToken}`
+        }
+      });
+    }
   }
 }
