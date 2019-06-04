@@ -6,7 +6,7 @@ class HomePage extends Component {
   render() {
     return (
       <div>
-              <Register something='this'/>
+              {/* <Register something='this'/> */}
       </div>
     );
   }

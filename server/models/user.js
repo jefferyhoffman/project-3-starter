@@ -40,22 +40,16 @@ const UserSchema = new Schema({
     type: String,
     trim: true,
     required: 'Phone number is required',
-    validate: [
-      function (input) {
-        return input.length === 10
-      },
-      'Phone number should be 10 numbers long'
-    ],
     default: ""
   },
   cart: {
-    type: [],
+    type: Array,
   },
   upcoming: {
-    type: [],
+    type: Array,
   },
   completed: {
-    type: []
+    type: Array
   }
 })
 

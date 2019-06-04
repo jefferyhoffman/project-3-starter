@@ -27,8 +27,9 @@ class Register extends Component {
   }
 
   render() {
-    const { from } = this.props.location || { from: { pathname: "/login" } };
+    const { from } = this.props.location.state || { from: { pathname: "/login" } };
     const { redirectToReferrer } = this.state;
+    console.log(this.props);
 
     if (redirectToReferrer) {
       return <Redirect to={from} />;
@@ -51,7 +52,7 @@ class Register extends Component {
           </div>}
         <div className='row'>
           <div className='col'>
-            <RegisterForm onSubmit={this.handleSubmit} hello='hello'/>
+            <RegisterForm onSubmit={this.handleSubmit}/>
           </div>
         </div>
       </div>

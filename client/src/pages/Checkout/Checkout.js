@@ -33,9 +33,9 @@ class Checkout extends Component {
 
     };
 
-    componentDidMount() {
-        API.getusersProducts
-    }
+    // componentDidMount() {
+    //     API.getusersProducts
+    // }
 
     render() {
         return (

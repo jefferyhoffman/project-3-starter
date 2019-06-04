@@ -13,7 +13,14 @@ class RegisterForm extends Component {
   };
 
   handleInputChange = event => {
-    const { name, value } = event.target;
+    let { name, value } = event.target;
+
+    // if (name === 'phone'){
+    //   if (value.length === 3 || value.length === 7){
+    //     value += '-'
+    //   }
+    //   value = value.substring(0, 12)
+    // }
 
     this.setState({
       [name]: value
