@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import Calendar from 'react-calendar';
 import './Scheduling.css';
 import '../../components/Form/Form.css';
-import Form from '../../components/Form/Form.js';
+// import Form from '../../components/Form/Form.js';
+import Services from '../../components/Services/Services.js';
+import '../../components/Services/Services.css'
 
 
 
@@ -58,7 +60,7 @@ class App extends Component {
 				<div id="myModal" className="modal" style={this.state.showModal ? { display: 'block' } : { display: 'none' }}>
 					<div className="modal-content">
 						<span className="close" onClick={this.closeModal}>&times;</span>
-            <Form></Form>
+						<Services></Services>
 						{/* <p>{this.state.modalMessage}</p>
 						{data.map(info =>
 							<Info {...info} />)} */}
