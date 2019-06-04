@@ -26,7 +26,13 @@ export default {
         }
       });
     }
+  },
 
-    
+  Drinks: {
+    createDrink: function (drink) {
+      console.log("welcome");
+      return axios.post('/api/drinks', drink);
+     
+    }
   }
 }
