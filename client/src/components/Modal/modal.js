@@ -3,7 +3,70 @@ import React, { Component } from 'react';
 // import './Services.css';
 
 class Modal extends Component {
+    state = {
+        premiumPckg: false
+    }
 
+    handleInputChange = (event) => {
+        const target = event.target;
+        const value = target.type === 'checkbox' ? target.checked : target.value;
+        const name = target.name;
+
+        this.setState({
+            [name]: value
+        }, () => {
+            // Calculation to determine total
+            var total = 0;
+            console.log(this.state.premiumPckg);
+            if (this.state.premiumPckg) {
+                total += 350
+            }
+            if (this.state.upgradedPckg) {
+                total += 200
+            }
+            if (this.state.standardPckg) {
+                total += 100
+            }
+            if (this.state.aeration) {
+                total += 50
+            }
+            if (this.state.reseeding) {
+                total += 50
+            }
+            if (this.state.trimming) {
+                total += 50
+            }
+            if (this.state.pineNeedles) {
+                total += 50
+            }
+            if (this.state.leafRemoval) {
+                total += 50
+            }
+            if (this.state.pesticideTrtmt) {
+                total += 50
+            }
+            if (this.state.topiary) {
+                total += 50
+            }
+            if (this.state.pesticideApp) {
+                total += 50
+            }
+            if (this.state.soil) {
+                total += 50
+            }
+            if (this.state.mulch) {
+                total += 50
+            }
+
+            this.setState({
+                total: total
+            });
+            console.log(total);
+        });
+
+
+
+    }
     render() {
         return (
             <div className="App">
@@ -92,7 +155,7 @@ class Modal extends Component {
                             data-parent="#accordionEx">
                             <div className="card-body">
                                 <div className="form-check mb-4">
-                                    <input className="form-check-input" name="group1" type="checkbox" id="radio-579" value="option1" />
+                                    <input className="form-check-input" name="premiumPckg" type="checkbox" id="radio-579" value="option1" onChange={this.handleInputChange} />
                                     <label className="form-check-label" for="radio-579"></label>
                                     You'll be the envy of all the neighbors with our premium package.
                                     This full coverage lawn care coverage package includes aeration, mowing, seeding, weed
@@ -126,7 +189,7 @@ class Modal extends Component {
                         data-parent="#accordionEx" >
                         <div className="card-body">
                             <div className="form-check mb-4">
-                                <input className="form-check-input" name="group1" type="checkbox" id="radio-579" value="option2" />
+                                <input className="form-check-input" name="upgradedPckg" type="checkbox" id="radio-579" value="option2" onChange={this.handleInputChange} />
                                 <label className="form-check-label" for="radio-579"></label>
                                 Enjoy our standard package but looking to do a little less work this summer? The upgraded
                                 package
@@ -159,8 +222,8 @@ class Modal extends Component {
                         data-parent="#accordionEx">
                         <div className="card-body">
                             <div className="form-check mb-4">
-                                <input className="form-check-input" name="group1" type="checkbox" id="radio-579"
-                                    value="option3" />
+                                <input className="form-check-input" name="standardPckg" type="checkbox" id="radio-579"
+                                    value="option3" onChange={this.handleInputChange} />
                                 <label className="form-check-label" for="radio-579"></label>
                                 Just need the basics covered? We've got you with our standard maintenance package. This covers
                                 mowing, tree/hedge trimming and weed prevention treatments.
@@ -177,58 +240,58 @@ class Modal extends Component {
                         <div className="col">
 
                             <div className="form-check mb-4">
-                                <input className="form-check-input" name="group1" type="checkbox" id="radio-179" value="option4" />
+                                <input className="form-check-input" name="aeration" type="checkbox" id="radio-179" value="option4" onChange={this.handleInputChange} />
                                 <label className="form-check-label" for="radio-179">Core Aeration</label>
                             </div>
 
                             <div className="form-check mb-4">
-                                <input className="form-check-input" name="group2" type="checkbox" id="radio-279"
-                                    value="option5" />
+                                <input className="form-check-input" name="reseeding" type="checkbox" id="radio-279"
+                                    value="option5" onChange={this.handleInputChange} />
                                 <label className="form-check-label" for="radio-279">Reseeding-fescue and Bermuda </label>
                             </div>
 
                             <div className="form-check mb-4">
-                                <input className="form-check-input" name="group1" type="checkbox" id="radio-379"
-                                    value="option6" />
+                                <input className="form-check-input" name="trimming" type="checkbox" id="radio-379"
+                                    value="option6" onChange={this.handleInputChange} />
                                 <label className="form-check-label" for="radio-379">Hedge Trimming/Shaping</label>
                             </div>
                             <div className="form-check mb-4">
-                                <input className="form-check-input" name="group1" type="checkbox" id="radio-479"
-                                    value="option7" />
-                                <label className="form-check-label" for="radio-479">Pine Needle</label>
+                                <input className="form-check-input" name="pineNeedles" type="checkbox" id="radio-479"
+                                    value="option7" onChange={this.handleInputChange} />
+                                <label className="form-check-label" for="radio-479">Pine Needles</label>
                             </div>
                             <div className="form-check mb-4">
-                                <input className="form-check-input" name="group1" type="checkbox" id="radio-579"
-                                    value="option8" />
+                                <input className="form-check-input" name="leafRemoval" type="checkbox" id="radio-579"
+                                    value="option8" onChange={this.handleInputChange} />
                                 <label className="form-check-label" for="radio-579">Leaf Removal</label>
                             </div>
                         </div>
 
                         <div className="col">
                             <div className="form-check mb-4">
-                                <input className="form-check-input" name="group1" type="checkbox" id="radio-179"
-                                    value="option9" />
+                                <input className="form-check-input" name="pesticideTrtmt" type="checkbox" id="radio-179"
+                                    value="option9" onChange={this.handleInputChange} />
                                 <label className="form-check-label" for="radio-179">Pesticide Treatment</label>
                             </div>
                             <div className="form-check mb-4">
-                                <input className="form-check-input" name="group1" type="checkbox" id="radio-279"
-                                    value="option10" />
+                                <input className="form-check-input" name="topiary" type="checkbox" id="radio-279"
+                                    value="option10" onChange={this.handleInputChange} />
                                 <label className="form-check-label" for="radio-279">Artistic Topiary Design</label>
                             </div>
 
                             <div className="form-check mb-4">
-                                <input className="form-check-input" name="group1" type="checkbox" id="radio-379"
-                                    value="option11" />
+                                <input className="form-check-input" name="pesticideApp" type="checkbox" id="radio-379"
+                                    value="option11" onChange={this.handleInputChange} />
                                 <label className="form-check-label" for="radio-379">Pesticide Applications</label>
                             </div>
                             <div className="form-check mb-4">
-                                <input className="form-check-input" name="group1" type="checkbox" id="radio-479"
-                                    value="option12" />
+                                <input className="form-check-input" name="soil" type="checkbox" id="radio-479"
+                                    value="option12" onChange={this.handleInputChange} />
                                 <label className="form-check-label" for="radio-479">Soil Testing</label>
                             </div>
                             <div className="form-check mb-4">
-                                <input className="form-check-input" name="group1" type="checkbox" id="radio-579"
-                                    value="option13" />
+                                <input className="form-check-input" name="mulch" type="checkbox" id="radio-579"
+                                    value="option13" onChange={this.handleInputChange} />
                                 <label className="form-check-label" for="radio-579">Mulch</label>
                             </div>
                         </div>
