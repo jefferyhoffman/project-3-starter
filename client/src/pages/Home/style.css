@@ -1,33 +1,86 @@
+/* ONLY use these page COLORS!!! */
+
+/* black rgb(30, 30, 40) */
+/* biege/tan rgb(173, 158, 149) */
+/* dark brown  rgb(70, 50, 40)*/
+/* brown rgb(120, 68, 20)*/
+/* light brown rgb(150, 110, 76)*/
+/*  blue/black-ish rgb(55, 72, 89) */
+ /* ------------------------- */
+
+ /* Set 2 colors
+ - c1purplehsl 
+rgb(108,30,79)
+ - midnightbluehsl 
+rgb(63,36,98)
+ - darkslategrayhsl 
+rgb(67,16,50)
+ - midnightbluehsl 
+rgb(22,32,83)
+ - darkslatebluehsl 
+rgb(32,56,144) 
+- tomato/orange 
+rgb(243,110,45)
+- skyblue
+rgb(138,190,235)
+*/
+
 .container {
     margin: 0;
 }
 .row {
-    height: 700px;
+    height: 680px;
+}
+
+video {
+   height: 760px;
+   position: absolute;
+   width: 100%;
+   bottom: 260px;
+}
+.text-overlay {
+    z-index: 1;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 80px !important;
+    position: absolute;
+    top: 150px;
+    left: 34%;
+    letter-spacing: 18px !important;
+    text-shadow: 4px 4px 4px rgba(133, 133, 133, 0.571),
+                 -3px -3px 4px rgba(136, 136, 136, 0.529);
+}
+.text-overlay:hover {
+    color: rgb(30, 30, 40);
 }
 #row1 {
-    background: red;
+    background: rgb(173, 158, 149);
+    /* background-image: linear-gradient(40deg,rgb(32,56,144), rgb(22,32,83), rgb(32,56,144), rgb(63,36,98), rgb(67,16,50),rgb(108,30,79)); */
+    z-index: 2;
 }
 #row2sec1{
-    background: pink;
+    background: rgb(70, 50, 40);
+    /* background: rgb(63,36,98); */
 }
 #row2sec2 {
-    background: purple;
+    background: rgb(103, 81, 60);
+    /* background: rgb(67,16,50); */
 }
 
 #row3sec1 {
-    background: green;
+    background: rgb(22,32,83);
 }
 #row3sec2 {
-    background: yellow
+    background: rgb(243,110,45);
 }
 #row3sec3 {
-    background: blue;
+    background: rgb(63,36,98);
 }
 #row4sec1 {
-    background: gray;
+    background: rgb(138,190,235);
 }
 #row4sec2 {
-    background: pink;
+    background: rgb(243,110,45);
 }
 
 
