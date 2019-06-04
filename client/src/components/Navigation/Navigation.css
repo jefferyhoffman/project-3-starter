@@ -35,12 +35,17 @@ nav.navbar:hover {
 }
 a.navbar-brand {
    color: rgb(255, 255, 255) !important;
-   font-weight: bold;
+   font-weight: 600;
    font-size: 30px;
    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.475);
 }
 
 .nav-link {
     color: white !important;
-    font-weight: bold;
+    font-weight: 400;
 }
+.nav-link:hover {
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
