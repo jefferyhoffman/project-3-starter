@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
+// import { Redirect } from 'react-router-dom';
 
-import API from '../../lib/API';
+// import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
-import LoginForm from '../../components/LoginForm/LoginForm';
+// import LoginForm from '../../components/LoginForm/LoginForm';
 
 // import React from 'react';
 import Modal from 'react-bootstrap4-modal';
