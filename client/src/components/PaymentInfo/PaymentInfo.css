@@ -16,10 +16,10 @@ body {
     margin: 0 -16px;
   }
   
-  .col-25 {
+  /* .col-25 {
     -ms-flex: 25%; 
     flex: 25%;
-  }
+  } */
   
   .col-50 {
     -ms-flex: 50%; 
@@ -35,6 +35,7 @@ body {
   .col-50,
   .col-75 {
     padding: 0 16px;
+    text-align: center;
   }
   
   /* .container {
@@ -43,6 +44,13 @@ body {
     border: 1px solid lightgrey;
     border-radius: 3px;
   } */
+
+  .Container.fluid{
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+  }
   
   input[type=text] {
     width: 100%;
@@ -54,7 +62,7 @@ body {
   
   label {
     margin-bottom: 10px;
-    display: block;
+    /* display: block; */
   }
   
   .icon-container {

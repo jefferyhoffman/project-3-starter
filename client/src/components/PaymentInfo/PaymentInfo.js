@@ -9,12 +9,13 @@ class PaymentInfo extends Component {
         return (<div className="Container fluid">
             <h2>Checkout</h2>
             <div className="row">
-                <div className="col-75">
+                <div className="col-50">
                     <div className="container">
                         <form action="orderPlaced" action="GET">
 
-                            <div className="row">
-                                <h3>Billing Address</h3>
+                            {/* <div className="row">
+                                <h3>Billing Address</h3> */}
+                                <div className="col-50">
                                 <label for="fname"><i className="fa fa-user"></i> Full Name</label>
                                 <input
                                     type="text"
@@ -81,12 +82,13 @@ class PaymentInfo extends Component {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            {/* </div> */}
                             <label>
                                 <input type="checkbox" checked="checked" name="sameadr" /> Shipping Address Same as Billing
                             </label>
                             <input type="submit" value="Checkout" class="btn" />
                             <input type="submit" value="Keep Shopping" class="btn" id="keepshopping" />
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -97,4 +99,4 @@ class PaymentInfo extends Component {
     }
 }
 
-export default PaymentInfo
+export default PaymentInfo;
