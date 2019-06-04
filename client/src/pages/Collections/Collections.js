@@ -26,12 +26,11 @@ class Collections extends Component {
   }
 
   render() {
-
     return (
       <div className="container-fluid">
         <div className="row" id="row1">
           {/* <video autoPlay muted loop id="videoBg" src={watchVid} type="video/mp4"></video> */}
-          <div class="text-overlay">KOSCOWIX</div>
+          <div class="text-overlay">Collections</div>
         </div>
         <div className="row" id="row2">
           <div className="col-4" id="row2sec1">
