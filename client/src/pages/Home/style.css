@@ -27,6 +27,7 @@ rgb(138,190,235)
 
 .container {
     margin: 0;
+    padding: 0 !important;
 }
 .row {
     height: 680px;
