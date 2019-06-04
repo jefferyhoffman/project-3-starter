@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 // import { Button } from 'reactstrap';
-import "./collections.css";
-import "./style.css";
+// import "./collections.css";
+// import "./style.css";
 // import WatchCard from '../../components/Products/watch';
-import watchVid from "./vidBg.mp4";
-import React, { Component } from 'react';
+// import watchVid from "./vidBg.mp4";
 import API from "../../utils/API";
 
 
@@ -31,7 +30,7 @@ class Collections extends Component {
     return (
       <div className="container-fluid">
         <div className="row" id="row1">
-          <video autoPlay muted loop id="videoBg" src={watchVid} type="video/mp4"></video>
+          {/* <video autoPlay muted loop id="videoBg" src={watchVid} type="video/mp4"></video> */}
           <div class="text-overlay">KOSCOWIX</div>
         </div>
         <div className="row" id="row2">
