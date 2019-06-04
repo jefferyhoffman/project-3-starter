@@ -10,7 +10,20 @@ itemsController.get('/', (req, res) => {
   const { name, price, brand, quantity, img } = req.body;
 
   db.Item.findAll({ name, price, brand, quantity, img })
-    .then(item => res.json(item))
+    .then(items => {
+      let catalog = items.map(item => { 
+      return {
+        id: item.id,
+        name: item.name,
+        price: item.price,
+        brand: item.brand,
+        quantity: item.quantity,
+        img: item.img
+      }
+    })
+      // res.json(item.name)
+      res.json(catalog)
+    })
     .catch(err => res.json(err));
 });
 
