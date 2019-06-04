@@ -28,7 +28,7 @@ class Navigation extends Component {
     return (
       <div className='Navigation'>
         <nav className='navbar navbar-expand-lg navbar-light bg-light mb-3'>
-          <Link className='navbar-brand' to='#'>Project 3</Link>
+          <Link className='navbar-brand' to='#'>Koscowix</Link>
           <button className={togglerClass} onClick={this.toggleCollapse} data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
             <span className='navbar-toggler-icon'></span>
           </button>
@@ -44,11 +44,15 @@ class Navigation extends Component {
                 </li>}
             </ul>
             <ul className='navbar-nav'>
+            <li className="nav-item">
+                    <Link className="nav-link" to="/collections" onClick={this.toggleCollapse}>Collections</Link>
+                </li>
+                <li className='nav-link'>Search</li>
+                <li className="nav-link">Cart</li>
               {user
                 ? <AuthDropdown onClick={this.toggleCollapse} />
                 : <li className='nav-item'><Link className='nav-link' to='/login' onClick={this.toggleCollapse}>Login/Register</Link></li>}
-                <li className='nav-item'>Search</li>
-                <li className="nav-item">Cart</li>
+             
             </ul>
           </div>
         </nav>
