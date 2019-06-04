@@ -7,6 +7,7 @@ import React, { Component } from 'react';
 import API from "../../utils/API";
 
 
+
 class Collections extends Component {
   constructor(props) {
     super(props)
@@ -21,8 +22,8 @@ class Collections extends Component {
 
   loadItems = () => {
     API.getItems()
-    .then(res => this.setState({ items: res.data}))
-    .catch(err => console.log(err))
+      .then(res => this.setState({ items: res.data }))
+      .catch(err => console.log(err))
   }
 
   render() {
@@ -34,31 +35,37 @@ class Collections extends Component {
         </div>
         <div className="row" id="row2">
           <div className="col-4" id="row2sec1">
-            TEST
-            </div>
-          <div className="col-4" id="row2sec2">
 
-          </div>
-          <div className="col-4" id="row2sec3">
-            LETS SEE
             </div>
-        </div>
-        <div className="row" id="row3">
-          <div className="col-4" id="row3sec1">
 
+
+            <div className="col-4" id="row2sec2">
+              <div className="content">
+             
+              </div>
+            </div>
+            <div className="col-4" id="row2sec3">
+              LETS SEE
+            </div>
           </div>
+          <div className="row" id="row3">
+            <div className="col-4" id="row3sec1">
+       
+              </div>
+            </div>
+         
           <div className="col-4" id="row3sec2">
 
           </div>
           <div className="col-4" id="row3sec3">
 
           </div>
-        </div>
+        
         <div className="row" id="row4">
-          <div className="col-6" id="row4sec1">
+          <div className="col-4" id="row4sec1">
 
           </div>
-          <div className="col-6" id="row4sec2">
+          <div className="col-4" id="row4sec2">
 
           </div>
         </div>
