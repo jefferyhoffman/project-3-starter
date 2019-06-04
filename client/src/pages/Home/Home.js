@@ -14,10 +14,10 @@ class HomePage extends Component {
           <form>
             <div className="row">
               <div className="col-6">
-                <input type="text" className="form-control" placeholder="First name" />
+                <input type="text" className="form-control" placeholder="First Name" />
               </div>
               <div className="col-6">
-                <input type="text" className="form-control" placeholder="Last name" />
+                <input type="text" className="form-control" placeholder="Last Name" />
               </div>
             </div>
             <br />
@@ -38,7 +38,7 @@ class HomePage extends Component {
               <label for="exampleInputPassword1">Password</label>
               <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
             </div>
-          <button type="submit" class="btn btn-success float-left">Join!</button>
+          <button type="submit" class="btn btn-success float-center">Join!</button>
           </form>
         </div>
       </div>
