@@ -2,11 +2,17 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({
-  name: {
+  firstName: {
     type: String,
     trim: true,
     // required: 'Name is required',
-    default: 'John Doe'
+    default: 'John'
+  },
+  lastName: {
+    type: String,
+    trim: true,
+    // required: 'Name is required',
+    default: 'Doe'
   },
   email: {
     type: String,
@@ -24,43 +30,44 @@ const UserSchema = new Schema({
       'Password should be four characters or longer'
     ]
   },
-  // address: {
-  //   type: String,
-  //   trim: true,
-  //   required: 'Address is required',
-  //   default: 'None Provided'
-  // },
-  // phone: {
-  //   type: Number,
-  //   trim: true,
-  //   required: 'Phone number is required',
-  //   validate: [
-  //     function (input) {
-  //       return input.length === 10
-  //     },
-  //     'Phone number should be 10 numbers long'
-  //   ],
-  //   default: 9198675309
-  // },
-  // cart: {
-  //   type: [],
-  // },
-  // upcoming: {
-  //   type: [],
-  // },
-  // completed: {
-  //   type: []
-  // }
+  address: {
+    type: String,
+    trim: true,
+    required: 'Address is required',
+    default: 'None Provided'
+  },
+  phone: {
+    type: String,
+    trim: true,
+    required: 'Phone number is required',
+    validate: [
+      function (input) {
+        return input.length === 10
+      },
+      'Phone number should be 10 numbers long'
+    ],
+    default: ""
+  },
+  cart: {
+    type: [],
+  },
+  upcoming: {
+    type: [],
+  },
+  completed: {
+    type: []
+  }
 })
 
 class newUser {
-  constructor({ id, name, email, password, address, phone, cart, upcoming, completed }) {
-    this.name = name;
+  constructor({ id, firstName, lastName, email, password, address, phone, cart, upcoming, completed }) {
+    this.firstname = firstName;
+    this.lastName = lastName;
     this.id = id;
     this.email = email;
-    // this.password = password;
-    // this.address = address;
-    // this.phone = phone;
+    this.password = password;
+    this.address = address;
+    this.phone = phone;
     // this.cart = cart;
     // this.upcoming = upcoming;
     // this.completed = completed;

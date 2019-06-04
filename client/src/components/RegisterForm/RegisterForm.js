@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
+import '../../pages/Home/style.css';
 
 class RegisterForm extends Component {
+
   state = {
     email: '',
-    password: ''
+    password: '',
+    firstName: '',
+    lastName: '',
+    phone: '',
+    address: ''
   };
 
   handleInputChange = event => {
@@ -15,56 +21,102 @@ class RegisterForm extends Component {
   }
 
   handleSubmit = event => {
-    const { email, password } = this.state;
-
-    this.props.onSubmit(email, password);
-    event.preventDefault();
+    event.preventDefault()
+    const { email, password, firstName, lastName, phone, address } = this.state;
+    console.log(this.props)
+    this.props.onSubmit(email, password, firstName, lastName, phone, address);
   }
 
   render() {
-    const { email, password } = this.state;
+    console.log(this.props)
+    const { email, password, firstName, lastName, phone, address } = this.state;
 
-    return (
-      <div className='RegisterForm'>
-        <div className='card'>
-          <div className='card-body'>
-            <form className='LoginForm' onSubmit={this.handleSubmit}>
-              <div className='input-group mb-3'>
-                <div className="input-group-prepend">
-                  <span className="input-group-text">@</span>
+    return (<div className="row">
+      <div className="col-sm-3"></div>
+      <div className="col-sm-6 form">
+        <div className="card">
+          <div className="card-body">
+            <h2 className="card-title text-success">Create an Account with GreenSpace</h2>
+            <br />
+            <form onSubmit={this.handleSubmit}>
+              <div className="row">
+                <div className="col-6">
+                  <input
+                    className='form-control'
+                    id='firstName'
+                    type='text'
+                    name='firstName'
+                    placeholder='First Name'
+                    value={firstName}
+                    onChange={this.handleInputChange}
+                  />
                 </div>
+                <div className="col-6">
+                  <input
+                    className="form-control"
+                    id='lastName'
+                    type='text'
+                    name='lastName'
+                    placeholder="Last Name"
+                    value={lastName}
+                    onChange={this.handleInputChange} />
+                </div>
+              </div>
+              <br />
+              <div className="row">
+                <div className="col-6">
+                  <input
+                    className="form-control"
+                    id='address'
+                    type='text'
+                    name='address'
+                    placeholder="Address"
+                    value={address}
+                    onChange={this.handleInputChange} />
+                </div>
+                <div className="col-6">
+                  <input
+                    className="form-control"
+                    id='phone'
+                    type='text'
+                    name='phone'
+                    placeholder="Phone Number"
+                    value={phone}
+                    onChange={this.handleInputChange} />
+                </div>
+              </div>
+              <br />
+              <div className="form-group text-left">
+                <label form="email">Email</label>
                 <input
-                  className='form-control'
+                  className="form-control"
                   id='email'
-                  type='email'
+                  type="email"
                   name='email'
-                  placeholder='email@provider.com'
+                  aria-describedby="emailHelp"
+                  placeholder="Email@provider.com"
                   value={email}
-                  onChange={this.handleInputChange}
-                />
+                  onChange={this.handleInputChange} />
               </div>
-
-              <div className='input-group mb-3'>
-                <div className="input-group-prepend">
-                  <span className="input-group-text">a3b</span>
-                </div>
+              <div className="form-group text-left">
+                <label form="password">Password</label>
                 <input
-                  className='form-control'
+                  className="form-control"
                   id='password'
-                  type='password'
+                  type="password"
                   name='password'
-                  placeholder='password'
+                  placeholder="Password"
                   value={password}
-                  onChange={this.handleInputChange}
-                />
+                  onChange={this.handleInputChange} />
               </div>
-
-              <button className='btn btn-primary' type='submit'>Register</button>
+              <button type="submit" className="btn btn-success float-left">Join!</button>
             </form>
           </div>
         </div>
       </div>
-    )
+      <div className="col-sm-3"></div>
+    </div>
+    );
   }
 }
 
