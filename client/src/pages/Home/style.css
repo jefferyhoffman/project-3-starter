@@ -1,51 +1,16 @@
 body{
   background-image: url("../../cssPages/images/createacclawn.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
 }
   #form{
     background-color: white;
     color: black;
-    /* width: 60%;
-    height: 600px; 
-    align: center; */
   }
 
-
 /* 
-p{
-  text-align: center;
-  color: rgb(116, 206, 106);
-  font-size: 40px
-}
-
-i{
-  color: darkgreen;
-}
-
-.submit{
-  align-self: auto;
-  padding: 10px;
-}
-
-.btn{
-  background-color: grey !important;
-  width: 100px;
-}
-
-h4{
-  text-align: right;
-  padding-right: 20px;
-  color: white;
-}
-
-
-nav{
-background-color: rgba(255, 255, 255, 0) !important;
-box-shadow: none!important;
-}
-
-
-
 @media screen and (max-width: 980px){
   .card{
       margin-left: 100px;
@@ -71,4 +36,4 @@ box-shadow: none!important;
      width: 50%;
   }
   
-} */
+}  */

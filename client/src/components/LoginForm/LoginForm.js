@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../LoginForm/style.css';
 
 class LoginForm extends Component {
   state = {
@@ -26,8 +27,8 @@ class LoginForm extends Component {
 
     return (
       <div className="row">
-      <div className="col-3"></div>
-      <div className="col-6 LoginForm">
+      <div className="col-sm-3"></div>
+      <div className="col-sm-6 LoginForm">
         <div className="card">
           <h2 className="mt-3 text-success">Login</h2>
           <div className="card-body">
@@ -45,8 +46,7 @@ class LoginForm extends Component {
                   value={email}
                   onChange={this.handleInputChange}
                 />
-              </div>
-      
+              </div>   
               <div className='input-group mb-3'>
                 <div className="input-group-prepend">
                   <span className="input-group-text">Password</span>
@@ -61,7 +61,6 @@ class LoginForm extends Component {
                   onChange={this.handleInputChange}
                 />
               </div>
-      
               <button className='btn btn-success float-left' type='submit'>Submit</button>
             </form>
           </div>
