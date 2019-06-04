@@ -79,7 +79,7 @@ class Services extends Component {
                                     <strong>$350</strong>
                                 </span>
                             </h4>
-                            Premium Maintance Package<i className="fas fa-angle-down rotate-icon"></i>
+                            Premium Maintenance Package<i className="fas fa-angle-down rotate-icon"></i>
                         </h5>
                     </a>
                 </div>
@@ -113,7 +113,7 @@ class Services extends Component {
                                 <strong>$200</strong>
                             </span>
                         </h4>
-                        Upgraded Maintance Package <i className="fas fa-angle-down rotate-icon"></i>
+                        Upgraded Maintenance Package <i className="fas fa-angle-down rotate-icon"></i>
                     </h5>
                 </div>
 
@@ -141,7 +141,7 @@ class Services extends Component {
                     <span className="green-text">
                         <strong>$100</strong>
                     </span>
-                    Standard Maintance Package<i className="fas fa-angle-down rotate-icon"></i>
+                    Standard Maintenance Package<i className="fas fa-angle-down rotate-icon"></i>
                 </div>
 
 
@@ -152,7 +152,7 @@ class Services extends Component {
                             <input className="form-check-input" name="group1" type="checkbox" id="radio-579"
                                 value="option10" />
                             <label className="form-check-label" for="radio-579"></label>
-                            Just need the basics covered? We've got you with our standard maintance package. This covers
+                            Just need the basics covered? We've got you with our standard maintenance package. This covers
                             mowing, tree/hedge trimming and weed prevention treatments.
                                     </div>
                     </div>
