@@ -4,6 +4,7 @@ import API from '../../lib/API';
 import TokenStore from '../../lib/TokenStore';
 import AuthContext from '../../contexts/AuthContext';
 import Navigation from '../../components/Navigation/Navigation';
+import Collections from '../../pages/Collections/Collections'
 import Footer from "../../components/Footer/Footer.js";
 import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
 import Login from '../../pages/Login/Login';
@@ -58,6 +59,7 @@ class App extends Component {
               <Route path='/login' component={Login} />
               <PrivateRoute path='/secret' component={Secret} />
               <Route exact path='/' component={Home} />
+              <Route exact path='/collections' component={Collections} />
               <Route component={NotFound} />
             
               {/* <Route path="/admin/" exact component={Home} />

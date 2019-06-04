@@ -3,7 +3,7 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('Secrets', [{
-      message: 'The clock rings twice on midnight when the moon is full.',
+      message: 'Are you sure this is what you want!',
       createdAt: new Date(),
       updatedAt: new Date()
     }], {});
