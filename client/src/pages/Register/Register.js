@@ -57,11 +57,7 @@ class Register extends Component {
             </div>
             <div className='col-sm-3'></div>
           </div>}
-        <div className='row'>
-          <div className='col'>
-            <RegisterForm onSubmit={this.handleSubmit}/>
-          </div>
-        </div>
+        
       </div>
     );
   }
