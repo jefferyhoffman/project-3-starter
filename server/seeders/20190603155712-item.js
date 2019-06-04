@@ -11,7 +11,7 @@ module.exports = {
         price: 18000,
         quantity: 4,
         brand: 'STORM',
-        img: './client/src/pages/Home/id-01.png',
+        img: './client/src/pages/Home/id-01.jpg',
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -20,7 +20,7 @@ module.exports = {
         price: 19000,
         quantity: 15,
         brand: 'STORM',
-        img: './client/src/pages/Home/id-02.png',
+        img: './client/src/pages/Home/id-02.jpg',
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -29,7 +29,7 @@ module.exports = {
         price: 15000,
         quantity: 6,
         brand: 'STORM',
-        img: './client/src/pages/Home/id-03.png',
+        img: './client/src/pages/Home/id-03.jpg',
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -38,7 +38,7 @@ module.exports = {
         price: 11000,
         quantity: 15,
         brand: 'STORM',
-        img: './client/src/pages/Home/id-04.png',
+        img: './client/src/pages/Home/id-04.jpg',
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -47,7 +47,7 @@ module.exports = {
         price: 38000,
         quantity: 2,
         brand: 'STORM',
-        img: './client/src/pages/Home/id-05.png',
+        img: './client/src/pages/Home/id-05.jpg',
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -56,7 +56,7 @@ module.exports = {
         price: 22000,
         quantity: 10,
         brand: 'STORM',
-        img: './client/src/pages/Home/id-06.png',
+        img: './client/src/pages/Home/id-06.jpg',
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -65,7 +65,7 @@ module.exports = {
         price: 22000,
         quantity: 10,
         brand: 'STORM',
-        img: './client/src/pages/Home/id-07.png',
+        img: './client/src/pages/Home/id-07.jpg',
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -74,7 +74,7 @@ module.exports = {
         price: 55000,
         quantity: 3,
         brand: 'STORM',
-        img: './client/src/pages/Home/id-08.png',
+        img: './client/src/pages/Home/id-08.jpg',
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -83,7 +83,7 @@ module.exports = {
         price: 14000,
         quantity: 15,
         brand: 'STORM',
-        img: './client/src/pages/Home/id-09.png',
+        img: './client/src/pages/Home/id-09.jpg',
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -92,7 +92,7 @@ module.exports = {
         price: 12000,
         quantity: 15,
         brand: 'STORM',
-        img: './client/src/pages/Home/id-10.png',
+        img: './client/src/pages/Home/id-10.jpg',
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -101,7 +101,7 @@ module.exports = {
         price: 68000,
         quantity: 2,
         brand: 'STORM',
-        img: './client/src/pages/Home/id-11.png',
+        img: './client/src/pages/Home/id-11.jpg',
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -110,7 +110,7 @@ module.exports = {
         price: 28000,
         quantity: 13,
         brand: 'STORM',
-        img: './client/src/pages/Home/id-12.png',
+        img: './client/src/pages/Home/id-12.jpg',
         createdAt: new Date(),
         updatedAt: new Date()
       }], {});
