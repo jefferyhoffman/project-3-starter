@@ -19,6 +19,7 @@
     "nodemon": "^1.19.1"
   },
   "dependencies": {
+    "dotenv": "^8.0.0",
     "unirest": "^0.6.0"
   }
 }
