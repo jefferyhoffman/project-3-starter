@@ -37,16 +37,16 @@ class Navigation extends Component {
                 <Link className='nav-link' to='/' onClick={this.toggleCollapse}>Home</Link>
               </li>
               <li className='nav-item'>
-                <Link className='nav-link' to='/drink' onClick={this.toggleCollapse}>Drink</Link>
+                <Link className='nav-link' to='/mydrinks' onClick={this.toggleCollapse}>Drink</Link>
               </li>
               <li className='nav-item'>
-                <Link className='nav-link' to='/add' onClick={this.toggleCollapse}>Add</Link>
+                <Link className='nav-link' to='/create' onClick={this.toggleCollapse}>Create</Link>
               </li>
               <li className='nav-item'>
                 <Link className='nav-link' to='/search' onClick={this.toggleCollapse}>Search</Link>
               </li>
               <li className='nav-item'>
-                <Link className='nav-link' to='/about' onClick={this.toggleCollapse}>About</Link>
+                <Link className='nav-link' to='/view' onClick={this.toggleCollapse}>View</Link>
               </li>
               <li className='nav-item'>
                 <Link className='nav-link' to='/portfolio' onClick={this.toggleCollapse}>Portfolio</Link>

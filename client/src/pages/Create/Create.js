@@ -4,7 +4,7 @@ import { Input, TextArea, FormBtn } from "../../components/Form";
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
 
-class Add extends Component {
+class Create extends Component {
 static contextType = AuthContext;
 
   state = {
@@ -39,6 +39,7 @@ static contextType = AuthContext;
   render() {
     console.log(this.context)
     let { authToken } = this.context
+    let { id } = this.context
     
     if (this.state.isComplete) {
       return <Redirect to="/" />;
@@ -59,4 +60,4 @@ static contextType = AuthContext;
   }
 }
 
-export default Add;
+export default Create;
