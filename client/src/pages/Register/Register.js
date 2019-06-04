@@ -13,8 +13,9 @@ class Register extends Component {
     error: ""
   }
 
-  handleSubmit = (email, password) => {
-    API.Users.register(email, password)
+  handleSubmit = (email, password, firstName, lastName, phone, address) => {
+    console.log(email, password, firstName, lastName, phone, address);
+    API.Users.register(email, password, firstName, lastName, phone, address)
       .then(response => {
           this.setState({ redirectToReferrer: true })
       })
@@ -28,6 +29,7 @@ class Register extends Component {
   render() {
     const { from } = this.props.location.state || { from: { pathname: "/login" } };
     const { redirectToReferrer } = this.state;
+    console.log(this.props);
 
     if (redirectToReferrer) {
       return <Redirect to={from} />;
@@ -55,6 +57,11 @@ class Register extends Component {
             </div>
             <div className='col-sm-3'></div>
           </div>}
+        <div className='row'>
+          <div className='col'>
+            <RegisterForm onSubmit={this.handleSubmit}/>
+          </div>
+        </div>
       </div>
     );
   }
