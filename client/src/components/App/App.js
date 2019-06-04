@@ -13,6 +13,7 @@ import Home from '../../pages/Home/Home';
 import Scheduling from '../../pages/Scheduling/Scheduling';
 import NotFound from '../../pages/NotFound/NotFound';
 import Checkout from '../../pages/Checkout/Checkout';
+import ClientHome from '../../pages/ClientHome/ClientHome';
 
 import './App.css';
 
@@ -61,6 +62,7 @@ class App extends Component {
               <Route path='/register' component={Register} />
               <PrivateRoute path='/secret' component={Secret} />
               <Route exact path='/Scheduling' component={Scheduling} />
+              <Route exact path='/ClientHome' component={ClientHome} />
               <Route exact path='/Checkout' component={Checkout} />
               <Route exact path='/' component={Home} />
               <Route component={NotFound} />
