@@ -1,7 +1,7 @@
 import React from "react";
 
-function watchWrapper(props) {
+function Wrapper(props) {
   return <div className="wrapper">{props.children}</div>;
 }
 
-export default watchWrapper;
+export default Wrapper;
