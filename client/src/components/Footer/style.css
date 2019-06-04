@@ -17,3 +17,6 @@ button {
     z-index: 2;
     height: 100px;
 }
+.container-fluid {
+    margin: 0 !important;
+}

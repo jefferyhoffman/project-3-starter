@@ -15,6 +15,7 @@ import id07 from "./id-07.png";
 import "./style.css";
 // import WatchWrapper from "../../components/Products/WatchWrapper";
 // import WatchCard from '../../components/Products/watch';
+import watchVid from "./vidBg.mp4"
 
 // const watchImgs = require("../../../public/images");
 
@@ -37,17 +38,19 @@ class HomePage extends Component {
     return (
       <div className="container-fluid">
         <div className="row" id="row1">
-
+        <video autoPlay muted loop id="videoBg" src={watchVid} type="video/mp4"></video>
+          <div class="text-overlay">KOSCOWIX</div>
         </div>
         <div className="row" id="row2">
           <div className="col-6" id="row2sec1">
-            <h1 className="card-text">STORM Kong-X</h1>
-            <img src={id01} className="productImage card-text" alt="product-1"/>
-            <p className="card-text">The STORM Kong-X watch is a small thin strapped watch that is an effortlessly stylish addition to any wardrobe.
-            Made from stainless steel this watch combines modern design with the latest trends with its multi-strap of both bangle and mesh.
-                Due to its small nature this is the perfect watch to stack with a statement bracelet. Water resistant to 50m.</p>
-            <a href="/" className="btn btn-light card-text">Add to Shopping Cart</a></div>
-      </div>
+                <h1 className="card-text">STORM Kong-X</h1>
+                <img src={id01} className="productImage card-text" alt="product-1"/>
+                <p className="card-text">The STORM Kong-X watch is a small thin strapped watch that is an effortlessly stylish addition to any wardrobe.
+                Made from stainless steel this watch combines modern design with the latest trends with its multi-strap of both bangle and mesh.
+                    Due to its small nature this is the perfect watch to stack with a statement bracelet. Water resistant to 50m.</p>
+                <a href="/" className="btn btn-light card-text">Add to Shopping Cart</a>
+            </div>
+    
 
       <div className="col-6" id="row2sec2">
         <h1 className="card-text">STORM Donferg</h1>
@@ -57,6 +60,7 @@ class HomePage extends Component {
                 It’s unique vertical spinning disc also carry ‘animation mode’, allowing wearers to show of the unique spinning function of the watch to friends!</p>
         <a href="/" className="btn btn-light">Add to Shopping Cart</a>
       </div>
+    </div>
 
       <div className="row" id="row3">
         <div className="col-4" id="row3sec1">
