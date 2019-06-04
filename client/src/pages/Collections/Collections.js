@@ -5,67 +5,51 @@ import React, { Component } from 'react';
 // import WatchCard from '../../components/Products/watch';
 // import watchVid from "./vidBg.mp4";
 import API from "../../utils/API";
+import Title from "../../components/Products/Title"
+import Wrapper from "../../components/Products/Wrapper"
+import Products from "../../components/Products/Products"
 
 
 class Collections extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      counter: 0
-    }
-  }
+
+  state = {
+    items: []
+  };
 
   componentDidMount() {
     this.loadItems();
-  }
+  };
 
   loadItems = () => {
     API.getItems()
-    .then(res => this.setState({ items: res.data}))
-    .catch(err => console.log(err))
-  }
+      .then(res => {
+        this.setState({ items: res.data })
+        console.log(res.data)
+      })
+
+      .catch(err => console.log(err))
+  };
+
 
   render() {
+    console.log(this.state)
     return (
-      <div className="container-fluid">
-        <div className="row" id="row1">
-          {/* <video autoPlay muted loop id="videoBg" src={watchVid} type="video/mp4"></video> */}
-          <div class="text-overlay">Collections</div>
-        </div>
-        <div className="row" id="row2">
-          <div className="col-4" id="row2sec1">
-            TEST
-            </div>
-          <div className="col-4" id="row2sec2">
+      <Wrapper>
+        <Title>Watch List</Title>
 
-          </div>
-          <div className="col-4" id="row2sec3">
-            LETS SEE
-            </div>
-        </div>
-        <div className="row" id="row3">
-          <div className="col-4" id="row3sec1">
-
-          </div>
-          <div className="col-4" id="row3sec2">
-
-          </div>
-          <div className="col-4" id="row3sec3">
-
-          </div>
-        </div>
-        <div className="row" id="row4">
-          <div className="col-6" id="row4sec1">
-
-          </div>
-          <div className="col-6" id="row4sec2">
-
-          </div>
-        </div>
-
-      </div>
-
-
+        {this.state.items.map(item => (
+          
+          <Products
+            id={item.id}
+            key={item.id}
+            name={item.name}
+            image={require('../Home/id-08.jpg')}  
+            brand={item.brand}
+            price={item.price}
+          />
+        ))
+        }
+      </Wrapper>
     );
   }
 }
