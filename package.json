@@ -19,7 +19,6 @@
     "nodemon": "^1.18.10"
   },
   "dependencies": {
-    "react-bootstrap4-modal": "^1.7.1",
-    "sequelize": "^5.8.7"
+    "react-bootstrap4-modal": "^1.7.1"
   }
 }

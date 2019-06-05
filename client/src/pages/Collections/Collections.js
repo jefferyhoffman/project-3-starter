@@ -1,84 +1,65 @@
 import React, { Component } from 'react';
 // import { Button } from 'reactstrap';
-import "./Collections.css";
+// import "./Collections.css";
 // import WatchCard from '../../components/Products/watch';
-import watchVid from "../Home/vidBg.mp4";
+// import watchVid from "../Home/vidBg.mp4";
 
 // import "./collections.css";
 // import "./style.css";
 // import WatchCard from '../../components/Products/watch';
 
 import API from "../../utils/API";
+import Title from "../../components/Products/Title"
+import Wrapper from "../../components/Products/Wrapper"
+import Products from "../../components/Products/Products"
+
 
 
 class Collections extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      counter: 0
-    }
-  }
+
+  state = {
+    items: []
+  };
 
   componentDidMount() {
     this.loadItems();
-  }
+  };
 
   loadItems = () => {
     API.getItems()
-    .then(res => this.setState({ items: res.data}))
-    .catch(err => console.log(err))
-  }
+      .then(res => {
+        this.setState({ items: res.data })
+        console.log(res.data)
+      })
 
-  render() {
-    return (
-      <div className="container-fluid">
-        <div className="row" id="row1-c">
-          <video autoPlay muted loop id="videoBg" src={watchVid} type="video/mp4"></video>
-          <div class="text-overlay">KOSCOWIX</div>
-          <p className="p-title">Collections</p>
-        </div>
-        <div className="row" id="row2">
-          <div className="col-4" id="row2sec1">
-            TEST
-          </div>
-          <div className="col-4" id="row2sec2">
-
-          </div>
-          <div className="col-4" id="row2sec3">
-            LETS SEE
-          </div>
-        </div>
-        <div className="row" id="row3">
-          <div className="col-4" id="row3sec1">
-
-          </div>
-          <div className="col-4" id="row3sec2">
-
-          </div>
-          <div className="col-4" id="row3sec3">
-
-          </div>
-        </div>
-        <div className="row" id="row4">
-            <div className="col-4" id="row4sec1">
-
-            </div>
-            <div className="col-4" id="row4sec2">
-
-            </div>
-            <div className="col-4" id="row4sec3">
-        </div>
-        
-       
-
-        </div>
-      </div>
+      .catch(err => console.log(err))
+  };
 
  
    
       
 
 
+  render() {
+    console.log(this.state)
+    return (
+      <Wrapper>
+        <Title>Watch List</Title>
+
+        {this.state.items.map(item => (
+          
+          <Products
+            id={item.id}
+            key={item.id}
+            name={item.name}
+            image={require('../Home/id-01.png')} 
+            brand={item.brand}
+            price={item.price}
+           
+          />
+        ))
+        }
+      </Wrapper>
     );
   }
 }

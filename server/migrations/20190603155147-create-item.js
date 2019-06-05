@@ -23,6 +23,48 @@ module.exports = {
       img: {
         type: Sequelize.TEXT
       },
+      description: {
+        type: Sequelize.TEXT
+      },
+      movement: {
+        type: Sequelize.STRING
+      },
+      features: {
+        type: Sequelize.STRING
+      },
+      caseMat: {
+        type: Sequelize.STRING
+      },     
+       caseSize: {
+        type: Sequelize.STRING
+      },
+      caseHeight: {
+        type: Sequelize.STRING
+      },
+      waterRes: {
+        type: Sequelize.STRING
+      },
+      lensMaterial: {
+        type: Sequelize.STRING
+      },
+      caseBack: {
+        type: Sequelize.STRING
+      },
+      crown: {
+        type: Sequelize.STRING
+      },
+      bandType: {
+        type: Sequelize.STRING
+      },
+      fittingSize: {
+        type: Sequelize.STRING
+      },
+      claspType: {
+        type: Sequelize.STRING
+      },
+      weight: {
+        type: Sequelize.STRING
+      },
       //unsure if these are needed
       createdAt: {
         allowNull: false,
