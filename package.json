@@ -19,6 +19,8 @@
     "nodemon": "^1.19.1"
   },
   "dependencies": {
+    "@material-ui/core": "^4.0.2",
+    "@material-ui/icons": "^4.0.1",
     "dotenv": "^8.0.0",
     "unirest": "^0.6.0"
   }
