@@ -7,7 +7,7 @@ class PaymentInfo extends Component {
 
     render() {
         return (<div className="row">
-            <div className="col-sm-6">
+            <div className="col-sm-5">
                 <div className="card">
                     <div className="card-body">
                         <h2 className="card-title">Checkout</h2>
@@ -61,17 +61,17 @@ class PaymentInfo extends Component {
                 </div>
             </div>
 
-            <div className="col-sm-6">
+            <div className="col-sm-5">
                 <div className="card">
                     <div className="card-body">
                         <h2 className="card-title">Payment</h2>
-                        <label for="fname">Accepted Cards</label>
+                        {/* <label for="fname">Accepted Cards</label>
                         <div className="icon-container">
                             <i className="fa fa-cc-visa"></i>
                             <i className="fa fa-cc-amex" ></i>
                             <i className="fa fa-cc-mastercard" ></i>
                             <i className="fa fa-cc-discover" ></i>
-                        </div>
+                        </div> */}
                         <label for="cname">Name on Card</label>
                         <input type="text" id="cname" name="cardname" placeholder="John More Doe" />
                         <label for="ccnum">Credit Card Number</label>
@@ -87,19 +87,20 @@ class PaymentInfo extends Component {
                                 <label for="cvv">CVV</label>
                                 <input type="text" id="cvv" name="cvv" placeholder="352" />
                             </div>
+                            {/* <label>
+                                <input type="checkbox" checked="checked" name="sameadr" /> Shipping Address Same as Billing
+                            </label> */}
+                            <input type="submit" value="Confirm and Pay Now" class="btn" />
+                            {/* <input type="submit" value="Keep Shopping" class="btn" id="keepshopping" /> */}
                         </div>
                     </div>
                 </div>
             </div>
-            <label>
-                <input type="checkbox" checked="checked" name="sameadr" /> Shipping Address Same as Billing
-                            </label>
-            <input type="submit" value="Checkout" class="btn" />
-            <input type="submit" value="Keep Shopping" class="btn" id="keepshopping" />
+
         </div>
         )
     }
 }
 
 
-    export default PaymentInfo;
+export default PaymentInfo;
