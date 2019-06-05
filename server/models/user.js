@@ -9,13 +9,17 @@ module.exports = (sequelize, DataTypes) => {
     password: DataTypes.STRING
   }, {});
 
-  User.associate = function (models) {
-    // associations can be defined here
-  };
-
   User.prototype.comparePassword = function (challenge) {
     return this.password === challenge;
   }
+
+  User.associate = function (models) {
+    User.belongsToMany(models.Book, {
+      through: models.BookUser,
+      as: 'books',
+      foreignKey: 'userId'
+    });
+  };
 
   return User;
 };
