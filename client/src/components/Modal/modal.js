@@ -255,7 +255,6 @@ class Modal extends Component {
                             <label className="form-check-label" for="radio-179">Core Aeration</label>
                         </div>
 
-<<<<<<< HEAD
                 <p className="text-center">
                     <strong>Add On Additional Services</strong>
                 </p>
@@ -273,13 +272,6 @@ class Modal extends Component {
                                     value="option5" />
                                 <label className="form-check-label" for="radio-279">Reseeding-fescue and Bermuda </label>
                             </div>
-=======
-                        <div className="form-check mb-4">
-                            <input className="form-check-input" name="reseeding" type="checkbox" id="radio-279"
-                                value="option5" onChange={this.handleInputChange} />
-                            <label className="form-check-label" for="radio-279">Reseeding: Fescue and Bermuda</label>
-                        </div>
->>>>>>> 2443d7ca95fdba8f29af05caca1ff29ff94a19b6
 
                         <div className="form-check mb-4">
                             <input className="form-check-input" name="trimming" type="checkbox" id="radio-379"
