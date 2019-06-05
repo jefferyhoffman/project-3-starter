@@ -10,10 +10,10 @@ import Login from '../../pages/Login/Login';
 import Register from '../../pages/Register/Register';
 import Secret from '../../pages/Secret/Secret';
 import Home from '../../pages/Home/Home';
-import About from '../../pages/About/About';
+import View from '../../pages/View/View';
 import Portfolio from '../../pages/Portfolio/Portfolio';
-import Drink from '../../pages/Drink/Drink';
-import Add from '../../pages/Add/Add';
+import MyDrinks from '../../pages/MyDrinks/MyDrinks';
+import Create from '../../pages/Create/Create';
 import Search from '../../pages/Search/Search';
 import NotFound from '../../pages/NotFound/NotFound';
 
@@ -67,10 +67,10 @@ class App extends Component {
               <Route path='/register' component={Register} />
               <PrivateRoute path='/secret' component={Secret} />
               <Route exact path='/' component={Home} />
-              <Route exact path='/about' component={About} />
+              <Route exact path='/view' component={View} />
               <PrivateRoute exact path='/portfolio' component={Portfolio} />
-              <PrivateRoute exact path='/drink' component={Drink} />
-              <PrivateRoute exact path='/add' props={authToken} component={Add} />
+              <PrivateRoute exact path='/mydrinks' component={MyDrinks} />
+              <PrivateRoute exact path='/create' props={authToken} component={Create} />
               <Route exact path='/search' component={Search} />
               <Route component={NotFound} />
             </Switch>

@@ -3,7 +3,7 @@ const db = require('../../models')
 
 const { JWTVerifier } = require('../../lib/passport');
 
-drinksController.get('/', JWTVerifier, (req, res) => {
+drinksController.get('/', (req, res) => {
   db.Drinks
   .find(req.query)
   .then(dbModel => {
@@ -11,6 +11,17 @@ drinksController.get('/', JWTVerifier, (req, res) => {
     res.json(dbModel)})
   .catch(err => res.status(422).json(err));
 });
+
+drinksController.get('/mine', JWTVerifier, (req, res) => {
+  db.Drinks.find({ _id: req.user._id })
+  // .find(req.query)
+  .then(dbModel => {
+    console.log(dbModel)
+    res.json(dbModel)})
+  .catch(err => res.status(422).json(err));
+});
+
+
 
 drinksController.post('/', JWTVerifier, (req, res) => {
   db.Drinks
