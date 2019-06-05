@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+// import { Redirect } from 'react-router-dom';
 // import checkout from "../../"
 // import ReactDOM from "react-dom";
 // import './Services.css';
@@ -70,6 +71,13 @@ class Modal extends Component {
 
     }
     render() {
+        //better for rendering data??
+        // const { from } = this.props.location.state || { from: { pathname: "/checkout" } };
+        // const { redirectToReferrer } = this.state;
+
+        // if (redirectToReferrer) {
+        //     return <Redirect to={from} />;
+        // }
         return (
             <div className="App">
 
