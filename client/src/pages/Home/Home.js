@@ -5,7 +5,8 @@ import id02 from "./id-02.png";
 import id03 from "./id-03.png";
 import id04 from "./id-04.png";
 import id05 from "./id-05.png";
-import gif from "./product.gif";
+import gif from "./productGIF.gif";
+import img from "./productIMG.jpg";
 import "./style.css";
 // import WatchWrapper from "../../components/Products/WatchWrapper";
 // import WatchCard from '../../components/Products/watch';
@@ -96,7 +97,7 @@ class HomePage extends Component {
           <img src={gif} className="productGIF" alt="product-GIF" />
           </div>
           <div className="col-6" id="row4sec2">
-           
+          <img src={img} className="productIMG" alt="product-IMG" />
           </div>
       </div></div>
         );
