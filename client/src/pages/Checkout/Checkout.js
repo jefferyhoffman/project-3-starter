@@ -3,7 +3,7 @@ import PaymentInfo from "../../components/PaymentInfo/PaymentInfo"
 import "./Checkout.css"
 import { StripeProvider } from 'react-stripe-elements';
 // import API from "../../lib/API";
-import myStoreCheckout from './myStoreCheckout';
+import MyStoreCheckout from './MyStoreCheckout';
 
 
 const CheckoutList = (props) => {
@@ -45,7 +45,7 @@ class Checkout extends Component {
         return (
             <div>
                 <StripeProvider apiKey="k_test_XnGjYTSLwoIxJVpB5iIDHyXZ00Q9tfKq2U">
-                    <myStoreCheckout />
+                    <MyStoreCheckout />
                 </StripeProvider>
                 {/* <CheckoutList products={this.state.products} */}
                 {/* /> */}
