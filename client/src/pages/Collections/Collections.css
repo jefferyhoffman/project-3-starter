@@ -1,11 +1,21 @@
-#row1-c {
+#row1Collection {
     background: rgb(33, 33, 33);
 }
 
 .p-title {
     color: white;
     position: absolute;
-    left: 42%;
+    left: 40%;
     top: 75%;
     font-size: 50px;
+    letter-spacing: 4px !important;
 }
+
+div.wrapper {
+    background: rgb(176, 176, 176);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    padding: 40px 0 60px 3px;
+    justify-content: center;
+}
+

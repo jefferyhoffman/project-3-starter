@@ -35,14 +35,15 @@ body {
 .row {
     height: 680px;
     padding: 0;
+    margin: 0;
 }
 
 video {
    height: 800px;
    position: absolute;
-   width: 101%;
+   width: 100%;
    bottom: 240px;
-   left: 1px;
+   left: 0;
 }
 .text-overlay {
     z-index: 1;
@@ -127,17 +128,26 @@ video {
 }
 .content {
     /* width: 60%; */
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 img {
     margin: 20px;
+    width: 300px;
+    height: 300px;
 }
 
 .productImage {
     height: 300px;
     width: 200px;
     text-align: center;
+}
+.productIMG {
+    margin-top: 140px;
+    top: 150px;
+    text-align: center;
+    height: 450px;
+    width: 550px;
 }
 
 .productGIF {
@@ -147,11 +157,75 @@ img {
     height: 400px;
     width: 300px;
 }
+p.card-text {
+    font-size: 14px;
+    margin: 10px 20px 20px 20px;
+    line-height: 25px;
+}
 
-.productIMG {
-    margin-top: 140px;
-    top: 150px;
+/* Product Page */
+
+.contentProduct {
+    height: 100px;
+    color: rgb(97, 97, 97);
+    position: relative;
+    top: 12px;
     text-align: center;
-    height: 450px;
-    width: 550px;
+}
+ul {
+    font-size: 14px;
+    list-style: none;
+    margin: 0 20px;
+    padding: 0;
+}
+li#liProducts {
+    line-height: 25px;
+    letter-spacing: 2px;
+    font-size: 12px;
+    
+}
+div.img-container {
+    width: auto;
+    background: white !important;
+}
+.card > .img-container > img {
+    width: 50% !important;
+}
+.card > .img-container {
+    height: 68% !important;
+    overflow: hidden;
+    text-align: center;
+    background: #6CADDC;
+}
+#watchList {
+    height: 300px;
+    width: 200px;
+}
+.card {
+    height: 460px !important;
+    background: rgb(255, 255, 255);
+    width: 400px !important;
+    text-align: center;
+}
+strong {
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0;
+}
+
+hr {
+    width: 80%;
+    position: relative;
+    left: 10%;
+    top: 15px;
+}
+
+i {
+    margin-top: 10px;
+    color: rgb(113, 113, 113);
+    cursor: pointer;
+}
+i:hover {
+    color: rgb(249, 228, 6);
+    font-size: 35px;
 }

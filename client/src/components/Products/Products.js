@@ -3,28 +3,27 @@ import "./style.css"
 
 function ProductCard(props) {
   return (
+    
     <div className="card">
       <div className="img-container">
-        <img src={props.item.image} alt={props.item.name}/>
+        <img id="watchList" src={props.item.image} alt={props.item.name}/>
       </div>
-      <div className="content">
+      <hr />
+      <div className="contentProduct">
         <ul>
-          <li>
-            <strong>Name:</strong> {props.item.name}
+          <li id="liProducts">
+            <strong>{props.item.brand} {props.item.name} {props.item.image}</strong> 
           </li>
-          <li>
-            <strong>Brand:</strong> {props.item.brand}
+          <li id="liProducts">
+            ${props.item.price}
           </li>
-          <li>
-            <strong>Price:</strong> {"$" + props.item.price}
-          </li>
-          {/* <li>
-            <strong>Quantity:</strong> {props.item.quantity}
-          </li> */}
+         
         </ul>
-        <h1 onClick={() => props.addToCart(props.item)}>Buy Me</h1>
+        <h1 onClick={() => props.addToCart(props.item)}> <i className="fas fa-shopping-cart fa-2x"></i></h1>
       </div>
     </div>
+    
+  
   );
 }
 

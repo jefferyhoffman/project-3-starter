@@ -93,7 +93,7 @@ class App extends Component {
               <PrivateRoute path='/secret' component={Secret} />
               <Route exact path='/' component={Home} />
               <Route exact path='/collections' component={(props) => <Collections {...props} addToCart={this.addToCart} />}/>
-              <Route exact path='/cart' component={(props) => <shoppingCart {...props} checkout={this.props.addToCart}/>} />
+              <Route exact path='/cart' component={Checkout} />
               <Route component={NotFound} />
             
               {/* <Route path="/admin/" exact component={Home} />

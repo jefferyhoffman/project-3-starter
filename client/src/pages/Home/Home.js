@@ -99,10 +99,12 @@ class HomePage extends Component {
         </div>
         <div className="row" id="row4">
           <div className="col-6" id="row4sec1">
-          <img src={gif} className="productGIF" alt="product-GIF" />
+          <div className="content"><img src={gif} className="productGIF" alt="product-GIF" /></div>
+          
           </div>
           <div className="col-6" id="row4sec2">
-          <img src={img} className="productIMG" alt="product-IMG" />
+          <div className="content"><img src={img} className="productIMG" alt="product-IMG" /></div>
+          
           </div>
       </div></div>
         );

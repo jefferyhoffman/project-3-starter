@@ -46,7 +46,7 @@ class Footer extends Component {
               </div>
               
           </div>
-          <hr />
+          <hr id="hrFooter" />
           <footer>© 2019 Koscoswix U.S. <br /> All right reserved
           </footer>
       </div>
