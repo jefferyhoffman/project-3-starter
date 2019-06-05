@@ -22,20 +22,40 @@
 		margin: auto; 
 	}
 
+	.react-calendar__tile--active{
+		background: #4caf50;
+	}
+
+	.react-calendar__navigation__label{
+	font-weight: 800;
+	font-size: 34px;
+	}
+
+	.md-form textarea.md-textarea {
+		padding: 4rem;
+	}
   
   /* Modal Content/Box */
   .modal-content {
 	background-color: #fefefe;
 	margin: 30% auto; /* 15% from the top and centered */
-	padding: 12px 20px;
+	padding: 15px;
 	border: 1px solid #888;
 	width: 80%; /* Could be more or less, depending on screen size */
 	}
+
+	.modal-dialog.modal-notify.modal-info .modal-header {
+		background-color: #4caf50;
+	}
 	
+	.modal-dialog.modal-notify .heading {
+		font-weight: 800;
+		font-size: 22px;
+		text-align: center;
+	}
   
   /* The Close Button */
   .close {
-	color: #aaa;
 	float: right;
 	font-size: 28px;
 	font-weight: bold;
