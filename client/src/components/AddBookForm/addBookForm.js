@@ -1,26 +1,15 @@
 import React, { Component } from 'react';
 
-class addBookForm extends Component {
+class AddBookForm extends Component {
     state = {
         title: '',
-        yourTitle: '',
         author: '',
-        favorite: '',
-        series: '',
-        readingOrder: '',
-        genre: '',
         imageUrl: '',
-        isbn: '',
-        haveRead: '',
-        timesRead: '',
-        own: '',
-        want: '',
+        series: '',
         synopsis: '',
-        comments: ''
     };
 
-
-    handleInput = event => {
+    handleInputChange = event => {
         const { name, value } = event.target;
 
         this.setState ({
@@ -29,20 +18,101 @@ class addBookForm extends Component {
     }
 
     handleAddBook = event => {
-        const { title, yourTitle, author, favorite, series, readingOrder, genre, imageUrl, isbn, haveRead, timesRead, own, want, synopsis, comments } = this.state;
-        const newState = {...state}
+        // const { title, author, imageUrl, series, synopsis } = this.state;
+        // const newState = {...state}
 
-        this.props.onAdd(title, yourTitle, author, favorite, series, readingOrder, genre, imageUrl, isbn, haveRead, timesRead, own, want, synopsis, comments);
+        this.props.onAdd(title, author, imageUrl, series, synopsis);
         event.preventDefault();
     }
     
     render() {  //send to mySQL and add to that user
-        const { title, yourTitle, author, favorite, series, readingOrder, genre, imageUrl, isbn, haveRead, timesRead, own, want, synopsis, comments } = this.state;
-        const newState = {...state}
+        // const { title, author, imageUrl, series, synopsis } = this.state;
+        // const newState = {...state}
         return (
-            //div form
+            <div className='AddBookForm'>
+                <div className='card'>
+                    <div className='card-body'>
+                        <form className='AddBookForm' onAddBook={this.handleAddBook}>
+                            <div className='input-group mb-3'>
+                                <div className="input-group-prepend">
+                                    <span className="input-group-text">@</span>
+                                </div>
+                                <input
+                                    className='form-control'
+                                    id='title'
+                                    type='text'
+                                    name='title'
+                                    placeholder='Title'
+                                    value={}
+                                    onChange={this.handleInputChange}
+                                />
+                            </div>
+                            <div className='input-group mb-3'>
+                                <div className="input-group-prepend">
+                                    <span className="input-group-text">@</span>
+                                </div>
+                                <input
+                                    className='form-control'
+                                    id='author'
+                                    type='text'
+                                    name='author'
+                                    placeholder='Author'
+                                    value={}
+                                    onChange={this.handleInputChange}
+                                />
+                            </div>
+                            <div className='input-group mb-3'>
+                                <div className="input-group-prepend">
+                                    <span className="input-group-text">@</span>
+                                </div>
+                                <input
+                                    className='form-control'
+                                    id='imageURL'
+                                    type='text'
+                                    name='imageURL'
+                                    placeholder='Image URL'
+                                    value={}
+                                    onChange={this.handleInputChange}
+                                />
+                            </div>
+                            <div className='input-group mb-3'>
+                                <div className="input-group-prepend">
+                                    <span className="input-group-text">@</span>
+                                </div>
+                                <input
+                                    className='form-control'
+                                    id='series'
+                                    type='text'
+                                    name='series'
+                                    placeholder='Series'
+                                    value={}
+                                    onChange={this.handleInputChange}
+                                />
+                            </div>
+                            <div className='input-group mb-3'>
+                                <div className="input-group-prepend">
+                                    <span className="input-group-text">a3b</span>
+                                </div>
+                                <input
+                                    className='form-control'
+                                    id='synopsis'
+                                    type='textarea'
+                                    name='synopsis'
+                                    placeholder='Synopsis'
+                                    value={}
+                                    onChange={this.handleInputChange}
+                                />
+                            </div>
+
+                            <button className='btn btn-danger' type='AddBook'>Add Book</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
         )
 
-        
     }
-} 
+}
+
+export default AddBookForm;

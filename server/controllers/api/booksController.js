@@ -1,7 +1,7 @@
 const booksController = require('express').Router();
 const db = require('../../models');
 
-module.exports = function (app) { 
+module.exports = function (booksController) { 
     app.get("/api/books/", function (req, res) {
         db.Books.findAll({})
             .then(function (allBooks) {
@@ -11,7 +11,7 @@ module.exports = function (app) {
     app.get("/api/books/", function (req, res) {
         db.Books.findOne({
             where: {
-                title: req.params.title
+                (books = author OR books = title): req.params.(books = author OR books = title)
             },
             include [book]
     }).then(function (oneBook) {
