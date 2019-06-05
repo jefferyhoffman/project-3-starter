@@ -27,7 +27,7 @@ import Modal from '../../components/Modal/modal.js';
 
 
 
-class App extends Component {
+class Schedule extends Component {
 	state = {
 		date: new Date(),
 		showModal: false,
@@ -73,4 +73,4 @@ class App extends Component {
 }
 
 
-export default App;
+export default Schedule;
