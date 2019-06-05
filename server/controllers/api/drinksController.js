@@ -12,23 +12,48 @@ drinksController.get('/', (req, res) => {
   .catch(err => res.status(422).json(err));
 });
 
-drinksController.get('/mine', JWTVerifier, (req, res) => {
-  db.Drinks.find({ _id: req.user._id })
-  // .find(req.query)
-  .then(dbModel => {
-    console.log(dbModel)
-    res.json(dbModel)})
-  .catch(err => res.status(422).json(err));
+// drinksController.get('/mine', JWTVerifier, (req, res) => {
+//   db.Users.find({ _id: req.user._id })
+//   // .find(req.query)
+//   .then(dbModel => {
+//     console.log(dbModel)
+//     res.json(dbModel)})
+//   .catch(err => res.status(422).json(err));
+// });
+
+drinksController.get("/mine", JWTVerifier, function(req, res) {
+  db.Users.find({_id: req.user._id})
+    .populate("drinks")
+    .then(function(dbUser) {
+      console.log(dbUser[0].drinks)
+      res.json(dbUser[0].drinks);
+    })
+    .catch(function(err) {
+      res.json(err);
+    });
 });
 
 
 
-drinksController.post('/', JWTVerifier, (req, res) => {
-  db.Drinks
-  .create(req.body)
-  .then(dbModel => res.json(dbModel))
-  .catch(err => console.log(err));
+// drinksController.post('/', JWTVerifier, (req, res) => {
+//   db.Drinks
+//   .create(req.body)
+//   .then(dbModel => res.json(dbModel))
+//   .catch(err => console.log(err));
   
+// });
+
+drinksController.post("/", JWTVerifier, function(req, res) {
+  db.Drinks.create(req.body)
+    .then(function(dbDrink) {
+      return db.Users.findOneAndUpdate({}, { $push: { drinks: dbDrink._id } }, { new: true });
+    })
+    .then(function(dbUser) {
+      res.json(dbUser);
+    })
+    .catch(function(err) {
+      res.json(err);
+    });
 });
 
 drinksController.put('/:id', JWTVerifier, (req, res) => {
