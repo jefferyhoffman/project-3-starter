@@ -17,5 +17,8 @@
   "devDependencies": {
     "concurrently": "^4.1.0",
     "nodemon": "^1.18.10"
+  },
+  "dependencies": {
+    "react-bootstrap4-modal": "^1.7.1"
   }
 }

@@ -1,0 +1,11 @@
+#row1-c {
+    background: rgb(33, 33, 33);
+}
+
+.p-title {
+    color: white;
+    position: absolute;
+    left: 42%;
+    top: 75%;
+    font-size: 50px;
+}
