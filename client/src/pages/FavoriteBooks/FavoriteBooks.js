@@ -11,17 +11,21 @@ class HomePage extends Component {
         <div className='row'>
           <div className='col'>
             <Jumbotron>
-              <h1>WELCOME TO BOOK KEEPER </h1> <br/> <h3>Search for a book to add to your library of books!</h3>
+              <h1>Add a book to your list of books with a summary or notes</h1>
             </Jumbotron>
-
-            <Input name="search" placeholder="search for a book..." />
-            <FormBtn>Search</FormBtn> <br />
+            <form>
+              <Input name="title" placeholder="Title (required)" />
+              <Input name="author" placeholder="Author (required)" />
+              <TextArea name="synopsis" placeholder="Synopsis (Optional)" />
+              <FormBtn>Add a Book</FormBtn>
+            </form>
             <hr />
             <List>
               1.book
               2.book
               3.book
               </List>
+
           </div>
         </div>
       </div>
