@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const ServiceSchema = new Schema({
     job: {
-        type: String,
+        type: Array,
         trim: true,
         required: 'Name is required'
     },

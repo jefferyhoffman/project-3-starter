@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+// import checkout from "../../"
 // import ReactDOM from "react-dom";
 // import './Services.css';
 
@@ -324,8 +326,10 @@ class Modal extends Component {
                                             <textarea type="text" id="form79textarea" className="md-textarea form-control"
                                                 rows="3"></textarea>
                                         </div>
-                                        <a type="button" className="btn btn-outline-secondary waves-effect"
-                                            data-dismiss="modal">Checkout</a>
+                                        <Link className='btn btn-outline-secondary waves-effect' to='/checkout'>Checkout</Link>
+
+                                        {/* <a type="button" className="btn btn-outline-secondary waves-effect"
+                                            data-dismiss="modal">Checkout</a> */}
                                     </div>
                                 </div>
                             </div>

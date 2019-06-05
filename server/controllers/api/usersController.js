@@ -22,6 +22,7 @@ usersController.post('/login', (req, res) => {
         user
       });
     });
+    
 });
 
 usersController.post('/register', (req, res) => {
