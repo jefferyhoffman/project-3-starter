@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 // import { Button } from 'reactstrap';
 // import "./collections.css";
-// import "./style.css";
-// import WatchCard from '../../components/Products/watch';
+import "../Home/style.css";
 // import watchVid from "./vidBg.mp4";
 import API from "../../utils/API";
 import Title from "../../components/Products/Title"
@@ -37,9 +36,7 @@ class Collections extends Component {
     return (
       <Wrapper>
         <Title>Watch List</Title>
-
         {this.state.items.map(item => (
-          
           <Products
             id={item.id}
             key={item.id}
