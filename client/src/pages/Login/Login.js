@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import { Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 // import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
@@ -7,40 +7,45 @@ import AuthContext from '../../contexts/AuthContext';
 
 // import React from 'react';
 import Modal from 'react-bootstrap4-modal';
- 
+
 
 class Login extends Component {
   static contextType = AuthContext;
- 
+
+
+state={
+  modalIsVisible: true,
+}
+
+closeModal=() => {
+  this.setState({modalIsVisible: false})
+}
+
   render() {
     return (
-      <Modal visible={true} onClickBackdrop={this.modalBackdropClicked}>
+      <Modal visible={this.state.modalIsVisible} onClickBackdrop={this.modalBackdropClicked}>
         <div className="modal-header">
           <h5 className="modal-title">Sign-In</h5>
+          <button type="disableButtons" className="disableButtons modalBtn"  data-dismiss="modal" aria-label="disableButtons" onClick={this.closeModal}>x</button>
         </div>
-        <button type="button" className="close" data-dismiss="modal" aria-label="Close" onClick={this.onCancel}>X</button>
+
         <div className="modal-body">
-                <p>Please enter your email and password</p>
-                <form>
-                <div className="form-group">
-                  <label for="exampleInputEmail1">Email</label>
-                  <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" />
-                </div>
-                <div className="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
-                </div>
-                <button type="submit" className="btn btn-primary">Sign in</button>
-                <p>Don't have an account? Click <span>Sign Up</span> to create a profile account.</p>
-              </form>
-        </div>
-        <div className="modal-footer">
-          <button type="button" className="btn btn-secondary" onClick={this.onPanic}>
-            REGISTER
-          </button>
-          <button type="button" className="btn btn-primary" onClick={this.onFirePhasers}>
-            SUBMIT
-          </button>
+          <p>Please enter your email and password!</p>
+          <form>
+            <div className="form-group">
+              <label form="exampleInputEmail1">Email</label>
+              <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" />
+            </div>
+            <div className="form-group">
+              <label form="exampleInputPassword1">Password</label>
+              <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
+            </div>
+            <div className="modal-footer">
+            <p>Don't have an account?<br /><Link to="/Home">Register </Link>to create a profile account.</p>
+              <button type="submit" className="btn btn-primary modalBtn">SIGN IN</button>
+            
+              </div>
+          </form>
         </div>
       </Modal>
 

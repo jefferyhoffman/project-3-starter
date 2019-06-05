@@ -55,3 +55,12 @@ hr {
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
+
+.modalBtn {
+    bottom: 0;
+    left:0;
+}
+
+.modal-footer {
+   left: 0;
+}
