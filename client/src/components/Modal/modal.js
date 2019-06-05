@@ -82,7 +82,7 @@ class Modal extends Component {
                                             <strong>$350</strong>
                                         </span>
                                     </h4>
-                                    Premium Maintance Package<i className="fas fa-angle-down rotate-icon"></i>
+                                    Premium Maintenance Package<i className="fas fa-angle-down rotate-icon"></i>
                                 </h5>
                             </a>
                         </div>
@@ -117,7 +117,7 @@ class Modal extends Component {
                                         <strong>$200</strong>
                                     </span>
                                 </h4>
-                                Upgraded Maintance Package <i className="fas fa-angle-down rotate-icon"></i>
+                                Upgraded Maintenance Package <i className="fas fa-angle-down rotate-icon"></i>
                             </h5>
                         </a>
                     </div>
@@ -149,7 +149,7 @@ class Modal extends Component {
                                         <strong>$100</strong>
                                     </span>
                                 </h4>
-                                Standard Maintance Package<i className="fas fa-angle-down rotate-icon"></i>
+                                Standard Maintenance Package<i className="fas fa-angle-down rotate-icon"></i>
                             </h5>
                         </a>
                     </div>
@@ -170,7 +170,7 @@ class Modal extends Component {
                 </div>
 
                 <p className="text-center">
-                    <strong>Service Options</strong>
+                    <strong>Add On Additional Services</strong>
                 </p>
                 <div className="container">
                     <div className="row">
