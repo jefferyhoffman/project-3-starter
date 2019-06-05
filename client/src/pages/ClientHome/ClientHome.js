@@ -1,29 +1,5 @@
 import React, { Component } from 'react';
-import Modal from 'react-modal';
 import '../ClientHome/style.css';
-import Completed from './viewAllModal/viewCompletedModal.js';
-import Upcomming from './viewAllModal/viewUpcommingModal.js';
-
-
-class ClientHome extends Raect.Component {
-
-  isOpen={false}
-  
-  componentDidMount() {
-
-	}
-
-	onChange = (date) => {
-		this.setState({ date, showModal: true })
-	}
-
-	closeModal = () => {
-		this.setState({
-			showModal: false
-		})
-	}
-
-
 
 }
 
@@ -84,4 +60,10 @@ class ClientHome extends Raect.Component {
     </div>
   </div>
   }
+<<<<<<< HEAD
   export default ClientHome;
+=======
+}
+
+export default ClientHome;
+>>>>>>> 5aebc10ad989fae8533e0c3845717cc4fde927c2
