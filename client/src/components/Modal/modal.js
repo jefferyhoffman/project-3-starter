@@ -9,7 +9,6 @@ class Modal extends Component {
     state = {
         premiumPckg: false
     }
-
     handleInputChange = (event) => {
         const target = event.target;
         const value = target.type === 'checkbox' ? target.checked : target.value;
