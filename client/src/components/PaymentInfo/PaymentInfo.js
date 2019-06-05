@@ -37,7 +37,9 @@ class PaymentInfo extends Component {
                                         id="email"
                                         name="email"
                                         placeholder="john@example.com" />
+
                                 </div>
+
 
                                     <label for="adr"><i className="fa fa-address-card-o"></i> Address</label>
                                     <input
