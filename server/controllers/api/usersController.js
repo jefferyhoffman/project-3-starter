@@ -33,5 +33,5 @@ usersController.post('/register', (req, res) => {
 });
 
 module.exports = usersController;
-// db.User.create({ email: 'test@gmail.com', password: 'test' })
-// .then(created => console.log(created))
+// db.User.create({ email: 'katja.dulmaine@gmail.com', password: 'password' })
+//  .then(created => console.log(created))
