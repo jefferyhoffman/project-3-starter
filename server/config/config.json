@@ -3,12 +3,9 @@
     "username": "root",
     "password": "root",
     "database": "watches_db",
+    "port":"8889",
     "host": "127.0.0.1",
-<<<<<<< HEAD
     "dialect": "mysql", 
-=======
-    "dialect": "mysql",
->>>>>>> 78b04208b6937f5640853858c9b6426aaf02b7fc
     "operatorsAliases": false
   },
   "test": {

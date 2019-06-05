@@ -35,15 +35,15 @@ class Collections extends Component {
     console.log(this.state)
     return (
       <Wrapper>
-        <Title>Collections</Title>
-      
+        <Title>Watch List</Title>
+       
            
         {this.state.items.map(item => (
           <Products
             id={item.id}
             key={item.id}
             name={item.name}
-            image={require('../Home/id-01.png')}  
+            image={item.img}  
             brand={item.brand}
             price={item.price}
             quantity={item.quantity}
