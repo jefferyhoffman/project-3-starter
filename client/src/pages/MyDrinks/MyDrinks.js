@@ -5,7 +5,8 @@ import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
 
 class MYDrinks extends Component {
-  
+  static contextType = AuthContext;
+
   state = {
     drinks: [],
     image: "",
@@ -16,13 +17,17 @@ class MYDrinks extends Component {
 
 
   componentDidMount() {
-    this.loadDrinks();
-    console.log("component Did Mount and sent to load drinks")
+    API.Users.getMe(this.context.authToken)
+    .then(response => response.data)
+    .then(user => this.setState(prevState => ({ auth: { ...prevState.auth, user } })))
+    .then(next => this.loadDrinks())
+    .catch(err => console.log(err));
+    // console.log("component Did Mount and sent to load drinks")
   }
 
   loadDrinks = () => {
     console.log("loadDrinks initiated")
-    API.Drinks.getMine()
+    API.Drinks.getMine(this.context.authToken)
       .then(res =>
         this.setState({ drinks: res.data, image: "", name: "", instructions: "" , ingredients_measurements: "" })
       )
@@ -57,7 +62,10 @@ class MYDrinks extends Component {
   };
 
   render() {
+    console.log(this.state)
+    console.log(this.context)
     let { drinks } = this.state
+    let { authToken } = this.context
     
     if (this.state.isComplete) {
       return <Redirect to="/mine" />;
