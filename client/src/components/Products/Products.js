@@ -18,7 +18,7 @@ function ProductCard(props) {
             <strong>Price:</strong> {props.price}
           </li>
           <li>
-            <strong>Quantity:</strong> {props.price}
+            <strong>Quantity:</strong> {props.quantity}
           </li>
         </ul>
       </div>
