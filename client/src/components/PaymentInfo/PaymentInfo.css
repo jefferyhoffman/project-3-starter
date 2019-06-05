@@ -72,7 +72,7 @@ body {
   }
   
   .btn {
-    background-color:#47d3bb;
+    background-color: #00c851;
     color: black;
     padding: 12px;
     margin: 10px 0;
@@ -80,18 +80,18 @@ body {
     width: 100%;
     border-radius: 3px;
     cursor: pointer;
-    font-size: 17px;
+    font-size: 24px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+    font-weight: 800;
   }
   
   .btn:hover {
-    background-color: rgb(212, 243, 33);
+    color:white;
   }
   
-  a {
-    color: #2196F3;
-  }
+  /* a {
+    color: rgb(212, 243, 33);
+  } */
   
   hr {
     border: 1px solid lightgrey;
