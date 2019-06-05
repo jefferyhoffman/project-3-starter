@@ -4,6 +4,7 @@
     "password": "root",
     "database": "bookKeeperdb",
     "host": "127.0.0.1",
+    "port": 8889,
     "dialect": "mysql",
     "operatorsAliases": false
   },

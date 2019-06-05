@@ -7,14 +7,12 @@ import AuthContext from '../../contexts/AuthContext';
 import Navigation from '../../components/Navigation/Navigation';
 import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
 import Login from '../../pages/Login/Login';
-import Secret from '../../pages/Secret/Secret';
+// import Secret from '../../pages/Secret/Secret';
 import Home from '../../pages/Home/Home';
 import NotFound from '../../pages/NotFound/NotFound';
 
 import './App.css';
-// import BooksRead from '../../pages/BooksRead/BooksRead';
-import FavoriteBooks from '../../pages/FavoriteBooks/FavoriteBooks';
-// import WishList from '../../pages/WishList/WishList';
+import AddBooks from '../../pages/AddBooks/AddBooks';
 
 class App extends Component {
   constructor(props) {
@@ -58,11 +56,9 @@ class App extends Component {
           <div className='container'>
             <Switch>
               <Route path='/login' component={Login} />
-              <PrivateRoute path='/secret' component={Secret} />
-              {/* <PrivateRoute path='/BooksRead' component={BooksRead} /> */}
-              {/* <PrivateRoute path='/WishList' component={WishList} /> */}
-              <PrivateRoute path='/FavoriteBooks' component={FavoriteBooks} />
-              <Route exact path='/' component={Home} />
+              {/* <PrivateRoute path='/secret' component={Secret} /> */}
+              <PrivateRoute path='/AddBooks' component={AddBooks} />
+              <PrivateRoute exact path='/' component={Home} />
               <Route component={NotFound} />
           </Switch>
           </div>

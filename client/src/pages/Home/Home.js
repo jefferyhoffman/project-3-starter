@@ -16,6 +16,7 @@ class HomePage extends Component {
 
             <Input name="search" placeholder="search for a book..." />
             <FormBtn>Search</FormBtn> <br />
+            <div className="response"/>
             <hr />
             <List>
               1.book
