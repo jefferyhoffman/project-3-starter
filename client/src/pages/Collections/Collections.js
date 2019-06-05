@@ -17,6 +17,7 @@ class Collections extends Component {
     items: []
   };
 
+
   componentDidMount() {
     this.loadItems();
   };
