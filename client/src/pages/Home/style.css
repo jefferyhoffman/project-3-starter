@@ -139,6 +139,19 @@ img {
     width: 200px;
     text-align: center;
 }
+
 .productGIF {
+    margin-top: 140px;
+    top: 150px;
     text-align: center;
+    height: 400px;
+    width: 300px;
+}
+
+.productIMG {
+    margin-top: 140px;
+    top: 150px;
+    text-align: center;
+    height: 450px;
+    width: 550px;
 }

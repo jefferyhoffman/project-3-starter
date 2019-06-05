@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 // import "./collections.css";
 import "../Home/style.css";
 // import watchVid from "./vidBg.mp4";
-import API from "../../utils/API";
+import API from "../../utils/API"
 import Title from "../../components/Products/Title"
 import Wrapper from "../../components/Products/Wrapper"
 import Products from "../../components/Products/Products"
@@ -36,12 +36,14 @@ class Collections extends Component {
     return (
       <Wrapper>
         <Title>Watch List</Title>
+       
+           
         {this.state.items.map(item => (
           <Products
             id={item.id}
             key={item.id}
             name={item.name}
-            image={item.img} 
+            image={item.img}  
             brand={item.brand}
             price={item.price}
             quantity={item.quantity}
