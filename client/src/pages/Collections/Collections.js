@@ -11,6 +11,7 @@ import Products from "../../components/Products/Products"
 
 
 class Collections extends Component {
+  _isMounted = false;
 
   state = {
     items: []
@@ -18,18 +19,26 @@ class Collections extends Component {
 
 
   componentDidMount() {
+    this._isMounted = true;
     this.loadItems();
   };
 
   loadItems = () => {
     API.getItems()
       .then(res => {
-        this.setState({ items: res.data })
-        console.log(res.data)
+        if(this._isMounted){
+
+          this.setState({ items: res.data })
+          console.log(res.data)
+        }
       })
 
       .catch(err => console.log(err))
   };
+
+  componentWillUnmount() {
+    this._isMounted = false
+  }
 
 
   render() {
@@ -41,13 +50,15 @@ class Collections extends Component {
            
         {this.state.items.map(item => (
           <Products
-            id={item.id}
+            item={item}
+            // id={item.id}
             key={item.id}
-            name={item.name}
-            image={item.img}  
-            brand={item.brand}
-            price={item.price}
-            quantity={item.quantity}
+            // name={item.name}
+            // image={item.img}  
+            // brand={item.brand}
+            // price={item.price}
+            // quantity={item.quantity}
+            addToCart={this.props.addToCart}
           />
         ))
         }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { getCartProducts } from '../repository';
+import { getCartProducts } from '../components';
 import CartItem from './CartItem';
 
 export default class Cart extends React.Component {
@@ -21,14 +21,14 @@ export default class Cart extends React.Component {
         });
     }
 
-    removeFromCart = (product) => {
-        let products = this.state.products.filter((item) => item.id !== product.id);
-        let cart = JSON.parse(localStorage.getItem('cart'));
-        delete cart[product.id.toString()];
-        localStorage.setItem('cart', JSON.stringify(cart));
-        let total = this.state.total - (product.qty * product.price)
-        this.setState({ products, total });
-    }
+    // removeFromCart = (product) => {
+    //     let products = this.state.products.filter((item) => item.id !== product.id);
+    //     let cart = JSON.parse(localStorage.getItem('cart'));
+    //     delete cart[product.id.toString()];
+    //     localStorage.setItem('cart', JSON.stringify(cart));
+    //     let total = this.state.total - (product.qty * product.price)
+    //     this.setState({ products, total });
+    // }
 
     clearCart = () => {
         localStorage.removeItem('cart');

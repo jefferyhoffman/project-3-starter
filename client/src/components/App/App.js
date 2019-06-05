@@ -35,11 +35,33 @@ class App extends Component {
         authToken: TokenStore.getToken(),
         onLogin: this.handleLogin,
         onLogout: this.handleLogout
+      },
+      cart: {},
+      itemCount: 0
+    }
+
+    this.addToCart = (item) => {
+      let cart = {
+        ...this.state.cart,
+        [item.id]: item,
+        // item:{
+        //   name: "nike",
+        //   price: "30",
+        //   quantity: 1
+        // }
       }
+      this.setState({
+        cart,
+      })
     }
   }
 
+
   componentDidMount() {
+    let itemCount = Object.keys(this.state.cart).length
+    this.setState({
+      itemCount
+    })
     const { authToken } = this.state.auth;
     if (!authToken) return;
 
@@ -48,8 +70,18 @@ class App extends Component {
       .then(user => this.setState(prevState => ({ auth: { ...prevState.auth, user } })))
       .catch(err => console.log(err));
   }
+  componentDidUpdate(prevProps, prevState) {
+    let cart = this.state.cart
+    if (prevState.cart !== cart){
+      let itemCount = Object.keys(this.state.cart).length
+      this.setState({
+        itemCount
+      })
+    }
+  }
 
   render() {
+    console.log(this.state)
     return (
       <AuthContext.Provider value={this.state.auth}>
         <div className='App'>
@@ -60,8 +92,8 @@ class App extends Component {
               <Route path='/login' component={Login} />
               <PrivateRoute path='/secret' component={Secret} />
               <Route exact path='/' component={Home} />
-              <Route exact path='/collections' component={Collections} />
-              <Route exact path='/cart' component={Checkout} />
+              <Route exact path='/collections' component={(props) => <Collections {...props} addToCart={this.addToCart} />}/>
+              <Route exact path='/cart' component={(props) => <shoppingCart {...props} checkout={this.props.addToCart}/>} />
               <Route component={NotFound} />
             
               {/* <Route path="/admin/" exact component={Home} />
