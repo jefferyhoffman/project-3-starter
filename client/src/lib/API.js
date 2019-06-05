@@ -48,8 +48,10 @@ export default {
       });
     },
     getMine: function (authToken) {
-      console.log("getMine hit")
-      return axios.get('/api/drinks/mine', {
+      // console.log(authToken)
+      return axios({
+        method: 'get',
+        url: '/api/drinks/mine',
         headers: {
           'Authorization': `Bearer ${authToken}`
         }
