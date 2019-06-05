@@ -12,9 +12,9 @@ import Home from '../../pages/Home/Home';
 import NotFound from '../../pages/NotFound/NotFound';
 
 import './App.css';
-import BooksRead from '../../pages/BooksRead/BooksRead';
+// import BooksRead from '../../pages/BooksRead/BooksRead';
 import FavoriteBooks from '../../pages/FavoriteBooks/FavoriteBooks';
-import WishList from '../../pages/WishList/WishList';
+// import WishList from '../../pages/WishList/WishList';
 
 class App extends Component {
   constructor(props) {
@@ -59,8 +59,8 @@ class App extends Component {
             <Switch>
               <Route path='/login' component={Login} />
               <PrivateRoute path='/secret' component={Secret} />
-              <PrivateRoute path='/BooksRead' component={BooksRead} />
-              <PrivateRoute path='/WishList' component={WishList} />
+              {/* <PrivateRoute path='/BooksRead' component={BooksRead} /> */}
+              {/* <PrivateRoute path='/WishList' component={WishList} /> */}
               <PrivateRoute path='/FavoriteBooks' component={FavoriteBooks} />
               <Route exact path='/' component={Home} />
               <Route component={NotFound} />
