@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
+// import { Redirect } from 'react-router-dom';
 
-import API from '../../lib/API';
+// import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
-import LoginForm from '../../components/LoginForm/LoginForm';
+// import LoginForm from '../../components/LoginForm/LoginForm';
 
 // import React from 'react';
 import Modal from 'react-bootstrap4-modal';
@@ -16,12 +16,23 @@ class Login extends Component {
     return (
       <Modal visible={true} onClickBackdrop={this.modalBackdropClicked}>
         <div className="modal-header">
-          <h5 className="modal-title">Log-In</h5>
+          <h5 className="modal-title">Sign-In</h5>
         </div>
+        <button type="button" className="close" data-dismiss="modal" aria-label="Close" onClick={this.onCancel}>X</button>
         <div className="modal-body">
-          <p> WILL WORK ON TONIGHT!
-            
-          </p>
+                <p>Please enter your email and password</p>
+                <form>
+                <div className="form-group">
+                  <label for="exampleInputEmail1">Email</label>
+                  <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" />
+                </div>
+                <div className="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
+                </div>
+                <button type="submit" className="btn btn-primary">Sign in</button>
+                <p>Don't have an account? Click <span>Sign Up</span> to create a profile account.</p>
+              </form>
         </div>
         <div className="modal-footer">
           <button type="button" className="btn btn-secondary" onClick={this.onPanic}>
@@ -32,6 +43,7 @@ class Login extends Component {
           </button>
         </div>
       </Modal>
+
     );
   }
 }

@@ -35,9 +35,13 @@ nav.navbar:hover {
 }
 a.navbar-brand {
    color: rgb(255, 255, 255) !important;
-   font-weight: 600;
+   font-weight: 300;
    font-size: 30px;
    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.475);
+   width: 100%;
+}
+.navbar-brand:hover {
+    font-weight: 600;
 }
 
 .nav-link {
@@ -45,7 +49,8 @@ a.navbar-brand {
     font-weight: 400;
 }
 .nav-link:hover {
-    font-weight: 600;
+    font-weight: 800;
     letter-spacing: 4px;
+    /* font-size: 20px; */
 }
 
