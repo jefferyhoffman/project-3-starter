@@ -18,6 +18,8 @@ import Search from '../../pages/Search/Search';
 import NotFound from '../../pages/NotFound/NotFound';
 
 import './App.css';
+import Jumbotron from '../Jumbotron/Jumbotron';
+import Footer from '../Footer/Footer';
 
 class App extends Component {
   constructor(props) {
@@ -60,7 +62,8 @@ class App extends Component {
     return (
       <AuthContext.Provider value={this.state.auth}>
         <div className='App'>
-          <Navigation />
+          <Jumbotron/>
+          {/* <Navigation /> */}
           <div className='container'>
             <Switch>
               <Route path='/login' component={Login} />
@@ -75,7 +78,8 @@ class App extends Component {
               <Route component={NotFound} />
             </Switch>
           </div>
-        </div>
+          <Footer/>
+         </div>
       </AuthContext.Provider>
     );
   }
