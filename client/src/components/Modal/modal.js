@@ -72,7 +72,7 @@ class Modal extends Component {
 
     }
     render() {
-        //better for rendering data??
+        // better for rendering data??
         // const { from } = this.props.location.state || { from: { pathname: "/checkout" } };
         // const { redirectToReferrer } = this.state;
 
