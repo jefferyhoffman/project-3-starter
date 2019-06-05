@@ -44,11 +44,7 @@ class Collections extends Component {
             id={item.id}
             key={item.id}
             name={item.name}
-<<<<<<< HEAD
             image={require('../Home/id-01.png')}  
-=======
-            image={item.img} 
->>>>>>> 986aa1d2ecf549b645da3fad31762847c7657582
             brand={item.brand}
             price={item.price}
             quantity={item.quantity}
