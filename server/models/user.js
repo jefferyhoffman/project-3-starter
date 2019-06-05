@@ -18,6 +18,12 @@ const UserSchema = new Schema({
       'Password should be four characters or longer'
     ]
   },
+  drinks: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Drink"
+    }
+  ]
 })
 
 class newUser {

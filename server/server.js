@@ -50,6 +50,30 @@ if (process.env.NODE_ENV === 'production') {
 //-- Controller Routes -------------------------------------------------------
 app.use(require('./controllers'));
 
+app.post("/submit", function(req, res) {
+  db.Drink.create(req.body)
+    .then(function(dbDrink) {
+      return db.User.findOneAndUpdate({}, { $push: { notes: dbDrink._id } }, { new: true });
+    })
+    .then(function(dbUser) {
+      res.json(dbUser);
+    })
+    .catch(function(err) {
+      res.json(err);
+    });
+});
+
+app.get("/populateddrink", function(req, res) {
+  db.User.find({})
+    .populate("Drink")
+    .then(function(dbUser) {
+      res.json(dbUser);
+    })
+    .catch(function(err) {
+      res.json(err);
+    });
+});
+
 //-- React catch-all ---------------------------------------------------------
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
