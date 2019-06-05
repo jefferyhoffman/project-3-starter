@@ -17,7 +17,8 @@ class Modal extends Component {
 
         this.setState({
             [name]: value
-        }, () => {
+        }, 
+        () => {
             // Calculation to determine total
             var total = 0;
             console.log(this.state.premiumPckg);
@@ -284,11 +285,7 @@ class Modal extends Component {
                                 value="option9" onChange={this.handleInputChange} />
                             <label className="form-check-label" for="radio-179">Pesticide Application</label>
                         </div>
-                        <div className="form-check mb-4">
-                            <input className="form-check-input" name="topiary" type="checkbox" id="radio-279"
-                                value="option10" onChange={this.handleInputChange} />
-                            <label className="form-check-label" for="radio-27">Artistic Topiary Design</label>
-                        </div>
+                         
 
                         <div className="form-check mb-4">
                             <input className="form-check-input" name="pruning" type="checkbox" id="radio-379"
@@ -339,8 +336,8 @@ class Modal extends Component {
                                         {/* <a type="button" className="btn btn-outline-secondary waves-effect"
                                             data-dismiss="modal">Checkout</a> */}
                                     </div>
-                                    <a type="button" className="btn btn-outline-warning"
-                                        data-dismiss="modal">Checkout</a>
+                                    {/* <a type="button" className="btn btn-outline-warning"
+                                        data-dismiss="modal">Checkout</a> */}
                                 </div>
                             </div>
                         </div>

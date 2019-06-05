@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
-
 import API from '../../lib/API';
 import TokenStore from '../../lib/TokenStore';
 import AuthContext from '../../contexts/AuthContext';
@@ -67,7 +66,6 @@ class App extends Component {
               <Route exact path='/' component={Home} />
               <Route component={NotFound} />
             </Switch>
-          {/* </div> */}
         </div>
       </AuthContext.Provider>
     );
