@@ -5,15 +5,9 @@ const unirest = require("unirest");
 
 const keys = require("../../keys.js");
 
-// const rapidapi = process.env.RAPIDAPI_ID;
-
-
 const rapidapi = keys.rapid_api_key;
 
 console.log(keys);
-
-
-// var action = process.argv[2];
 
 mongoose.connect(
   process.env.MONGODB_URI ||
