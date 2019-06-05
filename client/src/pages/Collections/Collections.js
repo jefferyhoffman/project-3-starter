@@ -41,7 +41,6 @@ class Collections extends Component {
     this._isMounted = false
   }
 
-
   render() {
     console.log(this.state)
     return (
