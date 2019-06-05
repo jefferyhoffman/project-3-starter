@@ -45,8 +45,6 @@ class App extends Component {
     }
   }
 
-
-
   onChange = (date) => {
     this.setState({ calendarInfo:{
       date,showModal: true}
