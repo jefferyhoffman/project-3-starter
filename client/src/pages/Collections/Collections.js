@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 // import { Button } from 'reactstrap';
 // import "./collections.css";
+import "./Collections.css";
+import watchVid from "../Home/vidBg.mp4";
+import API from "../../utils/API";
 import "../Home/style.css";
 // import watchVid from "./vidBg.mp4";
-import API from "../../utils/API"
-import Title from "../../components/Products/Title"
 import Wrapper from "../../components/Products/Wrapper"
 import Products from "../../components/Products/Products"
 
@@ -34,10 +35,17 @@ class Collections extends Component {
   render() {
     console.log(this.state)
     return (
-      <Wrapper>
-        <Title>Watch List</Title>
-       
-           
+      <div className="container-fluid">
+       <div className="row" id="row1Collection">
+          <video autoPlay muted loop id="videoBg" src={watchVid} type="video/mp4"></video>
+        <div className="text-overlay">
+            KOSCOWIX
+        </div>
+        <p className="p-title">
+          Collections
+        </p>  
+       </div>
+         <Wrapper>
         {this.state.items.map(item => (
           <Products
             id={item.id}
@@ -51,6 +59,8 @@ class Collections extends Component {
         ))
         }
       </Wrapper>
+    </div>
+   
     );
   }
 }

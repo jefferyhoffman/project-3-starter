@@ -3,27 +3,26 @@ import "./style.css"
 
 function ProductCard(props) {
   return (
+    
     <div className="card">
       <div className="img-container">
-        <img src={props.image} alt={props.name}/>
+        <img id="watchList" src={props.image} alt={props.name}/>
       </div>
-      <div className="content">
+      <hr />
+      <div className="contentProduct">
         <ul>
-          <li>
-            <strong>Name:</strong> {props.name}
+          <li id="liProducts">
+            <strong>{props.brand} {props.name}</strong> 
           </li>
-          <li>
-            <strong>Brand:</strong> {props.brand}
+          <li id="liProducts">
+            ${props.price}
           </li>
-          <li>
-            <strong>Price:</strong> {props.price}
-          </li>
-          <li>
-            <strong>Quantity:</strong> {props.quantity}
-          </li>
+          <i class="fas fa-shopping-cart fa-2x"></i>
         </ul>
       </div>
     </div>
+    
+  
   );
 }
 
