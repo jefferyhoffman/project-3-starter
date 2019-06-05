@@ -28,7 +28,11 @@ class Navigation extends Component {
     return (
       <div className='Navigation'>
         <nav className='navbar navbar-expand-lg navbar-light bg-light mb-3'>
+<<<<<<< HEAD
           <Link className='navbar-brand' to='#'><img src={logo} width="70" height="30" className="d-inline-block align-top" alt=""/></Link>
+=======
+          <Link className='navbar-brand' to='#'><img src={logo} width="70" height="30" className="d-inline-block align-top" alt="" /></Link>
+>>>>>>> 2443d7ca95fdba8f29af05caca1ff29ff94a19b6
           <button className={togglerClass} onClick={this.toggleCollapse} id="logo" data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
             <span className='navbar-toggler-icon'></span>
           </button>
@@ -39,18 +43,27 @@ class Navigation extends Component {
               </li>
               {user &&
                 <li className='nav-item'>
-                  <Link className='nav-link' to='/secret' onClick={this.toggleCollapse}>Secret</Link>
+                  {/* <Link className='nav-link' to='/secret' onClick={this.toggleCollapse}>Secret</Link> */}
                 </li>}
             </ul>
             <ul className='navbar-nav'>
               {user
-                ? <AuthDropdown onClick={this.toggleCollapse} />
-                : <>
+                ? <>
+                  <li className='nav-item'><Link className='nav-link' to='/scheduling' onClick={this.toggleCollapse}>Scheduling</Link></li>
+                  <li className='nav-item'><Link className='nav-link' to='/clienthome' onClick={this.toggleCollapse}>ClientHome</Link></li>
+                  <AuthDropdown onClick={this.toggleCollapse} />
+                </>
+                :
+                <>
                   <li className='nav-item'><Link className='nav-link text-success font-weight-bold' to='/login' onClick={this.toggleCollapse}>Login</Link></li>
                   <li className='nav-item'><Link className='nav-link text-primary font-weight-bold' to='/register' onClick={this.toggleCollapse}>Register</Link></li>
+<<<<<<< HEAD
                   <li className='nav-item'><Link className='nav-link' to='/scheduling' onClick={this.toggleCollapse}>Scheduling</Link></li>
                   <li className='nav-item'><Link className='nav-link' to='/clienthome' onClick={this.toggleCollapse}>ClientHome#</Link></li>
                   </>}
+=======
+                </>}
+>>>>>>> 2443d7ca95fdba8f29af05caca1ff29ff94a19b6
             </ul>
           </div>
         </nav>
