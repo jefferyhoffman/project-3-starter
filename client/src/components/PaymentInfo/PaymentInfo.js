@@ -33,7 +33,6 @@ class PaymentInfo extends Component {
                                     </div>
                                     <input
                                         className='form-control'
-
                                         type="text"
                                         id="email"
                                         name="email"
