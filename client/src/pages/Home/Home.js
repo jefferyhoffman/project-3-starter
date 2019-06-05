@@ -6,6 +6,7 @@ class HomePage extends Component {
   render() {
     return (
       <div className="row">
+  
      
       </div>
     );
@@ -13,3 +14,4 @@ class HomePage extends Component {
 }
 
 export default HomePage;
+
