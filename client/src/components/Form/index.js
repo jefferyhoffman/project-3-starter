@@ -7,11 +7,18 @@ export function Input(props) {
     </div>
   );
 }
+export function Select(props) {
+  return (
+    <div className="form-group">
+      <select className="form-control" {...props} />
+    </div>
+  );
+}
 
 export function TextArea(props) {
   return (
     <div className="form-group">
-      <textarea className="form-control" rows="20" {...props} />
+      <textarea className="form-control" rows="5" {...props} />
     </div>
   );
 }
