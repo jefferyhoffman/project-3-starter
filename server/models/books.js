@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes){
-    var Book = sequelize.define("POST", {
+    var Book = sequelize.define("Book", {
         title: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -15,7 +15,7 @@ module.exports = function(sequelize, DataTypes){
         series: {
             type: DataTypes.STRING,
         },
-        summary: {
+        synopsis: {
             type: DataTypes.STRING,
         }
 
