@@ -34,14 +34,15 @@ body {
 }
 .row {
     height: 680px;
+    padding: 0;
 }
 
 video {
-   height: 760px;
+   height: 800px;
    position: absolute;
-   width: 100%;
-   bottom: 260px;
-   left: 15px;
+   width: 101%;
+   bottom: 240px;
+   left: 1px;
 }
 .text-overlay {
     z-index: 1;
@@ -70,6 +71,7 @@ video {
     width: auto; 
     text-align: center;
     color: white;
+    padding: 0;
 }
 #row2sec2 {
     background: rgb(30, 30, 40);
@@ -78,6 +80,7 @@ video {
     width: auto; 
     text-align: center;
     color: white;
+    padding: 0;
 }
 
 #row3sec1 {
@@ -86,6 +89,7 @@ video {
     width: auto; 
     text-align: center;
     color: white;
+    padding: 0;
 }
 #row3sec2 {
     background: rgb(30, 30, 40);
@@ -93,6 +97,7 @@ video {
     width: auto; 
     text-align: center;
     color: white;
+    padding: 0;
 }
 #row3sec3 {
     background: rgb(150, 110, 76);
@@ -101,6 +106,7 @@ video {
     width: auto; 
     text-align: center;
     color: white;
+    padding: 0;
 }
 #row4sec1 {
     background: rgb(174, 159, 159);
@@ -109,6 +115,7 @@ video {
     width: auto; 
     text-align: center;
     color: white;
+    padding: 0;
 }
 #row4sec2 {
     background: rgb(116, 116, 116);
@@ -116,6 +123,7 @@ video {
     width: auto; 
     text-align: center;
     color: white;
+    padding: 0;
 }
 .content {
     /* width: 60%; */
