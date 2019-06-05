@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "react-bootstrap4-modal": "^1.7.1",
+    "sequelize": "^5.8.7",
     "sequelize-cli": "^5.4.0"
   }
 }
