@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Jumbotron from "../../components/Jumbotron";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 import { List, ListItem } from "../../components/List";
-import DeleteBtn from "../../components/DeleteBtn";
+// import DeleteBtn from "../../components/DeleteBtn";
 
 class HomePage extends Component {
   render() {
