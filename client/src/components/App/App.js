@@ -62,8 +62,8 @@ class App extends Component {
     return (
       <AuthContext.Provider value={this.state.auth}>
         <div className='App'>
-          <Jumbotron/>
-          {/* <Navigation /> */}
+          {/* <Jumbotron/> */}
+          <Navigation />
           <div className='container'>
             <Switch>
               <Route path='/login' component={Login} />
@@ -78,7 +78,7 @@ class App extends Component {
               <Route component={NotFound} />
             </Switch>
           </div>
-          <Footer/>
+          {/* <Footer/> */}
          </div>
       </AuthContext.Provider>
     );

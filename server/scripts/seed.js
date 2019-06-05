@@ -7,8 +7,6 @@ const keys = require("../../keys.js");
 
 const rapidapi = keys.rapid_api_key;
 
-console.log(keys);
-
 mongoose.connect(
   process.env.MONGODB_URI ||
   "mongodb://localhost/drinks"
@@ -33,7 +31,6 @@ mongoose.connect(
 
 function apiInput() {
   const drinkseed = [];
-  var drink = {};
 
   // unirest.get("https://the-cocktail-db.p.rapidapi.com/filter.php?a=" + category)
   
@@ -45,7 +42,7 @@ function apiInput() {
     .end(function (result) {
 
       for (let i = 0; i < result.body.drinks.length; i++) {
-        var drinkId = result.body.drinks[i].idDrink;
+        let drinkId = result.body.drinks[i].idDrink;
 
         unirest.get("https://the-cocktail-db.p.rapidapi.com/lookup.php?i=" + drinkId)
 
@@ -54,6 +51,7 @@ function apiInput() {
 
           .end(function (result) {
             // console.log(result.body.drinks);
+            var drink = {};
 
             var data = result.body.drinks[0];
 
@@ -61,7 +59,7 @@ function apiInput() {
             drink.category = data.strCategory
             drink.kind = data.strAlcoholic;
             drink.image = data.strDrinkThumb;
-            drink.instructions = data.strInstructions;
+            drink.instructions = data.strInstructions || "no instructions";
             drink.ingredients_measurements = [data.strIngredient1 + ": " + data.strMeasure1 + ", " + data.strIngredient2 + ": " + data.strMeasure2 + ", " + data.strIngredient3 + ": " + data.strMeasure3 + ", " + data.strIngredient4 + ": " + data.strMeasure4 + ", " + data.strIngredient5 + ": " + data.strMeasure5];
             drink.glass = data.strGlass;
 
@@ -90,7 +88,7 @@ function apiInput() {
       console.log(docs.length + " records inserted!");
       process.exit(0);
     });
-  });
+   });
 }
 
 apiInput();
