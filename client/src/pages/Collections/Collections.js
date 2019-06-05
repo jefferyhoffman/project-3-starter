@@ -4,7 +4,8 @@ import React, { Component } from 'react';
 import "./Collections.css";
 import watchVid from "../Home/vidBg.mp4";
 import API from "../../utils/API";
-// import Title from "../../components/Products/Title"
+import "../Home/style.css";
+// import watchVid from "./vidBg.mp4";
 import Wrapper from "../../components/Products/Wrapper"
 import Products from "../../components/Products/Products"
 
@@ -50,7 +51,7 @@ class Collections extends Component {
             id={item.id}
             key={item.id}
             name={item.name}
-            image={item.img} 
+            image={item.img}  
             brand={item.brand}
             price={item.price}
             quantity={item.quantity}

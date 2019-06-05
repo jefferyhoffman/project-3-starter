@@ -15,8 +15,9 @@ function ProductCard(props) {
             <strong>{props.brand} {props.name}</strong> 
           </li>
           <li id="liProducts">
-            Price: {props.price}
+            ${props.price}
           </li>
+          <i class="fas fa-shopping-cart fa-2x"></i>
         </ul>
       </div>
     </div>
