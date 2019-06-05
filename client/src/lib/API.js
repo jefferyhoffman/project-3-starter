@@ -18,6 +18,12 @@ export default {
     }
   },
 
+  Services:{
+    addToCart: function (name, total, user) {
+      return axios.post('./api/services/cart/' + user, {name, total});
+    }
+  },
+
   Secrets: {
     getAll: function (authToken) {
       return axios.get('/api/secrets', {

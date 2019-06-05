@@ -8,6 +8,12 @@ body{
 
 .card-body{
   padding: 1.85rem;
+  
+}
+
+
+.col-sm-7{
+  margin: 0px 300px 0px;
 }
 
 

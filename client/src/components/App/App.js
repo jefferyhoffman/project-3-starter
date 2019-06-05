@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
-
 import API from '../../lib/API';
 import TokenStore from '../../lib/TokenStore';
 import AuthContext from '../../contexts/AuthContext';
@@ -37,8 +36,27 @@ class App extends Component {
         authToken: TokenStore.getToken(),
         onLogin: this.handleLogin,
         onLogout: this.handleLogout
+
+      },
+      calendarInfo: {
+        date: new Date(),
+        showModal: false
       }
     }
+  }
+
+  onChange = (date) => {
+    this.setState({ calendarInfo:{
+      date,showModal: true}
+    })
+  }
+
+  closeModal = () => {
+    this.setState({
+      calendarInfo: {
+        showModal: false
+      }
+    })
   }
 
   componentDidMount() {
@@ -57,17 +75,22 @@ class App extends Component {
         <div className='App'>
           <Navigation />
           {/* <div className='container'> */}
-            <Switch>
-              <Route path='/login' component={Login} />
-              <Route path='/register' component={Register} />
-              <PrivateRoute path='/secret' component={Secret} />
-              <Route exact path='/Scheduling' component={Scheduling} />
-              <Route exact path='/ClientHome' component={ClientHome} />
-              <Route exact path='/Checkout' component={Checkout} />
-              <Route exact path='/' component={Home} />
-              <Route component={NotFound} />
-            </Switch>
-          {/* </div> */}
+          <Switch>
+            <Route path='/login' component={Login} />
+            <Route path='/register' component={Register} />
+            <PrivateRoute path='/secret' component={Secret} />
+            <Route exact path='/Scheduling' component={(props) =>
+              <Scheduling
+                {...props}
+                handleServiceChange={this.onChange}
+                calendarInfo={this.state.calendarInfo}
+                closeModal={this.closeModal}
+              />} />
+            <Route exact path='/ClientHome' component={ClientHome} />
+            <Route exact path='/Checkout' component={Checkout} />
+            <Route exact path='/' component={Home} />
+            <Route component={NotFound} />
+          </Switch>
         </div>
       </AuthContext.Provider>
     );
