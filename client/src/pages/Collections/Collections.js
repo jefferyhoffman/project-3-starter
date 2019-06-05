@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 // import "./style.css";
 // import WatchCard from '../../components/Products/watch';
 // import watchVid from "./vidBg.mp4";
-import API from "../../utils/API";
+import API from "../../utils/API"
 import Title from "../../components/Products/Title"
 import Wrapper from "../../components/Products/Wrapper"
 import Products from "../../components/Products/Products"
