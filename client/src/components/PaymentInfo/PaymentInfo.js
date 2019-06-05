@@ -26,12 +26,21 @@ class PaymentInfo extends Component {
                                         placeholder=
                                         "John M. Doe" />
 
-                                    <label for="email"><i className="fa fa-envelope"></i> Email</label>
+                                {/* <label for="email"><i className="fa fa-envelope"></i> Email</label> */}
+                                <div className='input-group mb-3'>
+                                    <div className="input-group-prepend">
+                                        <span className="input-group-text">Email</span>
+                                    </div>
                                     <input
+                                        className='form-control'
+
                                         type="text"
                                         id="email"
                                         name="email"
                                         placeholder="john@example.com" />
+
+                                </div>
+
 
                                     <label for="adr"><i className="fa fa-address-card-o"></i> Address</label>
                                     <input
