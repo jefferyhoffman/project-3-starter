@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import PaymentInfo from "../../components/PaymentInfo/PaymentInfo"
-import "./Checkout.css"
+import PaymentInfo from "../../components/PaymentInfo/PaymentInfo";
+import "./Checkout.css";
 // import API from "../../lib/API";
 
 const CheckoutList = (props) => {
