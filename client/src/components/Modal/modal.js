@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+// import { Redirect } from 'react-router-dom';
+// import checkout from "../../"
 // import ReactDOM from "react-dom";
 // import './Services.css';
 
@@ -68,6 +71,13 @@ class Modal extends Component {
 
     }
     render() {
+        //better for rendering data??
+        // const { from } = this.props.location.state || { from: { pathname: "/checkout" } };
+        // const { redirectToReferrer } = this.state;
+
+        // if (redirectToReferrer) {
+        //     return <Redirect to={from} />;
+        // }
         return (
             <div className="App">
 
@@ -297,33 +307,37 @@ class Modal extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
-            <br />
+                <br />
 
-            <button type="button" id="btn" className="btn btn-outline-warning" data-toggle="modal"
-                data-target="#modalPoll-1" style={{ color: "#336600" }}>Book Services</button>
+                <button type="button" id="btn" className="btn btn-outline-warning" data-toggle="modal"
+                    data-target="#modalPoll-1" style={{ color: "#336600" }}>Book Services</button>
 
-            <div className="card-body">
-                <div className="row">
-                    <div className="col-md-6">
+                <div className="card-body">
+                    <div className="row">
+                        <div className="col-md-6">
 
-                        <div className="modal fade right" id="modalPoll-1" tabindex="-1" role="dialog"
-                            aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
-                            <div className="modal-dialog modal-full-height modal-right modal-notify modal-info" role="document">
-                                <div className="modal-content">
+                            <div className="modal fade right" id="modalPoll-1" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
+                                <div className="modal-dialog modal-full-height modal-right modal-notify modal-info" role="document">
+                                    <div className="modal-content">
 
-                                    <div className="modal-header">
-                                        <p className="heading lead">Additional Information</p>
-                                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true" className="white-text">×</span>
-                                        </button>
-                                    </div>
-                                    <p className="text-center">
-                                        <strong>Please note any important information about your home/yard below:</strong></p>
+                                        <div className="modal-header">
+                                            <p className="heading lead">Additional Information</p>
+                                            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true" className="white-text">×</span>
+                                            </button>
+                                        </div>
+                                        <p className="text-center">
+                                            <strong>Please note any important information about your home/yard below.</strong></p>
 
-                                    <div className="md-form">
-                                        <textarea type="text" id="form79textarea" className="md-textarea form-control"
-                                            rows="3"></textarea>
+                                        <div className="md-form">
+                                            <textarea type="text" id="form79textarea" className="md-textarea form-control"
+                                                rows="3"></textarea>
+                                        </div>
+                                        <Link className='btn btn-outline-secondary waves-effect' to='/checkout'>Checkout</Link>
+
+                                        {/* <a type="button" className="btn btn-outline-secondary waves-effect"
+                                            data-dismiss="modal">Checkout</a> */}
                                     </div>
                                     <a type="button" className="btn btn-outline-warning"
                                         data-dismiss="modal">Checkout</a>

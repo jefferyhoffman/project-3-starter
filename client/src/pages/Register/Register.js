@@ -14,7 +14,7 @@ class Register extends Component {
   }
 
   handleSubmit = (email, password, firstName, lastName, phone, address) => {
-    console.log(email, password, firstName, lastName, phone, address);
+    // console.log(email, password, firstName, lastName, phone, address);
     API.Users.register(email, password, firstName, lastName, phone, address)
       .then(response => {
           this.setState({ redirectToReferrer: true })

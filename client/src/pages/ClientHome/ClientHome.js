@@ -9,7 +9,7 @@ class ClientHome extends Component {
         <div className="row">
         <div className="col-sm-2"></div>
         <div className="col-sm-8">
-        <h1 className="display-4 text-white font-weight-bold">Welcome Back, dude </h1>
+         <h1 className="display-4 text-white font-weight-bold">Welcome Back {/*{this.firstName}*/} </h1> 
         </div>
         <div className="col-sm-2"> </div>
         </div>
