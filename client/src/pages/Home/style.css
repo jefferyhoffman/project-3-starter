@@ -132,6 +132,8 @@ video {
 
 img {
     margin: 20px;
+    width: 300px;
+    height: 300px;
 }
 
 .productImage {
@@ -141,4 +143,60 @@ img {
 }
 .productGIF {
     text-align: center;
+}
+
+/* Product Page */
+
+.contentProduct {
+    height: 100px;
+    color: rgb(97, 97, 97);
+    position: relative;
+    top: 40px;
+}
+ul {
+    font-size: 14px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+li#liProducts {
+    line-height: 20px;
+    letter-spacing: 2px;
+    font-size: 12px;
+    
+}
+div.img-container {
+    width: auto;
+    background: white !important;
+}
+.card > .img-container > img {
+    width: 50% !important;
+}
+.card > .img-container {
+    height: 68% !important;
+    overflow: hidden;
+    text-align: center;
+    background: #6CADDC;
+}
+#watchList {
+    height: 300px;
+    width: 200px;
+}
+.card {
+    height: 460px !important;
+    background: rgb(255, 255, 255);
+    width: 400px !important;
+    text-align: center;
+}
+strong {
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0;
+}
+
+hr {
+    width: 80%;
+    position: relative;
+    left: 10%;
+    top: 10px;
 }

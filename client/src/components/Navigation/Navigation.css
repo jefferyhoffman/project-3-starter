@@ -38,7 +38,7 @@ a.navbar-brand {
    font-weight: 300;
    font-size: 30px;
    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.475);
-   width: 100%;
+   /* width: 100%; */
 }
 .navbar-brand:hover {
     font-weight: 600;

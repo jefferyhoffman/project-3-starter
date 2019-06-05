@@ -19,10 +19,11 @@ button {
     border-radius: 70px;
     color: white;
     font-weight: 600;
+    font-size: 40px;
 }
 .btn-holder {
     z-index: 2;
-    height: 100px;
+    height: 20px;
     /* background: rgb(94, 94, 94); */
     width: 100%;
 }
@@ -30,6 +31,7 @@ button {
     margin: 0;
     width: 100%;
     padding: 0;
+    height: 30px !important;
 }
 .row {
     text-align: center;
@@ -38,19 +40,24 @@ button {
     height: 300px;
 }
 #footerSec {
-    font-weight: bold;
+    font-weight: 800;
+    margin-top: 60px;
+    font-size: 20px;
 }
+
 #footerItems {
     margin-top: 20px;
     font-weight: 600;
+    font-size: 16px;
 }
 
 footer {
     text-align: center;
     font-size: 14px;
     margin: 10px;
+    font-family: "Montserrat", sans-serif;
 }
-hr {
+#hrFooter {
     border: 0;
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
