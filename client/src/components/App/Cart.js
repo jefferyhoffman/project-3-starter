@@ -47,26 +47,37 @@ export default class Cart extends React.Component {
         console.log(products)
         let total = 0
         return (
-            <div className=" container">
-                <h3 className="card-title">Cart</h3>
+            <div className="containerCart">
+                
+                <div className="card" id="productHolder">
+                <h3 className="card-title">Your Cart</h3>
+                
+                
+                
                 {
                     products.map((product, index) =>
                         <CartItem product={product} remove={this.removeFromCart} key={index} />)
                 }
-
                 {/* products.length ? */}
-                <div><h4>
+                
+                
+                <div className="cartContent">
+                    <h4>
                     <small>Total Amount: </small>
                     <span className="float-right text-primary">${total}</span>
-                </h4><hr />
+                </h4>
+                <hr />
                 </div>
             {!products.length ? <h3 className="text-warning">No item on the cart</h3> : null}
-
+                <footer className="purchaseFooter">
                 <Link to="/CheckoutForm">
-                    <button className="btn btn-success float-right">Checkout</button>
+                    <button id="checkoutBtn" className="btn btn-success">Checkout</button>
                 </Link>
-                <button className="btn btn-danger float-right" onClick={this.clearCart}
-                    style={{ marginRight: "10px" }}>Clear Cart</button><br /><br /><br />
+                <button id="clearBtn" className="btn btn-danger" onClick={this.clearCart}>Clear Cart</button>
+                </footer>
+                
+                </div>
+                
             </div>
 
             )

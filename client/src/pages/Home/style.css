@@ -39,10 +39,10 @@ body {
 }
 
 video {
-   height: 800px;
+   height: 760px;
    position: absolute;
    width: 100%;
-   bottom: 100px;
+   bottom: 180px;
    left: 0;
 }
 .text-overlay {
@@ -220,12 +220,10 @@ hr {
     top: 15px;
 }
 
-i {
-    margin-top: 10px;
-    color: rgb(113, 113, 113);
-    cursor: pointer;
+.co-bio {
+    position: absolute;
+    top: 500px;
+    color: rgb(255, 255, 255);
+    margin: 10px 60px;
 }
-i:hover {
-    color: rgb(249, 228, 6);
-    font-size: 35px;
-}
+

@@ -9,6 +9,7 @@ import "../Home/style.css";
 import Wrapper from "../../components/Products/Wrapper"
 import Products from "../../components/Products/Products"
 import { Link } from 'react-router-dom';
+// import styled from "@emotion/styled/macro";
 
 
 class Collections extends Component {
@@ -40,10 +41,11 @@ class Collections extends Component {
   componentWillUnmount() {
     this._isMounted = false
   }
-
+  
   render() {
     console.log(this.state)
     return (
+      
       <div className="container-fluid">
        <div className="row" id="row1Collection">
           <video autoPlay muted loop id="videoBgC" src={watchVid} type="video/mp4"></video>

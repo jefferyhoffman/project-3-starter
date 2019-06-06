@@ -9,13 +9,13 @@
     z-index: 1;
     color: rgb(255, 255, 255);
     font-weight: 600;
-    font-size: 60px !important;
+    font-size: 80px !important;
     position: absolute;
     top: 150px;
-    left: 35%;
+    left: 30%;
     letter-spacing: 10px !important;
-    text-shadow: 4px 4px 4px rgba(133, 133, 133, 0.571),
-                 -3px -3px 4px rgba(136, 136, 136, 0.529);
+    /* text-shadow: 4px 4px 4px rgba(133, 133, 133, 0.571),
+                 -3px -3px 4px rgba(136, 136, 136, 0.529); */
 }
 
 .p-title {

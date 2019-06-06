@@ -19,7 +19,7 @@ function ProductCard(props) {
           </li>
          
         </ul>
-        <h1 onClick={() => props.addToCart(props.item)}><i className="fas fa-shopping-cart"></i></h1>
+        <h1 onClick={() => props.addToCart(props.item)}><i id="productCart" className="fas fa-shopping-cart"></i></h1>
       </div>
     </div>
     
