@@ -8,6 +8,7 @@ import Collections from '../../pages/Collections/Collections'
 import Footer from "../../components/Footer/Footer.js";
 import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
 import Login from '../../pages/Login/Login';
+import Register from '../../components/Register/register';
 import Secret from '../../pages/Secret/Secret';
 import Home from '../../pages/Home/Home';
 import NotFound from '../../pages/NotFound/NotFound';
@@ -59,6 +60,7 @@ class App extends Component {
               <Route path='/login' component={Login} />
               <PrivateRoute path='/secret' component={Secret} />
               <Route exact path='/' component={Home} />
+              <Route exact path='/register' component={Register} />
               <Route exact path='/collections' component={Collections} />
               <Route component={NotFound} />
             
