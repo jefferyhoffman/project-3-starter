@@ -81,63 +81,6 @@ class Modal extends Component {
         return (
             <div className="App">
 
-
-                {/* //         <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#modalQuickView">Launch
-        //           modal</button>
-
-
-        //         <div className="modal fade" id="modalQuickView" tabindex="-1" role="dialog" */}
-                {/* //             aria-labelledby="exampleModalLabel" aria-hidden="true">
-        //             <div className="modal-dialog modal-lg" role="document">
-        //                 <div className="modal-content">
-        //                     <div className="modal-body">
-        //                         <div className="row">
-        //                             <div className="col-lg-5" />
-        //                             <div id="carousel-thumb" className="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel" />
-        //                             <div className="carousel-inner" role="listbox">
-        //                                 <div className="carousel-item active">
-        //                                     <img className="d-block w-100" src="./images/cobra.jpg" alt="First slide" />
-        //                                 </div>
-        //                                 <div className="carousel-item">
-        //                                     <img className="d-block w-100" src="./images/lawnmower.jpg" alt="Second slide" />
-        //                                 </div>
-        //                                 <div className="carousel-item">
-        //                                     <img className="d-block w-100" src="./images/puglawn.jpg" alt="Third slide" />
-        //                                 </div>
-        //                             </div>
-        //                         </div>
-        //                     </div>
-        //                 </div>
-        //             </div>
-
-
-
-        //             <a className="carousel-control-prev" href="#carousel-thumb" role="button" data-slide="prev">
-        //                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-        //                 <span className="sr-only">Previous</span>
-        //             </a>
-        //             <a className="carousel-control-next" href="#carousel-thumb" role="button" data-slide="next">
-        //                 <span className="carousel-control-next-icon" aria-hidden="true"></span>
-        //                 <span className="sr-only">Next</span>
-        //             </a>
-
-
-        //             <ol className="carousel-indicators">
-        //                 <li data-target="#carousel-thumb" data-slide-to="0" className="active">
-        //                     <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/img%20(23).jpg"
-        //                         width="60" />
-        //                 </li>
-        //                 <li data-target="#carousel-thumb" data-slide-to="1">
-        //                     <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/img%20(24).jpg"
-        //                         width="60" />
-        //                 </li>
-        //                 <li data-target="#carousel-thumb" data-slide-to="2">
-        //                     <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/img%20(25).jpg"
-        //                         width="60" />
-        //                 </li>
-        //             </ol>
-        //         </div > */}
-
                 <div className="col-lg" >
                     <h2 className="h2-responsive product-name" >
                         <strong >June Special: Individual Treatments Only $50!</strong>
@@ -330,7 +273,7 @@ class Modal extends Component {
                                             <textarea type="text" id="form79textarea" className="md-textarea form-control"
                                                 rows="3"></textarea>
                                         </div>
-                                        <Link className='btn btn-outline-secondary waves-effect' to='/checkout'>Checkout</Link>
+                                        <Link className='btn btn-outline-secondary waves-effect' to='/Checkout'>Checkout</Link>
 
                                         {/* <a type="button" className="btn btn-outline-secondary waves-effect"
                                             data-dismiss="modal">Checkout</a> */}
