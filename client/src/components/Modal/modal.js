@@ -209,6 +209,14 @@ class Modal extends Component {
                                             </div>
                                             <Link className='btn btn-outline-secondary waves-effect' to='/checkout'>Checkout</Link>
                                         </div>
+                                        <p className="text-center">
+                                            <strong>Please note any important information about your home/yard below.</strong></p>
+
+                                        <div className="md-form">
+                                            <textarea type="text" id="form79textarea" className="md-textarea form-control"
+                                                rows="3"></textarea>
+                                        </div>
+                                        <Link className='btn btn-outline-secondary waves-effect' to='/Checkout'>Checkout</Link>
                                     </div>
                                 </div>
                             </div>
