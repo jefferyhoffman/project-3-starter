@@ -41,7 +41,7 @@ closeModal=() => {
               <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
             </div>
             <div className="modal-footer">
-            <p>Don't have an account?<br /><Link to="/Home">Register </Link>to create a profile account.</p>
+            <p>Don't have an account?<br /><Link to="/register">Register </Link>to create a profile account.</p>
               <button type="submit" className="btn btn-primary modalBtn">SIGN IN</button>
             
               </div>
