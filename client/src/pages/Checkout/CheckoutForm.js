@@ -39,9 +39,7 @@ class CheckoutForm extends React.Component {
     return (
       <>
       <form onSubmit={this.handleSubmit}>
-        {/* <AddressSection /> */}
         <CardSection />
-        {/* <button>Confirm order</button> */}
       </form>
       </>
     );
