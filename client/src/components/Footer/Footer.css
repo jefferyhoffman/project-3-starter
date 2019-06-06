@@ -71,3 +71,8 @@ footer {
 .modal-footer {
    left: 0;
 }
+
+.sub-button {
+    bottom: 0;
+    left:0;
+}
