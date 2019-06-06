@@ -27,15 +27,15 @@ class LoginForm extends Component {
     const { email, password } = this.state;
 
     return (
-      <div className="card">
-        <div className="card-body"></div>
-        <div className='card'>
-          <div className='card-body'>
-            <form className='LoginForm' onSubmit={this.handleSubmit}>
-              <div className='input-group mb-3'>
-                <div className="input-group-prepend">
-                  <span className="input-group-text">@</span>
-                </div>
+      <div className="card-loginform">
+        <div className="card-header-loginform"><h1>Sign in Drinkstation</h1><h4>And start exploring and creating!</h4></div>
+        <div className="card-body">
+          <form className='LoginForm' onSubmit={this.handleSubmit}>
+            <div className="form-group">
+              <div className="card-header-loginform">
+                <label for="formGroupExampleInput"><h4>Email:</h4></label>
+              </div>
+              <div className="card-body">
                 <input
                   className='form-control'
                   id='email'
@@ -44,13 +44,13 @@ class LoginForm extends Component {
                   placeholder='email@provider.com'
                   value={email}
                   onChange={this.handleInputChange}
-                />
+                />  </div>
+            </div>
+            <div className="form-group">
+              <div className="card-header-loginform">
+                <label for="formGroupExampleInput2"><h4>Password:</h4></label>
               </div>
-
-              <div className='input-group mb-3'>
-                <div className="input-group-prepend">
-                  <span className="input-group-text">a3b</span>
-                </div>
+              <div className="card-body">
                 <input
                   className='form-control'
                   id='password'
@@ -59,19 +59,15 @@ class LoginForm extends Component {
                   placeholder='password'
                   value={password}
                   onChange={this.handleInputChange}
-                />
-              </div>
-
-              <button className='btn btn-primary' type='submit'>Sign In</button>
-            </form>
-          </div>
+                />  </div>
+            </div>
+            <button className='btn btn-primary' type='submit'>Sign In</button>
+          </form>
         </div>
       </div>
     )
   }
 }
-
-
 
 export default LoginForm;
 

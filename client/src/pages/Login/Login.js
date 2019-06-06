@@ -50,11 +50,10 @@ class Login extends Component {
 
     return (
       <div>
-        <img className="bg" src={login} alt="" />
+        <img className="log" src={login} alt="" />
         <div className='Login'>
-          <h1>Sign-In DrinkStation</h1>
           <div className='row'>
-            <div className='col-4-login'>
+            <div className='col-6-login'>
               {this.state.error &&
                 <div className='row'>
                   <div className='col'>
