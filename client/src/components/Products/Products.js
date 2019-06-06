@@ -6,20 +6,20 @@ function ProductCard(props) {
     
     <div className="card">
       <div className="img-container">
-        <img id="watchList" src={props.item.image} alt={props.item.name}/>
+        <img id="watchList" src={props.image} alt={props.name}/>
       </div>
       <hr />
       <div className="contentProduct">
         <ul>
           <li id="liProducts">
-            <strong>{props.item.brand} {props.item.name} {props.item.image}</strong> 
+            <strong>{props.brand} {props.name}</strong> 
           </li>
           <li id="liProducts">
-            ${props.item.price}
+            ${props.price}
           </li>
          
         </ul>
-        <h1 onClick={() => props.addToCart(props.item)}> <i className="fas fa-shopping-cart fa-2x"></i></h1>
+        <h1 onClick={() => props.addToCart(props.item)}><i className="fas fa-shopping-cart fa-1x"></i></h1>
       </div>
     </div>
     

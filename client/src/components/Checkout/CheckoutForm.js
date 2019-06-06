@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+// import Collections, {Component } from 'collections'
+// import ProductCard, { Component } from 'productCard'
 // import "/.Checkout.css"
 
 class CheckoutForm extends Component {
@@ -16,6 +17,7 @@ class CheckoutForm extends Component {
         expdate: '',
         cname: '',
         cvv: '',
+        item: ''
     };
 
     handleInputChange = event => {
@@ -42,8 +44,8 @@ class CheckoutForm extends Component {
         return (
             <div className='Cart'>
                 <div className='card'>
-                    <div className='card-body'>
-                        <form className='CheckoutForm' onSubmit={this.handleSubmit}>
+                    <form className='CheckoutForm' onSubmit={this.handleSubmit}>
+                        <div className='card-body'>
                             <div className="container">
                                 {/* <div className="row"> */}
                                 <div className="col-5">
@@ -269,6 +271,8 @@ class CheckoutForm extends Component {
                                         />
                                     </div>
                                 </div>
+                                <div>
+                                </div>
                                 {/* </div> */}
 
                                 <div>
@@ -280,19 +284,19 @@ class CheckoutForm extends Component {
                             <h6>Your Shopping Cart</h6>
                             <div className="col-12">
                                 <div className="container">
-                                        <span className="shopping-cart">Shopping Cart</span>
+                                    <span className="shopping-cart">Shopping Cart</span>
 
-                                        <div id="dream-catcher">
+                                    <span> {this.itemcount} </span>
 
-                                        </div>
-                                        <button className='btn btn-primary' type='submit'>Checkout</button>
                                 </div>
-                        </div>
-                        </form>
-                               
-                    </div>
-                </div>
-            </div>
+                                {/* <button className='btn btn-primary' type='submit'>Sunbmit</button> */}
+                            </div>
+                        </div >
+
+                    </form>
+
+                </div >
+            </div >
 
 
 
