@@ -1,36 +1,26 @@
 import React, { Component } from 'react';
 import Jumbotron from "../../components/Jumbotron";
-import { Input, TextArea, FormBtn } from "../../components/Form";
-import { List, ListItem } from "../../components/List";
-// import DeleteBtn from "../../components/DeleteBtn";
+import AddBooks from '../../components/AddBook/addBook';
 
-class FavoriteBooks extends Component {
+
+class AddBook extends Component {
   render() {
     return (
       <div className='Home'>
         <div className='row'>
           <div className='col'>
             <Jumbotron>
-              <h1>Add a book to your list of books with a summary or notes</h1>
+              <h1>WELCOME TO BOOK KEEPER </h1> <br /> <h3>Search for a book to add to your library of books!</h3>
             </Jumbotron>
-            <form>
-              <Input name="title" placeholder="Title (required)" />
-              <Input name="author" placeholder="Author (required)" />
-              <TextArea name="synopsis" placeholder="Synopsis (Optional)" />
-              <FormBtn>Add a Book</FormBtn>
-            </form>
-            <hr />
-            <List>
-              1.book
-              2.book
-              3.book
-              </List>
-
+            <div>
+            <AddBook/>
+            </div>
           </div>
         </div>
       </div>
     );
-  }
+   }
 }
+  
 
-export default FavoriteBooks;
+export default AddBooks;
