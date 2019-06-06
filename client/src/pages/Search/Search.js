@@ -1,21 +1,44 @@
 import React, { Component } from 'react';
+import { Input, Select, FormBtn } from "../../components/Form";
+
 
 class Search extends Component {
+  state = {
+    name: '',
+    category: '',
+    kind: '',
+  }
   render() {
     return (
       <div>
         <h1>Search Page</h1>
-        <p>
-          Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis molestie urna.
-          Aliquam semper ultrices varius. Aliquam faucibus sit amet magna a ultrices. Aenean
-          pellentesque placerat lacus imperdiet efficitur. In felis nisl, luctus non ante euismod,
-          tincidunt bibendum mi. In a molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna
-          posuere, eget tristique dui dapibus. Maecenas fermentum elementum faucibus. Quisque nec
-          metus vestibulum, egestas massa eu, sollicitudin ipsum. Nulla facilisi. Sed ut erat ligula.
-          Nam tincidunt nunc in nibh dictum ullamcorper. Class aptent taciti sociosqu ad litora
-          torquent per conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at rhoncus.
-          Etiam vel condimentum magna, quis tempor nulla.
-      </p>
+
+        <label for="name">Drink Name</label>
+        <Input name="name" onChange={this.handleInputChange} value={this.state.name} placeholder="Name (required)" />
+        <div className="form-group">
+          <label for="category">Drink Category</label>
+          <Select name="category" className="form-control" id="category" onChange={this.handleInputChange} value={this.state.category}>
+            <option>Ordinary Drink</option>
+            <option>Cocktail</option>
+            <option>Milk / Float / Shake</option>
+            <option>Other/Unknown</option>
+            <option>Cocoa</option>
+            <option>Shot</option>
+            <option>Coffee / Tea</option>
+            <option>Homemade Liqueur</option>
+            <option>Punch / Party Drink</option>
+            <option>Beer</option>
+            <option>Soft Drink / Soda</option>
+          </Select>
+        </div>
+        <div className="form-group">
+          <label for="kind">Drink Kind</label>
+          <Select name="kind" className="form-control" id="kind" onChange={this.handleInputChange} value={this.state.kind}>
+            <option>Alcoholic</option>
+            <option>Non alcoholic</option>
+            <option>Optional alcohol</option>
+          </Select>
+        </div>
       </div>
     );
   }
