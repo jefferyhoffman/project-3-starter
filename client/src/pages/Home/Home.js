@@ -1,199 +1,139 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import pic from "../Images/pic.jpg";
-import pic1 from "../Images/pic1.jpg";
-import pic2 from "../Images/pic2.jpg";
-import pic3 from "../Images/pic3.jpg";
-import pic4 from "../Images/pic4.jpg";
-import pic5 from "../Images/pic5.jpg";
-import pic6 from "../Images/pic6.jpg";
-import pic7 from "../Images/pic7.jpg";
-import pic8 from "../Images/pic8.jpg";
-import pic9 from "../Images/pic9.jpg";
-import pic10 from "../Images/pic10.jpg";
-import pic11 from "../Images/pic11.jpg";
-import pic12 from "../Images/pic12.jpg";
-// import pic13 from "../Images/pic13.jpg";
-// import pic14 from "../Images/pic14.jpg";
+import "../Home/home.css"
 
-// import logo from './logo.svg';
+import img from "../Images/img.jpg";
+import top1 from "../Images/top1.jpg";
+import top2 from "../Images/top2.jpg";
+import top3 from "../Images/top3.jpg";
+import top4 from "../Images/top4.jpg";
+import jumbo from "../Images/jumbo.jpg";
+import jumbo1 from "../Images/jumbo1.jpg";
+import jumbo2 from "../Images/jumbo2.jpg";
+import jumbo3 from "../Images/jumbo3.jpg";
+import jumbo4 from "../Images/jumbo4.jpg";
+import jumbo5 from "../Images/jumbo5.jpg";
+import jumbo6 from "../Images/jumbo6.jpg";
+import jumbo7 from "../Images/jumbo7.jpg";
+import jumbo8 from "../Images/jumbo8.jpg";
+import jumbo9 from "../Images/jumbo9.jpg";
+import jumbo10 from "../Images/jumbo10.jpg";
+import jumbo11 from "../Images/jumbo11.jpg";
+
+
+
 
 
 
 class HomePage extends Component {
   render() {
     return (
-      <div className="jumbotron jumbotron-fluid">
-
-        <div className="bd-example">
-          <div id="carouselExampleCaptions" className="carousel slide carousel-fade" data-ride="carousel">
-            <ol className="carousel-indicators">
-              <li data-target="#carouselExampleCaptions" data-slide-to="1" className="active"></li>
-              <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-              <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
-              <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
-              <li data-target="#carouselExampleCaptions" data-slide-to="5"></li>
-              <li data-target="#carouselExampleCaptions" data-slide-to="6"></li>
-              <li data-target="#carouselExampleCaptions" data-slide-to="7"></li>
-              <li data-target="#carouselExampleCaptions" data-slide-to="8"></li>
-              <li data-target="#carouselExampleCaptions" data-slide-to="9"></li>
-              <li data-target="#carouselExampleCaptions" data-slide-to="10"></li>
-              <li data-target="#carouselExampleCaptions" data-slide-to="11"></li>
-              <li data-target="#carouselExampleCaptions" data-slide-to="12"></li>
-
-            </ol>
-            <div className="carousel-inner">
-
-              <div className="carousel-item active">
-                <img src={pic1} className="d-block w-100" alt="..."></img>
-                <div className="carousel-caption d-none d-md-block">
-                  <h3>Explore</h3>
-                  <h6>There is so much more to drinks!</h6>
-                </div>
-              </div>
-              <div className="carousel-item">
-                <img src={pic2} className="d-block w-100" alt="..."></img>
-                <div className="carousel-caption d-none d-md-block">
-                  <h3>Create</h3>
-                  <h6>Add your favroite "drink"!</h6>
-                </div>
-              </div>
-              <div className="carousel-item">
-                <img src={pic3} className="d-block w-100" alt="..."></img>
-                <div className="carousel-caption d-none d-md-block">
-                  <h3>Search</h3>
-                  <h6>Find your "drink"!</h6>
-                </div>
-              </div>
-              <div className="carousel-item">
-                <img src={pic4} className="d-block w-100" alt="..."></img>
-                <div className="carousel-caption d-none d-md-block">
-                  <h3>Experience</h3>
-                  <h6>Try our!</h6>
-                </div>
-              </div>
-              <div className="carousel-item">
-                <img src={pic5} className="d-block w-100" alt="..."></img>
-                <div className="carousel-caption d-none d-md-block">
-                  <h3>Explore</h3>
-                  <h6>There is so much more to drinks!</h6>>
+      <div>
+        <div className="row-jumbo">
+          <div className="col-12">
+            <div className="jumbotron jumbotron-fluid">
+              <div className="bd-example">
+                <div id="carouselExampleCaptions" className="carousel slide carousel-fade" data-ride="carousel">
+                  <ol className="carousel-indicators">
+                    <li data-target="#carouselExampleCaptions" data-slide-to="1" className="active"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+                  </ol>
+                  <div className="carousel-inner">
+                    <div className="carousel-item active">
+                      <img src={img} className="d-block w-100" alt="..."></img>
+                      <div className="carousel-caption d-none d-md-block">
+                        <h1>Explore</h1>
+                        <h4>There is so much more to drinks!</h4>
+                      </div>
+                    </div>
+                    <div className="carousel-item">
+                      <img src={jumbo1} className="d-block w-100" alt="..."></img>
+                      <div className="carousel-caption d-none d-md-block">
+                        <h1>Create</h1>
+                        <h4>Add your favroite "drink"!</h4>
+                      </div>
+                    </div>
+                    <div className="carousel-item">
+                      <img src={jumbo6} className="d-block w-100" alt="..."></img>
+                      <div className="carousel-caption d-none d-md-block">
+                        <h1>Search</h1>
+                        <h4>Find your "drink"!</h4>
+                      </div>
+                    </div>
+                    <div className="carousel-item">
+                      <img src={jumbo4} className="d-block w-100" alt="..."></img>
+                      <div className="carousel-caption d-none d-md-block">
+                        <h1>Experience</h1>
+                        <h4>Live it up!</h4>
+                      </div>
+                    </div>
                   </div>
-              </div>
-              <div className="carousel-item">
-                <img src={pic6} className="d-block w-100" alt="..."></img>
-                <div className="carousel-caption d-none d-md-block">
-                  <h3>Create</h3>
-                  <h6>Add your favroite "drink"!</h6>
+                  <Link className="carousel-control-prev" to="#carouselExampleCaptions" role="button" data-slide="prev">
+                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span className="sr-only">Previous</span>
+                  </Link>
+                  <Link className="carousel-control-next" to="#carouselExampleCaptions" role="button" data-slide="next">
+                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span className="sr-only">Next</span>
+                  </Link>
                 </div>
               </div>
-              <div className="carousel-item">
-                <img src={pic7} className="d-block w-100" alt="..."></img>
-                <div className="carousel-caption d-none d-md-block">
-                  <h3>Search</h3>
-                  <h6>Find your "drink"!</h6>
-                </div>
-              </div>
-              <div className="carousel-item">
-                <img src={pic8} className="d-block w-100" alt="..."></img>
-                <div className="carousel-caption d-none d-md-block">
-                  <h3>Experience</h3>
-                  <h6>Try our!</h6>
-                </div>
-              </div>
-              <div className="carousel-item">
-                <img src={pic9} className="d-block w-100" alt="..."></img>
-                <div className="carousel-caption d-none d-md-block">
-                  <h3>Explore</h3>
-                  <h6>There is so much more to drinks!</h6>
-                </div>
-              </div>
-              <div className="carousel-item">
-                <img src={pic10} className="d-block w-100" alt="..."></img>
-                <div className="carousel-caption d-none d-md-block">
-                  <h3>Create</h3>
-                  <h6>Add your favroite "drink"!</h6>
-                </div>
-              </div>
-              <div className="carousel-item">
-                <img src={pic11} className="d-block w-100" alt="..."></img>
-                <div className="carousel-caption d-none d-md-block">
-                  <h3>Search</h3>
-                  <h6>Find your "drink"!</h6>
-                </div>
-              </div>
-              <div className="carousel-item">
-                <img src={pic12} className="d-block w-100" alt="..."></img>
-                <div className="carousel-caption d-none d-md-block">
-                  <h3>Experience</h3>
-                  <h6>Try our!</h6>
-                </div>
-              </div>
-
             </div>
-            <Link className="carousel-control-prev" to="#carouselExampleCaptions" role="button" data-slide="prev">
-              <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span className="sr-only">Previous</span>
-            </Link>
-            <Link className="carousel-control-next" to="#carouselExampleCaptions" role="button" data-slide="next">
-              <span className="carousel-control-next-icon" aria-hidden="true"></span>
-              <span className="sr-only">Next</span>
-            </Link>
+          </div>
+          <div className="card-text-center">
+            <div className="card-header"><h3>Drinks we Love!</h3></div>
+            <div className="card-body">
+              <div className="row">
+                <div className="col-3">
+                  <div className="card-top">
+                    <img src={top1} className="card-img-top" alt={"drink"}></img>
+                    <div className="card-body">
+                      <h5 className="card-title">Moscow Mule</h5>
+                      <p className="card-text">This drink has exploded everywhere being one the most popular drinks around. We think it's here to stay for a long time</p>
+                      {/* <Link to="#" className="btn btn-primary">Want More</Link> */}
+                    </div>
+                  </div>
+                </div>
+                <div className="col-3">
+                  <div className="card-top">
+                    <img src={top2} className="card-img-top" alt={"drink"}></img>
+                    <div className="card-body">
+                      <h5 className="card-title">Pineapple Martini</h5>
+                      <p className="card-text">Pineapple Infused Vodka Martini is one for connoisseurs who take their craft seriouly. Patience and hard work do pay off We say.</p>
+                      {/* <Link to="#" className="btn btn-primary">Want More</Link> */}
+                    </div>
+                  </div>
+                </div>
+                <div className="col-3">
+                  <div className="card-top">
+                    <img src={top3} className="card-img-top" alt={"drink"}></img>
+                    <div className="card-body">
+                      <h5 className="card-title">Old Fashioned</h5>
+                      <p className="card-text">Classy, timeless  and loved across generations. We can safely claim good 'old Old Fashioned is never gonna be out of style.</p>
+                      {/* <Link to="#" className="btn btn-primary">Want More</Link> */}
+                    </div>
+                  </div>
+                </div>
+                <div className="col-3">
+                  <div className="card-top">
+                    <img src={top4} className="card-img-top" alt={"drink"}></img>
+                    <div className="card-body">
+                      <h5 className="card-title">Baby Guinness</h5>
+                      <p className="card-text">Baby Guinness Shots are perfect blend of coffee and creme base liquor! We find it one of the best tasting shot whichs looks amazing cool.</p>
+                      {/* <Link to="#" className="btn btn-primary">Want More</Link> */}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div >
+          </div>
+          <div className="card-footer text-muted">
+            <Link to="#">Go to our Top Drinks Page for more!</Link>
           </div>
         </div>
-        {/* <div className="row">
-          <ul className="list-inline">
-            <li className="list-inline-item">
-              <div className="col-3">
-              <div className="card">
-                <img src={{ pic }} className="card-img-top" alt={"drink"}></img>
-                <div className="card-body">
-                  <h5 className="card-title">Card title</h5>
-                  <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <Link to="#" className="btn btn-primary">Go somewhere</Link>
-                </div>
-              </div>
-
-              </div>
-            </li>
-            <li className="list-inline-item">
-              <div className="col-3">
-              <div className="card">
-                <img src={{ pic1 }} className="card-img-top" alt={"drink"}></img>
-                <div className="card-body">
-                  <h5 className="card-title">Card title</h5>
-                  <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <Link to="#" className="btn btn-primary">Go somewhere</Link>
-                </div>
-              </div>
-              </div>
-            </li>
-            <li className="list-inline-item">
-              <div className="col-3">
-              <div className="card">
-                <img src={{ pic2 }} className="card-img-top" alt={"drink"}></img>
-                <div className="card-body">
-                  <h5 className="card-title">Card title</h5>
-                  <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <Link to="#" className="btn btn-primary">Go somewhere</Link>
-                </div>
-              </div>
-              </div>
-            </li>
-            <li className="list-inline-item">
-              <div className="col-3">
-              <div className="card">
-                <img src={{ pic }} className="card-img-top" alt={"drink"}></img>
-                <div className="card-body">
-                  <h5 className="card-title">Card title</h5>
-                  <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <Link to="#" className="btn btn-primary">Go somewhere</Link>
-                </div>
-              </div>
-              </div>
-            </li>
-          </ul >
-        </div> */}
       </div >
     );
   }

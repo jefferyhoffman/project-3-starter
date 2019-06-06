@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-import { Input, TextArea } from "../../components/Form";
+import { Input, TextArea, Select, FormBtn } from "../../components/Form";
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
 
@@ -53,8 +53,11 @@ class MYDrinks extends Component {
       API.saveDrinks({
         image: this.state.image,
         name: this.state.name,
+        category: this.state.category,
+        kind: this.state.kind,
         instructions: this.state.instructions,
-        ingredients_measurements: this.state.ingredients_measurements
+        ingredients_measurements: this.state.ingredients_measurements,
+        glass: this.state.glass,
       })
         .then(res => this.loadDrinks())
         .catch(err => console.log(err));
@@ -73,7 +76,7 @@ class MYDrinks extends Component {
 
     return (
       <div>
-        <h1>View Drinks</h1>
+        <h1>My Drinks</h1>
         {drinks.map(drink=>{
           return (
             <h3>{drink.name}</h3>

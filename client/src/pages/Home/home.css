@@ -1,5 +1,27 @@
-/* .jumbotron {
-    background-image: url(../Images/pic1.jpg);
+.d-block {
+height: 600px;
+}
 
+.jumbotron {
+    background: white;
+}
 
-} */
+#title {
+    margin-top:25%;
+}
+
+.card-text-center {
+    /* background: linear-gradient(to bottom, #eef2f3 0%, #8e9eab 100%); */
+}
+
+.card-img-top {
+   height: 200px;
+}
+
+.card-top {
+    border: none;
+    height: 400px;
+    background: linear-gradient(to bottom, #eef2f3 0%, #8e9eab 100%);
+
+    /* background: linear-gradient(to bottom, #e8cbc0 0%, #636fa4 100%); */
+}

@@ -1,13 +1,15 @@
 .footer {
+    color:white;
+    margin-top: 2%;
+    margin-bottom: 0%;
     position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
-    color: white;
     text-align: center;
   }
 
-.card {
-    background-image: url(../../pages/Images/pic7.jpg); 
-
+.card-header-footer {
+      padding: 1%;
+      background: linear-gradient(to bottom, #c31432 0%, #240b36 100%);
 }
