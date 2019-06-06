@@ -12,8 +12,7 @@ import Login from '../../pages/Login/Login';
 import Secret from '../../pages/Secret/Secret';
 import Home from '../../pages/Home/Home';
 import NotFound from '../../pages/NotFound/NotFound';
-import Cart from "../../components/App/Cart.js";
-
+import Cart from "./Cart.js";
 import './App.css';
 
 class App extends Component {
@@ -88,57 +87,14 @@ class App extends Component {
             <Route path='/login' component={Login} />
             <PrivateRoute path='/secret' component={Secret} />
             <Route exact path='/' component={Home} />
+            <Route exact path='/register' component={Register} />
             <Route exact path='/' component={this.state.cart} />
             <Route exact path='/collections' component={(props) => <Collections {...props} addToCart={this.addToCart} />} />
             <Route exact path='/cart' component={Cart} />
 ?              <Route component={NotFound} />
-      
-            
-              {/* <Route path="/admin/" exact component={Home} />
-              <Route path="/admin/login" component={Login} />
-              <Route path="/admin/logout" component={Logout} />
-              <Route path="/admin/products" exact component={Products} />
-              <Route
-                path="/admin/products/categories"
-                exact
-                component={ProductCategories}
-              />
-              <Route path="/admin/orders" exact component={Orders} />
-              <Route
-                path="/admin/orders/statuses"
-                exact
-                component={OrderStatuses}
-              />
-              <Route
-                path="/admin/order/:orderId"
-                exact
-                component={OrderDetails}
-              />
-              <Route path="/admin/customers" exact component={Customers} />
-              <Route
-                path="/admin/customers/groups"
-                exact
-                component={CustomerGroups}
-              />
-              <Route
-                path="/admin/customer/:customerId"
-                exact
-                component={CustomerDetails}
-              />
-              <Route
-                path="/admin/product/:productId"
-                component={ProductDetails}
-              />
-              <Route path="/admin/pages" exact component={Pages} />
-              <Route path="/admin/pages/add" exact component={PagesDetails} />
-              <Route path="/admin/pages/:pageId" component={PagesDetails} />
-              <Route path="/admin/settings" component={Settings} />
-              <Route path="/admin/apps" component={Apps} />
-              <Route path="/admin/files" exact component={Files} />
-              <Route component={NotFound} /> */}
             </Switch>
             <Footer />
-          {/* </div> */}
+   
         </div>
       </AuthContext.Provider>
   
