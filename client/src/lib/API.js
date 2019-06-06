@@ -23,7 +23,7 @@ export default {
     addToCart: function (name, total, user) {
       return axios.post('./api/services/cart/' + user, { name, total });
     },
-    checkout: function (date, services,) {
+    checkout: function (date, services) {
       return axios({
         method: "post",
         url: "/api/users/checkout",
@@ -31,6 +31,17 @@ export default {
           services: services,
           date: date
           // authToken:authToken
+        }
+      })
+    },
+
+    buy: function (date, services) {
+      return axios({
+        method: "post",
+        url: "/api/users/buy",
+        data: {
+          services: services,
+          date: date
         }
       })
     }
