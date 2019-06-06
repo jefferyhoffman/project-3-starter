@@ -69,7 +69,7 @@ class Collections extends Component {
           />
         ))
         }
-         <Link to="/cart">
+         <Link to="/Cart">
               <button className="btn btn-primary float-right" 
                   style={{  marginRight: "10px" }}>View Cart</button>
             </Link><br/><br/><br/>
