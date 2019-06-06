@@ -3,7 +3,7 @@ import "./PaymentInfo.css"
 
 class PaymentInfo extends Component {
     state = {
-    } 
+    }
 
     render() {
         return (
@@ -26,50 +26,52 @@ class PaymentInfo extends Component {
                                         placeholder=
                                         "John M. Doe" />
 
-                                {/* <label for="email"><i className="fa fa-envelope"></i> Email</label> */}
-                                <div className='input-group mb-3'>
-                                    <div className="input-group-prepend">
-                                        <span className="input-group-text">Email</span>
-                                    </div>
-                                    <input
-                                        className='form-control'
-                                        type="text"
-                                        id="email"
-                                        name="email"
-                                        placeholder="john@example.com" />
-
-                                </div>
-
-
-                                    <label for="adr"><i className="fa fa-address-card-o"></i> Address</label>
-                                    <input
-                                        type="text"
-                                        id="adr"
-                                        name="address"
-                                        placeholder="542 W. 15th Street" />
-
-                                    <label for="city"><i className="fa fa-institution"></i> City</label>
-                                    <input
-                                        type="text"
-                                        id="city"
-                                        name="city"
-                                        placeholder="New York" />
-
                                     <div className="row">
                                         <div className="col-50">
-                                            <label for="state">State</label>
-                                            <input type="text" id="state" name="state" placeholder="NY" />
-                                        </div>
-                                        <div className="col-50">
-                                            <label for="zip">Zip</label>
-                                            <input type="text" id="zip" name="zip" placeholder="10001" />
+                                            <label for="email"><i className="fa fa-envelope"></i> Email</label>
+                                            {/* <div className='input-group mb-3'>
+                                    <div className="input-group-prepend">
+                                        <span className="input-group-text">Email</span>
+                                    </div> */}
+                                            <input
+                                                className='form-control'
+                                                type="text"
+                                                id="email"
+                                                name="email"
+                                                placeholder="john@example.com" />
+
+
+                                            <label for="adr"><i className="fa fa-address-card-o"></i> Address</label>
+                                            <input
+                                                type="text"
+                                                id="adr"
+                                                name="address"
+                                                placeholder="542 W. 15th Street" />
+
+                                            <label for="city"><i className="fa fa-institution"></i> City</label>
+                                            <input
+                                                type="text"
+                                                id="city"
+                                                name="city"
+                                                placeholder="New York" />
+
+                                            <div className="row">
+                                                <div className="col-50">
+                                                    <label for="state">State</label>
+                                                    <input type="text" id="state" name="state" placeholder="NY" />
+                                                </div>
+                                                <div className="col-50">
+                                                    <label for="zip">Zip</label>
+                                                    <input type="text" id="zip" name="zip" placeholder="10001" />
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </form>
                         </div>
                     </div>
-                </div>
+                </div >
 
                 <div className="col-sm-5">
                     <div className="card">
@@ -106,7 +108,7 @@ class PaymentInfo extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
         )
     }
 }

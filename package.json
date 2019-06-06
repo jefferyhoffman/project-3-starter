@@ -21,6 +21,7 @@
   "dependencies": {
     "mongoose": "^5.5.12",
     "react-calendar": "^2.19.0",
+    "react-items-carousel": "^2.3.6",
     "react-stripe-elements": "^3.0.0"
   }
 }
