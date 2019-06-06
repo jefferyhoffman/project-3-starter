@@ -1,35 +1,33 @@
 const booksController = require('express').Router();
 const db = require('../../models');
 
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
+
 
 booksController.get("/", function (req, res) {
+    console.log('yo')
     db.Book.findAll({})
         .then(function (allBooks) {
             res.json(allBooks);
         });
 });
+
 booksController.get("/search", function (req, res) {
-    console.log("findOne", req.body)
-    db.Book.findOne({
+    // console.log("findOne", req.body)
+    db.Book.findAll({
         where: {
-            [Op.or]: [{ title: req.body }, { author: req.body }]
+            // author: {[Op.like]: `%${req.body.search}%`}
+            [Op.or]: [{title: {[Op.like]: `%${req.body.search}%`}}, { author: {[Op.like]: `%${req.body.search}%`}}]
         },
-    }).then(() => {
-        if (title === "" && author === "") {
-            return $(".response").text('<p className="noBook">We do not have that book or author in our database please add it.</p>')
-        } else if (title !== "") {
-            res.json(req.body);
-        } else {
-            db.Books.findAll({ author })
-                .then(() => res.json(req.body)
-                )
-        }
+    }).then((data) => {
+         res.send(data)  
     })
         .catch(err => res.json(err))
 
 });
 
-booksController.post("/", function (req, res) {
+booksController.post("/post", function (req, res) {
     db.Book.create(req.body).then(createBook => {
         res.json(createBook);
     }).catch(err => res.json(err))
@@ -43,18 +41,18 @@ booksController.put("/update", function (req, res){
         })
         .then(function(dbBook) {
           res.json(dbBook);
-        });
+        }).catch(err => res.json(err))
     });
 
-booksController.delete("/:id", function(req, res) {
+booksController.delete("/delete", function(req, res) {
     db.Book.destroy({
       where: {
-        id: req.params.id
+        id: req.body.id
       }
     })
       .then(function(dbBook) {
-        res.json(dbBook);
-      });
+        console.log(dbBook);
+      }).catch(err => res.json(err))
   });
 
 module.exports = booksController;
