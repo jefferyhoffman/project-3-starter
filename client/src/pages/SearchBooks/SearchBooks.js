@@ -11,10 +11,11 @@ class HomePage extends Component {
         <div className='row'>
           <div className='col'>
             <Jumbotron>
-              <h1>WELCOME TO BOOK KEEPER </h1> <br/> <h3>Below are a list of our book...........click login/register to get started</h3>
+    <h3>Search for your books bellow</h3>
             </Jumbotron>
 
-           
+            <Input name="search" placeholder="search for a book..." />
+            <FormBtn>Search</FormBtn> <br />
             <div className="response"/>
             <hr />
             <List>

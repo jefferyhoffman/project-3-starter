@@ -42,7 +42,7 @@ class AddBookForm extends Component {
                                     type='text'
                                     name='title'
                                     placeholder='Title'
-                                    value={}
+                                    value={''}
                                     onChange={this.handleInputChange}
                                 />
                             </div>
@@ -56,7 +56,7 @@ class AddBookForm extends Component {
                                     type='text'
                                     name='author'
                                     placeholder='Author'
-                                    value={}
+                                    value={''}
                                     onChange={this.handleInputChange}
                                 />
                             </div>
@@ -70,7 +70,7 @@ class AddBookForm extends Component {
                                     type='text'
                                     name='imageURL'
                                     placeholder='Image URL'
-                                    value={}
+                                    value={''}
                                     onChange={this.handleInputChange}
                                 />
                             </div>
@@ -84,7 +84,7 @@ class AddBookForm extends Component {
                                     type='text'
                                     name='series'
                                     placeholder='Series'
-                                    value={}
+                                    value={''}
                                     onChange={this.handleInputChange}
                                 />
                             </div>
@@ -98,7 +98,7 @@ class AddBookForm extends Component {
                                     type='textarea'
                                     name='synopsis'
                                     placeholder='Synopsis'
-                                    value={}
+                                    value={''}
                                     onChange={this.handleInputChange}
                                 />
                             </div>
