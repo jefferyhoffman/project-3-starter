@@ -13,6 +13,7 @@ import Scheduling from '../../pages/Scheduling/Scheduling';
 import NotFound from '../../pages/NotFound/NotFound';
 import Checkout from '../../pages/Checkout/Checkout';
 import ClientHome from '../../pages/ClientHome/ClientHome';
+import Confirmation from '../../pages/Confirmation/Confirmation';
 
 import './App.css';
 
@@ -169,6 +170,7 @@ class App extends Component {
               />} />
             <PrivateRoute exact path='/ClientHome' component={ClientHome} />
             <PrivateRoute exact path='/Checkout' component={Checkout} />
+            <PrivateRoute exact path='/Confirmation' component={Confirmation} />
             <Route exact path='/' component={Home} />
             <Route component={NotFound} />
           </Switch>
