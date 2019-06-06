@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
+import '../Login/login.css'
 
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';

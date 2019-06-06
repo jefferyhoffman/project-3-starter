@@ -10,10 +10,8 @@ class Jumbotron extends Component {
         return (
             <div className="footer">
                 <div className="card">
-                    <div className="card-header">
+                    <div className="card-header-footer">
                         DRINKSTATION
-            </div>
-                    <div className="card-body">
                         <blockquote className="blockquote mb-0">
                             <p>Your Ultimate Stop for Drinks</p>
                             <footer className="blockquote-footer"><cite title="Source Title">Be your own Bartender</cite></footer>

@@ -8,7 +8,7 @@ import Navigation from '../../components/Navigation/Navigation';
 import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
 import Login from '../../pages/Login/Login';
 import Register from '../../pages/Register/Register';
-import Secret from '../../pages/Secret/Secret';
+// import Secret from '../../pages/Secret/Secret';
 import Home from '../../pages/Home/Home';
 import View from '../../pages/View/View';
 import Portfolio from '../../pages/Portfolio/Portfolio';
@@ -18,7 +18,6 @@ import Search from '../../pages/Search/Search';
 import NotFound from '../../pages/NotFound/NotFound';
 
 import './App.css';
-import Jumbotron from '../Jumbotron/Jumbotron';
 import Footer from '../Footer/Footer';
 
 class App extends Component {
@@ -62,13 +61,11 @@ class App extends Component {
     return (
       <AuthContext.Provider value={this.state.auth}>
         <div className='App'>
-          {/* <Jumbotron/> */}
           <Navigation />
-          <div className='container'>
             <Switch>
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />
-              <PrivateRoute path='/secret' component={Secret} />
+              {/* <PrivateRoute path='/secret' component={Secret} /> */}
               <Route exact path='/' component={Home} />
               <Route exact path='/view' component={View} />
               <PrivateRoute exact path='/portfolio' component={Portfolio} />
@@ -77,8 +74,7 @@ class App extends Component {
               <Route exact path='/search' component={Search} />
               <Route component={NotFound} />
             </Switch>
-          </div>
-          {/* <Footer/> */}
+          <Footer/>
          </div>
       </AuthContext.Provider>
     );
