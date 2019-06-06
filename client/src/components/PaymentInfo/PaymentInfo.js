@@ -3,7 +3,7 @@ import "./PaymentInfo.css"
 
 class PaymentInfo extends Component {
     state = {
-    }
+    } 
 
     render() {
         return (
