@@ -86,8 +86,8 @@ class App extends Component {
                 calendarInfo={this.state.calendarInfo}
                 closeModal={this.closeModal}
               />} />
-            <Route exact path='/ClientHome' component={ClientHome} />
-            <Route exact path='/Checkout' component={Checkout} />
+            <PrivateRoute exact path='/ClientHome' component={ClientHome} />
+            <PrivateRoute exact path='/Checkout' component={Checkout} />
             <Route exact path='/' component={Home} />
             <Route component={NotFound} />
           </Switch>
