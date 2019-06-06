@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import "./PaymentInfo.css"
-import "./Confirmation"
+// import "./Confirmation"
 
 
 class PaymentInfo extends Component {
