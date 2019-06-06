@@ -74,7 +74,7 @@ router.post('/:id/stripe', (req, res, next) => {
     return routeHelpers.createCharge(charge, productID, userID)
 //   })
   .then(() => {
-    res.JSON({status: 'sucess'});
+    res.JSON({status: 'success'});
   })
   .catch((err) => {
     return next(err);

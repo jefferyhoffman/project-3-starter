@@ -18,6 +18,10 @@ class Modal extends Component {
         console.log(this.props)
         return (
             <div className="App">
+<<<<<<< HEAD
+
+=======
+>>>>>>> 8d5cf6a23cf411a6c2545cdc09a5bb415f391a5d
                 <div className="col-lg" >
                     <h2 className="h2-responsive product-name" >
                         <strong >June Special: Individual Treatments Only $50!</strong>
@@ -209,6 +213,20 @@ class Modal extends Component {
                                             </div>
                                             <Link className='btn btn-outline-secondary waves-effect' to='/checkout'>Checkout</Link>
                                         </div>
+<<<<<<< HEAD
+                                        <p className="text-center">
+                                            <strong>Please note any important information about your home/yard below.</strong></p>
+
+                                        <div className="md-form">
+                                            <textarea type="text" id="form79textarea" className="md-textarea form-control"
+                                                rows="3"></textarea>
+                                        </div>
+                                        <Link className='btn btn-outline-secondary waves-effect' to='/Checkout'>Checkout</Link>
+
+                                        {/* <a type="button" className="btn btn-outline-secondary waves-effect"
+                                            data-dismiss="modal">Checkout</a> */}
+=======
+>>>>>>> 8d5cf6a23cf411a6c2545cdc09a5bb415f391a5d
                                     </div>
                                 </div>
                             </div>
