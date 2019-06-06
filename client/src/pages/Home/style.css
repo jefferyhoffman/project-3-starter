@@ -42,7 +42,7 @@ video {
    height: 800px;
    position: absolute;
    width: 100%;
-   bottom: 240px;
+   bottom: 100px;
    left: 0;
 }
 .text-overlay {
@@ -51,8 +51,8 @@ video {
     font-weight: 600;
     font-size: 80px !important;
     position: absolute;
-    top: 150px;
-    left: 34%;
+    top: 180px;
+    left: 30%;
     letter-spacing: 18px !important;
     text-shadow: 4px 4px 4px rgba(133, 133, 133, 0.571),
                  -3px -3px 4px rgba(136, 136, 136, 0.529);
