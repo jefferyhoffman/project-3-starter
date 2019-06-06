@@ -12,6 +12,8 @@ const CheckoutList = (props) => {
     ))
 }
 
+
+
 const Product = (props) => {
     return (
         <>
@@ -56,6 +58,7 @@ class Checkout extends Component {
     // }
 
     render() {
+        console.log(this.props)
         return (
             <div>
                 <CheckoutList products={this.state.products} />
