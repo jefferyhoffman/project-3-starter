@@ -4,24 +4,28 @@ import { Input, TextArea, FormBtn } from "../../components/Form";
 import { List, ListItem } from "../../components/List";
 // import DeleteBtn from "../../components/DeleteBtn";
 
-class HomePage extends Component {
+class FavoriteBooks extends Component {
   render() {
     return (
       <div className='Home'>
         <div className='row'>
           <div className='col'>
             <Jumbotron>
-              <h1>WELCOME TO BOOK KEEPER </h1> <br/> <h3>Below are a list of our book...........click login/register to get started</h3>
+              <h1>Add a book to your list of books with a summary or notes</h1>
             </Jumbotron>
-
-           
-            <div className="response"/>
+            <form>
+              <Input name="title" placeholder="Title (required)" />
+              <Input name="author" placeholder="Author (required)" />
+              <TextArea name="synopsis" placeholder="Synopsis (Optional)" />
+              <FormBtn>Add a Book</FormBtn>
+            </form>
             <hr />
             <List>
               1.book
               2.book
               3.book
               </List>
+
           </div>
         </div>
       </div>
@@ -29,4 +33,4 @@ class HomePage extends Component {
   }
 }
 
-export default HomePage;
+export default FavoriteBooks;

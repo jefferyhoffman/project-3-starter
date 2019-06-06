@@ -11,7 +11,7 @@ usersController.get('/me', JWTVerifier, (req, res) => {
 usersController.post('/login', (req, res) => {
   const { email, password } = req.body;
 
-  db.Users.findOne({ email })
+  db.User.findOne({ where: { email } })
     .then(user => {
       if (!user || !user.comparePassword(password)) {
         return res.status(401).send("Unauthorized");
@@ -21,7 +21,8 @@ usersController.post('/login', (req, res) => {
         token: jwt.sign({ sub: user.id }, process.env.JWT_SECRET),
         user
       });
-    });
+    })
+    .catch(err => console.log(err))
 });
 
 usersController.post('/register', (req, res) => {
@@ -33,3 +34,5 @@ usersController.post('/register', (req, res) => {
 });
 
 module.exports = usersController;
+// db.User.create({ email: 'katja.dulmaine@gmail.com', password: 'password' })
+//  .then(created => console.log(created))
