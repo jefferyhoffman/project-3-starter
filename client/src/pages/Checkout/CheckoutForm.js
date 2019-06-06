@@ -33,15 +33,19 @@ class CheckoutForm extends React.Component {
         name: 'Jenny Rosen',
       },
     });
+
+    //API.Services.checkout(date,services)
+    //  .then(result => consol.log(result))
+    //  .catch(err => console.log(err))
   };
  
   render() {
     return (
+      <>
       <form onSubmit={this.handleSubmit}>
-        {/* <AddressSection /> */}
         <CardSection />
-        <button>Confirm order</button>
       </form>
+      </>
     );
   }
 }
