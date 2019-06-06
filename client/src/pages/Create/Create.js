@@ -4,7 +4,6 @@ import { Input, TextArea, Select, FormBtn } from "../../components/Form";
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
 import login from "../Images/login.jpg";
-import '../Create/create.css'
 
 class Create extends Component {
   static contextType = AuthContext;
@@ -55,14 +54,15 @@ class Create extends Component {
 
     return (
       <div>
-        <div className="card-mb-3">
+        <div className="card mb-3">
           <div className="row no-gutters">
-            <div className="col-md-5">
+            <div className="col-md-4">
               <img src={login} className="card-img" alt="drink" />
             </div>
-            <div className="col-md-7">
+            <div className="col-md-8">
               <div className="card-body">
                 <h5 className="card-title">Craft your drink</h5>
+                <p className="card-text">Add the reciepe of your favroite drink!</p>
                 <form onSubmit={this.handleSubmit}>
                   <div className="form-group">
                     <div className="form-group">
@@ -142,8 +142,8 @@ class Create extends Component {
 
                     </Select>
                   </div>
-                  <FormBtn type="button" className="btn btn-primary btn-lg btn-block" onClick={() => this.handleSubmit(authToken)}>Submit Drink</FormBtn>
-                  {/* <FormBtn onClick={() => this.handleSubmit(authToken)}>Submit Drink</FormBtn> */}
+                  {/* <FormBtn type="button" className="btn btn-primary btn-lg btn-block" onClick={() => this.handleSubmit(authToken)}>Submit Drink</FormBtn> */}
+                  <FormBtn onClick={() => this.handleSubmit(authToken)}>Submit Drink</FormBtn>
                 </form>
               </div>
             </div>

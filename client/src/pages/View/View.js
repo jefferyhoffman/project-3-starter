@@ -67,6 +67,11 @@ class View extends Component {
             <>
             <h3>{drink.name}</h3>
             <p>{drink.instructions}</p>
+            <p>{drink.category}</p>
+            <p>{drink.kind}</p>
+            <p>{drink.ingredients_measurements}</p>
+            <p><img src={drink.image} alt={drink.name} /></p> 
+            <p>{drink.glass}</p>
             </>
           )
         })}
@@ -77,15 +82,3 @@ class View extends Component {
 
 export default View;
 
-// name: { type: String, required: true },
-//     category: { type: String },
-//     kind: { type: String },
-//     image: { type: String, default: "http://placehold.it/200x200" },
-//     instructions: { type: String, required: true },
-//     ingredients_measurements: { type: String},
-//     // ingredient1: { type: String, required: true },
-//     // ingredient2: { type: String },
-//     // ingredient3: { type: String },
-//     // ingredient4: { type: String },
-//     // ingredient5: { type: String },
-//     glass:
