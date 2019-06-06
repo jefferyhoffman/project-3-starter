@@ -3,7 +3,7 @@ import { Redirect } from 'react-router-dom';
 import { Input, TextArea, Select, FormBtn } from "../../components/Form";
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
-import login from "../Images/login.jpg";
+import create from "../Images/create.jpg";
 import '../Create/create.css'
 
 class Create extends Component {
@@ -58,7 +58,7 @@ class Create extends Component {
         <div className="card-mb-3">
           <div className="row no-gutters">
             <div className="col-md-5">
-              <img src={login} className="card-img" alt="drink" />
+              <img src={create} className="card-img" alt="drink" />
             </div>
             <div className="col-md-7">
               <div className="card-body">

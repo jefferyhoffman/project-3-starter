@@ -8,7 +8,6 @@ import top1 from "../Images/top1.jpg";
 import top2 from "../Images/top2.jpg";
 import top3 from "../Images/top3.jpg";
 import top4 from "../Images/top4.jpg";
-import jumbo from "../Images/jumbo.jpg";
 import jumbo1 from "../Images/jumbo1.jpg";
 import jumbo2 from "../Images/jumbo2.jpg";
 import jumbo3 from "../Images/jumbo3.jpg";

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-import '../Login/login.css'
+import '../Login/login.css';
+import login from '../Images/login.jpg';
 
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
@@ -40,7 +41,7 @@ class Login extends Component {
   }
 
   render() {
-    const { from } = this.props.location.state || { from: { pathname: "/secret" } };
+    const { from } = this.props.location.state || { from: { pathname: "/home" } };
     const { redirectToReferrer } = this.state;
 
     if (redirectToReferrer) {
@@ -48,23 +49,26 @@ class Login extends Component {
     }
 
     return (
-      <div className='Login'>
-        <div className='row'>
-          <div className='col'>
-            <h1>Login</h1>
-          </div>
-        </div>
-        {this.state.error &&
+      <div>
+        <img className="bg" src={login} alt="" />
+        <div className='Login'>
+          <h1>Sign-In DrinkStation</h1>
           <div className='row'>
-            <div className='col'>
-              <div className='alert alert-danger mb-3' role='alert'>
-                {this.state.error}
+            <div className='col-4-login'>
+              {this.state.error &&
+                <div className='row'>
+                  <div className='col'>
+                    <div className='alert alert-danger mb-3' role='alert'>
+                      {this.state.error}
+                    </div>
+                  </div>
+                </div>}
+              <div className='row'>
+                <div className='col'>
+                  <LoginForm onSubmit={this.handleSubmit} />
+                </div>
               </div>
             </div>
-          </div>}
-        <div className='row'>
-          <div className='col'>
-            <LoginForm onSubmit={this.handleSubmit} />
           </div>
         </div>
       </div>
