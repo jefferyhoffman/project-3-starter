@@ -53,4 +53,17 @@ a.navbar-brand {
     letter-spacing: 4px;
     /* font-size: 20px; */
 }
+#cartNav {
+    font-size: 16px;
+    background: black;
+    width: 50px;
+    text-align: center;
+    border-radius: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+}
+#cartNav:hover {
+    color: gray;
+    font-size: 22px;
+}
 

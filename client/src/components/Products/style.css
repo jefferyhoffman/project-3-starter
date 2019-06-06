@@ -58,3 +58,13 @@
   align-content: flex-start;
   overflow: auto;
 }
+#productCart {
+  margin-top: 10px;
+  color: rgb(113, 113, 113);
+  cursor: pointer;
+  font-size: 25px;
+}
+#productCart:hover {
+  color: rgb(249, 228, 6);
+  font-size: 35px;
+}
