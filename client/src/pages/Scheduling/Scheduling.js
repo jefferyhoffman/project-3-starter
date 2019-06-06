@@ -39,6 +39,7 @@ class Schedule extends Component {
 						 pruning = {this.props.pruning}
 						 soil = {this.props.soil}
 						 mulch = {this.props.mulch}
+						 topiary = {this.props.topiary}
 						 />
 					</div>
 				</div>

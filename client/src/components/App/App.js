@@ -166,11 +166,11 @@ class App extends Component {
                 closeModal={this.closeModal}
                 handleModalUpdate={this.handleModalUpdate}
                 {...this.state.modalInfo}
-              />} />
+            /> } />
             <Route exact path='/ClientHome' component={ClientHome} />
             <Route exact path='/Checkout' component={(props) =>
               <Checkout {...this.state.modalInfo} />}
-             />
+              />
             <Route exact path='/' component={Home} />
             <Route component={NotFound} />
           </Switch>

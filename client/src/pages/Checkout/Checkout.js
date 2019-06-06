@@ -31,7 +31,6 @@ const CheckoutList = (props) => {
         </div>
     )
 }
-
 class Checkout extends Component {
     state = {
         products: [
@@ -129,6 +128,13 @@ class Checkout extends Component {
             products.push({
                 id: 12,
                 title: "Mulch",
+                price: 50
+            })
+        }
+        if (this.props.topiary) {
+            products.push({
+                id: 12,
+                title: "Topiary",
                 price: 50
             })
         }
