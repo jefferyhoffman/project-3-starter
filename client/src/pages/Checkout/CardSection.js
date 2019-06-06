@@ -1,5 +1,7 @@
 import React from 'react';
 import { CardElement } from 'react-stripe-elements';
+// import Confirmation from '../Confirmation.js';
+import { Link } from 'react-router-dom';
 
 class CardSection extends React.Component {
   render() {
@@ -9,7 +11,7 @@ class CardSection extends React.Component {
           Payment details
         <br />
           <CardElement style={{ base: { fontSize: '20px', margin: '30px', padding: '10px' } }} />
-          <button style={{ margin: '40px', borderRadius: '4px' }} to='/Confirmation'>Confirm order</button>
+          <Link className="btn" style={{ margin: '40px', borderRadius: '4px' }} to='/Confirmation' onClick={this.toggleCollapse}> Confirm order</Link>
         </label>
       </>
     );
