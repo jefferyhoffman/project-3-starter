@@ -32,7 +32,6 @@ class ClientHome extends Component {
     this.setState({ show: true });
   }
 
-
   handleSubmit = event => {
     const { email, password, firstName, lastName, phone, address } = this.state;
     console.log(this.props)
@@ -55,7 +54,7 @@ class ClientHome extends Component {
         <br />
         <br />
         <div className="row">
-
+        {/* Account Info Card */}
         <div className="col-sm-3">
         <button className="card p-3 mb-5 rounded" data-toggle="modal" data-target="#exampleModalCenter">
           <div className="card-body">
@@ -66,7 +65,7 @@ class ClientHome extends Component {
         </button>
         <Modal visible={false} onClickBackdrop={this.modalBackdropClicked} className="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div className="modal-header" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <h5 class="modal-title text-success" id="exampleModalLongTitle">Edit Account Info</h5>
+            <h5 class="modal-title text-success" id="exampleModalLongTitle"><strong>Edit Account Info</strong></h5>
                 <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -148,9 +147,7 @@ class ClientHome extends Component {
             </form>
           </Modal>
           </div>
-          
-
-
+        {/* Completed Card */}
         <div className="col-sm-3">
         <button className="card p-3 mb-5 rounded" data-toggle="modal" data-target="#completedModal">
           <div className="card-body">
@@ -161,18 +158,17 @@ class ClientHome extends Component {
         </button>
         <Modal visible={false} onClickBackdrop={this.modalBackdropClicked} className="completedModal-lg" dialogClassName="modal-lg" id="completedModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div className="modal-header" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <h5 class="modal-title text-success" id="exampleModalLongTitle">Completed Services</h5>
+            <h5 class="modal-title text-success" id="exampleModalLongTitle"><strong>Completed Services</strong></h5>
                 <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-              <br />
               <div>
               <table className="table">
                 <thead>
                   <tr>
-                    <th scope="col">Date</th>
-                    <th scope="col">Service</th>
+                    <th scope="col"><strong>Date</strong></th>
+                    <th scope="col"><strong>Service</strong></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -190,6 +186,7 @@ class ClientHome extends Component {
           </Modal>
         </div>
 
+        {/* Upcoming Card */}
         <div className="col-sm-3">
         <button className="card p-3 mb-5 rounded" data-toggle="modal" data-target="#upcomingModal">
           <div className="card-body">
@@ -200,17 +197,16 @@ class ClientHome extends Component {
         </button>
         <Modal visible={false} onClickBackdrop={this.modalBackdropClicked} className="upcomingModal-lg" id="upcomingModal" dialogClassName="modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div className="modal-header" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <h5 class="modal-title text-success" id="exampleModalLongTitle">Upcoming Services</h5>
+            <h5 class="modal-title text-success" id="exampleModalLongTitle"><strong>Upcoming Services</strong></h5>
                 <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-              <br />
               <table className="table">
                 <thead>
                   <tr>
-                    <th scope="col">Date</th>
-                    <th scope="col">Service</th>
+                  <th scope="col"><strong>Date</strong></th>
+                  <th scope="col"><strong>Service</strong></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -226,9 +222,8 @@ class ClientHome extends Component {
               </table>
           </Modal>
         </div>
-
-
-
+      
+      {/* Scheduling Card */}
       <div className="col-sm-3">
       <button className="card p-3 mb-5 rounded">
       <Link className='nav-link' to='/scheduling' onClick={this.toggleCollapse}>
