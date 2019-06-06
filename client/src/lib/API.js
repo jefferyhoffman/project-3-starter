@@ -14,7 +14,18 @@ export default {
       });
     }
   },
+  Books: { 
+    getBooks: () => axios.get('/api/books'),
 
+    getBook: (search) => axios.get('/api/search', search),
+
+    createBook: (bookData) => axios.post('/api/books/post', bookData),
+
+    updateBook: (title) => axios.update('api/books/update', title),
+
+    deleteBook: (id) => axios.delete('api/books/delete', id),
+
+  },
   Secrets: {
     getAll: function (authToken) {
       return axios.get('/api/secrets', {

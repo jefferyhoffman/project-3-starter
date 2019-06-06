@@ -31,7 +31,7 @@ usersController.post('/register', (req, res) => {
   db.Users.create({ email, password })
     .then(user => res.json(user))
     .catch(err => res.json(err));
-});
+}); 
 
 module.exports = usersController;
 // db.User.create({ email: 'katja.dulmaine@gmail.com', password: 'password' })

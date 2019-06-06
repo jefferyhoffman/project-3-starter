@@ -6,11 +6,12 @@ import TokenStore from '../../lib/TokenStore';
 import AuthContext from '../../contexts/AuthContext';
 import Navigation from '../../components/Navigation/Navigation';
 import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
+import AddBooksForm from '../../components/AddBookForm/addBookForm';
 import Login from '../../pages/Login/Login';
 // import Secret from '../../pages/Secret/Secret';
 import Home from '../../pages/Home/Home';
 import NotFound from '../../pages/NotFound/NotFound';
-
+import AddBooksForm from '../../pages/AddBookForm/AddBookForm';
 import './App.css';
 import AddBooks from '../../pages/AddBooks/AddBooks';
 
@@ -58,6 +59,7 @@ class App extends Component {
               <Route path='/login' component={Login} />
               {/* <PrivateRoute path='/secret' component={Secret} /> */}
               <PrivateRoute path='/AddBooks' component={AddBooks} />
+              <PrivateRoute path='/AddBookForm' component={AddBookForm} />
               <PrivateRoute exact path='/' component={Home} />
               <Route component={NotFound} />
           </Switch>

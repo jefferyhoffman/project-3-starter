@@ -19,7 +19,6 @@ class AddBookForm extends Component {
 
     handleAddBook = event => {
        const { title, author, imageUrl, series, synopsis } = this.state;
-      
 
         this.props.onAdd(title, author, imageUrl, series, synopsis);
         event.preventDefault();
