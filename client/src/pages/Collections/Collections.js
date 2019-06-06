@@ -46,13 +46,13 @@ class Collections extends Component {
     return (
       <div className="container-fluid">
        <div className="row" id="row1Collection">
-          <video autoPlay muted loop id="videoBg" src={watchVid} type="video/mp4"></video>
-        <div className="text-overlay">
-            KOSCOWIX
+          <video autoPlay muted loop id="videoBgC" src={watchVid} type="video/mp4"></video>
+        <div className="text-overlayC">
+            Collections
         </div>
-        <p className="p-title">
+        {/* <p className="p-title">
           Collections
-        </p>  
+        </p>   */}
        </div>
          <Wrapper>
         {this.state.items.map(item => (
