@@ -12,6 +12,8 @@ const CheckoutList = (props) => {
     ))
 }
 
+
+
 const Product = (props) => {
     return (
         // <div class="card">
@@ -21,11 +23,11 @@ const Product = (props) => {
         //         <p class="card-text">{props.product.description}</p>
         //    <div class="col-sm-7">
         <div className="col-sm-7">
-            <div class="card">
-                <div class="card-body">
-                    <h2 class="card-title">Your Order</h2>
-                    <h5 class="card-title">Selected Services: {props.product.title}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Total Price: ${props.product.price}</h6>
+            <div className="card">
+                <div className="card-body">
+                    <h2 className="card-title">Your Order</h2>
+                    <h5 className="card-title">Selected Services: {props.product.title}</h5>
+                    <h6 className="card-subtitle mb-2 text-muted">Total Price: ${props.product.price}</h6>
                 </div>
             </div>
         </div>
@@ -50,10 +52,11 @@ class Checkout extends Component {
     // }
 
     render() {
+        console.log(this.props)
         return (
             <div>
                 <StripeProvider apiKey="k_test_XnGjYTSLwoIxJVpB5iIDHyXZ00Q9tfKq2U">
-                    <myStoreCheckout />
+                <myStoreCheckout />
                 </StripeProvider>
                 <CheckoutList products={this.state.products}
                 />

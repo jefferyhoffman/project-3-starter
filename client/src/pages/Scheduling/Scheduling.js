@@ -23,8 +23,23 @@ class Schedule extends Component {
 				<div id="myModal" className="modal" style={showModal ? { display: 'block' } : { display: 'none' }}>
 					<div className="modal-content">
 						<span className="close" onClick={this.props.closeModal}>&times;</span>
-						<Modal {...this.props.calendarInfo} onChange={this.handleServiceChange} />
-						{/* <Checkout {...this.state} /> */}
+						<Modal {...this.props.calendarInfo}
+						 onChange={this.handleServiceChange}
+						 handleModalUpdate={this.props.handleModalUpdate}
+						 total = {this.props.total} 
+						 premiumPckg = {this.props.premiumPckg}
+						 upgradedPckg = {this.props.upgradedPckg}
+						 standardPckg = {this.props.standardPckg}
+						 aeration = {this.props.aeration}
+						 reseeding = {this.props.reseeding}
+						 trimming = {this.props.trimming}
+						 pineNeedles = {this.props.pineNeedles}
+						 leafRemoval =  {this.props.leafRemoval}
+						 pesticide = {this.props.pesticide}
+						 pruning = {this.props.pruning}
+						 soil = {this.props.soil}
+						 mulch = {this.props.mulch}
+						 />
 					</div>
 				</div>
 			</div>
