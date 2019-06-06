@@ -36,15 +36,15 @@ class App extends Component {
         onLogin: this.handleLogin,
         onLogout: this.handleLogout
       },
-      cart: {},
+      cart: [],
       itemCount: 0
     }
 
     this.addToCart = (item) => {
-      let cart = {
+      let cart = [
         ...this.state.cart,
-        [item.id]: item,
-      }
+        item
+      ]
       this.setState({
         cart,
       })
@@ -53,7 +53,7 @@ class App extends Component {
 
 
   componentDidMount() {
-    let itemCount = Object.keys(this.state.cart).length
+    let itemCount = this.state.cart.length
     this.setState({
       itemCount
     })
@@ -76,7 +76,7 @@ class App extends Component {
   }
 
   render() {
-    console.log("this.props")
+    console.log(this.state)
     return (
       <AuthContext.Provider value={this.state.auth}>
         <div className='App'>
@@ -88,10 +88,12 @@ class App extends Component {
             <PrivateRoute path='/secret' component={Secret} />
             <Route exact path='/' component={Home} />
             <Route exact path='/register' component={Register} />
-            <Route exact path='/' component={this.state.cart} />
             <Route exact path='/collections' component={(props) => <Collections {...props} addToCart={this.addToCart} />} />
-            <Route exact path='/cart' component={Cart} />
-?              <Route component={NotFound} />
+            <Route exact path='/cart' component={(props) => <Cart {...props} userCart={this.state.cart} />}/>
+?           <Route component={NotFound} />
+      
+            
+             
             </Switch>
             <Footer />
    
