@@ -19,7 +19,8 @@
     "nodemon": "^1.18.10"
   },
   "dependencies": {
+    "mongoose": "^5.5.12",
     "react-calendar": "^2.19.0",
-    "mongoose": "^5.5.12"
+    "react-stripe-elements": "^3.0.0"
   }
 }
