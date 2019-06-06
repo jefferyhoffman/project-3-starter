@@ -22,20 +22,27 @@ class Navigation extends Component {
     const { collapsed } = this.state;
     const targetClass = `collapse navbar-collapse ${!collapsed && 'show'}`;
     const togglerClass = `navbar-toggler ${collapsed && 'collapsed'}`;
+    let homeIcon = '/';
+
+    if (user) {
+      homeIcon = '#'
+    }
 
     return (
       <div className='Navigation'>
         <nav className='navbar navbar-expand-lg navbar-light bg-light mb-3'>
-          <Link className='navbar-brand' to='#'>Book Keeper</Link>
+          <Link className='navbar-brand' to={homeIcon}>Book Keeper</Link>
           <button className={togglerClass} onClick={this.toggleCollapse} data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
             <span className='navbar-toggler-icon'></span>
           </button>
 
           <div className={targetClass} id='navbarSupportedContent'>
             <ul className='navbar-nav mr-auto'>
+            {user &&
               <li className='nav-item'>
-                <Link className='nav-link' to='/' onClick={this.toggleCollapse}>Home</Link>
-              </li>
+                <Link className='nav-link' to='/SearchBooks' onClick={this.toggleCollapse}>Search Books</Link>
+              </li>}
+      
               {/* {user &&
                 <li className='nav-item'>
                   <Link className='nav-link' to='/secret' onClick={this.toggleCollapse}>Secret</Link>
@@ -43,7 +50,11 @@ class Navigation extends Component {
             
               {user &&
                 <li className='nav-item'>
-                  <Link className='nav-link' to='/AddBooks' onClick={this.toggleCollapse}>AddBooks</Link>
+                  <Link className='nav-link' to='/MyLibrary' onClick={this.toggleCollapse}>My Library</Link>
+                </li>}
+              {user &&
+                <li className='nav-item'>
+                  <Link className='nav-link' to='/AddBooksForm' onClick={this.toggleCollapse}>Add Books</Link>
                 </li>}
               
             </ul>
