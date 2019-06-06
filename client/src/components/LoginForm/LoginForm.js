@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+
+
 class LoginForm extends Component {
   state = {
     email: '',
@@ -25,7 +27,8 @@ class LoginForm extends Component {
     const { email, password } = this.state;
 
     return (
-      <div className='LoginForm'>
+      <div className="card">
+        <div className="card-body"></div>
         <div className='card'>
           <div className='card-body'>
             <form className='LoginForm' onSubmit={this.handleSubmit}>
@@ -59,7 +62,7 @@ class LoginForm extends Component {
                 />
               </div>
 
-              <button className='btn btn-primary' type='submit'>Login</button>
+              <button className='btn btn-primary' type='submit'>Sign In</button>
             </form>
           </div>
         </div>
@@ -67,6 +70,8 @@ class LoginForm extends Component {
     )
   }
 }
+
+
 
 export default LoginForm;
 

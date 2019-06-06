@@ -3,7 +3,8 @@ import { Redirect } from 'react-router-dom';
 import { Input, TextArea, Select, FormBtn } from "../../components/Form";
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
-import login from "../Images/login.jpg";
+import create from "../Images/create.jpg";
+import '../Create/create.css'
 
 class Create extends Component {
   static contextType = AuthContext;
@@ -56,8 +57,8 @@ class Create extends Component {
       <div>
         <div className="card mb-3">
           <div className="row no-gutters">
-            <div className="col-md-4">
-              <img src={login} className="card-img" alt="drink" />
+            <div className="col-md-5">
+              <img src={create} className="card-img" alt="drink" />
             </div>
             <div className="col-md-8">
               <div className="card-body">
