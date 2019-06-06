@@ -59,11 +59,18 @@ a.navbar-brand {
     width: 50px;
     text-align: center;
     border-radius: 20px;
-    height: 20px;
-    margin-bottom: 10px;
+    height: 18px;
+    margin: 2px 0px;
 }
 #cartNav:hover {
     color: gray;
-    font-size: 22px;
+    font-size: 24px;
 }
-
+#profileIcon {
+    font-size: 18px;
+    margin: 2px 10px 0 10px;
+}
+#profileIcon:hover {
+    color: gray;
+    font-size: 24px;
+}
