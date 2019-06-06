@@ -3,7 +3,7 @@ import PaymentInfo from "../../components/PaymentInfo/PaymentInfo"
 import "./Checkout.css"
 import { StripeProvider } from 'react-stripe-elements';
 // import API from "../../lib/API";
-import MyStoreCheckout from './MyStoreCheckout';
+import myStoreCheckout from './myStoreCheckout';
 
 
 const CheckoutList = (props) => {
@@ -14,11 +14,19 @@ const CheckoutList = (props) => {
 
 const Product = (props) => {
     return (
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">{props.product.title}</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Price: ${props.product.price}</h6>
-                <p class="card-text">{props.product.description}</p>
+        // <div class="card">
+        //     <div class="card-body">
+        //         <h5 class="card-title">{props.product.title}</h5>
+        //         <h6 class="card-subtitle mb-2 text-muted">Price: ${props.product.price}</h6>
+        //         <p class="card-text">{props.product.description}</p>
+        //    <div class="col-sm-7">
+        <div className="col-sm-7">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Your Order</h2>
+                    <h5 class="card-title">Selected Services: {props.product.title}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Total Price: ${props.product.price}</h6>
+                </div>
             </div>
         </div>
     )
@@ -26,14 +34,14 @@ const Product = (props) => {
 
 class Checkout extends Component {
     state = {
-        // products: [
-        //     {
-        //         id: 'lkjhasdlkgfjhdlfgkjh4356897',
-        //         title: 'Thing 1',
-        //         description: 'the ultimate lawn fertilizer',
-        //         price: 100.00
-        //     }
-        // ]
+        products: [
+            {
+                id: '1234',
+                title: 'Service 1',
+                // description: 'the ultimate lawn fertilizer',
+                price: 100.00
+            }
+        ]
 
     };
 
@@ -45,11 +53,11 @@ class Checkout extends Component {
         return (
             <div>
                 <StripeProvider apiKey="k_test_XnGjYTSLwoIxJVpB5iIDHyXZ00Q9tfKq2U">
-                    <MyStoreCheckout />
+                    <myStoreCheckout />
                 </StripeProvider>
-                {/* <CheckoutList products={this.state.products} */}
-                {/* /> */}
-                {/* <PaymentInfo /> */}
+                <CheckoutList products={this.state.products}
+                />
+                <PaymentInfo />
             </div>
         )
     }
