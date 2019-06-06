@@ -56,7 +56,7 @@ class ClientHome extends Component {
         <br />
         <div className="row">
 
-        <div className="col-sm">
+        <div className="col-sm-3">
         <button className="card p-3 mb-5 rounded" data-toggle="modal" data-target="#exampleModalCenter">
           <div className="card-body">
             <h1 className="card-title"><i className="fas fa-user-edit"></i></h1>
@@ -151,7 +151,7 @@ class ClientHome extends Component {
           
 
 
-        <div className="col-sm">
+        <div className="col-sm-3">
         <button className="card p-3 mb-5 rounded" data-toggle="modal" data-target="#completedModal">
           <div className="card-body">
             <h1 className="card-title"><i className="fas fa-calendar-check"></i></h1>
@@ -190,7 +190,7 @@ class ClientHome extends Component {
           </Modal>
         </div>
 
-        <div className="col-sm">
+        <div className="col-sm-3">
         <button className="card p-3 mb-5 rounded" data-toggle="modal" data-target="#upcomingModal">
           <div className="card-body">
             <h1 className="card-title"><i className="fas fa-calendar-day"></i></h1>
@@ -229,7 +229,7 @@ class ClientHome extends Component {
 
 
 
-      <div className="col">
+      <div className="col-sm-3">
       <button className="card p-3 mb-5 rounded">
       <Link className='nav-link' to='/scheduling' onClick={this.toggleCollapse}>
         <div className="card-body">
