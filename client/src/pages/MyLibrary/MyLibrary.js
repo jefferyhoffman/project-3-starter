@@ -11,14 +11,14 @@ class FavoriteBooks extends Component {
         <div className='row'>
           <div className='col'>
             <Jumbotron>
-              <h1>Add a book to your list of books with a summary or notes</h1>
+              <h1>Library of all your Books!!!!</h1>
             </Jumbotron>
-            <form>
+            {/* <form>
               <Input name="title" placeholder="Title (required)" />
               <Input name="author" placeholder="Author (required)" />
               <TextArea name="synopsis" placeholder="Synopsis (Optional)" />
               <FormBtn>Add a Book</FormBtn>
-            </form>
+            </form> */}
             <hr />
             <List>
               1.book

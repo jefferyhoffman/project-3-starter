@@ -6,14 +6,14 @@ import TokenStore from '../../lib/TokenStore';
 import AuthContext from '../../contexts/AuthContext';
 import Navigation from '../../components/Navigation/Navigation';
 import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
-import AddBooksForm from '../../components/AddBookForm/addBookForm';
+// import AddBook from '../../components/AddBook/AddBook';
 import Login from '../../pages/Login/Login';
 // import Secret from '../../pages/Secret/Secret';
 import Home from '../../pages/Home/Home';
 import NotFound from '../../pages/NotFound/NotFound';
 import './App.css';
 import MyLibrary from '../../pages/MyLibrary/MyLibrary';
-import AddBooksForm from '../../pages/AddBooks/AddBooks';
+import AddBooks from '../../pages/AddBooks/AddBooks';
 import SearchBooks from '../../pages/SearchBooks/SearchBooks'
 class App extends Component {
   constructor(props) {
@@ -61,7 +61,7 @@ class App extends Component {
               {/* <PrivateRoute path='/secret' component={Secret} /> */}
               <PrivateRoute path='/MyLibrary' component={MyLibrary} />
               <PrivateRoute path='/SearchBooks' component={SearchBooks} />
-              <PrivateRoute path='/AddBooksForm' component={AddBooksForm} />
+              <PrivateRoute path='/AddBooks' component={AddBooks} />
               <Route component={NotFound} />
           </Switch>
           </div>

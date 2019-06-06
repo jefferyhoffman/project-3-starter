@@ -54,7 +54,7 @@ class Navigation extends Component {
                 </li>}
               {user &&
                 <li className='nav-item'>
-                  <Link className='nav-link' to='/AddBooksForm' onClick={this.toggleCollapse}>Add Books</Link>
+                  <Link className='nav-link' to='/AddBooks' onClick={this.toggleCollapse}>Add Books</Link>
                 </li>}
               
             </ul>
