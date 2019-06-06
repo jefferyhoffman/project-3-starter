@@ -41,7 +41,23 @@ class App extends Component {
       calendarInfo: {
         date: new Date(),
         showModal: false
+      },
+      modalInfo: {
+        total:0,
+        premiumPckg: false,
+        upgradedPckg: false,
+        standardPckg: false,
+        aeration: false,
+        reseeding: false,
+        trimming: false,
+        pineNeedles: false,
+        leafRemoval: false,
+        pesticide: false,
+        pruning: false,
+        soil: false,
+        mulch: false
       }
+      
     }
   }
 
@@ -51,6 +67,68 @@ class App extends Component {
     })
   }
 
+  handleModalUpdate = (name, value) => {
+    this.setState({
+      modalInfo:{
+        ...this.state.modalInfo,
+        [name]: value
+      }
+      
+  }, 
+  () => {
+      // Calculation to determine total
+      var total = 0;
+      if (this.state.modalInfo.premiumPckg) {
+          total += 350
+      }
+      if (this.state.modalInfo.upgradedPckg) {
+          total += 200
+      }
+      if (this.state.modalInfo.standardPckg) {
+          total += 100
+      }
+      if (this.state.modalInfo.aeration) {
+          total += 50
+      }
+      if (this.state.modalInfo.reseeding) {
+          total += 50
+      }
+      if (this.state.modalInfo.trimming) {
+          total += 50
+      }
+      if (this.state.modalInfo.pineNeedles) {
+          total += 50
+      }
+      if (this.state.modalInfo.leafRemoval) {
+          total += 50
+      }
+      if (this.state.modalInfo.pesticide) {
+          total += 50
+      }
+      if (this.state.modalInfo.topiary) {
+          total += 50
+      }
+      if (this.state.modalInfo.pruning) {
+          total += 50
+      }
+      if (this.state.modalInfo.soil) {
+          total += 50
+      }
+      if (this.state.modalInfo.mulch) {
+          total += 50
+      }
+
+      this.setState({
+        modalInfo:{
+          ...this.state.modalInfo,
+          total: total
+        }
+          
+      });
+      console.log(total);
+  });
+
+  }
   closeModal = () => {
     this.setState({
       calendarInfo: {
@@ -70,6 +148,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state)
     return (
       <AuthContext.Provider value={this.state.auth}>
         <div className='App'>
@@ -85,9 +164,13 @@ class App extends Component {
                 handleServiceChange={this.onChange}
                 calendarInfo={this.state.calendarInfo}
                 closeModal={this.closeModal}
+                handleModalUpdate={this.handleModalUpdate}
+                {...this.state.modalInfo}
               />} />
             <Route exact path='/ClientHome' component={ClientHome} />
-            <Route exact path='/Checkout' component={Checkout} />
+            <Route exact path='/Checkout' component={(props) =>
+              <Checkout {...this.state.modalInfo} />}
+             />
             <Route exact path='/' component={Home} />
             <Route component={NotFound} />
           </Switch>
