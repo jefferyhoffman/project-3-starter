@@ -8,29 +8,38 @@ import "../Home/style.css";
 // import watchVid from "./vidBg.mp4";
 import Wrapper from "../../components/Products/Wrapper"
 import Products from "../../components/Products/Products"
-
+import { Link } from 'react-router-dom';
 
 
 class Collections extends Component {
+  _isMounted = false;
 
   state = {
     items: []
   };
 
+
   componentDidMount() {
+    this._isMounted = true;
     this.loadItems();
   };
 
   loadItems = () => {
     API.getItems()
       .then(res => {
-        this.setState({ items: res.data })
-        console.log(res.data)
+        if(this._isMounted){
+
+          this.setState({ items: res.data })
+          console.log(res.data)
+        }
       })
 
       .catch(err => console.log(err))
   };
 
+  componentWillUnmount() {
+    this._isMounted = false
+  }
 
   render() {
     console.log(this.state)
@@ -48,6 +57,7 @@ class Collections extends Component {
          <Wrapper>
         {this.state.items.map(item => (
           <Products
+            item={item}
             id={item.id}
             key={item.id}
             name={item.name}
@@ -55,10 +65,16 @@ class Collections extends Component {
             brand={item.brand}
             price={item.price}
             quantity={item.quantity}
+            addToCart={this.props.addToCart}
           />
         ))
         }
+         <Link to="/cart">
+              <button className="btn btn-primary float-right" 
+                  style={{  marginRight: "10px" }}>View Cart</button>
+            </Link><br/><br/><br/>
       </Wrapper>
+     
     </div>
    
     );

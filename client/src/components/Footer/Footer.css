@@ -66,3 +66,17 @@ footer {
     top: 10px;
     left: 20px;
 }
+
+.modalBtn {
+    bottom: 0;
+    left:0;
+}
+
+.modal-footer {
+   left: 0;
+}
+
+.sub-button {
+    bottom: 0;
+    left:0;
+}
