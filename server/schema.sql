@@ -1,2 +1,0 @@
-DROP DATABASE IF EXISTS watches_db
-CREATE DATABASE watches_db

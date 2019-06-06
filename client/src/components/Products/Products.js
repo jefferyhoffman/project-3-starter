@@ -17,8 +17,9 @@ function ProductCard(props) {
           <li id="liProducts">
             ${props.price}
           </li>
-          <i class="fas fa-shopping-cart fa-2x"></i>
+         
         </ul>
+        <h1 onClick={() => props.addToCart(props.item)}><i className="fas fa-shopping-cart fa-1x"></i></h1>
       </div>
     </div>
     

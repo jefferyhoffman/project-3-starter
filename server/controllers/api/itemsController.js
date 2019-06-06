@@ -1,5 +1,8 @@
 const itemsController = require('express').Router();
 const db = require('../../models');
+const { JWTVerifier } = require('../../lib/passport');
+const jwt = require('jsonwebtoken');
+
 
 
 // Find all items
@@ -25,7 +28,7 @@ itemsController.get('/', (req, res) => {
 });
 
 // Create a new item
-itemsController.post('/create', (req, res) => {
+itemsController.post('/create', JWTVerifier, (req, res) => {
   const { name, price, brand, quantity, img } = req.body;
 
   db.Item.create({ name, price, brand, quantity, img })
