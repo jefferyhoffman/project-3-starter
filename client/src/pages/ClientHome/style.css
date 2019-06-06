@@ -1,4 +1,17 @@
-.jumbotron {
-  padding-top: 10px;
-  padding-bottom: 0px;
+h1 {
+  color: #58b368;
+  /* height: 30px;
+  width: 30px; */
+}
+
+.card {
+  opacity: .96;
+}
+/* i {
+  height: 100px;
+  width: 100px;
+} */
+
+.modal-lg {
+  max-width: 80% !important;
 }
