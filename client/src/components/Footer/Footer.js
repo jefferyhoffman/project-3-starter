@@ -37,7 +37,7 @@ class Footer extends Component {
                       <p id="footerItems">https://www.github.com/cm-cltdesigner</p>
                       <p id="footerItems">https://www.github.com/kyang0626/</p>
                   </div>
-                  <div id="footerSec" className="col-4">Connect With Us @
+                  <div id="footerSec" className="col-4">Connect With Us
                       <p id="footerItems">https:/www.instagram.com/</p>
                       <p id="footerItems">https://www.facebook.com/</p>
                       <p id="footerItems">https://www.linkedin.com/</p>
@@ -47,7 +47,7 @@ class Footer extends Component {
               
           </div>
           <hr id="hrFooter" />
-          <footer>© 2019 Koscoswix U.S. <br /> All right reserved
+          <footer>© 2019 Koscoswix U.S. <br /> All rights reserved
           </footer>
       </div>
       

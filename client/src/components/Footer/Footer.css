@@ -47,8 +47,9 @@ button {
 
 #footerItems {
     margin-top: 20px;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 16px;
+    color: rgb(111, 111, 111);
 }
 
 footer {
@@ -61,4 +62,7 @@ footer {
     border: 0;
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    position: relative;
+    top: 10px;
+    left: 20px;
 }

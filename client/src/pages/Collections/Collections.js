@@ -37,7 +37,7 @@ class Collections extends Component {
     return (
       <div className="container-fluid">
        <div className="row" id="row1Collection">
-          <video autoPlay muted loop id="videoBg" src={watchVid} type="video/mp4"></video>
+          <video autoPlay muted loop id="videoBgC" src={watchVid} type="video/mp4"></video>
         <div className="text-overlay">
             KOSCOWIX
         </div>

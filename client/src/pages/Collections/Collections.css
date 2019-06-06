@@ -1,6 +1,10 @@
 #row1Collection {
     background: rgb(33, 33, 33);
 }
+#videoBgC {
+    bottom: 240px;
+    filter: blur(4px);
+}
 
 .p-title {
     color: white;
