@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import "./PaymentInfo.css"
 
+
 class PaymentInfo extends Component {
     state = {
     }
@@ -8,8 +9,8 @@ class PaymentInfo extends Component {
     render() {
         return (
 
-            <div className="row">
-                <div className="col-sm-5">
+            <div className="row" style={{ marginTop: '40px', marginLeft: '20px', marginRight: '20px' }}>
+                <div className="col">
                     <div className="card">
                         <div className="card-body">
                             <h2 className="card-title">Checkout</h2>
@@ -112,6 +113,4 @@ class PaymentInfo extends Component {
         )
     }
 }
-
-
 export default PaymentInfo;
