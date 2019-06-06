@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class AddBookForm extends Component {
+class AddBook extends Component {
     state = {
         title: '',
         author: '',
@@ -28,10 +28,10 @@ class AddBookForm extends Component {
         const { title, author, imageUrl, series, synopsis } = this.state;
     
         return (
-            <div className='AddBookForm'>
+            <div className='AddBook'>
                 <div className='card'>
                     <div className='card-body'>
-                        <form className='AddBookForm' onAddBook={this.handleAddBook}>
+                        <form className='AddBook' onAddBook={this.handleAddBook}>
                             <div className='input-group mb-3'>
                                 <div className="input-group-prepend">
                                     <span className="input-group-text">@</span>
@@ -114,4 +114,4 @@ class AddBookForm extends Component {
     }
 }
 
-export default AddBookForm;
+export default AddBook;

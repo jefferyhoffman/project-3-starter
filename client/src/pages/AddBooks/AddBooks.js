@@ -3,7 +3,7 @@ import Jumbotron from "../../components/Jumbotron";
 import AddBooks from '../../components/AddBook/addBook';
 
 
-class AddBook extends Component {
+class AddBooks extends Component {
   render() {
     return (
       <div className='Home'>
