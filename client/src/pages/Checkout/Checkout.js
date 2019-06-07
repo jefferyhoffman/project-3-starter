@@ -18,20 +18,20 @@ const Product = (props) => {
     return (
         <>
 
-            {/* <div class="card">
-             <div class="card-body">
-              <h5 class="card-title">{props.product.title}</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Price: ${props.product.price}</h6>
-                <p class="card-text">{props.product.description}</p>
-           <div class="col-sm-7"> */}
+            {/* <div className="card">
+             <div className="card-body">
+              <h5 className="card-title">{props.product.title}</h5>
+                <h6 className="card-subtitle mb-2 text-muted">Price: ${props.product.price}</h6>
+                <p className="card-text">{props.product.description}</p>
+           <div className="col-sm-7"> */}
             <div className="row">
 
                 <div className="col-sm-7">
-                    <div class="card">
-                        <div class="card-body">
-                            <h2 class="card-title">Your Order</h2>
-                            <h5 class="card-title">Selected Services: {props.product.title}</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Total Price: ${props.product.price}</h6>
+                    <div className="card">
+                        <div className="card-body">
+                            <h2 className="card-title">Your Order</h2>
+                            <h5 className="card-title">Selected Services: {props.product.title}</h5>
+                            <h6 className="card-subtitle mb-2 text-muted">Total Price: ${props.product.price}</h6>
                         </div>
                     </div>
                 </div>

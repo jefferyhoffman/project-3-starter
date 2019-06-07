@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { CardElement } from 'react-stripe-elements';
 // import Confirmation from '../Confirmation.js';
 import { Link } from 'react-router-dom';
+import "./CardSection.css"
 
-class CardSection extends React.Component {
+class CardSection extends Component {
   render() {
     return (
       <>
