@@ -151,7 +151,7 @@ class Modal extends Component {
                             </div>
                             <div className="form-check mb-4">
                                 <input className="form-check-input" name="leafRemoval" type="checkbox" id="radio-579"
-                                    value="option8"  checked={this.props.leafRemoval} onChange={this.handleInputChange} />
+                                    value="option8" checked={this.props.leafRemoval} onChange={this.handleInputChange} />
                                 <label className="form-check-label" for="radio-579">Leaf Removal</label>
                             </div>
                         </div>
@@ -207,7 +207,7 @@ class Modal extends Component {
                                                 <textarea type="text" id="form79textarea" className="md-textarea form-control"
                                                     rows="3"></textarea>
                                             </div>
-                                            <Link className='btn btn-outline-secondary waves-effect' to='/checkout'>Checkout</Link>
+                                    
                                         </div>
                                         <p className="text-center">
                                             <strong>Please note any important information about your home/yard below.</strong></p>
@@ -218,15 +218,15 @@ class Modal extends Component {
                                         </div>
                                         <Link className='btn btn-outline-secondary waves-effect' to='/Checkout'>Checkout</Link>
 
-                                        {/* <a type="button" className="btn btn-outline-secondary waves-effect"
+                                            {/* <a type="button" className="btn btn-outline-secondary waves-effect"
                                             data-dismiss="modal">Checkout</a> */}
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div >
+                </div >
+            </div>
         )
     }
 }
