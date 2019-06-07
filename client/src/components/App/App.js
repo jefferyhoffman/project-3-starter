@@ -12,6 +12,7 @@ import Register from '../../components/Register/register';
 import Secret from '../../pages/Secret/Secret';
 import Home from '../../pages/Home/Home';
 import NotFound from '../../pages/NotFound/NotFound';
+import CheckoutForm from '../../components/Checkout/CheckoutForm';
 import Cart from "./Cart.js";
 import './App.css';
 
@@ -39,18 +40,38 @@ class App extends Component {
       cart: [],
       itemCount: 0
     }
+    // this.addToCart = (item) => {
+    //   let cart = [
+    //     ...this.state.cart,
+    //     item,
+        
+    //   ]
+    //   this.setState({
+    //     cart,
+    //   })
+    // }
 
-    this.addToCart = (item) => {
-      let cart = [
-        ...this.state.cart,
-        item
-      ]
-      this.setState({
-        cart,
-      })
-    }
+    this.addToCart = item => {
+      this.setState(state => {
+        const itemInCart = state.cart[item.id];
+        const quantity = itemInCart && itemInCart.quantity
+          ? itemInCart.quantity + 1
+          : 1;
+    
+        return {
+          cart: {
+            ...state.cart,
+            [item.id]: {
+              ...item,
+              quantity
+            }
+          }
+        }
+      });
+    };
+
+    
   }
-
 
   componentDidMount() {
     let itemCount = this.state.cart.length
@@ -70,7 +91,7 @@ class App extends Component {
     if (prevState.cart !== cart) {
       let itemCount = Object.keys(this.state.cart).length
       this.setState({
-        itemCount
+        itemCount 
       })
     }
   }
@@ -86,6 +107,7 @@ class App extends Component {
           <Switch>
             <Route path='/login' component={Login} />
             <PrivateRoute path='/secret' component={Secret} />
+            <PrivateRoute path='/checkoutForm' component={CheckoutForm}/>
             <Route exact path='/' component={Home} />
             <Route exact path='/register' component={Register} />
             <Route exact path='/collections' component={(props) => <Collections {...props} addToCart={this.addToCart} />} />

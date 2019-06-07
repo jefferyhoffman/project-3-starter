@@ -8,7 +8,7 @@ import CartItem from '../../components/App/CartItem';
 export default class Cart extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { products: [], total: 0 }
+        this.state = { products: [], Total: 0 }
     }
 
     componentDidMount() {
@@ -27,25 +27,27 @@ export default class Cart extends React.Component {
         // });
     }
 
-    removeFromCart = (product) => {
-        let products = this.state.products.filter((item) => item.id !== product.id);
-        let cart = this.state.cart;
-        delete cart[product.id.toString()];
-        let total = this.state.total - (product.qty * product.price)
-        this.setState({ products, total });
-    }
+    // removeFromCart = (product) => {
+    //     let products = this.state.products.filter((item) => item.id !== product.id);
+    //     let cart = this.state.cart;
+    //     delete cart[product.id.toString()];
+    //     let total = this.state.total - (product.qantity * product.price)
+    //     this.setState({ products, total });
+    // }
 
-    clearCart = () => {
-        this.setState({ products: [] });
-    }
+    // clearCart = () => {
+    //     this.setState({ products: [] });
+    // }
 
     render() {
         console.log(this.state)
         console.log(this.props)
         // const { products, total } = this.state;
-        let products = this.props.userCart
+        let products = Object.values(this.props.userCart);
         console.log(products)
-        let total = 0
+        let total = products.reduce((sum, product) => sum + product.price * product.quantity, 0);
+        let taxes = (total * 7.5) / 100;
+        let Total = total + taxes;
         return (
             <div className=" container">
                 <h3 className="card-title">Cart</h3>
@@ -55,12 +57,19 @@ export default class Cart extends React.Component {
                 }
 
                 {/* products.length ? */}
-                <div><h4>
-                    <small>Total Amount: </small>
-                    <span className="float-right text-primary">${total}</span>
-                </h4><hr />
+                <div>
+                    <h4>
+                        <small>taxes:</small>
+                        <span className="float-right text-primary">${taxes}</span>
+                    </h4>
                 </div>
-            {!products.length ? <h3 className="text-warning">No item on the cart</h3> : null}
+                <div>
+                    <h4>
+                        <small>Total Amount: </small>
+                        <span className="float-right text-primary">${Total}</span>
+                    </h4><hr />
+                </div>
+                {!products.length ? <h3 className="text-warning">No item on the cart</h3> : null}
 
                 <Link to="/CheckoutForm">
                     <button className="btn btn-success float-right">Checkout</button>
@@ -69,6 +78,6 @@ export default class Cart extends React.Component {
                     style={{ marginRight: "10px" }}>Clear Cart</button><br /><br /><br />
             </div>
 
-            )
+        )
     }
 }
