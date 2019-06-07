@@ -57,6 +57,12 @@ export default {
         }
       });
     },
+    delete: function (authToken, id) {
+      return axios({
+        method: 'delete',
+        url: '/api/drinks/mine/' + id,
+      })
+    },
 
     getOne: function (authToken, id) {
       console.log(authToken)

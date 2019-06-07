@@ -20,7 +20,7 @@ class View extends Component {
   loadDrinks = () => {
     API.Drinks.getAll()
       .then(res =>
-        this.setState({ drinks: res.data, image: "", name: "", instructions: "" , ingredients_measurements: "" })
+        this.setState({ drinks: res.data, image: "", name: "", instructions: "", ingredients_measurements: "" })
       )
       .catch(err => console.log(err));
   };
@@ -54,7 +54,7 @@ class View extends Component {
 
   render() {
     let { drinks } = this.state
-    
+
     if (this.state.isComplete) {
       return <Redirect to="/" />;
     }
@@ -88,6 +88,7 @@ class View extends Component {
     );
   }
 }
+
 
 export default View;
 

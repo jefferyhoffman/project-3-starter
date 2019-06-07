@@ -5,6 +5,7 @@ import '../Navigation/navigation.css'
 import AuthContext from '../../contexts/AuthContext';
 import AuthDropdown from '../../components/AuthDropdown/AuthDropdown';
 
+
 const text = {
   color: 'white',
 };
