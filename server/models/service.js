@@ -2,15 +2,15 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const ServiceSchema = new Schema({
-    job: {
-        type: Array,
+   name: {
+        type: String,
         trim: true,
         required: 'Name is required'
     },
     cost: {
         type: Number,
         trim: true,
-        required: 'Email address is required'
+        required: 'Cost is required'
     },
     date: {
         type: Date,
@@ -21,37 +21,13 @@ const ServiceSchema = new Schema({
         type: Boolean,
         default: false
     },
-    phone: {
-        type: Number,
+    id: {
+        type: String,
         trim: true,
-        required: 'Phone number is required',
-        validate: [
-            function (input) {
-                return input.length === 10
-            },
-            'Phone number should be 10 numbers long'
-        ]
-    },
-    name: {
-        type:String,
-        tirm:true,
-        required: 'Name is required'
-    }
+        required: 'Id is required'
+    }    
 })
 
-class newService {
-    constructor({ name, id, email, password, address, phone, cart, upcoming, completed }) {
-        this.name = name;
-        this.id = id;
-        this.email = email;
-        this.password = password;
-        this.address = address;
-        this.phone = phone;
-        this.cart = cart;
-        this.upcoming = upcoming;
-        this.completed = completed;
-    }
-}
-
-ServiceSchema.loadClass(newService);
 let Service = mongoose.model('Service', ServiceSchema);
+
+module.exports = Service

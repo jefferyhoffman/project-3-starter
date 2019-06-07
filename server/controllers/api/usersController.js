@@ -21,8 +21,7 @@ usersController.post('/login', (req, res) => {
         token: jwt.sign({ sub: user.id }, process.env.JWT_SECRET),
         user
       });
-    });
-    
+    });   
 });
 
 usersController.post('/register', (req, res) => {

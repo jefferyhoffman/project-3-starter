@@ -43,7 +43,9 @@ class Register extends Component {
         </div>
         <div className='row'>
           <div className='col-sm'>
-            <RegisterForm onSubmit={this.handleSubmit} />
+            <RegisterForm 
+            {...this.props.firstName}
+            onSubmit={this.handleSubmit} />
           </div>
         </div>
         <br />
