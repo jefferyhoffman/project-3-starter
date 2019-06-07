@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { Button } from 'reactstrap';
 import id01 from "./images/id-01.png";
 import id02 from "./images/id-02.png";
 import id03 from "./images/id-03.png";
@@ -7,14 +6,8 @@ import id04 from "./images/id-04.png";
 import id05 from "./images/id-05.png";
 import anime from "./images/title-anime.gif";
 import banner from "./images/instagram_banner.jpg";
-// import gif from "./images/productGIF.gif";
-// import img from "./images/productIMG.jpg";
 import "./style.css";
-// import WatchWrapper from "../../components/Products/WatchWrapper";
-// import WatchCard from '../../components/Products/watch';
 import watchVid from "./vidBg.mp4"
-
-// const watchImgs = require("../../../public/images");
 
 class HomePage extends Component {
   constructor(props) {
@@ -107,7 +100,7 @@ class HomePage extends Component {
       </div>
       <div className="row" id="row4">
         <div className="col-12-fluid" id="bottomBanner">
-        <div className="content"><img src={anime} className="productAnime" alt="productAnime" /></div><br/>
+        <div className="content"><img src={anime} className="productAnime" alt="productAnime" /></div>
         <div className="content"><img src={banner} className="productBanner" alt="productBanner" /></div>
       </div>
       </div></div >

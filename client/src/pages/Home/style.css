@@ -43,11 +43,11 @@ body {
 }
 
 video {
-    height: 200%;
-    position: relative;
-    width: 100%;
-    bottom: 600px;
-    left: 0;
+   height: 200%;
+   position: relative;
+   width: 100%;
+   bottom: 600px;
+   left: 0;
 }
 .text-overlay {
     z-index: 1;
@@ -55,7 +55,7 @@ video {
     font-weight: 600;
     font-size: 6vw !important;
     position: absolute;
-    top: 15vw;
+    top: 25%;
     left: 30%;
     letter-spacing: 18px !important;
     text-shadow: 4px 4px 4px rgba(133, 133, 133, 0.571),

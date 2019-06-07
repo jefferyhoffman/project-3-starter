@@ -24,6 +24,10 @@
    
 }
 
-.container {
+.App {
     position: relative;
+    background: url("../Home/images/productIMG.jpg");
+    height: 650px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
