@@ -4,9 +4,9 @@ h1 {
   width: 30px; */
 }
 
-.card {
+/* .card {
   opacity: .96;
-}
+} */
 /* i {
   height: 100px;
   width: 100px;
@@ -14,4 +14,14 @@ h1 {
 
 .modal-lg {
   max-width: 80% !important;
+}
+.welcomeText {
+  color: white;
+  text-shadow:
+   -1px -1px 0 #137216,  
+    1px -1px 0 #137216,
+    -1px 1px 0 #137216,
+     1px 1px 0 #137216;
+     font-family: 'Montserrat', sans-serif;
+ 
 }

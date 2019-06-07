@@ -47,7 +47,7 @@ class ClientHome extends Component {
         <br />
         <div className="col-sm-2"></div>
         <div className="col-sm-8">
-         <h1 className="display-4 text-white font-weight-bold">Welcome Back {/*{this.firstName}*/} </h1> 
+         <h1 className="display-4 text-white font-weight-bold welcomeText">Welcome Back {/*{this.firstName}*/} </h1> 
         </div>
         <div className="col-sm-2"> </div>
         </div>
@@ -225,7 +225,7 @@ class ClientHome extends Component {
       
       {/* Scheduling Card */}
       <div className="col-sm-3">
-      <button className="card p-3 mb-5 rounded">
+      <button className="card p-3 rounded">
       <Link className='nav-link' to='/scheduling' onClick={this.toggleCollapse}>
         <div className="card-body">
           <h1 className="card-title"><i className="fas fa-calendar-plus"></i></h1>
