@@ -21,6 +21,7 @@
   "dependencies": {
     "axios": "^0.19.0",
     "mongoose": "^5.5.12",
+    "react-bootstrap4-modal": "^1.7.1",
     "react-calendar": "^2.19.0",
     "react-items-carousel": "^2.3.6",
     "react-stripe-elements": "^3.0.0"
