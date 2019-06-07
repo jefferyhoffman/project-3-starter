@@ -56,6 +56,28 @@ export default {
           'Authorization': `Bearer ${authToken}`
         }
       });
+    },
+
+    getOne: function (authToken, id) {
+      console.log(authToken)
+      return axios({
+        method: 'get',
+        url: '/api/drinks/'+id,
+        headers: {
+          'Authorization': `Bearer ${authToken}`
+        }
+      });
+    },
+
+    search: function (authToken, name) {
+      console.log(authToken)
+      return axios({
+        method: 'get',
+        url: '/api/drinks/search?name='+name,
+        headers: {
+          'Authorization': `Bearer ${authToken}`
+        }
+      });
     }
   }
 }
