@@ -13,6 +13,7 @@ import Scheduling from '../../pages/Scheduling/Scheduling';
 import NotFound from '../../pages/NotFound/NotFound';
 import Checkout from '../../pages/Checkout/Checkout';
 import ClientHome from '../../pages/ClientHome/ClientHome';
+import Confirmation from '../../pages/Confirmation/Confirmation';
 
 import './App.css';
 

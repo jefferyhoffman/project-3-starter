@@ -148,7 +148,7 @@ class Modal extends Component {
                             </div>
                             <div className="form-check mb-4">
                                 <input className="form-check-input" name="leafRemoval" type="checkbox" id="radio-579"
-                                    value="option8"  checked={this.props.leafRemoval} onChange={this.handleInputChange} />
+                                    value="option8" checked={this.props.leafRemoval} onChange={this.handleInputChange} />
                                 <label className="form-check-label" for="radio-579">Leaf Removal</label>
                             </div>
                         </div>
@@ -224,8 +224,8 @@ class Modal extends Component {
                             </div>
                         </div>
                     </div>
-                </div>
-            </div >
+                </div >
+            </div>
         )
     }
 }
