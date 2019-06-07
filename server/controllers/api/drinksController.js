@@ -32,18 +32,22 @@ drinksController.get('/', (req, res) => {
   
   });
 
-drinksController.get("/mine", JWTVerifier, function(req, res) {
-  db.Users.find({_id: req.user._id})
+drinksController.get("/mine", JWTVerifier, function (req, res) {
+  db.Users.find({ _id: req.user._id })
     .populate("drinks")
-    .then(function(dbUser) {
-      console.log(dbUser[0].drinks)
+    .then(function (dbUser) {
       res.json(dbUser[0].drinks);
     })
-    .catch(function(err) {
+    .catch(function (err) {
       res.json(err);
     });
 });
 
+drinksController.delete("/mine/:id", JWTVerifier, (req, res) => {
+  db.Users.findOneAndUpdate({ _id: req.user._id }, { $pull: { drinks: { _id: req.params._id } } }, { new: true })
+  .then(dbModel => res.json(dbModel))
+  .catch(err => console.log(err));
+});
 
 
 
@@ -53,36 +57,36 @@ drinksController.get("/mine", JWTVerifier, function(req, res) {
 //   .create(req.body)
 //   .then(dbModel => res.json(dbModel))
 //   .catch(err => console.log(err));
-  
+
 // });
 
-drinksController.post("/", JWTVerifier, function(req, res) {
+drinksController.post("/", JWTVerifier, function (req, res) {
   db.Drinks.create(req.body)
-    .then(function(dbDrink) {
-      return db.Users.findOneAndUpdate({}, { $push: { drinks: dbDrink._id } }, { new: true });
+    .then(function (dbDrink) {
+      return db.Users.findOneAndUpdate({ _id: req.user._id }, { $push: { drinks: dbDrink._id } }, { new: true });
     })
-    .then(function(dbUser) {
+    .then(function (dbUser) {
       res.json(dbUser);
     })
-    .catch(function(err) {
+    .catch(function (err) {
       res.json(err);
     });
 });
 
 drinksController.put('/:id', JWTVerifier, (req, res) => {
   db.Drinks
-  .findOneAndUpdate({ _id: req.params.id }, req.body)
-  .then(dbModel => res.json(dbModel))
-  .catch(err => res.status(422).json(err));
+    .findOneAndUpdate({ _id: req.params.id }, req.body)
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
 
 });
 
 drinksController.delete('/:id', JWTVerifier, (req, res) => {
   db.Drinks
-  .findById({ _id: req.params.id })
-  .then(dbModel => dbModel.remove())
-  .then(dbModel => res.json(dbModel))
-  .catch(err => res.status(422).json(err));
+    .findById({ _id: req.params.id })
+    .then(dbModel => dbModel.delete.res.end())
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
 });
 
 

@@ -35,8 +35,9 @@ class MYDrinks extends Component {
   };
 
   deleteDrinks = id => {
-    API.deleteDrinks(id)
-      .then(res => this.loadDrinks())
+    let { authToken } = this.context;
+    API.Drinks.delete(authToken, id)
+      .then(res => console.log(res.data))
       .catch(err => console.log(err));
   };
 
@@ -68,8 +69,7 @@ class MYDrinks extends Component {
     console.log(this.state)
     console.log(this.context)
     let { drinks } = this.state
-    let { authToken } = this.context
-    
+   
     if (this.state.isComplete) {
       return <Redirect to="/mine" />;
     }
@@ -77,7 +77,7 @@ class MYDrinks extends Component {
     return (
       <div>
         <h1>My Drinks</h1>
-        {drinks.map(drink=>{
+        {drinks.map(drink => {
           return (
             
             <>
@@ -86,6 +86,7 @@ class MYDrinks extends Component {
                 <div className="col-md-3">
                   <img src={drink.image} alt={drink.name} className="card-img">
                   </img>
+                  <FormBtn onClick={() => this.deleteDrinks(drink._id)}>Delete</FormBtn>
                 </div>
                 <div className="col-md-7">
                   <div className="card-body">
@@ -104,6 +105,7 @@ class MYDrinks extends Component {
     );
   }
 }
+
 
 
 export default MYDrinks;

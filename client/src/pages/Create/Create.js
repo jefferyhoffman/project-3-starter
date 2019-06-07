@@ -112,7 +112,7 @@ class Create extends Component {
                     </div>
                   </div>
                   <div class="form-row">
-                    <div className="form-group col-md-6">
+                    <div className="form-group col-md-12">
                       <Select name="glass" className="form-control" id="glass" onChange={this.handleInputChange} value={this.state.glass} placeholder="Type of glass (required)">
                         <option>Highball glass</option>
                         <option>Cocktail glass</option>
@@ -148,21 +148,21 @@ class Create extends Component {
                         <option>Other/Any</option>
                       </Select>
                     </div>
-                    <div className="form-group col-md-6">
-                      <div className="row">
-                        <div className="form-group col-md-12">
-                          {/* <FormBtn type="button" className="btn btn-primary btn-lg btn-block" onClick={() => this.handleSubmit(authToken)}>Submit Drink</FormBtn> */}
-                          <FormBtn onClick={() => this.handleSubmit(authToken)}>Submit Drink</FormBtn>
-                        </div>
-                      </div>
+                  </div>
+                  {/* <div className="form-group col-md-6"> */}
+                  <div className="row">
+                    <div className="form-group col-md-12">
+                      {/* <FormBtn type="button" className="btn btn-primary btn-lg btn-block" onClick={() => this.handleSubmit(authToken)}>Submit Drink</FormBtn> */}
+                      <FormBtn className="btn-lg btn-block" onClick={() => this.handleSubmit(authToken)}>Submit Drink</FormBtn>
                     </div>
                   </div>
                 </form>
               </div>
             </div>
-          </div >
-        </div >
-      </div >
+          </div>
+        </div>
+      </div>
+
     );
   }
 }
