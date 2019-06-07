@@ -79,6 +79,7 @@ class MYDrinks extends Component {
         <h1>My Drinks</h1>
         {drinks.map(drink=>{
           return (
+            
             <>
                <div className="card mb-3 container">
               <div className="row no-gutters">
