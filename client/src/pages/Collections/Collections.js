@@ -29,9 +29,7 @@ class Collections extends Component {
     API.Items.getItems()
       .then(res => {
         if(this._isMounted){
-
           this.setState({ items: res.data })
-          console.log(res.data)
         }
       })
 

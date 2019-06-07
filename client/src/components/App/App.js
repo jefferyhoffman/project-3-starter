@@ -11,7 +11,6 @@ import Login from '../../pages/Login/Login';
 import UpdateProfile from '../../pages/UpdateProfile/UpdateProfile';
 import UserProfile from '../../pages/UserProfile/UserProfile';
 import Register from '../../components/Register/register';
-import Secret from '../../pages/Secret/Secret';
 import Home from '../../pages/Home/Home';
 import NotFound from '../../pages/NotFound/NotFound';
 import CheckoutForm from '../../components/Checkout/CheckoutForm';
@@ -99,7 +98,6 @@ class App extends Component {
           {/* <div className='container-fluid'> */}
           <Switch>
             <Route path='/login' component={Login} />
-            <PrivateRoute path='/secret' component={Secret} />
             <PrivateRoute exact path='/UserProfile' component={UserProfile} />
             <PrivateRoute exact path='/UpdateProfile' component={UpdateProfile} />
             <PrivateRoute path='/checkoutForm' component={CheckoutForm}/>
