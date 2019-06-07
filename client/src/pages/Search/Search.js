@@ -8,15 +8,25 @@ class Search extends Component {
     category: '',
     kind: '',
   }
+  // example search in database for partial name with "Old"
+  // db.getCollection('drinks').find({"name": {$regex: ".*Old.*"}})
+  handleInputChange = event => {
+    const { name, value } = event.target;
+
+    this.setState({
+      [name]: value
+    });
+  };
+
   render() {
     return (
       <div>
         <h1>Search Page</h1>
 
-        <label for="name">Drink Name</label>
-        <Input name="name" onChange={this.handleInputChange} value={this.state.name} placeholder="Name (required)" />
+        <label>Drink Name</label>
+        <Input name="name" onChange={this.handleInputChange} value={this.state.name} />
         <div className="form-group">
-          <label for="category">Drink Category</label>
+          <label>Drink Category</label>
           <Select name="category" className="form-control" id="category" onChange={this.handleInputChange} value={this.state.category}>
             <option>Ordinary Drink</option>
             <option>Cocktail</option>
@@ -32,7 +42,7 @@ class Search extends Component {
           </Select>
         </div>
         <div className="form-group">
-          <label for="kind">Drink Kind</label>
+          <label>Drink Kind</label>
           <Select name="kind" className="form-control" id="kind" onChange={this.handleInputChange} value={this.state.kind}>
             <option>Alcoholic</option>
             <option>Non alcoholic</option>
