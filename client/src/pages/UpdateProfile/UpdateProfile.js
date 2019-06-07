@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import "./register.css";
+import "./UpdateProfile.css";
 
 
-class Register extends Component {
+class userProfile extends Component {
   state = {
     name: '',
     email: '',
     password: '',
+    confirmPassword: '',
   };
 
   handleInputChange = event => {
@@ -18,26 +19,26 @@ class Register extends Component {
   }
 
   handleSubmit = event => {
-    const { name, email, password } = this.state;
+    const { name, email, password, confirmPassword } = this.state;
 
-    this.props.onSubmit(name, email, password);
+    this.props.onSubmit(name, email, password, confirmPassword);
     event.preventDefault();
   }
 
   render() {
-    const { name, email, password } = this.state;
+    const { name, email, password, confirmPassword } = this.state;
 
 
     return (
       <div className="container">
-        <div className='RegisterFormT'>
+        <div className='UpdateProfileT'>
           <div className='card'>
             <div className='card-body'>
-              <h1>Register</h1>
-              <form className='RegisterForm' onSubmit={this.handleSubmit}>
+              <h1>Update Profile</h1>
+              <form className='updateProfile' onSubmit={this.handleSubmit}>
+
                 <div className='input-group mb-3'></div>
                   <div className="input-group-prepend"></div>
-
                   <input
                     className='form-control'
                     id='name'
@@ -51,7 +52,6 @@ class Register extends Component {
 
                   <div className='input-group mb-3'></div>
                     <div className="input-group-prepend"></div>
-                   
                     <input
                       className='form-control'
                       id='email'
@@ -65,7 +65,6 @@ class Register extends Component {
 
                     <div className='input-group mb-3'></div>
                       <div className="input-group-prepend"></div>
-                      
                       <input
                         className='form-control'
                         id='password'
@@ -75,9 +74,20 @@ class Register extends Component {
                         value={password}
                         onChange={this.handleInputChange}
                       />
-                  
+
+                       <div className='input-group mb-3'></div>
+                      <div className="input-group-prepend"></div>
+                      <input
+                        className='form-control'
+                        id='confirmPassword'
+                        type='Password'
+                        name='confirmPassword'
+                        placeholder='confirm password'
+                        value={confirmPassword}
+                        onChange={this.handleInputChange}
+                      />
 <br/>
-                    <button className='btn btn-secondary sub-button' to='/Home' onClick={this.toggleCollapse} type='submit'>Register</button>
+                    <button className='btn btn-secondary sub-button' type='submit'>Update Profile</button>
                     </form>
                 </div>
            </div>
@@ -89,4 +99,4 @@ class Register extends Component {
   }
 }
 
-export default Register;
+export default userProfile;

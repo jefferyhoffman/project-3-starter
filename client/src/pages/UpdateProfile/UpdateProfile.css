@@ -1,4 +1,4 @@
-.RegisterFormT {
+.UpdateProfileT {
     /* padding-top: 100px; */
     /* position: static !important; */
     text-align: center;
@@ -7,8 +7,8 @@
     left: 300px;
     right: 300px;
     padding: 100px 50px 100px 50px;
-
 }
+
 .card-body {
     position: static !important;
     text-align: center;

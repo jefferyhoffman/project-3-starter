@@ -35,11 +35,11 @@ class HomePage extends Component {
         <div className="row" id="row1">
           <video autoPlay muted loop id="videoBg" src={watchVid} type="video/mp4"></video><br />
           <div className="text-overlay">KOSCOWIX</div>
-          Koscowix Co. was created by a dynamic team of four, based in Charlotte, North Carolina. The STORM Brand is the cult of individualism.
+        <p className="co-bio">Koscowix Co. was created by a dynamic team of four, based in Charlotte, North Carolina. The STORM Brand is the cult of individualism.
         From stylish sports to bold fashion statements, the Storm range combines unique features and gadgets with a wide range of colours and shapes.
          Storm continually seeks stimulation for new challenges in design.
           Storm’s team of dedicated designers take inspiration from the world around them,
-          combining unconventional materials together with precision instrumentation.
+          combining unconventional materials together with precision instrumentation.</p>
         </div>
 
       <div className="row" id="row2">

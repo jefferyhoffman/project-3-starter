@@ -49,13 +49,39 @@ export default class Cart extends React.Component {
         let taxes = (total * 7.5) / 100;
         let Total = total + taxes;
         return (
-            <div className=" container">
-                <h3 className="card-title">Cart</h3>
-                {
-                    products.map((product, index) =>
+            <div className="containerCart">
+                <div className="card" id="productHolder">
+                    <h3 className="card-title">Your Cart</h3>
+                    {
+                        products.map((product, index) =>
                         <CartItem product={product} remove={this.removeFromCart} key={index} />)
-                }
+                    }
+                    {/* products.length ? */}
+                    
+                    <div className="cartContent">
+                        <div className="contentHolder">
+                            {!products.length ? <h3 id="noItemWarning" className="text-warning">Your Cart is Empty</h3> : null}
+                            <hr id="totalSeparate" />
+                            <h4 id="cartTotalHolder">
+                                <small id="totalText">Total: 
+                                    <span id="totalDisplay" className="text-primary">
+                                        ${total}
+                                    </span>
+                                </small>
+                            </h4>
+                        </div>
+                        <div className="purchaseFooter">
+                            <Link to="/CheckoutForm">
+                                <button id="checkoutBtn" className="btn btn-success">Checkout</button>
+                            </Link>
+                            <button id="clearBtn" className="btn btn-danger" onClick={this.clearCart}>
+                                Clear Cart
+                            </button>
+                        </div>
+                            
+                    </div>
 
+<<<<<<< HEAD
                 {/* products.length ? */}
                 <div>
                     <h4>
@@ -76,6 +102,9 @@ export default class Cart extends React.Component {
                 </Link>
                 <button className="btn btn-danger float-right" onClick={this.clearCart}
                     style={{ marginRight: "10px" }}>Clear Cart</button><br /><br /><br />
+=======
+                </div>
+>>>>>>> 505fe7f2ea8b7baaa2442d6ce7ff5d87280f6f44
             </div>
 
         )

@@ -1,13 +1,16 @@
-.RegisterFormT {
-    /* padding-top: 100px; */
-    /* position: static !important; */
+/* FUTURE DEVELOPMENT */
+
+.UserProfileT {
     text-align: center;
     margin-bottom: -20px;
     position: relative;
     left: 300px;
     right: 300px;
     padding: 100px 50px 100px 50px;
-
+}
+.userImage {
+    height: 180px;
+    width: 180px;
 }
 .card-body {
     position: static !important;
@@ -17,6 +20,8 @@
 
 .sub-button {
     width: 100% !important;
+    height: 30px;
+   
 }
 
 .container {
