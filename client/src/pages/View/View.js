@@ -61,7 +61,6 @@ class View extends Component {
 
     return (
       <div>
-        <h1>View All Drinks</h1>
         {drinks.map(drink=>{
           return (
             <>

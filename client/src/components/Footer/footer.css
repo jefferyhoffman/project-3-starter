@@ -11,5 +11,13 @@
 
 .card-header-footer {
       padding: 1%;
-      background: linear-gradient(to bottom, #c31432 0%, #240b36 100%);
+      background: linear-gradient(to bottom, #3374a0 0%, #2d1a3a 100%);
+}
+
+.logo {
+    height: 5%;
+    width: 5%;
+    top: 0;
+    left: 0;
+  
 }
