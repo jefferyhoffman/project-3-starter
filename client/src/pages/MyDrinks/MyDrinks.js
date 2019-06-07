@@ -76,7 +76,6 @@ class MYDrinks extends Component {
 
     return (
       <div>
-        <h1>My Drinks</h1>
         {drinks.map(drink => {
           return (
             

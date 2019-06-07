@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import '../Navigation/navigation.css'
-
+import '../Navigation/navigation.css';
 import AuthContext from '../../contexts/AuthContext';
 import AuthDropdown from '../../components/AuthDropdown/AuthDropdown';
+import Logo from "../../pages/Images/Logo.png";
+
 
 
 const text = {
@@ -32,7 +33,8 @@ class Navigation extends Component {
     return (
       <div className='Navigation'>
         <nav className='navbar navbar-expand-lg navbar-light bg-light mb-3'>
-          <Link className='navbar-brand' to='/' style={text}><h1>Drinkstation</h1><h2>Your Ultimate Drink Stop!</h2></Link>
+        <img src={Logo} alt="My logo" />
+        <h1 className="headermain">DrinkStation</h1>
           <button className={togglerClass} onClick={this.toggleCollapse} data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
             <span className='navbar-toggler-icon'></span>
           </button>

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
 import "../Footer/footer.css";
+import Logo from "../../pages/Images/Logo.png";
+
 
 
 
@@ -11,9 +13,8 @@ class Jumbotron extends Component {
             <div className="footer">
                 <div className="card">
                     <div className="card-header-footer">
-                        DRINKSTATION
+                    <img src={Logo} alt="My logo" className="logo"/>
                         <blockquote className="blockquote mb-0">
-                            <p>Your Ultimate Stop for Drinks</p>
                             <footer className="blockquote-footer"><cite title="Source Title">Be your own Bartender</cite></footer>
                         </blockquote>
                     </div>

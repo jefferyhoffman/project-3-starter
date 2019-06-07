@@ -51,7 +51,7 @@ class LoginForm extends Component {
               </div>
               <div className="card-body">
                 <input
-                  className='form-control'
+                  className='form-control2'
                   id='password'
                   type='password'
                   name='password'
