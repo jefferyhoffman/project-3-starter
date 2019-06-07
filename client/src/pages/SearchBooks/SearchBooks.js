@@ -4,7 +4,7 @@ import { Input, TextArea, FormBtn } from "../../components/Form";
 import { List, ListItem } from "../../components/List";
 // import DeleteBtn from "../../components/DeleteBtn";
 
-class HomePage extends Component {
+class SearchBooks extends Component {
   render() {
     return (
       <div className='Home'>
@@ -30,4 +30,4 @@ class HomePage extends Component {
   }
 }
 
-export default HomePage;
+export default SearchBooks;
