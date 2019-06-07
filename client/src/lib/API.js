@@ -13,6 +13,7 @@ export default {
         }
       });
     },
+    
     register: function (email, password, firstName, lastName, phone, address) {
       return axios.post('/api/users/register', { email, password, firstName, lastName, phone, address });
     },
@@ -29,6 +30,14 @@ export default {
         }
       });
     },
+
+    get: (authToken) =>{
+      return axios.get("/api/checkout/services", {
+        headers: {
+          'Authorization': `Bearer ${authToken}`
+        }
+      });
+    } 
   },
 
   Secrets: {

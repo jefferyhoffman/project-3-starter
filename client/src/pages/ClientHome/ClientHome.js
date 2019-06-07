@@ -2,15 +2,20 @@ import React, { Component } from 'react';
 import '../../pages/ClientHome/style.css';
 import { Link } from 'react-router-dom';
 import Modal from 'react-bootstrap4-modal';
+import AuthContext from '../../contexts/AuthContext';
+import API from '../../lib/API';
 
 class ClientHome extends Component {
+  static contextType = AuthContext;
   state = {
     email: '',
     password: '',
     firstName: '',
     lastName: '',
     phone: '',
-    address: ''
+    address: '',
+    completedServices: [],
+    upcomingServices: [],
   };
 
   constructor(props, context) {
@@ -31,16 +36,34 @@ class ClientHome extends Component {
   handleShow() {
     this.setState({ show: true });
   }
+  getServices = () =>{
+    console.log("something")
+    let { authToken } = this.context
+    console.log("running")
+    API.Services.get(authToken)
+    .then(response => {
+      this.setState({services: response.data})
+    })
+  }
 
   handleSubmit = event => {
     const { email, password, firstName, lastName, phone, address } = this.state;
     console.log(this.props)
     this.props.onSubmit(email, password, firstName, lastName, phone, address);
   }
-
   
   render() {
-    const { email, password, firstName, lastName, phone, address } = this.state;
+    console.log(this.context.user);
+    const completedServices = this.state.services.filter(service => service.complete)
+    const upcomingServices =  this.state.services.filter(service => !service.complete) 
+    const firstName = this.context.user ? this.context.user.firstName : "anon"
+    const lastName = this.context.user ? this.context.user.lastName : "anon"
+    const email = this.context.user ? this.context.user.email : "anon"
+    const phone = this.context.user ? this.context.user.phone : "anon"
+    const address = this.context.user ? this.context.user.address : "anon"
+    const password = this.context.user ? this.context.user.password : "anon"
+    const id = this.context.user ? this.context.user.id : "anon"
+    const {} = this.state;
 
     return (
       <div className="welcome container">
@@ -48,14 +71,13 @@ class ClientHome extends Component {
         <br />
         <div className="col-sm-2"></div>
         <div className="col-sm-8">
-         <h1 className="display-4 text-white font-weight-bold">Welcome Back {/*{this.firstName}*/} </h1> 
+        <h1 className="display-4 text-white font-weight-bold">Welcome Back, {firstName} </h1> 
         </div>
         <div className="col-sm-2"> </div>
         </div>
         <br />
         <br />
         <div className="row">
-
         <div className="col-sm-3">
         <button className="card p-3 mb-5 rounded" data-toggle="modal" data-target="#exampleModalCenter">
           <div className="card-body">
@@ -148,11 +170,8 @@ class ClientHome extends Component {
             </form>
           </Modal>
           </div>
-          
-
-
         <div className="col-sm-3">
-        <button className="card p-3 mb-5 rounded" data-toggle="modal" data-target="#completedModal">
+        <button className="card p-3 mb-5 rounded" data-toggle="modal" data-target="#completedModal" onClick= {this.getServices}>
           <div className="card-body">
             <h1 className="card-title"><i className="fas fa-calendar-check"></i></h1>
             <h5 className="card-subtitle mb-2 text-muted">Completed</h5>
@@ -176,6 +195,17 @@ class ClientHome extends Component {
                   </tr>
                 </thead>
                 <tbody>
+                  {/* this.state.completedServices.map(completedService => {
+                    <tr>
+                      <th scope = "row">
+                          {completedService.date}
+                      </th>
+
+                      <td>
+
+                      </td>
+                    </tr> */}
+                  {/* }) */}
                   <tr>
                     <th scope="row">03/21/2019</th>
                     <td>aeration, lawncut</td>

@@ -2,10 +2,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const ServiceSchema = new Schema({
-    services: {
-        type: Array,
+   name: {
+        type: String,
         trim: true,
-        required: 'Services is required'
+        required: 'Name is required'
     },
     cost: {
         type: Number,
@@ -20,24 +20,14 @@ const ServiceSchema = new Schema({
     complete: {
         type: Boolean,
         default: false
+    },
+    id: {
+        type: String,
+        trim: true,
+        required: 'Id is required'
     }    
 })
 
-class newService {
-    constructor({ name, id, email, password, address, phone, cart, upcoming, completed }) {
-        this.name = name;
-        this.id = id;
-        this.email = email;
-        this.password = password;
-        this.address = address;
-        this.phone = phone;
-        this.cart = cart;
-        this.upcoming = upcoming;
-        this.completed = completed;
-    }
-}
-
-ServiceSchema.loadClass(newService);
 let Service = mongoose.model('Service', ServiceSchema);
 
 module.exports = Service

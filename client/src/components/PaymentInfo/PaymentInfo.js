@@ -1,18 +1,17 @@
 import React, { Component } from "react"
 import "./PaymentInfo.css"
 import API from '../../lib/API';
+import AuthContext from '../../contexts/AuthContext';
+
 // import "./Confirmation"
 
-
 class PaymentInfo extends Component {
-    state = {
-        products: [],
-        cost: this.props.total
-    };
+    static contextType = AuthContext;
 
-    handleCheckout = event => {
+    handleCheckout = (event) => {
+        event.preventDefault()
         console.log("hello");
-        API.Services.checkout(this.context.authToken)
+        API.Services.checkout(this.context.authToken, this.props.date, this.props.products)
             .then(response => {
                 this.setState({ redirectToReferrer: true })
             })
@@ -22,16 +21,15 @@ class PaymentInfo extends Component {
                 }
             });
     }
-    
+
     render() {
         return (
-
             <div className="row" style={{ marginTop: '40px', marginLeft: '20px', marginRight: '20px' }}>
                 <div className="col">
                     <div className="card">
                         <div className="card-body">
                             <h2 className="card-title">Checkout</h2>
-                            <form action="orderPlaced" action="GET">
+                            <form>
                                 <div className="col-50">
                                     <label for="fname"><i className="fa fa-user"></i> Full Name</label>
                                     <input

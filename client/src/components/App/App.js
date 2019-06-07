@@ -186,7 +186,8 @@ class App extends Component {
             <Route exact path='/Checkout' component={(props) =>
               <Checkout 
               {...props}
-              {...this.state.modalInfo} />}
+              {...this.state.modalInfo}
+              calendarInfo = {this.state.calendarInfo} />}
               />
             <Route exact path='/' component={Home} />
             <Route component={NotFound} />

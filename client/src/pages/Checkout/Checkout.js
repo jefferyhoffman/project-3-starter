@@ -59,7 +59,7 @@ class Checkout extends Component {
                     <MyStoreCheckout />
                 </StripeProvider> */}
                 <CheckoutList products={products} />
-                <PaymentInfo />
+                <PaymentInfo products={products} date = {this.props.calendarInfo.date}/>
             </div>
         )
     }
