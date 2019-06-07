@@ -9,6 +9,7 @@ import Footer from "../../components/Footer/Footer.js";
 import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
 import Login from '../../pages/Login/Login';
 import UpdateProfile from '../../pages/UpdateProfile/UpdateProfile';
+import UserProfile from '../../pages/UserProfile/UserProfile';
 import Register from '../../components/Register/register';
 import Secret from '../../pages/Secret/Secret';
 import Home from '../../pages/Home/Home';
@@ -90,13 +91,12 @@ class App extends Component {
             <Route exact path='/' component={Home} />
             <Route exact path='/register' component={Register} />
             <Route exact path='/UpdateProfile' component={UpdateProfile} />
+            <Route exact path='/UserProfile' component={UserProfile} />
             <Route exact path='/' component={this.state.cart} />
             <Route exact path='/collections' component={(props) => <Collections {...props} addToCart={this.addToCart} />} />
             <Route exact path='/cart' component={(props) => <Cart {...props} userCart={this.state.cart} />}/>
 ?           <Route component={NotFound} />
       
-            
-             
             </Switch>
             <Footer />
    

@@ -53,7 +53,7 @@ class Navigation extends Component {
               {user
                 ? <AuthDropdown onClick={this.toggleCollapse} />
                 : <li className='nav-item'><Link className='nav-link' to='/login' onClick={this.toggleCollapse}>Login</Link></li>}
-                <Link className ='nav-link' to="profile"><i id="profileIcon" class="fas fa-user-circle"></i></Link>
+                <Link className ='nav-link' to="UserProfile"><i id="profileIcon" class="fas fa-user-circle"></i></Link>
               <Link className="nav-link" to='/cart'onClick={this.toggleCollapse}><i id="cartNav" class="fas fa-shopping-cart"></i></Link>
             </ul>
           </div>
