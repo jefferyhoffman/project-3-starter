@@ -24,7 +24,6 @@ booksController.get("/search", function (req, res) {
          res.send(data)  
     })
         .catch(err => res.json(err))
-
 });
 
 booksController.post("/post", function (req, res) {

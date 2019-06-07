@@ -19,9 +19,7 @@ class SearchBooks extends Component {
             <div className="response"/>
             <hr />
             <List>
-              1.book
-              2.book
-              3.book
+              
               </List>
           </div>
         </div>
