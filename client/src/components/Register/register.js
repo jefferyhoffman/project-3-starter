@@ -77,7 +77,7 @@ class Register extends Component {
                       />
                   
 <br/>
-                    <button className='btn btn-secondary sub-button' type='submit'>Register</button>
+                    <button className='btn btn-secondary sub-button' to='/Home' onClick={this.toggleCollapse} type='submit'>Register</button>
                     </form>
                 </div>
            </div>
