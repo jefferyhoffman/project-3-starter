@@ -48,38 +48,40 @@ export default class Cart extends React.Component {
         let total = 0
         return (
             <div className="containerCart">
-                
                 <div className="card" id="productHolder">
-                <h3 className="card-title">Your Cart</h3>
-                
-                
-                
-                {
-                    products.map((product, index) =>
+                    <h3 className="card-title">Your Cart</h3>
+                    {
+                        products.map((product, index) =>
                         <CartItem product={product} remove={this.removeFromCart} key={index} />)
-                }
-                {/* products.length ? */}
-                
-                
-                <div className="cartContent">
-                    <h4>
-                    <small>Total Amount: </small>
-                    <span className="float-right text-primary">${total}</span>
-                </h4>
-                <hr />
+                    }
+                    {/* products.length ? */}
+                    
+                    <div className="cartContent">
+                        <div className="contentHolder">
+                            {!products.length ? <h3 id="noItemWarning" className="text-warning">Your Cart is Empty</h3> : null}
+                            <hr id="totalSeparate" />
+                            <h4 id="cartTotalHolder">
+                                <small id="totalText">Total: 
+                                    <span id="totalDisplay" className="text-primary">
+                                        ${total}
+                                    </span>
+                                </small>
+                            </h4>
+                        </div>
+                        <div className="purchaseFooter">
+                            <Link to="/CheckoutForm">
+                                <button id="checkoutBtn" className="btn btn-success">Checkout</button>
+                            </Link>
+                            <button id="clearBtn" className="btn btn-danger" onClick={this.clearCart}>
+                                Clear Cart
+                            </button>
+                        </div>
+                            
+                    </div>
+
                 </div>
-            {!products.length ? <h3 className="text-warning">No item on the cart</h3> : null}
-                <footer className="purchaseFooter">
-                <Link to="/CheckoutForm">
-                    <button id="checkoutBtn" className="btn btn-success">Checkout</button>
-                </Link>
-                <button id="clearBtn" className="btn btn-danger" onClick={this.clearCart}>Clear Cart</button>
-                </footer>
-                
-                </div>
-                
             </div>
 
-            )
+        )
     }
 }
