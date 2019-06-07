@@ -4,7 +4,7 @@ import "./style.css"
 function ProductCard(props) {
   return (
     
-    <div className="card">
+    <div className="card" id="productCard">
       <div className="img-container">
         <img id="watchList" src={props.image} alt={props.name}/>
       </div>

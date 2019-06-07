@@ -1,17 +1,20 @@
-.card {
+#productCard {
   background: #fff;
   border-radius: 2px;
-  height: 480px !important;
+  height: 72vh !important;
   margin: 1rem;
   position: relative;
-  width: 325px;
   box-shadow: 0 3px 6px #999, 0 3px 6px #999;
   text-align: left;
+  width: 24vw !important;
+}
+#liProducts {
+  font-size: 1rem;
 }
 
 
 .card > .img-container {
-  height: 60%;
+  height: 60vh;
   overflow: hidden;
   text-align: center;
   background:#6CADDC;
@@ -36,6 +39,9 @@
 
 .card > .remove:hover {
   color: #d50000;
+}
+#watchList {
+  height: 40vh;
 }
 
 .title {
@@ -62,7 +68,7 @@
   margin-top: 10px;
   color: rgb(113, 113, 113);
   cursor: pointer;
-  font-size: 25px;
+  font-size: 1.5rem;
 }
 #productCart:hover {
   color: rgb(249, 228, 6);
@@ -108,8 +114,8 @@
   width: 100px;
   font-size: 12px;
  position: relative;
- left: 36%;
- top: 24px;
+ left: 4%;
+ top: 24%;
  background: rgb(25, 120, 194);
  border: 1px solid black;
  margin: 10px;
@@ -119,8 +125,8 @@
   width: 100px;
   font-size: 12px;
   position: relative;
-  left: 36%;
-  top: 24px;
+  left: 4%;
+  top: 24%;
   background: rgb(35, 120, 194);
   border: 1px solid black;
   margin: 10px;
@@ -169,6 +175,7 @@
   position: relative;
   top: 200px;
   left: 20px;
+  text-align: left;
 }
 #totalSeparate {
   width: 90%;
@@ -204,4 +211,8 @@
   left: 20%;
   font-size: 14px;
   top: 0;
+}
+.contentProduct {
+  top: 2%;
+  height: 15vh;
 }
