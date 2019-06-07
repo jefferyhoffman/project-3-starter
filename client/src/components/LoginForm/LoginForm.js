@@ -61,7 +61,7 @@ class LoginForm extends Component {
                   onChange={this.handleInputChange}
                 />  </div>
             </div>
-            <button className='btn btn-primary' type='submit'>Sign In</button>
+            <button className='btn btn-info btn-lg' type='submit'>Sign In</button>
           </form>
         </div>
       </div>

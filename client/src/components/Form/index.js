@@ -4,6 +4,7 @@ export function Input(props) {
   return (
     <div className="form-group">
       <input className="form-control" {...props} />
+      {/* <input className="form-control" placeholder="Name (required)" /> */}
     </div>
   );
 }
@@ -18,14 +19,14 @@ export function Select(props) {
 export function TextArea(props) {
   return (
     <div className="form-group">
-      <textarea className="form-control" rows="3" {...props} />
+      <textarea className="form-control" rows="8" {...props} />
     </div>
   );
 }
 
 export function FormBtn(props) {
   return (
-    <div {...props} style={{ float: "right", marginBottom: 10 }} className="btn btn-danger btn-lg btn-block">
+    <div {...props} style={{ float: "right", marginBottom: 10 }} className="btn btn-lg btn-info">
       {props.children}
     </div>
   );

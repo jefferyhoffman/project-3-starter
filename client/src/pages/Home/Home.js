@@ -52,14 +52,14 @@ class HomePage extends Component {
                       <img src={jumbo1} className="d-block w-100" alt="..."></img>
                       <div className="carousel-caption d-none d-md-block">
                         <h1>Create</h1>
-                        <h4>Add your favroite "drink"!</h4>
+                        <h4>Add your favroite drink!</h4>
                       </div>
                     </div>
                     <div className="carousel-item">
                       <img src={jumbo6} className="d-block w-100" alt="..."></img>
                       <div className="carousel-caption d-none d-md-block">
                         <h1>Search</h1>
-                        <h4>Find your "drink"!</h4>
+                        <h4>Find your drink!</h4>
                       </div>
                     </div>
                     <div className="carousel-item">
@@ -88,7 +88,7 @@ class HomePage extends Component {
               <div className="row">
                 <div className="col-3">
                   <div className="card-top">
-                    <img src={top1} className="card-img-top" alt={"drink"}></img>
+                    <img src={top1} className="card-img-top" alt={"featured-drink"}></img>
                     <div className="card-body">
                       <h5 className="card-title">Moscow Mule</h5>
                       <p className="card-text">This drink has exploded everywhere being one the most popular drinks around. We think it's here to stay for a long time</p>
@@ -98,7 +98,7 @@ class HomePage extends Component {
                 </div>
                 <div className="col-3">
                   <div className="card-top">
-                    <img src={top2} className="card-img-top" alt={"drink"}></img>
+                    <img src={top2} className="card-img-top" alt={"featured-drink"}></img>
                     <div className="card-body">
                       <h5 className="card-title">Pineapple Martini</h5>
                       <p className="card-text">Pineapple Infused Vodka Martini is one for connoisseurs who take their craft seriouly. Patience and hard work do pay off We say.</p>
@@ -108,7 +108,7 @@ class HomePage extends Component {
                 </div>
                 <div className="col-3">
                   <div className="card-top">
-                    <img src={top3} className="card-img-top" alt={"drink"}></img>
+                    <img src={top3} className="card-img-top" alt={"featured-drink"}></img>
                     <div className="card-body">
                       <h5 className="card-title">Old Fashioned</h5>
                       <p className="card-text">Classy, timeless  and loved across generations. We can safely claim good 'old Old Fashioned is never gonna be out of style.</p>
@@ -118,7 +118,7 @@ class HomePage extends Component {
                 </div>
                 <div className="col-3">
                   <div className="card-top">
-                    <img src={top4} className="card-img-top" alt={"drink"}></img>
+                    <img src={top4} className="card-img-top" alt={"featured-drink"}></img>
                     <div className="card-body">
                       <h5 className="card-title">Baby Guinness</h5>
                       <p className="card-text">Baby Guinness Shots are perfect blend of coffee and creme base liquor! We find it one of the best tasting shot whichs looks amazing cool.</p>
