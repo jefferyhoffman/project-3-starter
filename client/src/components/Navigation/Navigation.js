@@ -46,11 +46,11 @@ class Navigation extends Component {
             <ul className='navbar-nav'>
               {user
                 ? <>
-                  <li className='nav-item'>
+                  {/* <li className='nav-item'>
                     <Link className='nav-link' style={text} to='/' onClick={this.toggleCollapse}>Home</Link>
-                  </li>
+                  </li> */}
                   <li className='nav-item'>
-                    <Link className='nav-link' style={text} to='/mydrinks' onClick={this.toggleCollapse}>Drink</Link>
+                    <Link className='nav-link' style={text} to='/featured' onClick={this.toggleCollapse}>Featured Drinks</Link>
                   </li>
                   <li className='nav-item'>
                     <Link className='nav-link' style={text} to='/create' onClick={this.toggleCollapse}>Create</Link>
@@ -59,10 +59,13 @@ class Navigation extends Component {
                     <Link className='nav-link' style={text} to='/search' onClick={this.toggleCollapse}>Search</Link>
                   </li>
                   <li className='nav-item'>
-                    <Link className='nav-link' style={text} to='/view' onClick={this.toggleCollapse}>View</Link>
+                    <Link className='nav-link' style={text} to='/view' onClick={this.toggleCollapse}>View Drinks</Link>
                   </li>
                   <li className='nav-item'>
-                    <Link className='nav-link' style={text} to='/portfolio' onClick={this.toggleCollapse}>Portfolio</Link>
+                    <Link className='nav-link' style={text} to='/mydrinks' onClick={this.toggleCollapse}>My Drinks</Link>
+                  </li>
+                  <li className='nav-item'>
+                    <Link className='nav-link' style={text} to='/about' onClick={this.toggleCollapse}>About</Link>
                   </li>
                   <AuthDropdown onClick={this.toggleCollapse} />
                 </>
