@@ -15,16 +15,6 @@ export default {
     }
   },
 
-  Secrets: {
-    getAll: function (authToken) {
-      return axios.get('/api/secrets', {
-        headers: {
-          'Authorization': `Bearer ${authToken}`
-        }
-      });
-    }
-  },
-
   Items: {
     getItems: function () {
       return axios.get("/api/items");
