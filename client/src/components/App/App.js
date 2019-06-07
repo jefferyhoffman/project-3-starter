@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
-
 import API from '../../lib/API';
 import TokenStore from '../../lib/TokenStore';
 import AuthContext from '../../contexts/AuthContext';
 import Navigation from '../../components/Navigation/Navigation';
 import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
 import Login from '../../pages/Login/Login';
+import Register from '../../pages/Register/Register';
 import Secret from '../../pages/Secret/Secret';
 import Home from '../../pages/Home/Home';
+import Scheduling from '../../pages/Scheduling/Scheduling';
 import NotFound from '../../pages/NotFound/NotFound';
+import Checkout from '../../pages/Checkout/Checkout';
+import ClientHome from '../../pages/ClientHome/ClientHome';
+import Confirmation from '../../pages/Confirmation/Confirmation';
 
 import './App.css';
 
@@ -33,8 +37,105 @@ class App extends Component {
         authToken: TokenStore.getToken(),
         onLogin: this.handleLogin,
         onLogout: this.handleLogout
+
+      },
+      calendarInfo: {
+        date: new Date(),
+        showModal: false
+      },
+      modalInfo: {
+        total:0,
+        premiumPckg: false,
+        upgradedPckg: false,
+        standardPckg: false,
+        aeration: false,
+        reseeding: false,
+        trimming: false,
+        pineNeedles: false,
+        leafRemoval: false,
+        pesticide: false,
+        pruning: false,
+        soil: false,
+        mulch: false
       }
+      
     }
+  }
+
+  onChange = (date) => {
+    this.setState({ calendarInfo:{
+      date,showModal: true}
+    })
+  }
+
+  handleModalUpdate = (name, value) => {
+    this.setState({
+      modalInfo:{
+        ...this.state.modalInfo,
+        [name]: value
+      }
+      
+  }, 
+  () => {
+      // Calculation to determine total
+      var total = 0;
+      if (this.state.modalInfo.premiumPckg) {
+          total += 350
+      }
+      if (this.state.modalInfo.upgradedPckg) {
+          total += 200
+      }
+      if (this.state.modalInfo.standardPckg) {
+          total += 100
+      }
+      if (this.state.modalInfo.aeration) {
+          total += 50
+      }
+      if (this.state.modalInfo.reseeding) {
+          total += 50
+      }
+      if (this.state.modalInfo.trimming) {
+          total += 50
+      }
+      if (this.state.modalInfo.pineNeedles) {
+          total += 50
+      }
+      if (this.state.modalInfo.leafRemoval) {
+          total += 50
+      }
+      if (this.state.modalInfo.pesticide) {
+          total += 50
+      }
+      if (this.state.modalInfo.topiary) {
+          total += 50
+      }
+      if (this.state.modalInfo.pruning) {
+          total += 50
+      }
+      if (this.state.modalInfo.soil) {
+          total += 50
+      }
+      if (this.state.modalInfo.mulch) {
+          total += 50
+      }
+
+      this.setState({
+        modalInfo:{
+          ...this.state.modalInfo,
+          total: total
+        }
+          
+      });
+      console.log(total);
+  });
+
+  }
+  closeModal = () => {
+    this.setState({
+      calendarInfo: {
+        showModal: false
+      }
+    })
   }
 
   componentDidMount() {
@@ -48,18 +149,31 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state)
     return (
       <AuthContext.Provider value={this.state.auth}>
         <div className='App'>
           <Navigation />
-          <div className='container'>
-            <Switch>
-              <Route path='/login' component={Login} />
-              <PrivateRoute path='/secret' component={Secret} />
-              <Route exact path='/' component={Home} />
-              <Route component={NotFound} />
-            </Switch>
-          </div>
+          {/* <div className='container'> */}
+          <Switch>
+            <Route path='/login' component={Login} />
+            <Route path='/register' component={Register} />
+            <PrivateRoute path='/secret' component={Secret} />
+            <Route exact path='/Scheduling' component={(props) =>
+              <Scheduling
+                {...props}
+                handleServiceChange={this.onChange}
+                calendarInfo={this.state.calendarInfo}
+                closeModal={this.closeModal}
+                handleModalUpdate={this.handleModalUpdate}
+                {...this.state.modalInfo}
+              />} />
+            <PrivateRoute exact path='/ClientHome' component={ClientHome} />
+            <PrivateRoute exact path='/Checkout' component={Checkout} />
+            <PrivateRoute exact path='/Confirmation' component={Confirmation} />
+            <Route exact path='/' component={Home} />
+            <Route component={NotFound} />
+          </Switch>
         </div>
       </AuthContext.Provider>
     );
