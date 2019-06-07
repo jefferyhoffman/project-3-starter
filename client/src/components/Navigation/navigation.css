@@ -1,5 +1,5 @@
 nav {
-    background: linear-gradient(to top, #c31432 0%, #240b36 100%);
+    background: linear-gradient(to top, #3374a0 0%, #2d1a3a 100%);
 }
 
 nav Link {
@@ -7,3 +7,7 @@ nav Link {
     color: #d7e2e9;
    
   }
+
+.headermain {
+  font-family: 'Fjalla One', sans-serif;
+}
