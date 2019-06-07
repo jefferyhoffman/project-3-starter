@@ -138,8 +138,8 @@ img {
 }
 
 .productImage {
-    height: 300px;
-    width: 200px;
+    height: 45vh;
+    width: 14vw;
     text-align: center;
 }
 .productIMG {
@@ -149,7 +149,9 @@ img {
     height: 450px;
     width: 550px;
 }
-
+#homeProductN {
+    font-size: 2rem;
+}
 .productGIF {
     margin-top: 140px;
     top: 150px;
@@ -158,7 +160,7 @@ img {
     width: 300px;
 }
 p.card-text {
-    font-size: 14px;
+    font-size: 1rem;
     margin: 10px 20px 20px 20px;
     line-height: 25px;
 }
@@ -222,8 +224,9 @@ hr {
 
 .co-bio {
     position: absolute;
-    top: 500px;
+    top: 36vw;
     color: rgb(255, 255, 255);
     margin: 10px 60px;
+    font-size: 1rem;
 }
 
