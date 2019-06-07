@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../cssPages/images/gslogo.jpg';
+import logo from '../../cssPages/images/greenscapes.png';
 import '../Navigation/style.css';
 
 import AuthContext from '../../contexts/AuthContext';
@@ -30,7 +30,7 @@ class Navigation extends Component {
         <nav className='navbar navbar-expand-lg navbar-light bg-light mb-3'>
           {user
                 ? <>
-                <Link className='navbar-brand' to='/clienthome'><img src={logo} width="100" height="30" className="d-inline-block align-top" alt=""/></Link>
+                <Link className='navbar-brand' to='/clienthome'><img src={logo} width="160" height="50" className="d-inline-block align-top" alt=""/></Link>
                 </>
                 :
                 <>
