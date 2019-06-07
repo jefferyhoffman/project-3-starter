@@ -30,7 +30,7 @@ class Navigation extends Component {
         <nav className='navbar navbar-expand-lg navbar-light bg-light mb-3'>
           {user
                 ? <>
-                <Link className='navbar-brand' to='/clienthome'><img src={logo} width="160" height="50" className="d-inline-block align-top" alt=""/></Link>
+                <Link className='navbar-brand' to='/'><img src={logo} width="160" height="50" className="d-inline-block align-top" alt=""/></Link>
                 </>
                 :
                 <>
@@ -45,7 +45,7 @@ class Navigation extends Component {
               <li className='nav-item'>
               {user
                 ? <>
-                <Link className='nav-link text-info font-weight-bold' to='/clienthome' onClick={this.toggleCollapse}>Home</Link>
+                <Link className='nav-link text-success pt-3 font-weight-bold' to='/clienthome' onClick={this.toggleCollapse}>Home</Link>
                 </>
                 :
                 <>
