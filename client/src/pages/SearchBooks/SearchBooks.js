@@ -11,7 +11,7 @@ class SearchBooks extends Component {
         <div className='row'>
           <div className='col'>
             <Jumbotron>
-    <h3>Search for your books bellow</h3>
+    <h3>Search for a book below</h3>
             </Jumbotron>
 
             <Input name="search" placeholder="search for a book..." />
@@ -19,9 +19,7 @@ class SearchBooks extends Component {
             <div className="response"/>
             <hr />
             <List>
-              1.book
-              2.book
-              3.book
+              
               </List>
           </div>
         </div>

@@ -25,7 +25,7 @@ class AddBook extends Component {
     }
     
     render() {  //send to mySQL and add to that user
-        const { title, author, imageUrl, series, synopsis } = this.state;
+       const { title, author, imageUrl, series, synopsis } = this.state;
     
         return (
             <div className='AddBook'>
