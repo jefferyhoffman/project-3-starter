@@ -3,14 +3,13 @@ import { Link } from 'react-router-dom';
 
 import AuthContext from '../../contexts/AuthContext';
 import AuthDropdown from '../../components/AuthDropdown/AuthDropdown';
-
 import "./Navigation.css"
 
 class Navigation extends Component {
   static contextType = AuthContext;
 
   state = {
-    collapsed: true
+    collapsed: true,
   }
 
   toggleCollapse = () => {
@@ -38,23 +37,20 @@ class Navigation extends Component {
               <li className='nav-item'>
                 <Link className='nav-link' to='/' onClick={this.toggleCollapse}></Link>
               </li>
-              {user &&
-                <li className='nav-item'>
-                  <Link className='nav-link' to='/secret' onClick={this.toggleCollapse}>Secret</Link>
-                </li>}
             </ul>
             <ul className='navbar-nav'>
             <li className="nav-item">
                     <Link className="nav-link" to="/collections" onClick={this.toggleCollapse}>Collections</Link>
                 </li>
-                {/* <li className='nav-link'>Search</li> */}
-                <li className="nav-item"></li>
-                
+            {user &&
+                <li className='nav-item'>
+                <Link className ='nav-link' to="UserProfile"><i id="profileIcon" className="fas fa-user-circle"></i></Link>
+                </li>}
+                      
               {user
                 ? <AuthDropdown onClick={this.toggleCollapse} />
                 : <li className='nav-item'><Link className='nav-link' to='/login' onClick={this.toggleCollapse}>Login</Link></li>}
-                <Link className ='nav-link' to="UserProfile"><i id="profileIcon" class="fas fa-user-circle"></i></Link>
-              <Link className="nav-link" to='/cart'onClick={this.toggleCollapse}><i id="cartNav" class="fas fa-shopping-cart"></i></Link>
+              <Link className="nav-link" to='/cart'onClick={this.toggleCollapse}><i id="cartNav" className="fas fa-shopping-cart"></i></Link>
             </ul>
           </div>
         </nav>

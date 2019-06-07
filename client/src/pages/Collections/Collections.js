@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 // import "./collections.css";
 import "./Collections.css";
 import watchVid from "../Home/vidBg.mp4";
-import API from "../../utils/API";
+import API from "../../lib/API";
 import "../Home/style.css";
 // import watchVid from "./vidBg.mp4";
 import Wrapper from "../../components/Products/Wrapper"
@@ -26,12 +26,10 @@ class Collections extends Component {
   };
 
   loadItems = () => {
-    API.getItems()
+    API.Items.getItems()
       .then(res => {
         if(this._isMounted){
-
           this.setState({ items: res.data })
-          console.log(res.data)
         }
       })
 
@@ -47,15 +45,10 @@ class Collections extends Component {
     return (
       
       <div className="container-fluid">
-       <div className="row" id="row1Collection">
           <video autoPlay muted loop id="videoBgC" src={watchVid} type="video/mp4"></video>
         <div className="text-overlayC">
             Collections
         </div>
-        {/* <p className="p-title">
-          Collections
-        </p>   */}
-       </div>
          <Wrapper>
         {this.state.items.map(item => (
           <Products
@@ -67,6 +60,7 @@ class Collections extends Component {
             brand={item.brand}
             price={item.price}
             quantity={item.quantity}
+            description={item.description}
             addToCart={this.props.addToCart}
           />
         ))
