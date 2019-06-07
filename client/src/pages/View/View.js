@@ -61,11 +61,11 @@ class View extends Component {
 
     return (
       <div>
-        <h1>All Drinks</h1>
-        
-        {drinks.map(drink => {
+        <h1>View All Drinks</h1>
+        {drinks.map(drink=>{
           return (
-            <div className="card mb-3 container">
+            <>
+               <div className="card mb-3 container">
               <div className="row no-gutters">
                 <div className="col-md-3">
                   <img src={drink.image} alt={drink.name} className="card-img">
@@ -74,19 +74,17 @@ class View extends Component {
                 <div className="col-md-7">
                   <div className="card-body">
                     <h5 className="card-title"><h3>{drink.name}</h3></h5>
-                    <p className="card-text"><p>{drink.category} {drink.kind} </p> 
-                    <p className="card-text">  <p>{drink.instructions}</p> <p>{drink.ingredients_measurements}</p><p>{drink.glass}</p> </p></p> 
+                    <p className="card-text"><h5>{drink.kind} - {drink.category}</h5> 
+                    <p className="card-text"> <p><strong>Ingredients:</strong> {drink.ingredients_measurements}</p><p><strong>Instructions:</strong> {drink.instructions}</p> <p><strong>Glass: </strong>{drink.glass}</p> </p></p> 
                     <p className="card-text"><small class="text-muted"></small></p>
                   </div>
                 </div>
               </div>
             </div>
-           
-
-    )
-  })
-}
-      </div >
+            </>
+          )
+        })}
+      </div>
     );
   }
 }

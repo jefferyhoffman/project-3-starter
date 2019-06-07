@@ -5,12 +5,11 @@ const { JWTVerifier } = require('../../lib/passport');
 
 drinksController.get('/', (req, res) => {
   db.Drinks
-    .find(req.query)
-    .then(dbModel => {
-      console.log(dbModel)
-      res.json(dbModel)
-    })
-    .catch(err => res.status(422).json(err));
+  .find(req.query)
+  .then(dbModel => {
+    // console.log(dbModel)
+    res.json(dbModel)})
+  .catch(err => res.status(422).json(err));
 });
 
 // drinksController.get('/mine', JWTVerifier, (req, res) => {
@@ -21,6 +20,17 @@ drinksController.get('/', (req, res) => {
 //     res.json(dbModel)})
 //   .catch(err => res.status(422).json(err));
 // });
+  drinksController.get("/search", JWTVerifier, function(req, res) {
+    searchTerm = req.query.name
+    db.Drinks
+    .find({name: new RegExp(`.*${searchTerm}.*`)})
+    .then(dbModel => {
+      // console.log(dbModel)
+      res.json(dbModel)})
+    .catch(err => res.status(422).json(err));
+  
+  
+  });
 
 drinksController.get("/mine", JWTVerifier, function (req, res) {
   db.Users.find({ _id: req.user._id })
@@ -38,6 +48,8 @@ drinksController.delete("/mine/:id", JWTVerifier, (req, res) => {
   .then(dbModel => res.json(dbModel))
   .catch(err => console.log(err));
 });
+
+
 
 
 // drinksController.post('/', JWTVerifier, (req, res) => {
@@ -76,6 +88,8 @@ drinksController.delete('/:id', JWTVerifier, (req, res) => {
     .then(dbModel => res.json(dbModel))
     .catch(err => res.status(422).json(err));
 });
+
+
 
 module.exports = drinksController;
 
