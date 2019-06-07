@@ -22,8 +22,12 @@ export default {
   },
 
   Services: {
-    checkout: function (date, services, id, cost, complete) {
-      return axios.post("/api/checkout", { date, services, id, cost, complete });
+    checkout: function (authToken, date, services, id, cost, complete) {
+      return axios.post("/api/checkout", { date, services, id, cost, complete }, {
+        headers: {
+          'Authorization': `Bearer ${authToken}`
+        }
+      });
     },
   },
 

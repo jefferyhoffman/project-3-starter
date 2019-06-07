@@ -38,6 +38,7 @@ class ClientHome extends Component {
     this.props.onSubmit(email, password, firstName, lastName, phone, address);
   }
 
+  
   render() {
     const { email, password, firstName, lastName, phone, address } = this.state;
 

@@ -1,21 +1,11 @@
 import React,  { Component }from 'react';
 import { CardElement } from 'react-stripe-elements';
-import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
 
 class CardSection extends Component {
-  handleCheckout = (date, services, id, cost, complete) => {
-    console.log("hello");
-    API.Services.checkout(date, services, id, cost, complete)
-      .then(response => {
-        this.setState({ redirectToReferrer: true })
-      })
-      .catch(err => {
-        if (err.response.status === 401) {
-          this.setState({ error: "Sorry. Please try again." });
-        }
-      });
-  }
+  static contextType = AuthContext;
+
+  
   render() {
     return (
       <>
@@ -24,7 +14,7 @@ class CardSection extends Component {
         <br />
           <CardElement style={{ base: { fontSize: '20px', margin: '30px', padding: '10px' } }} />
         </label>
-        <button style={{ margin: '40px', borderRadius: '4px' }} onClick={this.handleCheckout}>Confirm order</button>
+         <button style={{ margin: '40px', borderRadius: '4px' }}>Confirm order</button> 
       </>
     );
   }

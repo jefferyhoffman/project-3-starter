@@ -5,12 +5,12 @@ const ServiceSchema = new Schema({
     services: {
         type: Array,
         trim: true,
-        required: 'Name is required'
+        required: 'Services is required'
     },
     cost: {
         type: Number,
         trim: true,
-        required: 'Email address is required'
+        required: 'Cost is required'
     },
     date: {
         type: Date,

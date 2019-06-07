@@ -8,11 +8,12 @@ const jwt = require('jsonwebtoken');
 //     res.json(req.user);
 // });
 
-checkoutController.post('/', (req, res) => {
+checkoutController.post('/', JWTVerifier, (req, res) => {
+    console.log(req.body)
     const { date, cost, id, services, complete } = req.body;
     db.Services.create({ date, cost, id, services, complete })
         .then(service => res.json(service))
-        .catch(err => res.json(err));
+        .catch(err => console.log(err));
 });
 
 module.exports = checkoutController;
