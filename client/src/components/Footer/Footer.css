@@ -1,0 +1,85 @@
+#footer {
+    height: 300px;
+    width: 100%;
+    background: white;
+    /* display: none; */
+}
+/* #footerRow {
+    height: 300px;
+    display: none;
+} */
+button {
+    width: 100px;
+    height: 80px;
+    background: rgb(50, 50, 50);
+    position: relative;
+    bottom: 40px;
+    left: 46%;
+    margin: 0;
+    border-radius: 70px;
+    color: white;
+    font-weight: 600;
+    font-size: 40px;
+}
+.btn-holder {
+    z-index: 2;
+    height: 20px;
+    /* background: rgb(94, 94, 94); */
+    width: 100%;
+}
+.containerFooter {
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    height: 30px !important;
+}
+.row {
+    text-align: center;
+}
+#footerRow {
+    height: 300px;
+}
+#footerSec {
+    font-weight: 800;
+    margin-top: 60px;
+    font-size: 20px;
+}
+
+#footerItems {
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgb(111, 111, 111);
+}
+
+footer {
+    text-align: center;
+    font-size: 14px;
+    margin: 10px;
+    font-family: "Montserrat", sans-serif;
+}
+#hrFooter {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    position: relative;
+    top: 10px;
+    left: 20px;
+}
+
+.modalBtn {
+    bottom: 0;
+    left:0;
+}
+
+.modal-footer {
+   left: 0;
+}
+
+.sub-button {
+    bottom: 0;
+    left:0;
+}
+#displayFooter {
+    left: 46%;
+}
