@@ -130,7 +130,6 @@ class HomePage extends Component {
             </div >
           </div>
           <div className="card-footer text-muted">
-            <Link to="#">Go to our Top Drinks Page for more!</Link>
           </div>
         </div>
       </div >

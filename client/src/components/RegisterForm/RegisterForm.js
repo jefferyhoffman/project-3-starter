@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class RegisterForm extends Component {
   state = {
@@ -69,7 +70,7 @@ class RegisterForm extends Component {
                   />
                 </div>
               </div>
-              <button className='btn btn-info btn-lg' type='submit'>Sign up</button>
+              <Link to='/login'><button className='btn btn-info btn-lg' type='submit'>Sign up</button></Link>
             </form>
           </div>
         </div>

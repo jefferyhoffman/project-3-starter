@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-
-
+import { Link } from 'react-router-dom';
 
 class LoginForm extends Component {
   state = {
@@ -62,6 +61,10 @@ class LoginForm extends Component {
                 />  </div>
             </div>
             <button className='btn btn-info btn-lg' type='submit'>Sign In</button>
+            <br/>
+            <br/>
+            <br/>
+            <Link to='/register' onClick={this.toggleCollapse}><h3>New to Drinkstation! Click here to Sign up!</h3></Link>
           </form>
         </div>
       </div>
