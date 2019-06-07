@@ -50,7 +50,7 @@ class Create extends Component {
     let { id } = this.context
 
     if (this.state.isComplete) {
-      return <Redirect to="/" />;
+      return <Redirect to="../../MyDrinks" />;
     }
 
     return (
