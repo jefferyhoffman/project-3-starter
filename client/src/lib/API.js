@@ -56,6 +56,15 @@ export default {
           'Authorization': `Bearer ${authToken}`
         }
       });
+    },
+    delete: function (authToken, id) {
+      return axios({
+        method: 'delete',
+        url: '/api/drinks/mine/' + id,
+        headers: {
+          'Authorization': `Bearer ${authToken}`
+        }
+      });
     }
   }
 }

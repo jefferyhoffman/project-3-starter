@@ -20,7 +20,7 @@ class View extends Component {
   loadDrinks = () => {
     API.Drinks.getAll()
       .then(res =>
-        this.setState({ drinks: res.data, image: "", name: "", instructions: "" , ingredients_measurements: "" })
+        this.setState({ drinks: res.data, image: "", name: "", instructions: "", ingredients_measurements: "" })
       )
       .catch(err => console.log(err));
   };
@@ -54,31 +54,43 @@ class View extends Component {
 
   render() {
     let { drinks } = this.state
-    
+
     if (this.state.isComplete) {
       return <Redirect to="/" />;
     }
 
     return (
       <div>
-        <h1>View Drinks</h1>
-        {drinks.map(drink=>{
+        <h1>All Drinks</h1>
+        
+        {drinks.map(drink => {
           return (
-            <>
-            <h3>{drink.name}</h3>
-            <p>{drink.instructions}</p>
-            <p>{drink.category}</p>
-            <p>{drink.kind}</p>
-            <p>{drink.ingredients_measurements}</p>
-            <p><img src={drink.image} alt={drink.name} /></p> 
-            <p>{drink.glass}</p>
-            </>
-          )
-        })}
-      </div>
+            <div className="card mb-3 container">
+              <div className="row no-gutters">
+                <div className="col-md-3">
+                  <img src={drink.image} alt={drink.name} className="card-img">
+                  </img>
+                </div>
+                <div className="col-md-7">
+                  <div className="card-body">
+                    <h5 className="card-title"><h3>{drink.name}</h3></h5>
+                    <p className="card-text"><p>{drink.category} {drink.kind} </p> 
+                    <p className="card-text">  <p>{drink.instructions}</p> <p>{drink.ingredients_measurements}</p><p>{drink.glass}</p> </p></p> 
+                    <p className="card-text"><small class="text-muted"></small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+           
+
+    )
+  })
+}
+      </div >
     );
   }
 }
+
 
 export default View;
 

@@ -35,8 +35,9 @@ class MYDrinks extends Component {
   };
 
   deleteDrinks = id => {
-    API.deleteDrinks(id)
-      .then(res => this.loadDrinks())
+    let { authToken } = this.context;
+    API.Drinks.delete(authToken, id)
+      .then(res => console.log(res.data))
       .catch(err => console.log(err));
   };
 
@@ -68,8 +69,7 @@ class MYDrinks extends Component {
     console.log(this.state)
     console.log(this.context)
     let { drinks } = this.state
-    let { authToken } = this.context
-    
+   
     if (this.state.isComplete) {
       return <Redirect to="/mine" />;
     }
@@ -77,24 +77,35 @@ class MYDrinks extends Component {
     return (
       <div>
         <h1>My Drinks</h1>
-        {drinks.map(drink=>{
+        {drinks.map(drink => {
           return (
-            
-            <>
-            <h3>{drink.name}</h3>
-            <p>{drink.instructions}</p>
-            <p>{drink.category}</p>
-            <p>{drink.kind}</p>
-            <p>{drink.ingredients_measurements}</p>
-            <p><img src={drink.image} alt={drink.name} /></p> 
-            <p>{drink.glass}</p>
-            </>
-          )
-        })}
-      </div>
+            <div className="card mb-3 container">
+              <div className="row no-gutters">
+                <div className="col-md-3">
+                  <img src={drink.image} alt={drink.name} className="card-img">
+                  </img>
+                  <FormBtn onClick={() => this.deleteDrinks(drink._id)}>Delete</FormBtn>
+                </div>
+                <div className="col-md-7">
+                  <div className="card-body">
+                    <h5 className="card-title"><h3>{drink.name}</h3></h5>
+                    <p className="card-text"><p>{drink.category} {drink.kind} </p> 
+                    <p className="card-text">  <p>{drink.instructions}</p> <p>{drink.ingredients_measurements}</p><p>{drink.glass}</p> </p></p> 
+                    <p className="card-text"><small class="text-muted"></small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+           
+
+    )
+  })
+}
+      </div >
     );
   }
 }
+
 
 
 export default MYDrinks;
