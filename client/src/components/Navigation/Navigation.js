@@ -48,7 +48,7 @@ class Navigation extends Component {
                 </li>
                 &&
                 <li className='nav-item'>
-                <Link className ='nav-link' to="UserProfile"><i id="profileIcon" class="fas fa-user-circle"></i></Link>
+                <Link className ='nav-link' to="UserProfile"><i id="profileIcon" className="fas fa-user-circle"></i></Link>
                 </li>}
                       
               {user

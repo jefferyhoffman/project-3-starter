@@ -62,6 +62,7 @@ class Collections extends Component {
             brand={item.brand}
             price={item.price}
             quantity={item.quantity}
+            description={item.description}
             addToCart={this.props.addToCart}
           />
         ))

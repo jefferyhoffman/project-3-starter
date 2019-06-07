@@ -7,9 +7,9 @@ const jwt = require('jsonwebtoken');
 
 // Find all items
 itemsController.get('/', (req, res) => {
-  const { name, price, brand, quantity, img } = req.body;
+  const { name, price, brand, quantity, img, description } = req.body;
 
-  db.Item.findAll({ name, price, brand, quantity, img })
+  db.Item.findAll({ name, price, brand, quantity, img, description })
     .then(items => {
       let catalog = items.map(item => { 
       return {
@@ -18,6 +18,7 @@ itemsController.get('/', (req, res) => {
         price: item.price,
         brand: item.brand,
         quantity: item.quantity,
+        description: item.description,
         img: item.img
       }
     })
