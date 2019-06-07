@@ -31,7 +31,7 @@ export default {
       });
     },
 
-    get: (authToken) =>{
+    get: (authToken) => {
       return axios.get("/api/checkout/services", {
         headers: {
           'Authorization': `Bearer ${authToken}`
