@@ -42,7 +42,7 @@ class Navigation extends Component {
                   <Link className='nav-link' style={text} to='/' onClick={this.toggleCollapse}>Home</Link>
                 </li>
                 <li className='nav-item'>
-                  <Link className='nav-link' style={text} to='/mydrinks' onClick={this.toggleCollapse}>Drink</Link>
+                  <Link className='nav-link' style={text} to='/mydrinks' onClick={this.toggleCollapse}>View My Drinks</Link>
                 </li>
                 <li className='nav-item'>
                   <Link className='nav-link' style={text} to='/create' onClick={this.toggleCollapse}>Create</Link>
@@ -51,7 +51,7 @@ class Navigation extends Component {
                   <Link className='nav-link' style={text} to='/search' onClick={this.toggleCollapse}>Search</Link>
                 </li>
                 <li className='nav-item'>
-                  <Link className='nav-link' style={text} to='/view' onClick={this.toggleCollapse}>View</Link>
+                  <Link className='nav-link' style={text} to='/view' onClick={this.toggleCollapse}>View All Drinks</Link>
                 </li>
                 <li className='nav-item'>
                   <Link className='nav-link' style={text} to='/portfolio' onClick={this.toggleCollapse}>Portfolio</Link>
