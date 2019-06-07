@@ -67,6 +67,7 @@ class App extends Component {
       .then(user => this.setState(prevState => ({ auth: { ...prevState.auth, user } })))
       .catch(err => console.log(err));
   }
+  
   componentDidUpdate(prevProps, prevState) {
     let cart = this.state.cart
     if (prevState.cart !== cart) {
@@ -88,6 +89,7 @@ class App extends Component {
           <Switch>
             <Route path='/login' component={Login} />
             <PrivateRoute path='/secret' component={Secret} />
+            <PrivateRoute exact path='/UpdateProfile' component={UpdateProfile} />
             <Route exact path='/' component={Home} />
             <Route exact path='/register' component={Register} />
             <Route exact path='/UpdateProfile' component={UpdateProfile} />

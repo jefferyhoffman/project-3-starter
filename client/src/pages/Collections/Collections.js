@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 // import "./collections.css";
 import "./Collections.css";
 import watchVid from "../Home/vidBg.mp4";
-import API from "../../utils/API";
+import API from "../../lib/API";
 import "../Home/style.css";
 // import watchVid from "./vidBg.mp4";
 import Wrapper from "../../components/Products/Wrapper"
