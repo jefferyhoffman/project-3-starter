@@ -56,7 +56,11 @@ class App extends Component {
         pruning: false,
         soil: false,
         mulch: false
-      }
+      },
+    firstName:{
+      name:""
+    }
+
       
     }
   }
@@ -65,6 +69,12 @@ class App extends Component {
     this.setState({ calendarInfo:{
       date,showModal: true}
     })
+  }
+  
+  getfirstName = (name) => {
+    this.setState({name: {
+      name:""
+    }})
   }
 
   handleModalUpdate = (name, value) => {
@@ -156,7 +166,11 @@ class App extends Component {
           {/* <div className='container'> */}
           <Switch>
             <Route path='/login' component={Login} />
-            <Route path='/register' component={Register} />
+            <Route path='/register' component={(props) =>
+            <Register
+            {...props}
+             getfirstName = {this.state.getfirstName}
+            />}  />
             <PrivateRoute path='/secret' component={Secret} />
             <Route exact path='/Scheduling' component={(props) =>
               <Scheduling
@@ -169,7 +183,9 @@ class App extends Component {
             /> } />
             <Route exact path='/ClientHome' component={ClientHome} />
             <Route exact path='/Checkout' component={(props) =>
-              <Checkout {...this.state.modalInfo} />}
+              <Checkout 
+              {...props}
+              {...this.state.modalInfo} />}
               />
             <Route exact path='/' component={Home} />
             <Route component={NotFound} />

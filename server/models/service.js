@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const ServiceSchema = new Schema({
-    job: {
+    services: {
         type: Array,
         trim: true,
         required: 'Name is required'
@@ -20,23 +20,7 @@ const ServiceSchema = new Schema({
     complete: {
         type: Boolean,
         default: false
-    },
-    phone: {
-        type: Number,
-        trim: true,
-        required: 'Phone number is required',
-        validate: [
-            function (input) {
-                return input.length === 10
-            },
-            'Phone number should be 10 numbers long'
-        ]
-    },
-    name: {
-        type:String,
-        tirm:true,
-        required: 'Name is required'
-    }
+    }    
 })
 
 class newService {
@@ -55,3 +39,5 @@ class newService {
 
 ServiceSchema.loadClass(newService);
 let Service = mongoose.model('Service', ServiceSchema);
+
+module.exports = Service

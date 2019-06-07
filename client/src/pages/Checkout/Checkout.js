@@ -13,9 +13,9 @@ const CheckoutList = (props) => {
             <div className="card">
                 <div className="card-body">
                     <h2 className="card-title">Your Order</h2>
-                    {props.products.map(product => {
+                    {props.products.map((product, i) => {
                         return (
-                            <div>
+                            <div key = {i}>
                                 <h5 className="card-title"> {product.title}</h5>
                                 <h6 className="card-subtitle mb-2 text-muted">Price: ${product.price}</h6>
                             </div>

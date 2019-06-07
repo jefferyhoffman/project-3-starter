@@ -16,35 +16,15 @@ export default {
     register: function (email, password, firstName, lastName, phone, address) {
       return axios.post('/api/users/register', { email, password, firstName, lastName, phone, address });
     },
-
+    retrieve: function (email, firstName, lastName, phone, address) {
+      return axios.get('/api/users/register', { email, firstName, lastName, phone, address });
+    }
   },
 
   Services: {
-    addToCart: function (name, total, user) {
-      return axios.post('./api/services/cart/' + user, { name, total });
+    checkout: function (date, services, id, cost, complete) {
+      return axios.post("/api/checkout", { date, services, id, cost, complete });
     },
-    checkout: function (date, services) {
-      return axios({
-        method: "post",
-        url: "/api/users/checkout",
-        data: {
-          services: services,
-          date: date
-          // authToken:authToken
-        }
-      })
-    },
-
-    buy: function (date, services) {
-      return axios({
-        method: "post",
-        url: "/api/users/buy",
-        data: {
-          services: services,
-          date: date
-        }
-      })
-    }
   },
 
   Secrets: {

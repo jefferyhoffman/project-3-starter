@@ -32,7 +32,6 @@ class ClientHome extends Component {
     this.setState({ show: true });
   }
 
-
   handleSubmit = event => {
     const { email, password, firstName, lastName, phone, address } = this.state;
     console.log(this.props)
