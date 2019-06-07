@@ -122,3 +122,9 @@ closeModal=() => {
 // }
 
 export default Login;
+
+
+// Please enter your email and password!
+
+// Don't have an account?
+// Register to create a profile account.
