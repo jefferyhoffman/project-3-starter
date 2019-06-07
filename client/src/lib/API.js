@@ -25,7 +25,7 @@ export default {
     }
   },
 
-  Itemns: {
+  Items: {
     getItems: function () {
       return axios.get("/api/items");
     },
