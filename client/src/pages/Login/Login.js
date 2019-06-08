@@ -47,7 +47,7 @@ class Login extends Component {
     }
 
     return (
-      <div className='Login'>
+      <div className='Log'>
         <div className='row'>
           <div className='col-sm'>
           </div>

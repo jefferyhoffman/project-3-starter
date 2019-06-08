@@ -14,7 +14,7 @@ class CardSection extends Component {
         <br />
           <CardElement style={{ base: { fontSize: '20px', margin: '30px', padding: '10px' } }} />
         </label>
-         <button style={{ margin: '40px', borderRadius: '4px' }}>Confirm order</button> 
+         {/* <button style={{ margin: '40px', borderRadius: '4px' }}>Confirm order</button>  */}
       </>
     );
   }

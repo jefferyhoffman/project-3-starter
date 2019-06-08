@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { Link } from 'react-router-dom';
 import "./PaymentInfo.css"
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
@@ -70,7 +71,7 @@ class PaymentInfo extends Component {
                                             <label for="zip">Zip</label>
                                             <input type="text" id="zip" name="zip" placeholder="10001" />
                                         </div>
-                                        <button style={{ margin: '40px', borderRadius: '4px' }} onClick={this.handleCheckout}>Confirm order</button>
+                                        {/* <button style={{ margin: '40px', borderRadius: '4px' }} onClick={this.handleCheckout}>Confirm order</button> */}
                                     </div>
                                 </div>
                             </form>
@@ -107,7 +108,8 @@ class PaymentInfo extends Component {
                                 {/* <label>
                                 <input type="checkbox" checked="checked" name="sameadr" /> Shipping Address Same as Billing
                             </label> */}
-                                <input type="submit" value="Confirm and Pay Now" class="btn" />
+                                {/* <input type="submit" value="Confirm and Pay Now" class="btn" /> */}
+                                <Link className= "btn" input type="submit" value="Confirm and Pay Now" onClick={this.handleCheckout} to='/Confirmation'>Confirm and Pay Now</Link>
                                 {/* <input type="submit" value="Keep Shopping" class="btn" id="keepshopping" /> */}
                             </div>
                         </div>
