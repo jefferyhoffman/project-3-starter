@@ -4,13 +4,14 @@ h1 {
   width: 30px; */
 }
 
-/* .card {
-  opacity: .96;
-} */
-/* i {
-  height: 100px;
-  width: 100px;
-} */
+.welcomeText {
+  color: white;
+  text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
 
 .modal-lg {
   max-width: 80% !important;
