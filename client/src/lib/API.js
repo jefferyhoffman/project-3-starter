@@ -19,6 +19,9 @@ export default {
     },
     retrieve: function (email, firstName, lastName, phone, address) {
       return axios.get('/api/users/register', { email, firstName, lastName, phone, address });
+    },
+    update: function (email, firstName, lastName, phone, address) {
+      return axios.put('/api/users/update', { email, firstName, lastName, phone, address})
     }
   },
 

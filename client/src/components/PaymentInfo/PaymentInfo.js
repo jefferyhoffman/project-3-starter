@@ -2,15 +2,22 @@ import React, { Component } from "react"
 import "./PaymentInfo.css"
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
+import { Link } from 'react-router-dom';
+
 
 // import "./Confirmation"
 
 class PaymentInfo extends Component {
     static contextType = AuthContext;
 
+    // state = {
+    //     redirectToReferrer: false,
+    //     error: ""
+    //   }
+
     handleCheckout = (event) => {
         event.preventDefault()
-        console.log("hello");
+        console.log("paymentInfo handleCheckout");
         API.Services.checkout(this.context.authToken, this.props.date, this.props.products)
             .then(response => {
                 this.setState({ redirectToReferrer: true })
@@ -23,13 +30,22 @@ class PaymentInfo extends Component {
     }
 
     render() {
+
+    // const { from } = this.props.location.state || { from: { pathname: "/ClientHome" } };
+    // const { redirectToReferrer } = this.state;
+    // console.log(this.props);
+
+    // if (redirectToReferrer) {
+    //   return <Redirect to={from} />
+    // }
         return (
+
             <div className="row" style={{ marginTop: '40px', marginLeft: '20px', marginRight: '20px' }}>
                 <div className="col">
                     <div className="card">
                         <div className="card-body">
                             <h2 className="card-title">Checkout</h2>
-                            <form>
+                            <form onSubmit = {this.handleCheckout}>
                                 <div className="col-50">
                                     <label for="fname"><i className="fa fa-user"></i> Full Name</label>
                                     <input
@@ -70,8 +86,7 @@ class PaymentInfo extends Component {
                                             <label for="zip">Zip</label>
                                             <input type="text" id="zip" name="zip" placeholder="10001" />
                                         </div>
-                                        <button style={{ margin: '40px', borderRadius: '4px' }} href="./Confirmation" onClick={this.handleCheckout}>Confirm order</button>
-                                    </div>
+                                        <Link className='btn btn-outline-secondary waves-effect' style={{ margin: '40px', borderRadius: '4px' }} to ="../pages/ClientHome" onClick={this.handleCheckout}>Confirm order</Link>                                    </div>
                                 </div>
                             </form>
                         </div>

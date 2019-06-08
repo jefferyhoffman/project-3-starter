@@ -65,6 +65,7 @@ class ClientHome extends Component {
   }
 
   handleInputChange = event => {
+    event.preventDefault()
     let { name, value } = event.target;
 
     this.setState({
@@ -122,7 +123,7 @@ class ClientHome extends Component {
                       type='text'
                       name='firstName'
                       placeholder= {firstName}
-                      value= {firstName}
+                      value= ""
                       onChange={this.handleInputChange}
                     />
                   </div>
@@ -131,9 +132,9 @@ class ClientHome extends Component {
                       className="form-control"
                       id='lastName'
                       type='text'
-                      name='lastName'
+                      name={lastName}
                       placeholder="Last Name"
-                      value= {lastName}
+                      value= 'lastName'
                       onChange={this.handleInputChange} />
                   </div>
                 </div>

@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import PaymentInfo from "../../components/PaymentInfo/PaymentInfo"
 import "./Checkout.css"
 import API from '../../lib/API';
+import { Redirect } from 'react-router-dom';
+
 // import { StripeProvider } from 'react-stripe-elements';
 // import MyStoreCheckout from './myStoreCheckout';
 // import CardSection from "./CardSection";
@@ -33,33 +35,42 @@ const CheckoutList = (props) => {
 class Checkout extends Component {
     state = {
         products: [],
-        cost: this.props.total
+        cost: this.props.total,
+        redirectToReferrer: false,
+        error: ""
     };
 
     handleCheckout = event => {
-        console.log("hello");
+        event.preventDefuault()
+        console.log("checkout hello");
         API.Services.checkout(this.context.authToken)
           .then(response => {
             this.setState({ redirectToReferrer: true })
           })
           .catch(err => {
             if (err.response.status === 401) {
-              this.setState({ error: "Sorry. Please try again." });
+              this.setState({ redirectToReferrer: true, error: "Sorry. Please try again." });
             }
           });
       }
 
     render() {
+        const { from } = this.props.location.state || { from: { pathname: "./ClientHome" } };
+        const { redirectToReferrer } = this.state;
         console.log(this.props)
         const products = this.calcProducts();
+
+        if (redirectToReferrer) {
+            return <Redirect to={from} />;
+          }
 
         return (
             <div>
                 {/* <StripeProvider apiKey="k_test_XnGjYTSLwoIxJVpB5iIDHyXZ00Q9tfKq2U">
                 <MyStoreCheckout />
                 </StripeProvider> */}
-                <CheckoutList products={products} />
-                <PaymentInfo products={products} date = {this.props.calendarInfo.date}/>
+                <CheckoutList products={products}/>
+                <PaymentInfo onSubmit = {this.handlecheck} products={products} date = {this.props.calendarInfo.date}/>
             </div>
         )
     }
