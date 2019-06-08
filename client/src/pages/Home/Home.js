@@ -18,6 +18,7 @@
 import React from 'react';
 import ItemsCarousel from 'react-items-carousel';
 import range from 'lodash/range';
+import '../../cssPages/images/aeration.png';
 
 export default class Test extends React.Component {
 

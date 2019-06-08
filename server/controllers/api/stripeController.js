@@ -67,7 +67,7 @@ router.post('/:id/stripe', (req, res, next) => {
 //   .then((product) => {
 //     // create charge
     const charge = {
-      amount: productAmount * 100,
+      amount: productAmount,
       currency: product.currency,
       card: stripeToken
     };
@@ -95,3 +95,8 @@ router.post('/:id/stripe', (req, res, next) => {
 // });
 
 module.exports = stripeController;
+
+
+stripe.createToken(card).then(function(result) {
+  // Handle result.error or result.token
+})
