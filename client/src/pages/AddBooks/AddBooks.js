@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Jumbotron from "../../components/Jumbotron";
-import AddBook from '../../components/AddBook/AddBook';
+import AddBook from '../../components/AddBook/addBook';
 
 
 class AddBooks extends Component {

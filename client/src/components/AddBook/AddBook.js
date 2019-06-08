@@ -30,6 +30,13 @@ class AddBook extends Component {
         }
 
         API.Books.createBook(newBook);
+        this.setState({
+            title: '',
+            author: '',
+            imageURL: '',
+            series: '',
+            synopsis: '',
+        })
     }
 
     render() {  //send to mySQL and add to that user
@@ -111,7 +118,7 @@ class AddBook extends Component {
                                 />
                             </div>
 
-                            <button onClick={() => this.handleAddBook} className='btn btn-danger' type='AddBook'>Add Book</button>
+                            <button onClick={(event) => this.handleAddBook(event)} className='btn btn-danger' type='AddBook'>Add Book</button>
                         </form>
                     </div>
                 </div>
