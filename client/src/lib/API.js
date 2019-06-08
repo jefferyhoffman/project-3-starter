@@ -61,9 +61,12 @@ export default {
       return axios({
         method: 'delete',
         url: '/api/drinks/mine/' + id,
-      })
+        headers: {
+          'Authorization': `Bearer ${authToken}`
+        }
+      });
     },
-
+   
     getOne: function (authToken, id) {
       console.log(authToken)
       return axios({
