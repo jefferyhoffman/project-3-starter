@@ -7,7 +7,7 @@ class RegisterForm extends Component {
   state = {
     email: '',
     password: '',
-    firstName: '',
+    firstName: "",
     lastName: '',
     phone: '',
     address: ''
@@ -36,6 +36,7 @@ class RegisterForm extends Component {
   }
 
   render() {
+    console.log(this.props.firstName)
     console.log(this.props)
     const { email, password, firstName, lastName, phone, address } = this.state;
 
