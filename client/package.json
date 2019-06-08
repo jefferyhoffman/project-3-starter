@@ -6,11 +6,16 @@
   "dependencies": {
     "axios": "^0.18.0",
     "react": "^16.8.3",
+    "react-bootstrap4-modal": "^1.7.1",
+    "react-calendar": "^2.19.0",
     "react-dom": "^16.8.3",
     "react-gravatar": "^2.6.3",
+    "react-items-carousel": "^2.3.6",
+    "react-modal": "^3.8.1",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.5"
+    "react-scripts": "2.1.5",
+    "react-stripe-elements": "^3.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

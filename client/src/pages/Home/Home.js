@@ -1,30 +1,77 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
+// // import '../Home/style.css';
+// import Register from '../Register/Register'
 
-import logo from './logo.svg';
+// class HomePage extends Component {
+//   render() {
+//     return (
+//       <div className="row">
+     
+//       </div>
+//     );
+//   }
+// }
 
-class HomePage extends Component {
-  render() {
-    return (
-      <div className='Home'>
-        <div className='row'>
-          <div className='col'>
-            <img src={logo} className='App-logo' alt='logo' />
-            <p>
-              Edit <code>src/pages/Home.js</code> and save to reload.
-            </p>
-            <a
-              className='App-link'
-              href='https://reactjs.org'
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
-          </div>
-        </div>
-      </div>
-    );
+// export default HomePage;
+
+
+import React from 'react';
+import ItemsCarousel from 'react-items-carousel';
+import range from 'lodash/range';
+
+export default class Test extends React.Component {
+
+  componentWillMount() {
+    this.setState({
+      children: [],
+      activeItemIndex: 0,
+    });
+
+    setTimeout(() => {
+      this.setState({
+        // children: createChildren(20),
+      })
+    }, 100);
   }
-}
 
-export default HomePage;
+  createChildren = n => range(n).map(i => <div key={i} style={{ height: 300, background: '#333' }}>{i}</div>);
+
+  changeActiveItem = (activeItemIndex) => this.setState({ activeItemIndex });
+
+  render() {
+    const {
+      activeItemIndex,
+      children,
+    } = this.state;
+
+    return (
+      <ItemsCarousel
+        // Placeholder configurations
+        enablePlaceholder
+        numberOfPlaceholderItems={5}
+        minimumPlaceholderTime={1000}
+        placeholderItem={<div style={{ height: 300, background: '#ffff'}}></div>}
+
+        // Carousel configurations
+        numberOfCards={3}
+        gutter={12}
+        showSlither={true}
+        firstAndLastGutter={true}
+        freeScrolling={false}
+
+        // Active item configurations
+        requestToChangeActive={this.changeActiveItem}
+        activeItemIndex={activeItemIndex}
+        activePosition={'center'}
+
+        chevronWidth={24}
+        rightChevron={'>'}
+        leftChevron={'<'}
+        outsideChevron={false}
+      >
+        {children}
+      </ItemsCarousel>
+
+    );  
+  }
+} 

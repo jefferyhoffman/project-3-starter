@@ -1,0 +1,27 @@
+h1 {
+  color: #58b368;
+  /* height: 30px;
+  width: 30px; */
+}
+
+/* .card {
+  opacity: .96;
+} */
+/* i {
+  height: 100px;
+  width: 100px;
+} */
+
+.modal-lg {
+  max-width: 80% !important;
+}
+.welcomeText {
+  color: white;
+  text-shadow:
+   -1px -1px 0 #137216,  
+    1px -1px 0 #137216,
+    -1px 1px 0 #137216,
+     1px 1px 0 #137216;
+     font-family: 'Montserrat', sans-serif;
+ 
+}
