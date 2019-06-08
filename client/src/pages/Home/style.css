@@ -5,7 +5,9 @@ body{
   background-attachment: fixed;
   background-position: center center;
 }
-
+h3 {
+  font-style: italic;
+}
 
 .card-body{
   padding: 1.85rem;
@@ -23,6 +25,15 @@ body{
     color: black;
   }
 
+.jumbotron {
+  height: 400px;
+  background-color: gray;
+  width: 100%;
+  color: white;
+}
+.reviews {
+  justify-content: center;
+}
 /* 
 @media screen and (max-width: 980px){
   .card{
