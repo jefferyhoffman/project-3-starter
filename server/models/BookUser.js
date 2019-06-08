@@ -6,7 +6,15 @@ module.exports = (sequelize, DataTypes) => {
       },
       review: {
         type: DataTypes.TEXT
-      }
+      },
+      bookId: {
+        allowNull: false,
+        type: DataTypes.INTEGER
+      },
+      userId: {
+        allowNull: false,
+        type: DataTypes.INTEGER
+      },
     }, {});
   
     return BookUser;

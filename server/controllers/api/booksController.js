@@ -6,25 +6,22 @@ const Op = Sequelize.Op;
 
 
 booksController.get("/", function (req, res) {
-    console.log('yo')
     db.Book.findAll({})
         .then(function (allBooks) {
             res.json(allBooks);
         });
 });
 
-booksController.get("/search", function (req, res) {
-    // console.log("findOne", req.body)
+booksController.post("/search", function (req, res) {
+  console.log(req.body)
     db.Book.findAll({
         where: {
-            // author: {[Op.like]: `%${req.body.search}%`}
             [Op.or]: [{title: {[Op.like]: `%${req.body.search}%`}}, { author: {[Op.like]: `%${req.body.search}%`}}]
         },
     }).then((data) => {
          res.send(data)  
     })
         .catch(err => res.json(err))
-
 });
 
 booksController.post("/post", function (req, res) {

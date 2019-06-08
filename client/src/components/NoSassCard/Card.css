@@ -1,0 +1,64 @@
+.cardContainer {
+  margin: 10px;
+  perspective: 700;
+}
+
+.cardHolder {
+  width: 100px;
+  height: 175px;
+  transition: all 0.6s ease;
+  transform-style: preserve-3d;
+}
+
+.flipped {
+  transform: rotateY(-180deg);
+}
+
+.back {
+  transform: rotateY(180deg);
+  background: white;
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100px;
+  height: 175px;
+  backface-visibility: hidden;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 5px gray;
+}
+
+.banner {
+  position: absolute;
+  top: 0;
+  background: linear-gradient(-45deg, #0f2027, #204a43, #2c5364);
+  height: 100px;
+  width: 100px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.cardBody {
+  position: absolute;
+  bottom: 0;
+  background: white;
+  height: 250px;
+  width: 250px;
+}
+
+.profileImage {
+  z-index: 2;
+  border-radius: 50%;
+  position: absolute;
+  top: 15%;
+  backface-visibility: hidden;
+  box-shadow: 0 2px 2px gray;
+}
+
+.cardContent {
+  margin-top: 25%;
+}
