@@ -8,7 +8,7 @@ import "../Home/style.css";
 // import watchVid from "./vidBg.mp4";
 import Wrapper from "../../components/Products/Wrapper"
 import Products from "../../components/Products/Products"
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 // import styled from "@emotion/styled/macro";
 
 
@@ -45,10 +45,14 @@ class Collections extends Component {
     return (
       
       <div className="container-fluid">
+          <div className="row" id="row1Collection">
           <video autoPlay muted loop id="videoBgC" src={watchVid} type="video/mp4"></video>
         <div className="text-overlayC">
             Collections
         </div>
+          </div>
+          
+        
          <Wrapper>
         {this.state.items.map(item => (
           <Products
