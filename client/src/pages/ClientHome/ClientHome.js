@@ -61,6 +61,14 @@ class ClientHome extends Component {
     this.props.onSubmit(email, password, firstName, lastName, phone, address);
   }
 
+  handleInputChange = event => {
+    let { name, value } = event.target;
+
+    this.setState({
+      [name]: value
+    });
+  }
+
   render() {
     console.log(this.context.user);
     const firstName = this.context.user ? this.context.user.firstName : "anon"
@@ -70,7 +78,6 @@ class ClientHome extends Component {
     const address = this.context.user ? this.context.user.address : "anon"
     const password = this.context.user ? this.context.user.password : "anon"
     const id = this.context.user ? this.context.user.id : "anon"
-    const { } = this.state;
     return (
       <div className="welcome container">
         <div className="row">
@@ -110,8 +117,8 @@ class ClientHome extends Component {
                       id='firstName'
                       type='text'
                       name='firstName'
-                      placeholder='First Name'
-                      value={firstName}
+                      placeholder= {firstName}
+                      value= {firstName}
                       onChange={this.handleInputChange}
                     />
                   </div>
@@ -122,7 +129,7 @@ class ClientHome extends Component {
                       type='text'
                       name='lastName'
                       placeholder="Last Name"
-                      value={lastName}
+                      value= {lastName}
                       onChange={this.handleInputChange} />
                   </div>
                 </div>
