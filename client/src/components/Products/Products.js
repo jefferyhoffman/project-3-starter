@@ -84,8 +84,9 @@ function ProductCard(props) {
       <div className="card" id="productCard"><div className="img-container"><Background>
         <div className="contentProduct" id="liProducts"><DisplayOver>
           <BigTitle> {props.brand} {props.name} </BigTitle>
-          <Hover>
+          <SubTitle> ${props.price} </SubTitle>
 
+          <Hover>
             <Paragraph>
               {props.description}
             </Paragraph>
