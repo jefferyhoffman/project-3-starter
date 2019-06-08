@@ -14,7 +14,7 @@ class AddBook extends Component {
     handleInputChange = event => {
         const { name, value } = event.target;
 
-        this.setState ({
+        this.setState({
             [name]: value
         });
     }
@@ -32,10 +32,10 @@ class AddBook extends Component {
 
         API.Books.createBook(newBook);
     }
-    
+
     render() {  //send to mySQL and add to that user
-    //    const { title, author, imageUrl, series, synopsis } = this.state;
-    
+        //    const { title, author, imageUrl, series, synopsis } = this.state;
+
         return (
             <div className='AddBook'>
                 <div className='card'>
@@ -112,7 +112,7 @@ class AddBook extends Component {
                                 />
                             </div>
 
-                            <button onClick={() => this.handleAddBook}className='btn btn-danger' type='AddBook'>Add Book</button>
+                            <button onClick={() => this.handleAddBook} className='btn btn-danger' type='AddBook'>Add Book</button>
                         </form>
                     </div>
                 </div>
