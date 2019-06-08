@@ -136,6 +136,20 @@ img {
     width: 300px;
     height: 300px;
 }
+.homeAddBtn {
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    background: rgb(162, 117, 49);
+    border: 1px solid white;
+    left: 0px;
+    top: 20px;
+    font-size: .6em;
+    color: rgb(252, 252, 252);
+    margin: 0;
+    text-shadow: 1px 1px 1px black;
+    letter-spacing: 1px;
+}
 
 .productImage {
     height: 45vh;
@@ -160,9 +174,13 @@ img {
     width: 300px;
 }
 p.card-text {
-    font-size: 1rem;
+    font-size: 0.8rem;
     margin: 10px 20px 20px 20px;
-    line-height: 25px;
+    line-height: 15px;
+}
+#row2p {
+    margin: 10px 40px;
+    line-height: 20px;
 }
 
 /* Product Page */
@@ -228,5 +246,121 @@ hr {
     color: rgb(255, 255, 255);
     margin: 10px 60px;
     font-size: 1rem;
+}
+
+@media screen and (max-width: 1120px) {
+    .co-bio {
+        top: 40vw;
+    }
+}
+
+@media screen and (max-width: 995px) {
+    #row1 {
+        height: 500px;
+    }
+    video {
+        bottom: 300px;
+        height: 120%;
+    }
+    nav {
+        height: 50px;
+        position: relative;
+    }
+    .navbar-brand {
+        font-size: 3em;
+        position: relative;
+        bottom: 20px;
+    }
+    .text-overlay {
+        top: 100px;
+        font-size: 40px !important;
+    }
+    .co-bio {
+        font-size: 0.9rem;
+        margin: 20px;
+        top: 300px;
+    }
+    .row {
+        height: 500px;
+    }
+    p.card-text {
+        font-size: 0.7em;
+        line-height: 14px;
+    }
+    #homeProductN {
+        font-size: 1.5rem;
+    }
+    .productImage {
+        height: 32vh;
+        width: 12vw;
+        margin: 5px;
+    }
+    .productGIF {
+        height: 40vh;
+        width: 20vw;
+        margin-top: 100px;
+    }
+    .homeAddBtn {
+        top: -2px;
+    }
+    #row4sec1, #row4sec2 {
+        height: 500px;
+    }
+    .productIMG {
+        height: 250px;
+        width: 250px;
+    }
+    #footer {
+        height: 250px !important;
+    }
+    #footerSec {
+        font-size: 1rem !important;
+    }
+    #footerItems {
+        font-size: 0.8rem !important;
+    }
+    #footerContainer {
+        margin: 0;
+        padding: 0;
+    }
+    
+}
+
+@media screen and (max-width: 760px) {
+    .text-overlay {
+        display: none;
+    }
+    video {
+        bottom: 240px;
+        height: 130%;
+    }
+    #row1 {
+        height: 400px;
+    }
+    .co-bio {
+        top: 234px;
+        font-size: 0.8em;
+    }
+    .row {
+        height: 440px;
+    }
+    .productImage {
+        height: 26vh;
+    }
+    #homeProductN {
+        font-size: 1.2em;
+    }
+    p.card-text {
+        font-size: 0.6em;
+    }
+    #row4sec1, #row4sec2 {
+        height: 420px;
+    }
+    .productGIF {
+        margin-top: 40px;
+    }
+    .productIMG {
+        margin-top: 40px;
+    }
 }
 

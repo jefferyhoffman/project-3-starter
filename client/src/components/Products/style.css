@@ -249,7 +249,46 @@
   font-size: 2rem !important;
   background: none;
   color: rgb(77, 77, 77);
+  position: relative;
+  left: -26px;
 }
 #cartHeader {
   margin-bottom: 0 !important;
+}
+
+@media screen and (max-width: 1024px) {
+  #row1Collection {
+      height: 500px !important;
+  }
+  #productCard {
+      height: 500px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .cardProduct {
+    height: 46vh;
+  }
+  #itemsBoughtName {
+    font-size: 24px !important;
+  }
+  #itemsBoughtImg {
+    bottom: 40px;
+  }
+  #priceTag {
+    bottom: 75px;
+    font-size: 0.8em;
+  }
+  #quantityTag {
+    top: -30px;
+    font-size: 0.6em;
+  }
+  #removeBtn {
+    top: 15px;
+    width: 10vw;
+    font-size: .5em;
+    /* border: 1px solid black; */
+    left: -128px;
+  }
+  
 }

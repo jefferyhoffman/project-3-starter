@@ -13,6 +13,7 @@ import "./style.css";
 import watchVid from "./vidBg.mp4"
 
 // const watchImgs = require("../../../public/images");
+import "../../components/App/App.js";
 
 class HomePage extends Component {
   constructor(props) {
@@ -29,7 +30,7 @@ class HomePage extends Component {
     console.log(this.state.counter)
   };
 
-  render() {
+  render(props) {
     return (
       <div className="container-fluid">
         <div className="row" id="row1">
@@ -47,10 +48,11 @@ class HomePage extends Component {
           <div className="content">
             <h1 id="homeProductN" className="card-text">STORM Kong-X</h1>
             <img src={id01} className="productImage card-text" alt="product-1" />
-            <p className="card-text">The STORM Kong-X watch is a small thin strapped watch that is an effortlessly stylish addition to any wardrobe.
+            <p id="row2p" className="card-text">The STORM Kong-X watch is a small thin strapped watch that is an effortlessly stylish addition to any wardrobe.
             Made from stainless steel this watch combines modern design with the latest trends with its multi-strap of both bangle and mesh.
                 Due to its small nature this is the perfect watch to stack with a statement bracelet. Water resistant to 50m.</p>
-            <a href="/" className="btn btn-light card-text">Add to Shopping Cart</a>
+                
+            <button className="homeAddBtn" onClick={this.props.addToCart}>Add to Cart</button>
 
           </div>
         </div>
@@ -60,10 +62,10 @@ class HomePage extends Component {
           <div className="content">
             <h1 id="homeProductN" className="card-text">STORM Donferg</h1>
             <img src={id02} className="productImage" alt="product-2" />
-            <p className="card-text">The STORM Donferg is one of STORM’s most unique designed watches yet.
+            <p id="row2p" className="card-text">The STORM Donferg is one of STORM’s most unique designed watches yet.
             Combining fashion and function, the Donferg comes on a textured silicone strap and carries a unique combination-inspired dial.
                   It’s unique vertical spinning disc also carry ‘animation mode’, allowing wearers to show of the unique spinning function of the watch to friends!</p>
-            <a href="/" className="btn btn-light">Add to Shopping Cart</a>
+                  <button className="homeAddBtn" onClick={this.props.addToCart}>Add to Cart</button>
           </div>
         </div>
       </div>
@@ -76,7 +78,7 @@ class HomePage extends Component {
             <p className="card-text">The STORM Valena watch is a small thin strapped watch that is an effortlessly stylish addition to any wardrobe.
             Made from stainless steel this watch combines modern design with the latest trends with its multi-strap of both bangle and mesh.
               Due to its small nature this is the perfect watch to stack with a statement bracelet. Water resistant to 50m.</p>
-            <a href="/" className="btn btn-light card-text">Add to Shopping Cart</a>
+              <button className="homeAddBtn" onClick={this.props.addToCart}>Add to Cart</button>
           </div>
         </div>
         <div className="col-4" id="row3sec2">
@@ -87,7 +89,7 @@ class HomePage extends Component {
             The  Yang-X has a dual time function meaning you can keep track of the time in 2 time zones.
             The 24 hour and date features make this watch a very useful accessory.
               Made from brushed stainless steel with a deep green dial and waterproof to 50m.</p>
-            <a href="/" className="btn btn-light">Add to Shopping Cart</a>
+              <button className="homeAddBtn" onClick={this.props.addToCart}>Add to Cart</button>
           </div>
         </div>
 
@@ -99,7 +101,7 @@ class HomePage extends Component {
             Based off the best selling Yawo-XL, this new take combines modern contemporary with sleek design.
             The silver strap is made from high quality brushed stainless steel, while the Yawo-XL blue dial is uniquely shaped to add dimension.
                 The New Yawo-XL is water resistant. </p>
-            <a href="/" className="btn btn-light">Add to Shopping Cart</a>
+                <button className="homeAddBtn" onClick={this.props.addToCart}>Add to Cart</button>
           </div>
         </div>
       </div>
