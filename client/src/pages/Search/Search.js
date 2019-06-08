@@ -10,8 +10,6 @@ class Search extends Component {
 
   state = {
     name: '',
-    // category: '',
-    // kind: '',
     drinks: []
   }
   // example search in database for partial name with "Old"
@@ -43,7 +41,7 @@ class Search extends Component {
     return (
       <div>
         <div className="container">
-          <h1>Look up a drink!</h1>
+          <h2 className='pages-header'>Look up a drink!</h2>
           <br/>
           <br/>
           <br/>
@@ -57,11 +55,11 @@ class Search extends Component {
           <br />
           <br />
           <br />
-          <h1>Search Results</h1>
+          <h2 className='pages-header'>Search Results</h2>
           {this.state.drinks.map(drink => {
             return (
               <>
-               <div className="card mb-3 container">
+               <div className="card-drinks mb-3 container">
               <div className="row no-gutters">
                 <div className="col-md-3">
                   <img src={drink.image} alt={drink.name} className="card-img">

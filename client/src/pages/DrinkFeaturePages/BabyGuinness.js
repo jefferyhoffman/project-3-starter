@@ -4,11 +4,11 @@ import AuthContext from '../../contexts/AuthContext';
 import API from '../../lib/API';
 
 
-class MoscowMule extends Component {
+class BabyGuinness extends Component {
   render() {
     return (
       <div>
-        <h1>Portfolio Page</h1>
+        <h1>Baby Guinness</h1>
         <p>
           Nunc pharetra finibus est at efficitur. Praesent sed congue diam. Integer gravida dui
           mauris, ut interdum nunc egestas sed. Aenean sed mollis diam. Nunc aliquet risus ac finibus
@@ -21,4 +21,4 @@ class MoscowMule extends Component {
   }
 }
 
-export default MoscowMule;
+export default BabyGuinness;

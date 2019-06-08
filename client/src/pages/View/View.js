@@ -64,7 +64,7 @@ class View extends Component {
         {drinks.map(drink=>{
           return (
             <>
-               <div className="card mb-3 container">
+               <div className="card-drinks mb-3 container">
               <div className="row no-gutters">
                 <div className="col-md-3">
                   <img src={drink.image} alt={drink.name} className="card-img">

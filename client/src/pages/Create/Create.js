@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-import { Input, TextArea, Select, FormBtn } from "../../components/Form";
+import { Input, TextArea, Select, FormBtn } from '../../components/Form';
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
-import create from "../Images/create.jpg";
-import '../Create/create.css'
+import create from '../Images/create.jpg';
 
 class Create extends Component {
   static contextType = AuthContext;
@@ -50,35 +49,36 @@ class Create extends Component {
     let { id } = this.context
 
     if (this.state.isComplete) {
-      return <Redirect to="../../MyDrinks" />;
+      return <Redirect to='../../MyDrinks' />;
     }
 
     return (
-      <div className>
-        <div className="card mb-3">
-          <div className="row mb-3">
-            <div className="col-md-5">
-              <img src={create} className="card-img" alt="drink" />
+      
+      <div className='card-create mb-3 container'>
+          <div className='row mb-3'>
+            <div className='col-md-5'>
+              {/* <img src={create} className='create-img-responsive' alt='drink' /> */}
+              <img src={create} className='create-img' alt='drink' />
             </div>
-            <div className="col-md-6">
-              <div className="card-body">
-                <h5 className="card-title">Craft your drink</h5>
-                <p className="card-text">Add the reciepe of your favroite drink!</p>
+            <div className='col-md-6'>
+              <div className='card-body-create'>
+                <h2 className='pages-header card-title'>Craft your drink</h2>
+            <p className='card-title'>Add your favroite drink!</p>
                 <form onSubmit={this.handleSubmit}>
-                  <div class="form-row">
-                    <div class="form-group col-md-6">
-                      <label for="name">Drink Name</label>
-                      <Input name="name" onChange={this.handleInputChange} value={this.state.name} placeholder="Drink Name (required)" />
+                  <div class='form-row'>
+                    <div class='form-group col-md-6'>
+                      <label for='name'>Drink Name:</label>
+                      <Input name='name' onChange={this.handleInputChange} value={this.state.name} placeholder='Drink Name (required)' />
                     </div>
-                    <div class="form-group col-md-6">
-                      <label for="image">Drink Image Link</label>
-                      <Input name="image" onChange={this.handleInputChange} value={this.state.image} placeholder="Image Link (required)" />
+                    <div class='form-group col-md-6'>
+                      <label for='image'>Drink Image Link:</label>
+                      <Input name='image' onChange={this.handleInputChange} value={this.state.image} placeholder='Image Link (required)' />
                     </div>
                   </div>
-                  <div class="form-row">
-                    <div class="form-group col-md-6">
-                      <label for="category">Drink Category</label>
-                      <Select name="category" className="form-control" id="category" onChange={this.handleInputChange} value={this.state.category}>
+                  <div class='form-row'>
+                    <div class='form-group col-md-6'>
+                      <label for='category'>Drink Category:</label>
+                      <Select name='category' className='form-control' id='category' onChange={this.handleInputChange} value={this.state.category}>
                         <option>Ordinary Drink</option>
                         <option>Cocktail</option>
                         <option>Milk / Float / Shake</option>
@@ -92,28 +92,28 @@ class Create extends Component {
                         <option>Soft Drink / Soda</option>
                       </Select>
                     </div>
-                    <div class="form-group col-md-6">
-                      <label for="kind">Drink Kind</label>
-                      <Select name="kind" className="form-control" id="kind" onChange={this.handleInputChange} value={this.state.kind}>
+                    <div class='form-group col-md-6'>
+                      <label for='kind'>Drink Kind:</label>
+                      <Select name='kind' className='form-control' id='kind' onChange={this.handleInputChange} value={this.state.kind}>
                         <option>Alcoholic</option>
                         <option>Non alcoholic</option>
                         <option>Optional alcohol</option>
                       </Select>
                     </div>
                   </div>
-                  <div class="form-row">
-                    <div className="form-group col-md-6">
-                      <label for="ingredients_measurements">Reciepe Ingredients and Measurements</label>
-                      <TextArea name="ingredients_measurements" onChange={this.handleInputChange} value={this.state.ingredients_measurements} placeholder="Ingredients/Measurements" />
+                  <div class='form-row'>
+                    <div className='form-group col-md-6'>
+                      <label for='ingredients_measurements'>Drrink Ingredients:</label>
+                      <TextArea name='ingredients_measurements' onChange={this.handleInputChange} value={this.state.ingredients_measurements} placeholder='Ingredients/Measurements' />
                     </div>
-                    <div className="form-group col-md-6">
-                      <label for="instructions">Reciepe Instructions</label>
-                      <TextArea name="instructions" onChange={this.handleInputChange} value={this.state.instructions} placeholder="Instructions (required)" />
+                    <div className='form-group col-md-6'>
+                      <label for='instructions'>Drink Instructions:</label>
+                      <TextArea name='instructions' onChange={this.handleInputChange} value={this.state.instructions} placeholder='Instructions (required)' />
                     </div>
                   </div>
-                  <div class="form-row">
-                    <div className="form-group col-md-12">
-                      <Select name="glass" className="form-control" id="glass" onChange={this.handleInputChange} value={this.state.glass} placeholder="Type of glass (required)">
+                  <div class='form-row'>
+                    <div className='form-group col-md-6'>
+                      <Select name='glass' className='form-control' id='glass' onChange={this.handleInputChange} value={this.state.glass} placeholder='Type of glass (required)'>
                         <option>Highball glass</option>
                         <option>Cocktail glass</option>
                         <option>Old-fashioned glass</option>
@@ -148,12 +148,8 @@ class Create extends Component {
                         <option>Other/Any</option>
                       </Select>
                     </div>
-                  </div>
-                  {/* <div className="form-group col-md-6"> */}
-                  <div className="row">
-                    <div className="form-group col-md-12">
-                      {/* <FormBtn type="button" className="btn btn-primary btn-lg btn-block" onClick={() => this.handleSubmit(authToken)}>Submit Drink</FormBtn> */}
-                      <FormBtn className="btn-lg btn-block" onClick={() => this.handleSubmit(authToken)}>Submit Drink</FormBtn>
+                    <div className='form-group col-md-6'>
+                     <FormBtn className='btn-lg btn-block' onClick={() => this.handleSubmit(authToken)}>Submit Drink</FormBtn>
                     </div>
                   </div>
                 </form>
@@ -161,7 +157,6 @@ class Create extends Component {
             </div>
           </div>
         </div>
-      </div>
 
     );
   }
