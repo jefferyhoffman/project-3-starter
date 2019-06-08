@@ -29,7 +29,7 @@ class HomePage extends Component {
         <div className='row'>
           <div className='col'>
             <Jumbotron>
-              <h1>WELCOME TO BOOK KEEPER </h1> <br /> <h3>Below are a list of our books...........click login/register to get started</h3>
+              <h1>WELCOME TO BOOK KEEPER </h1> <br /> <h3>Login/register to add books to our database of books and keep track of all the books from your library </h3>
             </Jumbotron>
 
 
