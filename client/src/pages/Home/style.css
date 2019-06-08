@@ -1,0 +1,52 @@
+body{
+  background-image: url("../../cssPages/images/cutgrass.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+
+.card-body{
+  padding: 1.85rem;
+  
+}
+
+
+.col-sm-7{
+  margin: 0px 300px 0px;
+}
+
+
+  #form{
+    background-color: white;
+    color: black;
+  }
+
+/* 
+@media screen and (max-width: 980px){
+  .card{
+      margin-left: 100px;
+      margin-right: 100px;
+  }
+  p{
+      font-size: 60px;
+}
+}
+@media screen and (max-width: 768px){
+  .card{
+      margin-right: 20px;
+  }
+  p{
+      font-size: 40px;
+}
+}
+@media screen and (max-width: 480px){
+  #greeting{
+      font-size: 20px;
+  }
+  .container{
+     width: 50%;
+  }
+  
+}  */
