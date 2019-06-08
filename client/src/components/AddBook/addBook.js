@@ -9,6 +9,7 @@ class AddBook extends Component {
         synopsis: '',
     };
 
+
     handleInputChange = event => {
         const { name, value } = event.target;
 
