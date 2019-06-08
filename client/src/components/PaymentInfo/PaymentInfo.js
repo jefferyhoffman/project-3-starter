@@ -70,7 +70,7 @@ class PaymentInfo extends Component {
                                             <label for="zip">Zip</label>
                                             <input type="text" id="zip" name="zip" placeholder="10001" />
                                         </div>
-                                        <button style={{ margin: '40px', borderRadius: '4px' }} onClick={this.handleCheckout}>Confirm order</button>
+                                        <button style={{ margin: '40px', borderRadius: '4px' }} href="./Confirmation" onClick={this.handleCheckout}>Confirm order</button>
                                     </div>
                                 </div>
                             </form>

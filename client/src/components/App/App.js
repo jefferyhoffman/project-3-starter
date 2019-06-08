@@ -63,7 +63,7 @@ class App extends Component {
     }
 
       
-    }
+  }
   }
 
   onChange = (date) => {

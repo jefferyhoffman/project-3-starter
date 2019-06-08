@@ -210,6 +210,10 @@ class Modal extends Component {
                                                     rows="3"></textarea>
                                                 <Link className='btn btn-outline-secondary waves-effect' to='/Checkout'>Checkout</Link>
                                             </div>
+<<<<<<< HEAD
+                                            <Link className='btn btn-outline-secondary waves-effect' to='/Checkout'>Checkout</Link>
+                                        </div>
+=======
                                         </div>
                                         {/* <p className="text-center">
                                             <strong>Please note any important information about your home/yard below.</strong></p> */}
@@ -223,16 +227,18 @@ class Modal extends Component {
 
                                         {/* <a type="button" className="btn btn-outline-secondary waves-effect"
                                             data-dismiss="modal">Checkout</a> */}
+>>>>>>> 837b99555b7680d7024f4b187c51765a49cab342
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div >
-            </div>
-        )
-    }
-}
-
-
-export default Modal;
+                    </div >
+                </div>
+                </div>
+                
+                )
+            }
+        }
+        
+        
+        export default Modal;

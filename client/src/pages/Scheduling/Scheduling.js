@@ -3,7 +3,7 @@ import Calendar from 'react-calendar';
 import './Scheduling.css';
 import '../../components/Form/Form.css';
 import Modal from '../../components/Modal/modal.js';
-import Checkout from '../Checkout/Checkout';
+// import Checkout from '../Checkout/Checkout';
 
 class Schedule extends Component {
 
