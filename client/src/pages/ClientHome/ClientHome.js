@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Modal from 'react-bootstrap4-modal';
 import AuthContext from '../../contexts/AuthContext';
 import API from '../../lib/API';
+import Moment from 'react-moment';
 
 class ClientHome extends Component {
   static contextType = AuthContext;
@@ -76,25 +77,26 @@ class ClientHome extends Component {
           <br />
           <div className="col-sm-2"></div>
           <div className="col-sm-8">
-            <h1 className="display-4 text-white font-weight-bold">Welcome Back, {firstName} </h1>
+            <h1 className="display-4 text-white font-weight-bold welcomeText">Welcome Back, {firstName} </h1>
           </div>
           <div className="col-sm-2"> </div>
         </div>
         <br />
         <br />
         <div className="row">
-          {/* Account Info Card */}
-          <div className="col-sm-3">
-            <button className="card p-3 mb-5 rounded" data-toggle="modal" data-target="#exampleModalCenter">
-              <div className="card-body">
-                <h1 className="card-title"><i className="fas fa-user-edit"></i></h1>
-                <h5 className="card-subtitle mb-2 text-muted">Account Info</h5>
-                <p className="card-text">Edit your Account Info.</p>
-              </div>
-            </button>
-            <Modal visible={false} onClickBackdrop={this.modalBackdropClicked} className="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-              <div className="modal-header" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <h5 class="modal-title text-success" id="exampleModalLongTitle"><strong>Edit Account Info</strong></h5>
+        <div className="card-deck">
+        {/* Account Info Card */}
+        <div className="col-sm-3">
+        <button className="card p-3 mb-5 rounded" data-toggle="modal" data-target="#exampleModalCenter">
+          <div className="card-body">
+            <h1 className="card-title"><i className="fas fa-user-edit"></i></h1>
+            <h5 className="card-subtitle mb-2 text-muted">Account Info</h5>
+            <p className="card-text">Edit your Account Information.</p>
+          </div>
+        </button>
+        <Modal visible={false} onClickBackdrop={this.modalBackdropClicked} className="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div className="modal-header" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <h5 class="modal-title text-success" id="exampleModalLongTitle"><strong>Edit Account Info</strong></h5>
                 <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -172,7 +174,7 @@ class ClientHome extends Component {
                     onChange={this.handleInputChange} />
                 </div>
                 <button type="submit" className="btn btn-success float-left">Update</button>
-                <button type="submit" className="btn btn-light float-left">Cancel</button>
+
               </form>
             </Modal>
           </div>
@@ -207,7 +209,7 @@ class ClientHome extends Component {
                       return(
                       <tr>
                         <th scope="row">
-                          {completedService.date}
+                          <Moment format="MM/DD/YYYY">{completedService.date}</Moment>
                         </th>
                         <td>
                           {completedService.name}
@@ -250,7 +252,7 @@ class ClientHome extends Component {
                       return(
                       <tr>
                         <th scope="row">
-                          {upcomingService.date}
+                        <Moment format="MM/DD/YYYY">{upcomingService.date}</Moment>
                         </th>
                         <td>
                           {upcomingService.name}
@@ -279,7 +281,8 @@ class ClientHome extends Component {
         </div>
       </div>
 
-
+          </div>
+    
     );
   }
 }
