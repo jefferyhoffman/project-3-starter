@@ -16,6 +16,7 @@
     position: static !important;
     text-align: center;
     margin-bottom: 20px;
+    opacity: 50%;
 }
 
 .sub-button {

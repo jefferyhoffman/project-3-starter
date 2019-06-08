@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
+
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
-// import LoginForm from '../../components/Login/LoginForm';
-// import "./Login.css";
+import LoginForm from '../../components/Login/LoginForm';
+// import "../../components/Login/Login.css"
 
 
 class Login extends Component {
   static contextType = AuthContext;
 
   state = {
-    modalIsVisible: true,
     redirectToReferrer: false,
     error: ""
   }
@@ -40,49 +40,34 @@ class Login extends Component {
       });
   }
 
-  closeModal = () => {
-    this.setState({ modalIsVisible: false })
-  }
-
   render() {
-    const { from } = this.props.location.state || { from: { pathname: "/" } };
     const { redirectToReferrer } = this.state;
 
     if (redirectToReferrer) {
-      return <Redirect to={from} />;
+      return <Redirect to={'/'} />;
     }
 
-    // return (
-
-      // <div className='Login'>
-      //   <div className='row'>
-      //     <div className='col'>
-      //       <h1>COURTNEY WILL HANDLE</h1>
-      //     </div>
-      //   </div>
-      //   <h3>Please enter your email and password!</h3>
-      //   {this.state.error &&
-      //     <div className='row'>
-      //       <div className='col'>
-      //         <div className='alert alert-danger mb-3' role='alert'>
-      //           {this.state.error}
-      //         </div>
-      //       </div>
-      //     </div>}
-      //   <div className='row'>
-      //     <div className='col'>
-      //       <LoginForm onSubmit={this.handleSubmit} />
-      //     </div>
-      //   </div>
-      // </div>
-
-    // );
+    return (
+      <div className="container">
+      <div className='Login'>
+        
+        <div className='row'>
+          <div className='col'>
+            <LoginForm onSubmit={this.handleSubmit} />
+          </div>
+        </div>
+        {this.state.error &&
+          <div className='row alert'>
+            <div className='col'>
+              <div className='alert alert-danger mb-3' role='alert'>
+                {this.state.error}
+              </div>
+            </div>
+          </div>}
+      </div>
+      </div>
+    );
   }
 }
 
 export default Login;
-
-// Please enter your email and password!
-
-// Don't have an account?
-// Register to create a profile account.

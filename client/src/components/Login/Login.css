@@ -1,11 +1,12 @@
-.loginPage {
-    background: url("../Home/images/productIMG.jpg");
+.LoginForm {
+    /* background: url("./productIMG.jpg"); */
     height: 650px;
     background-repeat: no-repeat;
     background-size: cover;
+    opacity: 50%;
 }
 
-.LoginForm {
+.LoginFormT {
     /* padding-top: 100px; */
     /* position: static !important; */
     text-align: center;
@@ -13,13 +14,15 @@
     position: relative;
     left: 300px;
     right: 300px;
-    padding: 100px 50px 100px 50px;
+    padding: 100px 50px 50px 50px;
+    opacity: 50%;
 
 }
 .card-body {
     position: static !important;
     text-align: center;
     margin-bottom: 20px;
+    opacity: 50%;
 }
 
 .sub-button {
