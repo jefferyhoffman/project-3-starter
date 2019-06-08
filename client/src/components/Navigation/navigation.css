@@ -1,13 +1,18 @@
 nav {
-    background: linear-gradient(to top, #3374a0 0%, #2d1a3a 100%);
-}
+  background: linear-gradient(to top, #cb2d3e, #ef473a 100%);
+    /* background: linear-gradient(to top, #bbd2c5, #536976 100%); */
+    /* background: linear-gradient(to top, #bdc3c7, #2c3e50 100%); */
+    /* background: linear-gradient(to top, #ff4a4a, #3b3b3b 100%); */
+    /* background: linear-gradient(to top, #3374a0 0%, #2d1a3a 100%); */
+} 
 
-nav Link {
- 
+.headermain {
     color: #d7e2e9;
    
   }
 
-.headermain {
-  font-family: 'Fjalla One', sans-serif;
-}
+.nav-logo {
+  padding-left: 15%;
+}  
+
+
