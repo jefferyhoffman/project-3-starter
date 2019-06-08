@@ -54,13 +54,14 @@ class ClientHome extends Component {
         <br />
         <br />
         <div className="row">
+        <div className="card-deck">
         {/* Account Info Card */}
         <div className="col-sm-3">
         <button className="card p-3 mb-5 rounded" data-toggle="modal" data-target="#exampleModalCenter">
           <div className="card-body">
             <h1 className="card-title"><i className="fas fa-user-edit"></i></h1>
             <h5 className="card-subtitle mb-2 text-muted">Account Info</h5>
-            <p className="card-text">Edit your Account Info.</p>
+            <p className="card-text">Edit your Account Information.</p>
           </div>
         </button>
         <Modal visible={false} onClickBackdrop={this.modalBackdropClicked} className="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -238,7 +239,7 @@ class ClientHome extends Component {
 
           </div>
         </div>
-        
+        </div>
      
     );
   }
