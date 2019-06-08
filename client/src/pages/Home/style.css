@@ -19,6 +19,10 @@ h3 {
   margin: 0px 300px 0px;
 }
 
+.card-review{
+  width: 600px;
+  height: 400px;
+}
 
   #form{
     background-color: white;
