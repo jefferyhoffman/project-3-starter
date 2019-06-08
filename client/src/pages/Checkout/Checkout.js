@@ -8,7 +8,7 @@ import API from '../../lib/API';
 
 const CheckoutList = (props) => {
     return (
-        <div className="col-sm-7">
+        <div className="col-sm-7" style={{textAlign: 'center'}}>
             <div className="card">
                 <div className="card-body">
                     <h2 className="card-title">Your Order</h2>
