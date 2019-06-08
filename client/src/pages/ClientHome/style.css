@@ -26,3 +26,20 @@ h1 {
      font-family: 'Montserrat', sans-serif;
  
 }
+
+.mainButton {
+ margin-bottom: 5px;
+
+}
+
+.scheduleCard {
+  height: 166.5px;
+}
+
+@media only screen and (max-width: 678px) {
+  .bottomImg {
+    visibility: hidden;
+    height: 0%;
+    width: 0%;
+  }
+}
