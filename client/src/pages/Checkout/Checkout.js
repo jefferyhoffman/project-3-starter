@@ -55,9 +55,9 @@ class Checkout extends Component {
 
         return (
             <div>
-                {/* <StripeProvider apiKey="k_test_XnGjYTSLwoIxJVpB5iIDHyXZ00Q9tfKq2U">
-                    <MyStoreCheckout />
-                </StripeProvider> */}
+                <StripeProvider apiKey="k_test_XnGjYTSLwoIxJVpB5iIDHyXZ00Q9tfKq2U">
+                <myStoreCheckout />
+                </StripeProvider>
                 <CheckoutList products={products} />
                 <PaymentInfo products={products} date = {this.props.calendarInfo.date}/>
             </div>
