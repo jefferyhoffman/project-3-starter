@@ -26,10 +26,11 @@ h3 {
   }
 
 .jumbotron {
-  height: 400px;
-  background-color: gray;
+  text-align: center;
+  height: 350px;
+  background-color: white;
   width: 100%;
-  color: white;
+  color: rgb(15, 109, 22);
 }
 .reviews {
   justify-content: center;

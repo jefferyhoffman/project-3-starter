@@ -87,22 +87,36 @@ export default class Test extends React.Component {
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <h3>thats some good mowin'!
+      <h3>Greenscapes sure knows what they're doing! They always get the job done and never leave my yard lookin' a mess, 
+        like I tell all my neighbors, call Greenscapes if your yard needs a good mowin'!
         <br />
         -Dylbob, Hickory 
       </h3>
     </div>
     <div class="carousel-item">
     <h3>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam finibus, orci ut congue ornare, nunc quam euismod odio, at commodo purus felis sed lacus. Maecenas sit amet lectus in urna laoreet porttitor.
+    Ever since I started using Greenscapes my yard has never looked better!  
+    I'll never go back to doing my own yardwork again! Grenscapes makes yard upkeep a breeze and has saved my grass!
         <br />
         -CoCo, Huntersville
       </h3>
     </div>
     <div class="carousel-item">
-    <h3>its like they cut my lawn and stuff
+    <h3>As a man who loves to cut his grass I have to admit, Greenscapes sure does a better job than I ever did.  Even the Mrs.'s says so!
+        <br />
+        -Gerard, Dillworth 
+      </h3>
+    </div>
+    <div class="carousel-item">
+    <h3>10/10 would recommend, Old man Pete next door's always asking why my yard looks so good and I keep telling him, Call Greenscapes, they sure know how to cut lawns and stuff!
         <br />
         -Ronnie, Charlotte 
+      </h3>
+    </div>
+    <div class="carousel-item">
+    <h3>Taking care of my lawn was really getting in the way of maintaining my social media presence. One call to Greenscapes and now my yard has never looked better. I can focus on getting more insta-followers instead!
+        <br />
+        -Tayler, South Charloote
       </h3>
     </div>
   </div>
