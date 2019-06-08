@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
 class Modal extends Component {
     state = {
         premiumPckg: false
@@ -87,8 +86,6 @@ class Modal extends Component {
                         </div>
                     </div >
                 </div>
-
-
                 <div className="card">
 
                     <div className="card-header" role="tab" id="headingThree3">
@@ -179,6 +176,11 @@ class Modal extends Component {
                                     value="option13" checked={this.props.mulch} onChange={this.handleInputChange} />
                                 <label className="form-check-label" for="radio-579">Mulch</label>
                             </div>
+                            <div className="form-check mb-4">
+                                <input className="form-check-input" name="topiary" type="checkbox" id="radio-579"
+                                    value="option13" checked={this.props.topiary} onChange={this.handleInputChange} />
+                                <label className="form-check-label" for="radio-579">Topiary</label>
+                            </div>
                         </div>
                     </div>
                     <br />
@@ -208,7 +210,6 @@ class Modal extends Component {
                                                     rows="3"></textarea>
                                                 <Link className='btn btn-outline-secondary waves-effect' to='/Checkout'>Checkout</Link>
                                             </div>
-
                                         </div>
                                         {/* <p className="text-center">
                                             <strong>Please note any important information about your home/yard below.</strong></p> */}
