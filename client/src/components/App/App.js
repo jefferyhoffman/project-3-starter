@@ -66,6 +66,7 @@ class App extends Component {
       <AuthContext.Provider value={this.state.auth}>
         <div className='App'>
           <Navigation />
+          <div className="container">
             <Switch>
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />
@@ -80,6 +81,7 @@ class App extends Component {
               <Route exact path='/moscowmule' component={MoscowMule} />
               <Route component={NotFound} />
             </Switch>
+            </div>
           <Footer/>
          </div>
       </AuthContext.Provider>

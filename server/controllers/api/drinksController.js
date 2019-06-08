@@ -79,7 +79,6 @@ drinksController.get("/mine", JWTVerifier, function (req, res) {
 // DELETE
 drinksController.delete("/mine/:id", JWTVerifier, (req, res) => {
   const { user } = req;
-
   user.drinks.pull(req.params.id);
   user.save()
     .then(dbUser => res.json(dbUser))

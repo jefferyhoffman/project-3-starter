@@ -4,6 +4,7 @@ import { Input, TextArea, Select, FormBtn } from "../../components/Form";
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
 
+
 class MYDrinks extends Component {
   static contextType = AuthContext;
 
@@ -37,7 +38,9 @@ class MYDrinks extends Component {
   deleteDrinks = id => {
     let { authToken } = this.context;
     API.Drinks.delete(authToken, id)
-      .then(res => console.log(res.data))
+      .then(res => this.setState({
+        drinks: res.data.drinks
+        }))
       .catch(err => console.log(err));
   };
 
@@ -78,7 +81,6 @@ class MYDrinks extends Component {
       <div>
         {drinks.map(drink => {
           return (
-            
             <>
                <div className="card mb-3 container">
               <div className="row no-gutters">

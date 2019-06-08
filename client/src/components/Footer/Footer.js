@@ -13,7 +13,7 @@ class Jumbotron extends Component {
             <div className="footer">
                 <div className="card">
                     <div className="card-header-footer">
-                    <img src={Logo} alt="My logo" className="logo"/>
+                    {/* <img src={Logo} alt="My logo" className="logo"/> */}
                         <blockquote className="blockquote mb-0">
                             <footer className="blockquote-footer"><cite title="Source Title">Be your own Bartender</cite></footer>
                         </blockquote>

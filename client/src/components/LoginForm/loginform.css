@@ -1,25 +1,40 @@
-.card-loginform {
+/* .card-loginform {
     opacity: 0;
 }
 
 .card-header-loginform{
     background: white;
-}
+} */
 
-/* .card-loginform {
-  
-    width: 320px;
-    height: 420px;
+.card-loginform {
+    opacity: 0.5;
+    width: 700px;
+    height: 700px;
     background-color:black;
     top: 50%;
     left: 50%;
-    position: absolute;
+    position: fixed;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
     padding: 70px 30px;
+    color:white;
+ }
+ .card-registerform 
+ {
+    opacity: 0.5;
+    width: 400px;
+    height: 400px;
+    background-color:black;
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    color:white;
  }
 
-    .form-control {
+    .cardbody {
         width: 100%;
         margin-bottom: 20px;
         border: none;
@@ -30,4 +45,27 @@
         color:white;
       }
 
-      */
+      .form-control {
+        font-size: 10px;
+        width: 100%;
+        margin-bottom: 20px;
+        border: none;
+        border-bottom: 1px solid #fff;
+        background: transparent;
+        outline: none;
+        height: 40px;
+        color: white; }
+      
+
+        .form-control2 {
+            width: 100%;
+            margin-bottom: 20px;
+            border: none;
+            border-bottom: 1px solid #fff;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: white; }
+          
+
+     

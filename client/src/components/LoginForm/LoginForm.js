@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-// import '../LoginForm/loginform.css';
+import '../LoginForm/loginform.css';
 
 class LoginForm extends Component {
   state = {
@@ -28,12 +28,12 @@ class LoginForm extends Component {
 
     return (
       <div className="card-loginform">
-        <div className="card-header-loginform"><h1>Sign in Drinkstation</h1><h4>And start exploring and creating!</h4></div>
+        <div className="card-header-loginform"><h4>Sign in Drinkstation</h4><h4>And start exploring and creating!</h4></div>
         <div className="card-body">
           <form className='LoginForm' onSubmit={this.handleSubmit}>
             <div className="form-group">
               <div className="card-header-loginform">
-                <label for="formGroupExampleInput"><h4>Email:</h4></label>
+                {/* <label for="formGroupExampleInput"><h4>Email:</h4></label> */}
               </div>
               <div className="card-body">
                 <input
@@ -48,7 +48,7 @@ class LoginForm extends Component {
             </div>
             <div className="form-group">
               <div className="card-header-loginform">
-                <label for="formGroupExampleInput2"><h4>Password:</h4></label>
+                {/* <label for="formGroupExampleInput2"><h4>Password:</h4></label> */}
               </div>
               <div className="card-body">
                 <input
@@ -65,7 +65,7 @@ class LoginForm extends Component {
             <br/>
             <br/>
             <br/>
-            <Link to='/register' onClick={this.toggleCollapse}><h3>New to Drinkstation! Click here to Sign up!</h3></Link>
+            <Link to='/register' onClick={this.toggleCollapse}><h4>New to Drinkstation! Click here to Sign up!</h4></Link>
           </form>
         </div>
       </div>

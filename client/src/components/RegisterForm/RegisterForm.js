@@ -27,7 +27,7 @@ class RegisterForm extends Component {
 
     return (
       <div className='card-registerform'>
-        <div className="card-header-registerform"><h1>Sign Up Drinkstation</h1><h4>Make this your drink destination!</h4></div>
+        <div className="card-header-registerform"><h4>Sign Up Drinkstation</h4><h4>Make this your drink destination!</h4></div>
           <div className="card-body">
             <form className='LoginForm' onSubmit={this.handleSubmit}>
               {/* <div className='input-group mb-3'>
@@ -36,7 +36,7 @@ class RegisterForm extends Component {
                 </div> */}
               <div className="form-group">
                 <div className="card-header-registerform">
-                  <label for="formGroupExampleInput"><h4>Email:</h4></label>
+                  {/* <label for="formGroupExampleInput"><h4>Email:</h4></label> */}
                 </div>
                 <div className="card-body">
                   <input
@@ -56,7 +56,7 @@ class RegisterForm extends Component {
                 </div> */}
               <div className="form-group">
                 <div className="card-header-registerform">
-                  <label for="formGroupExampleInput"><h4>Password:</h4></label>
+                  {/* <label for="formGroupExampleInput"><h4>Password:</h4></label> */}
                 </div>
                 <div className="card-body">
                   <input
