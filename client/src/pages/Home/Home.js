@@ -46,6 +46,7 @@ export default class Test extends React.Component {
     } = this.state;
 
     return (
+      <div>
       <ItemsCarousel
         // Placeholder configurations
         enablePlaceholder
@@ -73,6 +74,58 @@ export default class Test extends React.Component {
         {children}
       </ItemsCarousel>
 
+      <br />
+      <div className="row">
+      <div className="col-2"></div>
+      <div className="col-8 flex-center">
+<div className="jumbotron pt-3">
+<h2>Check Out Some of Our Reviews:</h2>
+<br />
+<div className="row">
+<div className="col-2"></div>
+<div className="col-8">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <h3>thats some good mowin'!
+        <br />
+        -Dylbob, Hickory 
+      </h3>
+    </div>
+    <div class="carousel-item">
+    <h3>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam finibus, orci ut congue ornare, nunc quam euismod odio, at commodo purus felis sed lacus. Maecenas sit amet lectus in urna laoreet porttitor.
+        <br />
+        -CoCo, Huntersville
+      </h3>
+    </div>
+    <div class="carousel-item">
+    <h3>its like they cut my lawn and stuff
+        <br />
+        -Ronnie, Charlotte 
+      </h3>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+<div className="col-2"></div>
+</div>
+</div>
+</div>
+</div>
+
+
+      
+      </div>
+      
     );  
   }
 } 
