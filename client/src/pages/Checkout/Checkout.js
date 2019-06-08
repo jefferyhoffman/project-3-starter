@@ -3,7 +3,7 @@ import PaymentInfo from "../../components/PaymentInfo/PaymentInfo"
 import "./Checkout.css"
 import API from '../../lib/API';
 import { StripeProvider } from 'react-stripe-elements';
-import MyStoreCheckout from './MyStoreCheckout';
+import myStoreCheckout from './myStoreCheckout';
 import CardSection from "./CardSection";
 
 const CheckoutList = (props) => {
