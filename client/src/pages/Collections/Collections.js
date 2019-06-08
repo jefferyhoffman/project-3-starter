@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 // import { Button } from 'reactstrap';
-// import "./collections.css";
 import "./Collections.css";
 import watchVid from "../Home/vidBg.mp4";
 import API from "../../lib/API";
-import "../Home/style.css";
+// import "../Home/style.css";
 // import watchVid from "./vidBg.mp4";
 import Wrapper from "../../components/Products/Wrapper"
 import Products from "../../components/Products/Products"
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 
 class Collections extends Component {
@@ -27,9 +26,7 @@ class Collections extends Component {
     API.Items.getItems()
       .then(res => {
         if (this._isMounted) {
-
           this.setState({ items: res.data })
-          console.log(res.data)
         }
       })
 
@@ -50,52 +47,31 @@ class Collections extends Component {
           <div className="text-overlayC">
             Collections
         </div>
-         <Wrapper>
-        {this.state.items.map(item => (
-          <Products
-            item={item}
-            id={item.id}
-            key={item.id}
-            name={item.name}
-            image={item.img}  
-            brand={item.brand}
-            price={item.price}
-            quantity={item.quantity}
-            description={item.description}
-            addToCart={this.props.addToCart}
-          />
-        ))
-        }
-         <Link to="/Cart">
+          <Wrapper>
+            {this.state.items.map(item => (
+              <Products
+                item={item}
+                id={item.id}
+                key={item.id}
+                name={item.name}
+                image={item.img}
+                brand={item.brand}
+                price={item.price}
+                quantity={item.quantity}
+                description={item.description}
+                addToCart={this.props.addToCart}
+              />
+            ))
+            }
+            {/* <Link to="/Cart">
               <button className="btn btn-primary float-right" 
                   style={{  marginRight: "10px" }}>View Cart</button>
-            </Link><br/><br/><br/>
-      </Wrapper>
-     
-        </div>
-        <Wrapper>
-          {this.state.items.map(item => (
-            <Products
-              item={item}
-              id={item.id}
-              key={item.id}
-              name={item.name}
-              image={item.img}
-              brand={item.brand}
-              price={item.price}
-              quantity={item.quantity}
-              addToCart={this.props.addToCart}
-            />
-          ))
-          }
-          <Link to="/Cart">
-            <button className="btn btn-primary float-right"
-              style={{ marginRight: "10px" }}>View Cart</button>
-          </Link><br /><br /><br />
-          
-        </Wrapper>
+            </Link><br/><br/><br/> */}
 
+          </Wrapper>
+        </div>
       </div>
+
 
     );
   }

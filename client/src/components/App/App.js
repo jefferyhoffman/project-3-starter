@@ -7,11 +7,11 @@ import Navigation from '../../components/Navigation/Navigation';
 import Collections from '../../pages/Collections/Collections'
 import Footer from "../../components/Footer/Footer.js";
 import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
-import Login from '../../pages/Login/Login';
+import Login from '../Login/Login';
+// import LoginForm from '../Login/LoginForm';
 import UpdateProfile from '../../pages/UpdateProfile/UpdateProfile';
 import UserProfile from '../../pages/UserProfile/UserProfile';
 import Register from '../../components/Register/register';
-import Secret from '../../pages/Secret/Secret';
 import Home from '../../pages/Home/Home';
 import NotFound from '../../pages/NotFound/NotFound';
 import CheckoutForm from '../../components/Checkout/CheckoutForm';
@@ -98,13 +98,14 @@ class App extends Component {
 
           {/* <div className='container-fluid'> */}
           <Switch>
-            <Route path='/login' component={Login} />
-            <PrivateRoute path='/secret' component={Secret} />
+           
             <PrivateRoute exact path='/UserProfile' component={UserProfile} />
             <PrivateRoute exact path='/UpdateProfile' component={UpdateProfile} />
             <PrivateRoute path='/checkoutForm' component={CheckoutForm}/>
             <Route exact path='/' component={Home} />
             <Route exact path='/register' component={Register} />
+            <Route exact path='/login' component={Login} />
+            {/* <Route exact path='/LoginForm' component={LoginForm} /> */}
             <Route exact path='/' component={this.state.cart} />
             <Route exact path='/collections' component={(props) => <Collections {...props} addToCart={this.addToCart} />} />
             <Route exact path='/cart' component={(props) => <Cart {...props} userCart={this.state.cart} />}/>

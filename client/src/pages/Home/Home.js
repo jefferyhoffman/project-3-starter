@@ -40,7 +40,7 @@ class HomePage extends Component {
       <div className="row" id="row2">
         <div className="col-6" id="row2sec1">
           <div className="content">
-            <h1 className="card-text">STORM Kong-X</h1>
+            <h1 id="homeProductN" className="card-text">STORM Kong-X</h1>
             <img src={id01} className="productImage card-text" alt="product-1" />
             <p className="card-text">The STORM Kong-X watch is a small thin strapped watch that is an effortlessly stylish addition to any wardrobe.
             Made from stainless steel this watch combines modern design with the latest trends with its multi-strap of both bangle and mesh.
@@ -53,7 +53,7 @@ class HomePage extends Component {
 
         <div className="col-6" id="row2sec2">
           <div className="content">
-            <h1 className="card-text">STORM Donferg</h1>
+            <h1 id="homeProductN" className="card-text">STORM Donferg</h1>
             <img src={id02} className="productImage" alt="product-2" />
             <p className="card-text">The STORM Donferg is one of STORM’s most unique designed watches yet.
             Combining fashion and function, the Donferg comes on a textured silicone strap and carries a unique combination-inspired dial.
@@ -66,7 +66,7 @@ class HomePage extends Component {
       <div className="row" id="row3">
         <div className="col-4" id="row3sec1">
           <div className="content">
-            <h1 className="card-text">STORM Valena</h1>
+            <h1 id="homeProductN" className="card-text">STORM Valena</h1>
             <img src={id03} className="productImage" alt="product-3" />
             <p className="card-text">The STORM Valena watch is a small thin strapped watch that is an effortlessly stylish addition to any wardrobe.
             Made from stainless steel this watch combines modern design with the latest trends with its multi-strap of both bangle and mesh.
@@ -76,7 +76,7 @@ class HomePage extends Component {
         </div>
         <div className="col-4" id="row3sec2">
           <div className="content">
-            <h1 className="card-text">STORM Yang-X</h1>
+            <h1 id="homeProductN" className="card-text">STORM Yang-X</h1>
             <img src={id04} className="productImage" alt="product-4" />
             <p className="card-text">The STORM Yang-X is a sporty looking watch with multifunction features.
             The  Yang-X has a dual time function meaning you can keep track of the time in 2 time zones.
@@ -88,7 +88,7 @@ class HomePage extends Component {
 
         <div className="col-4" id="row3sec3">
           <div className="content">
-            <h1 className="card-text">STORM Yawo-XL</h1>
+            <h1 id="homeProductN" className="card-text">STORM Yawo-XL</h1>
             <img src={id05} className="productImage" alt="product-5" />
             <p className="card-text">The STORM Yawo-XL is a minimalist watch with a retro STORM feel.
             Based off the best selling Yawo-XL, this new take combines modern contemporary with sleek design.

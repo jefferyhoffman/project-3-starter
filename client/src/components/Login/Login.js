@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
-import LoginForm from '../../components/LoginForm/LoginForm';
-import "./Login.css"
+// import LoginForm from '../../components/Login/LoginForm';
+// import "./Login.css";
 
 
 class Login extends Component {
   static contextType = AuthContext;
-
 
   state = {
     modalIsVisible: true,
@@ -46,43 +45,42 @@ class Login extends Component {
   }
 
   render() {
-    const { from } = this.props.location.state || { from: { pathname: "/secret" } };
+    const { from } = this.props.location.state || { from: { pathname: "/" } };
     const { redirectToReferrer } = this.state;
 
     if (redirectToReferrer) {
       return <Redirect to={from} />;
     }
 
-    return (
+    // return (
 
-      <div className='Login'>
-        <div className='row'>
-          <div className='col'>
-            <h1>COURTNEY WILL HANDLE</h1>
-          </div>
-        </div>
-        <h3>Please enter your email and password!</h3>
-        {this.state.error &&
-          <div className='row'>
-            <div className='col'>
-              <div className='alert alert-danger mb-3' role='alert'>
-                {this.state.error}
-              </div>
-            </div>
-          </div>}
-        <div className='row'>
-          <div className='col'>
-            <LoginForm onSubmit={this.handleSubmit} />
-          </div>
-        </div>
-      </div>
+      // <div className='Login'>
+      //   <div className='row'>
+      //     <div className='col'>
+      //       <h1>COURTNEY WILL HANDLE</h1>
+      //     </div>
+      //   </div>
+      //   <h3>Please enter your email and password!</h3>
+      //   {this.state.error &&
+      //     <div className='row'>
+      //       <div className='col'>
+      //         <div className='alert alert-danger mb-3' role='alert'>
+      //           {this.state.error}
+      //         </div>
+      //       </div>
+      //     </div>}
+      //   <div className='row'>
+      //     <div className='col'>
+      //       <LoginForm onSubmit={this.handleSubmit} />
+      //     </div>
+      //   </div>
+      // </div>
 
-    );
+    // );
   }
 }
 
 export default Login;
-
 
 // Please enter your email and password!
 

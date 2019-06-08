@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import "./Login.css";
+import AuthContext from '../../../contexts/AuthContext';
 
 class LoginForm extends Component {
+  static contextType = AuthContext;
   state = {
     email: '',
     password: ''
@@ -29,10 +33,9 @@ class LoginForm extends Component {
         <div className='card'>
           <div className='card-body'>
             <form className='LoginForm' onSubmit={this.handleSubmit}>
-              <div className='input-group mb-3'>
-                <div className="input-group-prepend">
-                  <span className="input-group-text">@</span>
-                </div>
+
+              <div className='input-group mb-3'></div>
+                <div className="input-group-prepend"></div>
                 <input
                   className='form-control'
                   id='email'
@@ -42,12 +45,11 @@ class LoginForm extends Component {
                   value={email}
                   onChange={this.handleInputChange}
                 />
-              </div>
+             
 
-              <div className='input-group mb-3'>
-                <div className="input-group-prepend">
-                  <span className="input-group-text">a3b</span>
-                </div>
+              <div className='input-group mb-3'></div>
+                <div className="input-group-prepend"></div>
+            
                 <input
                   className='form-control'
                   id='password'
@@ -57,8 +59,8 @@ class LoginForm extends Component {
                   value={password}
                   onChange={this.handleInputChange}
                 />
-              </div>
-
+            
+              <p>Don't have an account?<br /> <Link to="/register">Register </Link>to create a profile account.</p>
               <button className='btn btn-primary' type='submit'>Login</button>
             </form>
           </div>
@@ -69,4 +71,3 @@ class LoginForm extends Component {
 }
 
 export default LoginForm;
-
