@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import API from "../../lib/API";
 
 class AddBook extends Component {
     state = {
         title: '',
         author: '',
-        imageUrl: '',
+        imageURL: '',
         series: '',
         synopsis: '',
     };
@@ -19,20 +20,27 @@ class AddBook extends Component {
     }
 
     handleAddBook = event => {
-       const { title, author, imageUrl, series, synopsis } = this.state;
+        event.preventDefault()
+        const { title, author, imageURL, series, synopsis } = this.state;
+        let newBook = {
+            title,
+            author,
+            imageURL,
+            series,
+            synopsis
+        }
 
-        this.props.onAdd(title, author, imageUrl, series, synopsis);
-        event.preventDefault();
+        API.Books.createBook(newBook);
     }
     
     render() {  //send to mySQL and add to that user
-       const { title, author, imageUrl, series, synopsis } = this.state;
+    //    const { title, author, imageUrl, series, synopsis } = this.state;
     
         return (
             <div className='AddBook'>
                 <div className='card'>
                     <div className='card-body'>
-                        <form className='AddBook' onAddBook={this.handleAddBook}>
+                        <form className='AddBook'>
                             <div className='input-group mb-3'>
                                 <div className="input-group-prepend">
                                     <span className="input-group-text">@</span>
@@ -43,7 +51,7 @@ class AddBook extends Component {
                                     type='text'
                                     name='title'
                                     placeholder='Title'
-                                    value={''}
+                                    value={this.state.title}
                                     onChange={this.handleInputChange}
                                 />
                             </div>
@@ -57,7 +65,7 @@ class AddBook extends Component {
                                     type='text'
                                     name='author'
                                     placeholder='Author'
-                                    value={''}
+                                    value={this.state.author}
                                     onChange={this.handleInputChange}
                                 />
                             </div>
@@ -71,7 +79,7 @@ class AddBook extends Component {
                                     type='text'
                                     name='imageURL'
                                     placeholder='Image URL'
-                                    value={''}
+                                    value={this.state.imageURL}
                                     onChange={this.handleInputChange}
                                 />
                             </div>
@@ -85,7 +93,7 @@ class AddBook extends Component {
                                     type='text'
                                     name='series'
                                     placeholder='Series'
-                                    value={''}
+                                    value={this.state.series}
                                     onChange={this.handleInputChange}
                                 />
                             </div>
@@ -99,12 +107,12 @@ class AddBook extends Component {
                                     type='textarea'
                                     name='synopsis'
                                     placeholder='Synopsis'
-                                    value={''}
+                                    value={this.state.synopsis}
                                     onChange={this.handleInputChange}
                                 />
                             </div>
 
-                            <button className='btn btn-danger' type='AddBook'>Add Book</button>
+                            <button onClick={() => this.handleAddBook}className='btn btn-danger' type='AddBook'>Add Book</button>
                         </form>
                     </div>
                 </div>
