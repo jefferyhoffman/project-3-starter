@@ -5,6 +5,9 @@ import Modal from 'react-bootstrap4-modal';
 import AuthContext from '../../contexts/AuthContext';
 import API from '../../lib/API';
 import Moment from 'react-moment';
+import imageOne from '../../cssPages/images/doctor.jpg';
+import imageTwo from '../../cssPages/images/reseeding.png';
+import imageThree from '../../cssPages/images/treepruning.png';
 
 class ClientHome extends Component {
   static contextType = AuthContext;
@@ -90,17 +93,18 @@ class ClientHome extends Component {
         </div>
         <br />
         <br />
+
         <div className="row">
-        <div className="card-deck">
+       
         {/* Account Info Card */}
-        <div className="col-sm-3">
-        <button className="card p-3 mb-5 rounded" data-toggle="modal" data-target="#exampleModalCenter">
+        <div className="col-sm-4 mainButton">
+        <a className="card d-flex text-center" data-toggle="modal" data-target="#exampleModalCenter">
           <div className="card-body">
             <h1 className="card-title"><i className="fas fa-user-edit"></i></h1>
             <h5 className="card-subtitle mb-2 text-muted">Account Info</h5>
             <p className="card-text">Edit your Account Information.</p>
           </div>
-        </button>
+        </a>
         <Modal visible={false} onClickBackdrop={this.modalBackdropClicked} className="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div className="modal-header" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <h5 class="modal-title text-success" id="exampleModalLongTitle"><strong>Edit Account Info</strong></h5>
@@ -185,64 +189,20 @@ class ClientHome extends Component {
               </form>
             </Modal>
           </div>
-          {/* Completed Card */}
-          <div className="col-sm-3">
-            <button className="card p-3 mb-5 rounded" data-toggle="modal" data-target="#completedModal" onClick={this.getServices}>
-              <div className="card-body">
-                <h1 className="card-title"><i className="fas fa-calendar-check"></i></h1>
-                <h5 className="card-subtitle mb-2 text-muted">Completed</h5>
-                <p className="card-text">View your Completed Services.</p>
-              </div>
-            </button>
-            {console.log(this.state)}
-            <Modal
-              completedServices={this.state.completedServices} visible={false} onClickBackdrop={this.modalBackdropClicked} className="completedModal-lg" dialogClassName="modal-lg" id="completedModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-              <div className="modal-header" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <h5 class="modal-title text-success" id="exampleModalLongTitle"><strong>Completed Services</strong></h5>
-                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div>
-                <table className="table">
-                  <thead>
-                    <tr>
-                      <th scope="col"><strong>Date</strong></th>
-                      <th scope="col"><strong>Service</strong></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {this.state.completedServices.map(completedService => {
-                      return(
-                      <tr>
-                        <th scope="row">
-                          <Moment format="MM/DD/YYYY">{completedService.date}</Moment>
-                        </th>
-                        <td>
-                          {completedService.name}
-                        </td>
-                      </tr>
-                    )}
-                    )}
-                  </tbody>
-                </table>
-              </div>
-            </Modal>
-          </div>
 
-          {/* Upcoming Card */}
-          <div className="col-sm-3">
-            <button className="card p-3 mb-5 rounded" data-toggle="modal" data-target="#upcomingModal" onClick={this.getServices}>
+          {/* Scheduled Card */}
+          <div className="col-sm-4 mainButton">
+            <a className="card d-flex text-center" data-toggle="modal" data-target="#upcomingModal" onClick={this.getServices}>
               <div className="card-body">
                 <h1 className="card-title"><i className="fas fa-calendar-day"></i></h1>
-                <h5 className="card-subtitle mb-2 text-muted">Upcoming</h5>
-                <p className="card-text">View your Upcoming Services.</p>
+                <h5 className="card-subtitle mb-2 text-muted">Scheduled</h5>
+                <p className="card-text">View your Scheduled Services.</p>
               </div>
-            </button>
+            </a>
             {console.log(this.state.upcomingServices)}
-            <Modal  upcomingServices={this.state.upcomingServices} visible={false} onClickBackdrop={this.modalBackdropClicked} className="upcomingModal-lg" id="upcomingModal" dialogClassName="modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <Modal  upcomingServices={this.state.upcomingServices} completedServices={this.state.completedServices} visible={false} onClickBackdrop={this.modalBackdropClicked} className="upcomingModal-lg" id="upcomingModal" dialogClassName="modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
               <div className="modal-header" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <h5 class="modal-title text-success" id="exampleModalLongTitle"><strong>Upcoming Services</strong></h5>
+                <h5 class="modal-title text-success" id="exampleModalLongTitle"><strong>Scheduled Services</strong></h5>
                 <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -267,31 +227,100 @@ class ClientHome extends Component {
                       </tr>
                     )}
                     )}
+                  {this.state.completedServices.map(completedService => {
+                      return(
+                      <tr>
+                        <th scope="row">
+                          <Moment format="MM/DD/YYYY">{completedService.date}</Moment>
+                        </th>
+                        <td>
+                          {completedService.name}
+                        </td>
+                      </tr>
+                    )}
+                    )}
                 </tbody>
               </table>
             </Modal>
           </div>
 
-          {/* Scheduling Card */}
-          <div className="col-sm-3">
-            <button className="card p-3 rounded">
-              <Link className='nav-link' to='/scheduling' onClick={this.toggleCollapse}>
+          {/* Booking Card */}
+          <div className="col-lg-4 sm-12 mainbutton">
+            <div className="card text-center scheduleCard">
                 <div className="card-body">
                   <h1 className="card-title"><i className="fas fa-calendar-plus"></i></h1>
-                  <h5 className="card-subtitle mb-2 text-muted">Scheduling</h5>
+              <Link className='nav-link pb-.5 pt-0' to='/scheduling' onClick={this.toggleCollapse}>
+                  <h5 className="card-subtitle text-muted">Booking</h5>
+              </Link>
                   <p className="card-text">Schedule a Service.</p>
                 </div>
-              </Link>
-            </button>
+            </div>
           </div>
 
         </div>
+
+        {/* bottom img's */}
+      <div className="row">
+        <div className="col-4">
+        <img src={imageOne} className="bottomImg" height="320px" width="100%" alt="dundun"></img>
+        </div>
+        <div className="col-4">
+        <img src={imageTwo} className="bottomImg" height="320px" width="100%" alt="dundun"></img>
+        </div>
+        <div className="col-4">
+        <img src={imageThree} className="bottomImg" height="320px" width="100%" alt="dundun"></img>
+        </div>
+      </div>
       </div>
 
-          </div>
-    
+              
     );
   }
 }
 
 export default ClientHome;
+
+{/* Completed Card */}
+{/* <div className="col-sm-3">
+  <button className="card p-3 mb-5 rounded" data-toggle="modal" data-target="#completedModal" onClick={this.getServices}>
+    <div className="card-body">
+      <h1 className="card-title"><i className="fas fa-calendar-check"></i></h1>
+      <h5 className="card-subtitle mb-2 text-muted">Completed</h5>
+      <p className="card-text">View your Completed Services.</p>
+    </div>
+  </button>
+  {console.log(this.state)}
+  <Modal
+    completedServices={this.state.completedServices} visible={false} onClickBackdrop={this.modalBackdropClicked} className="completedModal-lg" dialogClassName="modal-lg" id="completedModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div className="modal-header" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <h5 class="modal-title text-success" id="exampleModalLongTitle"><strong>Completed Services</strong></h5>
+      <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div>
+      <table className="table">
+        <thead>
+          <tr>
+            <th scope="col"><strong>Date</strong></th>
+            <th scope="col"><strong>Service</strong></th>
+          </tr>
+        </thead>
+        <tbody>
+          {this.state.completedServices.map(completedService => {
+            return(
+            <tr>
+              <th scope="row">
+                <Moment format="MM/DD/YYYY">{completedService.date}</Moment>
+              </th>
+              <td>
+                {completedService.name}
+              </td>
+            </tr>
+          )}
+          )}
+        </tbody>
+      </table>
+    </div>
+  </Modal>
+</div> */}

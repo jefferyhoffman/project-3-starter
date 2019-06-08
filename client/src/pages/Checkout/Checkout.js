@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import PaymentInfo from "../../components/PaymentInfo/PaymentInfo"
 import "./Checkout.css"
 import API from '../../lib/API';
-import { StripeProvider } from 'react-stripe-elements';
-import MyStoreCheckout from './MyStoreCheckout';
-import CardSection from "./CardSection";
+// import { StripeProvider } from 'react-stripe-elements';
+// import MyStoreCheckout from './myStoreCheckout';
+// import CardSection from "./CardSection";
 
 const CheckoutList = (props) => {
     return (
@@ -56,7 +56,7 @@ class Checkout extends Component {
         return (
             <div>
                 {/* <StripeProvider apiKey="k_test_XnGjYTSLwoIxJVpB5iIDHyXZ00Q9tfKq2U">
-                    <MyStoreCheckout />
+                <MyStoreCheckout />
                 </StripeProvider> */}
                 <CheckoutList products={products} />
                 <PaymentInfo products={products} date = {this.props.calendarInfo.date}/>
