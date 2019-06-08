@@ -1,24 +1,25 @@
-/* .card-loginform {
+.card-loginform {
     opacity: 0;
 }
 
 .card-header-loginform{
     background: white;
-} */
+}
 
-.card-loginform{
-    opacity: 9.5;
+/* .card-loginform {
+  
     width: 320px;
     height: 420px;
-    color:black;
+    background-color:black;
     top: 50%;
     left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
-    padding: 70px 30px; }
+    padding: 70px 30px;
+ }
 
-    .form-control2 {
+    .form-control {
         width: 100%;
         margin-bottom: 20px;
         border: none;
@@ -29,4 +30,4 @@
         color:white;
       }
 
-     
+      */
