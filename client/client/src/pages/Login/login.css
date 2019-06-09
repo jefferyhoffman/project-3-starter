@@ -1,0 +1,18 @@
+img.log {
+    min-height: 100%;
+    min-width: 1024px;
+  
+    width: 100%;
+    height: auto;
+  
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .col-6-login {
+      margin: 5.5% 9.5%;
+  }
+
+  
