@@ -39,7 +39,8 @@ class About extends Component {
                       <div className="carousel-item active">
                         <div className='card-review' style={{ border: 'none' }}>
                           <h4 style={{ textAlign: 'center' }}>
-                            A beautiful lawn is the key to a beautiful life.
+                            A beautiful lawn is the key to a 
+                            <br />beautiful life.
                         </h4>
                         </div>
                       </div>
@@ -60,17 +61,19 @@ class About extends Component {
                       <div className="carousel-item">
                         <div className='card-review' style={{ border: 'none' }}>
                           <h4 style={{ textAlign: 'center' }}>
-                            Right or wrong, make a decision. The road 
-                            <br />of life is paved with flat squirrels who 
-                            <br />couldn't make a decision.
+                            Right or wrong, make a decision. 
+                            <br />The road of life is paved 
+                            <br />with flat squirrels who couldn't 
+                            <br />make a decision.
                             </h4>
                         </div>
                       </div>
                       <div className="carousel-item">
                         <div className='card-review' style={{ border: 'none' }}>
                           <h4 style={{ textAlign: 'center' }}>
-                            I've never met a lawn Greenscapes couldn't 
-                            <br />turn into the most beautiful one on the block!
+                            I've never met a lawn Greenscapes 
+                            <br />couldn't turn into the most beautiful 
+                            <br />one on the block!
                             </h4>
                         </div>
                       </div>
