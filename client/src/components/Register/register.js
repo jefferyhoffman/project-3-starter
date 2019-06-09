@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./register.css";
+import { Link } from 'react-router-dom';
 
 
 class Register extends Component {
@@ -77,7 +78,7 @@ class Register extends Component {
                       />
                   
 <br/>
-                    <button className='btn btn-secondary sub-button' to='/Home' onClick={this.toggleCollapse} type='submit'>Register</button>
+                     <Link to="/" ><button className='btn btn-secondary sub-button' onClick={this.toggleCollapse} type='submit'>Register</button> </Link>
                     </form>
                 </div>
            </div>
