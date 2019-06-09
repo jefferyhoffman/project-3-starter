@@ -19,10 +19,10 @@ h1 {
 .welcomeText {
   color: white;
   text-shadow:
-   -1px -1px 0 #137216,  
-    1px -1px 0 #137216,
-    -1px 1px 0 #137216,
-     1px 1px 0 #137216;
+   -1px -1px 0 black,  
+    1px -1px 0 black,
+    -1px 1px 0 black,
+     1px 1px 0 black;
      font-family: 'Montserrat', sans-serif;
  
 }

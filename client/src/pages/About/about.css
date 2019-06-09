@@ -17,13 +17,18 @@ body{
 
 .info{
 color: black;
-
+background-color: white;
+opacity: 0.83;
+font-style: italic;
+text-align: center;
+align-content: center;
 }
 
 .card-body{
   padding: 1.85rem;
   background-color: white;
   color: black;
+  border:black;
   
 }
 
@@ -50,7 +55,6 @@ color: black;
   /* color: rgb(15, 109, 22); */
    color: #303437;
   font-family: 'Source Sans Pro' 900;
-  opacity: 1.0;
 }
 
 .reviews {
