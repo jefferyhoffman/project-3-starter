@@ -6,8 +6,8 @@ import AuthContext from '../../contexts/AuthContext';
 import API from '../../lib/API';
 import Moment from 'react-moment';
 import imageOne from '../../cssPages/images/doctor.jpg';
-import imageTwo from '../../cssPages/images/reseeding.png';
-import imageThree from '../../cssPages/images/treepruning.png';
+import imageTwo from '../../cssPages/ImageGallery/reseeding.png';
+import imageThree from '../../cssPages/ImageGallery/treepruning.png';
 
 class ClientHome extends Component {
   static contextType = AuthContext;
@@ -88,7 +88,7 @@ class ClientHome extends Component {
           <br />
           <div className="col-sm-2"></div>
           <div className="col-sm-8">
-            <h1 className="display-4 text-white font-weight-bold welcomeText">Welcome Back, {firstName} </h1>
+            <h1 className="display-4 text-white font-weight-bold welcomeText"style={{textAlign: 'center'}}>Welcome Back, {firstName} </h1>
           </div>
           <div className="col-sm-2"> </div>
         </div>

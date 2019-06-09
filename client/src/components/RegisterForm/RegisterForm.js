@@ -45,7 +45,7 @@ class RegisterForm extends Component {
       <div className="col-sm-6 form">
         <div className="card">
           <div className="card-body">
-            <h2 className="card-title text-success">Create an Account with GreenSpace</h2>
+            <h2 className="card-title text-success" style={{align: 'center'}}>Create an Account with GreenSpace</h2>
             <br />
             <form onSubmit={this.handleSubmit}>
               <div className="row">
@@ -118,7 +118,7 @@ class RegisterForm extends Component {
                   value={password}
                   onChange={this.handleInputChange} />
               </div>
-              <button type="submit" className="btn btn-success float-left">Join!</button>
+              <button type="submit" style={{width: '100%'}} className="btn btn-success">Join Today!</button>
             </form>
           </div>
         </div>

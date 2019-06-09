@@ -29,13 +29,37 @@ h3 {
     color: black;
   }
 
+
+  .grass1{
+    margin-left: 5px;
+  }
+
+  .grass2{
+    margin-left: 10px;
+  }
+
+  .grass3{
+    margin-left: 10px;
+  }
+
+  .grass4{
+    margin-left: 10px;
+  }
+
+.grass5{
+margin-left: 60px;
+}
 .jumbotron {
   text-align: center;
   height: 350px;
   background-color: white;
   width: 100%;
-  color: rgb(15, 109, 22);
+  /* color: rgb(15, 109, 22); */
+   color: #303437;
+  font-family: 'Source Sans Pro' 900;
+  opacity: 0.83;
 }
+
 .reviews {
   justify-content: center;
 }
