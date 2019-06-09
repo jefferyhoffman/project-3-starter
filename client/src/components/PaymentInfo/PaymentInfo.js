@@ -54,7 +54,7 @@ class PaymentInfo extends Component {
                                         "John M. Doe" />
                                     <div className='input-group mb-3'>
                                         <div className="input-group-prepend">
-                                            <span className="input-group-text">Email</span>
+                                            <span>Email</span>
                                         </div>
                                         <input
                                             className='form-control'
