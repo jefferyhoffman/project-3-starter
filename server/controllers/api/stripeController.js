@@ -5,6 +5,7 @@ const router = express.Router();
 const routeHelpers = require('./stripeHelper');
 // const productQueries = require('../db/queries/products');
 
+
 // router.get('/', (req, res, next) => {
 //   return productQueries.getAllProducts()
 //   .then((products) => {

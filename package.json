@@ -26,9 +26,9 @@
     "react-bootstrap4-modal": "^1.7.1",
     "react-calendar": "^2.19.0",
     "react-items-carousel": "^2.3.6",
+    "react-moment": "^0.9.2",
     "react-multi-carousel": "^1.4.2",
     "react-stripe-elements": "^3.0.0",
-    "semantic-ui-react": "^0.87.1",
-    "react-moment": "^0.9.2"
+    "semantic-ui-react": "^0.87.1"
   }
 }
