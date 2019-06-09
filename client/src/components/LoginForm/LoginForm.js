@@ -28,15 +28,14 @@ class LoginForm extends Component {
 
     return (
       <div className="card-loginform">
-        <div className="card-header-loginform"><h2>Login</h2><h4>And start exploring and creating!</h4></div>
-
+        <div className="card-header-loginform"><h2>Login</h2><h4><hr></hr>And start exploring and creating!</h4></div>
         <div className="card-body">
           <form className='LoginForm' onSubmit={this.handleSubmit}>
             <div className="form-group">
               <div className="card-header-loginform">
                 {/* <label for="formGroupExampleInput"><h4>Email:</h4></label> */}
               </div>
-              <div className="card-body">
+              <div  className="card-body" >
                 <input
                   className='form-control1'
                   id='email'

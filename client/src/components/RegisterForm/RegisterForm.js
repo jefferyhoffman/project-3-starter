@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import '../RegisterForm/registerform.css';
 
 class RegisterForm extends Component {
   state = {
@@ -27,7 +28,7 @@ class RegisterForm extends Component {
 
     return (
       <div className='card-registerform'>
-        <div className="card-header-registerform"><h4>Sign Up</h4><h4>Make this your drink destination!</h4></div>
+        <div className="card-header-registerform"><h1>Sign Up</h1><hr></hr><h4>Make this your drink destination!</h4></div>
           <div className="card-body">
             <form className='LoginForm' onSubmit={this.handleSubmit}>
               {/* <div className='input-group mb-3'>
@@ -40,7 +41,7 @@ class RegisterForm extends Component {
                 </div>
                 <div className="card-body">
                   <input
-                    className='form-control'
+                    className='form-control3'
                     id='email'
                     type='email'
                     name='email'
@@ -60,7 +61,7 @@ class RegisterForm extends Component {
                 </div>
                 <div className="card-body">
                   <input
-                    className='form-control'
+                    className='form-control4'
                     id='password'
                     type='password'
                     name='password'

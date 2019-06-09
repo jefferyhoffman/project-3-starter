@@ -9,15 +9,15 @@
     text-align: center; */
   }
 
-.footer {
+#footer {
     position: bottom;
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     color: white;
     text-align: center;
     margin-top: 0%;
+    height: 10px;
 }
 
 .card-header-footer {
