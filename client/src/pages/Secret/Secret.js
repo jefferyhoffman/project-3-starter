@@ -29,6 +29,7 @@ class Secret extends Component {
 
   render() {
     return (
+      <>
       <div className='Secret'>
         <div className='row'>
           <div className='col'>
@@ -43,6 +44,7 @@ class Secret extends Component {
           </div>
         </div>
       </div>
+      </>
     );
   }
 }
