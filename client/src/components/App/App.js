@@ -71,11 +71,7 @@ class App extends Component {
       <AuthContext.Provider value={this.state.auth}>
         <div className='App'>
           <Navigation />
-<<<<<<< HEAD
-          <div className="container">
-=======
           <div className='container'>
->>>>>>> 0e8954dcc450aeb5567c93edb66b4dd1e9805c6a
             <Switch>
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />
@@ -95,15 +91,9 @@ class App extends Component {
               <Route exact path='/babyGuinness' component={BabyGuinness} />
               <Route component={NotFound} />
             </Switch>
-<<<<<<< HEAD
-            </div>
-          <Footer/>
-         </div>
-=======
           </div>
           <Footer />
         </div>
->>>>>>> 0e8954dcc450aeb5567c93edb66b4dd1e9805c6a
       </AuthContext.Provider>
     );
   }
