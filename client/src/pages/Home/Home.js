@@ -88,9 +88,9 @@ export default class Test extends React.Component {
   <div class="carousel-inner">
     <div class="carousel-item active">
       <h3>thats some good mowin'!
-        <br />
-        -Dylbob, Hickory 
       </h3>
+        <br />
+       <p className="float-right"> -Dylbob, Hickory </p> 
     </div>
     <div class="carousel-item">
     <h3>
