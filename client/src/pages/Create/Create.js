@@ -63,7 +63,7 @@ class Create extends Component {
             <div className='col-md-6'>
               <div className='card-body-create'>
                 <h2 className='pages-header card-title'>Craft your drink</h2>
-            <p className='card-title'>Add your favroite drink!</p>
+            <p className='card-title'>Add your favorite drink!</p>
                 <form onSubmit={this.handleSubmit}>
                   <div class='form-row'>
                     <div class='form-group col-md-6'>
@@ -86,7 +86,7 @@ class Create extends Component {
                         <option>Cocoa</option>
                         <option>Shot</option>
                         <option>Coffee / Tea</option>
-                        <option>Homemade Liqueur</option>
+                        <option>Homemade Liquor</option>
                         <option>Punch / Party Drink</option>
                         <option>Beer</option>
                         <option>Soft Drink / Soda</option>
@@ -103,7 +103,7 @@ class Create extends Component {
                   </div>
                   <div class='form-row'>
                     <div className='form-group col-md-6'>
-                      <label for='ingredients_measurements'>Drrink Ingredients:</label>
+                      <label for='ingredients_measurements'>Drink Ingredients:</label>
                       <TextArea name='ingredients_measurements' onChange={this.handleInputChange} value={this.state.ingredients_measurements} placeholder='Ingredients/Measurements' />
                     </div>
                     <div className='form-group col-md-6'>
