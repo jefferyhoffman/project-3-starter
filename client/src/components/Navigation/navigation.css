@@ -4,7 +4,7 @@ nav {
     /* background: linear-gradient(to top, #bdc3c7, #2c3e50 100%); */
     /* background: linear-gradient(to top, #ff4a4a, #3b3b3b 100%); */
     /* background: linear-gradient(to top, #3374a0 0%, #2d1a3a 100%); */
-    height: 100px;
+    height: 120px;
 } 
 
 .headermain {
@@ -17,7 +17,11 @@ nav {
 
 }  
 .logo1 {
-  height: 100px;
+  height: 120px;
+}
+
+.nav-item {
+  font-family: 'Oswald', sans-serif;
 }
 
 
