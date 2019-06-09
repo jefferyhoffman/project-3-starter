@@ -80,7 +80,7 @@ class ClientHome extends Component {
           <br />
           <div className="col-sm-2"></div>
           <div className="col-sm-8">
-            <h1 className="display-4 text-white font-weight-bold welcomeText">Welcome Back, {firstName} </h1>
+            <h1 className="display-4 text-white font-weight-bold welcomeText"style={{textAlign: 'center'}}>Welcome Back, {firstName} </h1>
           </div>
           <div className="col-sm-2"> </div>
         </div>
