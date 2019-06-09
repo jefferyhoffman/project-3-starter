@@ -7,23 +7,20 @@ import Logo from '../../pages/Images/Logo.png';
 
 
 
-class Jumbotron extends Component {
+class Footer extends Component {
     render() {
         return (
-            <div className="wrapper">
                 <div className='footer'>
                     <div className='card'>
                         <div className='card-header-footer'>
-                            {/* <Link to='/'><img src={Logo} alt='My logo' className='logo' /></Link> */}
-                            <blockquote className='blockquote mb-0'>
-                                <footer className='blockquote-footer'><cite title='Source Title'>Be your own Bartender</cite></footer>
-                            </blockquote>
+                            <Link to='/' className='footer-link'><cite title='Source Title'>DRINKSTATION </cite><img src={Logo} alt='My logo' className='footer-logo' />
+                            <cite title='Source Title'>Be your own Bartender </cite>
+                            </Link>
                         </div>
                     </div>
                 </div>
-            </div>
         );
     }
 }
 
-export default Jumbotron;
+export default Footer;

@@ -61,11 +61,12 @@ class View extends Component {
 
     return (
       <div>
+        <br/>
+      <h2 className='pages-header'>Drinks Collection</h2>
         {drinks.map(drink => {
           return (
             <>
               <div>
-                <h2 className='pages-header'>Drinks Collections</h2>
                 <div className="card-drinks mb-3 container">
                   <div className="row no-gutters">
                     <div className="col-md-3">
