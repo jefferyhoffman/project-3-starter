@@ -4,7 +4,6 @@ import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
 import { Link } from 'react-router-dom';
 
-
 // import "./Confirmation"
 
 class PaymentInfo extends Component {
@@ -90,7 +89,9 @@ class PaymentInfo extends Component {
                                             <input type="text" id="zip" name="zip" placeholder="10001" />
                                         </div>
                                         {/* <Link className='btn btn-outline-secondary waves-effect' style={{ margin: '40px', borderRadius: '4px' }} to ="../pages/ClientHome" onClick={this.handleCheckout}>Confirm order</Link>                                    </div> */}
-                                        <button style={{ marginLeft: '35%', borderRadius: '4px' }} href="./Confirmation" onClick={this.handleCheckout}>Confirm order</button>
+                                        <Link to = "/Confirmation">
+                                        <button style={{ marginLeft: '35%', borderRadius: '4px' }} onClick={this.handleCheckout}>Confirm order</button>
+                                        </Link>
                                     </div>
                                 </div>
                             </form>
@@ -124,7 +125,7 @@ class PaymentInfo extends Component {
                             </label> */}
                                 {/* <input type="submit" value="Keep Shopping" class="btn" id="keepshopping" /> */}
                             </div>
-                            <input type="submit" value="Confirm and Pay Now" class="btn" style={{ marginLeft: '25%'}}/>
+                            <input type="submit" value="Confirm and Pay Now" href = "/Confirmation" class="btn" style={{ marginLeft: '25%'}}/>
                         </div>
                     </div>
                 </div>

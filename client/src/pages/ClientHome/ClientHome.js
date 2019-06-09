@@ -88,7 +88,7 @@ class ClientHome extends Component {
           <br />
           <div className="col-sm-2"></div>
           <div className="col-sm-8">
-            <h1 className="display-4 text-white font-weight-bold welcomeText"style={{textAlign: 'center'}}>Welcome Back, {firstName} </h1>
+            <h1 className="display-4 text-white font-weight-bold welcomeText" style={{ textAlign: 'center' }}>Welcome Back, {firstName} </h1>
           </div>
           <div className="col-sm-2"> </div>
         </div>
@@ -96,19 +96,19 @@ class ClientHome extends Component {
         <br />
 
         <div className="row">
-       
-        {/* Account Info Card */}
-        <div className="col-sm-4 mainButton">
-        <a className="card d-flex text-center" data-toggle="modal" data-target="#exampleModalCenter">
-          <div className="card-body">
-            <h1 className="card-title"><i className="fas fa-user-edit"></i></h1>
-            <h5 className="card-subtitle mb-2 text-muted">Account Info</h5>
-            <p className="card-text">Edit your Account Information.</p>
-          </div>
-        </a>
-        <Modal visible={false} onClickBackdrop={this.modalBackdropClicked} className="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div className="modal-header" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <h5 class="modal-title text-success" id="exampleModalLongTitle"><strong>Edit Account Info</strong></h5>
+
+          {/* Account Info Card */}
+          <div className="col-sm-4 mainButton">
+            <a className="card d-flex text-center" data-toggle="modal" data-target="#exampleModalCenter">
+              <div className="card-body">
+                <h1 className="card-title"><i className="fas fa-user-edit"></i></h1>
+                <h5 className="card-subtitle mb-2 text-muted">Account Info</h5>
+                <p className="card-text">Edit your Account Information.</p>
+              </div>
+            </a>
+            <Modal visible={false} onClickBackdrop={this.modalBackdropClicked} className="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div className="modal-header" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <h5 class="modal-title text-success" id="exampleModalLongTitle"><strong>Edit Account Info</strong></h5>
                 <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -122,8 +122,8 @@ class ClientHome extends Component {
                       id='firstName'
                       type='text'
                       name='firstName'
-                      placeholder= {firstName}
-                      value= ""
+                      placeholder={firstName}
+                      value={firstName}
                       onChange={this.handleInputChange}
                     />
                   </div>
@@ -132,9 +132,9 @@ class ClientHome extends Component {
                       className="form-control"
                       id='lastName'
                       type='text'
-                      name={lastName}
-                      placeholder="Last Name"
-                      value= 'lastName'
+                      name='lastName'
+                      placeholder={lastName}
+                      value={lastName}
                       onChange={this.handleInputChange} />
                   </div>
                 </div>
@@ -201,7 +201,7 @@ class ClientHome extends Component {
               </div>
             </a>
             {console.log(this.state.upcomingServices)}
-            <Modal  upcomingServices={this.state.upcomingServices} completedServices={this.state.completedServices} visible={false} onClickBackdrop={this.modalBackdropClicked} className="upcomingModal-lg" id="upcomingModal" dialogClassName="modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <Modal upcomingServices={this.state.upcomingServices} completedServices={this.state.completedServices} visible={false} onClickBackdrop={this.modalBackdropClicked} className="upcomingModal-lg" id="upcomingModal" dialogClassName="modal-lg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
               <div className="modal-header" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <h5 class="modal-title text-success" id="exampleModalLongTitle"><strong>Scheduled Services</strong></h5>
                 <button type="button" className="close" data-dismiss="modal" aria-label="Close">
@@ -216,20 +216,21 @@ class ClientHome extends Component {
                   </tr>
                 </thead>
                 <tbody>
-                 {this.state.upcomingServices.map(upcomingService => {
-                      return(
+                  {this.state.upcomingServices.map(upcomingService => {
+                    return (
                       <tr>
                         <th scope="row">
-                        <Moment format="MM/DD/YYYY">{upcomingService.date}</Moment>
+                          <Moment format="MM/DD/YYYY">{upcomingService.date}</Moment>
                         </th>
                         <td>
                           {upcomingService.name}
                         </td>
                       </tr>
-                    )}
-                    )}
+                    )
+                  }
+                  )}
                   {this.state.completedServices.map(completedService => {
-                      return(
+                    return (
                       <tr>
                         <th scope="row">
                           <Moment format="MM/DD/YYYY">{completedService.date}</Moment>
@@ -238,8 +239,9 @@ class ClientHome extends Component {
                           {completedService.name}
                         </td>
                       </tr>
-                    )}
-                    )}
+                    )
+                  }
+                  )}
                 </tbody>
               </table>
             </Modal>
@@ -248,33 +250,33 @@ class ClientHome extends Component {
           {/* Booking Card */}
           <div className="col-lg-4 sm-12 mainbutton">
             <div className="card text-center scheduleCard">
-                <div className="card-body">
-                  <h1 className="card-title"><i className="fas fa-calendar-plus"></i></h1>
-              <Link className='nav-link pb-.5 pt-0' to='/scheduling' onClick={this.toggleCollapse}>
+              <div className="card-body">
+                <h1 className="card-title"><i className="fas fa-calendar-plus"></i></h1>
+                <Link className='nav-link pb-.5 pt-0' to='/scheduling' onClick={this.toggleCollapse}>
                   <h5 className="card-subtitle text-muted">Booking</h5>
-              </Link>
-                  <p className="card-text">Schedule a Service.</p>
-                </div>
+                </Link>
+                <p className="card-text">Schedule a Service.</p>
+              </div>
             </div>
           </div>
 
         </div>
 
         {/* bottom img's */}
-      <div className="row">
-        <div className="col-4">
-        <img src={imageOne} className="bottomImg" height="320px" width="100%" alt="dundun"></img>
+        <div className="row">
+          <div className="col-4">
+            <img src={imageOne} className="bottomImg" height="320px" width="100%" alt="dundun"></img>
+          </div>
+          <div className="col-4">
+            <img src={imageTwo} className="bottomImg" height="320px" width="100%" alt="dundun"></img>
+          </div>
+          <div className="col-4">
+            <img src={imageThree} className="bottomImg" height="320px" width="100%" alt="dundun"></img>
+          </div>
         </div>
-        <div className="col-4">
-        <img src={imageTwo} className="bottomImg" height="320px" width="100%" alt="dundun"></img>
-        </div>
-        <div className="col-4">
-        <img src={imageThree} className="bottomImg" height="320px" width="100%" alt="dundun"></img>
-        </div>
-      </div>
       </div>
 
-              
+
     );
   }
 }
@@ -285,7 +287,7 @@ class ClientHome extends Component {
 
 export default ClientHome;
 
-{/* Completed Card */}
+{/* Completed Card */ }
 {/* <div className="col-sm-3">
   <button className="card p-3 mb-5 rounded" data-toggle="modal" data-target="#completedModal" onClick={this.getServices}>
     <div className="card-body">

@@ -14,7 +14,7 @@ import NotFound from '../../pages/NotFound/NotFound';
 import Checkout from '../../pages/Checkout/Checkout';
 import ClientHome from '../../pages/ClientHome/ClientHome';
 import Confirmation from '../../pages/Confirmation/Confirmation';
-
+import PaymentInfo from '../../components/PaymentInfo/PaymentInfo'
 import './App.css';
 
 class App extends Component {
@@ -137,7 +137,7 @@ class App extends Component {
         console.log(total);
       });
   }
-  
+
   closeModal = () => {
     this.setState({
       calendarInfo: {
@@ -181,7 +181,9 @@ class App extends Component {
                 {...this.state.modalInfo}
               />} />
             <Route exact path='/ClientHome' component={ClientHome} />
-            <Route exact path='/Checkout' component={(props) =>
+            <Route path = '/paymentInfo' component= {PaymentInfo} />
+            <Route path='/Confirmation' component={Confirmation} />
+             <Route exact path='/Checkout' component={(props) =>
               <Checkout
                 {...props}
                 {...this.state.modalInfo}
@@ -189,9 +191,7 @@ class App extends Component {
             />
             <Route exact path='/' component={Home} />
             <Route component={NotFound} />
-            <Route path = '/Confirmation' component = {Confirmation}/>
           </Switch>
-          
         </div>
       </AuthContext.Provider>
     );
