@@ -45,7 +45,7 @@ class PaymentInfo extends Component {
                             <h2 className="card-title" style={{ textAlign: 'center' }}>Checkout</h2>
                             <form onSubmit = {this.handleCheckout}>
                                 <div className="col-50" style={{ textAlign: 'left' }}>
-                                    <label for="fname"><i className="fa fa-user"></i> Full Name</label>
+                                    <label for="fname"> Full Name</label>
                                     <input
                                         type="text"
                                         id="fname"
