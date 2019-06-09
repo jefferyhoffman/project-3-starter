@@ -5,6 +5,7 @@ nav {
     /* background: linear-gradient(to top, #ff4a4a, #3b3b3b 100%); */
     /* background: linear-gradient(to top, #3374a0 0%, #2d1a3a 100%); */
     height: 120px;
+   
 } 
 
 .headermain {
@@ -22,6 +23,9 @@ nav {
 
 .nav-item {
   font-family: 'Oswald', sans-serif;
+  justify-content: end;
 }
+
+
 
 

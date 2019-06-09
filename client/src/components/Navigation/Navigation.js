@@ -39,12 +39,12 @@ class Navigation extends Component {
             <span className='navbar-toggler-icon'></span>
           </button>
           <div className={targetClass} id='navbarSupportedContent'>
-            <ul className='navbar-nav mr-auto'>
+            <ul className='navbar-nav mr-auto navbar-right'>
               {/* {user &&
                 <li className='nav-item'>
                   <Link className='nav-link' style={text} to='/secret' onClick={this.toggleCollapse}>Secret</Link>
-                </li>} */}
-            </ul>
+                </li>}
+            </ul> */}
             <ul className='navbar-nav'>
               {user
                 ? <>
@@ -75,6 +75,7 @@ class Navigation extends Component {
                   <li className='nav-item'><Link className='nav-link' style={text} to='/login' onClick={this.toggleCollapse} style={text}>Sign in</Link></li>
                   {/* <li className='nav-item'><Link className='nav-link' style={text} to='/register' onClick={this.toggleCollapse} style={text}>Sign up</Link></li> */}
                 </>}
+            </ul>
             </ul>
           </div>
         </nav>
