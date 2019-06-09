@@ -8,6 +8,22 @@
   text-align: left;
   width: 24vw !important;
 }
+
+#productCardT {
+  background: #fff;
+  border-radius: 2px;
+  height: 450px !important;
+  margin: 1rem;
+  position: relative;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  text-align: center;
+  width: 24vw !important;
+}
+
+.max-width-100 {
+  max-width: 100%;
+}
+
 #liProducts {
   font-size: 1rem;
 }
@@ -19,8 +35,9 @@
   text-align: center;
   background:#6CADDC;
 }
+
 .card > .img-container > img {
-  width: 100%
+  width: 100%;
 }
 
 .card > .content {
@@ -40,6 +57,7 @@
 .card > .remove:hover {
   color: #d50000;
 }
+
 #watchList {
   height: 40vh;
 }
@@ -66,7 +84,7 @@
 }
 #productCart {
   margin-top: 10px;
-  color: rgb(113, 113, 113);
+  /* color: rgb(113, 113, 113); */
   cursor: pointer;
   font-size: 1.5rem;
 }

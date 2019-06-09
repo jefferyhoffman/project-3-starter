@@ -41,7 +41,7 @@ class LoginForm extends Component {
                   id='email'
                   type='email'
                   name='email'
-                  placeholder='email@pkoscowix.com'
+                  placeholder='email@koscowix.com'
                   value={email}
                   onChange={this.handleInputChange}
                 />

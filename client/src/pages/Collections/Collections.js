@@ -55,6 +55,7 @@ class Collections extends Component {
               key={item.id}
               name={item.name}
               image={item.img}
+              className="max-width-100"
               brand={item.brand}
               price={item.price}
               quantity={item.quantity}
