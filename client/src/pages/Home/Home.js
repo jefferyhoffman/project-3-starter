@@ -77,7 +77,7 @@ export default class Test extends React.Component {
                 background: 'url(images[i])'
               }}
 
-            />
+            /> 
 
           )}
         </ItemsCarousel>
