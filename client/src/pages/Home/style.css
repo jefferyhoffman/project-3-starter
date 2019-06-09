@@ -4,6 +4,7 @@ body{
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
+  font-family: 'Montserrat', sans-serif;
 }
 h3 {
   font-style: italic;
