@@ -3,7 +3,9 @@ import { Redirect } from 'react-router-dom';
 import { Input, TextArea, Select, FormBtn } from "../../components/Form";
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
+import '../MyDrinks/MyDrinks.css';
 
+const xbutton={display:"flex" , alignItems:"center"}
 class MYDrinks extends Component {
   static contextType = AuthContext;
 
@@ -14,7 +16,7 @@ class MYDrinks extends Component {
     instructions: "",
     ingredients_measurements: ""
   };
-
+ 
 
   componentDidMount() {
     API.Users.getMe(this.context.authToken)
@@ -37,7 +39,9 @@ class MYDrinks extends Component {
   deleteDrinks = id => {
     let { authToken } = this.context;
     API.Drinks.delete(authToken, id)
-      .then(res => console.log(res.data))
+      .then(res => this.setState({
+        drinks: res.data.drinks
+      }))
       .catch(err => console.log(err));
   };
 
@@ -79,6 +83,8 @@ class MYDrinks extends Component {
         {drinks.map(drink => {
           return (
             <>
+              <div className="container"><div className="row no-gutters"> <div className="col-1" style={xbutton}> <FormBtn className="deletebtn" onClick={() => this.deleteDrinks(drink._id)}><span aria-hidden="true">&times;</span></FormBtn>
+              </div><div className="col-11">
               <div>
                 <h2 className='pages-header'>Your Creations!</h2>
                 <div className="card-drinks mb-3 container">
@@ -86,9 +92,8 @@ class MYDrinks extends Component {
                     <div className="col-md-3">
                       <img src={drink.image} alt={drink.name} className="card-img">
                       </img>
-                      <FormBtn onClick={() => this.deleteDrinks(drink._id)}>Delete</FormBtn>
                     </div>
-                    <div className="col-md-7">
+                    <div className="col-md-9">
                       <div className="card-body">
                         <h5 className="card-title"><h3>{drink.name}</h3></h5>
                         <p className="card-text"><h5>{drink.kind} - {drink.category}</h5>
@@ -98,15 +103,18 @@ class MYDrinks extends Component {
                     </div>
                   </div>
                 </div>
-              </div>
+                </div> </div> </div>
+                </div>
             </>
-          )
-        })}
+              )
+            })}
       </div>
-    );
-  }
+       
+    
+          );
+        }
 }
 
 
 
-export default MYDrinks;
+        export default MYDrinks;

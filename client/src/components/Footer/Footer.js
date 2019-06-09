@@ -14,7 +14,7 @@ class Jumbotron extends Component {
                 <div className='footer'>
                     <div className='card'>
                         <div className='card-header-footer'>
-                            <Link to='/'><img src={Logo} alt='My logo' className='logo' /></Link>
+                            {/* <Link to='/'><img src={Logo} alt='My logo' className='logo' /></Link> */}
                             <blockquote className='blockquote mb-0'>
                                 <footer className='blockquote-footer'><cite title='Source Title'>Be your own Bartender</cite></footer>
                             </blockquote>

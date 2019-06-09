@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-// import '../LoginForm/loginform.css';
+import '../LoginForm/loginform.css';
 
 class LoginForm extends Component {
   state = {
@@ -28,27 +28,28 @@ class LoginForm extends Component {
 
     return (
       <div className="card-loginform">
-        <div className="card-header-loginform"><h1>Sign in Drinkstation</h1><h4>And start exploring and creating!</h4></div>
+        <div className="card-header-loginform"><h2>Login</h2><h4>And start exploring and creating!</h4></div>
+
         <div className="card-body">
           <form className='LoginForm' onSubmit={this.handleSubmit}>
             <div className="form-group">
               <div className="card-header-loginform">
-                <label for="formGroupExampleInput"><h4>Email:</h4></label>
+                {/* <label for="formGroupExampleInput"><h4>Email:</h4></label> */}
               </div>
               <div className="card-body">
                 <input
-                  className='form-control'
+                  className='form-control1'
                   id='email'
                   type='email'
                   name='email'
                   placeholder='email@provider.com'
                   value={email}
                   onChange={this.handleInputChange}
-                />  </div>
+                /> </div>
             </div>
             <div className="form-group">
               <div className="card-header-loginform">
-                <label for="formGroupExampleInput2"><h4>Password:</h4></label>
+                {/* <label for="formGroupExampleInput2"><h4>Password:</h4></label> */}
               </div>
               <div className="card-body">
                 <input
@@ -59,13 +60,12 @@ class LoginForm extends Component {
                   placeholder='password'
                   value={password}
                   onChange={this.handleInputChange}
-                />  </div>
+                /></div>
             </div>
             <button className='btn btn-info btn-lg' type='submit'>Sign In</button>
             <br/>
             <br/>
-            <br/>
-            <Link to='/register' onClick={this.toggleCollapse}><h3>New to Drinkstation! Click here to Sign up!</h3></Link>
+            <Link to='/register' onClick={this.toggleCollapse}> Dont Have an Account? Sign Up </Link>
           </form>
         </div>
       </div>
