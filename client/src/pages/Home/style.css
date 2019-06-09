@@ -101,7 +101,7 @@ height: 300px;
 @media only screen and (max-width: 678px) {
   .grass5 {
     margin-left: 0px;
-    height: 300px;
+    height: 200px;
   }
   .imgReviewer {
     visibility: hidden;

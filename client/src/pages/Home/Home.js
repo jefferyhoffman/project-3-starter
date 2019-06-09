@@ -94,7 +94,7 @@ export default class Test extends React.Component {
 
           )}
 
-          <h1>See Our Work</h1>
+          
         </ItemsCarousel>
 
         {/* -------------------------------------------------------------------------------------------- */}
