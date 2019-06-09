@@ -23,6 +23,14 @@ body{
     color: black;
   }
 
+
+  .grass1{
+    margin-left: 220px;
+  }
+
+  .grass2{
+    margin-left: 220px;
+  }
 /* 
 @media screen and (max-width: 980px){
   .card{
