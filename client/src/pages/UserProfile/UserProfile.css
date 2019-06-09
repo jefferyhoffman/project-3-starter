@@ -16,6 +16,7 @@
     position: static !important;
     text-align: center;
     margin-bottom: 20px;
+    opacity: 50%;
 }
 
 .sub-button {
@@ -24,6 +25,10 @@
    
 }
 
-.container {
+.App {
     position: relative;
+    background: url("../Home/images/productIMG.jpg");
+    height: 650px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

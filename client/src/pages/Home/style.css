@@ -38,6 +38,10 @@ body {
     margin: 0;
 }
 
+.rowBanner {
+    width: 50%;
+}
+
 video {
    height: 200%;
    position: relative;
@@ -57,14 +61,17 @@ video {
     text-shadow: 4px 4px 4px rgba(133, 133, 133, 0.571),
                  -3px -3px 4px rgba(136, 136, 136, 0.529);
 }
+
 .text-overlay:hover {
     color: rgb(30, 30, 40);
 }
+
 #row1 {
     background: rgb(173, 158, 149);
     /* background-image: linear-gradient(40deg,rgb(32,56,144), rgb(22,32,83), rgb(32,56,144), rgb(63,36,98), rgb(67,16,50),rgb(108,30,79)); */
     z-index: 2;
 }
+
 #row2sec1{
     background: rgb(70, 50, 40);
     /* background: rgb(63,36,98); */
@@ -74,6 +81,7 @@ video {
     color: white;
     padding: 0;
 }
+
 #row2sec2 {
     background: rgb(30, 30, 40);
     /* background: rgb(67,16,50); */
@@ -109,23 +117,35 @@ video {
     color: white;
     padding: 0;
 }
-#row4sec1 {
+
+.productBanner {
+    width: 50%;
+    height: 50%;
+}
+
+#bottomBanner {
     background: rgb(174, 159, 159);
     /* background: rgb(138,190,235); */
-    height: auto;
-    width: auto; 
+    /* height: auto;
+    width: auto;  */
     text-align: center;
     color: white;
     padding: 0;
 }
-#row4sec2 {
+
+.productAnime {
+    width: 50%;
+    height: 50%;
+}
+
+/* #row4sec2 {
     background: rgb(116, 116, 116);
     height: auto;
     width: auto; 
     text-align: center;
     color: white;
     padding: 0;
-}
+} */
 .content {
     /* width: 60%; */
     margin-top: 20px;
@@ -156,7 +176,7 @@ img {
     width: 14vw;
     text-align: center;
 }
-.productIMG {
+/* .productIMG {
     margin-top: 140px;
     top: 150px;
     text-align: center;
@@ -172,7 +192,7 @@ img {
     text-align: center;
     height: 400px;
     width: 300px;
-}
+} */
 p.card-text {
     font-size: 0.8rem;
     margin: 10px 20px 20px 20px;
@@ -211,6 +231,7 @@ div.img-container {
 .card > .img-container > img {
     width: 50% !important;
 }
+
 .card > .img-container {
     height: 68% !important;
     overflow: hidden;

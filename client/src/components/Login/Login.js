@@ -1,18 +1,16 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
+
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
-import LoginForm from '../../components/LoginForm/LoginForm';
-import Modal from 'react-bootstrap4-modal';
-import "./Login.css"
+import LoginForm from '../../components/Login/LoginForm';
+// import "../../components/Login/Login.css"
 
 
 class Login extends Component {
   static contextType = AuthContext;
 
-
   state = {
-    modalIsVisible: true,
     redirectToReferrer: false,
     error: ""
   }
@@ -42,55 +40,34 @@ class Login extends Component {
       });
   }
 
-  closeModal = () => {
-    this.setState({ modalIsVisible: false })
-  }
-
   render() {
-    const { from } = this.props.location.state || { from: { pathname: "/" } };
     const { redirectToReferrer } = this.state;
 
     if (redirectToReferrer) {
-      return <Redirect to={from} />;
+      return <Redirect to={'/'} />;
     }
 
     return (
-      <Modal visible={true} onClickBackdrop={this.modalBackdropClicked}>
-        <LoginForm onSubmit={this.handleSubmit} />
+      <div className="container">
+      <div className='Login'>
+        
+        <div className='row'>
+          <div className='col'>
+            <LoginForm onSubmit={this.handleSubmit} />
+          </div>
+        </div>
         {this.state.error &&
-          <div className='row'>
+          <div className='row alert'>
             <div className='col'>
               <div className='alert alert-danger mb-3' role='alert'>
                 {this.state.error}
               </div>
             </div>
           </div>}
-
-      </Modal>
-
+      </div>
+      </div>
     );
   }
 }
 
 export default Login;
-
-{/* <div className='Login'>
-<div className='row'>
-  <div className='col'>
-    <h1>Login</h1>
-  </div>
-</div>
-<LoginForm onSubmit={this.handleSubmit} />
-{this.state.error &&
-  <div className='row'>
-    <div className='col'>
-      <div className='alert alert-danger mb-3' role='alert'>
-        {this.state.error}
-      </div>
-    </div>
-  </div>}
-<div className='row'>
-  <div className='col'>
-  </div>
-</div>
-</div> */}
