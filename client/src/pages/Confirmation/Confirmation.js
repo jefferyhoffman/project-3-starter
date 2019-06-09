@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 
-
 class Confirmation extends Component {
 
     render() {
@@ -15,7 +14,7 @@ class Confirmation extends Component {
                             </div>
                             <p className="text-center">
                                 <strong>Your order has been placed, a lawn care specialist will contact you 24hrs before your appointment.</strong></p>
-                                <Link className='btn btn-outline-warning waves-effect' to='/ClientHome'>Close</Link>
+                                <Link className='btn btn-outline-warning waves-effect' to='/ClientHome'>Home</Link>
                             </div>
                         </div>
                     </div>

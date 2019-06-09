@@ -14,7 +14,9 @@ import NotFound from '../../pages/NotFound/NotFound';
 import Checkout from '../../pages/Checkout/Checkout';
 import ClientHome from '../../pages/ClientHome/ClientHome';
 import Confirmation from '../../pages/Confirmation/Confirmation';
-
+import About from '../../pages/About/About';
+import PaymentInfo from '../../components/PaymentInfo/PaymentInfo';
+import Footer from "../../components/Footer/Footer";
 import './App.css';
 
 class App extends Component {
@@ -37,14 +39,13 @@ class App extends Component {
         authToken: TokenStore.getToken(),
         onLogin: this.handleLogin,
         onLogout: this.handleLogout
-
       },
       calendarInfo: {
         date: new Date(),
         showModal: false
       },
       modalInfo: {
-        total:0,
+        total: 0,
         premiumPckg: false,
         upgradedPckg: false,
         standardPckg: false,
@@ -58,88 +59,87 @@ class App extends Component {
         soil: false,
         mulch: false
       },
-    firstName:{
-      name:""
+      firstName: {
+        name: ""
+      }
     }
-
-      
-  }
   }
 
   onChange = (date) => {
-    this.setState({ calendarInfo:{
-      date,showModal: true}
+    this.setState({
+      calendarInfo: {
+        date, showModal: true
+      }
     })
   }
-  
+
   getfirstName = (name) => {
-    this.setState({name: {
-      name:""
-    }})
+    this.setState({
+      name: {
+        name: ""
+      }
+    })
   }
 
   handleModalUpdate = (name, value) => {
     this.setState({
-      modalInfo:{
+      modalInfo: {
         ...this.state.modalInfo,
         [name]: value
       }
-      
-  }, 
-  () => {
-      // Calculation to determine total
-      var total = 0;
-      if (this.state.modalInfo.premiumPckg) {
+    },
+      () => {
+        // Calculation to determine total
+        var total = 0;
+        if (this.state.modalInfo.premiumPckg) {
           total += 350
-      }
-      if (this.state.modalInfo.upgradedPckg) {
-          total += 200
-      }
-      if (this.state.modalInfo.standardPckg) {
-          total += 100
-      }
-      if (this.state.modalInfo.aeration) {
-          total += 50
-      }
-      if (this.state.modalInfo.reseeding) {
-          total += 50
-      }
-      if (this.state.modalInfo.trimming) {
-          total += 50
-      }
-      if (this.state.modalInfo.pineNeedles) {
-          total += 50
-      }
-      if (this.state.modalInfo.leafRemoval) {
-          total += 50
-      }
-      if (this.state.modalInfo.pesticide) {
-          total += 50
-      }
-      if (this.state.modalInfo.topiary) {
-          total += 50
-      }
-      if (this.state.modalInfo.pruning) {
-          total += 50
-      }
-      if (this.state.modalInfo.soil) {
-          total += 50
-      }
-      if (this.state.modalInfo.mulch) {
-          total += 50
-      }
-
-      this.setState({
-        modalInfo:{
-          ...this.state.modalInfo,
-          total: total
         }
-          
+        if (this.state.modalInfo.upgradedPckg) {
+          total += 200
+        }
+        if (this.state.modalInfo.standardPckg) {
+          total += 100
+        }
+        if (this.state.modalInfo.aeration) {
+          total += 50
+        }
+        if (this.state.modalInfo.reseeding) {
+          total += 50
+        }
+        if (this.state.modalInfo.trimming) {
+          total += 50
+        }
+        if (this.state.modalInfo.pineNeedles) {
+          total += 50
+        }
+        if (this.state.modalInfo.leafRemoval) {
+          total += 50
+        }
+        if (this.state.modalInfo.pesticide) {
+          total += 50
+        }
+        if (this.state.modalInfo.topiary) {
+          total += 50
+        }
+        if (this.state.modalInfo.pruning) {
+          total += 50
+        }
+        if (this.state.modalInfo.soil) {
+          total += 50
+        }
+        if (this.state.modalInfo.mulch) {
+          total += 50
+        }
+        this.setState({
+          modalInfo: {
+            ...this.state.modalInfo,
+            total: total
+          }
+        });
+        console.log(total);
       });
-      console.log(total);
-  });
-
   }
+
   closeModal = () => {
     this.setState({
       calendarInfo: {
@@ -168,10 +168,10 @@ class App extends Component {
           <Switch>
             <Route path='/login' component={Login} />
             <Route path='/register' component={(props) =>
-            <Register
-            {...props}
-             getfirstName = {this.state.getfirstName}
-            />}  />
+              <Register
+                {...props}
+                getfirstName={this.state.getfirstName}
+              />} />
             <PrivateRoute path='/secret' component={Secret} />
             <Route exact path='/Scheduling' component={(props) =>
               <Scheduling
@@ -181,18 +181,21 @@ class App extends Component {
                 closeModal={this.closeModal}
                 handleModalUpdate={this.handleModalUpdate}
                 {...this.state.modalInfo}
-            /> } />
+              />} />
             <Route exact path='/ClientHome' component={ClientHome} />
-            <Route exact path='/Checkout' component={(props) =>
-              <Checkout 
-              {...props}
-              {...this.state.modalInfo}
-              calendarInfo = {this.state.calendarInfo} />}
-              />
+            <Route path = '/paymentInfo' component= {PaymentInfo} />
+            <Route path='/Confirmation' component={Confirmation} />
+            <Route exact path='/About' component={About} />
+             <Route exact path='/Checkout' component={(props) =>
+              <Checkout
+                {...props}
+                {...this.state.modalInfo}
+                calendarInfo={this.state.calendarInfo} />}
+            />
             <Route exact path='/' component={Home} />
             <Route component={NotFound} />
           </Switch>
-          
+          <Footer />
         </div>
       </AuthContext.Provider>
     );

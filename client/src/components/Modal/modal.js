@@ -17,11 +17,13 @@ class Modal extends Component {
         console.log(this.props)
         return (
             <div className="App">
+
                 <div className="col-lg" >
                     <h2 className="h2-responsive product-name" >
                         <strong >June Special: Individual Treatments Only $50!</strong>
                     </h2>
                 </div>
+                
                 <div className="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true" >
                     <div className="card">
 

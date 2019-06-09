@@ -5,14 +5,28 @@ body{
   background-attachment: fixed;
   background-position: center center;
 }
-h3 {
+.h1, h3, .info {
+  text-align: center;
+  margin: 60px;
+  color: black;
+  background-color: white;
+  opacity: 0.83;
   font-style: italic;
+  border:black;
+}
+
+.info{
+color: black;
+
 }
 
 .card-body{
   padding: 1.85rem;
+  background-color: white;
+  color: black;
   
 }
+
 
 .col-sm-7{
   margin: 0px 300px 0px;
@@ -20,7 +34,7 @@ h3 {
 
 .card-review{
   width: 600px;
-  height: 400px;
+  height: 300px;
 }
 
   #form{
@@ -28,31 +42,6 @@ h3 {
     color: black;
   }
 
-
-  .grass1{
-    margin-left: 30px;
-    height: 320px;
-  }
-
-  .grass2{
-    margin-left: 40px;
-    height: 320px;
-  }
-
-  .grass3{
-    margin-left: 40px;
-    height: 320px;
-  }
-
-  .grass4{
-    margin-left: 40px;
-    height: 320px;
-  }
-
-.grass5{
-margin-left: 160px;
-height: 300px;
-}
 .jumbotron {
   text-align: center;
   height: 350px;
@@ -61,35 +50,11 @@ height: 300px;
   /* color: rgb(15, 109, 22); */
    color: #303437;
   font-family: 'Source Sans Pro' 900;
-  opacity: 0.9;
+  opacity: 1.0;
 }
 
 .reviews {
   justify-content: center;
-}
-
-@media only screen and (max-width: 678px) {
-  .grass5 {
-    margin-left: 0px;
-    height: 300px;
-  }
-  .imgReviewer {
-    visibility: hidden;
-    height: 0px;
-    width: 0px;
-  }
-  h4 {
-    font-size: 15px;
-  }
-  .smallReview {
-    width: 500px;
-  }
-  .carousel-inner {
-    width: 400px;
-  }
-  .img-responsive {
-    width: 490px;
-  }
 }
 /* 
 @media screen and (max-width: 980px){
