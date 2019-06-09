@@ -31,12 +31,21 @@ h3 {
 
 
   .grass1{
-    margin-left: 220px;
+    margin-left: 5px;
   }
 
   .grass2{
-    margin-left: 220px;
+    margin-left: 10px;
   }
+
+  .grass3{
+    margin-left: 10px;
+  }
+
+  .grass4{
+    margin-left: 10px
+  }
+
 .jumbotron {
   text-align: center;
   height: 350px;

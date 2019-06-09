@@ -2,8 +2,10 @@ import React from 'react';
 import ItemsCarousel from 'react-items-carousel';
 import range from 'lodash/range';
 // import { url } from 'inspector';
-import image1 from '../../cssPages/ImageGallery/img1.png';
-import image2 from '../../cssPages/ImageGallery/img2.png';
+import image1 from '../../cssPages/ImageGallery/trimming.png';
+import image2 from '../../cssPages/ImageGallery/pineneedles.png';
+import image3 from '../../cssPages/ImageGallery/aeration.png';
+import image4 from '../../cssPages/ImageGallery/reseeding.png';
 
 
 
@@ -83,9 +85,12 @@ export default class Test extends React.Component {
         </ItemsCarousel>
 
         {/* -------------------------------------------------------------------------------------------- */}
-        <img src={image1} className="grass1" alt="grass" style={{ height: 550 }} />
-        <img src={image2} className="grass2" alt="grass" style={{ height: 550 }} />
+        <img src={image1} className="grass1" alt="grass" style={{ height: 350 }} />
+        <img src={image2} className="grass2" alt="grass" style={{ height: 350 }} />
+        <img src={image3} className="grass3" alt="grass" style={{ height: 350 }} />
+        <img src={image4} className="grass4" alt="grass" style={{ height: 350 }} />
         <br />
+        <br></br>
         <div className="row">
           <div className="col-2"></div>
           <div className="col-8 flex-center">
