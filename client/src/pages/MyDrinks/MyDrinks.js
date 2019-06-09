@@ -85,6 +85,8 @@ class MYDrinks extends Component {
             <>
               <div className="container"><div className="row no-gutters"> <div className="col-1" style={xbutton}> <FormBtn className="deletebtn" onClick={() => this.deleteDrinks(drink._id)}><span aria-hidden="true">&times;</span></FormBtn>
               </div><div className="col-11">
+              <div>
+                <h2 className='pages-header'>Your Creations!</h2>
                 <div className="card-drinks mb-3 container">
                   <div className="row no-gutters">
                     <div className="col-md-3">
@@ -102,10 +104,13 @@ class MYDrinks extends Component {
                   </div>
                 </div>
                 </div> </div> </div>
+                </div>
             </>
               )
             })}
       </div>
+       
+    
           );
         }
 }

@@ -53,7 +53,7 @@ class Create extends Component {
     }
 
     return (
-      
+      <>
       <div className='card-create mb-3 container'>
           <div className='row mb-3'>
             <div className='col-md-5'>
@@ -157,7 +157,7 @@ class Create extends Component {
             </div>
           </div>
         </div>
-
+</>
     );
   }
 }

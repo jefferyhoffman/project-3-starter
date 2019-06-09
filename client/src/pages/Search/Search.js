@@ -39,17 +39,39 @@ class Search extends Component {
   render() {
 
     return (
-      <div>
-        <div className="container">
-          <div class="card border-success mb-3">
-            <div class="card-header bg-transparent border-success">SEARCH YOUR DRINK</div>
-            <div class="card-body text-success">
-              <Input name="name" onChange={this.handleInputChange} value={this.state.name} type="search" className="form-control mr-sm-2" id="exampleInputsearch1" aria-describedby="searchHelp" placeholder="Old.." />
-              <FormBtn className="my-2 my-sm-0" onClick={this.handleSubmit}>Submit Drink</FormBtn>
+      <>
+        <div>
+          <div className="container-search">
+            <h2 className='pages-header'>Look up a drink!</h2>
+            <br/>
+            <br/>
+            <div className='row'>
+              <div className='col-4'></div>
+              <div className='col-4'>
+                <form class="form-inline my-2 my-lg-0">
+                  <div className="form-group">
+                    <Input name="name" onChange={this.handleInputChange} value={this.state.name} type="search" className="form-control mr-sm-2" id="exampleInputsearch1" aria-describedby="searchHelp" placeholder="Old.." />
+                    <FormBtn className="my-2 my-sm-0" onClick={this.handleSubmit}>Submit Drink</FormBtn>
+                  </div>
+                </form>
+              </div>
+              <div className='col-4'></div>
+              <br />
+              <br />
+              <br />
+              <br />
+              {/* <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br /> */}
             </div>
-             {this.state.drinks.map(drink => {
-              return (
-                <>
+            <div className='row'>
+              {this.state.drinks.map(drink => {
+                return (
                   <div className="card-drinks mb-3 container">
                     <div className="row no-gutters">
                       <div className="col-md-3">
@@ -66,25 +88,12 @@ class Search extends Component {
                       </div>
                     </div>
                   </div>
-                </>
-              )
-            })}
+                )
+              })}
             </div>
           </div>
-          <br />
-          <br />
-          <br />
-          <form class="form-inline my-2 my-lg-0">
-            <div className="form-group">
-            </div>
-          </form>
-          <br />
-          <br />
-          <br />
-          <br />
-        </div>
-   
-
+        </div >
+      </>
     );
   }
 }
