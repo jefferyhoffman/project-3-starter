@@ -14,7 +14,6 @@ h3 {
   
 }
 
-
 .col-sm-7{
   margin: 0px 300px 0px;
 }
@@ -31,27 +30,27 @@ h3 {
 
 
   .grass1{
-    margin-left: 5px;
-    height: 300px;
+    margin-left: 30px;
+    height: 320px;
   }
 
   .grass2{
-    margin-left: 10px;
-    height: 300px;
+    margin-left: 40px;
+    height: 320px;
   }
 
   .grass3{
-    margin-left: 10px;
-    height: 300px;
+    margin-left: 40px;
+    height: 320px;
   }
 
   .grass4{
-    margin-left: 10px;
-    height: 300px;
+    margin-left: 40px;
+    height: 320px;
   }
 
 .grass5{
-margin-left: 60px;
+margin-left: 160px;
 height: 300px;
 }
 .jumbotron {
@@ -62,7 +61,7 @@ height: 300px;
   /* color: rgb(15, 109, 22); */
    color: #303437;
   font-family: 'Source Sans Pro' 900;
-  opacity: 0.83;
+  opacity: 0.9;
 }
 
 .reviews {
@@ -72,7 +71,7 @@ height: 300px;
 @media only screen and (max-width: 678px) {
   .grass5 {
     margin-left: 0px;
-    height: 200px;
+    height: 300px;
   }
   .imgReviewer {
     visibility: hidden;
