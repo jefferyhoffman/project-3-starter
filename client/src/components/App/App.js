@@ -189,6 +189,7 @@ class App extends Component {
             />
             <Route exact path='/' component={Home} />
             <Route component={NotFound} />
+            <Route path = '/Confirmation' component = {Confirmation}/>
           </Switch>
           
         </div>
