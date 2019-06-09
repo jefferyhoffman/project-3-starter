@@ -88,9 +88,9 @@ class PaymentInfo extends Component {
                                             <input type="text" id="zip" name="zip" placeholder="10001" />
                                         </div>
                                         {/* <Link className='btn btn-outline-secondary waves-effect' style={{ margin: '40px', borderRadius: '4px' }} to ="../pages/ClientHome" onClick={this.handleCheckout}>Confirm order</Link>                                    </div> */}
-                                        <Link to = "/Confirmation">
+                                        {/* <Link to = "/Confirmation">
                                         <button style={{ marginLeft: '35%', borderRadius: '4px' }} onClick={this.handleCheckout}>Confirm order</button>
-                                        </Link>
+                                        </Link> */}
                                     </div>
                                 </div>
                             </form>
@@ -105,6 +105,7 @@ class PaymentInfo extends Component {
 
                             <label for="cname" style={{ textAlign: 'left' }}>Name on Card</label>
                             <input type="text" id="cname" name="cardname" placeholder="John More Doe" />
+                            <br />
                             <label for="ccnum">Credit Card Number</label>
                             <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" />
                             <br />
@@ -124,7 +125,9 @@ class PaymentInfo extends Component {
                             </label> */}
                                 {/* <input type="submit" value="Keep Shopping" class="btn" id="keepshopping" /> */}
                             </div>
-                            <input type="submit" value="Confirm and Pay Now" href = "/Confirmation" class="btn" style={{ marginLeft: '25%'}}/>
+                            {/* <input type="submit" value="Confirm and Pay Now" href = "/Confirmation" class="btn" style={{ marginLeft: '25%'}}/> */}
+                            <Link to = "/Confirmation">
+                            <button style={{ marginLeft: '35%', borderRadius: '4px', height: '40px' }} onClick={this.handleCheckout}>Confirm order</button></Link>
                         </div>
                     </div>
                 </div>
