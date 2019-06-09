@@ -67,6 +67,13 @@ class Login extends Component {
             </div>
             <div className='col-sm-3'></div>
           </div>}
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
       </div>
     );
   }

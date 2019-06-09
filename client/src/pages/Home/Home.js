@@ -6,16 +6,16 @@ import image1 from '../../cssPages/ImageGallery/trimming.png';
 import image2 from '../../cssPages/ImageGallery/pineneedles.png';
 import image3 from '../../cssPages/ImageGallery/aeration.png';
 import image4 from '../../cssPages/ImageGallery/reseeding.png';
-import image5 from '../../cssPages/ImageGallery/text.png';
-
+import image5 from '../../cssPages/ImageGallery/banner.png';
 
 
 export default class Test extends React.Component {
   state = {
     images: [
-      "https://placeimg.com/380/200/nature",
-      "https://images.unsplash.com/photo-1420593248178-d88870618ca0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80",
-      "https://images.unsplash.com/photo-1500622944204-b135684e99fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2201&q=80"
+      '../../cssPages/ImageGallery/trimming.png',
+      '../../cssPages/ImageGallery/pineneedles.png',
+      '../../cssPages/ImageGallery/aeration.png',
+      '../../cssPages/ImageGallery/reseeding.png'
     ]
   }
 
