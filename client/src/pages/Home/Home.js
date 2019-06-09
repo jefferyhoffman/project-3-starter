@@ -125,9 +125,9 @@ export default class Test extends React.Component {
                         <div className='card-review' style={{ border: 'none' }}>
                           <img src="./images/waynesworld.jpg" className="imgReviewer" style={{ width: '160px', float: 'left', marginRight: '15px', marginBottom: '100px'}}></img>
                           <h4 style={{ textAlign: 'left' }}>Greenscapes sure knows what
-                      <br />they're doing! They always get the
-                      <br />job done and never leave my yard lookin' a mess. Like I tell all my
-                      <br />neighbors, be sure to call
+                      <br />they're doing! They always get 
+                      <br />the job done and never leave my yard lookin' a mess. Like I tell all 
+                      <br />my neighbors, be sure to call
                       <br />Greenscapes if your yard needs a 
                       <br />good mowin'!-Dylbob, Hickory
                       </h4>
@@ -155,10 +155,9 @@ export default class Test extends React.Component {
                         <br />things himself I have to admit,
                         <br />Greenscapes sure does a
                         <br />better job than I ever did. Even
-                        <br />the Mrs.'s says so! I love not having to 
-                        <br />worry about keeping my yard looking 
-                        <br />its best. Thanks Greenscapes!
-                        <br />-Gerard, Dilworth
+                        <br />the Mrs.'s says so! I love not 
+                        <br />having to worry about keeping 
+                        <br />my yard looking its best. Thanks Greenscapes! -Gerard, Dilworth
                       </h4>
                         </div>
                       </div>
@@ -183,8 +182,8 @@ export default class Test extends React.Component {
     <br />in the way of maintaining my
     <br />social media presence. One call
     <br />to Greenscapes and now my
-    <br />yard has never looked better. I can focus on more important things like getting insta-followers instead!
-    <br />-Tayler, South Charlotte</h4>
+    <br />yard has never looked better. I 
+    <br />can focus on more important things like getting insta-followers instead!-Tayler, South Charlotte</h4>
                         </div>
                       </div>
                     </div>
