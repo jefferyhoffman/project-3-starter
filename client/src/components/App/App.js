@@ -14,6 +14,7 @@ import NotFound from '../../pages/NotFound/NotFound';
 import Checkout from '../../pages/Checkout/Checkout';
 import ClientHome from '../../pages/ClientHome/ClientHome';
 import Confirmation from '../../pages/Confirmation/Confirmation';
+import About from '../../pages/About/About';
 import PaymentInfo from '../../components/PaymentInfo/PaymentInfo';
 import Footer from "../../components/Footer/Footer";
 import './App.css';
@@ -184,6 +185,7 @@ class App extends Component {
             <Route exact path='/ClientHome' component={ClientHome} />
             <Route path = '/paymentInfo' component= {PaymentInfo} />
             <Route path='/Confirmation' component={Confirmation} />
+            <Route exact path='/About' component={About} />
              <Route exact path='/Checkout' component={(props) =>
               <Checkout
                 {...props}
