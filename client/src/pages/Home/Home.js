@@ -5,8 +5,13 @@ import range from 'lodash/range';
 import image1 from '../../cssPages/ImageGallery/trimming.png';
 import image2 from '../../cssPages/ImageGallery/pineneedles.png';
 import image3 from '../../cssPages/ImageGallery/aeration.png';
-import image4 from '../../cssPages/ImageGallery/reseeding.png';
+import image4 from '../../cssPages/ImageGallery/removal.png';
 import image5 from '../../cssPages/ImageGallery/banner.png';
+import image6 from '../../cssPages/ImageGallery/topiary.png';
+import image7 from '../../cssPages/ImageGallery/reseeding.png';
+import image8 from '../../cssPages/ImageGallery/pruning.png';
+import image9 from '../../cssPages/ImageGallery/offer.png';
+
 
 
 export default class Test extends React.Component {
@@ -15,7 +20,7 @@ export default class Test extends React.Component {
       '../../cssPages/ImageGallery/trimming.png',
       '../../cssPages/ImageGallery/pineneedles.png',
       '../../cssPages/ImageGallery/aeration.png',
-      '../../cssPages/ImageGallery/reseeding.png'
+      '../../cssPages/ImageGallery/removal.png'
     ]
   }
 
@@ -47,9 +52,9 @@ export default class Test extends React.Component {
     return (
       <div>
         <div className="row">
-        <div className="col-12">
-        <img src={image5} className="grass5 img-fluid img-responsive" alt="grass" />
-        </div>
+          <div className="col-12">
+            <img src={image5} className="grass5 img-fluid img-responsive" alt="grass" />
+          </div>
         </div>
         <ItemsCarousel
           // Placeholder configurations
@@ -99,6 +104,11 @@ export default class Test extends React.Component {
         <img src={image3} className="grass3" alt="grass" />
         <img src={image4} className="grass4" alt="grass" />
         <br />
+        <img src={image6} className="grass6" alt="grass" />
+        <img src={image7} className="grass7" alt="grass" />
+        <img src={image8} className="grass8" alt="grass" />
+        <img src={image9} className="grass9" alt="grass" />
+        <br />
         <br></br>
         <div className="row">
           <div className="col-2"></div>
@@ -113,7 +123,7 @@ export default class Test extends React.Component {
                     <div className="carousel-inner">
                       <div className="carousel-item active">
                         <div className='card-review' style={{ border: 'none' }}>
-                          <img src="./images/waynesworld.jpg" className="imgReviewer" style={{ width: '160px', float: 'left', marginRight: '15px'}}></img>
+                          <img src="./images/waynesworld.jpg" className="imgReviewer" style={{ width: '160px', float: 'left', marginRight: '15px' }}></img>
                           <h4 style={{ textAlign: 'left' }}>Greenscapes sure knows what
                       <br />they're doing! They always get the
                       <br />job done and never leave my yard lookin' a mess.
@@ -142,12 +152,12 @@ export default class Test extends React.Component {
                       </div>
                       <div className="carousel-item">
                         <div className='card-review' style={{ border: 'none' }}>
-                          <img src="./images/maninfield.jpg" className="imgReviewer" style={{ width: '160px', float: 'left', marginRight: '15px'}}></img>
+                          <img src="./images/maninfield.jpg" className="imgReviewer" style={{ width: '160px', float: 'left', marginRight: '15px' }}></img>
                           <h4 style={{ textAlign: 'left' }}>As a man who loves to do
                         <br />things himself I have to admit,
                         <br />Greenscapes sure does a
                         <br />better job than I ever did. Even
-                        <br />the Mrs.'s says so! Love not 
+                        <br />the Mrs.'s says so! Love not
                         <br />having to worry about
                         <br />keeping my yard looking it's best.
                         <br />Thanks Greenscapes!
@@ -157,7 +167,7 @@ export default class Test extends React.Component {
                       </div>
                       <div className="carousel-item">
                         <div className='card-review' style={{ border: 'none' }}>
-                          <img src="./images/barneyfife.jpg" className="imgReviewer" style={{ width: '150px', float: 'left', marginRight: '15px'}}></img>
+                          <img src="./images/barneyfife.jpg" className="imgReviewer" style={{ width: '150px', float: 'left', marginRight: '15px' }}></img>
                           <h4 style={{ textAlign: 'left' }}>10/10 would recommend.
                           <br />Old man Pete next door is
                           <br />always asking why my yard
