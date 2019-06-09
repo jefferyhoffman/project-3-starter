@@ -45,22 +45,22 @@ class PaymentInfo extends Component {
                             <h2 className="card-title" style={{ textAlign: 'center' }}>Checkout</h2>
                             <form onSubmit = {this.handleCheckout}>
                                 <div className="col-50" style={{ textAlign: 'left' }}>
-                                    <label for="fname"><i className="fa fa-user"></i> Full Name</label>
+                                    <label for="fname"> Full Name</label>
                                     <input
                                         type="text"
                                         id="fname"
                                         name="firstname"
                                         placeholder=
                                         "John M. Doe" />
-                                    <div className='input-group mb-3'>
+                                    <div className='input-group mb-1'>
                                         <div className="input-group-prepend">
-                                            <span className="input-group-text">Email</span>
+                                            <span className="">Email</span>
                                         </div>
                                         <input
-                                            className='form-control'
+                                            
                                             type="text"
-                                            id="email"
-                                            name="email"
+                                            // id="email"
+                                            // name="email"
                                             placeholder="john@example.com" />
                                     </div>
                                     <label for="adr" style={{ textAlign: 'left' }}><i className="fa fa-address-card-o"></i> Address</label>
