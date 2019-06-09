@@ -104,7 +104,7 @@ export default class Test extends React.Component {
           <div className="col-2"></div>
           <div className="col-8 flex-center">
             <div className="jumbotron pt-3 smallReview">
-              <h2>Check Out Some of Our Reviews:</h2>
+              <h2>Check Out Some of Our Reviews</h2>
               <br />
               <div className="row">
                 <div className="col-2"></div>
@@ -113,21 +113,19 @@ export default class Test extends React.Component {
                     <div className="carousel-inner">
                       <div className="carousel-item active">
                         <div className='card-review' style={{ border: 'none' }}>
-                          <img src="./images/waynesworld.jpg" className="imgReviewer" style={{ width: '160px', float: 'left', marginRight: '15px'}}></img>
+                          <img src="./images/waynesworld.jpg" className="imgReviewer" style={{ width: '160px', float: 'left', marginRight: '15px', marginBottom: '100px'}}></img>
                           <h4 style={{ textAlign: 'left' }}>Greenscapes sure knows what
                       <br />they're doing! They always get the
-                      <br />job done and never leave my yard lookin' a mess.
-                      <br /> Like I tell all my
+                      <br />job done and never leave my yard lookin' a mess. Like I tell all my
                       <br />neighbors, be sure to call
-                      <br />Greenscapes if your yard needs a
-                      <br />good mowin'!
-                      <br />-Dylbob, Hickory
+                      <br />Greenscapes if your yard needs a 
+                      <br />good mowin'!-Dylbob, Hickory
                       </h4>
                         </div>
                       </div>
                       <div className="carousel-item">
                         <div className='card-review' style={{ border: 'none' }}>
-                          <img src="./images/Dougthepug.jpg" className="imgReviewer" style={{ width: '160px', float: 'left', marginRight: '15px' }}></img>
+                          <img src="./images/Dougthepug.jpg" className="imgReviewer" style={{ width: '160px', float: 'left', marginRight: '15px', marginBottom: '100px' }}></img>
                           <h4 style={{ textAlign: 'left' }}>
                             Ever since I started using
                           <br />Greenscapes my yard has never
@@ -142,27 +140,26 @@ export default class Test extends React.Component {
                       </div>
                       <div className="carousel-item">
                         <div className='card-review' style={{ border: 'none' }}>
-                          <img src="./images/maninfield.jpg" className="imgReviewer" style={{ width: '160px', float: 'left', marginRight: '15px'}}></img>
+                          <img src="./images/maninfield.jpg" className="imgReviewer" style={{ width: '160px', float: 'left', marginRight: '15px', marginBottom: '100px'}}></img>
                           <h4 style={{ textAlign: 'left' }}>As a man who loves to do
                         <br />things himself I have to admit,
                         <br />Greenscapes sure does a
                         <br />better job than I ever did. Even
-                        <br />the Mrs.'s says so! Love not 
-                        <br />having to worry about
-                        <br />keeping my yard looking it's best.
-                        <br />Thanks Greenscapes!
-                        <br />-Gerard, Dillworth
+                        <br />the Mrs.'s says so! I love not having to 
+                        <br />worry about keeping my yard looking 
+                        <br />its best. Thanks Greenscapes!
+                        <br />-Gerard, Dilworth
                       </h4>
                         </div>
                       </div>
                       <div className="carousel-item">
                         <div className='card-review' style={{ border: 'none' }}>
-                          <img src="./images/barneyfife.jpg" className="imgReviewer" style={{ width: '150px', float: 'left', marginRight: '15px'}}></img>
+                          <img src="./images/barneyfife.jpg" className="imgReviewer" style={{ width: '150px', float: 'left', marginRight: '15px', marginBottom: '100px'}}></img>
                           <h4 style={{ textAlign: 'left' }}>10/10 would recommend.
                           <br />Old man Pete next door is
                           <br />always asking why my yard
                           <br />looks so good and I keep
-                          <br />telling him, Call Greenscapes!
+                          <br />telling him, call Greenscapes!
                           <br />they sure know how to cut
                           <br />lawns and stuff!
                           <br />-Ronnie, Charlotte
@@ -171,14 +168,12 @@ export default class Test extends React.Component {
                       </div>
                       <div className="carousel-item">
                         <div className='card-review' style={{ border: 'none' }}>
-                          <img src="./images/instamodel.jpg" className="imgReviewer" style={{ width: '160px', float: 'left', marginRight: '15px' }}></img>
+                          <img src="./images/instamodel.jpg" className="imgReviewer" style={{ width: '160px', float: 'left', marginRight: '15px', marginBottom: '100px' }}></img>
                           <h4 style={{ textAlign: 'left' }}>My lawn was really getting
     <br />in the way of maintaining my
     <br />social media presence. One call
     <br />to Greenscapes and now my
-    <br />yard has never looked better. I can focus on more
-    <br /> important things like getting insta-followers
-    <br />instead!
+    <br />yard has never looked better. I can focus on more important things like getting insta-followers instead!
     <br />-Tayler, South Charlotte</h4>
                         </div>
                       </div>
