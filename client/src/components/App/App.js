@@ -16,6 +16,7 @@ import Home from '../../pages/Home/Home';
 import NotFound from '../../pages/NotFound/NotFound';
 import CheckoutForm from '../../components/Checkout/CheckoutForm';
 import Cart from "./Cart.js";
+import ThankYou from "../../pages/ThankYou/ThankYou";
 import './App.css';
 
 class App extends Component {
@@ -107,9 +108,11 @@ class App extends Component {
             <Route exact path='/login' component={Login} />
             {/* <Route exact path='/LoginForm' component={LoginForm} /> */}
             <Route exact path='/' component={this.state.cart} />
+            <Route exact path='/thankyou' component={ThankYou} />
             <Route exact path='/collections' component={(props) => <Collections {...props} addToCart={this.addToCart} />} />
             <Route exact path='/cart' component={(props) => <Cart {...props} userCart={this.state.cart} />}/>
 ?           <Route component={NotFound} />
+            
       
             </Switch>
             <Footer />

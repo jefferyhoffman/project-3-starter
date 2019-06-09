@@ -1,0 +1,27 @@
+.containerThankYou {
+    height: 640px;
+    background: url("./elegantWhite.jpg");
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    
+}
+#thankYouP {
+    position: relative;
+    top: 38%;
+    color: rgb(212,175,55);
+    font-size: 2.4rem;
+    height: 200px;
+    /* border: 2px solid black; */
+    left: 26%;
+    width: 50%;
+    font-weight: 400;
+    text-shadow: 1px 1px 4px rgb(148, 148, 148);
+}
+
+@media screen and (max-width: 688px) {
+    #thankYouP {
+        font-size: 1.8rem;
+    } 
+}
