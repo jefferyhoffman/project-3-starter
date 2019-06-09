@@ -1,0 +1,53 @@
+.Cart {
+    height: 800px;
+    
+}
+.containerCheckout {
+    height: 1200px;
+}
+
+#checkoutCard {
+    width: 60% !important;
+    background: rgb(255, 255, 255) !important;
+    position: relative;
+    left: 20%;
+    height: 650px !important;
+    overflow: scroll;
+    border-radius: 0;
+    /* border: none; */
+}
+/* #checkoutBtn {
+    position: relative;
+    right: 200px;
+} */
+
+.checkoutHeader {
+    color: rgb(60, 60, 60);
+    font-weight: 600;
+    position: relative;
+    left: 0%;
+    margin: 60px 0 160px 0;
+    
+}
+
+#checkoutBtn2 {
+    height: 30px;
+    width: 100px;
+    font-size: 12px;
+    position: relative;
+    left: -0%;
+    top: 60px ;
+    background: rgb(35, 120, 194);
+    border: 1px solid black;
+    margin: 10px;
+}
+.input-group {
+    height: 20px;
+    margin-bottom: 2rem !important;
+}
+.input-group-text {
+    font-size: 12px;
+}
+.paymentHeader {
+    margin: 100px 0 40px 0;
+}

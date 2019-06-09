@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./Checkout.css";
 // import Collections, {Component } from 'collections'
 // import ProductCard, { Component } from 'productCard'
 // import "/.Checkout.css"
@@ -43,13 +44,15 @@ class CheckoutForm extends Component {
 
         return (
             <div className='Cart'>
-                <div className='card'>
+                <div id="checkoutCard" className='card'>
                     <form className='CheckoutForm' onSubmit={this.handleSubmit}>
                         <div className='card-body'>
-                            <div className="container">
+                            <div className="containerCheckout">
                                 {/* <div className="row"> */}
+                                <div className="checkoutHeader">Please enter your information.</div>
                                 <div className="col-5">
                                     <div className='input-group mb-3'>
+                                        
                                         <div className="input-group-prepend">
                                             <span className="input-group-text">First Name</span>
                                         </div>
@@ -87,7 +90,7 @@ class CheckoutForm extends Component {
                                 <div className="col-10">
                                     <div className='input-group mb-3'>
                                         <div className="input-group-prepend">
-                                            <span className="input-group-text">email</span>
+                                            <span className="input-group-text">Email</span>
                                         </div>
                                         <input
                                             className='form-control'
@@ -177,7 +180,7 @@ class CheckoutForm extends Component {
                                     </div>
                                 </div>
 
-                                <div className="col-2">
+                                <div className="col-4">
                                     <div className='input-group mb-3'>
                                         <div className="input-group-prepend">
                                             <span className="input-group-text">Zip</span>
@@ -195,8 +198,8 @@ class CheckoutForm extends Component {
                                 </div>
                                 {/* </div> */}
 
-                                <div>
-                                    <h4>Payment</h4>
+                                <div className="paymentHeader">
+                                    <h5>Payment</h5>
                                     <p>Accepted Cards</p>
                                 </div>
 
@@ -238,7 +241,7 @@ class CheckoutForm extends Component {
                                 {/* </div> */}
 
                                 {/* <div class="row"> */}
-                                <div className="col-3">
+                                <div className="col-5">
                                     <div className='input-group mb-3'>
                                         <div className="input-group-prepend">
                                             <span className="input-group-text">Exp Date (MM/YY)</span>
@@ -255,7 +258,7 @@ class CheckoutForm extends Component {
                                     </div>
                                 </div>
 
-                                <div className="col-2">
+                                <div className="col-3">
                                     <div className='input-group mb-3'>
                                         <div className="input-group-prepend">
                                             <span className="input-group-text">CVV</span>
@@ -275,16 +278,16 @@ class CheckoutForm extends Component {
                                 </div>
                                 {/* </div> */}
 
-                                <div>
-                                    <button className='btn btn-primary' type='submit'>Checkout</button>
-                                </div>
+                                
+                                    <button id="checkoutBtn2" className='btn btn-primary' type='submit'>Checkout</button>
+                                
 
                             </div>
 
-                            <h6>Your Shopping Cart</h6>
+                            {/* <h6>Your Shopping Cart</h6> */}
                             <div className="col-12">
                                 <div className="container">
-                                    <span className="shopping-cart">Shopping Cart</span>
+                                    <span className="shopping-cart">Your Cart</span>
 
                                     <span> {this.itemcount} </span>
 

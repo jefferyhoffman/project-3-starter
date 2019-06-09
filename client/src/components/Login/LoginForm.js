@@ -61,10 +61,6 @@ class LoginForm extends Component {
              
              <p>Don't have an account?<br /> <Link to="/register">Register </Link>to create a profile account.</p>
               <button className='btn btn-secondary sub-button' type='submit'>Login</button>
-              {/* <button className='btn btn-primary lbutton' type='submit'>Login</button>
-              <Link to="/register" onClick={this.toggleCollapse}>
-              <button className='btn btn-primary lbutton' type='submit'>Create a new account</button>
-              </Link> */}
             </form>
           </div>
         </div>
@@ -75,6 +71,3 @@ class LoginForm extends Component {
 }
 
 export default LoginForm;
-            
-              // <p>Don't have an account?<br /> <Link to="/register">Register </Link>to create a profile account.</p>
-              // <button className='btn btn-primary' type='submit'>Login</button>

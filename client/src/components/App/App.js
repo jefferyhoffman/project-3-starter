@@ -11,7 +11,7 @@ import Login from '../Login/Login';
 // import LoginForm from '../Login/LoginForm';
 import UpdateProfile from '../../pages/UpdateProfile/UpdateProfile';
 import UserProfile from '../../pages/UserProfile/UserProfile';
-import Register from '../../components/Register/register';
+import Register from '../Register/register';
 import Home from '../../pages/Home/Home';
 import NotFound from '../../pages/NotFound/NotFound';
 import CheckoutForm from '../../components/Checkout/CheckoutForm';
