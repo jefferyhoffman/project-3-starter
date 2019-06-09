@@ -52,15 +52,15 @@ class PaymentInfo extends Component {
                                         name="firstname"
                                         placeholder=
                                         "John M. Doe" />
-                                    <div className='input-group mb-3'>
+                                    <div className='input-group mb-1'>
                                         <div className="input-group-prepend">
-                                            <span className="input-group-text">Email</span>
+                                            <span className="">Email</span>
                                         </div>
                                         <input
-                                            className='form-control'
+                                            
                                             type="text"
-                                            id="email"
-                                            name="email"
+                                            // id="email"
+                                            // name="email"
                                             placeholder="john@example.com" />
                                     </div>
                                     <label for="adr" style={{ textAlign: 'left' }}><i className="fa fa-address-card-o"></i> Address</label>
