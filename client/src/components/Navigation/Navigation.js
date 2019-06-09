@@ -61,7 +61,7 @@ class Navigation extends Component {
                 <>
                   <li className='nav-item'><Link className='nav-link text-success font-weight-bold' to='/login' onClick={this.toggleCollapse}>Login</Link></li>
                   <li className='nav-item'><Link className='nav-link text-primary font-weight-bold' to='/register' onClick={this.toggleCollapse}>Register</Link></li>
-                  <li className='nav-item'><Link className='nav-link text-primary font-weight-bold' to='/About' onClick={this.toggleCollapse}>About</Link></li>
+                  <li className='nav-item'><Link className='nav-link text-warning font-weight-bold' to='/About' onClick={this.toggleCollapse}>About</Link></li>
                   </>}
             </ul>
           </div>
