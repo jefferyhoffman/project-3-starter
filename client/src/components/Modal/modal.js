@@ -49,7 +49,7 @@ class Modal extends Component {
                                     You'll be the envy of all the neighbors with our premium package.
                                     This full coverage lawn care coverage package includes aeration, mowing, seeding, weed
                                     prevention,
-                                    resoding, tree/hedge trimming and fall leaf removal.
+                                    resodding, tree/hedge trimming and fall leaf removal.
                                     Spend your days enjoying your yard and let Greenscapes do the hard work for you!
                                     </div>
                             </div>
@@ -78,7 +78,7 @@ class Modal extends Component {
                             <div className="form-check mb-4">
                                 <input className="form-check-input" name="upgradedPckg" type="checkbox" id="radio-579" value="option2" checked={this.props.upgradedPckg} onChange={this.handleInputChange} />
                                 <label className="form-check-label" for="radio-579"></label>
-                                Enjoy our standard package but looking to do a little less work this summer? The upgraded
+                                Did you enjoy our standard package last year but looking to do a little less work this summer? The upgraded
                                 package
                                 includes all of the standard package benefits plus
                                 aeration and lawn seeding in the spring as well as full leaf removal in the fall.
