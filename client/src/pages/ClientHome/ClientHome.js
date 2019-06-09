@@ -5,7 +5,7 @@ import Modal from 'react-bootstrap4-modal';
 import AuthContext from '../../contexts/AuthContext';
 import API from '../../lib/API';
 import Moment from 'react-moment';
-import imageOne from '../../cssPages/images/doctor.jpg';
+import imageOne from '../../cssPages/ImageGallery/pineneedles.png';
 import imageTwo from '../../cssPages/ImageGallery/reseeding.png';
 import imageThree from '../../cssPages/ImageGallery/treepruning.png';
 
