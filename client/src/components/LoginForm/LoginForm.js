@@ -28,7 +28,8 @@ class LoginForm extends Component {
 
     return (
       <div className="card-loginform">
-        <div className="card-header-loginform"><h4>Sign in Drinkstation</h4><h4>And start exploring and creating!</h4></div>
+        <div className="card-header-loginform"><h2>Login</h2><h4>And start exploring and creating!</h4></div>
+
         <div className="card-body">
           <form className='LoginForm' onSubmit={this.handleSubmit}>
             <div className="form-group">
@@ -37,14 +38,14 @@ class LoginForm extends Component {
               </div>
               <div className="card-body">
                 <input
-                  className='form-control'
+                  className='form-control1'
                   id='email'
                   type='email'
                   name='email'
                   placeholder='email@provider.com'
                   value={email}
                   onChange={this.handleInputChange}
-                />  </div>
+                /> </div>
             </div>
             <div className="form-group">
               <div className="card-header-loginform">
@@ -59,13 +60,12 @@ class LoginForm extends Component {
                   placeholder='password'
                   value={password}
                   onChange={this.handleInputChange}
-                />  </div>
+                /></div>
             </div>
             <button className='btn btn-info btn-lg' type='submit'>Sign In</button>
             <br/>
             <br/>
-            <br/>
-            <Link to='/register' onClick={this.toggleCollapse}><h4>New to Drinkstation! Click here to Sign up!</h4></Link>
+            <Link to='/register' onClick={this.toggleCollapse}> Dont Have an Account? Sign Up </Link>
           </form>
         </div>
       </div>

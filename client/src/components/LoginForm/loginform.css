@@ -8,13 +8,11 @@
 
 .card-loginform {
     opacity: 0.5;
-    width: 700px;
-    height: 700px;
+    width: 500px;
+    height: 450px;
     background-color:black;
     top: 50%;
     left: 50%;
-    position: fixed;
-    transform: translate(-50%, -50%);
     box-sizing: border-box;
     padding: 70px 30px;
     color:white;
@@ -23,12 +21,10 @@
  {
     opacity: 0.5;
     width: 400px;
-    height: 400px;
+    height: 500px;
     background-color:black;
     top: 50%;
     left: 50%;
-    position: fixed;
-    transform: translate(-50%, -50%);
     box-sizing: border-box;
     padding: 70px 30px;
     color:white;
@@ -45,7 +41,7 @@
         color:white;
       }
 
-      .form-control {
+      .form-control1 {
         font-size: 10px;
         width: 100%;
         margin-bottom: 20px;
@@ -54,7 +50,8 @@
         background: transparent;
         outline: none;
         height: 40px;
-        color: white; }
+        color: white; 
+    }
       
 
         .form-control2 {

@@ -27,7 +27,7 @@ class RegisterForm extends Component {
 
     return (
       <div className='card-registerform'>
-        <div className="card-header-registerform"><h4>Sign Up Drinkstation</h4><h4>Make this your drink destination!</h4></div>
+        <div className="card-header-registerform"><h4>Sign Up</h4><h4>Make this your drink destination!</h4></div>
           <div className="card-body">
             <form className='LoginForm' onSubmit={this.handleSubmit}>
               {/* <div className='input-group mb-3'>
