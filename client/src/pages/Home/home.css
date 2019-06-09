@@ -27,25 +27,24 @@
 
 }
 
-.card-create{
+ .card-create{
     text-align: left;
     border: none;
-
 }
 
-/* .create-img-responsive{ */
-.create-img{
-    /* width: 100%;
-    max-width: 500px; */
-    margin-top:15px;
-    width: 500px;
+/* .create-img{ */
+.create-img-responsive{ 
+    width: 100%;
+    max-width: 500px;
+    /* margin-top:15px;
+    width: 500px; */
     height: auto; 
     box-shadow: 10px 10px 5px grey;
 }
 
 .card-body-create {
-    margin-left: 75px;
-}
+    /* margin-left: 75px; */
+} */
 
 .carousel-caption{
     margin-bottom: 10%;
@@ -114,3 +113,6 @@
     opacity: 0.4;
   }
 
+  .logoLink:hover{
+    color:white;
+  }

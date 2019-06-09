@@ -1,0 +1,37 @@
+.card-registerform 
+ {
+    opacity: 0.5;
+    width: 400px;
+    height: 500px;
+    background-color:black;
+    top: 50%;
+    left: 50%;
+    box-sizing: border-box;
+    padding: 70px 30px;
+    color:white;
+ }
+
+ .form-control3 {
+    font-size: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: white; 
+}
+  
+ .form-control4 {
+        font-size: 20px;
+        width: 100%;
+        margin-bottom: 20px;
+        border: none;
+        border-bottom: 1px solid #fff;
+        background: transparent;
+        outline: none;
+        height: 40px;
+        color: white; }
+      
+

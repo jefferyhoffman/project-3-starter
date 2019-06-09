@@ -87,7 +87,19 @@
   .flip-card-back {
     background: linear-gradient(to bottom, #eef2f3 0%, #8e9eab 100%);
     transform: rotateY(180deg);
+    color:black;
    font-size: 25px;
   }
+
+  .card-about{
+    border:none;
+    font-size: 20px;
+  }
+
+  .card-body-about{
+    padding-left:10%;
+  }
+
+
 
   
