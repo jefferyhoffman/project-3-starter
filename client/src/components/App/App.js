@@ -182,7 +182,7 @@ class App extends Component {
                 handleModalUpdate={this.handleModalUpdate}
                 {...this.state.modalInfo}
               />} />
-            <Route exact path='/ClientHome' component={ClientHome} />
+            <PrivateRoute exact path='/ClientHome' component={ClientHome} />
             <Route path = '/paymentInfo' component= {PaymentInfo} />
             <Route path='/Confirmation' component={Confirmation} />
             <Route exact path='/About' component={About} />

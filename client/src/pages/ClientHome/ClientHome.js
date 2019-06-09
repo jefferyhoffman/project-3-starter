@@ -250,13 +250,13 @@ class ClientHome extends Component {
           {/* Booking Card */}
           <div className="col-lg-4 sm-12 mainbutton">
             <div className="card text-center scheduleCard">
+            <Link className='nav-link pb-.5 pt-0' to='/scheduling' onClick={this.toggleCollapse}>
               <div className="card-body">
                 <h1 className="card-title"><i className="fas fa-calendar-plus"></i></h1>
-                <Link className='nav-link pb-.5 pt-0' to='/scheduling' onClick={this.toggleCollapse}>
                   <h5 className="card-subtitle text-muted">Booking</h5>
-                </Link>
                 <p className="card-text">Schedule a Service.</p>
               </div>
+              </Link>
             </div>
           </div>
 
