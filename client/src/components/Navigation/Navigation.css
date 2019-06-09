@@ -74,3 +74,41 @@ a.navbar-brand {
     color: gray;
     font-size: 24px;
 }
+.btn-link {
+    color: rgb(133, 133, 133);
+    font-size: 16px;
+    position: relative;
+    top: -4px;
+    left: -48px;
+    margin: 0px -47px 0 36px;
+    height: 0px;
+    font-weight: 600;
+    width: 200px;
+    text-decoration: none !important;
+}
+.btn-link:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: underline !important;
+}
+span#navUserName {
+    color: white !important;
+    font-weight: 600;
+    margin: 0 0 0 5px;
+}
+span#navUserName:hover {
+    color: rgb(189, 177, 44) !important;
+}
+.dropdown-item {
+    color: white;
+}
+.dropdown-item:hover {
+    background: rgba(128, 128, 128, 0.297);
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    cursor: pointer;
+}
+.dropdown-menu {
+    background: rgba(128, 128, 128, 0.297);
+    height: 200px;
+    border-top: none;
+}

@@ -76,7 +76,7 @@ function ProductCard(props) {
 
   return (
     <React.Fragment>
-      <div className="card" id="productCardCollections"><div className="img-containerT max-width-100"><Background>
+      <div className="card" id="productCardCollections"><div className="img-containerT"><Background>
         <div className="contentProduct max-width-100" id="liProducts"><DisplayOver>
           
           <Hover>
