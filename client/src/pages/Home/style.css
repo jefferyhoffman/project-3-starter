@@ -1,0 +1,92 @@
+body{
+  background-image: url("../../cssPages/images/cutgrass.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+}
+h3 {
+  font-style: italic;
+}
+
+.card-body{
+  padding: 1.85rem;
+  
+}
+
+
+.col-sm-7{
+  margin: 0px 300px 0px;
+}
+
+.card-review{
+  width: 600px;
+  height: 400px;
+}
+
+  #form{
+    background-color: white;
+    color: black;
+  }
+
+
+  .grass1{
+    margin-left: 5px;
+  }
+
+  .grass2{
+    margin-left: 10px;
+  }
+
+  .grass3{
+    margin-left: 10px;
+  }
+
+  .grass4{
+    margin-left: 10px;
+  }
+
+.grass5{
+margin-left: 60px;
+}
+.jumbotron {
+  text-align: center;
+  height: 350px;
+  background-color: white;
+  width: 100%;
+  /* color: rgb(15, 109, 22); */
+   color: #303437;
+  font-family: 'Source Sans Pro' 900;
+  opacity: 0.83;
+}
+
+.reviews {
+  justify-content: center;
+}
+/* 
+@media screen and (max-width: 980px){
+  .card{
+      margin-left: 100px;
+      margin-right: 100px;
+  }
+  p{
+      font-size: 60px;
+}
+}
+@media screen and (max-width: 768px){
+  .card{
+      margin-right: 20px;
+  }
+  p{
+      font-size: 40px;
+}
+}
+@media screen and (max-width: 480px){
+  #greeting{
+      font-size: 20px;
+  }
+  .container{
+     width: 50%;
+  }
+  
+}  */
