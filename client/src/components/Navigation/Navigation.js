@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../cssPages/images/greenscapes.png';
 import '../Navigation/style.css';
+import About from '../../pages/About/About';
 
 import AuthContext from '../../contexts/AuthContext';
 import AuthDropdown from '../../components/AuthDropdown/AuthDropdown';
@@ -60,6 +61,7 @@ class Navigation extends Component {
                 <>
                   <li className='nav-item'><Link className='nav-link text-success font-weight-bold' to='/login' onClick={this.toggleCollapse}>Login</Link></li>
                   <li className='nav-item'><Link className='nav-link text-primary font-weight-bold' to='/register' onClick={this.toggleCollapse}>Register</Link></li>
+                  <li className='nav-item'><Link className='nav-link text-primary font-weight-bold' to='/About' onClick={this.toggleCollapse}>About</Link></li>
                   </>}
             </ul>
           </div>
