@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Input, Select, FormBtn } from "../../components/Form";
 import AuthContext from '../../contexts/AuthContext';
 import API from '../../lib/API';
+import '../Search/search.css';
+
 
 
 
@@ -43,14 +45,16 @@ class Search extends Component {
         <div>
           <div className="container-search">
             <h2 className='pages-header'>Look up a drink!</h2>
-            <br/>
-            <br/>
+            <br />
+            <br />
             <div className='row'>
               <div className='col-4'></div>
               <div className='col-4'>
                 <form class="form-inline my-2 my-lg-0">
                   <div className="form-group">
-                    <Input name="name" onChange={this.handleInputChange} value={this.state.name} type="search" className="form-control mr-sm-2" id="exampleInputsearch1" aria-describedby="searchHelp" placeholder="Old.." />
+                    <Input name="name" onChange={this.handleInputChange} value={this.state.name} type="search" className="form-control mr-sm-2 search" id="exampleInputsearch1" aria-describedby="searchHelp" placeholder="&#xF002;" />
+                    <br />
+                    <br />
                     <FormBtn className="my-2 my-sm-0" onClick={this.handleSubmit}>Submit Drink</FormBtn>
                   </div>
                 </form>

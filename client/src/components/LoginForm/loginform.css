@@ -19,7 +19,7 @@
  }
  
       .form-control1 {
-        font-size: 10px;
+        font-size: 20px;
         width: 100%;
         margin-bottom: 20px;
         border: none;
@@ -32,6 +32,7 @@
       
 
         .form-control2 {
+            font-size: 20px;
             width: 100%;
             margin-bottom: 20px;
             border: none;
@@ -40,6 +41,14 @@
             outline: none;
             height: 40px;
             color: white; }
+
+            input.form-control1 {
+                font-family: FontAwesome;
+                font-style: normal;
+                font-weight: normal;
+                text-decoration: inherit;
+            }
+            
           
 
      

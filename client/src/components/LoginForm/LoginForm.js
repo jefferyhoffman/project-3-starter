@@ -41,7 +41,7 @@ class LoginForm extends Component {
                   id='email'
                   type='email'
                   name='email'
-                  placeholder='email@provider.com'
+                  placeholder='Email'
                   value={email}
                   onChange={this.handleInputChange}
                 /> </div>
@@ -56,12 +56,12 @@ class LoginForm extends Component {
                   id='password'
                   type='password'
                   name='password'
-                  placeholder='password'
+                  placeholder='Password'
                   value={password}
                   onChange={this.handleInputChange}
                 /></div>
             </div>
-            <button className='btn btn-info btn-lg' type='submit'>Sign In</button>
+            <button className='btn btn-primary btn-lg ' type='submit'>Sign In</button>
             <br/>
             <br/>
             <Link to='/register' onClick={this.toggleCollapse}> Dont Have an Account? Sign Up </Link>
