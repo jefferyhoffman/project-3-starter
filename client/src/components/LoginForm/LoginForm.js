@@ -61,7 +61,7 @@ class LoginForm extends Component {
                   onChange={this.handleInputChange}
                 />
               </div>
-              <button className='btn btn-success float-left' type='submit'>Submit</button>
+              <button className='btn btn-success' style={{align:'center'}} type='submit'>Submit</button>
             </form>
           </div>
         </div>
