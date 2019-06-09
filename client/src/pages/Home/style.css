@@ -32,27 +32,56 @@ h3 {
   .grass1{
     margin-left: 30px;
     height: 320px;
+    margin-bottom: 20px
   }
 
   .grass2{
     margin-left: 40px;
     height: 320px;
+    margin-bottom: 20px
   }
 
   .grass3{
     margin-left: 40px;
     height: 320px;
+    margin-bottom: 20px
   }
 
   .grass4{
     margin-left: 40px;
     height: 320px;
+    margin-bottom: 20px
   }
 
 .grass5{
 margin-left: 160px;
 height: 300px;
 }
+
+.grass6{
+  margin-left: 30px;
+  height: 320px;
+  margin-bottom: 20px
+}
+
+.grass7{
+  margin-left: 40px;
+  height: 320px;
+  margin-bottom: 20px
+}
+
+.grass8{
+  margin-left: 40px;
+  height: 320px;
+  margin-bottom: 20px
+}
+
+.grass9{
+  margin-left: 40px;
+  height: 320px;
+  margin-bottom: 20px
+}
+
 .jumbotron {
   text-align: center;
   height: 350px;
