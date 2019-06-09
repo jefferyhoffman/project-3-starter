@@ -1,3 +1,15 @@
+/* collections page */
+#productCardCollections {
+  background: #fff;
+  border-radius: 2px;
+  height: 450px !important;
+  margin: 1rem;
+  position: relative;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  text-align: center;
+  width: 24vw !important;
+}
+
 #productCard {
   background: #fff;
   border-radius: 2px;
@@ -9,25 +21,9 @@
   width: 24vw !important;
 }
 
-#productCardT {
-  background: #fff;
-  border-radius: 2px;
-  height: 450px !important;
-  margin: 1rem;
-  position: relative;
-  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
-  text-align: center;
-  width: 24vw !important;
-}
-
-.max-width-100 {
-  max-width: 100%;
-}
-
 #liProducts {
   font-size: 1rem;
 }
-
 
 .card > .img-container {
   height: 60vh;
