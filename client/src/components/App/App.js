@@ -17,7 +17,12 @@ import Create from '../../pages/Create/Create';
 import Search from '../../pages/Search/Search';
 import FeaturedDrinks from '../../pages/FeaturedDrinks/FeaturedDrinks';
 import NotFound from '../../pages/NotFound/NotFound';
-import MoscowMule from '../../pages/TopDrinks/MoscowMule';
+import KentuckyMule from '../../pages/DrinkFeaturePages/KentuckyMule';
+import JeffTheCodeGuru from '../../pages/DrinkFeaturePages/JeffTheCodeGuru';
+import OldFashioned from '../../pages/DrinkFeaturePages/OldFashioned';
+import SherbetMimosa from '../../pages/DrinkFeaturePages/SherbetMimosa';
+import PineappleMartini from '../../pages/DrinkFeaturePages/PineappleMartini';
+import BabyGuinness from '../../pages/DrinkFeaturePages/BabyGuinness';
 
 
 
@@ -57,7 +62,7 @@ class App extends Component {
       .then(user => this.setState(prevState => ({ auth: { ...prevState.auth, user } })))
       .catch(err => console.log(err));
   }
-  
+
 
 
   render() {
@@ -66,7 +71,11 @@ class App extends Component {
       <AuthContext.Provider value={this.state.auth}>
         <div className='App'>
           <Navigation />
+<<<<<<< HEAD
           <div className="container">
+=======
+          <div className='container'>
+>>>>>>> 0e8954dcc450aeb5567c93edb66b4dd1e9805c6a
             <Switch>
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />
@@ -78,12 +87,23 @@ class App extends Component {
               <Route exact path='/mydrinks' component={MyDrinks} />
               <Route exact path='/create' props={authToken} component={Create} />
               <Route exact path='/search' component={Search} />
-              <Route exact path='/moscowmule' component={MoscowMule} />
+              <Route exact path='/kentuckyMule' component={KentuckyMule} />
+              <Route exact path='/jeffTheCodeGuru' component={JeffTheCodeGuru} />
+              <Route exact path='/oldFashioned' component={OldFashioned} />
+              <Route exact path='/sherbetMimosa' component={SherbetMimosa} />
+              <Route exact path='/pineappleMartini' component={PineappleMartini} />
+              <Route exact path='/babyGuinness' component={BabyGuinness} />
               <Route component={NotFound} />
             </Switch>
+<<<<<<< HEAD
             </div>
           <Footer/>
          </div>
+=======
+          </div>
+          <Footer />
+        </div>
+>>>>>>> 0e8954dcc450aeb5567c93edb66b4dd1e9805c6a
       </AuthContext.Provider>
     );
   }

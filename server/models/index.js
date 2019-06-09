@@ -1,7 +1,7 @@
 // const User = require('./user');
 
 module.exports = {
-  Drinks: require("./drink"),
+  Drinks: require('./drink'),
   Users: require('./user'),
   Secrets: require('./secret')
 }

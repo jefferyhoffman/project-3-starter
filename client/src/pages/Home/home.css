@@ -1,5 +1,15 @@
-.d-block {
-height: 600px;
+.carousel-inner>.item {
+    -webkit-transition: 0.2s ease-in-out left;
+    transition: 0.2s ease-in-out left;
+    -webkit-transition: 0.2s, ease-in-out, left;
+    -moz-transition: .2s, ease-in-out, left;
+    -o-transition: .2s, ease-in-out, left;
+    transition: .2s, ease-in-out, left;
+    }
+
+.responsive-d-block {
+        width: 100%;
+        height: auto;
 }
 
 .jumbotron {
@@ -10,18 +20,31 @@ height: 600px;
     margin-top:25%;
 }
 
-.card-text-center {
-    /* background: linear-gradient(to bottom, #eef2f3 0%, #8e9eab 100%); */
+.card-drinks{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: aliceblue;
+    text-align: left;
+    margin: 5%;
+    box-shadow: 10px 10px 5px grey;
+
 }
 
-.card-img-top {
-   height: 200px;
-}
-
-.card-top {
+.card-create{
+    text-align: left;
     border: none;
-    height: 400px;
-    background: linear-gradient(to bottom, #eef2f3 0%, #8e9eab 100%);
 
-    /* background: linear-gradient(to bottom, #e8cbc0 0%, #636fa4 100%); */
+}
+
+/* .create-img-responsive{ */
+.create-img{
+    /* width: 100%;
+    max-width: 500px; */
+    margin-top:15px;
+    width: 500px;
+    height: auto; 
+    box-shadow: 10px 10px 5px grey;
+}
+
+.card-body-create {
+    margin-left: 75px;
 }

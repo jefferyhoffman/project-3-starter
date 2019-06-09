@@ -8,7 +8,7 @@ const { JWTVerifier } = require('../../lib/passport');
 // -------------------------------------------------------------------
 
 // CREATE
-drinksController.post("/", JWTVerifier, function (req, res) {
+drinksController.post('/', JWTVerifier, function (req, res) {
   const { user } = req;
 
   db.Drinks.create(req.body)
@@ -33,7 +33,7 @@ drinksController.get('/', (req, res) => {
 });
 
 // SEARCH
-drinksController.get("/search", function (req, res) {
+drinksController.get('/search', function (req, res) {
   const searchTerm = req.query.name;
   db.Drinks
     .find({ name: new RegExp(`.*${searchTerm}.*`) })
@@ -43,6 +43,20 @@ drinksController.get("/search", function (req, res) {
     })
     .catch(err => res.status(422).json(err));
 });
+
+ // example search in database for partial name with 'Old'
+  // db.getCollection('drinks').find({'name': {$regex: '.*Old.*'}})
+
+// drinksController.get('/ingredient', function (req, res) {
+//   const searchTerm = req.query.ingredients_measurements;
+//   db.Drinks
+//     .find({ ingredients_measurements: new RegExp(`.*${searchTerm}.*`) })
+//     .then(dbModel => {
+//       console.log(dbModel)
+//       res.json(dbModel)
+//     })
+//     .catch(err => res.status(422).json(err));
+// });
 
 // UPDATE
 drinksController.put('/:id', JWTVerifier, (req, res) => {
@@ -65,9 +79,9 @@ drinksController.delete('/:id', JWTVerifier, (req, res) => {
 // -------------------------------------------------------------------
 
 // READ
-drinksController.get("/mine", JWTVerifier, function (req, res) {
+drinksController.get('/mine', JWTVerifier, function (req, res) {
   db.Users.findOne({ _id: req.user._id })
-    .populate("drinks")
+    .populate('drinks')
     .then(function (dbUser) {
       res.json(dbUser.drinks);
     })
@@ -77,7 +91,7 @@ drinksController.get("/mine", JWTVerifier, function (req, res) {
 });
 
 // DELETE
-drinksController.delete("/mine/:id", JWTVerifier, (req, res) => {
+drinksController.delete('/mine/:id', JWTVerifier, (req, res) => {
   const { user } = req;
   user.drinks.pull(req.params.id);
   user.save()
@@ -117,7 +131,7 @@ module.exports = drinksController;
 // //     res.json(dbModel)})
 // //   .catch(err => res.status(422).json(err));
 // // });
-//   drinksController.get("/search", JWTVerifier, function(req, res) {
+//   drinksController.get('/search', JWTVerifier, function(req, res) {
 //     searchTerm = req.query.name
 //     db.Drinks
 //     .find({name: new RegExp(`.*${searchTerm}.*`)})
@@ -129,9 +143,9 @@ module.exports = drinksController;
   
 //   });
 
-// drinksController.get("/mine", JWTVerifier, function (req, res) {
+// drinksController.get('/mine', JWTVerifier, function (req, res) {
 //   db.Users.find({ _id: req.user._id })
-//     .populate("drinks")
+//     .populate('drinks')
 //     .then(function (dbUser) {
 //       res.json(dbUser[0].drinks);
 //     })
@@ -140,7 +154,7 @@ module.exports = drinksController;
 //     });
 // });
 
-// drinksController.delete("/mine/:id", JWTVerifier, (req, res) => {
+// drinksController.delete('/mine/:id', JWTVerifier, (req, res) => {
 //   db.Users.findOneAndUpdate({ _id: req.user._id }, { $pull: { drinks: { _id: req.params._id } } }, { new: true })
 //   .then(dbModel => res.json(dbModel))
 //   .catch(err => console.log(err));
@@ -157,7 +171,7 @@ module.exports = drinksController;
 
 // // });
 
-// drinksController.post("/", JWTVerifier, function (req, res) {
+// drinksController.post('/', JWTVerifier, function (req, res) {
 //   db.Drinks.create(req.body)
 //     .then(function (dbDrink) {
 //       return db.Users.findOneAndUpdate({ _id: req.user._id }, { $push: { drinks: dbDrink._id } }, { new: true });

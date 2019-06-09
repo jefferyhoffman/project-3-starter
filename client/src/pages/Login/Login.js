@@ -12,7 +12,7 @@ class Login extends Component {
 
   state = {
     redirectToReferrer: false,
-    error: ""
+    error: ''
   }
 
   handleSubmit = (email, password) => {
@@ -20,7 +20,7 @@ class Login extends Component {
       .then(response => response.data)
       .then(({ user, token }) => {
         this.context.onLogin(user, token);
-        this.setState({ redirectToReferrer: true, error: "" });
+        this.setState({ redirectToReferrer: true, error: '' });
       })
       .catch(err => {
         let message;
@@ -41,8 +41,8 @@ class Login extends Component {
   }
 
   render() {
-    // const { from } = this.props.location.state || { from: { pathname: "/home" } };
-    const { from } = this.props.location.state || { from: { pathname: "/" } };
+    // const { from } = this.props.location.state || { from: { pathname: '/home' } };
+    const { from } = this.props.location.state || { from: { pathname: '/' } };
     const { redirectToReferrer } = this.state;
 
     if (redirectToReferrer) {
@@ -51,7 +51,7 @@ class Login extends Component {
 
     return (
       <div>
-        <img className="log" src={login} alt="" />
+        <img className='log' src={login} alt='' />
         <div className='Login'>
           <div className='row'>
             <div className='col-6-login'>

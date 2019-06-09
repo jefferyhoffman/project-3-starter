@@ -1,0 +1,54 @@
+.card-img-top {
+   height: 200px;
+   border: none;
+}
+
+.col-featured-lg-3{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    position: relative;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-delay: 2s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 4s;
+    animation-delay: 2s;
+}
+
+.card-top {
+    box-shadow: 10px 5px 5px #e03838;
+    border: none;
+    height: 400px;
+    background: linear-gradient(to bottom, #eef2f3 0%, #8e9eab 100%);
+}
+
+.row {
+    border: none;
+}
+  
+.card-top:hover {background-color: #e03838}
+  
+.card-top:active {
+    background-color: #e03838;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:gray; left:400px; top:0px;}
+    50%  {background-color:whitesmoke; left:400px; top:400px;}
+    75%  {background-color:gray; left:0px; top:400px;}
+    100% {background-color:whitesmoke; left:0px; top:0px;}
+  }
+  
+  /* Standard syntax */
+  @keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:gray; left:400px; top:0px;}
+    50%  {background-color:whitesmoke; left:400px; top:400px;}
+    75%  {background-color:gray; left:0px; top:400px;}
+    100% {background-color:whitesmoke; left:0px; top:0px;}
+  }
+
