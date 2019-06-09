@@ -33,18 +33,18 @@ class Navigation extends Component {
     return (
       <div className='Navigation'>
         <nav className='navbar navbar-expand-lg navbar-light bg-light mb-3'>
-        <img className='logo1'src={Logo} alt="My logo" />
+        <Link  to='/'><img className='logo1'src={Logo} alt="My logo" /></Link>
         <h1 className="headermain">DrinkStation</h1>
           <button className={togglerClass} onClick={this.toggleCollapse} data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
             <span className='navbar-toggler-icon'></span>
           </button>
           <div className={targetClass} id='navbarSupportedContent'>
-            <ul className='navbar-nav mr-auto'>
-              {/* {user &&
+            {/* <ul className='navbar-nav mr-auto'>
+              {user &&
                 <li className='nav-item'>
                   <Link className='nav-link' style={text} to='/secret' onClick={this.toggleCollapse}>Secret</Link>
-                </li>} */}
-            </ul>
+                </li>}
+            </ul> */}
             <ul className='navbar-nav'>
               {user
                 ? <>

@@ -29,38 +29,38 @@ class HomePage extends Component {
                   </ol>
                   <div className='carousel-inner'>
                     <div className='carousel-item active'>
-                      <img src={jumbo1} className='responsive-d-block w-100' alt='...'></img>
+                      <img src={jumbo1} className='responsive-d-block w-100' alt='Drinks'></img>
                       <div className='carousel-caption d-none d-md-block'>
                         <h1 className='text'>Explore</h1>
-                        <h1>There is so much more to drinks!</h1>
+                        <h2>There is so much more to drinks!</h2>
                       </div>
                     </div>
                     <div className='carousel-item'>
-                      <img src={jumbo4} className='responsive-d-block w-100' alt='...'></img>
+                      <img src={jumbo4} className='responsive-d-block w-100' alt='Drinks'></img>
                       <div className='carousel-caption d-none d-md-block'>
                         <h1 className='text'>Create</h1>
-                        <h1>Add your favroite drink!</h1>
+                        <h2>Add your favroite drink!</h2>
                       </div>
                     </div>
                     <div className='carousel-item'>
-                      <img src={jumbo11} className='responsive-d-block w-100' alt='...'></img>
+                      <img src={jumbo11} className='responsive-d-block w-100' alt='Drinks'></img>
                       <div className='carousel-caption d-none d-md-block'>
                         <h1 className='text'>Share</h1>
-                        <h1>Make it known!</h1>
+                        <h2>Make it known!</h2>
                       </div>
                     </div>
                     <div className='carousel-item'>
-                      <img src={jumbo3} className='responsive-d-block w-100' alt='...'></img>
+                      <img src={jumbo3} className='responsive-d-block w-100' alt='Drinks'></img>
                       <div className='carousel-caption d-none d-md-block'>
                         <h1 className='text'>Search</h1>
-                        <h1>Find your drink!</h1>
+                        <h2>Find your drink!</h2>
                       </div>
                     </div>
                     <div className='carousel-item'>
-                      <img src={jumbo6} className='responsive-d-block w-100' alt='...'></img>
+                      <img src={jumbo6} className='responsive-d-block w-100' alt='Drinks'></img>
                       <div className='carousel-caption d-none d-md-block'>
                         <h1 className='text'>Experience</h1>
-                        <h1>Live it up!</h1>
+                        <h2>Live it up!</h2>
                       </div>
                     </div>
                   </div>
