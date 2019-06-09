@@ -45,7 +45,7 @@ class RegisterForm extends Component {
       <div className="col-sm-6 form">
         <div className="card">
           <div className="card-body">
-            <h2 className="card-title text-success" style={{textAlign: 'center'}}>Create an Account with GreenSpace</h2>
+            <h2 className="card-title text-success" style={{textAlign: 'center'}}>Create an Account with Greenscapes</h2>
             <br />
             <form onSubmit={this.handleSubmit}>
               <div className="row">
