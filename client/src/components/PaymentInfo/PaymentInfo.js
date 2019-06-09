@@ -15,7 +15,7 @@ class PaymentInfo extends Component {
     //   }
 
     handleCheckout = (event) => {
-        event.preventDefault()
+        // event.preventDefault()
         console.log("paymentInfo handleCheckout");
         API.Services.checkout(this.context.authToken, this.props.date, this.props.products)
             .then(response => {
@@ -33,12 +33,11 @@ class PaymentInfo extends Component {
     // const { from } = this.props.location.state || { from: { pathname: "/ClientHome" } };
     // const { redirectToReferrer } = this.state;
     // console.log(this.props);
-
     // if (redirectToReferrer) {
     //   return <Redirect to={from} />
     // }
-        return (
 
+        return (
             <div className="row" style={{ marginTop: '40px', marginLeft: '20px', marginRight: '20px' }}>
                 <div className="col">
                     <div className="card">

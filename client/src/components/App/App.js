@@ -14,7 +14,7 @@ import NotFound from '../../pages/NotFound/NotFound';
 import Checkout from '../../pages/Checkout/Checkout';
 import ClientHome from '../../pages/ClientHome/ClientHome';
 import Confirmation from '../../pages/Confirmation/Confirmation';
-import PaymentInfo from '../../components/PaymentInfo/PaymentInfo'
+import PaymentInfo from '../../components/PaymentInfo/PaymentInfo';
 import './App.css';
 
 class App extends Component {
