@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { Link } from 'react-router-dom';
 import "./style.css"
 
 
@@ -73,8 +74,8 @@ class Footer extends Component {
           
             </div>
           
-            <div class="footer-copyright text-center py-3">© 2018 Copyright:
-              <a href="#!"> GreenScapes</a>
+            <div class="footer-copyright text-center py-3">About 
+            <Link className='' to='/about' onClick={this.toggleCollapse}> GreenScapes</Link>
             </div>
           
           </footer>
