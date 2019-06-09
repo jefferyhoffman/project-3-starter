@@ -55,10 +55,12 @@ class Create extends Component {
     return (
       <>
       <div className='card-create mb-3 container'>
+        <br/>
+        <br/>
           <div className='row mb-3'>
             <div className='col-md-5'>
-              {/* <img src={create} className='create-img-responsive' alt='drink' /> */}
-              <img src={create} className='create-img' alt='drink' />
+              <img src={create} className='create-img-responsive' alt='drink' />
+              {/* <img src={create} className='create-img' alt='drink' /> */}
             </div>
             <div className='col-md-6'>
               <div className='card-body-create'>

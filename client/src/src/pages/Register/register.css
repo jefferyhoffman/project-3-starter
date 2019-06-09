@@ -1,0 +1,16 @@
+img.reg {
+    min-height: 100%;
+    min-width: 1024px;
+  
+    width: 100%;
+    height: auto;
+  
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .col-4-register {
+      margin: 5%;
+  }
