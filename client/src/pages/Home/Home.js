@@ -6,16 +6,16 @@ import image1 from '../../cssPages/ImageGallery/trimming.png';
 import image2 from '../../cssPages/ImageGallery/pineneedles.png';
 import image3 from '../../cssPages/ImageGallery/aeration.png';
 import image4 from '../../cssPages/ImageGallery/reseeding.png';
-import image5 from '../../cssPages/ImageGallery/text.png';
-
+import image5 from '../../cssPages/ImageGallery/banner.png';
 
 
 export default class Test extends React.Component {
   state = {
     images: [
-      "https://placeimg.com/380/200/nature",
-      "https://images.unsplash.com/photo-1420593248178-d88870618ca0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80",
-      "https://images.unsplash.com/photo-1500622944204-b135684e99fd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2201&q=80"
+      '../../cssPages/ImageGallery/trimming.png',
+      '../../cssPages/ImageGallery/pineneedles.png',
+      '../../cssPages/ImageGallery/aeration.png',
+      '../../cssPages/ImageGallery/reseeding.png'
     ]
   }
 
@@ -48,6 +48,7 @@ export default class Test extends React.Component {
       <div>
 
         <img src={image5} className="grass5" alt="grass" style={{ height: 300 }} />
+        
         <ItemsCarousel
           // Placeholder configurations
           enablePlaceholder
@@ -107,7 +108,7 @@ export default class Test extends React.Component {
                     <div className="carousel-inner">
                       <div className="carousel-item active">
                         <div className='card-review' style={{ border: 'none' }}>
-                          <img src="./images/waynesworld.jpg" style={{ width: '160px', float: 'left', marginRight: '15px'}}></img>
+                          <img src="./images/waynesworld.jpg" style={{ width: '160px', float: 'left', marginRight: '15px' }}></img>
                           <h4 style={{ textAlign: 'left' }}>Greenscapes sure knows what
                       <br />they're doing! They always get the
                       <br />job done and never leave my yard lookin' a mess. Like I tell all my
@@ -133,7 +134,7 @@ export default class Test extends React.Component {
                       </div>
                       <div className="carousel-item">
                         <div className='card-review' style={{ border: 'none' }}>
-                          <img src="./images/maninfield.jpg" style={{ width: '160px', float: 'left', marginRight: '15px'}}></img>
+                          <img src="./images/maninfield.jpg" style={{ width: '160px', float: 'left', marginRight: '15px' }}></img>
                           <h4 style={{ textAlign: 'left' }}>As a man who loves to do
                         <br />things himself I have to admit,
                         <br />Greenscapes sure does a
@@ -146,7 +147,7 @@ export default class Test extends React.Component {
                       </div>
                       <div className="carousel-item">
                         <div className='card-review' style={{ border: 'none' }}>
-                          <img src="./images/barneyfife.jpg" style={{ width: '150px', float: 'left', marginRight: '15px'}}></img>
+                          <img src="./images/barneyfife.jpg" style={{ width: '150px', float: 'left', marginRight: '15px' }}></img>
                           <h4 style={{ textAlign: 'left' }}>10/10 would recommend.
                           <br />Old man Pete next door is
                           <br />always asking why my yard
