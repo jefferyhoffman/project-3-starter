@@ -19,20 +19,78 @@ h3 {
   margin: 0px 300px 0px;
 }
 
+.card-review{
+  width: 600px;
+  height: 400px;
+}
 
   #form{
     background-color: white;
     color: black;
   }
 
-.jumbotron {
-  height: 400px;
-  background-color: gray;
-  width: 100%;
-  color: white;
+
+  .grass1{
+    margin-left: 5px;
+    height: 300px;
+  }
+
+  .grass2{
+    margin-left: 10px;
+    height: 300px;
+  }
+
+  .grass3{
+    margin-left: 10px;
+    height: 300px;
+  }
+
+  .grass4{
+    margin-left: 10px;
+    height: 300px;
+  }
+
+.grass5{
+margin-left: 60px;
+height: 300px;
 }
+.jumbotron {
+  text-align: center;
+  height: 350px;
+  background-color: white;
+  width: 100%;
+  /* color: rgb(15, 109, 22); */
+   color: #303437;
+  font-family: 'Source Sans Pro' 900;
+  opacity: 0.83;
+}
+
 .reviews {
   justify-content: center;
+}
+
+@media only screen and (max-width: 678px) {
+  .grass5 {
+    margin-left: 0px;
+    height: 200px;
+  }
+  .imgReviewer {
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+  }
+  h4 {
+    font-size: 15px;
+  }
+  .smallReview {
+    width: 500px;
+  }
+  .carousel-inner {
+    width: 400px;
+  }
+  .img-responsive {
+    width: 490px;
+  }
 }
 /* 
 @media screen and (max-width: 980px){
