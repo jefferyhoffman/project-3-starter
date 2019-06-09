@@ -14,6 +14,7 @@ import NotFound from '../../pages/NotFound/NotFound';
 import Checkout from '../../pages/Checkout/Checkout';
 import ClientHome from '../../pages/ClientHome/ClientHome';
 import Confirmation from '../../pages/Confirmation/Confirmation';
+import About from '../../pages/About/About';
 
 import './App.css';
 
@@ -189,6 +190,8 @@ class App extends Component {
               {...this.state.modalInfo}
               calendarInfo = {this.state.calendarInfo} />}
               />
+              <Route exact path='/About' component={About} />
+              <Route exact path='/Confirmation' component={Confirmation} />
             <Route exact path='/' component={Home} />
             <Route component={NotFound} />
           </Switch>
