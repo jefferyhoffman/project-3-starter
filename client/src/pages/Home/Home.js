@@ -1,25 +1,50 @@
 import React, { Component } from 'react';
-
-import logo from './logo.svg';
+import Jumbotron from "../../components/Jumbotron";
+import { Input, TextArea, FormBtn } from "../../components/Form";
+import { List, ListItem } from "../../components/List";
+// import DeleteBtn from "../../components/DeleteBtn";
+import API from "../../lib/API"
 
 class HomePage extends Component {
+
+  state = {
+    latestBooks: []
+  }
+
+  componentDidMount() {
+    console.log('hello world')
+    API.Books.getBooks()
+      .then(books => {
+        console.log(books.data)
+        this.setState({
+          latestBooks: books.data
+        })
+      })
+      .catch(err => console.log(err))
+  }
+
   render() {
     return (
       <div className='Home'>
         <div className='row'>
           <div className='col'>
-            <img src={logo} className='App-logo' alt='logo' />
-            <p>
-              Edit <code>src/pages/Home.js</code> and save to reload.
-            </p>
-            <a
-              className='App-link'
-              href='https://reactjs.org'
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
+            <Jumbotron>
+              <h1>WELCOME TO BOOK KEEPER </h1> <br /> <h3>Login/register to add books to our database of books and keep track of all the books from your library </h3>
+            </Jumbotron>
+
+
+            <div className="response" />
+            <hr />
+            {/* <List> */}
+            <div style={{ display: 'flex' }}>
+
+              {this.state.latestBooks.map(book =>
+                <ListItem
+                  key={book._id}
+                  info={book}
+                />)}
+            </div>
+            {/* </List> */}
           </div>
         </div>
       </div>

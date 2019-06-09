@@ -39,7 +39,7 @@ class Login extends Component {
   }
 
   render() {
-    const { from } = this.props.location.state || { from: { pathname: "/secret" } };
+    const { from } = this.props.location.state || { from: { pathname: "/SearchBooks" } };
     const { redirectToReferrer } = this.state;
 
     if (redirectToReferrer) {
@@ -50,7 +50,7 @@ class Login extends Component {
       <div className='Login'>
         <div className='row'>
           <div className='col'>
-            <h1>Login</h1>
+            <h1>Login to view or add your books</h1>
           </div>
         </div>
         {this.state.error &&
