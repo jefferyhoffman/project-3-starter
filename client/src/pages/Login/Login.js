@@ -47,12 +47,12 @@ class Login extends Component {
     }
 
     return (
-      <div className='Login'>
+      <div className='Login' style ={{textAlign: 'center'}}>
         <div className='row'>
           <div className='col-sm'>
           </div>
         </div>
-        <div className='row'>
+        <div className='row' >
           <div className='col-sm'>
             <LoginForm onSubmit={this.handleSubmit} />
           </div>
