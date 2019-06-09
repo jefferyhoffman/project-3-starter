@@ -30,7 +30,7 @@ class LoginForm extends Component {
       <div className="col-sm-3"></div>
       <div className="col-sm-6 LoginForm">
         <div className="card">
-          <h2 className="mt-3 text-success">Login</h2>
+          <h2 className="mt-3 ml-2 text-success">Login</h2>
           <div className="card-body">
             <form className='LoginForm' onSubmit={this.handleSubmit}>
               <div className='input-group mb-3'>

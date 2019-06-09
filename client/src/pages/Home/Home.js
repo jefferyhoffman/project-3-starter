@@ -98,44 +98,87 @@ export default class Test extends React.Component {
                   <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
                     <div className="carousel-inner">
                       <div className="carousel-item active">
-                        <h3>thats some good mowin'!
-        <br />
-                          -Dylbob, Hickory
-      </h3>
+                      <div className='card-review' style={{ border: 'none' }}>
+                          <img src="https://i.warosu.org/data/g/img/0649/00/1519766267404.jpg" style={{ width: '160px', float: 'left', marginRight: '15px'}}></img>
+                      <h4 style={{ textAlign: 'left' }}>Greenscapes sure knows what 
+                      <br />they're doing! They always get the 
+                      <br />job done and never leave my yard lookin' a mess. Like I tell all my
+                      <br />neighbors, be sure to call  
+                      <br />Greenscapes if your yard needs a 
+                      <br />good mowin'! -Dylbob, Hickory
+                      </h4>
+                      </div>
                       </div>
                       <div className="carousel-item">
-                        <h3>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam finibus, orci ut congue ornare, nunc quam euismod odio, at commodo purus felis sed lacus. Maecenas sit amet lectus in urna laoreet porttitor.
-        <br />
-                          -CoCo, Huntersville
-      </h3>
+                      <div className='card-review' style={{ border: 'none' }}>
+                          <img src="https://barkpost.com/wp-content/uploads/2014/09/10598265_725714694166199_1606666690_n.jpg" style={{ width: '160px', float: 'left', marginRight: '15px'}}></img>
+                        <h4 style={{ textAlign: 'left' }}>
+                          Ever since I started using 
+                          <br />Greenscapes my yard has never 
+                          <br />looked better! I'll never go 
+                          <br />back to doing my own yardwork 
+                          <br />again! Grenscapes makes yard 
+                          <br />upkeep a breeze and has really 
+                          <br />saved my grass! -CoCo, Huntersville
+                      </h4>
+                      </div>
                       </div>
                       <div className="carousel-item">
-                        <h3>its like they cut my lawn and stuff
-        <br />
-                          -Ronnie, Charlotte
-      </h3>
+                      <div className='card-review' style={{ border: 'none' }}>
+                          <img src="https://www.thedailymeditation.com/wp-content/uploads/2017/06/man-lying-down-in-field-doing-minful-writing.jpg" style={{ width: '160px', float: 'left', marginRight: '15px'}}></img>
+                        <h4 style={{ textAlign: 'left' }}>As a man who loves to do 
+                        <br />things himself I have to admit,
+                        <br />Greenscapes sure does a 
+                        <br />better job than I ever did. Even  
+                        <br />the Mrs.'s says so! Love not having to worry about
+                        <br />keeping my yard looking it's best. 
+                        <br />Thanks Greenscapes! -Gerard, Dillworth
+                      </h4>
+                      </div>
+                      </div>
+                      <div className="carousel-item">
+                      <div className='card-review' style={{ border: 'none' }}>
+                          <img src="https://www.emmys.com/sites/default/files/styles/bio_pics_detail/public/bios/don-knotts-barney-fife-450x600.jpg?itok=Qn6J7z3J" style={{ width: '150px', float: 'left', marginRight: '15px'}}></img>
+                        <h4 style={{ textAlign: 'left' }}>10/10 would recommend.
+                          <br />Old man Pete next door is
+                          <br />always asking why my yard 
+                          <br />looks so good and I keep 
+                          <br />telling him, Call Greenscapes! 
+                          <br />they sure know how to cut  
+                          <br />lawns and stuff!-Ronnie, Charlotte
+                        </h4>
+                      </div>
+                      </div>
+                      <div className="carousel-item">
+                        <div className='card-review' style={{ border: 'none' }}>
+                          <img src="http://www.tunisiesoir.com/wp-content/uploads/2018/09/180926140739_1_540x360.jpg" style={{ width: '160px', float: 'left', marginRight: '15px' }}></img>
+                          <h4 style={{ textAlign: 'left' }}>My lawn was really getting
+    <br />in the way of maintaining my
+    <br />social media presence. One call
+    <br />to Greenscapes and now my
+    <br />yard has never looked better. I can focus on more
+    <br /> important things like getting insta-followers 
+    <br />instead! -Tayler, South Charlotte</h4>
+                        </div>
                       </div>
                     </div>
-                    <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                      <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span className="sr-only">Previous</span>
-                    </a>
-                    <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                      <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span className="sr-only">Next</span>
-                    </a>
-                  </div>
+                  <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span className="sr-only">Previous</span>
+                  </a>
+                  <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span className="sr-only">Next</span>
+                  </a>
                 </div>
-                <div className="col-2"></div>
               </div>
+              <div classNameName="col-2"></div>
             </div>
           </div>
         </div>
-
-
       </div>
-
+      </div >
+      
     );
   }
 } 

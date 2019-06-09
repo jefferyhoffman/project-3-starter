@@ -63,7 +63,7 @@ class App extends Component {
     }
 
       
-    }
+  }
   }
 
   onChange = (date) => {
@@ -192,6 +192,7 @@ class App extends Component {
             <Route exact path='/' component={Home} />
             <Route component={NotFound} />
           </Switch>
+          
         </div>
       </AuthContext.Provider>
     );
