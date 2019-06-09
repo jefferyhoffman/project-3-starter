@@ -12,7 +12,11 @@ export default {
           'Authorization': `Bearer ${authToken}`
         }
       });
-    }
+    },
+
+    register: function (email, password, name) {
+      return axios.post('/register', { email, password, name })
+    },
   },
 
   Items: {

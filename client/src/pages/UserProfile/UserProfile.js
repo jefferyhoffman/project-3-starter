@@ -8,25 +8,25 @@ import { Link } from "react-router-dom";
 
 
 class userProfile extends Component {
-    // state = {
-    //     name: '',
-    //     email: '',
-    // };
+    state = {
+        name: '',
+        email: '',
+    };
 
-    // handleInputChange = event => {
-    //     const { name, value } = event.target;
+    handleInputChange = event => {
+        const { name, value } = event.target;
 
-    //     this.setState({
-    //         [name]: value
-    //     });
-    // }
+        this.setState({
+            [name]: value
+        });
+    }
 
-    // handleSubmit = event => {
-    //     const { name, email } = this.state;
+    handleSubmit = event => {
+        const { name, email } = this.state;
 
-    //     this.props.onSubmit(name, email);
-    //     event.preventDefault();
-    // }
+        this.props.onSubmit(name, email);
+        event.preventDefault();
+    }
 
     render() {
         // const { name, email } = this.state;
