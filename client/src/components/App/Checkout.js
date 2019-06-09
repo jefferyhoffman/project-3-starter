@@ -29,7 +29,7 @@ export default class Checkout extends React.Component {
 		if (!isAuthenticated()) return (<Redirect to="/login" />);
 		const { products, total } =  this.state;
 		return (
-			<div className=" container">
+			<div className=" containerCheckout">
 				<h3 className="card-title">Checkout</h3>
 				<hr/>
 				{

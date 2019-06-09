@@ -27,10 +27,10 @@ class Footer extends Component {
               <div className="container" id="footerContainer">
                 <div className="row" id="footerRow">
                   <div id="footerSec" className="col-4">Developers
-                      <p id="footerItems">Yawo</p>
-                      <p id="footerItems">Donnel</p>
-                      <p id="footerItems">Courtney</p>
-                      <p id="footerItems">Kong</p>
+                      <p id="footerItems">Yawo Tsevi</p>
+                      <p id="footerItems">Donnel Ferguson</p>
+                      <p id="footerItems">Courtney Manery</p>
+                      <p id="footerItems">Kong Yang</p>
                   </div>
                   <div id="footerSec" className="col-4">See Our Works
                       <p id="footerItems"><Link id="githubLinks" to="https://www.github.com/Tyawo/"><i id="devIcon" class="fab fa-github"></i>Yawo</Link></p>
