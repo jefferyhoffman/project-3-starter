@@ -94,7 +94,7 @@ export default class Test extends React.Component {
 
           )}
 
-          <h1>See Our Work</h1>
+          
         </ItemsCarousel>
 
         {/* -------------------------------------------------------------------------------------------- */}
@@ -185,8 +185,9 @@ export default class Test extends React.Component {
                           <br />social media presence. One call
                           <br />to Greenscapes and now my
                           <br />yard has never looked better. I 
-                          <br />can focus on more important things like getting 
-                          <br />insta-followers instead!-Tayler, South Charlotte</h4>
+                          <br />can focus on more important 
+                          <br /> things like getting insta-followers 
+                          <br /> instead!-Tayler, South Charlotte</h4>
                         </div>
                       </div>
                     </div>

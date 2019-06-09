@@ -18,8 +18,8 @@ class Footer extends Component {
           
                 <div class="col-md-6 mt-md-0 mt-3">
           
-                  <h5 class="text-uppercase">GreenScapes</h5>
-                  <p>*Requires purchase of annual plan. Special offer of 50% off is for first application only, for new residential EasyPay or PrePay customers only, and applies to lawns up to 5,000 square feet. For lawns more than 5,000 square feet or for the regular lawn application price for a lawn of any size, please call for estimate. Valid at participating GreenScapes locations. Availability of services may vary by geography. Not to be combined with or used in conjunction with any other offer or discount. Additional restrictions may apply. Consumer responsible for all sales tax.</p>
+                  <h5 class="text-uppercase">Greenscapes</h5>
+                  <p>*Requires purchase of annual plan. Special offer of 50% off is for first application only, for new residential EasyPay or PrePay customers only, and applies to lawns up to 5,000 square feet. For lawns more than 5,000 square feet or for the regular lawn application price for a lawn of any size, please call for estimate. Valid at participating Greenscapes locations. Availability of services may vary by geography. Not to be combined with or used in conjunction with any other offer or discount. Additional restrictions may apply. Consumer responsible for all sales tax.</p>
           
                 </div>
           
