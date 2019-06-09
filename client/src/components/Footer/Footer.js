@@ -13,7 +13,7 @@ class Footer extends Component {
                 <div className='footer'>
                     <div className='card'>
                         <div className='card-header-footer'>
-                            <Link to='/'><cite title='Source Title'>DRINKSTATION </cite><img src={Logo} alt='My logo' className='footer-logo' />
+                            <Link to='/' className='footer-link'><cite title='Source Title'>DRINKSTATION </cite><img src={Logo} alt='My logo' className='footer-logo' />
                             <cite title='Source Title'>Be your own Bartender </cite>
                             </Link>
                         </div>

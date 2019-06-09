@@ -33,7 +33,7 @@ class Navigation extends Component {
     return (
       <div className='Navigation'>
         <nav className='navbar navbar-expand-lg navbar-light bg-light mb-3'>
-        <Link  to='/'><img className='logo1'src={Logo} alt="My logo" /></Link>
+        <Link  to='/' className='nav-logoLink'><img className='logo1'src={Logo} alt="My logo" /></Link>
         <h1 className="headermain">DrinkStation</h1>
           <button className={togglerClass} onClick={this.toggleCollapse} data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
             <span className='navbar-toggler-icon'></span>
@@ -52,7 +52,7 @@ class Navigation extends Component {
                     <Link className='nav-link' style={text} to='/' onClick={this.toggleCollapse}>Home</Link>
                   </li>
                   <li className='nav-item'>
-                    <Link className='nav-link' style={text} to='/featured' onClick={this.toggleCollapse}>Featured Drinks</Link>
+                    <Link className='nav-link' style={text} to='/featured' onClick={this.toggleCollapse}>Featured</Link>
                   </li>
                   <li className='nav-item'>
                     <Link className='nav-link' style={text} to='/create' onClick={this.toggleCollapse}>Create</Link>
@@ -61,10 +61,10 @@ class Navigation extends Component {
                     <Link className='nav-link' style={text} to='/search' onClick={this.toggleCollapse}>Search</Link>
                   </li>
                   <li className='nav-item'>
-                    <Link className='nav-link' style={text} to='/view' onClick={this.toggleCollapse}>View Drinks</Link>
+                    <Link className='nav-link' style={text} to='/view' onClick={this.toggleCollapse}>Drinks</Link>
                   </li>
                   <li className='nav-item'>
-                    <Link className='nav-link' style={text} to='/mydrinks' onClick={this.toggleCollapse}>My Drinks</Link>
+                    <Link className='nav-link' style={text} to='/mydrinks' onClick={this.toggleCollapse}>Creations</Link>
                   </li>
                   <li className='nav-item'>
                     <Link className='nav-link' style={text} to='/about' onClick={this.toggleCollapse}>About</Link>

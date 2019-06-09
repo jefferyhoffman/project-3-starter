@@ -4,10 +4,19 @@
     position: fixed;
     left: 0;
     bottom: 0;
+    height: 50px;
     margin-top: -50px;
     width: 100%;
     text-align: center;
   } 
+  
+.footer-link{
+      color: black;
+  }
+
+.footer-link:hover{
+    color: white;
+}
 
 /* .footer {
     position: bottom;
