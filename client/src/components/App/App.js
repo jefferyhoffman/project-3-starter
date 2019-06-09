@@ -15,6 +15,7 @@ import Checkout from '../../pages/Checkout/Checkout';
 import ClientHome from '../../pages/ClientHome/ClientHome';
 import Confirmation from '../../pages/Confirmation/Confirmation';
 import PaymentInfo from '../../components/PaymentInfo/PaymentInfo';
+import Footer from "../../components/Footer/Footer";
 import './App.css';
 
 class App extends Component {
@@ -192,6 +193,7 @@ class App extends Component {
             <Route exact path='/' component={Home} />
             <Route component={NotFound} />
           </Switch>
+          <Footer />
         </div>
       </AuthContext.Provider>
     );

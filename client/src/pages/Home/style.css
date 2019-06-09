@@ -32,22 +32,27 @@ h3 {
 
   .grass1{
     margin-left: 5px;
+    height: 300px;
   }
 
   .grass2{
     margin-left: 10px;
+    height: 300px;
   }
 
   .grass3{
     margin-left: 10px;
+    height: 300px;
   }
 
   .grass4{
     margin-left: 10px;
+    height: 300px;
   }
 
 .grass5{
 margin-left: 60px;
+height: 300px;
 }
 .jumbotron {
   text-align: center;
@@ -62,6 +67,30 @@ margin-left: 60px;
 
 .reviews {
   justify-content: center;
+}
+
+@media only screen and (max-width: 678px) {
+  .grass5 {
+    margin-left: 0px;
+    height: 200px;
+  }
+  .imgReviewer {
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+  }
+  h4 {
+    font-size: 15px;
+  }
+  .smallReview {
+    width: 500px;
+  }
+  .carousel-inner {
+    width: 400px;
+  }
+  .img-responsive {
+    width: 490px;
+  }
 }
 /* 
 @media screen and (max-width: 980px){

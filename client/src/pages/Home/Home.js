@@ -46,8 +46,11 @@ export default class Test extends React.Component {
 
     return (
       <div>
-
-        <img src={image5} className="grass5" alt="grass" style={{ height: 300 }} />
+        <div className="row">
+        <div className="col-12">
+        <img src={image5} className="grass5 img-fluid img-responsive" alt="grass" />
+        </div>
+        </div>
         <ItemsCarousel
           // Placeholder configurations
           enablePlaceholder
@@ -88,16 +91,17 @@ export default class Test extends React.Component {
         </ItemsCarousel>
 
         {/* -------------------------------------------------------------------------------------------- */}
-        <img src={image1} className="grass1" alt="grass" style={{ height: 350 }} />
-        <img src={image2} className="grass2" alt="grass" style={{ height: 350 }} />
-        <img src={image3} className="grass3" alt="grass" style={{ height: 350 }} />
-        <img src={image4} className="grass4" alt="grass" style={{ height: 350 }} />
+
+        <img src={image1} className="grass1" alt="grass" />
+        <img src={image2} className="grass2" alt="grass" />
+        <img src={image3} className="grass3" alt="grass" />
+        <img src={image4} className="grass4" alt="grass" />
         <br />
         <br></br>
         <div className="row">
           <div className="col-2"></div>
           <div className="col-8 flex-center">
-            <div className="jumbotron pt-3">
+            <div className="jumbotron pt-3 smallReview">
               <h2>Check Out Some of Our Reviews:</h2>
               <br />
               <div className="row">
@@ -107,66 +111,73 @@ export default class Test extends React.Component {
                     <div className="carousel-inner">
                       <div className="carousel-item active">
                         <div className='card-review' style={{ border: 'none' }}>
-                          <img src="./images/waynesworld.jpg" style={{ width: '160px', float: 'left', marginRight: '15px'}}></img>
+                          <img src="./images/waynesworld.jpg" className="imgReviewer" style={{ width: '160px', float: 'left', marginRight: '15px'}}></img>
                           <h4 style={{ textAlign: 'left' }}>Greenscapes sure knows what
                       <br />they're doing! They always get the
-                      <br />job done and never leave my yard lookin' a mess. Like I tell all my
+                      <br />job done and never leave my yard lookin' a mess.
+                      <br /> Like I tell all my
                       <br />neighbors, be sure to call
                       <br />Greenscapes if your yard needs a
-                      <br />good mowin'! -Dylbob, Hickory
+                      <br />good mowin'!
+                      <br />-Dylbob, Hickory
                       </h4>
                         </div>
                       </div>
                       <div className="carousel-item">
                         <div className='card-review' style={{ border: 'none' }}>
-                          <img src="./images/Dougthepug.jpg" style={{ width: '160px', float: 'left', marginRight: '15px' }}></img>
+                          <img src="./images/Dougthepug.jpg" className="imgReviewer" style={{ width: '160px', float: 'left', marginRight: '15px' }}></img>
                           <h4 style={{ textAlign: 'left' }}>
                             Ever since I started using
                           <br />Greenscapes my yard has never
                           <br />looked better! I'll never go
                           <br />back to doing my own yardwork
-                          <br />again! Grenscapes makes yard
+                          <br />again! Greenscapes makes yard
                           <br />upkeep a breeze and has really
-                          <br />saved my grass! -CoCo, Huntersville
+                          <br />saved my grass!
+                          <br />-CoCo, Huntersville
                       </h4>
                         </div>
                       </div>
                       <div className="carousel-item">
                         <div className='card-review' style={{ border: 'none' }}>
-                          <img src="./images/maninfield.jpg" style={{ width: '160px', float: 'left', marginRight: '15px'}}></img>
+                          <img src="./images/maninfield.jpg" className="imgReviewer" style={{ width: '160px', float: 'left', marginRight: '15px'}}></img>
                           <h4 style={{ textAlign: 'left' }}>As a man who loves to do
                         <br />things himself I have to admit,
                         <br />Greenscapes sure does a
                         <br />better job than I ever did. Even
-                        <br />the Mrs.'s says so! Love not having to worry about
+                        <br />the Mrs.'s says so! Love not 
+                        <br />having to worry about
                         <br />keeping my yard looking it's best.
-                        <br />Thanks Greenscapes! -Gerard, Dillworth
+                        <br />Thanks Greenscapes!
+                        <br />-Gerard, Dillworth
                       </h4>
                         </div>
                       </div>
                       <div className="carousel-item">
                         <div className='card-review' style={{ border: 'none' }}>
-                          <img src="./images/barneyfife.jpg" style={{ width: '150px', float: 'left', marginRight: '15px'}}></img>
+                          <img src="./images/barneyfife.jpg" className="imgReviewer" style={{ width: '150px', float: 'left', marginRight: '15px'}}></img>
                           <h4 style={{ textAlign: 'left' }}>10/10 would recommend.
                           <br />Old man Pete next door is
                           <br />always asking why my yard
                           <br />looks so good and I keep
                           <br />telling him, Call Greenscapes!
                           <br />they sure know how to cut
-                          <br />lawns and stuff!-Ronnie, Charlotte
+                          <br />lawns and stuff!
+                          <br />-Ronnie, Charlotte
                         </h4>
                         </div>
                       </div>
                       <div className="carousel-item">
                         <div className='card-review' style={{ border: 'none' }}>
-                          <img src="./images/instamodel.jpg" style={{ width: '160px', float: 'left', marginRight: '15px' }}></img>
+                          <img src="./images/instamodel.jpg" className="imgReviewer" style={{ width: '160px', float: 'left', marginRight: '15px' }}></img>
                           <h4 style={{ textAlign: 'left' }}>My lawn was really getting
     <br />in the way of maintaining my
     <br />social media presence. One call
     <br />to Greenscapes and now my
     <br />yard has never looked better. I can focus on more
     <br /> important things like getting insta-followers
-    <br />instead! -Tayler, South Charlotte</h4>
+    <br />instead!
+    <br />-Tayler, South Charlotte</h4>
                         </div>
                       </div>
                     </div>
