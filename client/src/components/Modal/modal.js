@@ -17,7 +17,6 @@ class Modal extends Component {
         console.log(this.props)
         return (
             <div className="App">
-
                 <div className="col-lg" >
                     <h2 className="h2-responsive product-name" >
                         <strong >June Special: Individual Treatments Only $50!</strong>
@@ -40,7 +39,6 @@ class Modal extends Component {
                                 </h5>
                             </a>
                         </div>
-
 
                         <div id="collapseOne1" className="collapse show" role="tabpanel" aria-labelledby="headingOne1"
                             data-parent="#accordionEx">
