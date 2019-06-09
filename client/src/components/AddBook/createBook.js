@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import API from "../../lib/API";
 
-class AddBook extends Component {
+class createBook extends Component {
     state = {
         title: '',
         author: '',
@@ -129,4 +129,4 @@ class AddBook extends Component {
     }
 }
 
-export default AddBook;
+export default createBook;
