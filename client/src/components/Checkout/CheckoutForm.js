@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./Checkout.css";
+import { Link } from 'react-router-dom'
 // import Collections, {Component } from 'collections'
 // import ProductCard, { Component } from 'productCard'
 // import "/.Checkout.css"
@@ -279,7 +280,7 @@ class CheckoutForm extends Component {
                                 {/* </div> */}
 
                                 
-                                    <button id="checkoutBtn2" className='btn btn-primary' type='submit'>Checkout</button>
+                                   <Link to="/thankyou"><button id="checkoutBtn2" className='btn btn-primary' type='submit'>Checkout</button></Link>
                                 
 
                             </div>

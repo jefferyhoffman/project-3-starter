@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import "./ThankYou.css"
+import "./ThankYou.css";
+import { Link } from 'react-router-dom';
 
 
 
@@ -11,8 +12,7 @@ class ThankYou extends Component {
     return (
         <div className="containerThankYou">
             <p id="thankYouP">Thank You for Shopping with Us</p>
-            {/* <br />
-            <p>Have a Nice Day!</p> */}
+            <Link id="thankyouLink" to="/"><p id="thankyouSub">Go Back to Homepage</p></Link>
         </div>
 
     );
