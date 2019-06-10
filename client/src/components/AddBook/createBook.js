@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import API from "../../lib/API";
 
+
 class createBook extends Component {
     state = {
         title: '',
@@ -45,11 +46,11 @@ class createBook extends Component {
         return (
             <div className='AddBook'>
                 <div className='card'>
-                    <div className='card-body'>
+                    <div className='card-body' style={{background: '#a8ff78', background: '-webkit-linear-gradient(to top, #78ffd6, #a8ff78)',background: 'linear-gradient(to top, #78ffd6, #a8ff78)',}}>
                         <form className='AddBook'>
                             <div className='input-group mb-3'>
                                 <div className="input-group-prepend">
-                                    <span className="input-group-text">@</span>
+                                    <span className="input-group-text" style={{fontSize: '1.em', fontFamily: '"Rye", Cursive'}}>T</span>
                                 </div>
                                 <input
                                     className='form-control'
@@ -63,7 +64,7 @@ class createBook extends Component {
                             </div>
                             <div className='input-group mb-3'>
                                 <div className="input-group-prepend">
-                                    <span className="input-group-text">@</span>
+                                    <span className="input-group-text" style={{fontSize: '1.em', fontFamily: '"Rye", Cursive'}}>A</span>
                                 </div>
                                 <input
                                     className='form-control'
@@ -77,7 +78,7 @@ class createBook extends Component {
                             </div>
                             <div className='input-group mb-3'>
                                 <div className="input-group-prepend">
-                                    <span className="input-group-text">@</span>
+                                    <span className="input-group-text" style={{fontSize: '1.em', fontFamily: '"Rye", Cursive'}}>I</span>
                                 </div>
                                 <input
                                     className='form-control'
@@ -91,7 +92,7 @@ class createBook extends Component {
                             </div>
                             <div className='input-group mb-3'>
                                 <div className="input-group-prepend">
-                                    <span className="input-group-text">@</span>
+                                    <span className="input-group-text" style={{fontSize: '1.em', fontFamily: '"Rye", Cursive'}}>S</span>
                                 </div>
                                 <input
                                     className='form-control'
@@ -99,13 +100,14 @@ class createBook extends Component {
                                     type='text'
                                     name='series'
                                     placeholder='Series'
+                       
                                     value={this.state.series}
                                     onChange={this.handleInputChange}
                                 />
                             </div>
                             <div className='input-group mb-3'>
                                 <div className="input-group-prepend">
-                                    <span className="input-group-text">a3b</span>
+                                    <span className="input-group-text" style={{fontSize: '1.em', fontFamily: '"Rye", Cursive'}}>S</span>
                                 </div>
                                 <input
                                     className='form-control'
@@ -118,7 +120,7 @@ class createBook extends Component {
                                 />
                             </div>
 
-                            <button onClick={(event) => this.handleAddBook(event)} className='btn btn-danger' type='AddBook'>Add Book</button>
+                            <button onClick={(event) => this.handleAddBook(event)} className='btn btn-danger'style={{backgroundColor: '#a8ff78', color: 'black'}} type='AddBook'>Add Book</button>
                         </form>
                     </div>
                 </div>

@@ -22,7 +22,8 @@ export function ListItem(props) {
     backgroundSize: 140,
     height: 200,
     width: 140,
-    margin: 15,
+    margin: 25,
+    marginTop: 45,
   }
 
   let addToLibrary = (authToken, book) => {
@@ -47,7 +48,7 @@ export function ListItem(props) {
           <h6>Author: {props.info.author}</h6>
           {props.info.series ? <p>Series: {props.info.series}</p> : null}
           {props.info.synopsis ? <p>Synopsis: {props.info.synopsis}</p> : null}
-          <button onClick={addORremove}>{addORremove_text}</button>
+          <button style={{backgroundColor: '#a8ff78', color: 'black'}}onClick={addORremove}>{addORremove_text}</button>
         </div> : null}
     </li>
 

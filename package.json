@@ -17,5 +17,8 @@
   "devDependencies": {
     "concurrently": "^4.1.0",
     "nodemon": "^1.18.10"
+  },
+  "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^5.9.0"
   }
 }

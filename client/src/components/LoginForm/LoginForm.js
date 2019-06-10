@@ -27,11 +27,12 @@ class LoginForm extends Component {
     return (
       <div className='LoginForm'>
         <div className='card'>
-          <div className='card-body'>
+          <div className='card-body'style={{background: '#a8ff78', background: '-webkit-linear-gradient(to top, #78ffd6, #a8ff78)',background: 'linear-gradient(to top, #78ffd6, #a8ff78)',}}>
+
             <form className='LoginForm' onSubmit={this.handleSubmit}>
               <div className='input-group mb-3'>
                 <div className="input-group-prepend">
-                  <span className="input-group-text">@</span>
+                  <span className="input-group-text" style={{fontSize: '1.em', fontFamily: '"Rye", Cursive'}}>@</span>
                 </div>
                 <input
                   className='form-control'
@@ -46,7 +47,7 @@ class LoginForm extends Component {
 
               <div className='input-group mb-3'>
                 <div className="input-group-prepend">
-                  <span className="input-group-text">a3b</span>
+                  <span className="input-group-text" style={{fontSize: '1.em', fontFamily: '"Rye", Cursive'}}>P</span>
                 </div>
                 <input
                   className='form-control'
@@ -59,7 +60,7 @@ class LoginForm extends Component {
                 />
               </div>
 
-              <button className='btn btn-primary' type='submit'>Login</button>
+              <button className='btn btn-primary' type='submit' style={{backgroundColor: '#a8ff78', color: 'black'}}>Login</button>
             </form>
           </div>
         </div>

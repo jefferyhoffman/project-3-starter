@@ -39,7 +39,7 @@ class SearchBooks extends Component {
             </Jumbotron>
 
             <Input onChange={this.handleInputChange} name="searchFor" placeholder="search for a book..." value={this.state.searchFor} />
-            <FormBtn onClick={() => this.handleSearch(this.state.searchFor)}>Search</FormBtn> <br />
+            <FormBtn style={{backgroundColor: '#a8ff78!important', color: 'black!important'}} onClick={() => this.handleSearch(this.state.searchFor)}>Search</FormBtn> <br />
             <div className="response" />
             <hr />
             <List>
