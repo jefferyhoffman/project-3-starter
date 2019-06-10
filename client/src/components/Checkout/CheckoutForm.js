@@ -32,7 +32,7 @@ class CheckoutForm extends Component {
     }
     handleSubmit = event => {
         const { firstname, lastname, email, address, address2, city, state, zip,
-            cardnumber, cname, cvv, expdate } = this.state;
+            cname, cardnumber, expdate, cvv } = this.state;
 
         this.props.onSubmit(firstname, lastname, email, address, address2,
             city, state, zip, cardnumber, cname, cvv, expdate);
@@ -214,7 +214,7 @@ class CheckoutForm extends Component {
                                             className='form-control'
                                             type="text"
                                             id="cname"
-                                            name="expyear"
+                                            name="cname"
                                             placeholder="  "
                                             value={cname}
                                             onChange={this.handleInputChange}
@@ -231,8 +231,8 @@ class CheckoutForm extends Component {
                                         <input
                                             className='form-control'
                                             type="text"
-                                            id="cname"
-                                            name="expyear"
+                                            id="cardnumber"
+                                            name="cardnumber"
                                             placeholder="  "
                                             value={cardnumber}
                                             onChange={this.handleInputChange}
@@ -277,7 +277,6 @@ class CheckoutForm extends Component {
                                 </div>
                                 <div>
                                 </div>
-                                {/* </div> */}
 
                                 
                                    <Link to="/thankyou"><button id="checkoutBtn2" className='btn btn-primary' type='submit'>Checkout</button></Link>
