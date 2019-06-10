@@ -12,7 +12,7 @@ class ThankYou extends Component {
     return (
         <div className="containerThankYou">
             <p id="thankYouP">Thank You for Shopping with Us</p>
-            <Link to="/"><p id="thankyouSub">Go Back to Homepage</p></Link>
+            <Link id="thankyouLink" to="/"><p id="thankyouSub">Go Back to Homepage</p></Link>
         </div>
 
     );
