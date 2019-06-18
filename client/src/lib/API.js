@@ -12,16 +12,28 @@ export default {
           'Authorization': `Bearer ${authToken}`
         }
       });
-    }
+    },
+
+    register: function (name, email, password) {
+      return axios.post('/api/users/register', { name, email, password })
+    },
   },
 
-  Secrets: {
-    getAll: function (authToken) {
-      return axios.get('/api/secrets', {
-        headers: {
-          'Authorization': `Bearer ${authToken}`
-        }
-      });
+  Items: {
+    getItems: function () {
+      return axios.get("/api/items");
+    },
+
+    getItem: function (id) {
+      return axios.get("/api/items/" + id);
+    },
+
+    deleteItem: function (id) {
+      return axios.delete("/api/items/" + id);
+    },
+
+    saveItem: function (itemData) {
+      return axios.post("/api/items", itemData);
     }
   }
 }

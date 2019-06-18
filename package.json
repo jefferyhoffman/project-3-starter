@@ -17,5 +17,14 @@
   "devDependencies": {
     "concurrently": "^4.1.0",
     "nodemon": "^1.18.10"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.10",
+    "@emotion/styled": "^10.0.12",
+    "mysql2": "^1.6.5",
+    "react-bootstrap4-modal": "^1.7.1",
+    "react-responsive": "^7.0.0",
+    "sequelize": "^5.8.7",
+    "sequelize-cli": "^5.4.0"
   }
 }

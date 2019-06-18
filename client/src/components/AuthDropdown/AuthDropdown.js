@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import Gravatar from 'react-gravatar';
+// import { Link } from 'react-router-dom';
+import "../Navigation/Navigation.css";
 
 import AuthContext from '../../contexts/AuthContext';
 
@@ -30,11 +30,12 @@ class AuthDropdown extends Component {
 
     return (
       <li className="nav-item dropdown">
-        <button className="btn btn-link dropdown-toggle" onClick={this.toggleOpen} id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <Gravatar className="rounded-circle" email={user.email} size={30} /> {user.email}
+        <button className="btn btn-link" onClick={this.toggleOpen} id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div>Hi <span id="navUserName">{user.name}</span>!</div>
+          {/* <div className="rounded-circle" name={user.name} size={30} /> {user.name} */}
         </button>
         <div className={dropdownMenuClass} aria-labelledby="navbarDropdown">
-          <div className="dropdown-item" onClick={this.handleLogout}>Logout</div>
+          <div id="navUSDropItem" className="dropdown-item" onClick={this.handleLogout}>Logout</div>
         </div>
       </li>
     );

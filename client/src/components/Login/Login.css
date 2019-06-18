@@ -1,0 +1,76 @@
+.LoginForm {
+    /* background: url("./productIMG.jpg"); */
+    height: 650px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 50%;
+}
+
+.LoginFormT {
+    /* padding-top: 100px; */
+    /* position: static !important; */
+    text-align: center;
+    margin-bottom: -20px;
+    position: relative;
+    left: 300px;
+    right: 300px;
+    padding: 100px 50px 50px 50px;
+    opacity: 50%;
+
+}
+.card-body {
+    position: static !important;
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: 50%;
+}
+
+.sub-button {
+    width: 100% !important;
+}
+
+.container {
+    position: relative;
+}
+/* 
+.modal-content {
+    height: 550px;
+    width: 500px;
+}
+#signInBtn {
+    height: 50px;
+    width: 100px;
+}
+#closeBtn {
+    height: 50px;
+    width: 50px;
+    font-size: 22px;
+    color: rgba(255, 0, 0, 0.728);
+    background: none;
+    border: none;
+    position: relative;
+    bottom: 12px;
+    left: 10px;
+}
+.modal-body {
+    position: relative;
+    top: 40px;
+    font-size: 14px;
+    
+}
+.form-control {
+    height: 35px;
+}
+.modal-footer {
+    position: relative;
+    top: 80px;
+}
+#signInHeader {
+    position: relative;
+    left: 38%;
+}
+label {
+    font-weight: 600;
+    position: relative;
+    left: 5px;
+} */

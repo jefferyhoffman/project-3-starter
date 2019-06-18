@@ -1,0 +1,387 @@
+/* ONLY use these page COLORS!!! */
+
+/* black rgb(30, 30, 40) */
+/* biege/tan rgb(173, 158, 149) */
+/* dark brown  rgb(70, 50, 40)*/
+/* brown rgb(120, 68, 20)*/
+/* light brown rgb(150, 110, 76)*/
+/*  blue/black-ish rgb(55, 72, 89) */
+ /* ------------------------- */
+
+ /* Set 2 colors
+ - c1purplehsl 
+rgb(108,30,79)
+ - midnightbluehsl 
+rgb(63,36,98)
+ - darkslategrayhsl 
+rgb(67,16,50)
+ - midnightbluehsl 
+rgb(22,32,83)
+ - darkslatebluehsl 
+rgb(32,56,144) 
+- tomato/orange 
+rgb(243,110,45)
+- skyblue
+rgb(138,190,235)
+*/
+body {
+    font-family: "Montserrat", sans-serif !important;
+}
+
+.container-fluid {
+    margin: 0;
+    padding: 0 !important;
+}
+.row {
+    height: 680px;
+    padding: 0;
+    margin: 0;
+}
+
+.rowBanner {
+    width: 50%;
+}
+
+video {
+   height: 200%;
+   position: relative;
+   width: 100%;
+   bottom: 600px;
+   left: 0;
+}
+.text-overlay {
+    z-index: 1;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 6vw !important;
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    letter-spacing: 18px !important;
+    text-shadow: 4px 4px 4px rgba(133, 133, 133, 0.571),
+                 -3px -3px 4px rgba(136, 136, 136, 0.529);
+}
+
+.text-overlay:hover {
+    color: rgb(30, 30, 40);
+}
+
+#row1 {
+    background: rgb(173, 158, 149);
+    /* background-image: linear-gradient(40deg,rgb(32,56,144), rgb(22,32,83), rgb(32,56,144), rgb(63,36,98), rgb(67,16,50),rgb(108,30,79)); */
+    z-index: 2;
+}
+
+#row2sec1{
+    background: rgb(70, 50, 40);
+    /* background: rgb(63,36,98); */
+    height: auto;
+    width: auto; 
+    text-align: center;
+    color: white;
+    padding: 0;
+}
+
+#row2sec2 {
+    background: rgb(30, 30, 40);
+    /* background: rgb(67,16,50); */
+    height: auto;
+    width: auto; 
+    text-align: center;
+    color: white;
+    padding: 0;
+}
+
+#row3sec1 {
+    background: rgb(103, 81, 60);
+    height: auto;
+    width: auto; 
+    text-align: center;
+    color: white;
+    padding: 0;
+}
+#row3sec2 {
+    background: rgb(30, 30, 40);
+    height: auto;
+    width: auto; 
+    text-align: center;
+    color: white;
+    padding: 0;
+}
+#row3sec3 {
+    background: rgb(150, 110, 76);
+    /* background: rgb(63,36,98); */
+    height: auto;
+    width: auto; 
+    text-align: center;
+    color: white;
+    padding: 0;
+}
+
+.productBanner {
+    width: 50%;
+    height: 50%;
+}
+
+#bottomBanner {
+    background: rgb(174, 159, 159);
+    /* background: rgb(138,190,235); */
+    /* height: auto;
+    width: auto;  */
+    text-align: center;
+    color: white;
+    padding: 0;
+}
+
+.productAnime {
+    width: 50%;
+    height: 50%;
+}
+
+/* #row4sec2 {
+    background: rgb(116, 116, 116);
+    height: auto;
+    width: auto; 
+    text-align: center;
+    color: white;
+    padding: 0;
+} */
+.content {
+    /* width: 60%; */
+    margin-top: 20px;
+}
+
+img {
+    margin: 20px;
+    width: 300px;
+    height: 300px;
+}
+.homeAddBtn {
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    background: rgb(162, 117, 49);
+    border: 1px solid white;
+    left: 0px;
+    top: 20px;
+    font-size: .6em;
+    color: rgb(252, 252, 252);
+    margin: 0;
+    text-shadow: 1px 1px 1px black;
+    letter-spacing: 1px;
+}
+
+.productImage {
+    height: 45vh;
+    width: 14vw;
+    text-align: center;
+}
+/* .productIMG {
+    margin-top: 140px;
+    top: 150px;
+    text-align: center;
+    height: 450px;
+    width: 550px;
+}
+#homeProductN {
+    font-size: 2rem;
+}
+.productGIF {
+    margin-top: 140px;
+    top: 150px;
+    text-align: center;
+    height: 400px;
+    width: 300px;
+} */
+p.card-text {
+    font-size: 0.8rem;
+    margin: 10px 20px 20px 20px;
+    line-height: 15px;
+}
+#row2p {
+    margin: 10px 40px;
+    line-height: 20px;
+}
+
+/* Product Page */
+
+.contentProduct {
+    height: 100px;
+    color: rgb(97, 97, 97);
+    position: relative;
+    top: 12px;
+    text-align: center;
+}
+ul {
+    font-size: 14px;
+    list-style: none;
+    margin: 0 20px;
+    padding: 0;
+}
+li#liProducts {
+    line-height: 25px;
+    letter-spacing: 2px;
+    font-size: 12px;
+    
+}
+div.img-container {
+    width: auto;
+    background: white !important;
+}
+.card > .img-container > img {
+    width: 50% !important;
+}
+
+.card > .img-container {
+    height: 68% !important;
+    overflow: hidden;
+    text-align: center;
+    background: #6CADDC;
+}
+#watchList {
+    height: 300px;
+    width: 200px;
+}
+.card {
+    height: 460px !important;
+    background: rgb(255, 255, 255);
+    width: 400px !important;
+    text-align: center;
+}
+strong {
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0;
+}
+
+hr {
+    width: 80%;
+    position: relative;
+    left: 10%;
+    top: 15px;
+}
+
+.co-bio {
+    position: absolute;
+    top: 36vw;
+    color: rgb(255, 255, 255);
+    margin: 10px 60px;
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 1120px) {
+    .co-bio {
+        top: 40vw;
+    }
+}
+
+@media screen and (max-width: 995px) {
+    #row1 {
+        height: 500px;
+    }
+    video {
+        bottom: 300px;
+        height: 120%;
+    }
+    nav {
+        height: 50px;
+        position: relative;
+    }
+    .navbar-brand {
+        font-size: 3em;
+        position: relative;
+        bottom: 20px;
+    }
+    .text-overlay {
+        top: 100px;
+        font-size: 40px !important;
+    }
+    .co-bio {
+        font-size: 0.9rem;
+        margin: 20px;
+        top: 300px;
+    }
+    .row {
+        height: 500px;
+    }
+    p.card-text {
+        font-size: 0.7em;
+        line-height: 14px;
+    }
+    #homeProductN {
+        font-size: 1.5rem;
+    }
+    .productImage {
+        height: 32vh;
+        width: 12vw;
+        margin: 5px;
+    }
+    .productGIF {
+        height: 40vh;
+        width: 20vw;
+        margin-top: 100px;
+    }
+    .homeAddBtn {
+        top: -2px;
+    }
+    #row4sec1, #row4sec2 {
+        height: 500px;
+    }
+    .productIMG {
+        height: 250px;
+        width: 250px;
+    }
+    #footer {
+        height: 250px !important;
+    }
+    #footerSec {
+        font-size: 1rem !important;
+    }
+    #footerItems {
+        font-size: 0.8rem !important;
+    }
+    #footerContainer {
+        margin: 0;
+        padding: 0;
+    }
+    
+}
+
+@media screen and (max-width: 760px) {
+    .text-overlay {
+        display: none;
+    }
+    video {
+        bottom: 240px;
+        height: 130%;
+    }
+    #row1 {
+        height: 400px;
+    }
+    .co-bio {
+        top: 234px;
+        font-size: 0.8em;
+    }
+    .row {
+        height: 440px;
+    }
+    .productImage {
+        height: 26vh;
+    }
+    #homeProductN {
+        font-size: 1.2em;
+    }
+    p.card-text {
+        font-size: 0.6em;
+    }
+    #row4sec1, #row4sec2 {
+        height: 420px;
+    }
+    .productGIF {
+        margin-top: 40px;
+    }
+    .productIMG {
+        margin-top: 40px;
+    }
+}
+

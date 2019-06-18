@@ -1,0 +1,114 @@
+/* ONLY use these page COLORS!!! */
+
+/* black rgb(30, 30, 40) */
+/* biege/tan rgb(173, 158, 149) */
+/* dark brown  rgb(70, 50, 40)*/
+/* brown rgb(120, 68, 20)*/
+/* light brown rgb(150, 110, 76)*/
+
+ /* ------------------------- */
+
+                                        /* Set 2 colors
+ - c1purplehsl 
+rgb(108,30,79)
+ - midnightbluehsl 
+rgb(63,36,98)
+ - darkslategrayhsl 
+rgb(67,16,50)
+ - midnightbluehsl 
+rgb(22,32,83)
+ - darkslatebluehsl 
+rgb(32,56,144) */
+
+nav.navbar {
+    background: rgba(0, 0, 0, 0) !important;
+    margin: 0 !important;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    color: rgb(70, 50, 40) !important;
+}
+nav.navbar:hover {
+    background-color: rgb(30, 30, 40) !important;
+    
+    
+}
+a.navbar-brand {
+   color: rgb(255, 255, 255) !important;
+   font-weight: 300;
+   font-size: 30px;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.475);
+   /* width: 100%; */
+}
+.navbar-brand:hover {
+    font-weight: 600;
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: 400;
+}
+.nav-link:hover {
+    font-weight: 800;
+    letter-spacing: 4px;
+    /* font-size: 20px; */
+}
+#cartNav {
+    font-size: 16px;
+    background: black;
+    width: 50px;
+    text-align: center;
+    border-radius: 20px;
+    height: 18px;
+    margin: 2px 0px;
+}
+#cartNav:hover {
+    color: gray;
+    font-size: 24px;
+}
+#profileIcon {
+    font-size: 18px;
+    margin: 2px 10px 0 10px;
+}
+#profileIcon:hover {
+    color: gray;
+    font-size: 24px;
+}
+.btn-link {
+    color: rgb(133, 133, 133);
+    font-size: 16px;
+    position: relative;
+    top: -4px;
+    left: -48px;
+    margin: 0px -47px 0 36px;
+    height: 0px;
+    font-weight: 600;
+    width: 200px;
+    text-decoration: none !important;
+}
+.btn-link:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: underline !important;
+}
+span#navUserName {
+    color: white !important;
+    font-weight: 600;
+    margin: 0 0 0 5px;
+}
+span#navUserName:hover {
+    color: rgb(189, 177, 44) !important;
+}
+.dropdown-item {
+    color: white;
+}
+.dropdown-item:hover {
+    background: rgba(128, 128, 128, 0.297);
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    cursor: pointer;
+}
+.dropdown-menu {
+    background: rgba(128, 128, 128, 0.297);
+    height: 200px;
+    border-top: none;
+}
