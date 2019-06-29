@@ -10,11 +10,13 @@ import Login from '../../pages/Login/Login';
 import Register from '../../pages/Register/Register';
 // import Secret from '../../pages/Secret/Secret';
 import Home from '../../pages/Home/Home';
+import NavPage from '../../pages/NavPage/NavPage';
 import View from '../../pages/View/View';
 import About from '../../pages/About/About';
 import MyDrinks from '../../pages/MyDrinks/MyDrinks';
 import Create from '../../pages/Create/Create';
 import Search from '../../pages/Search/Search';
+import SearchAPI from '../../pages/Search/SearchAPI';
 import FeaturedDrinks from '../../pages/FeaturedDrinks/FeaturedDrinks';
 import NotFound from '../../pages/NotFound/NotFound';
 import KentuckyMule from '../../pages/DrinkFeaturePages/KentuckyMule';
@@ -23,11 +25,8 @@ import OldFashioned from '../../pages/DrinkFeaturePages/OldFashioned';
 import SherbetMimosa from '../../pages/DrinkFeaturePages/SherbetMimosa';
 import PineappleMartini from '../../pages/DrinkFeaturePages/PineappleMartini';
 import BabyGuinness from '../../pages/DrinkFeaturePages/BabyGuinness';
-
-
-
-import './App.css';
 import Footer from '../Footer/Footer';
+import './App.css';
 
 class App extends Component {
   constructor(props) {
@@ -77,12 +76,14 @@ class App extends Component {
               <Route path='/register' component={Register} />
               {/* <PrivateRoute path='/secret' component={Secret} /> */}
               <Route exact path='/' component={Home} />
+              <Route exact path='/navpage' component={NavPage} />
               <Route exact path='/featured' component={FeaturedDrinks} />
               <Route exact path='/view' component={View} />
               <Route exact path='/about' component={About} />
               <Route exact path='/mydrinks' component={MyDrinks} />
               <Route exact path='/create' props={authToken} component={Create} />
               <Route exact path='/search' component={Search} />
+              <Route exact path='/searchAPI' component={SearchAPI} />
               <Route exact path='/kentuckyMule' component={KentuckyMule} />
               <Route exact path='/jeffTheCodeGuru' component={JeffTheCodeGuru} />
               <Route exact path='/oldFashioned' component={OldFashioned} />
@@ -92,8 +93,8 @@ class App extends Component {
               <Route component={NotFound} />
             </Switch>
           </div>
-          <Footer />
         </div>
+        <Footer />
       </AuthContext.Provider>
     );
   }

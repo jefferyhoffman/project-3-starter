@@ -36,7 +36,7 @@ drinksController.get('/', (req, res) => {
 drinksController.get('/search', function (req, res) {
   const searchTerm = req.query.name;
   db.Drinks
-    .find({ name: new RegExp(`.*${searchTerm}.*`) })
+    .find({ name: { $regex: ".*"+searchTerm+".*", $options:'i'} })
     .then(dbModel => {
       // console.log(dbModel)
       res.json(dbModel)
@@ -44,8 +44,17 @@ drinksController.get('/search', function (req, res) {
     .catch(err => res.status(422).json(err));
 });
 
- // example search in database for partial name with 'Old'
-  // db.getCollection('drinks').find({'name': {$regex: '.*Old.*'}})
+// drinksController.get('/search', function (req, res) {
+//   const searchTerm = req.query.name;
+//   db.Drinks
+//     .find({ name: new RegExp(`.*${searchTerm}.*`), $options:'i' })
+//     .find({ name: new RegExp(`.*${searchTerm}.*`) })
+//     .then(dbModel => {
+//       // console.log(dbModel)
+//       res.json(dbModel)
+//     })
+//     .catch(err => res.status(422).json(err));
+// });
 
 // drinksController.get('/ingredient', function (req, res) {
 //   const searchTerm = req.query.ingredients_measurements;
@@ -139,8 +148,8 @@ module.exports = drinksController;
 //       // console.log(dbModel)
 //       res.json(dbModel)})
 //     .catch(err => res.status(422).json(err));
-  
-  
+
+
 //   });
 
 // drinksController.get('/mine', JWTVerifier, function (req, res) {

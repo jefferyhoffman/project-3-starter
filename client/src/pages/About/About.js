@@ -29,17 +29,19 @@ class About extends Component {
                   </div>
                   <div className='row'>
                     <div className='col-5'>
-                      <h3 className="portfolio">Sahiba Ahuja</h3>
-                      <p><a href="#" target="_blank">Portfolio</a></p>
-                      <p><a href="https://github.com/sahibaahuja" target="_blank" rel="noopener noreferrer">GitHub Repositories</a></p>
+                      <h3 className='portfolio'>Sahiba Ahuja</h3>
+                      <p><a href='#' target='_blank' rel='noopener noreferrer'><i className="fas fa-portrait"></i> Portfolio</a></p>
+                      <p><a href='https://github.com/sahibaahuja' target='_blank' rel='noopener noreferrer'><i className="fab fa-github"></i> GitHub Repositories</a></p>
                     </div>
                     <div className='col-5'>
-                      <h3 className="portfolio">Ruchita Gandhe</h3>
-                      <p><a href="https://ruchita-g.github.io/Responsive-Portfolio" target="_blank">Portfolio</a></p>
-                      <p><a href="https://github.com/Ruchita-G?tab=repositories" target="_blank" rel="noopener noreferrer">GitHub Repositories</a></p>
+                      <h3 className='portfolio'>Ruchita Gandhe</h3>
+                      <p><a href='https://ruchita-g.github.io/Portfolio' target='_blank' rel='noopener noreferrer'><i className="fas fa-portrait"></i> Portfolio</a></p>
+                      <p><a href='https://github.com/Ruchita-G?tab=repositories' target='_blank' rel='noopener noreferrer'><i className="fab fa-github"></i> GitHub Repositories</a></p>
                     </div>
                   </div>
                 </div>
+                <br />
+                <br />
                 <p className='card-text'><small className='text-muted'>&copy;Copyright2019</small></p>
               </div>
             </div>
