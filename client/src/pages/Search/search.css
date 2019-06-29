@@ -8,8 +8,6 @@
     outline: none;
     height: 40px;
     color: black; 
-   
-    
 }
 
 input.search {
@@ -19,3 +17,18 @@ input.search {
     text-decoration: inherit;
 }
 
+.searchAPI {
+  padding: .5% 5%;
+}
+
+.search-header {
+    text-align: left;
+}
+
+.form-group-searchbar {
+ padding: 1% 10%;
+}
+
+ul#menu li {
+    display:inline;
+  }

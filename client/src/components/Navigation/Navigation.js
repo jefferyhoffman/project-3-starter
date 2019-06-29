@@ -52,6 +52,9 @@ class Navigation extends Component {
                     <Link className='nav-link' style={text} to='/' onClick={this.toggleCollapse}>Home</Link>
                   </li> */}
                   <li className='nav-item'>
+                    <Link className='nav-link' style={text} to='/navpage' onClick={this.toggleCollapse}>Navpage</Link>
+                  </li>
+                  <li className='nav-item'>
                     <Link className='nav-link' style={text} to='/featured' onClick={this.toggleCollapse}>Featured</Link>
                   </li>
                   <li className='nav-item'>
@@ -59,6 +62,9 @@ class Navigation extends Component {
                   </li>
                   <li className='nav-item'>
                     <Link className='nav-link' style={text} to='/search' onClick={this.toggleCollapse}>Search</Link>
+                  </li>
+                  <li className='nav-item'>
+                    <Link className='nav-link' style={text} to='/searchAPI' onClick={this.toggleCollapse}>SearchAPI</Link>
                   </li>
                   <li className='nav-item'>
                     <Link className='nav-link' style={text} to='/view' onClick={this.toggleCollapse}>Drinks</Link>
