@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { Input, TextArea, Select, FormBtn } from '../../components/Form';
+import { Link } from 'react-router-dom';
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
 import create from '../Images/create.jpg';
@@ -54,9 +55,9 @@ class Create extends Component {
 
     return (
       <>
-      <div className='card-create mb-3 container'>
-        <br/>
-        <br/>
+        <div className='card-create mb-3 container'>
+          <br />
+          <br />
           <div className='row mb-3'>
             <div className='col-md-5'>
               <img src={create} className='create-img-responsive' alt='drink' />
@@ -64,8 +65,10 @@ class Create extends Component {
             </div>
             <div className='col-md-6'>
               <div className='card-body-create'>
-                <h2 className='pages-header card-title'>Craft your drink</h2>
-            <p className='card-title'>Add your favorite drink!</p>
+                <Link to='/login'><h2 className='pages-header card-title'>Sign in here and Craft your drink</h2></Link>
+                <Link to='/register'><h4 className='pages-header card-title'>Sign up here!</h4></Link>
+                {/* <Link to='/login'>Sign in</Link> */}
+
                 <form onSubmit={this.handleSubmit}>
                   <div class='form-row'>
                     <div class='form-group col-md-6'>
@@ -151,7 +154,7 @@ class Create extends Component {
                       </Select>
                     </div>
                     <div className='form-group col-md-6'>
-                     <FormBtn className='btn-lg btn-block' onClick={() => this.handleSubmit(authToken)}>Submit Drink</FormBtn>
+                      <FormBtn className='btn-lg btn-block' onClick={() => this.handleSubmit(authToken)}>Submit Drink</FormBtn>
                     </div>
                   </div>
                 </form>
@@ -159,7 +162,7 @@ class Create extends Component {
             </div>
           </div>
         </div>
-</>
+      </>
     );
   }
 }

@@ -82,11 +82,11 @@ class MYDrinks extends Component {
       <div>
         <br />
         <h2 className='pages-header'>Your Creations!</h2>
-        {drinks.map(drink => {
-          return (
-            <>
-              <div>
-                <div className='container'>
+        <div className='container-mydrinks'>
+          {drinks.map(drink => {
+            return (
+              <>
+                <div>
                   <div className='row no-gutters'>
                     <div className='col-1' style={xbutton}>
                       <FormBtn className='deletebtn' onClick={() => this.deleteDrinks(drink._id)}><span aria-hidden='true'>&times;</span></FormBtn>
@@ -110,10 +110,10 @@ class MYDrinks extends Component {
                     </div>
                   </div>
                 </div>
-              </div>
-            </>
-          )
-        })}
+              </>
+            )
+          })}
+        </div>
       </div>
 
 
