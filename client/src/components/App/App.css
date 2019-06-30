@@ -4,7 +4,9 @@
 
 .container{
   height: auto;
+  min-height: 650px;
   margin-bottom: 5%;
+  /* flex: 1 0 auto; */
 }
 
 .App-logo {
