@@ -1,3 +1,43 @@
+.container-allsearch{
+    position: relative; 
+  }
+
+.container-allsearch::after{
+    content:'';
+    background: url('../Images/pic5.jpg') no-repeat center center fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index:-1;
+    opacity: 0.4;
+  }
+
+.container-lookup{
+    position: relative; 
+  }
+
+.container-lookup::after{
+    content:'';
+    background: url('../Images/img1.jpg') no-repeat center center fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    z-index:-1;
+    opacity: 0.4;
+  }
+
 .search {
     font-size: 30px;
     width: 100%;

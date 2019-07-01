@@ -1,5 +1,4 @@
 nav {
-  height: 100px;
   background: linear-gradient(to top, #5c6268, #dfe4e7 100%);
   /* background: linear-gradient(to top, #cb2d3e, #ef473a 100%); */
   /* background: linear-gradient(to top, #bbd2c5, #536976 100%); */
@@ -14,7 +13,6 @@ nav {
   /* color: #d7e2e9; */
   /* color: #ef473a; */
   padding-bottom: 8%;
-  padding-right: 4%;
   }
 
 .headermain:hover {
@@ -28,9 +26,9 @@ nav {
 
 .nav-item {
   color:#ff0000;
-  /* color: #ef473a; */
-  /* font-family: 'Oswald', sans-serif;
-  justify-content: end; */
+  justify-content: center;
+  padding: 0% 2%;
+  font-family: 'Oswald', sans-serif;
 } 
 
 .nav-item:hover {
@@ -67,18 +65,24 @@ nav {
   border-bottom-color: #ff0000;
 }
 
+.dropdown-item {
+  text-align: center;
+  box-shadow: 20px 10px 20px 10px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
 /* @media (max-width: 480px) {
-  nav {
+  .Navigation {
     width:100%;
     height: auto;
-    float:center;
   }
-  .nav-item{
-    width:100%;
-    float:center;
-  }
-  .nav-link{
-    width: 100;
-    float: center;
-  }
+}  */
+
+/* @media (min-width: 1025px) and (max-width: 1260px)
+{
+    nav{
+       width : 100% !important;
+       max-width : 100% !important;
+    }
 } */
+
