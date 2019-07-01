@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-import { Input, TextArea, Select, FormBtn } from '../../components/Form';
 import { Link } from 'react-router-dom';
+import { Input, TextArea, Select, FormBtn } from '../../components/Form';
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
 import create from '../Images/create.jpg';
@@ -65,10 +65,9 @@ class Create extends Component {
             </div>
             <div className='col-md-6'>
               <div className='card-body-create'>
-                <Link to='/login'><h2 className='pages-header card-title'>Sign in here and Craft your drink</h2></Link>
-                <Link to='/register'><h4 className='pages-header card-title'>Sign up here!</h4></Link>
-                {/* <Link to='/login'>Sign in</Link> */}
-
+                <h2 className='pages-header card-title'>Craft your drink</h2>
+                <Link to='/mydrinks'><h4 className='pages-header card-title'>Click to view your creations!</h4></Link>
+                <br />
                 <form onSubmit={this.handleSubmit}>
                   <div class='form-row'>
                     <div class='form-group col-md-6'>

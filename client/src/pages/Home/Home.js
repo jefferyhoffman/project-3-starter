@@ -15,6 +15,14 @@ class HomePage extends Component {
   render() {
     return (
       <div>
+        <div className='row'>
+          <div className='col-sm-4'><Link to='/view'><h1 className='pages-header homepage'>Explore</h1></Link>
+          </div>
+          <div className='col-sm-4'><Link to='/search'><h1 className='pages-header homepage'>Search</h1></Link>
+          </div>
+          <div className='col-sm-4'><Link to='/featured'><h1 className='pages-header homepage'>Experience</h1></Link>
+          </div>
+        </div>
         <div className='row-jumbo'>
           <div className='col-12'>
             <div className='jumbotron jumbotron-fluid'>
@@ -73,6 +81,7 @@ class HomePage extends Component {
                     <span className='sr-only'>Next</span>
                   </Link> */}
                 </div>
+                
               </div>
             </div>
           </div>

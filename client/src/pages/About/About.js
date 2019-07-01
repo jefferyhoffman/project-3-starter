@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import pic4 from '../Images/pic4.jpg'
+import pic2 from '../Images/pic2.jpg'
 
 class About extends Component {
   render() {
@@ -11,7 +11,7 @@ class About extends Component {
           <div className='card-about mb-4'>
             <div className='row no-gutters'>
               <div className='col-md-4'>
-                <img src={pic4} className='card-img' alt='Drinks' />
+                <img src={pic2} className='card-img' alt='Drinks' />
               </div>
               <div className='col-md-7'>
                 <div className='card-body-about'>

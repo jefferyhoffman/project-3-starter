@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
+import { Redirect } from 'react-router-dom';
 import AuthContext from '../../contexts/AuthContext';
 
- const text = {
- color: '#ff0000',
-//  color: 'black',
+const text = {
+  color: 'white',
+  //  color: 'black',
 }
 
- 
+
 class AuthDropdown extends Component {
   static contextType = AuthContext;
 
@@ -25,7 +25,6 @@ class AuthDropdown extends Component {
   handleLogout = () => {
     this.context.onLogout();
     this.props.onClick();
-   
   }
 
   render() {
@@ -36,13 +35,13 @@ class AuthDropdown extends Component {
 
     return (
       <li className="nav-item dropdown">
-      <button className="btn btn-link dropdown-toggle" style={text} onClick={this.toggleOpen} id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <div className="rounded-circle" email={user.email} size={30} /> {user.email}
-      </button>
-      <div className={dropdownMenuClass} aria-labelledby="navbarDropdown">
-        <div className="dropdown-item" onClick={this.handleLogout}>Logout</div>
-      </div>
-    </li>
+        <button className="btn btn-link dropdown-toggle" style={text} onClick={this.toggleOpen} id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div className="rounded-circle" email={user.email} size={30} /><strong>{user.email}</strong>
+        </button>
+        <Link to='/'><div className={dropdownMenuClass} style={{ position: 'static', marginLeft: '22%', opacity: '.25' }} aria-labelledby="navbarDropdown">
+          <div className="dropdown-item" onClick={this.handleLogout}><strong>Sign out</strong></div>
+        </div></Link>
+      </li >
     );
   }
 }
