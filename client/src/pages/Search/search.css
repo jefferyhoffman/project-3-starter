@@ -72,3 +72,168 @@ input.search {
 ul#menu li {
     display:inline;
   }
+
+
+  /* Tiny reset thingy */
+body,html{margin:0;padding:0;}
+
+.wrapper {
+  /* The height needs to be set to a fixed value for the effect to work.
+   * 100vh is the full height of the viewport. */
+  width: 100%;
+  height: 100vh;
+  /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
+  overflow-x: hidden;
+  /* Enable scrolling on the page. */
+  overflow-y: auto;
+  /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+  perspective: 2px;
+}
+
+.section {
+  /* Needed for children to be absolutely positioned relative to the parent. */
+  position: relative;
+  /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+  height: 750px;
+  
+  /* For text formatting. */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 0 0 5px #000;
+}
+
+.parallax:hover {
+  /* color:#ff0000; */
+  font-size: 30px;
+  padding-right: 5%;
+  color:white;
+  text-indent: 100px;
+  transition: text-indent .5s;
+ }
+
+.parallax:hover::before {
+  display: inline-block;
+  content: 'Be your own bartender';
+}
+
+.parallax::after {
+  /* Display and position the pseudo-element */
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  
+  /* Move the pseudo-element back away from the camera,
+   * then scale it back up to fill the viewport.
+   * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+  transform: translateZ(-1px) scale(2);
+  /* Force the background image to fill the whole element. */
+  background-size: 100%;
+  /* Keep the image from overlapping sibling elements. */ 
+  z-index: -1;
+}
+
+/* The styling for the static div. */
+.static {
+  height: 500px;
+  background: linear-gradient(to top, #362e2e, rgb(0, 150, 150) 100%);
+
+}
+
+.searchmain {
+ color: #ff0000;
+ font-size: 35px;
+ /* color: white; */
+ 
+}
+
+.searchmain:hover {
+ /* color:#ff0000; */
+ color:white;
+ text-indent: 25px;
+ transition: text-indent .5s;
+}
+
+.searchmain:hover::before {
+  display: inline-block;
+  content: 'Lookup' url('../Images/Logo.png');
+}
+
+.tag-search {
+  color: white;
+  
+ }
+
+ .tag-search:hover {
+  color:#ff0000;
+  /* color:white; */
+  
+ }
+
+
+/* Sets the actual background images to adorable kitties. This part is crucial. */
+.bg1::after {
+  background-image: url('../Images/img7.jpg');
+}
+
+.bg2::after {
+  background-image: url('../Images/register.jpg');
+}
+
+.bg3::after {
+  background-image: url('../Images/login.jpg');
+}
+
+.bg4::after {
+  background-image: url('../Images/img8.jpg');
+}
+
+.bg5::after {
+  background-image: url('../Images/jumbo6.jpg');
+}
+
+.bg6::after {
+  background-image: url('../Images/img9.jpg');
+}
+
+.bg7::after {
+  background-image: url('../Images/img2.jpg');
+}
+
+.bg8::after {
+  background-image: url('../Images/img10.jpg');
+}
+
+.bg9::after {
+  background-image: url('../Images/img6.jpg');
+}
+
+.bg10::after {
+  background-image: url('../Images/img5.jpg');
+}
+
+.bg11::after {
+  background-image: url('../Images/img4.jpg');
+}
+
+.bg12::after {
+  background-image: url('../Images/jumbo7.jpg');
+}
+
+.bg13::after {
+  background-image: url('../Images/img3.jpg');
+}
+
+.bg14::after {
+  background-image: url('../Images/pic14.jpg');
+}
+
+.bg15::after {
+  background-image: url('../Images/jumbo3.jpg');
+}
+
+
