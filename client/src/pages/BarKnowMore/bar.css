@@ -23,12 +23,14 @@
   }
   
   .box > span {
-    font-size: 3.8vh;
+    font-size: 2.5vh;
     display: block;
     text-align: center;
-    height: 10vh;
-    line-height: 2.6;
+    height: 10vh; 
+    line-height: 2.0;
   }
+
+
   
   .box:hover { flex: 1 1 50%; }
   .box:hover > img {
