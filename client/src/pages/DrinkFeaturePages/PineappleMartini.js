@@ -13,10 +13,10 @@ class PineappleMartini extends Component {
           <div className='container-pineapple'>
           <div className='container-featured px-lg-5'>
               <div className='row mx-lg-n5'>
-                <div className='col py-3 px-lg-5'>
+                <div className='col-sm-6 py-3 px-lg-5'>
                 <Link to='/featured'><img className='img-featured' src={top2} alt='Featured Drink' /></Link>
                 </div>
-                <div className='col py-3 px-lg-5'>
+                <div className='col-sm-6 py-3 px-lg-5'>
                   <h1 className='pages-header'>Pineapple Martini</h1>
                   <h3>Alcoholic - Cocktail</h3>
                   <br />
@@ -25,14 +25,14 @@ class PineappleMartini extends Component {
               </div>
             </div><div className='container-featured px-lg-5'>
               <div className='row mx-lg-n5'>
-                <div className='col py-3 px-lg-5'>
+                <div className='col-sm-6 py-3 px-lg-5'>
                   <h3>Ingredients:</h3>
                   <h4>Vodka</h4>
                   <h4>Pineapple chunks</h4>
                   <h4>Fresh pineapple pieces for garnish</h4>
                   <h4>Pineapple juice or simple syrup - optional</h4>
                 </div>
-                <div className='col py-3 px-lg-5'>
+                <div className='col-sm-6 py-3 px-lg-5'>
                   <h3>Instructions:</h3>
                   <h4>Just cut the pineapple into chunks and pour the vodka over it. I let mine infuse at room temperature for 14 to 21 days before straining it and pouring it into bottles. Shake 4 0z of your pineapple infused vodka with ice in martini Shaker, pour in galss and enjoy! </h4>
                   <h3>Glass:</h3>

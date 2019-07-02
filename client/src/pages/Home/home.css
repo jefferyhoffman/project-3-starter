@@ -19,10 +19,11 @@
 }
 
 .card-drinks{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: aliceblue;
     text-align: left;
-    margin: 5%;
+    margin: 4%;
     box-shadow: 10px 10px 5px grey;
 
 }
@@ -161,6 +162,15 @@
     }
   }
 
+.card-img {
+  width:100%;
+  height: auto;
+} 
+
+.card-textflip {
+  padding: 5%;
+}
+
 @media (max-width: 575.98px) { 
   .responsive-d-block{
     width:100%;
@@ -175,6 +185,19 @@
   height: auto;
 }
 
+.card-drinks{
+  padding:0% 5%;
+}
+
+.container-featured{
+  padding: 5%;
+}
+
+.flip-card {
+  margin: 5%;
+  padding: 5%;
+}
+
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) { 
@@ -183,8 +206,8 @@
     height: auto;
   }
   .card-drinks{
-    width:100%;
-    height: auto;
+    padding:0% 5%;
+   margin-left: 5%;
  }
  .homepage{
   width:100%;
@@ -194,7 +217,14 @@
     width: 100%;
     height: auto;
   }
-}
+  .container-featured{
+    padding: 5%;
+  }
+  .card-drinks{
+    padding:5%;
+  }
+  
+ }
 
 
 @media (min-width: 768px) and (max-width: 991.98px) { 
@@ -210,6 +240,7 @@
   width:100%;
   height: auto;
 }
+
  }
 
 @media (min-width: 992px) and (max-width: 1199.98px) { 

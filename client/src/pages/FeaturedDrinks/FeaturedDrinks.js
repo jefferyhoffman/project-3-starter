@@ -18,11 +18,11 @@ class FeaturedDrinks extends Component {
                     <h1 className="pages-header">Drinks we Love!</h1>
                     <div className='row'>
                         <div className='col-featured-lg-3 col-md-4 col-sm-12 col-xs-12'>
-                            <Link to='/jeffTheCodeGuru'><button>
+                            <Link to='/jeffTheCodeGuru'>
                                 <div className="flip-card">
                                     <div className="flip-card-inner">
                                         <div className="flip-card-front">
-                                            <div className='card-top'>
+                                            <div className='card-topflip'>
                                                 <img src={top} className='card-img-top' alt={'featured-drink'}></img>
                                                 <div className='card-body'>
                                                     <h4 className='card-title'>Jeff 'The Code Guru'</h4>
@@ -31,18 +31,18 @@ class FeaturedDrinks extends Component {
                                         </div>
                                         <div className="flip-card-back">
                                             <strong><h4 className='card-title'>Jeff 'The Code Guru'</h4></strong>
-                                            <p className='card-text'>Our mocha take on White Russian! In honour of our phenomenal 'Guru' Jeffery Hoffman, it's one of his favroite drink! Thank you Jeff for believing in us when we doubted ourselves!</p>
+                                            <p className='card-textflip'>Our mocha take on White Russian! In honour of our phenomenal 'Guru' Jeffery Hoffman, it's one of his favroite drink! Thank you Jeff for believing in us when we doubted ourselves!</p>
                                         </div>
                                     </div>
                                 </div>
-                            </button></Link>
+                            </Link>
                         </div>
                         <div className='col-featured-lg-3 col-md-4 col-sm-12 col-xs-12'>
-                            <Link to='/pineappleMartini'><button>
+                            <Link to='/pineappleMartini'>
                                 <div className="flip-card">
                                     <div className="flip-card-inner">
                                         <div className="flip-card-front">
-                                            <div className='card-top'>
+                                            <div className='card-topflip'>
                                                 <img src={top2} className='card-img-top' alt={'featured-drink'}></img>
                                                 <div className='card-body'>
                                                     <h4 className='card-title'>Pineapple Martini</h4>
@@ -51,18 +51,18 @@ class FeaturedDrinks extends Component {
                                         </div>
                                         <div className="flip-card-back">
                                             <strong><h4 className='card-title'>Pineapple Martini</h4></strong>
-                                            <p className='card-text'>Pineapple Infused Vodka Martini is one for connoisseurs who take their craft seriouly. Patience and hard work do pay off We say.</p>
+                                            <p className='card-textflip'>Pineapple Infused Vodka Martini is one for connoisseurs who take their craft seriouly. Patience and hard work do pay off We say.</p>
                                         </div>
                                     </div>
                                 </div>
-                            </button></Link>
+                            </Link>
                         </div>
                         <div className='col-featured-lg-3 col-md-4 col-sm-12 col-xs-12'>
-                            <Link to='/babyGuinness'><button>
+                            <Link to='/babyGuinness'>
                                 <div className="flip-card">
                                     <div className="flip-card-inner">
                                         <div className="flip-card-front">
-                                            <div className='card-top'>
+                                            <div className='card-topflip'>
                                                 <img src={top4} className='card-img-top' alt={'featured-drink'}></img>
                                                 <div className='card-body'>
                                                     <h4 className='card-title'>Baby Guinness</h4>
@@ -70,21 +70,21 @@ class FeaturedDrinks extends Component {
                                             </div>
                                         </div>
                                         <div className="flip-card-back">
-                                            <strong><h4 className='card-title'>Baby Guinness</h4></strong> 
-                                           <p className='card-text'>Baby Guinness Shots are perfect blend of coffee and creme base liquor! We find it one of the best tasting shot whichs looks amazing cool.</p>
+                                            <strong><h4 className='card-title'>Baby Guinness</h4></strong>
+                                            <p className='card-textflip'>Baby Guinness Shots are perfect blend of coffee and creme base liquor! We find it one of the best tasting shot whichs looks amazing cool.</p>
                                         </div>
                                     </div>
                                 </div>
-                            </button></Link>
+                            </Link>
                         </div>
                     </div>
                     <div className='row'>
                         <div className='col-featured-lg-3 col-md-4 col-sm-12 col-xs-12'>
-                            <Link to='/kentuckyMule'><button>
+                            <Link to='/kentuckyMule'>
                                 <div className="flip-card">
                                     <div className="flip-card-inner">
                                         <div className="flip-card-front">
-                                            <div className='card-top'>
+                                            <div className='card-topflip'>
                                                 <img src={top1} className='card-img-top' alt={'featured-drink'}></img>
                                                 <div className='card-body'>
                                                     <h4 className='card-title'>Kentucky Mule</h4>
@@ -92,19 +92,19 @@ class FeaturedDrinks extends Component {
                                             </div>
                                         </div>
                                         <div className="flip-card-back">
-                                            <strong><h4 className='card-title'>Kentucky Mule</h4></strong> 
-                                           <p className='card-text'>A bourbon take of Moscow Mule has exploded everywhere and is one the most popular drinks around. We think it's here to stay for a long time</p>
+                                            <strong><h4 className='card-title'>Kentucky Mule</h4></strong>
+                                            <p className='card-textflip'>A bourbon take of Moscow Mule has exploded everywhere and is one the most popular drinks around. We think it's here to stay for a long time</p>
                                         </div>
                                     </div>
                                 </div>
-                            </button></Link>
+                            </Link>
                         </div>
                         <div className='col-featured-lg-3 col-md-4 col-sm-12 col-xs-12'>
-                            <Link to='/sherbetMimosa'><button>
+                            <Link to='/sherbetMimosa'>
                                 <div className="flip-card">
                                     <div className="flip-card-inner">
                                         <div className="flip-card-front">
-                                            <div className='card-top'>
+                                            <div className='card-topflip'>
                                                 <img src={top5} className='card-img-top' alt={'featured-drink'}></img>
                                                 <div className='card-body'>
                                                     <h4 className='card-title'>Sherbet Mimosa</h4>
@@ -113,18 +113,18 @@ class FeaturedDrinks extends Component {
                                         </div>
                                         <div className="flip-card-back">
                                             <strong><h4 className='card-title'>Sherbet Mimosa</h4></strong>
-                                            <p className='card-text'>Sherbet Mimosa's are the best, perfect for any brunch occasion! You can make it with any color or flavor sherbet, We say it's a must try!</p>
+                                            <p className='card-textflip'>Sherbet Mimosa's are the best, perfect for any brunch occasion! You can make it with any color or flavor sherbet, We say it's a must try!</p>
                                         </div>
                                     </div>
                                 </div>
-                            </button></Link>
+                            </Link>
                         </div>
                         <div className='col-featured-lg-3 col-md-4 col-sm-12 col-xs-12'>
-                            <Link to='/oldFashioned'><button>
+                            <Link to='/oldFashioned'>
                                 <div className="flip-card">
                                     <div className="flip-card-inner">
                                         <div className="flip-card-front">
-                                            <div className='card-top'>
+                                            <div className='card-topflip'>
                                                 <img src={top3} className='card-img-top' alt={'featured-drink'}></img>
                                                 <div className='card-body'>
                                                     <h4 className='card-title'>Old Fashioned</h4>
@@ -132,12 +132,12 @@ class FeaturedDrinks extends Component {
                                             </div>
                                         </div>
                                         <div className="flip-card-back">
-                                            <strong><h4 className='card-title'>Old Fashioned</h4></strong> 
-                                           <p className='card-text'>Classy, timeless  and loved across generations. We can safely claim good 'old Old Fashioned is never gonna be out of style.</p>
+                                            <strong><h4 className='card-title'>Old Fashioned</h4></strong>
+                                            <p className='card-textflip'>Classy, timeless  and loved across generations. We can safely claim good 'old Old Fashioned is never gonna be out of style.</p>
                                         </div>
                                     </div>
                                 </div>
-                            </button></Link>
+                            </Link>
                         </div>
                     </div>
                 </div>

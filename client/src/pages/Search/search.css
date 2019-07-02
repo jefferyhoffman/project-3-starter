@@ -78,6 +78,7 @@ ul#menu li {
 body,html{margin:0;padding:0;}
 
 .wrapper {
+  
   /* The height needs to be set to a fixed value for the effect to work.
    * 100vh is the full height of the viewport. */
   width: 100%;
@@ -235,5 +236,25 @@ body,html{margin:0;padding:0;}
 .bg15::after {
   background-image: url('../Images/jumbo3.jpg');
 }
+
+.searchbtn {
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;        
+}
+
+.searchbtn:focus { outline: none; }
+
+.searchrow{
+  background: linear-gradient(to top, #362e2e, rgb(0, 150, 150) 100%);
+  color: White;
+  font-size: 16px;
+  padding: 5%;
+  margin: 5%;
+}
+
 
 

@@ -13,10 +13,10 @@ class KentuckyMule extends Component {
           <div className='container-mule'>
           <div className='container-featured px-lg-5'>
               <div className='row mx-lg-n5'>
-                <div className='col py-3 px-lg-5'>
+                <div className='col-sm-6 py-3 px-lg-5'>
                 <Link to='/featured'><img className='img-featured' src={top1} alt='Featured Drink' /></Link>
                 </div>
-                <div className='col py-3 px-lg-5'>
+                <div className='col-sm-6 py-3 px-lg-5'>
                   <h1 className='pages-header'>Kentucky Mule</h1>
                   <h3>Alcoholic - Cocktail</h3>
                   <br />
@@ -25,14 +25,14 @@ class KentuckyMule extends Component {
               </div>
             </div><div className='container-featured px-lg-5'>
               <div className='row mx-lg-n5'>
-                <div className='col py-3 px-lg-5'>
+                <div className='col-sm-6 py-3 px-lg-5'>
                   <h3>Ingredients:</h3>
                   <h4>Bourbon or Whiskey 2-oz</h4>
                   <h4>Ginger beer 4-oz</h4>
                   <h4>Fresh lime juice</h4>
                   <h4>Fresh mint and lime wedge to garnish</h4>
                 </div>
-                <div className='col py-3 px-lg-5'>
+                <div className='col-sm-6 py-3 px-lg-5'>
                   <h3>Instructions:</h3>
                   <h4>Fill a copper mug with ice Pour in the bourbon and lime juice. Top it off with ginger beer: Give it a quick stir. Garnish and serve</h4>
                   <h3>Glass:</h3>

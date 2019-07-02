@@ -177,14 +177,16 @@ class AllSearch extends Component {
             <h2 className='pages-header'>Search by Type!</h2>
             <br />
             <div className='row'>
-              <div className='col-12'>
-                <form className='searchAPI' style={{ marginRight: '33%' }}>
+              <div className='col-sm-4'></div>
+              <div className='col-sm-4'>
+                <form className='searchAPI' style={{ marginRight: '8%' }}>
                   <FormBtn onClick={this.handleSubmit0}><h4>Click to for a Random Drink</h4></FormBtn>
                 </form>
+                <div className='col-sm-4'></div>
               </div>
             </div>
             <div className='row'>
-              <div className='col-4'>
+              <div className='col-sm-4'>
                 <form className='searchAPI'>
                   <h4 className='search-header'>Name a Drink!</h4>
                   <div className='form-group'>
@@ -193,7 +195,7 @@ class AllSearch extends Component {
                   <FormBtn className='my-2 my-sm-0' onClick={this.handleSubmit}>Search</FormBtn>
                 </form>
               </div>
-              <div className='col-4'>
+              <div className='col-sm-4'>
                 <form className='searchAPI'>
                   <h4 className='search-header'>Search drink kind!</h4>
                   <div className='form-group'>
@@ -206,7 +208,7 @@ class AllSearch extends Component {
                   <FormBtn className='my-2 my-sm-0' onClick={this.handleSubmit1}>Search</FormBtn>
                 </form>
               </div>
-              <div className='col-4'>
+              <div className='col-sm-4'>
                 <form className='searchAPI'>
                   <div className='form-group'>
                     <h4 className='search-header'>Search a drink by Category!</h4>
@@ -229,7 +231,7 @@ class AllSearch extends Component {
               </div>
             </div>
             <div className='row'>
-              <div className='col-4'>
+              <div className='col-sm-4'>
                 <form className='searchAPI'>
                   <div className='form-group'>
                     <h4 className='search-header'>Search a drink by Liquor!</h4>
@@ -346,7 +348,7 @@ class AllSearch extends Component {
                   <FormBtn className='my-2 my-sm-0' onClick={this.handleSubmit3}>Search</FormBtn>
                 </form>
               </div>
-              <div className='col-4'>
+              <div className='col-sm-4'>
                 <form className='searchAPI'>
                   <div className='form-group'>
                     <h4 className='search-header'>Search a drink by Ingredient!</h4>
@@ -409,7 +411,7 @@ class AllSearch extends Component {
                   <FormBtn className='my-2 my-sm-0' onClick={this.handleSubmit4}>Search</FormBtn>
                 </form>
               </div>
-              <div className='col-4'>
+              <div className='col-sm-4'>
                 <form className='searchAPI'>
                   <div className='form-group'>
                     <h4 className='search-header'>Search a drink by Glass!</h4>
@@ -452,32 +454,32 @@ class AllSearch extends Component {
                 </form>
               </div>
             </div>
-              <div className='row'>
-                {this.state.drinks.map(drink => {
-                  return (
-                    <div className='card-drinks mb-3'>
-                      <div className='row no-gutters'>
-                        <div className='col-md-3'>
-                          <img src={drink.strDrinkThumb} alt={drink.strDrink} className='card-img'>
-                          </img>
-                        </div>
-                        <div className='col-md-7'>
-                          <div className='card-body'>
-                            <h5 className='card-title'><h4>{drink.strDrink}</h4></h5>
-                            <p className='card-text'><h5>{drink.strAlcoholic} - {drink.strCategory}</h5>
-                              <p className='card-text'> <p><strong>Ingredients: </strong>{drink.strIngredient1} {drink.strMeasure1}, {drink.strIngredient2} {drink.strMeasure2}, {drink.strIngredient3} {drink.strMeasure3}, {drink.strIngredient4} {drink.strMeasure4}, {drink.strIngredient5} {drink.strMeasure5}, {drink.strIngredient6} {drink.strMeasure6}, {drink.strIngredient7} {drink.strMeasure7}, {drink.strIngredient8} {drink.strMeasure8}, {drink.strIngredient9} {drink.strMeasure9}, {drink.strIngredient10} {drink.strMeasure10}</p>
-                                {/* <p className='card-text'> <p><strong>Ingredients:</strong><ul id="menu"><li>{drink.strIngredient1} {drink.strMeasure1}</li><li>{drink.strIngredient2} {drink.strMeasure2}</li><li>{drink.strIngredient3} {drink.strMeasure3}</li><li>{drink.strIngredient4} {drink.strMeasure4}</li><li>{drink.strIngredient5} {drink.strMeasure5}</li><li>{drink.strIngredient6} {drink.strMeasure6}</li><li>{drink.strIngredient7} {drink.strMeasure7}</li><li>{drink.strIngredient8} {drink.strMeasure8}</li><li>{drink.strIngredient9} {drink.strMeasure9}</li><li>{drink.strIngredient10} {drink.strMeasure10}</li></ul></p> */}
-                                <p><strong>Instructions:</strong> {drink.strInstructions}</p> <p><strong>Glass: </strong>{drink.strGlass}</p> </p></p>
-                            <p className='card-text'><small className='text-muted'></small></p>
-                          </div>
+            <div className='row'>
+              {this.state.drinks.map(drink => {
+                return (
+                  <div className='card-drinks mb-3'>
+                    <div className='row no-gutters'>
+                      <div className='col-md-3'>
+                        <img src={drink.strDrinkThumb} alt={drink.strDrink} className='card-img'>
+                        </img>
+                      </div>
+                      <div className='col-md-7'>
+                        <div className='card-body'>
+                          <h5 className='card-title'><h4>{drink.strDrink}</h4></h5>
+                          <p className='card-text'><h5>{drink.strAlcoholic} - {drink.strCategory}</h5>
+                            <p className='card-text'> <p><strong>Ingredients: </strong>{drink.strIngredient1} {drink.strMeasure1}, {drink.strIngredient2} {drink.strMeasure2}, {drink.strIngredient3} {drink.strMeasure3}, {drink.strIngredient4} {drink.strMeasure4}, {drink.strIngredient5} {drink.strMeasure5}, {drink.strIngredient6} {drink.strMeasure6}, {drink.strIngredient7} {drink.strMeasure7}, {drink.strIngredient8} {drink.strMeasure8}, {drink.strIngredient9} {drink.strMeasure9}, {drink.strIngredient10} {drink.strMeasure10}</p>
+                              {/* <p className='card-text'> <p><strong>Ingredients:</strong><ul id="menu"><li>{drink.strIngredient1} {drink.strMeasure1}</li><li>{drink.strIngredient2} {drink.strMeasure2}</li><li>{drink.strIngredient3} {drink.strMeasure3}</li><li>{drink.strIngredient4} {drink.strMeasure4}</li><li>{drink.strIngredient5} {drink.strMeasure5}</li><li>{drink.strIngredient6} {drink.strMeasure6}</li><li>{drink.strIngredient7} {drink.strMeasure7}</li><li>{drink.strIngredient8} {drink.strMeasure8}</li><li>{drink.strIngredient9} {drink.strMeasure9}</li><li>{drink.strIngredient10} {drink.strMeasure10}</li></ul></p> */}
+                              <p><strong>Instructions:</strong> {drink.strInstructions}</p> <p><strong>Glass: </strong>{drink.strGlass}</p> </p></p>
+                          <p className='card-text'><small className='text-muted'></small></p>
                         </div>
                       </div>
                     </div>
-                  )
-                })}
-              </div>
+                  </div>
+                )
+              })}
             </div>
           </div>
+        </div>
       </>
     );
   }

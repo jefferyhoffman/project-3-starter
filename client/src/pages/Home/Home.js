@@ -36,52 +36,43 @@ class HomePage extends Component {
                     <li data-target='#carouselExampleCaptions' data-interval='30' data-slide-to='5'></li>
                   </ol>
                   <div className='carousel-inner'>
-                  <Link to='/allsearch'><div className='carousel-item active'>
+                    <div className='carousel-item active'>
                       <img src={jumbo1} className='responsive-d-block w-100' alt='Drinks'></img>
                       <div className='carousel-caption d-none d-md-block'>
-                        <h1 className='text'>Explore</h1>
-                        <h2>There is so much more to drinks!</h2>
+                        <Link to='/view'><h1 className='text'style={{color:'white'}}>Explore</h1></Link>
+                          <h2>There is so much more to drinks!</h2>
                       </div>
-                    </div></Link>
+                    </div>
                     <div className='carousel-item'>
                       <img src={jumbo4} className='responsive-d-block w-100' alt='Drinks'></img>
                       <div className='carousel-caption d-none d-md-block'>
-                        <h1 className='text'>Create</h1>
+                      <Link to='/tools'><h1 className='text'style={{color:'white'}}>Create</h1></Link>
                         <h2>Add your favroite drink!</h2>
                       </div>
                     </div>
                     <div className='carousel-item'>
                       <img src={jumbo11} className='responsive-d-block w-100' alt='Drinks'></img>
                       <div className='carousel-caption d-none d-md-block'>
-                        <h1 className='text'>Share</h1>
+                      <Link to='/glass'><h1 className='text'style={{color:'white'}}>Share</h1></Link>
                         <h2>Make it known!</h2>
                       </div>
                     </div>
                     <div className='carousel-item'>
                       <img src={jumbo3} className='responsive-d-block w-100' alt='Drinks'></img>
                       <div className='carousel-caption d-none d-md-block'>
-                        <h1 className='text'>Search</h1>
+                      <Link to='/search'><h1 className='text'style={{color:'white'}}>Search</h1></Link>
                         <h2>Find your drink!</h2>
                       </div>
                     </div>
                     <div className='carousel-item'>
                       <img src={jumbo6} className='responsive-d-block w-100' alt='Drinks'></img>
                       <div className='carousel-caption d-none d-md-block'>
-                        <h1 className='text'>Experience</h1>
+                      <Link to='/featured'><h1 className='text'style={{color:'white'}}>Experience</h1></Link>
                         <h2>Live it up!</h2>
                       </div>
                     </div>
                   </div>
-                  {/* <Link className='carousel-control-prev' to='#carouselExampleCaptions' role='button' data-slide='prev'>
-                    <span className='carousel-control-prev-icon' aria-hidden='true'></span>
-                    <span className='sr-only'>Previous</span>
-                  </Link>
-                  <Link className='carousel-control-next' to='#carouselExampleCaptions' role='button' data-slide='next'>
-                    <span className='carousel-control-next-icon' aria-hidden='true'></span>
-                    <span className='sr-only'>Next</span>
-                  </Link> */}
                 </div>
-                
               </div>
             </div>
           </div>

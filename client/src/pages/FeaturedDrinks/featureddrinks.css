@@ -6,17 +6,10 @@
 .col-featured-lg-3{
     margin-top: 2%;
     margin-bottom: 2%;
-    /* position: relative;
-    -webkit-animation-name: example; 
-    -webkit-animation-duration: 4s; 
-    -webkit-animation-delay: 2s; 
-    animation-name: example;
-    animation-duration: 4s;
-    animation-delay: 2s; */
 }
 
-.card-top {
-    box-shadow: 10px 5px 5px #e03838;
+.card-topflip {
+    /* box-shadow: 10px 5px 5px #e03838; */
     border: none;
     height: 340px;
     background: linear-gradient(to bottom, #eef2f3 0%, #8e9eab 100%);
@@ -33,23 +26,6 @@
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
-
-  /* @-webkit-keyframes example {
-    0%   {background-color:red; left:0px; top:0px;}
-    25%  {background-color:gray; left:400px; top:0px;}
-    50%  {background-color:whitesmoke; left:400px; top:400px;}
-    75%  {background-color:gray; left:0px; top:400px;}
-    100% {background-color:whitesmoke; left:0px; top:0px;}
-  }
-  
-  @keyframes example {
-    0%   {background-color:red; left:0px; top:0px;}
-    25%  {background-color:gray; left:400px; top:0px;}
-    50%  {background-color:whitesmoke; left:400px; top:400px;}
-    75%  {background-color:gray; left:0px; top:400px;}
-    100% {background-color:whitesmoke; left:0px; top:0px;}
-  } */
-
 
   .flip-card {
     background-color: transparent;
@@ -94,10 +70,6 @@
   .card-about{
     border:none;
     font-size: 20px;
-  }
-
-  .card-body-about{
-    padding-left:10%;
   }
 
 
