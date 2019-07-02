@@ -36,13 +36,13 @@ class HomePage extends Component {
                     <li data-target='#carouselExampleCaptions' data-interval='30' data-slide-to='5'></li>
                   </ol>
                   <div className='carousel-inner'>
-                    <div className='carousel-item active'>
+                  <Link to='/allsearch'><div className='carousel-item active'>
                       <img src={jumbo1} className='responsive-d-block w-100' alt='Drinks'></img>
                       <div className='carousel-caption d-none d-md-block'>
                         <h1 className='text'>Explore</h1>
                         <h2>There is so much more to drinks!</h2>
                       </div>
-                    </div>
+                    </div></Link>
                     <div className='carousel-item'>
                       <img src={jumbo4} className='responsive-d-block w-100' alt='Drinks'></img>
                       <div className='carousel-caption d-none d-md-block'>
