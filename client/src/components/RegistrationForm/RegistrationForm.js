@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 
 import Octicon, { Mail, Key } from '@githubprimer/octicons-react';
 
-class LoginForm extends Component {
+class RegistrationForm extends Component {
   state = {
     email: '',
-    password: ''
+    password: '',
+    passwordConfirm: ''
   };
 
   handleInputChange = event => {
@@ -17,20 +18,20 @@ class LoginForm extends Component {
   }
 
   handleSubmit = event => {
-    const { email, password } = this.state;
+    const { email, password, passwordConfirm } = this.state;
 
-    this.props.onSubmit(email, password);
+    this.props.onSubmit(email, password, passwordConfirm);
     event.preventDefault();
   }
 
   render() {
-    const { email, password } = this.state;
+    const { email, password, passwordConfirm } = this.state;
 
     return (
       <div className='LoginForm'>
         <div className='card'>
           <div className='card-body'>
-            <form className='LoginForm' onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit}>
               <div className='input-group mb-3'>
                 <div className="input-group-prepend">
                   <span className="input-group-text"><Octicon icon={Mail} /></span>
@@ -61,7 +62,22 @@ class LoginForm extends Component {
                 />
               </div>
 
-              <button className='btn btn-primary' type='submit'>Login</button>
+              <div className='input-group mb-3'>
+                <div className="input-group-prepend">
+                  <span className="input-group-text"><Octicon icon={Key} /></span>
+                </div>
+                <input
+                  className='form-control'
+                  id='password-confirm'
+                  type='password'
+                  name='passwordConfirm'
+                  placeholder='password (again)'
+                  value={passwordConfirm}
+                  onChange={this.handleInputChange}
+                />
+              </div>
+
+              <button className='btn btn-primary' type='submit'>Register Now!</button>
             </form>
           </div>
         </div>
@@ -70,5 +86,4 @@ class LoginForm extends Component {
   }
 }
 
-export default LoginForm;
-
+export default RegistrationForm;
