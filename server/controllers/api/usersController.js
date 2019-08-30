@@ -4,6 +4,14 @@ const db = require('../../models');
 const { JWTVerifier } = require('../../lib/passport');
 const jwt = require('jsonwebtoken');
 
+usersController.post('/', (req, res) => {
+  const { email, password } = req.body;
+
+  db.User.create({ email, password })
+    .then(user => res.json(user))
+    .catch(err => res.json(err));
+});
+
 usersController.get('/me', JWTVerifier, (req, res) => {
   res.json(req.user);
 });
@@ -22,14 +30,6 @@ usersController.post('/login', (req, res) => {
         user
       });
     });
-});
-
-usersController.post('/register', (req, res) => {
-  const { email, password } = req.body;
-
-  db.Users.create({ email, password })
-    .then(user => res.json(user))
-    .catch(err => res.json(err));
 });
 
 module.exports = usersController;

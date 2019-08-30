@@ -5,14 +5,17 @@
 
 //-- .env --------------------------------------------------------------------
 const path = require('path');
-require('dotenv').config({
-  path: path.resolve(__dirname, '.env')
-});
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config({
+    path: path.resolve(__dirname, '.env')
+  });
+}
 
 //-- Dependencies ------------------------------------------------------------
 const express = require('express');
 const logger = require('morgan');
 
+const db = require('./models');
 const { passport } = require('./lib/passport');
 
 //-- Constants ---------------------------------------------------------------
@@ -30,16 +33,26 @@ app.use(passport.initialize());
 
 //-- Static Server (Production) ----------------------------------------------
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('../client/build'));
+  const clientBuildPath = path.join(__dirname, '..', 'client', 'build');
+  console.log(`Client build path: ${clientBuildPath}\n`);
+  app.use(express.static(clientBuildPath));
 }
 
 //-- Controller Routes -------------------------------------------------------
 app.use(require('./controllers'));
 
-//-- Main --------------------------------------------------------------------
-app.listen(PORT, () => {
-  console.log(`🚀 Server listening on port ${PORT}...`);
+//-- React catch-all ---------------------------------------------------------
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
+
+//-- Main --------------------------------------------------------------------
+db.sequelize.sync({ force: process.env.NODE_ENV === 'test' })
+  .then(() => {
+    app.listen(PORT, () => {
+      console.log(`🚀 Server listening on port ${PORT}...`);
+    });
+  });
 
 //-- Export to Tests ---------------------------------------------------------
 module.exports = app;
