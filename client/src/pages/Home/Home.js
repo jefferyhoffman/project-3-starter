@@ -8,17 +8,17 @@ class HomePage extends Component {
       <div className='Home'>
         <div className='row'>
           <div className='col'>
-            <img src={logo} className='App-logo' alt='logo' />
+            {/* <img src={logo} className='App-logo' alt='logo' /> */}
             <p>
-              Edit <code>src/pages/Home.js</code> and save to reload.
+              {/* Edit <code>src/pages/Home.js</code> and save to reload. */}
             </p>
             <a
-              className='App-link'
-              href='https://reactjs.org'
-              target="_blank"
-              rel="noopener noreferrer"
+            // className='App-link'
+            // href='https://reactjs.org'
+            // target="_blank"
+            // rel="noopener noreferrer"
             >
-              Learn React
+              {/* Learn React */}
             </a>
           </div>
         </div>
