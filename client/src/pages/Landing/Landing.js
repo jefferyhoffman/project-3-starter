@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Form from "../../components/Form";
 
-// import logo from './logo.svg';
+import testJS from "../../lib/testJS";
 
 class LandingPage extends Component {
   render() {
@@ -11,6 +11,8 @@ class LandingPage extends Component {
           <div className="col">
             <h2>I am the Landing Page</h2>
             <Form />
+            <button onClick={testJS.testFunc}>Create Spotify Playlist</button>
+            <div id="playlist-results" />
           </div>
         </div>
       </div>
