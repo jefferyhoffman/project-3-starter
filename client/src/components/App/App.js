@@ -11,6 +11,8 @@ import Login from '../../pages/Login/Login';
 import Register from '../../pages/Register/Register';
 import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
+import Events from '../Layout/Events/Events';
+import Users from '../Layout/Users/Users';
 
 import './App.css';
 
@@ -20,13 +22,17 @@ class App extends Component {
 
     this.handleLogin = (user, authToken) => {
       TokenStore.setToken(authToken);
-      this.setState(prevState => ({ auth: { ...prevState.auth, user, authToken } }));
+      this.setState(prevState => ({
+        auth: { ...prevState.auth, user, authToken }
+      }));
     };
 
     this.handleLogout = () => {
       TokenStore.clearToken();
-      this.setState(prevState => ({ auth: { ...prevState.auth, user: undefined, authToken: undefined } }));
-    }
+      this.setState(prevState => ({
+        auth: { ...prevState.auth, user: undefined, authToken: undefined }
+      }));
+    };
 
     this.state = {
       auth: {
@@ -34,8 +40,10 @@ class App extends Component {
         authToken: TokenStore.getToken(),
         onLogin: this.handleLogin,
         onLogout: this.handleLogout
-      }
-    }
+      },
+      renderText: false,
+      text: 'Conditional rendering from React'
+    };
   }
 
   componentDidMount() {
@@ -44,7 +52,9 @@ class App extends Component {
 
     API.Users.getMe(authToken)
       .then(response => response.data)
-      .then(user => this.setState(prevState => ({ auth: { ...prevState.auth, user } })))
+      .then(user =>
+        this.setState(prevState => ({ auth: { ...prevState.auth, user } }))
+      )
       .catch(err => console.log(err));
   }
 
@@ -61,6 +71,17 @@ class App extends Component {
               <PrivateRoute path='/secret' component={Secret} />
               <Route component={NotFound} />
             </Switch>
+          </div>
+          <div className='container'>
+            <div>
+              <h1>{this.state.renderText && this.state.text}</h1>
+              <h1>Upcoming Events</h1>
+              <Events />
+            </div>
+            <div>
+              <h1>Community Members</h1>
+              <Users />
+            </div>
           </div>
         </div>
       </AuthContext.Provider>
