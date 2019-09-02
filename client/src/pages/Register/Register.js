@@ -3,7 +3,7 @@ import { Redirect } from 'react-router-dom';
 
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
-import RegisterForm from '../../components/RegisterForm/RegisterForm';
+import RegistrationForm from '../../components/RegistrationForm/RegistrationForm';
 
 class Register extends Component {
   static contextType = AuthContext;
@@ -16,7 +16,7 @@ class Register extends Component {
   handleSubmit = (email, password) => {
     API.Users.register(email, password)
       .then(response => {
-          this.setState({ redirectToReferrer: true })
+        this.setState({ redirectToReferrer: true })
       })
       .catch(err => {
         if (err.response.status === 401) {
@@ -50,7 +50,7 @@ class Register extends Component {
           </div>}
         <div className='row'>
           <div className='col'>
-            <RegisterForm onSubmit={this.handleSubmit} />
+            <RegistrationForm onSubmit={this.handleSubmit} />
           </div>
         </div>
       </div>

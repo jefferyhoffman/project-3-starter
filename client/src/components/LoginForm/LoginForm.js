@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Octicon, { Mail, Key } from '@githubprimer/octicons-react';
+
 class LoginForm extends Component {
   state = {
     email: '',
@@ -31,7 +33,7 @@ class LoginForm extends Component {
             <form className='LoginForm' onSubmit={this.handleSubmit}>
               <div className='input-group mb-3'>
                 <div className="input-group-prepend">
-                  <span className="input-group-text">@</span>
+                  <span className="input-group-text"><Octicon icon={Mail} /></span>
                 </div>
                 <input
                   className='form-control'
@@ -46,7 +48,7 @@ class LoginForm extends Component {
 
               <div className='input-group mb-3'>
                 <div className="input-group-prepend">
-                  <span className="input-group-text">a3b</span>
+                  <span className="input-group-text"><Octicon icon={Key} /></span>
                 </div>
                 <input
                   className='form-control'

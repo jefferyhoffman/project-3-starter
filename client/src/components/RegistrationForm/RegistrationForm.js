@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 
-class RegisterForm extends Component {
+import Octicon, { Mail, Key } from '@githubprimer/octicons-react';
+
+class RegistrationForm extends Component {
   state = {
     email: '',
-    password: ''
+    password: '',
+    passwordConfirm: ''
   };
 
   handleInputChange = event => {
@@ -15,23 +18,23 @@ class RegisterForm extends Component {
   }
 
   handleSubmit = event => {
-    const { email, password } = this.state;
+    const { email, password, passwordConfirm } = this.state;
 
-    this.props.onSubmit(email, password);
+    this.props.onSubmit(email, password, passwordConfirm);
     event.preventDefault();
   }
 
   render() {
-    const { email, password } = this.state;
+    const { email, password, passwordConfirm } = this.state;
 
     return (
-      <div className='RegisterForm'>
+      <div className='LoginForm'>
         <div className='card'>
           <div className='card-body'>
-            <form className='LoginForm' onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit}>
               <div className='input-group mb-3'>
                 <div className="input-group-prepend">
-                  <span className="input-group-text">@</span>
+                  <span className="input-group-text"><Octicon icon={Mail} /></span>
                 </div>
                 <input
                   className='form-control'
@@ -46,7 +49,7 @@ class RegisterForm extends Component {
 
               <div className='input-group mb-3'>
                 <div className="input-group-prepend">
-                  <span className="input-group-text">a3b</span>
+                  <span className="input-group-text"><Octicon icon={Key} /></span>
                 </div>
                 <input
                   className='form-control'
@@ -59,7 +62,22 @@ class RegisterForm extends Component {
                 />
               </div>
 
-              <button className='btn btn-primary' type='submit'>Register</button>
+              <div className='input-group mb-3'>
+                <div className="input-group-prepend">
+                  <span className="input-group-text"><Octicon icon={Key} /></span>
+                </div>
+                <input
+                  className='form-control'
+                  id='password-confirm'
+                  type='password'
+                  name='passwordConfirm'
+                  placeholder='password (again)'
+                  value={passwordConfirm}
+                  onChange={this.handleInputChange}
+                />
+              </div>
+
+              <button className='btn btn-primary' type='submit'>Register Now!</button>
             </form>
           </div>
         </div>
@@ -68,5 +86,4 @@ class RegisterForm extends Component {
   }
 }
 
-export default RegisterForm;
-
+export default RegistrationForm;
