@@ -14,7 +14,7 @@ class Register extends Component {
   }
 
   handleSubmit = (email, password) => {
-    API.Users.register(email, password)
+    API.Users.create(email, password)
       .then(response => {
         this.setState({ redirectToReferrer: true })
       })
