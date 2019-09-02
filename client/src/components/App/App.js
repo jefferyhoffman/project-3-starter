@@ -12,7 +12,7 @@ import Landing from '../../pages/Landing';
 // import Login from '../../pages/Login/Login';
 // import Register from '../../pages/Register/Register';
 // import Secret from '../../pages/Secret/Secret';
-import NotFound from '../../pages/NotFound/NotFound';
+import NotFound from '../../pages/NotFound';
 
 import './App.css';
 
