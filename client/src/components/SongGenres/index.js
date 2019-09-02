@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class TripGenres extends Component {
+class SongGenres extends Component {
   state = {
     startPoint: "",
     endPoint: ""
@@ -16,10 +16,10 @@ class TripGenres extends Component {
   render() {
     return (
       <div>
-        <h3>Genres</h3>
+        <h3 className="text-center">Genres</h3>
       </div>
     );
   }
 }
 
-export default TripGenres;
+export default SongGenres;

@@ -9,7 +9,7 @@ import AuthContext from '../../contexts/AuthContext';
 // import Home from '../../pages/Home/Home';
 import Test from '../../pages/Test';
 import Landing from '../../pages/Landing';
-import NewTrip from '../../pages/NewTrip';
+import Trip from '../../pages/Trip';
 // import Login from '../../pages/Login/Login';
 // import Register from '../../pages/Register/Register';
 // import Secret from '../../pages/Secret/Secret';
@@ -60,7 +60,7 @@ class App extends Component {
             <Switch>
               <Route exact path='/' component={Test} />
               <Route exact path='/home' component={Landing} />
-              <Route exact path='/newtrip' component={NewTrip} />
+              <Route exact path='/newtrip' component={Trip} />
               {/* <Route exact path='/' component={Home} /> */}
               {/* <Route path='/login' component={Login} /> */}
               {/* <Route path='/register' component={Register} /> */}

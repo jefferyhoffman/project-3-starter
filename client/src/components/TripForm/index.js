@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import DestinationForm from "../../components/DestinationForm";
-import TripGenres from "../../components/TripGenres";
+import SongGenres from "../../components/SongGenres";
 import Button from "../../components/Button";
 
 class TripForm extends Component {
@@ -24,7 +24,7 @@ class TripForm extends Component {
             <DestinationForm />
           </div>
           <div className="col-lg-6 text-left">
-            <TripGenres />
+            <SongGenres />
           </div>
           <Button value="Generate Playlist" />
         </div>
