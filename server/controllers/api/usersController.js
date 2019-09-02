@@ -11,7 +11,7 @@ usersController.post('/', (req, res) => {
     .then(user => res.json(user))
     .catch(err => res.json(err));
 });
-
+// /api/users/me
 usersController.get('/me', JWTVerifier, (req, res) => {
   res.json(req.user);
 });
