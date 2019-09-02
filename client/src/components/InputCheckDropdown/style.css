@@ -1,0 +1,11 @@
+details > summary::-webkit-details-marker {
+  float: right;
+}
+
+.main-genre {
+  display: inline;
+}
+
+.subgenre {
+  margin-left: 1em;
+}
