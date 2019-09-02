@@ -7,7 +7,8 @@ import AuthContext from '../../contexts/AuthContext';
 // import Navigation from '../../components/Navigation/Navigation';
 // import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
 // import Home from '../../pages/Home/Home';
-import Landing from '../../pages/Landing/Landing';
+import Test from '../../pages/Test';
+import Landing from '../../pages/Landing';
 // import Login from '../../pages/Login/Login';
 // import Register from '../../pages/Register/Register';
 // import Secret from '../../pages/Secret/Secret';
@@ -56,8 +57,9 @@ class App extends Component {
           {/* <Navigation /> */}
           <div className='container'>
             <Switch>
+              <Route exact path='/' component={Test} />
+              <Route exact path='/home' component={Landing} />
               {/* <Route exact path='/' component={Home} /> */}
-              <Route exact path='/' component={Landing} />
               {/* <Route path='/login' component={Login} /> */}
               {/* <Route path='/register' component={Register} /> */}
               {/* <PrivateRoute path='/secret' component={Secret} /> */}
