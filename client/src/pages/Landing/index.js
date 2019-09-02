@@ -8,7 +8,7 @@ class LandingPage extends Component {
         <div className="row my-5">
           <div className="col-12 my-5">
             <div className="row mx-auto bg-dark text-light p-5">
-              <div className="col-md-6 text-center">
+              <div className="col-lg-6 text-center">
                 <h5>Welcome to</h5>
                 <h3>Road Trip DJ</h3>
                 <p>
@@ -24,7 +24,7 @@ class LandingPage extends Component {
                   mollitia et a?
                 </p>
               </div>
-              <div className="col-md-6 text-center my-auto">
+              <div className="col-lg-6 text-center my-auto">
                 <h3>Login Form</h3>
                 <LoginForm />
               </div>

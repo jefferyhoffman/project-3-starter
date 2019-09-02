@@ -38,6 +38,8 @@ class TripForm extends Component {
             value={this.state.endPoint}
             onChange={this.onInputChange}
           />
+          <br />
+          <input type="submit" value="Generate Playlist" />
         </form>
         <p>
           <strong>Starting Point: </strong>
@@ -47,7 +49,6 @@ class TripForm extends Component {
           <strong>Ending Point: </strong>
           {this.state.endPoint}
         </p>
-        <button>Generate Playlist</button>
       </div>
     );
   }
