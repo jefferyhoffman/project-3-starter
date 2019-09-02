@@ -1,9 +1,12 @@
 import React, { Component } from "react";
+import DestinationForm from "../../components/DestinationForm";
+import TripGenres from "../../components/TripGenres";
+import Button from "../../components/Button";
 
 class TripForm extends Component {
   state = {
-    startPoint: "",
-    endPoint: ""
+    startPoint: "Point A",
+    endPoint: "Point B"
   };
 
   onInputChange = (event) => {
@@ -15,40 +18,17 @@ class TripForm extends Component {
 
   render() {
     return (
-      <div>
-        <form>
-          <label htmlFor="startPoint">Starting Point</label>
-          <br />
-          <input
-            id="startPoint"
-            name="startPoint"
-            type="text"
-            placeholder="Point A"
-            value={this.state.startPoint}
-            onChange={this.onInputChange}
-          />
-          <br />
-          <label htmlFor="endPoint">Ending Point</label>
-          <br />
-          <input
-            id="endPoint"
-            name="endPoint"
-            type="text"
-            placeholder="Point B"
-            value={this.state.endPoint}
-            onChange={this.onInputChange}
-          />
-        </form>
-        <p>
-          <strong>Starting Point: </strong>
-          {this.state.startPoint}
-        </p>
-        <p>
-          <strong>Ending Point: </strong>
-          {this.state.endPoint}
-        </p>
-        <button>Generate Playlist</button>
-      </div>
+      <form>
+        <div className="row mx-auto bg-dark text-light p-5">
+          <div className="col-lg-6 text-left my-auto">
+            <DestinationForm />
+          </div>
+          <div className="col-lg-6 text-left">
+            <TripGenres />
+          </div>
+          <Button value="Generate Playlist" />
+        </div>
+      </form>
     );
   }
 }
