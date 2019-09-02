@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class Form extends Component {
+class TripForm extends Component {
   state = {
     startPoint: "",
     endPoint: ""
@@ -54,4 +54,4 @@ class Form extends Component {
   }
 }
 
-export default Form;
+export default TripForm;

@@ -1,16 +1,16 @@
 import React, { Component } from "react";
-import Form from "../../components/Form";
+import TripForm from "../../components/TripForm";
 
 import testJS from "../../lib/testJS";
 
-class LandingPage extends Component {
+class TestPage extends Component {
   render() {
     return (
       <div className="Home">
         <div className="row">
           <div className="col">
-            <h2>I am the Landing Page</h2>
-            <Form />
+            <h2>I am the Test Page</h2>
+            <TripForm />
             <button onClick={testJS.testFunc}>Create Spotify Playlist</button>
             <div id="playlist-results" />
           </div>
@@ -20,4 +20,4 @@ class LandingPage extends Component {
   }
 }
 
-export default LandingPage;
+export default TestPage;
