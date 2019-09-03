@@ -14,6 +14,12 @@ import Trip from '../../pages/Trip';
 // import Register from '../../pages/Register/Register';
 // import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound';
+import Navigation from '../../components/Navigation/Navigation';
+import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
+import Login from '../../pages/Login/Login';
+import Register from '../../pages/Register/Register';
+import Secret from '../../pages/Secret/Secret';
+import Home from '../../pages/Home/Home';
 
 import './App.css';
 
