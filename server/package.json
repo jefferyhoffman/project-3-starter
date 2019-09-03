@@ -4,12 +4,14 @@
   "license": "MIT",
   "main": "server.js",
   "dependencies": {
+    "axios": "^0.19.0",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "jsonwebtoken": "^8.5.0",
     "morgan": "^1.9.1",
     "passport": "^0.4.0",
-    "passport-jwt": "^4.0.0"
+    "passport-jwt": "^4.0.0",
+    "wikijs": "^6.0.0"
   },
   "scripts": {
     "start": "node server",
