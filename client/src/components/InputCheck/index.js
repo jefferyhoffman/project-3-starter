@@ -8,6 +8,7 @@ function InputCheck(props) {
         type="checkbox"
         value={props.value}
         id={props.id}
+        key={props.id}
       />
       <label className="form-check-label" htmlFor={props.id}>
         {props.genre}
