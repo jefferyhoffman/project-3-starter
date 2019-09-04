@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD
 import { Redirect } from 'react-router-dom';
 
 import API from '../../lib/API';
@@ -38,6 +39,34 @@ class Register extends Component {
         <div className='row'>
           <div className='col'>
             <h1>Register Account</h1>
+=======
+
+import RegistrationForm from '../../components/RegistrationForm/RegistrationForm';
+import API from '../../lib/API';
+
+class Register extends Component {
+  state = {
+    error: ""
+  }
+
+  handleSubmit = (email, password, confirm) => {
+    if (password !== confirm) {
+      return this.setState({ error: "Passwords do not match." });
+    }
+
+    API.Users.create(email, password)
+      .then(response => response.data)
+      .then(user => console.log(user))
+      .catch(err => this.setState({ error: err.message }));
+  }
+
+  render() {
+    return (
+      <div className='Register'>
+        <div className='row'>
+          <div className='col'>
+            <h1>Register</h1>
+>>>>>>> f301839dcf1d16d5fbc4a8839159329733407dfe
           </div>
         </div>
         {this.state.error &&
@@ -50,7 +79,11 @@ class Register extends Component {
           </div>}
         <div className='row'>
           <div className='col'>
+<<<<<<< HEAD
             <RegisterForm onSubmit={this.handleSubmit} />
+=======
+            <RegistrationForm onSubmit={this.handleSubmit} />
+>>>>>>> f301839dcf1d16d5fbc4a8839159329733407dfe
           </div>
         </div>
       </div>

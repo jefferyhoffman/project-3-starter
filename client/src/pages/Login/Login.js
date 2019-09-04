@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
@@ -21,9 +21,20 @@ class Login extends Component {
         this.setState({ redirectToReferrer: true, error: "" });
       })
       .catch(err => {
-        if (err.response.status === 401) {
-          this.setState({ error: "Sorry, that email/password combination is not valid. Please try again." });
+        let message;
+
+        switch (err.response.status) {
+          case 401:
+            message = 'Sorry, that email/password combination is not valid. Please try again.';
+            break;
+          case 500:
+            message = 'Server error. Please try again later.';
+            break;
+          default:
+            message = 'Unknown error.';
         }
+
+        this.setState({ error: message });
       });
   }
 
@@ -53,6 +64,7 @@ class Login extends Component {
         <div className='row'>
           <div className='col'>
             <LoginForm onSubmit={this.handleSubmit} />
+            <div className='mt-3'>Don't have an account? <Link to='/register'>Click here to register.</Link></div>
           </div>
         </div>
       </div>
