@@ -10,6 +10,10 @@ const USERS = [
 ];
 
 module.exports = {
+<<<<<<< HEAD
+  Users: require('./user'),
+  Secrets: require('./secret')
+=======
   Users: {
     create: function ({ email, password }) {
       const user = new User({
@@ -53,4 +57,5 @@ module.exports = {
       ]);
     }
   }
+>>>>>>> f301839dcf1d16d5fbc4a8839159329733407dfe
 }
