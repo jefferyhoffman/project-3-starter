@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import Octicon, { Mail, Key } from '@githubprimer/octicons-react';
 
-class RegistrationForm extends Component {
+class CustomerForm extends Component {
   state = {
     email: '',
     password: '',
@@ -28,7 +28,7 @@ class RegistrationForm extends Component {
     const { email, password, passwordConfirm } = this.state;
 
     return (
-      <div className='LoginForm'>
+      <div className='CustomerForm'>
         <div className='card'>
           <div className='card-body'>
             <form onSubmit={this.handleSubmit}>
@@ -77,7 +77,7 @@ class RegistrationForm extends Component {
                 />
               </div>
 
-              <button className='btn btn-primary' type='submit'>Register Now!</button>
+              <button className='btn btn-primary' type='submit'>Submit</button>
             </form>
           </div>
         </div>
@@ -86,4 +86,4 @@ class RegistrationForm extends Component {
   }
 }
 
-export default RegistrationForm;
+export default CustomerForm;
