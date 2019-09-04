@@ -24,7 +24,7 @@ class Contacts extends Component {
       <div className='Contacts'>
         <div className='row'>
           <div className='col'>
-            <h1>Register</h1>
+            <h1>Contacts</h1>
           </div>
         </div>
         {this.state.error &&
