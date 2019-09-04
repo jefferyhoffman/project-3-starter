@@ -8,7 +8,7 @@ import Navigation from '../../components/Navigation/Navigation';
 import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
 import Home from '../../pages/Home/Home';
 import Login from '../../pages/Login/Login';
-import Register from '../../pages/Register/Register';
+import Contacts from '../../pages/Contacts/Contacts';
 import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
 
@@ -57,7 +57,7 @@ class App extends Component {
             <Switch>
               <Route exact path='/' component={Home} />
               <Route path='/login' component={Login} />
-              <Route path='/register' component={Register} />
+              <Route path='/contacts' component={Contacts} />
               <PrivateRoute path='/secret' component={Secret} />
               <Route component={NotFound} />
             </Switch>

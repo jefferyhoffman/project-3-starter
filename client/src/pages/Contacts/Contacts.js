@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import RegistrationForm from '../../components/RegistrationForm/RegistrationForm';
+import CustomerForm from '../../components/CustomerForm/CustomerForm.js';
 import API from '../../lib/API';
 
-class Register extends Component {
+class Contacts extends Component {
   state = {
     error: ""
   }
@@ -21,7 +21,7 @@ class Register extends Component {
 
   render() {
     return (
-      <div className='Register'>
+      <div className='Contacts'>
         <div className='row'>
           <div className='col'>
             <h1>Register</h1>
@@ -37,7 +37,7 @@ class Register extends Component {
           </div>}
         <div className='row'>
           <div className='col'>
-            <RegistrationForm onSubmit={this.handleSubmit} />
+            <CustomerForm onSubmit={this.handleSubmit} />
           </div>
         </div>
       </div>
@@ -45,4 +45,4 @@ class Register extends Component {
   }
 }
 
-export default Register;
+export default Contacts;
