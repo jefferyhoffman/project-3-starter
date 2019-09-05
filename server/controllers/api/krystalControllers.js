@@ -10,7 +10,7 @@ krystalControllers.post("/", (req, res) => {
     customerInfo.service_notes = ""
     customerInfo.products_used = ""
     console.log(customerInfo,"<===")
-    db.Customers.create({customerInfo}).then(
+    db.Customers.create({...customerInfo}).then(
         (err,response)=>{
             if(err) console.log(err)
             const msg = {

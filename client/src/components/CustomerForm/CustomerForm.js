@@ -4,11 +4,11 @@ import API from '../../lib/API';
 
 class CustomerForm extends Component {
   state = {
-    fullName: '',
+   name: '',
     email: '',
-    phoneNumber: '',
-    tankType: '',
-    tankSize: '',
+    phone: '',
+    tank_type: '',
+    tank_size: '',
     message: ''
   };
 
@@ -22,9 +22,9 @@ class CustomerForm extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    //const { fullName, email, phoneNumber, tankType, tankSize, message } = this.state;
+    //const { fullName, email, phone, tank_type, tank_size, message } = this.state;
 
-    //this.props.onSubmit(fullName, email, phoneNumber, tankType, tankSize, message);
+    //this.props.onSubmit(fullName, email, phone, tank_type, tank_size, message);
     
     API.Krystal.send(this.state);
   }
@@ -34,7 +34,7 @@ class CustomerForm extends Component {
   
 
   render() {
-    const { fullName, email, phoneNumber, tankType, tankSize, message } = this.state;
+    const { name, email, phone, tank_type, tank_size, message } = this.state;
 
     return (
       <div className='CustomerForm'>
@@ -47,11 +47,11 @@ class CustomerForm extends Component {
                 
                 <input
                   className='form-control'
-                  id='fullName'
+                  id='name'
                   type='text'
-                  name='fullName'
+                  name='name'
                   placeholder='First Name and Last Name'
-                  value={fullName}
+                  value={name}
                   onChange={this.handleInputChange}
                 />
               </div>
@@ -73,11 +73,11 @@ class CustomerForm extends Component {
                 
                 <input
                   className='form-control'
-                  id='phoneNumber'
+                  id='phone'
                   type='text'
-                  name='phoneNumber'
+                  name='phone'
                   placeholder='###-###-####'
-                  value={phoneNumber}
+                  value={phone}
                   onChange={this.handleInputChange}
                 />
               </div>
@@ -86,23 +86,23 @@ class CustomerForm extends Component {
                 <label className='' htmlFor=''>Tank Type</label>
                 <select className='form-control' id='tank-type'>
                   <option selected>Choose...</option>
-                  <option name='type' value={tankType} onChange={this.handleInputChange}>Tank</option>
-                  <option name='type' value={tankType} onChange={this.handleInputChange}>Molded Pond</option>
-                  <option name='type' value={tankType} onChange={this.handleInputChange}>Plastic Pond</option>
-                  <option name='type' value={tankType} onChange={this.handleInputChange}>Rubber Pond</option>
-                  <option name='type' value={tankType} onChange={this.handleInputChange}>Glass Aquarium</option>
-                  <option name='type' value={tankType} onChange={this.handleInputChange}>Acrylic Aquarium</option>
+                  <option name='type' value={tank_type} onChange={this.handleInputChange}>Tank</option>
+                  <option name='type' value={tank_type} onChange={this.handleInputChange}>Molded Pond</option>
+                  <option name='type' value={tank_type} onChange={this.handleInputChange}>Plastic Pond</option>
+                  <option name='type' value={tank_type} onChange={this.handleInputChange}>Rubber Pond</option>
+                  <option name='type' value={tank_type} onChange={this.handleInputChange}>Glass Aquarium</option>
+                  <option name='type' value={tank_type} onChange={this.handleInputChange}>Acrylic Aquarium</option>
                 </select>
               </div>
 
               <div className='form-group mb-3'>
                 <input
                   className='form-control'
-                  id='tankSize'
+                  id='tank_size'
                   type='text'
-                  name='tankSize'
+                  name='tank_size'
                   placeholder='gallons'
-                  value={tankSize}
+                  value={tank_size}
                   onChange={this.handleInputChange}
                 />
               </div>
