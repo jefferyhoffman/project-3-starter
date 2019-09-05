@@ -3,7 +3,7 @@ import { Redirect } from 'react-router-dom';
 
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
-import RegisterForm from '../../components/RegisterForm/RegisterForm';
+import RegistrationForm from '../../components/RegistrationForm/RegistrationForm';
 
 class Register extends Component {
   static contextType = AuthContext;
@@ -14,7 +14,7 @@ class Register extends Component {
   };
 
   handleSubmit = (email, password) => {
-    API.Users.register(email, password)
+    API.Users.create(email, password)
       .then(response => {
         this.setState({ redirectToReferrer: true });
       })
