@@ -21,10 +21,11 @@ class CustomerForm extends Component {
   }
 
   handleSubmit = event => {
-    const { fullName, email, phoneNumber, tankType, tankSize, message } = this.state;
-
-    this.props.onSubmit(fullName, email, phoneNumber, tankType, tankSize, message);
     event.preventDefault();
+    //const { fullName, email, phoneNumber, tankType, tankSize, message } = this.state;
+
+    //this.props.onSubmit(fullName, email, phoneNumber, tankType, tankSize, message);
+    
     API.Krystal.send(this.state);
   }
 
@@ -39,7 +40,7 @@ class CustomerForm extends Component {
       <div className='CustomerForm'>
         <div className='card'>
           <div className='card-body'>
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={(event)=>this.handleSubmit(event)}>
               
 
               <div className='form-group mb-3'>
@@ -82,7 +83,7 @@ class CustomerForm extends Component {
               </div>
               
               <div className='form-group mb-3'>
-                <label className='' for=''>Tank Type</label>
+                <label className='' htmlFor=''>Tank Type</label>
                 <select className='form-control' id='tank-type'>
                   <option selected>Choose...</option>
                   <option name='type' value={tankType} onChange={this.handleInputChange}>Tank</option>
@@ -107,7 +108,7 @@ class CustomerForm extends Component {
               </div>
 
               <div className='form-group'>
-                <label for=''>Message</label>
+                <label htmlFor=''>Message</label>
                 <textarea 
                   className='form-control' 
                   id='message'
