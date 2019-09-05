@@ -7,12 +7,15 @@ import AuthContext from '../../contexts/AuthContext';
 import Navigation from '../../components/Navigation/Navigation';
 import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
 import Home from '../../pages/Home/Home';
+import Services from '../../pages/Services';
 import Login from '../../pages/Login/Login';
-import Register from '../../pages/Register/Register';
+import Contact from '../../pages/Contacts/Contacts';
 import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
+import Admin from '../../pages/Admin/Admin';
 
 import './App.css';
+import Customer from '../../pages/Customer/Customer';
 
 class App extends Component {
   constructor(props) {
@@ -56,9 +59,12 @@ class App extends Component {
           <div className='container'>
             <Switch>
               <Route exact path='/' component={Home} />
+              <Route exact path='/services' component={Services} />
               <Route path='/login' component={Login} />
-              <Route path='/register' component={Register} />
+              <Route path='/contact' component={Contact} />
               <PrivateRoute path='/secret' component={Secret} />
+              <Route path="/admin" component={Admin} />
+              <Route path="/admin/:id" component={Customer} />
               <Route component={NotFound} />
             </Switch>
           </div>

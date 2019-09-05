@@ -16,6 +16,9 @@ export default {
           'Authorization': `Bearer ${authToken}`
         }
       });
+    },
+    register: function (email, password) {
+      return axios.post('/api/users/register', { email, password });
     }
   },
 
@@ -26,6 +29,13 @@ export default {
           'Authorization': `Bearer ${authToken}`
         }
       });
+    }
+  },
+  Krystal: {
+    send: function(email){
+      return axios.post('/API/customerForm', {
+        data: 
+      })
     }
   }
 }
