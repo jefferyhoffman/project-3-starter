@@ -8,11 +8,11 @@ const Customers = new Schema({
     address: String,
     tank_type: String,
     tank_size: String,
-    contacted: true,
+    contacted: Boolean,
     date_contacted: String,
     service_notes: String,
     products_used: String,
-    active: true
+    active: Boolean
 })
 
 module.exports =  Customers;
