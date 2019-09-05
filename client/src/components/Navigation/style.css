@@ -1,6 +1,6 @@
 #nav-logo {
-    height: 100px;
-    width: 50px;
+    height: 80px;
+    width: 40px;
     transition: .5s;
 }
 .fa {
@@ -13,6 +13,8 @@ nav {
     left: 0;
     box-sizing: border-box;
     transition: .5s;
+    background: black;
+    opacity: .7;
 }
 nav ul {
     display: flex;
