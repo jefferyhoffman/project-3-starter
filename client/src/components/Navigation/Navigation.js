@@ -37,12 +37,11 @@ class Navigation extends Component {
                 <Link className='nav-link' to='/' onClick={this.toggleCollapse}>Home</Link>
               </li>
               <li className='nav-item'>
-                <Link className='nav-link' to='/contacts' onClick={this.toggleCollapse}>Contacts</Link>
+                <Link className='nav-link' to='/contact' onClick={this.toggleCollapse}>Contact</Link>
               </li>
-              {user &&
-                <li className='nav-item'>
-                  <Link className='nav-link' to='/secret' onClick={this.toggleCollapse}>Secret</Link>
-                </li>}
+              <li className='nav-item'>
+                <Link className='nav-link' to='/services' onClick={this.toggleCollapse}>Services</Link>
+              </li>
             </ul>
             <ul className='navbar-nav'>
               <li className='nav-item fa fa-facebook'></li>
