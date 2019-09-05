@@ -31,3 +31,20 @@ client
 ```
 React Details:
 ````
+
+# Mongoose & Project 3 Starter
+
+_All models are imported too and exported out of index_
+
+**Via the mongo shell, you will need to insert a message into your secret model**
+
+**All uses can be created via the registration form on the site**
+
+- Models
+  - index
+  - secret
+  - user
+
+_Remember, this is a basic starter template. You can do so much more if you set your mind too it. Read documentation, test your code, and explain it to yourself or others in order to undestand it_
+
+**_Mastery of a skill requires you to fail more than any novice has succeeded_**
