@@ -10,22 +10,23 @@ class Login extends Component {
 
   state = {
     redirectToReferrer: false,
-    error: ""
-  }
+    error: ''
+  };
 
   handleSubmit = (email, password) => {
     API.Users.login(email, password)
       .then(response => response.data)
       .then(({ user, token }) => {
         this.context.onLogin(user, token);
-        this.setState({ redirectToReferrer: true, error: "" });
+        this.setState({ redirectToReferrer: true, error: '' });
       })
       .catch(err => {
         let message;
 
         switch (err.response.status) {
           case 401:
-            message = 'Sorry, that email/password combination is not valid. Please try again.';
+            message =
+              'Sorry, that email/password combination is not valid. Please try again.';
             break;
           case 500:
             message = 'Server error. Please try again later.';
@@ -36,10 +37,10 @@ class Login extends Component {
 
         this.setState({ error: message });
       });
-  }
+  };
 
   render() {
-    const { from } = this.props.location.state || { from: { pathname: "/secret" } };
+    const { from } = this.props.location.state || { from: { pathname: '/' } };
     const { redirectToReferrer } = this.state;
 
     if (redirectToReferrer) {
@@ -53,18 +54,22 @@ class Login extends Component {
             <h1>Login</h1>
           </div>
         </div>
-        {this.state.error &&
+        {this.state.error && (
           <div className='row'>
             <div className='col'>
               <div className='alert alert-danger mb-3' role='alert'>
                 {this.state.error}
               </div>
             </div>
-          </div>}
+          </div>
+        )}
         <div className='row'>
           <div className='col'>
             <LoginForm onSubmit={this.handleSubmit} />
-            <div className='mt-3'>Don't have an account? <Link to='/register'>Click here to register.</Link></div>
+            <div className='mt-3'>
+              Don't have an account?{' '}
+              <Link to='/register'>Click here to register.</Link>
+            </div>
           </div>
         </div>
       </div>
