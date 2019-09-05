@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-
+import setup from './images/setup.jpg'
+import clean from './images/tank-clean-1.jpg' 
 import logo from '../Home/logo.png';
+import filter from './images/new-filter.jpg'
 
 class ServicesPage extends Component {
   render() {
@@ -19,20 +21,39 @@ class ServicesPage extends Component {
           </div>
         </div>
         <div className='row'>
-          <div class="card" id="about">
-            <div class="card-header">
+          <div className="card" id="about">
+            <div className="card-header">
               Services
             </div>
-            <div class="card-body">
-              <blockquote class="blockquote mb-0">
-                
-              </blockquote>
+            <div className="card-body">
+              <div className="card">
+                <img src={setup} className="card-img-top" alt="..."/>
+                  <div className="card-body">
+                    <p className="card-text">Full setup!</p>
+                  </div>              
+              </div>
+            </div>
+            <div className="card-body">
+              <div className="card">
+                <img src={clean} className="card-img-top" alt="..."/>
+                  <div className="card-body">
+                    <p className="card-text">Maybe you need a cleaning?</p>
+                  </div>              
+              </div>
+            </div>
+            <div className="card-body">
+              <div className="card">
+                <img src={filter} className="card-img-top" alt="..."/>
+                  <div className="card-body">
+                    <p className="card-text">Do you just need some new equipment?</p>
+                  </div>              
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    );
-  }
-}
-
+      </div> 
+        );
+      }
+    }
+    
 export default ServicesPage;

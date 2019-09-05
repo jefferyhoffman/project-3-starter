@@ -19,12 +19,12 @@ class HomePage extends Component {
           </div>
         </div>
         <div className='row'>
-          <div class="card" id="about">
-            <div class="card-header">
+          <div className="card" id="about">
+            <div className="card-header">
               About
             </div>
-            <div class="card-body">
-              <blockquote class="blockquote mb-0">
+            <div className="card-body">
+              <blockquote className="blockquote mb-0">
                 <p>Hello, my name is Matt, I started Krystal Klear Aquariums in early 2019.
                     We currently service Charlotte, NC and the surrounding area. I've had and maintained
                     my own tanks since I was 11. I started professionally when I was 15 and started working.
@@ -38,12 +38,12 @@ class HomePage extends Component {
           </div>
         </div>
         <div className='row'>
-          <div class="card" id="testimonials">
-            <div class="card-header">
+          <div className="card" id="testimonials">
+            <div className="card-header">
               Testimonials
             </div>
-            <div class="card-body">
-              <blockquote class="blockquote mb-0">
+            <div className="card-body">
+              <blockquote className="blockquote mb-0">
                 <p>Lorem ipsum</p>
               </blockquote>
             </div>
