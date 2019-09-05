@@ -1,0 +1,36 @@
+#nav-logo {
+    height: 100px;
+    width: 50px;
+    transition: .5s;
+}
+.fa {
+    margin-top: 10px;
+    margin-right: 5px;
+}
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    transition: .5s;
+}
+nav ul {
+    display: flex;
+    transition: .5s;
+}
+.nav-link {
+    color: white!important;
+}
+.active {
+    background: #004e8c;
+    color: aqua !important;    
+}
+.Navigation {
+    /* background-color: #000!important; */
+    color: white;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}

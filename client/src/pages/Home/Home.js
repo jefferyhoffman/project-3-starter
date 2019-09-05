@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-
+import './style.css'
 import logo from './logo.png';
 
 class HomePage extends Component {
   render() {
     return (
       <div className='Home'>
-        <div className='row'>
+        <div id='header'>
           <div className='col'>
             <p>Phone: 980-267-7483</p>
           </div>
