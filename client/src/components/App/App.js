@@ -60,6 +60,8 @@ class App extends Component {
   }
 
   render() {
+    const { user } = this.context;
+    // const user = true
     return (
       <AuthContext.Provider value={this.state.auth}>
         <div className='App'>
@@ -73,18 +75,24 @@ class App extends Component {
               <Route component={NotFound} />
             </Switch>
           </div>
+          
           <div className='container'>
-            <div>
+            
               <Route component={Landing}/>
+              
+              {user &&
+              <div>
               <h1>{this.state.renderText && this.state.text}</h1>
               <h1>Upcoming Events</h1>
               <Events />
-            </div>
+            {/* </div> */}
             <div>
               <h1>Community Members</h1>
               <Users />
             </div>
           </div>
+        }
+        </div>
         </div>
       </AuthContext.Provider>
     );

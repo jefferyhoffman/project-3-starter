@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-
+import './Landing.css'
 
 class Landing extends Component {
   render() {
@@ -18,7 +18,7 @@ class Landing extends Component {
               <a href="/" id="makePost" variant="outline-warning" style={{ "color": "black" }} className="btn btn-outline-white wow fadeInLeft" data-wow-delay="0.3s">Login</a>
             </div>
             <div className="col-md-6 col-xl-5 mb-4">
-              <div style={{ "marginTop": "10vh" }} className="card wow fadeInRight" data-wow-delay="0.3s">
+              <div style={{ "marginTop": "10vh" }} className="card wow fadeInRight size" data-wow-delay="0.3s">
                 <div className="card-body">
                   <div className="text-center">
                     <h3 className="white-text">
