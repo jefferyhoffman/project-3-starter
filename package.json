@@ -19,6 +19,7 @@
     "nodemon": "^1.18.10"
   },
   "dependencies": {
+    "mdbreact": "^4.19.2",
     "mongoose": "^5.6.12"
   },
   "repository": "https://github.com/Kalobar4/community-connect2.git",
