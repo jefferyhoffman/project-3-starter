@@ -7,6 +7,8 @@ class HomePage extends Component {
     return (
       <div className='Home'>
         <div className='row'>
+
+
           <div className='col'>
             <img src={logo} className='App-logo' alt='logo' />
             <p>
@@ -21,6 +23,9 @@ class HomePage extends Component {
               Learn React
             </a>
           </div>
+
+
+
         </div>
       </div>
     );
