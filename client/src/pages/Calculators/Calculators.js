@@ -1,130 +1,105 @@
+// Robert Zuniga
+import React, { Component } from 'react';
+import Jumbotron from "../../components/Jumbotron"
+import { Col, Row, Container } from "../../components/Grid";
+import { Input, TextArea, FormBtn } from "../../components/Form";
+//import { Redirect } from 'react-router-dom';
 
+import API from '../../lib/API';
+import AuthContext from '../../contexts/AuthContext';
 
+class Calculators extends Component {
+  static contextType = AuthContext;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-import React, { Component } from "react";
-import DeleteBtn from "../components/DeleteBtn";
-import Jumbotron from "../components/Jumbotron";
-import API from "../utils/API";
-import { Link } from "react-router-dom";
-import { Col, Row, Container } from "../components/Grid";
-import { List, ListItem } from "../components/List";
-import { Input, TextArea, FormBtn } from "../components/Form";
-
-class Books extends Component {
   state = {
-    books: [],
-    title: "",
-    author: "",
-    synopsis: ""
-  };
-
-  componentDidMount() {
-    this.loadBooks();
+    isLoading: true,
+    error: ""
   }
 
-  loadBooks = () => {
-    API.getBooks()
-      .then(res =>
-        this.setState({ books: res.data, title: "", author: "", synopsis: "" })
-      )
-      .catch(err => console.log(err));
-  };
+  componentDidMount() {
+    API.Secrets.getAll(this.context.authToken)
+      .then(response => response.data)
+      .then(secrets => this.setState({ secrets }))
+      .catch(err => {
+        if (err.response.status === 401) {
+          return this.setState({ error: "Unauthorized. Please login." });
+        }
 
-  deleteBook = id => {
-    API.deleteBook(id)
-      .then(res => this.loadBooks())
-      .catch(err => console.log(err));
-  };
-
-  handleInputChange = event => {
-    const { name, value } = event.target;
-    this.setState({
-      [name]: value
-    });
-  };
-
-  handleFormSubmit = event => {
-    event.preventDefault();
-    if (this.state.title && this.state.author) {
-      API.saveBook({
-        title: this.state.title,
-        author: this.state.author,
-        synopsis: this.state.synopsis
+        console.log(err);
       })
-        .then(res => this.loadBooks())
-        .catch(err => console.log(err));
-    }
+      .finally(() => this.setState({ isLoading: false }));
+  }
+
+    fvstate = {
+    presentValue: [],
+    rate: "",
+    periods: "",
+    years: ""
   };
+
 
   render() {
     return (
-      <Container fluid>
+      <div className='Secret'>
+        <div className='row'>
+          <div className='col'>
+            {this.state.isLoading
+              ? <div className='alert alert-success'>Loading...</div>
+              : this.state.error
+                ? <div className='alert alert-danger'>{this.state.error}</div>
+                : <div>
+
+<Container fluid>
         <Row>
           <Col size="md-6">
             <Jumbotron>
-              <h1>What Books Should I Read?</h1>
+              <h1>Calculators ==> Enter Inputs Here!</h1>
             </Jumbotron>
-            <form>
+            { <form>
               <Input
-                value={this.state.title}
+                value={this.fvstate.presentValue}
                 onChange={this.handleInputChange}
-                name="title"
-                placeholder="Title (required)"
+                name="presentValue"
+                placeholder="Present Value => 10000 (required)"
+              />
+              
+              <Input
+                value={this.fvstate.rate}
+                onChange={this.handleInputChange}
+                name="rate"
+                placeholder="Rate => e.g. 0.05 for 5% (required)"
               />
               <Input
-                value={this.state.author}
+                value={this.fvstate.numberOfPeriods}
                 onChange={this.handleInputChange}
-                name="author"
-                placeholder="Author (required)"
+                name="numberOfPeriods"
+                placeholder="Period => e.g. Enter 12 for monthly | 1 for  annually  (required)"
+              />
+              <Input
+                value={this.fvstate.years}
+                onChange={this.handleInputChange}
+                name="years"
+                placeholder="Years => e.g. Enter 10 for 10 years  (required)"
               />
               <TextArea
-                value={this.state.synopsis}
+                value={this.fvstate.synopsis}
                 onChange={this.handleInputChange}
-                name="synopsis"
-                placeholder="Synopsis (Optional)"
+                name="notes"
+                placeholder="Notes (Optional)"
               />
-              <FormBtn
+              { <FormBtn
                 disabled={!(this.state.author && this.state.title)}
                 onClick={this.handleFormSubmit}
               >
-                Submit Book
-              </FormBtn>
-            </form>
+                Calculate Future Value
+              </FormBtn> }
+            </form> }
           </Col>
           <Col size="md-6 sm-12">
             <Jumbotron>
-              <h1>Books On My List</h1>
+              <h1>Future Value Calculation</h1>
             </Jumbotron>
-            {this.state.books.length ? (
+            {/* {this.state.books.length ? (
               <List>
                 {this.state.books.map(book => (
                   <ListItem key={book._id}>
@@ -139,12 +114,24 @@ class Books extends Component {
               </List>
             ) : (
               <h3>No Results to Display</h3>
-            )}
+            )} */}
           </Col>
         </Row>
-      </Container>
+</Container>
+
+                  <p>It's never a question about how much something cost...</p>
+                  {/* <p><em>{this.state.secrets[0].message}</em></p> */}
+                  <p>the real question to be answered is</p> 
+                  <p> <em>"How do we finance this?"</em></p>
+
+
+                
+                </div>}
+          </div>
+        </div>
+      </div>
     );
   }
 }
 
-e
+export default Calculators;

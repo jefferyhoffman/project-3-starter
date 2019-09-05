@@ -27,5 +27,15 @@ export default {
         }
       });
     }
+  },
+  
+  Calculators: {
+    getAll: function (authToken) {
+      return axios.get('/api/calculators', {
+        headers: {
+          'Authorization': `Bearer ${authToken}`
+        }
+      });
+    }
   }
 }

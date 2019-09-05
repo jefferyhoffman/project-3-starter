@@ -38,7 +38,6 @@ class Secret extends Component {
   };
 
 
-
   render() {
     return (
       <div className='Secret'>
