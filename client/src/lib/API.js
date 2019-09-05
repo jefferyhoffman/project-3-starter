@@ -30,5 +30,12 @@ export default {
         }
       });
     }
+  },
+  Krystal: {
+    send: function(email){
+      return axios.post('/API/customerForm', {
+        data: 
+      })
+    }
   }
 }
