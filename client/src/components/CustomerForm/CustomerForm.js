@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 
-import Octicon, { Mail, Key } from '@githubprimer/octicons-react';
+// import Octicon, { Mail, Key } from '@githubprimer/octicons-react';
 
 class CustomerForm extends Component {
   state = {
+    fullName: '',
     email: '',
-    password: '',
-    passwordConfirm: ''
+    phoneNumber: '',
+    tankType: '',
+    tankSize: '',
+    message: ''
   };
 
   handleInputChange = event => {
@@ -18,24 +21,37 @@ class CustomerForm extends Component {
   }
 
   handleSubmit = event => {
-    const { email, password, passwordConfirm } = this.state;
+    const { fullName, email, phoneNumber, tankType, tankSize, message } = this.state;
 
-    this.props.onSubmit(email, password, passwordConfirm);
+    this.props.onSubmit(fullName, email, phoneNumber, tankType, tankSize, message);
     event.preventDefault();
   }
 
   render() {
-    const { email, password, passwordConfirm } = this.state;
+    const { fullName, email, phoneNumber, tankType, tankSize, message } = this.state;
 
     return (
       <div className='CustomerForm'>
         <div className='card'>
           <div className='card-body'>
             <form onSubmit={this.handleSubmit}>
-              <div className='input-group mb-3'>
-                <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Mail} /></span>
-                </div>
+              
+
+              <div className='form-group mb-3'>
+                
+                <input
+                  className='form-control'
+                  id='full-name'
+                  type='text'
+                  name='name'
+                  placeholder='Firstname Lastname'
+                  value={fullName}
+                  onChange={this.handleInputChange}
+                />
+              </div>
+
+              <div className='form-group mb-3'>
+                
                 <input
                   className='form-control'
                   id='email'
@@ -47,34 +63,54 @@ class CustomerForm extends Component {
                 />
               </div>
 
-              <div className='input-group mb-3'>
-                <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Key} /></span>
-                </div>
+              <div className='form-group mb-3'>
+                
                 <input
                   className='form-control'
-                  id='password'
-                  type='password'
-                  name='password'
-                  placeholder='password'
-                  value={password}
+                  id='phone-num'
+                  type='text'
+                  name='phone'
+                  placeholder='###-###-####'
+                  value={phoneNumber}
+                  onChange={this.handleInputChange}
+                />
+              </div>
+              
+              <div className='form-group mb-3'>
+                <label className='' for=''>Tank Type</label>
+                <select className='form-control' id='tank-type'>
+                  <option selected>Choose...</option>
+                  <option name='type' value={tankType} onChange={this.handleInputChange}>Tank</option>
+                  <option name='type' value={tankType} onChange={this.handleInputChange}>Molded Pond</option>
+                  <option name='type' value={tankType} onChange={this.handleInputChange}>Plastic Pond</option>
+                  <option name='type' value={tankType} onChange={this.handleInputChange}>Rubber Pond</option>
+                  <option name='type' value={tankType} onChange={this.handleInputChange}>Glass Aquarium</option>
+                  <option name='type' value={tankType} onChange={this.handleInputChange}>Acrylic Aquarium</option>
+                </select>
+              </div>
+
+              <div className='form-group mb-3'>
+                <input
+                  className='form-control'
+                  id='tank-size'
+                  type='text'
+                  name='size'
+                  placeholder='gallons'
+                  value={tankSize}
                   onChange={this.handleInputChange}
                 />
               </div>
 
-              <div className='input-group mb-3'>
-                <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Key} /></span>
-                </div>
-                <input
-                  className='form-control'
-                  id='password-confirm'
-                  type='password'
-                  name='passwordConfirm'
-                  placeholder='password (again)'
-                  value={passwordConfirm}
+              <div className='form-group'>
+                <label for=''>Message</label>
+                <textarea 
+                  className='form-control' 
+                  id='message'
+                  name='message' 
+                  value={message}
                   onChange={this.handleInputChange}
-                />
+                  rows='20'>
+                </textarea>
               </div>
 
               <button className='btn btn-primary' type='submit'>Submit</button>
