@@ -20,5 +20,7 @@
   },
   "dependencies": {
     "mongoose": "^5.6.12"
-  }
+  },
+  "repository": "https://github.com/Kalobar4/community-connect2.git",
+  "author": "Erin Ruth Maness <erinruthmaness@yahoo.com>"
 }
