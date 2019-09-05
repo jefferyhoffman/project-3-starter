@@ -33,9 +33,16 @@ class Navigation extends Component {
 
           <div className={targetClass} id='navbarSupportedContent'>
             <ul className='navbar-nav mr-auto'>
-              <li className='nav-item'><Link className='nav-link' to='/' onClick={this.toggleCollapse}>Home</Link></li>
-              <li><Link className='nav-link' to='/services' onClick={this.toggleCollapse}>Services</Link></li>
-              <li><Link className='nav-link' to='/' onClick={this.toggleCollapse}>Contact</Link></li>
+              <li className='nav-item'>
+                <Link className='nav-link' to='/' onClick={this.toggleCollapse}>Home</Link>
+              </li>
+              <li className='nav-item'>
+                <Link className='nav-link' to='/contacts' onClick={this.toggleCollapse}>Contacts</Link>
+              </li>
+              {user &&
+                <li className='nav-item'>
+                  <Link className='nav-link' to='/secret' onClick={this.toggleCollapse}>Secret</Link>
+                </li>}
             </ul>
             <ul className='navbar-nav'>
               <li className='nav-item fa fa-facebook'></li>

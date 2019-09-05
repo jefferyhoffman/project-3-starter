@@ -9,7 +9,7 @@ import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
 import Home from '../../pages/Home/Home';
 import Services from '../../pages/Services';
 import Login from '../../pages/Login/Login';
-import Contact from '../../pages/Register/Register';
+import Contacts from '../../pages/Contacts/Contacts';
 import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
 
@@ -59,7 +59,7 @@ class App extends Component {
               <Route exact path='/' component={Home} />
               <Route exact path='/services' component={Services} />
               <Route path='/login' component={Login} />
-              <Route path='/contact' component={Contact} />
+              <Route path='/contacts' component={Contacts} />
               <PrivateRoute path='/secret' component={Secret} />
               <Route component={NotFound} />
             </Switch>
