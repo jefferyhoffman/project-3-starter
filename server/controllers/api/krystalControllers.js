@@ -11,18 +11,20 @@ krystalControllers.post("/", (req, res) => {
     customerInfo.products_used = ""
     console.log(customerInfo,"<===")
     db.Customers.create({...customerInfo}).then(
-        (err,response)=>{
-            if(err) console.log(err)
+        (response)=>{
+            
             const msg = {
                 to: 'demartins37@yahoo.com',
-                from: 'demartins37@yahoo.com',
-                subject: 'Sending with Twilio SendGrid is Fun',
-                text: `${customerInfo.name, customerInfo.email} has contacted you with this message ${customerInfo.message}`,
-                html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+                from: customerInfo.email,
+                subject: 'Sending with Twilio SendGrid is Fun Test Test',
+                text: 'test',
+                html: `<strong>${customerInfo.name}, has contacted you with this message ${customerInfo.message}</strong>`,
               };
-              sgMail.send(msg);
-
+               sgMail.send(msg);
+              console.log(response)
+              res.json({'status':'sucess'})
+            
         }
-    )
+    ).catch((err)=>console.log(err))
 })
 module.exports = krystalControllers;

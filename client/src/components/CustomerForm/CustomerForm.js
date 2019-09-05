@@ -1,15 +1,31 @@
 import React, { Component } from 'react';
 import API from '../../lib/API';
+import Dropdown from 'react-dropdown'
+import 'react-dropdown/style.css'
+import {Redirect } from 'react-router-dom';
 // import Octicon, { Mail, Key } from '@githubprimer/octicons-react';
-
+import Modal from 'react-modal';
+ 
+const customStyles = {
+  content : {
+    top                   : '50%',
+    left                  : '50%',
+    right                 : 'auto',
+    bottom                : 'auto',
+    marginRight           : '-50%',
+    transform             : 'translate(-50%, -50%)'
+  }
+};
 class CustomerForm extends Component {
   state = {
-   name: '',
-    email: '',
+    name: '',
+    email: 'asdfasdf',
     phone: '',
-    tank_type: '',
+    tank_type: 'tank',
     tank_size: '',
-    message: ''
+    message: '',
+    modalIsOpen: false,
+    redirect:false
   };
 
   handleInputChange = event => {
@@ -19,25 +35,59 @@ class CustomerForm extends Component {
       [name]: value
     });
   }
-
+  _onSelect = option =>{
+    this.setState({tank_type:option.value})
+  }
   handleSubmit = event => {
     event.preventDefault();
     //const { fullName, email, phone, tank_type, tank_size, message } = this.state;
 
     //this.props.onSubmit(fullName, email, phone, tank_type, tank_size, message);
     
-    API.Krystal.send(this.state);
+    API.Krystal.send(this.state).then((results)=>{
+      results.status=== 200 && this.openModal()
+    })
   }
 
-  
+  openModal=()=>{
+    this.setState({modalIsOpen: true});
+  }
+ 
+  afterOpenModal=()=> {
+    // references are now sync'd and can be accessed.
+    this.subtitle.style.color = '#f00';
+  }
+ 
+  closeModal=()=> {
+    this.setState({modalIsOpen: false, redirect:true});
+  }
     
   
 
   render() {
-    const { name, email, phone, tank_type, tank_size, message } = this.state;
+    const { name, email, phone, tank_type, tank_size, message,redirect } = this.state;
 
+    const options = ['Tank', 'Molded Pond', 'Plastic Pond', 'Rubber Pond', 'Glass Aquarium', 'Acrylic Aquarium']
+    
+    if (redirect) {
+      return <Redirect to="/" />;
+    }
     return (
       <div className='CustomerForm'>
+        <Modal
+          isOpen={this.state.modalIsOpen}
+          onAfterOpen={this.afterOpenModal}
+          onRequestClose={this.closeModal}
+          style={customStyles}
+          contentLabel="Modal"
+        >
+ 
+          <h2 ref={subtitle => this.subtitle = subtitle}>Thank You</h2>
+          <div><h1>Information successfully sent!</h1></div>
+          <button onClick={this.closeModal}>close</button>
+          
+
+        </Modal>
         <div className='card'>
           <div className='card-body'>
             <form onSubmit={(event)=>this.handleSubmit(event)}>
@@ -81,8 +131,8 @@ class CustomerForm extends Component {
                   onChange={this.handleInputChange}
                 />
               </div>
-              
-              <div className='form-group mb-3'>
+              <Dropdown options={options} name="tank_type" onChange={this._onSelect} value={tank_type} placeholder="Select an option" />
+              {/* <div className='form-group mb-3'>
                 <label className='' htmlFor=''>Tank Type</label>
                 <select className='form-control' id='tank-type'>
                   <option selected>Choose...</option>
@@ -93,7 +143,7 @@ class CustomerForm extends Component {
                   <option name='type' value={tank_type} onChange={this.handleInputChange}>Glass Aquarium</option>
                   <option name='type' value={tank_type} onChange={this.handleInputChange}>Acrylic Aquarium</option>
                 </select>
-              </div>
+              </div> */}
 
               <div className='form-group mb-3'>
                 <input
