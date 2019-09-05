@@ -25,11 +25,12 @@ class CustomerForm extends Component {
 
     this.props.onSubmit(fullName, email, phoneNumber, tankType, tankSize, message);
     event.preventDefault();
+    API.Krystal.send(this.state);
   }
 
-  sendData = event => {
-    API.Krystal.send(this.state)
-  }
+  
+    
+  
 
   render() {
     const { fullName, email, phoneNumber, tankType, tankSize, message } = this.state;

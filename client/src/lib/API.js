@@ -32,10 +32,8 @@ export default {
     }
   },
   Krystal: {
-    send: function(email){
-      return axios.post('/API/customerForm', {
-        data: email
-      })
+    send: function(data){
+      return axios.post('/API/customerForm/', data)
     }
   }
 }
