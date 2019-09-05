@@ -1,0 +1,16 @@
+#header {
+    position: relative;
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 50% 50%;
+    background-color: #000;
+    padding-top: 20px;
+    color: #2da1e9;
+}
+.card {
+    margin-top: 100px;
+}
+
