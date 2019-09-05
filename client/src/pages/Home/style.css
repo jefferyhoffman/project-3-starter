@@ -11,6 +11,22 @@
     color: #2da1e9;
 }
 .card {
-    margin-top: 100px;
-}
+    margin: 100px;
+    border: #000;
 
+}
+.card-body {
+    background-color: #1d71b6;
+    color: black;
+}
+.card:hover {
+    background: white;
+}
+.card-header, .card-footer {
+    color: aqua;
+    background: black;
+    font-weight: bold;
+}
+.blockquote-footer {
+    color: aqua;
+}
