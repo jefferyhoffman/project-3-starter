@@ -4,14 +4,16 @@
   "license": "MIT",
   "main": "server.js",
   "dependencies": {
-    "dotenv": "^6.2.0",
+    "dotenv": "^8.1.0",
     "express": "^4.16.4",
     "jsonwebtoken": "^8.5.0",
+    "mongoose": "^5.4.15",
     "morgan": "^1.9.1",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0"
   },
   "scripts": {
+    "seed": "node controllers/scripts/seedDB.js",
     "start": "node server",
     "start:dev": "nodemon"
   }

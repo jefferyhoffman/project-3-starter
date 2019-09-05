@@ -17,5 +17,11 @@
   "devDependencies": {
     "concurrently": "^4.1.0",
     "nodemon": "^1.18.10"
-  }
+  },
+  "dependencies": {
+    "mdbreact": "^4.19.2",
+    "mongoose": "^5.6.12"
+  },
+  "repository": "https://github.com/Kalobar4/community-connect2.git",
+  "author": "Erin Ruth Maness <erinruthmaness@yahoo.com>"
 }

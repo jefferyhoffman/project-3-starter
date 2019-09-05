@@ -1,0 +1,14 @@
+.card {
+    background-size: cover;
+    background-position: center;
+    background-clip: content-box;
+    border: 2px solid rgb(230, 212, 59);
+    width: 600px;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .card {
+    background-image: url("http://res.cloudinary.com/cspaveljb/image/upload/v1499110969/cork_w2tt25.jpg"); background-repeat: no-repeat; background-size: cover; background-position: center center;
+    
+}

@@ -1,0 +1,21 @@
+.md-form .prefix.active {
+  color: orange;
+}
+.btn-default {
+  background-color: orange !important;
+}
+
+.md-form input[type="text"]:focus:not([readonly]) + label,
+.md-form input[type="password"]:focus:not([readonly]) + label,
+.md-form input[type="email"]:focus:not([readonly]) + label,
+.md-form input[type="url"]:focus:not([readonly]) + label,
+.md-form input[type="time"]:focus:not([readonly]) + label,
+.md-form input[type="date"]:focus:not([readonly]) + label,
+.md-form input[type="datetime-local"]:focus:not([readonly]) + label,
+.md-form input[type="tel"]:focus:not([readonly]) + label,
+.md-form input[type="number"]:focus:not([readonly]) + label,
+.md-form input[type="search-md"]:focus:not([readonly]) + label,
+.md-form input[type="search"]:focus:not([readonly]) + label,
+.md-form textarea.md-textarea:focus:not([readonly]) + label {
+  color: orange;
+}
