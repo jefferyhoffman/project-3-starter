@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 
 import CustomerForm from '../../components/CustomerForm/CustomerForm.js';
-import API from '../../lib/API';
+
 
 class Contacts extends Component {
-
 
   render() {
     return (
