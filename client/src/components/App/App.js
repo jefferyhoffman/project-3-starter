@@ -14,6 +14,8 @@ import NotFound from '../../pages/NotFound/NotFound';
 import Events from '../../pages/Events';
 import Posts from '../../pages/Posts';
 import Users from '../../pages/Users';
+import Landing from "../Landing/Landing";
+
 
 import './App.css';
 
@@ -79,6 +81,7 @@ class App extends Component {
           </div>
           {/* <div className='container'>
             <div>
+              <Route component={Landing}/>
               <h1>{this.state.renderText && this.state.text}</h1>
               <h1>Upcoming Events</h1>
               <Events />
