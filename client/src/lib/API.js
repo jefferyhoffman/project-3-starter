@@ -33,8 +33,6 @@ export default {
   },
   Krystal: {
     send: function(data){
-      console.log('=================================================')
-      console.log(data)
       return axios.post('/API/krystal/', data)
     }
   }
