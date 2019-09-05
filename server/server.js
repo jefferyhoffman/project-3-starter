@@ -18,6 +18,12 @@ const mongoose = require('mongoose');
 
 const { passport } = require('./lib/passport');
 
+//-- Mongoose Setup ----------------------------------------------------------
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/ProjectThree');
+mongoose.connection.on('error', err => {
+  console.log(`Mongoose connection err:\n${err}`);
+});
+
 //-- Constants ---------------------------------------------------------------
 const PORT = process.env.PORT || 3001;
 const LOG_MODE = process.env.NODE_ENV === 'production' ? 'common' : 'dev';
