@@ -11,8 +11,10 @@
     color: #2da1e9;
 }
 .card {
-    margin: 100px;
+    width: 50%;
+    left: 25%;
     border: #000;
+    margin-top: 100px;
 
 }
 .card-body {

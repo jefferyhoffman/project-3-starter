@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
-
+import Particles from 'react-particles-js';
 import API from '../../lib/API';
 import TokenStore from '../../lib/TokenStore';
 import AuthContext from '../../contexts/AuthContext';
@@ -17,6 +17,44 @@ import Admin from '../../pages/Admin/Admin';
 import './App.css';
 import Customer from '../../pages/Customer/Customer';
 
+const particlesOptions = {
+  particles: {
+    number: {
+      value:15,
+      density: {
+        enable: true,
+        value_area: 800
+      }
+    },
+    size: {
+      value: 30,
+      random: true,
+      anim: {
+        enable: false,
+        speed: 1,
+        size_min: 0.3,
+        sync: false
+      }
+    },
+    line_linked: {
+      enable: false,
+    },
+    move: {
+      speed: 2,
+      direction: "top",
+      random: false,
+    },
+    interactivity: {
+      detect_on: "canvas",
+      events: {
+        onhover: {
+          enable: false,
+          mode: "bubble"
+        }
+      }
+    }
+  }
+};
 class App extends Component {
   constructor(props) {
     super(props);
@@ -55,6 +93,8 @@ class App extends Component {
     return (
       <AuthContext.Provider value={this.state.auth}>
         <div className='App'>
+          <Particles
+            params={particlesOptions} />
           <Navigation />
           <div className='main'>
             <Switch>
