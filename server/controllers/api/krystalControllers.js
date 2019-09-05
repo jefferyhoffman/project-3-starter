@@ -1,11 +1,19 @@
-const db = require("../../models/customer")
-const app = require('express').Router
+const db = require("../../models")
+const krystalControllers = require('express').Router();
 
 
-app.put("/API/customerForm", (req, res) => {
-    customerInfo = res.data
-    customerInfo.date_contacted = date.now()
-    cusotmerInfo.service_notes = ""
-    cusotmerInfo.products_used = ""
-    db.Customers.insert({customerInfo})
+krystalControllers.post("/", (req, res) => {
+    customerInfo = req.body
+
+    customerInfo.date_contacted = Date.now()
+    customerInfo.service_notes = ""
+    customerInfo.products_used = ""
+    console.log(customerInfo,"<===")
+    db.Customers.create({customerInfo}).then(
+        (err,response)=>{
+            if(err) console.log(err)
+            console.log(response)
+        }
+    )
 })
+module.exports = krystalControllers;
