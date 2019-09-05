@@ -19,13 +19,12 @@ class Navigation extends Component {
   }
 
   render() {
-    const { user } = this.context;
     const { collapsed } = this.state;
     const targetClass = `collapse navbar-collapse ${!collapsed && 'show'}`;
     const togglerClass = `navbar-toggler ${collapsed && 'collapsed'}`;
 
     return (
-      <div className='Navigation'>
+      <div className='Navigation App-nav'>
         <nav className='navbar navbar-expand-lg navbar-light bg-light mb-3'>
           <Link className='navbar-brand' to='#'>Krystal Klear Aquariums</Link>
           <button className={togglerClass} onClick={this.toggleCollapse} data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
@@ -47,8 +46,9 @@ class Navigation extends Component {
             </ul>
             <ul className='navbar-nav'>
               <li className='nav-item fa fa-facebook'></li>
-              <li className='nav-item'><Link className='nav-link' to='https://www.facebook.com/krystalklearaquariums/' onClick={this.toggleCollapse}>Krystal Klear Aquariums</Link></li>
-              <li className='nav-item'><Link className='nav-link' to='https://www.facebook.com/wetpetsgastonia/' onClick={this.toggleCollapse}>Wet Pets</Link></li>
+              <li></li>
+              <li className='nav-item'><a className='nav-link' href='https://www.facebook.com/krystalklearaquariums/'>Krystal Klear Aquariums</a></li>
+              <li className='nav-item'><a className='nav-link' href='https://www.facebook.com/wetpetsgastonia/'>Wet Pets</a></li>
             </ul>
           </div>
         </nav>
