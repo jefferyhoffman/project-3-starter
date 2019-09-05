@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 
-import Octicon, { Mail, Key } from '@githubprimer/octicons-react';
-
-class RegistrationForm extends Component {
+class RegisterForm extends Component {
   state = {
     email: '',
-    password: '',
-    passwordConfirm: ''
+    password: ''
   };
 
   handleInputChange = event => {
@@ -18,23 +15,23 @@ class RegistrationForm extends Component {
   }
 
   handleSubmit = event => {
-    const { email, password, passwordConfirm } = this.state;
+    const { email, password } = this.state;
 
-    this.props.onSubmit(email, password, passwordConfirm);
+    this.props.onSubmit(email, password);
     event.preventDefault();
   }
 
   render() {
-    const { email, password, passwordConfirm } = this.state;
+    const { email, password } = this.state;
 
     return (
-      <div className='LoginForm'>
+      <div className='RegisterForm'>
         <div className='card'>
           <div className='card-body'>
-            <form onSubmit={this.handleSubmit}>
+            <form className='LoginForm' onSubmit={this.handleSubmit}>
               <div className='input-group mb-3'>
                 <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Mail} /></span>
+                  <span className="input-group-text">@</span>
                 </div>
                 <input
                   className='form-control'
@@ -49,7 +46,7 @@ class RegistrationForm extends Component {
 
               <div className='input-group mb-3'>
                 <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Key} /></span>
+                  <span className="input-group-text">a3b</span>
                 </div>
                 <input
                   className='form-control'
@@ -62,22 +59,7 @@ class RegistrationForm extends Component {
                 />
               </div>
 
-              <div className='input-group mb-3'>
-                <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Key} /></span>
-                </div>
-                <input
-                  className='form-control'
-                  id='password-confirm'
-                  type='password'
-                  name='passwordConfirm'
-                  placeholder='password (again)'
-                  value={passwordConfirm}
-                  onChange={this.handleInputChange}
-                />
-              </div>
-
-              <button className='btn btn-primary' type='submit'>Register Now!</button>
+              <button className='btn btn-primary' type='submit'>Register</button>
             </form>
           </div>
         </div>
@@ -86,4 +68,5 @@ class RegistrationForm extends Component {
   }
 }
 
-export default RegistrationForm;
+export default RegisterForm;
+
