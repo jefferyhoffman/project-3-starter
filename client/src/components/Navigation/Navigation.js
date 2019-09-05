@@ -39,10 +39,6 @@ class Navigation extends Component {
               <li className='nav-item'>
                 <Link className='nav-link' to='/contacts' onClick={this.toggleCollapse}>Contacts</Link>
               </li>
-              {user &&
-                <li className='nav-item'>
-                  <Link className='nav-link' to='/secret' onClick={this.toggleCollapse}>Secret</Link>
-                </li>}
             </ul>
             <ul className='navbar-nav'>
               <li className='nav-item fa fa-facebook'></li>
