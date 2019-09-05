@@ -41,10 +41,10 @@ class CustomerForm extends Component {
                 
                 <input
                   className='form-control'
-                  id='full-name'
+                  id='fullName'
                   type='text'
-                  name='name'
-                  placeholder='Firstname Lastname'
+                  name='fullName'
+                  placeholder='First Name and Last Name'
                   value={fullName}
                   onChange={this.handleInputChange}
                 />
@@ -67,9 +67,9 @@ class CustomerForm extends Component {
                 
                 <input
                   className='form-control'
-                  id='phone-num'
+                  id='phoneNumber'
                   type='text'
-                  name='phone'
+                  name='phoneNumber'
                   placeholder='###-###-####'
                   value={phoneNumber}
                   onChange={this.handleInputChange}
@@ -92,9 +92,9 @@ class CustomerForm extends Component {
               <div className='form-group mb-3'>
                 <input
                   className='form-control'
-                  id='tank-size'
+                  id='tankSize'
                   type='text'
-                  name='size'
+                  name='tankSize'
                   placeholder='gallons'
                   value={tankSize}
                   onChange={this.handleInputChange}

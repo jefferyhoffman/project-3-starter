@@ -8,12 +8,12 @@ class Contacts extends Component {
     error: ""
   }
 
-  handleSubmit = (email, password, confirm) => {
-    if (password !== confirm) {
-      return this.setState({ error: "Passwords do not match." });
+  handleSubmit = (fullName, email, phoneNumber, tankType, tankSize, message) => {
+    if (fullName === "" || email === "") {
+      return this.setState({ error: "Name and Email Required" });
     }
 
-    API.Users.create(email, password)
+    API.Users.create(fullName, email, phoneNumber, tankType, tankSize, message)
       .then(response => response.data)
       .then(user => console.log(user))
       .catch(err => this.setState({ error: err.message }));
