@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    let annually = 1;
+    let semiannual = 2;
+    let quarterly = 4;
+    let monthly = 12;
+    let daily = 365;
+
+    
+    <script>
+        let presentValue = 1000;
+        let rate = 0.05;
+        let numberOfPeriods = 12;
+        let Years = 10;
+
+        console.log("presentValue ==>", presentValue);
+
+        let futureValue = presentValue * Math.pow((1 + rate / numberOfPeriods), (numberOfPeriods * Years));
+
+        // console.log("futureValue ==>", futureValue);
+
+        for (let i = 1; i <= Years; i++) {
+
+            let fv = 0;
+            fv = presentValue * Math.pow((1 + rate / numberOfPeriods), (numberOfPeriods * i));
+            console.log("year ==> " + i + " fv ==> " + fv);
+        }
+
+        console.log("futureValue ==>", futureValue);
+
+        let numerator = futureValue;
+        let denominator = Math.pow((1 + rate / numberOfPeriods), (numberOfPeriods * Years));
+        presentValue = numerator / denominator;
+
+        for (let i = 1; i <= Years; i++) {
+
+            let pv = 0;
+            let numerator = futureValue;
+            let denominator = Math.pow((1 + rate / numberOfPeriods), (numberOfPeriods * i));
+            pv = numerator / denominator;
+
+            console.log("year ==> " + i + " pv ==> " + pv);
+
+        }
+
+        console.log("presentValue ==>", presentValue);
+
+
+
+
+
+        //
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
