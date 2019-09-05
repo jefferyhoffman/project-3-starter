@@ -13,6 +13,7 @@ import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
 import Events from '../Layout/Events/Events';
 import Users from '../Layout/Users/Users';
+import Landing from "../Landing/Landing";
 
 import './App.css';
 
@@ -74,6 +75,7 @@ class App extends Component {
           </div>
           <div className='container'>
             <div>
+              <Route component={Landing}/>
               <h1>{this.state.renderText && this.state.text}</h1>
               <h1>Upcoming Events</h1>
               <Events />
