@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import API from '../../lib/API';
 // import Octicon, { Mail, Key } from '@githubprimer/octicons-react';
 
 class CustomerForm extends Component {
@@ -25,6 +25,10 @@ class CustomerForm extends Component {
 
     this.props.onSubmit(fullName, email, phoneNumber, tankType, tankSize, message);
     event.preventDefault();
+  }
+
+  sendData = event => {
+    API.Krystal.send(this.state)
   }
 
   render() {
