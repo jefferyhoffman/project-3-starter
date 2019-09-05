@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import "./style.css";
 
 class UserItem extends Component {
   render() {
     const { login, avatar_url, html_url } = this.props.user;
 
     return (
-      <div className='card text-center'>
+      <div id="ok" className='card text-center'>
         <div>
           <img
             src={avatar_url}
