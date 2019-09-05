@@ -12,8 +12,10 @@ import Login from '../../pages/Login/Login';
 import Contact from '../../pages/Contacts/Contacts';
 import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
+import Admin from '../../pages/Admin/Admin';
 
 import './App.css';
+import Customer from '../../pages/Customer/Customer';
 
 class App extends Component {
   constructor(props) {
@@ -61,6 +63,8 @@ class App extends Component {
               <Route path='/login' component={Login} />
               <Route path='/contact' component={Contact} />
               <PrivateRoute path='/secret' component={Secret} />
+              <Route path="/admin" component={Admin} />
+              <Route path="/admin/:id" component={Customer} />
               <Route component={NotFound} />
             </Switch>
           </div>
