@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Table, TableHead, TableBody} from '../../components/Table/Table';
 
 class Admin extends Component {
   state = {
@@ -46,33 +47,27 @@ class Admin extends Component {
       render() {
         //this is where i'll console.log my state/props
         return (
+
+          
           <div>
-              {/* <button onClick={this.makeInactive()} className="btn btn-primary btn-sm">Click Me</button> */}
-            <table className="table">
-              <thead>
-                <tr>
-                  <th scope="col">Customer Name</th>
-                  <th scope="col">Contacted</th>
-                  <th scope="col">Date Contacted</th>
-                  <th scope="col">Make Inactive</th>
-                </tr>
-              </thead>
-              <tbody>
-                {
-                  this.state.userData.map(person => {
-                    console.log(person.userId);
-                    return (
+            <Table>
+              <TableHead>
+              </TableHead>
+              <TableBody>
+                {this.state.userData.map(person => {
+                  console.log(person.userId);
+                  return (
                     <tr key={person.userId}>
-                        <th scope="row">{person.name}</th>
-                        {person.contacted ? (<td>Yes</td>) : (<td>No</td>)}
-                        <td>{person.dateContacted}</td>
-                        <td><button onClick={() => this.makeInactive(person.userId)} className="btn btn-danger btn-sm">X</button></td>
+                      <th scope="row">{person.name}</th>
+                      {person.contacted ? (<td>Yes</td>) : (<td>No</td>)}
+                      <td>{person.dateContacted}</td>
+                      <td><button onClick={() => this.makeInactive(person.userId)} className="btn btn-danger btn-sm">X</button></td>
                     </tr>
                     )
                   })
                 }
-              </tbody>
-            </table>
+              </TableBody>
+            </Table>
           </div>
         )
       }

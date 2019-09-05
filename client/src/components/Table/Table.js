@@ -1,16 +1,14 @@
 import React from 'react';
 
-export function Table({children}) {
+export function Table({ children }) {
   return (
-    <div>
       <table className="table">
         {children}
       </table>
-    </div>
   )
 }
 
-export function TalbeHead() {
+export function TableHead() {
   return (
     <thead>
       <tr>
@@ -23,10 +21,12 @@ export function TalbeHead() {
   )
 }
 
-export function TableBody({children}) {
+export function TableBody({ children }) {
   return (
     <tbody>
       {children}
     </tbody>
   )
 }
+
+
