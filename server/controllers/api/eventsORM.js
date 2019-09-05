@@ -3,14 +3,14 @@ const db = require('../../models');
 // Defining methods for the EventsController
 module.exports = {
   findAll: function(req, res) {
-    console.log(req.query, 'req.query');
+    console.log(db.Events);
     // res.send('test response');
 
     db.Events.find(req.query)
       .sort({ date: -1 })
       .then(dbModel => {
         console.log(dbModel, 'testing123');
-        res.json({});
+        res.json(dbModel);
       })
       .catch(err => res.status(422).json(err));
   },

@@ -1,9 +1,8 @@
 const eventsController = require('express').Router();
 const eventsORM = require('./eventsORM');
-
 const db = require('../../models');
 
-eventsController.post('/', (req, res) => {
+eventsController.post('/post', (req, res) => {
   // const { email, password } = req.body;
   // db.events.create({ email, password })
   //   .then(user => res.json(user))
@@ -11,6 +10,7 @@ eventsController.post('/', (req, res) => {
 });
 
 eventsController.get('/', (req, res) => {
+  console.log('this is working');
   eventsORM.findAll(req, res);
 });
 
