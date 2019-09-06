@@ -1,13 +1,12 @@
 const db = require('../../models');
 
-// Defining methods for the EventsController
+// Defining methods for the ProfilesController
 module.exports = {
   findAll: function(req, res) {
-    console.log(db);
-    console.log(db.Events);
+    console.log(db.Profiles);
     // res.send('test response');
 
-    db.Events.find(req.query)
+    db.Profiles.find(req.query)
       .sort({ date: -1 })
       .then(dbModel => {
         console.log(dbModel, 'testing123');
@@ -16,25 +15,22 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   findById: function(req, res) {
-    db.Events.findById(req.params.id)
+    db.Profiles.findById(req.params.id)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   create: function(req, res) {
-    db.Events.create(req.body)
+    db.Profiles.create(req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   update: function(req, res) {
-    console.log(req.body);
-    console.log(req.params._id);
-    db.Events.findOneAndUpdate({ _id: req.params._id }, req.body)
+    db.Profiles.findOneAndUpdate({ _id: req.params.id }, req.body)
       .then(dbModel => res.json(dbModel))
-
       .catch(err => res.status(422).json(err));
   },
   remove: function(req, res) {
-    db.Events.findById({ _id: req.params.id })
+    db.Profiles.findById({ _id: req.params.id })
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));

@@ -34,7 +34,9 @@ const LOG_MODE = process.env.NODE_ENV === 'production' ? 'common' : 'dev';
 const app = express();
 
 //-- Mongoose Setup ----------------------------------------------------------
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/ProjectThree');
+mongoose.connect(
+  process.env.MONGODB_URI || 'mongodb://localhost/communityconnect'
+);
 mongoose.connection.on('error', err => {
   console.log(`Mongoose connection err:\n${err}`);
 });

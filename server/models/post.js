@@ -2,9 +2,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const postSchema = new Schema({
-  category: { type: String, required: true, default: 'random' },
+  event_name: [{ type: Schema.Types.ObjectId, ref: 'Event' }],
   post_title: { type: String, required: true },
   post_details: { type: String, required: true },
+  category: { type: String, required: true, default: 'random' },
   post_author_name: { type: String, required: true },
   post_comment: { type: String, required: false },
   comment_author_name: { type: String, required: false },
