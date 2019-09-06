@@ -1,10 +1,14 @@
 .App {
   text-align: center;
+  background-color: #004e8c;
+  position: relative;
+
+
+
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  height: 300px;
   pointer-events: none;
 }
 
@@ -31,3 +35,11 @@
     transform: rotate(360deg);
   }
 }
+canvas {
+  z-index: 0;
+  top: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;  
+}
+

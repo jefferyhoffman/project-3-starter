@@ -1,0 +1,42 @@
+#header {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 50% 50%;
+    background-color: #000;
+    padding-top: 20px;
+    color: #2da1e9;
+    font-family: 'Russo One', sans-serif;
+}
+.card {
+    width: 50%;
+    left: 25%;
+    border: #000;
+    margin-top: 100px;
+    opacity: .92;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.card-body {
+    background-color: #1d71b6;
+    color: black;
+}
+.card:hover {
+    background: white;
+}
+.card-header, .card-footer {
+    color: aqua;
+    background: black;
+    font-weight: bold;
+}
+.blockquote-footer {
+    color: aqua;
+}
+h2 {
+    margin-top: 20%;
+}
+.card-text {
+    color: aqua;
+}
