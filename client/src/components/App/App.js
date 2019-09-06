@@ -104,7 +104,7 @@ class App extends Component {
               <Route path='/contact' component={Contact} />
               <PrivateRoute path='/secret' component={Secret} />
               <Route path="/admin" component={Admin} />
-              <Route path="/admin/:id" component={Customer} />
+              <Route path="/customer" component={Customer} />
               <Route component={NotFound} />
             </Switch>
           </div>
