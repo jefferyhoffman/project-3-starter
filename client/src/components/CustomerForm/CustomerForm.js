@@ -3,7 +3,6 @@ import API from '../../lib/API';
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
 import {Redirect } from 'react-router-dom';
-// import Octicon, { Mail, Key } from '@githubprimer/octicons-react';
 import Modal from 'react-modal';
  
 const customStyles = {
@@ -19,9 +18,9 @@ const customStyles = {
 class CustomerForm extends Component {
   state = {
     name: '',
-    email: 'asdfasdf',
+    email: '',
     phone: '',
-    tank_type: 'tank',
+    tank_type: '',
     tank_size: '',
     message: '',
     modalIsOpen: false,
@@ -40,9 +39,6 @@ class CustomerForm extends Component {
   }
   handleSubmit = event => {
     event.preventDefault();
-    //const { fullName, email, phone, tank_type, tank_size, message } = this.state;
-
-    //this.props.onSubmit(fullName, email, phone, tank_type, tank_size, message);
     
     API.Krystal.send(this.state).then((results)=>{
       results.status=== 200 && this.openModal()
@@ -54,7 +50,6 @@ class CustomerForm extends Component {
   }
  
   afterOpenModal=()=> {
-    // references are now sync'd and can be accessed.
     this.subtitle.style.color = '#f00';
   }
  
@@ -82,8 +77,8 @@ class CustomerForm extends Component {
           contentLabel="Modal"
         >
  
-          <h2 ref={subtitle => this.subtitle = subtitle}>Thank You</h2>
-          <div><h1>Information successfully sent!</h1></div>
+          <h1 ref={subtitle => this.subtitle = subtitle}>Thank You</h1>
+          <div><h2>Information Sent Successfully!</h2></div>
           <button onClick={this.closeModal}>close</button>
           
 
@@ -91,10 +86,8 @@ class CustomerForm extends Component {
         <div className='card'>
           <div className='card-body'>
             <form onSubmit={(event)=>this.handleSubmit(event)}>
-              
-
+            
               <div className='form-group mb-3'>
-                
                 <input
                   className='form-control'
                   id='name'
@@ -107,7 +100,6 @@ class CustomerForm extends Component {
               </div>
 
               <div className='form-group mb-3'>
-                
                 <input
                   className='form-control'
                   id='email'
@@ -120,7 +112,6 @@ class CustomerForm extends Component {
               </div>
 
               <div className='form-group mb-3'>
-                
                 <input
                   className='form-control'
                   id='phone'
@@ -131,19 +122,13 @@ class CustomerForm extends Component {
                   onChange={this.handleInputChange}
                 />
               </div>
-              <Dropdown options={options} name="tank_type" onChange={this._onSelect} value={tank_type} placeholder="Select an option" />
-              {/* <div className='form-group mb-3'>
-                <label className='' htmlFor=''>Tank Type</label>
-                <select className='form-control' id='tank-type'>
-                  <option selected>Choose...</option>
-                  <option name='type' value={tank_type} onChange={this.handleInputChange}>Tank</option>
-                  <option name='type' value={tank_type} onChange={this.handleInputChange}>Molded Pond</option>
-                  <option name='type' value={tank_type} onChange={this.handleInputChange}>Plastic Pond</option>
-                  <option name='type' value={tank_type} onChange={this.handleInputChange}>Rubber Pond</option>
-                  <option name='type' value={tank_type} onChange={this.handleInputChange}>Glass Aquarium</option>
-                  <option name='type' value={tank_type} onChange={this.handleInputChange}>Acrylic Aquarium</option>
-                </select>
-              </div> */}
+              
+              <Dropdown 
+                options={options} 
+                name="tank_type"
+                placeholder="Select A Tank Type"
+                value={tank_type} 
+                onChange={this._onSelect} />
 
               <div className='form-group mb-3'>
                 <input

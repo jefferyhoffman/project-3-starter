@@ -26,10 +26,9 @@ const LOG_MODE = process.env.NODE_ENV === 'production' ? 'common' : 'dev';
 const app = express();
 
 //-- Mongoose Setup ----------------------------------------------------------
-mongoose.connect(
-  process.env.MONGODB_URI ||
-  'mongodb://localhost/KrystalKlear'
-)
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/KrystalKlear';
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+
 mongoose.connection.on('error', err => {
   console.log(`Mongoose connection err:\n${err}`)
 })
