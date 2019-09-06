@@ -11,12 +11,13 @@ eventsController.get('/:id', (req, res) => {
   eventsORM.findById(req, res);
 });
 
-/// Route /api/events/post  ///   Post a new event
-eventsController.post('/post', (req, res) => {
-  // const { email, password } = req.body;
-  // db.events.create({ email, password })
-  //   .then(user => res.json(user))
-  //   .catch(err => res.json(err));
+/// Route /api/events  ///   Post a new event
+eventsController.post('/', (req, res) => {
+  eventsORM.create(req, res);
 });
 
+/// Route /api/events/:id  ///   Patch update of task and isTaskCompleted boolean
+eventsController.patch('/:_id', (req, res) => {
+  eventsORM.update(req, res);
+});
 module.exports = eventsController;

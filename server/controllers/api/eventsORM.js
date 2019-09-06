@@ -26,8 +26,11 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   update: function(req, res) {
-    db.Events.findOneAndUpdate({ _id: req.params.id }, req.body)
+    console.log(req.body);
+    console.log(req.params._id);
+    db.Events.findOneAndUpdate({ _id: req.params._id }, req.body)
       .then(dbModel => res.json(dbModel))
+
       .catch(err => res.status(422).json(err));
   },
   remove: function(req, res) {

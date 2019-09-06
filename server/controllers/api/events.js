@@ -9,9 +9,9 @@ router
 
 // Matches with "/api/events/:id"
 router
-  .route('/:id')
+  .route('/:_id')
   .get(eventsController.findById)
-  .put(eventsController.update)
+  .patch(eventsController.patch)
   .delete(eventsController.remove);
 
 module.exports = router;
