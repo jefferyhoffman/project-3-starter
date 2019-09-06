@@ -18,9 +18,9 @@ const customStyles = {
 class CustomerForm extends Component {
   state = {
     name: '',
-    email: 'asdfasdf',
+    email: '',
     phone: '',
-    tank_type: 'tank',
+    tank_type: '',
     tank_size: '',
     message: '',
     modalIsOpen: false,
@@ -126,7 +126,7 @@ class CustomerForm extends Component {
               <Dropdown 
                 options={options} 
                 name="tank_type"
-                placeholder="Select an option"
+                placeholder="Select A Tank Type"
                 value={tank_type} 
                 onChange={this._onSelect} />
 
