@@ -36,4 +36,14 @@ krystalControllers.get("/viewcustomer/", (req, res) =>{
         }
     )
 })
+
+krystalControllers.get("/find/:id", (req, res) =>{
+    console.log('=============================')
+    console.log(req.params.id)
+    db.Customers.findOne({ _id: req.params.id })
+        .then((response) => {
+            console.log(response)
+            res.json(response)
+        })
+})
 module.exports = krystalControllers;

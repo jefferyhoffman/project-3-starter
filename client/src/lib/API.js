@@ -36,7 +36,12 @@ export default {
       return axios.post('/API/krystal/', data)
     },
     grab: function(){
-      return axios.get('API/viewcustomer/');
+      return axios.get('/API/krystal/viewcustomer/');
+    },
+    grabOne: function(id){
+      console.log('-------------------------------------------')
+      console.log(id)
+      return axios.get(`/API/krystal/find/${id}`);
     }
   }
 }
