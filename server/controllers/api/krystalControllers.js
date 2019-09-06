@@ -16,7 +16,7 @@ krystalControllers.post("/", (req, res) => {
             const msg = {
                 to: 'demartins37@yahoo.com',
                 from: customerInfo.email,
-                subject: 'Sending with Twilio SendGrid is Fun Test Test',
+                subject: 'Project 3 Test Form has been Submitted',
                 text: 'test',
                 html: `<strong>${customerInfo.name}, has contacted you with this message ${customerInfo.message}</strong>`,
               };
