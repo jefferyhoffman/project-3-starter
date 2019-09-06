@@ -12,17 +12,11 @@
     "start": "node server/server.js",
     "start:dev": "concurrently -n client,server \"yarn run client:dev\" \"yarn run server:dev\"",
     "client:dev": "cd client && yarn start",
-    "server:dev": "nodemon server/server.js",
+    "server:dev": "cd server && yarn start:dev",
     "heroku-postbuild": "yarn build"
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
     "nodemon": "^1.18.10"
-  },
-  "dependencies": {
-    "mdbreact": "^4.19.2",
-    "mongoose": "^5.6.13"
-  },
-  "repository": "https://github.com/Kalobar4/community-connect2.git",
-  "author": "Erin Ruth Maness <erinruthmaness@yahoo.com>"
+  }
 }
