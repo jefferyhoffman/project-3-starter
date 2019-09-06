@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import {Table, TableHead, TableBody} from '../../components/Table/Table';
+import { Link } from 'react-router-dom';
+import Customer from '../Customer/Customer';
 
 class Admin extends Component {
   state = {
@@ -58,7 +60,7 @@ class Admin extends Component {
                   console.log(person.userId);
                   return (
                     <tr key={person.userId}>
-                      <th scope="row">{person.name}</th>
+                      <Link to={"/customer"}><th scope="row">{person.name}</th></ Link>
                       {person.contacted ? (<td>Yes</td>) : (<td>No</td>)}
                       <td>{person.dateContacted}</td>
                       <td><button onClick={() => this.makeInactive(person.userId)} className="btn btn-danger btn-sm">X</button></td>
