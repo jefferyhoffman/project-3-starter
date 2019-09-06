@@ -86,7 +86,7 @@ export class AddEvent extends Component {
                   validate
                   error="wrong"
                   success="right"
-                  value={this.props.evenDate}
+                  value={this.props.eventDate}
                   onChange={this.onChange}
                 />
                 <MDBInput
