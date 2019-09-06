@@ -1,3 +1,48 @@
+@media only screen and (max-width: 767px) {
+   #cc {
+       margin-top: -50px;
+       padding-top: -50px;
+       
+}}
+
+
+@media only screen and (max-width: 767px) {
+    #reg {
+      margin-top: -50px;
+      padding-top: -50px;
+      
+ }}
+
 .size{
     width: 100%
 }
+
+#reg {
+    background-image: transparent !important;
+  }
+
+
+  #yes {
+    margin-left: 600px;
+  }
+
+
+  
+ h6 {
+   line-height: 1px;
+ }
+  .card {
+      background-color: rgba(126, 123, 215, 0.2);
+    }
+    
+    .md-form label {
+      color: #ffffff;
+    }
+  
+
+  
+  .md-form {
+      background: transparent !important;
+  }
+
+  

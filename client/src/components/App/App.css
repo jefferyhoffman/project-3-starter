@@ -35,17 +35,11 @@ body {
   text-align: right;
  
 }
-.nav-item {
-  color: black;
-}
 
-#yes {
+#home {
   margin-left: 600px;
 }
 
-.navbar-light {
-  color: black;
-}
 
 @keyframes App-logo-spin {
   from {
@@ -53,5 +47,50 @@ body {
   }
   to {
     transform: rotate(360deg);
+  }
+
+}
+
+@keyframes swing {
+  20% {
+    transform: rotate(6deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  60% {
+    transform: rotate(2deg);
+  }
+  80% {
+    transform: rotate(-2deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale3d(.1, .1, .1);
+  }
+  12% {
+    transform: scale3d(1.6, 1.6, 1.6) translate(50px, 50px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1, 1, 1);
+  }
+}
+
+@keyframes rotateOutDownRight {
+  from {
+    transform-origin: right bottom;
+    opacity: 1;
+  }
+  to {
+    transform-origin: right bottom;
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0;
   }
 }

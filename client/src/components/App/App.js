@@ -17,6 +17,7 @@ import Users from '../../pages/Users';
 import Landing from "../Landing/Landing";
 
 
+
 import './App.css';
 
 class App extends Component {
@@ -62,8 +63,8 @@ class App extends Component {
   }
 
   render() {
-    const { user } = this.context;
-    // const user = true
+    // const { user } = this.context;
+    const user = true
     return (
       <BrowserRouter>
       <AuthContext.Provider value={this.state.auth}>
@@ -85,6 +86,7 @@ class App extends Component {
           <div className='container'>
   
               <Route component={Landing}/>
+         
               
               {user &&
               <div>

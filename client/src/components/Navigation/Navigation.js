@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 import AuthContext from '../../contexts/AuthContext';
 import AuthDropdown from '../../components/AuthDropdown/AuthDropdown';
 
+import './Navigation.css'
+
+
 class Navigation extends Component {
   static contextType = AuthContext;
 
@@ -29,7 +32,7 @@ class Navigation extends Component {
           <span className='navbarBrand'>
             <img src='./community-app.jpg'></img>
           </span>{' '}
-          Navigation Drop Down
+       
           <Link className='navbar-brand' to='#'></Link>
           <button
             className={togglerClass}
@@ -44,7 +47,7 @@ class Navigation extends Component {
           </button>
           <div className={targetClass} id='navbarSupportedContent'>
             <ul className='navbar-nav mr-auto'>
-              <li className='nav-item'>
+              <li id="home" className='nav-item'>
                 <Link className='nav-link' to='/' onClick={this.toggleCollapse}>
                   Home
                 </Link>
