@@ -3,6 +3,7 @@ const db = require('../../models');
 // Defining methods for the EventsController
 module.exports = {
   findAll: function(req, res) {
+    console.log(db);
     console.log(db.Events);
     // res.send('test response');
 
