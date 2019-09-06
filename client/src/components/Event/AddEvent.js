@@ -1,15 +1,22 @@
 import React, { Component } from "react";
+import API from "../../utils/API";
 import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn } from "mdbreact";
 import "./AddEvent.css";
 //import ModalPage from "./EventModal";
 
 export class AddEvent extends Component {
   state = {
-    eventTitle: "",
-    eventPlace: "",
-    eventDate: "",
+    event_title: "",
+    event_place: "",
+    event_date: "",
     eventTime: "",
-    eventBody: "",
+    event_details: "",
+    html_url: "",
+    event_url: "",
+    event_task: "",
+    community: "",
+    event_task: "",
+    isTaskCompleted: "",
     user: {}
   };
 
@@ -22,31 +29,37 @@ export class AddEvent extends Component {
 
   onSubmit = event => {
     event.preventDefault();
-    // if (
-    //   !this.state.eventTitle &&
-    //   !this.state.eventPlace &&
-    //   !this.state.eventDate &&
-    //   !this.state.eventTime &&
-    //   !this.state.eventBody &&
-    // ) {
-    //   alert( "Please fill in all fields");
-    // }
-    //   API.createEvent({
-    //     title: this.state.eventTitle,
-    //     place: this.state.eventPlace,
-    //     date: this.state.eventDate,
-    //     time: this.state.eventTime,
-    //     body: this.state.eventBody,
-    //     user: this.props.user._id
-    //   }).then(() => {
-    //     this.setState({
-    //       eventTitle: "",
-    //       eventPlace: "",
-    //       eventDate: "",
-    //       eventTime: "",
-    //       eventBody: ""
-    //     });
-    //   });
+    if (
+      this.state.event_title &&
+      this.state.event_details &&
+      this.state.comunity
+    ) {
+      API.createOne("events", {
+        community: this.state.comunity,
+        event_title: this.state.event_title,
+        event_place: this.state.event_place,
+        event_date: this.state.event_date,
+        event_time: this.state.event_time,
+        html_url: this.state.html_url,
+        event_url: this.state.event_time,
+        event_details: this.state.event_details,
+        event_task: this.state.event_task,
+        isTaskCompleted: this.state.isTaskCompleted
+      }).then(() => {
+        this.setState({
+          community: "",
+          event_title: "",
+          event_place: "",
+          event_date: "",
+          event_time: "",
+          event_details: "",
+          event_url: "",
+          html_url: "",
+          event_task: "",
+          isTaskCompleted: ""
+        });
+      });
+    }
   };
 
   render() {
@@ -59,34 +72,34 @@ export class AddEvent extends Component {
                 <MDBInput
                   label="Event Title"
                   type="text"
-                  name="title"
-                  icon="users"
+                  name="event_title"
+                  icon="calendar-check"
                   validate
                   error="wrong"
                   success="right"
-                  value={this.props.eventTitle}
+                  value={this.state.event_title}
                   onChange={this.onChange}
                 />
                 <MDBInput
                   label="Place"
                   type="text"
-                  name="place"
+                  name="event_place"
                   icon="map-marker-alt"
                   validate
                   error="wrong"
                   success="right"
-                  value={this.props.eventPlace}
+                  value={this.state.event_place}
                   onChange={this.onChange}
                 />
                 <MDBInput
                   label="Date"
                   type="text"
-                  name="date"
+                  name="event_date"
                   icon="calendar-alt"
                   validate
                   error="wrong"
                   success="right"
-                  value={this.props.eventDate}
+                  value={this.state.event_date}
                   onChange={this.onChange}
                 />
                 <MDBInput
@@ -97,22 +110,55 @@ export class AddEvent extends Component {
                   validate
                   error="wrong"
                   success="right"
-                  value={this.props.eventTime}
+                  value={this.state.event_time}
+                  onChange={this.onChange}
+                />
+                <MDBInput
+                  label="Community"
+                  type="text"
+                  name="community"
+                  icon="users"
+                  validate
+                  error="wrong"
+                  success="right"
+                  value={this.state.community}
+                  onChange={this.onChange}
+                />
+                <MDBInput
+                  icon="desktop"
+                  label="Website Link"
+                  type="text"
+                  name="html_url"
+                  validate
+                  error="wrong"
+                  success="right"
+                  value={this.state.html_url}
+                  onChange={this.onChange}
+                />
+                <MDBInput
+                  icon="image"
+                  label="Photo URL"
+                  type="text"
+                  name="event_url"
+                  validate
+                  error="wrong"
+                  success="right"
+                  value={this.state.event_url}
                   onChange={this.onChange}
                 />
                 <MDBInput
                   label="Details About The Event"
                   type="textarea"
                   rows="4"
-                  name="body"
+                  name="event_details"
                   icon="info-circle"
-                  value={this.props.eventBody}
+                  value={this.state.event_details}
                   onChange={this.onChange}
                 />
               </div>
 
               <div className="text-center">
-                <MDBBtn type="submit" value="Submit">
+                <MDBBtn type="submit" value="Submit" onClick={this.onSubmit}>
                   Submit
                 </MDBBtn>
               </div>
