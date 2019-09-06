@@ -46,6 +46,14 @@ class ServicesPage extends Component {
                   </div>              
               </div>
             </div>
+          <div class="card-footer"></div>
+          </div>
+        </div>
+        <div className='row'>
+          <div className="card" id="about">
+            <div className="card-header">
+              Services
+            </div>
             <div className="card-body" style={linkStyle} onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover}>
               <div className="card">
                 <img src={clean} className="card-img-top" alt="..."/>
@@ -53,6 +61,14 @@ class ServicesPage extends Component {
                     <p className="card-text">Maybe you need a cleaning?</p>
                   </div>              
               </div>
+            </div>            
+          <div class="card-footer"></div>
+          </div>
+        </div>
+        <div className='row'>
+          <div className="card" id="about">
+            <div className="card-header">
+              Services
             </div>
             <div className="card-body" style={linkStyle} onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover}>
               <div className="card">
@@ -62,8 +78,9 @@ class ServicesPage extends Component {
                   </div>              
               </div>
             </div>
-            <div class="card-footer"></div>
+            <div class="card-footer"></div>                   
           </div>
+          
         </div>
       </div> 
         );
