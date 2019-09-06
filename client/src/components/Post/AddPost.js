@@ -40,8 +40,10 @@ export class AddPost extends Component {
     event.preventDefault();
     console.log(this.state);
     if (this.state.post_title && this.state.post_details) {
+
       API.createOne('posts', {
         // category: this.state.category,
+
         post_title: this.state.post_title,
         post_details: this.state.post_details
         // help_needed: this.state.help_needed,
