@@ -39,7 +39,7 @@ export class AddPost extends Component {
   onSubmit = event => {
     event.preventDefault();
     if (this.state.post_title && this.state.post_details) {
-      API.createPost("posts", {
+      API.createOne("posts", {
         category: this.state.category,
         post_title: this.state.post_title,
         post_details: this.state.post_details,
