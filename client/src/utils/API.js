@@ -14,7 +14,7 @@ export default {
     return axios.delete("/api/" + type + "/" + id);
   },
   // Saves a event to the database
-  saveOne: function(type, newData) {
+  createOne: function(type, newData) {
     return axios.post("/api/" + type, newData);
   }
 };
