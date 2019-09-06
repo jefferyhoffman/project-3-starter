@@ -35,7 +35,7 @@ class HomePage extends Component {
             <div className="card-header">
               About
             </div>
-            <div className="card-body" style={linkStyle} onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover}>
+            <div className="card-body" style={linkStyle} onMouseEnter={this.toggleHover}>
               <blockquote className="blockquote mb-0">
                 <p>Hello, my name is Matt, I started Krystal Klear Aquariums in early 2019.
                     We currently service Charlotte, NC and the surrounding area. I've had and maintained
@@ -56,7 +56,7 @@ class HomePage extends Component {
             <div className="card-header">
               Testimonials
             </div>
-            <div className="card-body" style={linkStyle} onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover}>
+            <div className="card-body" style={linkStyle} onMouseEnter={this.toggleHover}>
               <blockquote className="blockquote">
                 <p>Matt is a professional, knowledgeable, and does a great job all around...
                   I would highly recommend Krystal Klear Aquariums!! A++
