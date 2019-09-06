@@ -3,6 +3,7 @@ const krystalControllers = require('express').Router();
 const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
+
 krystalControllers.post("/", (req, res) => {
     customerInfo = req.body
 
@@ -26,5 +27,13 @@ krystalControllers.post("/", (req, res) => {
             
         }
     ).catch((err)=>console.log(err))
+})
+
+krystalControllers.get("/viewcustomer/", (req, res) =>{
+    db.Customers.find({}).then(
+        (response) => {
+            res.json(response)
+        }
+    )
 })
 module.exports = krystalControllers;

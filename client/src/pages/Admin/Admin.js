@@ -1,40 +1,20 @@
 import React, { Component } from 'react';
 import {Table, TableHead, TableBody} from '../../components/Table/Table';
+import { Link } from 'react-router-dom';
+import Customer from '../Customer/Customer';
+import API from '../../lib/API';
+
 
 class Admin extends Component {
   state = {
-    userData:
-        [
-            {
-              name: "Jim",
-              contacted: true,
-              dateContacted: "2 / 2 / 2019",
-              userId: 1
-            },
-            {
-              name: "Dave",
-              contacted: true,
-              dateContacted: "3 / 17 / 2019",
-              userId: 2
-
-            },
-            {
-              name: "Tom",
-              contacted: false,
-              dateContacted: "6 / 9 / 2019",
-              userId: 3
-
-            }
-        ]
+    customers: []
   }
 
-    componentDidMount(){
-      this.mapFunc()
-    }
-
-      //functions here
-    mapFunc = () => {
-          this.state.userData.map( person => console.log(person))
+    componentDidMount() {
+      console.log('===========================')
+      API.Krystal.grab()
+        .then(response => this.setState({ customers: response }))
+        .catch(err => console.log(err));
     }
 
     makeInactive(id){
@@ -47,21 +27,19 @@ class Admin extends Component {
       render() {
         //this is where i'll console.log my state/props
         return (
-
-          
           <div>
             <Table>
               <TableHead>
               </TableHead>
               <TableBody>
-                {this.state.userData.map(person => {
-                  console.log(person.userId);
+                {this.state.customers.map(customer => {
+                  console.log(customer.userId);
                   return (
-                    <tr key={person.userId}>
-                      <th scope="row">{person.name}</th>
-                      {person.contacted ? (<td>Yes</td>) : (<td>No</td>)}
-                      <td>{person.dateContacted}</td>
-                      <td><button onClick={() => this.makeInactive(person.userId)} className="btn btn-danger btn-sm">X</button></td>
+                    <tr key={customer._id}>
+                      <Link to={"/customer"}><th scope="row">{customer.name}</th></ Link>
+                      {customer.contacted ? (<td>Yes</td>) : (<td>No</td>)}
+                      <td>{customer.dateContacted}</td>
+                      <td><button onClick={() => this.makeInactive(customer.userId)} className="btn btn-danger btn-sm">X</button></td>
                     </tr>
                     )
                   })
