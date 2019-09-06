@@ -126,7 +126,7 @@ class CustomerForm extends Component {
                   id='phone'
                   type='text'
                   name='phone'
-                  placeholder='###-###-####'
+                  placeholder='704-555-5555'
                   value={phone}
                   onChange={this.handleInputChange}
                 />
@@ -165,7 +165,7 @@ class CustomerForm extends Component {
                   name='message' 
                   value={message}
                   onChange={this.handleInputChange}
-                  rows='20'>
+                  rows='10'>
                 </textarea>
               </div>
 
