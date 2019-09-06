@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 import API from '../../lib/API';
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
+<<<<<<< HEAD
 import {Redirect } from 'react-router-dom';
+=======
+import { Redirect } from 'react-router-dom';
+>>>>>>> 94e8066a3a8c3f19bd6bc23be94749bc37e2503c
 import Modal from 'react-modal';
  
 const customStyles = {
@@ -77,7 +81,7 @@ class CustomerForm extends Component {
           contentLabel="Modal"
         >
  
-          <h1 ref={subtitle => this.subtitle = subtitle}>Thank You</h1>
+          <h2 ref={subtitle => this.subtitle = subtitle}>Thank You</h2>
           <div><h2>Information Sent Successfully!</h2></div>
           <button onClick={this.closeModal}>close</button>
           
