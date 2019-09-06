@@ -1,7 +1,8 @@
 import React from "react";
-import PostIt from '../components/Layout/PostIt';
+import PostIt from "../components/Layout/PostIt";
+import ModalPage from "../components/Event/EventModal";
 // import AddEvent from './components/??';
-import API from '../utils/API'
+import API from "../utils/API";
 
 class Events extends React.Component {
   state = {
@@ -16,31 +17,30 @@ class Events extends React.Component {
     API.findAll("events")
       .then(res => this.setState({ results: res.data }))
       .catch(err => console.log(err));
-  }
+  };
 
   render() {
     return (
       <div className="event-board">
         <h1>Upcoming Events</h1>
         {/*passing getEvents to the add button so it can refresh*/}
-        {/* <AddEvent 
-        refreshEvents = {this.getEvents}
-        /> */}
+        <ModalPage ModalPage={this.props.AddEvent} />
+
         {!this.state.results.length ? (
           <h1>No Events to Display</h1>
         ) : (
-            this.state.results.map(event => {
-              return (
-                <PostIt
-                  key={event._id}
-                  title={event.title}
-                  summary={event.summary}
-                />
-              );
-            }))
-        }
+          this.state.results.map(event => {
+            return (
+              <PostIt
+                key={event._id}
+                title={event.title}
+                summary={event.summary}
+              />
+            );
+          })
+        )}
       </div>
-    )
+    );
   }
 }
 
