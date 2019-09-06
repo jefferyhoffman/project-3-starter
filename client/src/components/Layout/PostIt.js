@@ -2,7 +2,7 @@ import React from "react";
 
 function PostIt(props) {
     return(
-        <p>HI! {props}</p>
+        <p>HI! {props.key}</p>
     )
 }
 

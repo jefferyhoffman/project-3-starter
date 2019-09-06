@@ -13,8 +13,6 @@ import Secret from "../../pages/Secret/Secret";
 import NotFound from "../../pages/NotFound/NotFound";
 import Events from "../../pages/Events";
 import Posts from "../../pages/Posts";
-import Event from "../../pages/Event";
-import Post from "../../pages/Post";
 import Users from "../../pages/Users";
 import Landing from "../Landing/Landing";
 
@@ -87,23 +85,6 @@ class App extends Component {
               <Route component={NotFound} />
             </Switch>
           </div>
-          
-          <div className='container'>
-  
-              <Route component={Landing}/>
-         
-              
-              {user &&
-              <div>
-              <h1>{this.state.renderText && this.state.text}</h1>
-              <h1>Upcoming Events</h1>
-              <Events />
-            {/* </div> */}
-            <div>
-              <h1>Community Members</h1>
-              <Users />
-
-            </div>
 
             <div className="container">
               <Route component={Landing} />
