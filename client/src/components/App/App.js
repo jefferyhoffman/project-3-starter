@@ -13,6 +13,7 @@ import Contact from '../../pages/Contacts/Contacts';
 import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
 import Admin from '../../pages/Admin/Admin';
+import Footer from '../../components/Footer'
 
 import './App.css';
 import Customer from '../../pages/Customer/Customer';
@@ -108,6 +109,7 @@ class App extends Component {
               <Route component={NotFound} />
             </Switch>
           </div>
+          <Footer />
         </div>
       </AuthContext.Provider>
     );
