@@ -2,11 +2,7 @@ import React, { Component } from 'react';
 import API from '../../lib/API';
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
-import {Redirect } from 'react-router-dom';
-<<<<<<< HEAD
-import Octicon, { Mail, Key } from '@githubprimer/octicons-react';
-=======
->>>>>>> c1a9528f8733e354780ab77b5c6204f61d344dc2
+import { Redirect } from 'react-router-dom';
 import Modal from 'react-modal';
  
 const customStyles = {
@@ -81,7 +77,7 @@ class CustomerForm extends Component {
           contentLabel="Modal"
         >
  
-          <h1 ref={subtitle => this.subtitle = subtitle}>Thank You</h1>
+          <h2 ref={subtitle => this.subtitle = subtitle}>Thank You</h2>
           <div><h2>Information Sent Successfully!</h2></div>
           <button onClick={this.closeModal}>close</button>
           
