@@ -11,7 +11,7 @@
     "start": "node server/server.js",
     "start:dev": "concurrently -n client,server \"yarn run client:dev\" \"yarn run server:dev\"",
     "client:dev": "cd client && yarn start",
-    "server:dev": "nodemon server/server.js",
+    "server:dev": "cd server && yarn start:dev",
     "heroku-postbuild": "yarn build"
   },
   "devDependencies": {
