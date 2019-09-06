@@ -1,11 +1,11 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const postSchema = new Schema({
   // event_name: [{ type: Schema.Types.ObjectId, ref: "Event" }],
   post_title: { type: String, required: true },
   post_details: { type: String, required: true },
-  category: { type: String, required: true, default: "random" },
+  category: { type: String, required: false, default: 'random' },
   post_author_name: { type: String, required: false },
   post_comment: { type: String, required: false },
   comment_author_name: { type: String, required: false },
@@ -17,6 +17,6 @@ const postSchema = new Schema({
   trade: { type: Boolean, default: false }
 });
 
-const Post = mongoose.model("Post", postSchema);
+const Post = mongoose.model('Post', postSchema);
 
 module.exports = Post;
