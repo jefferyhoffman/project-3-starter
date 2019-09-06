@@ -3,10 +3,6 @@ import API from '../../lib/API';
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
 import {Redirect } from 'react-router-dom';
-<<<<<<< HEAD
-import Octicon, { Mail, Key } from '@githubprimer/octicons-react';
-=======
->>>>>>> c1a9528f8733e354780ab77b5c6204f61d344dc2
 import Modal from 'react-modal';
  
 const customStyles = {
