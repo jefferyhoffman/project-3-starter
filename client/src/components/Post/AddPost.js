@@ -1,5 +1,16 @@
 import React, { Component } from "react";
-import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn } from "mdbreact";
+import {
+  MDBContainer,
+  MDBRow,
+  MDBCol,
+  MDBInput,
+  MDBBtn,
+  MDBFormInline,
+  MDBDropdown,
+  MDBDropdownToggle,
+  MDBDropdownMenu,
+  MDBDropdownItem
+} from "mdbreact";
 import "./AddPost.css";
 // import ModalPage from "./EventModal";
 
@@ -8,7 +19,7 @@ export class AddPost extends Component {
     category: "",
     postTitle: "",
     postBody: "",
-    helpNeeded: "",
+    helpWanted: "",
     offeringHelp: "",
     urgent: "",
     costPerHour: "",
@@ -31,7 +42,7 @@ export class AddPost extends Component {
     //   !this.state.category &&
     //   !this.state.postTitle &&
     //   !this.state.postBody &&
-    //   !this.state.helpNeeded &&
+    //   !this.state.helpWanted &&
     //   !this.state.offeringHelp &&
     //   !this.state.urgent &&
     //   !this.state.costPerHour &&
@@ -45,7 +56,7 @@ export class AddPost extends Component {
     //     category: this.state.category,
     //     postTitle: this.state.postTitle,
     //     postBody: this.state.postBody,
-    //     helpNeeded: this.state.helpNeeded,
+    //     helpNeeded: this.state.helpWanted,
     //     offeringHelp: this.state.offeringHelp,
     //     urgent: this.state.urgent,
     //     costPerHour: this.state.costPerHour,
@@ -58,7 +69,7 @@ export class AddPost extends Component {
     //       category: "",
     //       postTitle: "",
     //       postBody: "",
-    //       helpNeeded: "",
+    //       helpWanted: "",
     //       offeringHelp: "",
     //       urgent: "",
     //       costPerHour: "",
@@ -75,6 +86,34 @@ export class AddPost extends Component {
           <MDBCol md="12">
             <form>
               <div className="orange-text">
+                <MDBInput
+                  label="Is it urgent?"
+                  type="checkbox"
+                  id="checkbox2"
+                  name="urgent"
+                  icon="bell"
+                  value="false"
+                  value={this.props.urgent}
+                  onChange={this.onChange}
+                />
+                <MDBDropdown>
+                  <MDBDropdownToggle caret color="orange">
+                    Category
+                  </MDBDropdownToggle>
+                  <MDBDropdownMenu
+                    basic
+                    value={this.props.category}
+                    onChange={this.onChange}
+                  >
+                    <MDBDropdownItem>Yard</MDBDropdownItem>
+                    <MDBDropdownItem>Kids</MDBDropdownItem>
+                    <MDBDropdownItem>Pets</MDBDropdownItem>
+                    <MDBDropdownItem>Housework</MDBDropdownItem>
+                    <MDBDropdownItem>Carpooling</MDBDropdownItem>
+                    <MDBDropdownItem divider />
+                    <MDBDropdownItem>Other</MDBDropdownItem>
+                  </MDBDropdownMenu>
+                </MDBDropdown>
                 <MDBInput
                   label="Post Title"
                   type="text"
@@ -94,6 +133,30 @@ export class AddPost extends Component {
                   name="body"
                   icon="info-circle"
                   value={this.props.postBody}
+                  onChange={this.onChange}
+                />
+                <MDBInput
+                  label="Willing to pay per hour"
+                  type="number"
+                  name="costPerHour"
+                  icon="money-bill-wave"
+                  value={this.props.costPerHour}
+                  onChange={this.onChange}
+                />
+                <MDBInput
+                  label="Willing to pay per service"
+                  type="number"
+                  name="costPerService"
+                  icon="money-check-alt"
+                  value={this.props.costPerService}
+                  onChange={this.onChange}
+                />
+                <MDBInput
+                  label="Willing to trade"
+                  type=" "
+                  name="costPerService"
+                  icon="comments-dollar"
+                  value={this.props.costPerService}
                   onChange={this.onChange}
                 />
               </div>
