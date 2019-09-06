@@ -36,13 +36,14 @@ class ServicesPage extends Component {
         <div className='row'>
           <div className="card" id="about">
             <div className="card-header">
-              Services
+              Setup
             </div>
             <div className="card-body" style={linkStyle} onMouseEnter={this.toggleHover}>
               <div className="card">
                 <img src={setup} className="card-img-top" alt="..."/>
                   <div className="card-body">
-                    <p className="card-text">Full setup!</p>
+                    <p className="card-text">Just starting out?  We can get you tanks, accessories, and  fish.  Plus we will 
+                    set it up for you.  Everything you need to get started.</p>
                   </div>              
               </div>
             </div>
@@ -52,13 +53,13 @@ class ServicesPage extends Component {
         <div className='row'>
           <div className="card" id="about">
             <div className="card-header">
-              Services
+              Cleaning
             </div>
             <div className="card-body" style={linkStyle} onMouseEnter={this.toggleHover}>
               <div className="card">
                 <img src={clean} className="card-img-top" alt="..."/>
                   <div className="card-body">
-                    <p className="card-text">Maybe you need a cleaning?</p>
+                    <p className="card-text">Have a dirty tank?  We can clear it up for you.</p>
                   </div>              
               </div>
             </div>            
@@ -68,13 +69,14 @@ class ServicesPage extends Component {
         <div className='row'>
           <div className="card" id="about">
             <div className="card-header">
-              Services
+              Products
             </div>
             <div className="card-body" style={linkStyle} onMouseEnter={this.toggleHover}>
               <div className="card">
                 <img src={filter} className="card-img-top" alt="..."/>
                   <div className="card-body">
-                    <p className="card-text">Do you just need some new equipment?</p>
+                    <p className="card-text">If you just need to some new equipment or accessories for your tank,   
+                    we can get things for you.  Filters, lights, heaters, gravel, and more...</p>
                   </div>              
               </div>
             </div>
