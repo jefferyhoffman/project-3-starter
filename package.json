@@ -4,6 +4,7 @@
   "license": "MIT",
   "main": "server/server.js",
   "scripts": {
+    "seed": "concurrently  \" node server/controllers/scripts/profileDB\" \"node server/controllers/scripts/seedDB\" \" node server/controllers/scripts/profileDB\"",
     "install": "yarn run install:client && yarn run install:server",
     "install:client": "cd client && yarn",
     "install:server": "cd server && yarn",

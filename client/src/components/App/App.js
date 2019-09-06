@@ -18,7 +18,11 @@ import Post from "../../pages/Post";
 import Users from "../../pages/Users";
 import Landing from "../Landing/Landing";
 
-import "./App.css";
+
+
+
+import './App.css';
+
 
 class App extends Component {
   constructor(props) {
@@ -63,26 +67,42 @@ class App extends Component {
   }
 
   render() {
-    const { user } = this.context;
-    // const user = true
+    // const { user } = this.context;
+    const user = true
     return (
       <BrowserRouter>
-        <AuthContext.Provider value={this.state.auth}>
-          <div className="App">
-            <Navigation />
-            <div className="container">
-              <Switch>
-                <Route exact path="/" component={Home} />
-                <Route path="/login" component={Login} />
-                <Route path="/register" component={Register} />
-                <PrivateRoute path="/secret" component={Secret} />
-                <Route exact path="/events" component={Events} />
-                <Route exact path="/event" component={Event} />
-                <Route exact path="/posts" component={Posts} />
-                <Route exact path="/post" component={Post} />
-                <Route exact path="/users" component={Users} />
-                <Route component={NotFound} />
-              </Switch>
+
+      <AuthContext.Provider value={this.state.auth}>
+        <div className='App'>
+          <Navigation />
+          <div className='container'>
+            <Switch>
+              <Route exact path='/' component={Home} />
+              <Route path='/login' component={Login} />
+              <Route path='/register' component={Register} />
+              <PrivateRoute path='/secret' component={Secret} />
+              <Route exact path="/events" component={Events} />
+              <Route exact path="/posts" component={Posts} />
+              <Route exact path="/users" component={Users} />
+              <Route component={NotFound} />
+            </Switch>
+          </div>
+          
+          <div className='container'>
+  
+              <Route component={Landing}/>
+         
+              
+              {user &&
+              <div>
+              <h1>{this.state.renderText && this.state.text}</h1>
+              <h1>Upcoming Events</h1>
+              <Events />
+            {/* </div> */}
+            <div>
+              <h1>Community Members</h1>
+              <Users />
+
             </div>
 
             <div className="container">

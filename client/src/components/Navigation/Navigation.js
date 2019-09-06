@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import AuthContext from "../../contexts/AuthContext";
 import AuthDropdown from "../../components/AuthDropdown/AuthDropdown";
 
+import './Navigation.css'
+
+
 class Navigation extends Component {
   static contextType = AuthContext;
 
@@ -24,13 +27,15 @@ class Navigation extends Component {
     const togglerClass = `navbar-toggler ${collapsed && "collapsed"}`;
 
     return (
-      <div className="Navigation">
-        <nav className="navbar navbar-expand-lg navbar-light bg-light mb-3">
-          <span className="navbarBrand">
-            <img src="./logo-small.png" />
-          </span>{" "}
-          Navigation Drop Down
-          <Link className="navbar-brand" to="#"></Link>
+
+      <div className='Navigation'>
+        <nav className='navbar navbar-expand-lg navbar-light bg-light mb-3'>
+          <span className='navbarBrand'>
+            <img src='./community-app.jpg'></img>
+          </span>{' '}
+       
+          <Link className='navbar-brand' to='#'></Link>
+
           <button
             className={togglerClass}
             onClick={this.toggleCollapse}
@@ -42,10 +47,12 @@ class Navigation extends Component {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className={targetClass} id="navbarSupportedContent">
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item">
-                <Link className="nav-link" to="/" onClick={this.toggleCollapse}>
+
+          <div className={targetClass} id='navbarSupportedContent'>
+            <ul className='navbar-nav mr-auto'>
+              <li id="home" className='nav-item'>
+                <Link className='nav-link' to='/' onClick={this.toggleCollapse}>
+
                   Home
                 </Link>
               </li>

@@ -8,7 +8,428 @@ mongoose.connect(
     "mongodb://localhost/communityconnect"
 );
 
+const profilesData = [ {
+    id: '1',
+    user_url:
+        'https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png',
+    user_name: 'Anees Adams',
+    user_password: "password",
+    user_email: "AneesAdams@rockingit.com",
+    user_number: "555-234-6789",
+    user_community: "NoDa"
+
+},
+{
+    id: '2',
+    user_url:
+        'https://s3.amazonaws.com/one_org_international/international/media/international/2013/12/ubuntu2.jpg',
+    user_name: 'Michael Beck',
+    user_password: "password",
+    user_email: "MichaelBeck@rockingit.com",
+    user_number: "555-678-4563",
+    user_community: "Midtown"
+
+},
+{
+    id: '3',
+    user_url:
+        'https://www.charlottefive.com/wp-content/uploads/2018/03/Lookingintothelobby.jpg',
+    user_name: 'Timothy Brahm',
+    user_password: "password",
+    user_email: "TimothyBrahms@rockingit.com",
+    user_number: "555-738-9374",
+    user_community: "NoDa"
+
+},
+{
+    id: '4',
+    user_url:
+        'http://worldaffairscharlotte.org/wp-content/uploads/2018/09/Ifest-Social-Media-Post-2.png',
+    user_name: 'Leland Capps',
+    user_password: "password",
+    user_email: "LelandCapps@rockingit.com",
+    user_number: "555-222-7427",
+    user_community: "Midtown"
+
+},
+{
+    id: '5',
+    user_url:
+        'http://www.therelatives.org/wp-content/uploads/2016/08/We-Walk-Together-group-May-2016.jpg',
+    user_name: 'Brad Evans',
+    user_password: "password",
+    user_email: "BradEvans@rockingit.com",
+    user_number: "555-973-4231",
+    user_community: "University"
+
+},
+{
+    id: '6',
+    user_url:
+        'https://festivalinthepark.org/wp-content/uploads/2019/08/FITP-2019_kiosk-banner.jpg',
+    user_name: 'Matthew Gennings',
+    user_password: "password",
+    user_email: "MatthewGennings@rockingit.com",
+    user_number: "555-952-7132",
+    user_community: "Freedom"
+
+},
+{
+    id: '7',
+    user_url:
+        'http://clt250.com/files/2018/08/qcu_charlotte_unite_festival_pic_1.jpg',
+    user_name: 'Tony Goldsmith',
+    user_password: "password",
+    user_email: "TonyGoldsmith@rockingit.com",
+    user_number: "555-352-4759",
+    user_community: "NoDa"
+
+},
+{
+    id: '8',
+    user_url:
+        'https://charlottekidsfest.org/wp-content/uploads/2019/05/charlotte-kids-fest-18_44023659955_o.jpg',
+    user_name: 'Cassidy Groenendaal',
+    user_password: "password",
+    user_email: "CassidyGroenendaal@rockingit.com",
+    user_number: "555-829-9364",
+    user_community: "University"
+
+},
+{
+    id: '9',
+    user_url:
+        'https://www.highlandcreek.com/wp-content/uploads/2017/03/stark-reality-logo.jpg',
+    user_name: 'Israel Harvin',
+    user_password: "password",
+    user_email: "IsraelHarvin@rockingit.com",
+    user_number: "555-098-1024",
+    user_community: "Prosperity"
+
+},
+{
+    id: '10',
+    user_url:
+        'https://s3-media1.fl.yelpcdn.com/ephoto/ev2QAWHDXdSW1gZBX0vhMw/300s.jpg',
+    user_name: 'Erin Maness',
+    user_password: "password",
+    user_email: "ErinManess@rockingit.com",
+    user_number: "555-764-5637",
+    user_community: "Prosperity"
+
+},
+{
+    id: '11',
+    user_url:
+        'https://s3-media1.fl.yelpcdn.com/ephoto/ev2QAWHDXdSW1gZBX0vhMw/300s.jpg',
+    user_name: 'David Martin',
+    user_password: "password",
+    user_email: "DavidMartin@rockingit.com",
+    user_number: "555-821-3482",
+    user_community: "University"
+
+},
+{
+    id: '12',
+    user_url:
+        'https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png',
+    user_name: 'Craig McAlister',
+    user_password: "password",
+    user_email: "CraigMcAlisters@rockingit.com",
+    user_number: "555-085-7332",
+    user_community: "NoDa"
+
+},
+{
+    id: '13',
+    user_url:
+        'https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png',
+    user_name: 'Caleb Myers',
+    user_password: "password",
+    user_email: "CalebMyers@rockingit.com",
+    user_number: "555-372-3817",
+    user_community: "Midtown"
+
+},
+{
+    id: '14',
+    user_url:
+        'https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png',
+    user_name: 'Bonaventure Ndicunguye',
+    user_password: "password",
+    user_email: "BonaventureNdicunguye@rockingit.com",
+    user_number: "555-256-1782",
+    user_community: "Midtown"
+
+},
+{
+    id: '15',
+    user_url:
+        'https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png',
+    user_name: 'Burton Pinckney',
+    user_password: "password",
+    user_email: "BurtonPinckney@rockingit.com",
+    user_number: "555-327-2837",
+    user_community: "NoDa"
+
+},
+{
+    id: '16',
+    user_url:
+        'https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png',
+    user_name: 'David Short',
+    user_password: "password",
+    user_email: "DavidShort@rockingit.com",
+    user_number: "555-278-4726",
+    user_community: "University"
+
+},
+{
+    id: '17',
+    user_url:
+        'https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png',
+    user_name: 'Max Szczepaniak',
+    user_password: "password",
+    user_email: "MaxSzczepaniak@rockingit.com",
+    user_number: "555-284-9273",
+    user_community: "Midtown"
+
+},
+{
+    id: '18',
+    user_url:
+        'https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png',
+    user_name: 'Katherine Walters',
+    user_password: "password",
+    user_email: "KatherineWalters@rockingit.com",
+    user_number: "555-422-7342",
+    user_community: "Noda"
+
+},
+{
+    id: '19',
+    user_url:
+        'https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png',
+    user_name: 'Robert Zuniga',
+    user_password: "password",
+    user_email: "RobertZuniga@rockingit.com",
+    user_number: "555-827-9304",
+    user_community: "Midtown"
+
+}];
+const usersData = [{
+    id: '1',
+    user_url:
+        'https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png',
+    user_name: 'Anees Adams',
+    user_password: "password",
+    user_email: "AneesAdams@rockingit.com",
+    user_number: "555-234-6789",
+    user_community: "NoDa"
+
+},
+{
+    id: '2',
+    user_url:
+        'https://s3.amazonaws.com/one_org_international/international/media/international/2013/12/ubuntu2.jpg',
+    user_name: 'Michael Beck',
+    user_password: "password",
+    user_email: "MichaelBeck@rockingit.com",
+    user_number: "555-678-4563",
+    user_community: "Midtown"
+
+},
+{
+    id: '3',
+    user_url:
+        'https://www.charlottefive.com/wp-content/uploads/2018/03/Lookingintothelobby.jpg',
+    user_name: 'Timothy Brahm',
+    user_password: "password",
+    user_email: "TimothyBrahms@rockingit.com",
+    user_number: "555-738-9374",
+    user_community: "NoDa"
+
+},
+{
+    id: '4',
+    user_url:
+        'http://worldaffairscharlotte.org/wp-content/uploads/2018/09/Ifest-Social-Media-Post-2.png',
+    user_name: 'Leland Capps',
+    user_password: "password",
+    user_email: "LelandCapps@rockingit.com",
+    user_number: "555-222-7427",
+    user_community: "Midtown"
+
+},
+{
+    id: '5',
+    user_url:
+        'http://www.therelatives.org/wp-content/uploads/2016/08/We-Walk-Together-group-May-2016.jpg',
+    user_name: 'Brad Evans',
+    user_password: "password",
+    user_email: "BradEvans@rockingit.com",
+    user_number: "555-973-4231",
+    user_community: "University"
+
+},
+{
+    id: '6',
+    user_url:
+        'https://festivalinthepark.org/wp-content/uploads/2019/08/FITP-2019_kiosk-banner.jpg',
+    user_name: 'Matthew Gennings',
+    user_password: "password",
+    user_email: "MatthewGennings@rockingit.com",
+    user_number: "555-952-7132",
+    user_community: "Freedom"
+
+},
+{
+    id: '7',
+    user_url:
+        'http://clt250.com/files/2018/08/qcu_charlotte_unite_festival_pic_1.jpg',
+    user_name: 'Tony Goldsmith',
+    user_password: "password",
+    user_email: "TonyGoldsmith@rockingit.com",
+    user_number: "555-352-4759",
+    user_community: "NoDa"
+
+},
+{
+    id: '8',
+    user_url:
+        'https://charlottekidsfest.org/wp-content/uploads/2019/05/charlotte-kids-fest-18_44023659955_o.jpg',
+    user_name: 'Cassidy Groenendaal',
+    user_password: "password",
+    user_email: "CassidyGroenendaal@rockingit.com",
+    user_number: "555-829-9364",
+    user_community: "University"
+
+},
+{
+    id: '9',
+    user_url:
+        'https://www.highlandcreek.com/wp-content/uploads/2017/03/stark-reality-logo.jpg',
+    user_name: 'Israel Harvin',
+    user_password: "password",
+    user_email: "IsraelHarvin@rockingit.com",
+    user_number: "555-098-1024",
+    user_community: "Prosperity"
+
+},
+{
+    id: '10',
+    user_url:
+        'https://s3-media1.fl.yelpcdn.com/ephoto/ev2QAWHDXdSW1gZBX0vhMw/300s.jpg',
+    user_name: 'Erin Maness',
+    user_password: "password",
+    user_email: "ErinManess@rockingit.com",
+    user_number: "555-764-5637",
+    user_community: "Prosperity"
+
+},
+{
+    id: '11',
+    user_url:
+        'https://s3-media1.fl.yelpcdn.com/ephoto/ev2QAWHDXdSW1gZBX0vhMw/300s.jpg',
+    user_name: 'David Martin',
+    user_password: "password",
+    user_email: "DavidMartin@rockingit.com",
+    user_number: "555-821-3482",
+    user_community: "University"
+
+},
+{
+    id: '12',
+    user_url:
+        'https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png',
+    user_name: 'Craig McAlister',
+    user_password: "password",
+    user_email: "CraigMcAlisters@rockingit.com",
+    user_number: "555-085-7332",
+    user_community: "NoDa"
+
+},
+{
+    id: '13',
+    user_url:
+        'https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png',
+    user_name: 'Caleb Myers',
+    user_password: "password",
+    user_email: "CalebMyers@rockingit.com",
+    user_number: "555-372-3817",
+    user_community: "Midtown"
+
+},
+{
+    id: '14',
+    user_url:
+        'https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png',
+    user_name: 'Bonaventure Ndicunguye',
+    user_password: "password",
+    user_email: "BonaventureNdicunguye@rockingit.com",
+    user_number: "555-256-1782",
+    user_community: "Midtown"
+
+},
+{
+    id: '15',
+    user_url:
+        'https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png',
+    user_name: 'Burton Pinckney',
+    user_password: "password",
+    user_email: "BurtonPinckney@rockingit.com",
+    user_number: "555-327-2837",
+    user_community: "NoDa"
+
+},
+{
+    id: '16',
+    user_url:
+        'https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png',
+    user_name: 'David Short',
+    user_password: "password",
+    user_email: "DavidShort@rockingit.com",
+    user_number: "555-278-4726",
+    user_community: "University"
+
+},
+{
+    id: '17',
+    user_url:
+        'https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png',
+    user_name: 'Max Szczepaniak',
+    user_password: "password",
+    user_email: "MaxSzczepaniak@rockingit.com",
+    user_number: "555-284-9273",
+    user_community: "Midtown"
+
+},
+{
+    id: '18',
+    user_url:
+        'https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png',
+    user_name: 'Katherine Walters',
+    user_password: "password",
+    user_email: "KatherineWalters@rockingit.com",
+    user_number: "555-422-7342",
+    user_community: "Noda"
+
+},
+{
+    id: '19',
+    user_url:
+        'https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png',
+    user_name: 'Robert Zuniga',
+    user_password: "password",
+    user_email: "RobertZuniga@rockingit.com",
+    user_number: "555-827-9304",
+    user_community: "Midtown"
+
+}];
 const eventsData = [
+
+    
+
             {
                 id: '1',
                 event_url:
@@ -135,10 +556,35 @@ db.Events
 .remove({})
 .then(() => db.Events.collection.insertMany(eventsData))
 .then(data => {
-    console.log(data.result.n + " records inserted!");
-    process.exit(0);
+    console.log(data.result.n + "  event records inserted!");
+    
 })
 .catch(err => {
     console.error(err);
-    process.exit(1)
+   
 });
+
+db.Profiles
+.remove({})
+.then(() => db.Profiles.collection.insertMany(profilesData))
+.then(data => {
+    console.log(data.result.n + " profile records inserted!");
+  
+})
+.catch(err => {
+    console.error(err);
+    
+});
+
+db.Users
+.remove({})
+.then(() => db.Users.collection.insertMany(usersData))
+.then(data => {
+    console.log(data.result.n + " user records inserted!");
+   
+})
+.catch(err => {
+    console.error(err);
+  
+});
+
