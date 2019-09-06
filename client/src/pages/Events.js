@@ -15,7 +15,10 @@ class Events extends React.Component {
 
   getEvents = () => {
     API.findAll("events")
-      .then(res => this.setState({ results: res.data }))
+      .then(res => {
+        console.log('------------------------------------------')
+        console.log(res.data)
+        this.setState({ results: res.data })})
       .catch(err => console.log(err));
   };
 
