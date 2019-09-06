@@ -35,13 +35,13 @@ class Navigation extends Component {
           <div className={targetClass} id='navbarSupportedContent'>
             <ul className='navbar-nav mr-auto'>
               <li className='nav-item'>
-                <Link className='nav-link active' to='/' onClick={this.toggleCollapse}>Home</Link>
+                <Link className='nav-link active' to='/' className={window.location.pathname === "/" ? "nav-link active" : "nav-link"} onClick={this.toggleCollapse}>Home</Link>
               </li>
               <li className='nav-item'>
-                <Link className='nav-link' to='/contact' onClick={this.toggleCollapse}>Contact</Link>
+                <Link className='nav-link' to='/contact' className={window.location.pathname === "/contact" ? "nav-link active" : "nav-link"} onClick={this.toggleCollapse}>Contact</Link>
               </li>
               <li className='nav-item'>
-                <Link className='nav-link' to='/services' onClick={this.toggleCollapse}>Services</Link>
+                <Link className='nav-link' to='/services' className={window.location.pathname === "/services" ? "nav-link active" : "nav-link"} onClick={this.toggleCollapse}>Services</Link>
               </li>
             </ul>
             <ul className='navbar-nav'>
