@@ -6,6 +6,7 @@
   "dependencies": {
     "@githubprimer/octicons-react": "^8.5.0",
     "axios": "^0.18.1",
+    "mdbreact": "^4.19.2",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-gravatar": "^2.6.3",

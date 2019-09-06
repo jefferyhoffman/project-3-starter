@@ -4,8 +4,6 @@ const db = require('../../models');
 module.exports = {
   findAll: function(req, res) {
     console.log(db.Posts);
-    // res.send('test response');
-
     db.Posts.find(req.query)
       .sort({ date: -1 })
       .then(dbModel => {
