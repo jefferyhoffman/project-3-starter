@@ -86,6 +86,7 @@ class App extends Component {
             </Switch>
           </div>
 
+
             <div className="container">
               <Route component={Landing} />
 

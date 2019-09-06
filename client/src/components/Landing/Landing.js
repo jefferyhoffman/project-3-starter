@@ -35,12 +35,17 @@ class Landing extends Component {
                   <div className="md-form">
                     <i className="fas fa-user prefix white-text active"></i>
                     <input type="text" id="form3" className="white-text form-control" />
+
                     <label htmlFor="form3">Your name</label>
+
                   </div>
                   <div className="md-form">
                     <i className="fas fa-envelope prefix white-text active"></i>
                     <input type="email" id="form2" className="white-text form-control" />
+
                     <label htmlFor="form2">Your email</label>
+
+
                   </div>
                   <div className="md-form">
                     <i className="fas fa-lock prefix white-text active"></i>
