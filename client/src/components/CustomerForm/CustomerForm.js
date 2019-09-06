@@ -1,15 +1,31 @@
 import React, { Component } from 'react';
-
+import API from '../../lib/API';
+import Dropdown from 'react-dropdown'
+import 'react-dropdown/style.css'
+import {Redirect } from 'react-router-dom';
 // import Octicon, { Mail, Key } from '@githubprimer/octicons-react';
-
+import Modal from 'react-modal';
+ 
+const customStyles = {
+  content : {
+    top                   : '50%',
+    left                  : '50%',
+    right                 : 'auto',
+    bottom                : 'auto',
+    marginRight           : '-50%',
+    transform             : 'translate(-50%, -50%)'
+  }
+};
 class CustomerForm extends Component {
   state = {
-    fullName: '',
-    email: '',
-    phoneNumber: '',
-    tankType: '',
-    tankSize: '',
-    message: ''
+    name: '',
+    email: 'asdfasdf',
+    phone: '',
+    tank_type: 'tank',
+    tank_size: '',
+    message: '',
+    modalIsOpen: false,
+    redirect:false
   };
 
   handleInputChange = event => {
@@ -19,33 +35,73 @@ class CustomerForm extends Component {
       [name]: value
     });
   }
-
+  _onSelect = option =>{
+    this.setState({tank_type:option.value})
+  }
   handleSubmit = event => {
-    const { fullName, email, phoneNumber, tankType, tankSize, message } = this.state;
-
-    this.props.onSubmit(fullName, email, phoneNumber, tankType, tankSize, message);
     event.preventDefault();
+    //const { fullName, email, phone, tank_type, tank_size, message } = this.state;
+
+    //this.props.onSubmit(fullName, email, phone, tank_type, tank_size, message);
+    
+    API.Krystal.send(this.state).then((results)=>{
+      results.status=== 200 && this.openModal()
+    })
   }
 
-  render() {
-    const { fullName, email, phoneNumber, tankType, tankSize, message } = this.state;
+  openModal=()=>{
+    this.setState({modalIsOpen: true});
+  }
+ 
+  afterOpenModal=()=> {
+    // references are now sync'd and can be accessed.
+    this.subtitle.style.color = '#f00';
+  }
+ 
+  closeModal=()=> {
+    this.setState({modalIsOpen: false, redirect:true});
+  }
+    
+  
 
+  render() {
+    const { name, email, phone, tank_type, tank_size, message,redirect } = this.state;
+
+    const options = ['Tank', 'Molded Pond', 'Plastic Pond', 'Rubber Pond', 'Glass Aquarium', 'Acrylic Aquarium']
+    
+    if (redirect) {
+      return <Redirect to="/" />;
+    }
     return (
       <div className='CustomerForm'>
+        <Modal
+          isOpen={this.state.modalIsOpen}
+          onAfterOpen={this.afterOpenModal}
+          onRequestClose={this.closeModal}
+          style={customStyles}
+          contentLabel="Modal"
+        >
+ 
+          <h2 ref={subtitle => this.subtitle = subtitle}>Thank You</h2>
+          <div><h1>Information successfully sent!</h1></div>
+          <button onClick={this.closeModal}>close</button>
+          
+
+        </Modal>
         <div className='card'>
           <div className='card-body'>
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={(event)=>this.handleSubmit(event)}>
               
 
               <div className='form-group mb-3'>
                 
                 <input
                   className='form-control'
-                  id='fullName'
+                  id='name'
                   type='text'
-                  name='fullName'
+                  name='name'
                   placeholder='First Name and Last Name'
-                  value={fullName}
+                  value={name}
                   onChange={this.handleInputChange}
                 />
               </div>
@@ -67,42 +123,42 @@ class CustomerForm extends Component {
                 
                 <input
                   className='form-control'
-                  id='phoneNumber'
+                  id='phone'
                   type='text'
-                  name='phoneNumber'
+                  name='phone'
                   placeholder='###-###-####'
-                  value={phoneNumber}
+                  value={phone}
                   onChange={this.handleInputChange}
                 />
               </div>
-              
-              <div className='form-group mb-3'>
-                <label className='' for=''>Tank Type</label>
+              <Dropdown options={options} name="tank_type" onChange={this._onSelect} value={tank_type} placeholder="Select an option" />
+              {/* <div className='form-group mb-3'>
+                <label className='' htmlFor=''>Tank Type</label>
                 <select className='form-control' id='tank-type'>
                   <option selected>Choose...</option>
-                  <option name='type' value={tankType} onChange={this.handleInputChange}>Tank</option>
-                  <option name='type' value={tankType} onChange={this.handleInputChange}>Molded Pond</option>
-                  <option name='type' value={tankType} onChange={this.handleInputChange}>Plastic Pond</option>
-                  <option name='type' value={tankType} onChange={this.handleInputChange}>Rubber Pond</option>
-                  <option name='type' value={tankType} onChange={this.handleInputChange}>Glass Aquarium</option>
-                  <option name='type' value={tankType} onChange={this.handleInputChange}>Acrylic Aquarium</option>
+                  <option name='type' value={tank_type} onChange={this.handleInputChange}>Tank</option>
+                  <option name='type' value={tank_type} onChange={this.handleInputChange}>Molded Pond</option>
+                  <option name='type' value={tank_type} onChange={this.handleInputChange}>Plastic Pond</option>
+                  <option name='type' value={tank_type} onChange={this.handleInputChange}>Rubber Pond</option>
+                  <option name='type' value={tank_type} onChange={this.handleInputChange}>Glass Aquarium</option>
+                  <option name='type' value={tank_type} onChange={this.handleInputChange}>Acrylic Aquarium</option>
                 </select>
-              </div>
+              </div> */}
 
               <div className='form-group mb-3'>
                 <input
                   className='form-control'
-                  id='tankSize'
+                  id='tank_size'
                   type='text'
-                  name='tankSize'
+                  name='tank_size'
                   placeholder='gallons'
-                  value={tankSize}
+                  value={tank_size}
                   onChange={this.handleInputChange}
                 />
               </div>
 
               <div className='form-group'>
-                <label for=''>Message</label>
+                <label htmlFor=''>Message</label>
                 <textarea 
                   className='form-control' 
                   id='message'

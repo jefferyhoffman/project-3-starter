@@ -1,6 +1,10 @@
 .App {
   text-align: center;
-  background-color: #7de3ff;
+  background-color: #004e8c;
+  position: relative;
+
+
+
 }
 
 .App-logo {
@@ -31,3 +35,12 @@
     transform: rotate(360deg);
   }
 }
+canvas {
+  z-index: 0;
+  top: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+
+}
+
