@@ -109,6 +109,7 @@ class Landing extends Component {
             )}
 
             <div id='reg' className='col-md-6'>
+
                 <RegistrationForm />
         
             </div>

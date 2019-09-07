@@ -1,14 +1,70 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.post-banner {
+  transition-property: transform;
+  transition-duration: 5s;
+  transform: rotateY(360deg);
+}
+
+.btn:hover {
+  animation-name: button;
+  animation-duration: 1s;
+  transition-property: transform;
+  transition-duration: 1s;
+  transform: rotateY(360deg);
+}
+
+.post-animation {
+  background-image: url('./components/Landing/postit.jpeg');
+  width: 50px;
+  height: 50px;
+  position: relative;
+  animation-name: postItAnimation;
+  animation-duration: 8s;
+  animation-timing-function: ease-in;
+
+  animation-fill-mode: forwards;
+}
+@keyframes postItAnimation {
+  0% {
+    left: -400px;
+    bottom: -200px;
+  }
+  20% {
+    left: -250px;
+    bottom: -20px;
+  }
+  50% {
+    left: 30px;
+    bottom: 55px;
+  }
+  60% {
+    left: 55px;
+    bottom: 80px;
+  }
+  70% {
+    left: 75px;
+    bottom: 85px;
+  }
+  85% {
+    left: 85px;
+    bottom: 95px;
+  }
+  100% {
+    left: 80px;
+    bottom: 80px;
+  }
 }
