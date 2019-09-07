@@ -69,7 +69,12 @@ class App extends Component {
             <div className='container'>
               <Switch>
                 <Route exact path='/' component={Landing} />
-
+                <Route exact path='/events' component={Events} />
+                <Route exact path='/posts' component={Posts} />
+                <Route exact path='/users' component={Users} />
+                <Route exact path='/login' component={Login} />
+                <Route exact path='/register' component={Register} />
+                <PrivateRoute exact path='/secret' component={Secret} />
                 <Route component={NotFound} />
               </Switch>
             </div>
@@ -81,15 +86,3 @@ class App extends Component {
 }
 
 export default App;
-
-// <Route exact path='/login' component={Login} />
-// <Route exact path='/register' component={Register} />
-// <PrivateRoute exact path='/secret' component={Secret} />
-// <Route exact path='/events' component={Events} />
-// <Route exact path='/posts' component={Posts} />
-// <Route exact path='/users' component={Users} />
-{
-  /* <div className='container'>
-              <Route component={Landing} />
-            </div> */
-}
