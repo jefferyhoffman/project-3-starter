@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import API from '../../lib/API';
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css'
-import {Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import Modal from 'react-modal';
  
 const customStyles = {
@@ -68,7 +68,7 @@ class CustomerForm extends Component {
       return <Redirect to="/" />;
     }
     return (
-      <div className='CustomerForm'>
+      <div className='CustomerForm' id='customer-form-row'>
         <Modal
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
@@ -83,8 +83,8 @@ class CustomerForm extends Component {
           
 
         </Modal>
-        <div className='card'>
-          <div className='card-body'>
+        <div className='card' id='customer-form-card'>
+          <div className='card-body' id='customer-form-body'>
             <form onSubmit={(event)=>this.handleSubmit(event)}>
             
               <div className='form-group mb-3'>
