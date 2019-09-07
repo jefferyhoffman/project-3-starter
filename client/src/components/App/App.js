@@ -73,10 +73,6 @@ class App extends Component {
                 <Route component={NotFound} />
               </Switch>
             </div>
-
-            {/* <div className='container'>
-              <Route component={Landing} />
-            </div> */}
           </div>
         </AuthContext.Provider>
       </BrowserRouter>
@@ -92,3 +88,8 @@ export default App;
 // <Route exact path='/events' component={Events} />
 // <Route exact path='/posts' component={Posts} />
 // <Route exact path='/users' component={Users} />
+{
+  /* <div className='container'>
+              <Route component={Landing} />
+            </div> */
+}
