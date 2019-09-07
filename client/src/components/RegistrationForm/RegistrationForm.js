@@ -4,9 +4,9 @@ import Octicon, { Mail, Key } from '@githubprimer/octicons-react';
 
 class RegistrationForm extends Component {
   state = {
+    username: '',
     email: '',
     password: '',
-    passwordConfirm: ''
   };
 
   handleInputChange = event => {
@@ -18,66 +18,72 @@ class RegistrationForm extends Component {
   }
 
   handleSubmit = event => {
-    const { email, password, passwordConfirm } = this.state;
+    const { email, password, username } = this.state;
 
-    this.props.onSubmit(email, password, passwordConfirm);
+    this.props.onSubmit(email, password, username);
     event.preventDefault();
   }
 
   render() {
-    const { email, password, passwordConfirm } = this.state;
+    const { email, password, username } = this.state;
 
     return (
       <div className='LoginForm'>
-        <div className='card'>
+        <div
+          style={{ marginTop: '10vh' }}
+          className='card wow fadeInRight size'
+          data-wow-delay='0.3s'
+        >
           <div className='card-body'>
+            <div className='text-center'>
+              <h3 className='white-text'>
+                <i className='fas fa-user white-text'></i> Register:
+              </h3>
+              <hr className='hr-light' />
+            </div>
             <form onSubmit={this.handleSubmit}>
-              <div className='input-group mb-3'>
-                <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Mail} /></span>
-                </div>
+              <div className='md-form'>
+                <i className='fas fa-user prefix white-text active'></i>
                 <input
-                  className='form-control'
-                  id='email'
+                  type='text'
+                  id='form3'
+                  name='username'
+                  className='white-text form-control'
+                  value={username}
+                  onChange={this.handleInputChange}
+                />
+                <label htmlFor='form3'>{!this.state.username ? "Your name" : ""}</label>
+              </div>
+              <div className='md-form'>
+                <i className='fas fa-envelope prefix white-text active'></i>
+                <input
                   type='email'
+                  id='form2'
                   name='email'
-                  placeholder='email@provider.com'
+                  type='email'
+                  className='white-text form-control'
                   value={email}
                   onChange={this.handleInputChange}
                 />
+                <label htmlFor='form2'>{!this.state.email ? "Your email" : ""}</label>
               </div>
-
-              <div className='input-group mb-3'>
-                <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Key} /></span>
-                </div>
+              <div className='md-form'>
+                <i className='fas fa-lock prefix white-text active'></i>
                 <input
-                  className='form-control'
-                  id='password'
+                  type='password'
+                  id='form4'
+                  className='white-text form-control'
                   type='password'
                   name='password'
-                  placeholder='password'
                   value={password}
                   onChange={this.handleInputChange}
                 />
+                <label htmlFor='form4'>{!this.state.password ? "Your password" : ""}</label>
               </div>
 
-              <div className='input-group mb-3'>
-                <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Key} /></span>
-                </div>
-                <input
-                  className='form-control'
-                  id='password-confirm'
-                  type='password'
-                  name='passwordConfirm'
-                  placeholder='password (again)'
-                  value={passwordConfirm}
-                  onChange={this.handleInputChange}
-                />
-              </div>
-
-              <button className='btn btn-primary' type='submit'>Register Now!</button>
+              <button type='submit' className='btn btn-outline-light'>
+                Register
+                      </button>
             </form>
           </div>
         </div>

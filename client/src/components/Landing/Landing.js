@@ -4,6 +4,7 @@ import { Link, Redirect } from 'react-router-dom';
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
 import LoginForm from '../../components/LoginForm/LoginForm';
+import RegistrationForm from '../../components/RegistrationForm/RegistrationForm';
 
 import './Landing.css';
 
@@ -93,7 +94,7 @@ class Landing extends Component {
                 className='btn btn-outline-white wow fadeInLeft'
                 data-wow-delay='0.3s'
               >
-                Logingggg
+                Login
               </Link> */}
             </div>
 
@@ -108,56 +109,8 @@ class Landing extends Component {
             )}
 
             <div id='reg' className='col-md-6'>
-              <div
-                style={{ marginTop: '10vh' }}
-                className='card wow fadeInRight size'
-                data-wow-delay='0.3s'
-              >
-                <div className='card-body'>
-                  <div className='text-center'>
-                    <h3 className='white-text'>
-                      <i className='fas fa-user white-text'></i> Register:
-                    </h3>
-                    <hr className='hr-light' />
-                  </div>
-                  <div className='md-form'>
-                    <i className='fas fa-user prefix white-text active'></i>
-                    <input
-                      type='text'
-                      id='form3'
-                      className='white-text form-control'
-                    />
-
-                    <label htmlFor='form3'>Your name</label>
-                  </div>
-                  <div className='md-form'>
-                    <i className='fas fa-envelope prefix white-text active'></i>
-                    <input
-                      type='email'
-                      id='form2'
-                      className='white-text form-control'
-                    />
-
-                    <label htmlFor='form2'>Your email</label>
-                  </div>
-                  <div className='md-form'>
-                    <i className='fas fa-lock prefix white-text active'></i>
-                    <input
-                      type='password'
-                      id='form4'
-                      className='white-text form-control'
-                    />
-                    <label htmlFor='form4'>Your password</label>
-                  </div>
-                  <div className='text-center mt-4'>
-                    <Link to='/register'>
-                      <button type='button' className='btn btn-outline-light'>
-                        Register
-                      </button>
-                    </Link>
-                  </div>
-                </div>
-              </div>
+                <RegistrationForm />
+        
             </div>
           </div>
         </div>
