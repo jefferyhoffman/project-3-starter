@@ -1,5 +1,5 @@
 import React from 'react';
-import PostIt from '../components/Layout/PostIt';
+import PostPostIt from '../components/Layout/PostPostIt';
 import PostModal from '../components/Posts/PostModal';
 import API from '../utils/API';
 
@@ -33,10 +33,17 @@ class Posts extends React.Component {
         ) : (
           this.state.results.map(post => {
             return (
-              <PostIt
+              <PostPostIt
                 key={post._id}
-                title={post.title}
-                summary={post.summary}
+                post_title={post.post_title}
+                post_details={post.post_details}
+                category={post.category}
+                urgent={post.urgent}
+                help_needed={post.help_needed}
+                offering={post.offering}
+                cost_per_hour={post.cost_per_hour}
+                cost_per_service={post.cost_per_service}
+                trade={post.trade}
               />
             );
           })

@@ -1,6 +1,6 @@
-import React from "react";
-import PostIt from '../components/Layout/PostIt';
-import API from '../utils/API'
+import React from 'react';
+import EventPostIt from '../components/Layout/EventPostIt';
+import API from '../utils/API';
 
 class Users extends React.Component {
   state = {
@@ -12,30 +12,26 @@ class Users extends React.Component {
   }
 
   getUsers = () => {
-    API.findAll("users")
+    API.findAll('users')
       .then(res => this.setState({ results: res.data }))
       .catch(err => console.log(err));
-  }
+  };
 
   render() {
     return (
-      <div className="users-board">
+      <div className='users-board'>
         <h1>Your Neighbors</h1>
         {!this.state.results.length ? (
           <h1>No Neighbors to Display</h1>
         ) : (
-            this.state.results.map(user => {
-              return (
-                <PostIt
-                  key={user._id}
-                  name={user.name}
-                  photo={user.photo}
-                />
-              );
-            }))
-        }
+          this.state.results.map(user => {
+            return (
+              <EventPostIt key={user._id} name={user.name} photo={user.photo} />
+            );
+          })
+        )}
       </div>
-    )
+    );
   }
 }
 

@@ -2,7 +2,7 @@ import React from 'react';
 import propTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-const PostIt = props => {
+const EventPostIt = props => {
   return (
     <div className='card text-center'>
       <div>
@@ -24,4 +24,4 @@ const PostIt = props => {
   );
 };
 
-export default PostIt;
+export default EventPostIt;
