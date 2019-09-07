@@ -1,6 +1,6 @@
 import React from 'react';
 import PostIt from '../components/Layout/PostIt';
-import PostModal from '../components/Post/PostModal';
+import PostModal from '../components/Posts/PostModal';
 import API from '../utils/API';
 
 class Posts extends React.Component {

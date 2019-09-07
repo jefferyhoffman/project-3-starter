@@ -70,14 +70,16 @@ class Landing extends Component {
         <div className='container'>
           <div className='row'>
             <div className='col-md-6 white-text text-center text-md-left'>
-              <h1
-                id='cc'
-                style={{ marginTop: '10vh' }}
-                className='h1-responsive font-weight-bold wow fadeInLeft'
-                data-wow-delay='0.3s'
-              >
-                #GetPosted
-              </h1>
+              <Link to='/events'>
+                <h1
+                  id='cc'
+                  style={{ marginTop: '10vh' }}
+                  className='h1-responsive font-weight-bold wow fadeInLeft'
+                  data-wow-delay='0.3s'
+                >
+                  #GetPosted
+                </h1>{' '}
+              </Link>
               <hr className='hr-light wow fadeInLeft' data-wow-delay='0.3s' />
               <h6 className='mb-3 wow fadeInLeft' data-wow-delay='0.3s'>
                 Already have an account?
