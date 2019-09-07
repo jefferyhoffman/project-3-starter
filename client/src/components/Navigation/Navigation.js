@@ -31,7 +31,7 @@ class Navigation extends Component {
       <div className='Navigation'>
         <nav className='navbar navbar-expand-lg navbar-light bg-light mb-3'>
           <span className='navbarBrand'>
-            <img src='./community-app.jpg'></img>
+            <img src='./logo-small.png'></img>
           </span>{' '}
        
           <Link className='navbar-brand' to='#'></Link>
@@ -50,8 +50,8 @@ class Navigation extends Component {
 
           <div className={targetClass} id='navbarSupportedContent'>
             <ul className='navbar-nav mr-auto'>
-              <li id="home" className='nav-item'>
-                <Link className='nav-link' to='/' onClick={this.toggleCollapse}>
+              <li id="home"  className='nav-item'>
+                <Link  className='nav-link' to='/' onClick={this.toggleCollapse}>
 
                   Home
                 </Link>

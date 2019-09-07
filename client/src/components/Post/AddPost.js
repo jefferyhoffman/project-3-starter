@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import API from "../../utils/API";
 import {
   MDBContainer,
   MDBRow,
@@ -17,13 +18,12 @@ import "./AddPost.css";
 export class AddPost extends Component {
   state = {
     category: "",
-    postTitle: "",
-    postBody: "",
-    helpWanted: "",
-    offeringHelp: "",
+    post_title: "",
+    post_details: "",
+    help_needed: "",
     urgent: "",
-    costPerHour: "",
-    costPerService: "",
+    cost_per_hour: "",
+    cost_per_service: "",
     trade: "",
     comment: {},
     user: {}
@@ -38,45 +38,29 @@ export class AddPost extends Component {
 
   onSubmit = event => {
     event.preventDefault();
-    // if (
-    //   !this.state.category &&
-    //   !this.state.postTitle &&
-    //   !this.state.postBody &&
-    //   !this.state.helpWanted &&
-    //   !this.state.offeringHelp &&
-    //   !this.state.urgent &&
-    //   !this.state.costPerHour &&
-    //   !this.state.costPerService &&
-    //   !this.state.trade &&
-
-    // ) {
-    //   alert( "Please fill in all fields");
-    // }
-    //   API.createPost({
-    //     category: this.state.category,
-    //     postTitle: this.state.postTitle,
-    //     postBody: this.state.postBody,
-    //     helpNeeded: this.state.helpWanted,
-    //     offeringHelp: this.state.offeringHelp,
-    //     urgent: this.state.urgent,
-    //     costPerHour: this.state.costPerHour,
-    //     costPerService: this.state.costPerService,
-    //     trade: this.state.trade
-    //     user: this.props.user._id
-
-    //   }).then(() => {
-    //     this.setState({
-    //       category: "",
-    //       postTitle: "",
-    //       postBody: "",
-    //       helpWanted: "",
-    //       offeringHelp: "",
-    //       urgent: "",
-    //       costPerHour: "",
-    //       costPerService: "",
-    //       trade: ""
-    //     });
-    //   });
+    if (this.state.post_title && this.state.post_details) {
+      API.createOne("posts", {
+        category: this.state.category,
+        post_title: this.state.post_title,
+        post_details: this.state.post_details,
+        help_needed: this.state.help_needed,
+        urgent: this.state.urgent,
+        cost_per_hour: this.state.cost_per_hour,
+        cost_per_service: this.state.cost_per_service,
+        trade: this.state.trade
+      }).then(() => {
+        this.setState({
+          category: "",
+          post_title: "",
+          post_details: "",
+          help_needed: "",
+          urgent: "",
+          cost_per_hour: "",
+          cost_per_service: "",
+          trade: ""
+        });
+      });
+    }
   };
 
   render() {
@@ -92,8 +76,7 @@ export class AddPost extends Component {
                   id="checkbox2"
                   name="urgent"
                   icon="bell"
-                  value="false"
-                  value={this.props.urgent}
+                  value={this.state.urgent}
                   onChange={this.onChange}
                 />
                 <MDBDropdown>
@@ -102,7 +85,7 @@ export class AddPost extends Component {
                   </MDBDropdownToggle>
                   <MDBDropdownMenu
                     basic
-                    value={this.props.category}
+                    value={this.state.category}
                     onChange={this.onChange}
                   >
                     <MDBDropdownItem>Yard</MDBDropdownItem>
@@ -117,12 +100,12 @@ export class AddPost extends Component {
                 <MDBInput
                   label="Post Title"
                   type="text"
-                  name="title"
+                  name="post_title"
                   icon="pen"
                   validate
                   error="wrong"
                   success="right"
-                  value={this.props.postTitle}
+                  value={this.state.post_title}
                   onChange={this.onChange}
                 />
 
@@ -130,39 +113,39 @@ export class AddPost extends Component {
                   label="Details About The Post"
                   type="textarea"
                   rows="4"
-                  name="body"
+                  name="post_details"
                   icon="info-circle"
-                  value={this.props.postBody}
+                  value={this.state.post_details}
                   onChange={this.onChange}
                 />
                 <MDBInput
                   label="Willing to pay per hour"
                   type="number"
-                  name="costPerHour"
+                  name="cost_per_hour"
                   icon="money-bill-wave"
-                  value={this.props.costPerHour}
+                  value={this.state.cost_per_hour}
                   onChange={this.onChange}
                 />
                 <MDBInput
                   label="Willing to pay per service"
                   type="number"
-                  name="costPerService"
+                  name="cost_per_service"
                   icon="money-check-alt"
-                  value={this.props.costPerService}
+                  value={this.state.cost_per_service}
                   onChange={this.onChange}
                 />
                 <MDBInput
                   label="Willing to trade"
                   type=" "
-                  name="costPerService"
+                  name="trade"
                   icon="comments-dollar"
-                  value={this.props.costPerService}
+                  value={this.state.trade}
                   onChange={this.onChange}
                 />
               </div>
 
               <div className="text-center">
-                <MDBBtn type="submit" value="Submit">
+                <MDBBtn type="submit" value="Submit" onClick={this.onSubmit}>
                   Submit
                 </MDBBtn>
               </div>
