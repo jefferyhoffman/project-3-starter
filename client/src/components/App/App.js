@@ -65,23 +65,18 @@ class App extends Component {
       <BrowserRouter>
         <AuthContext.Provider value={this.state.auth}>
           <div className='App'>
-            <Navigation />
+            {/* <Navigation /> */}
             <div className='container'>
               <Switch>
-                <Route exact path='/' component={Home} />
-                <Route path='/login' component={Login} />
-                <Route path='/register' component={Register} />
-                <PrivateRoute path='/secret' component={Secret} />
-                <Route exact path='/events' component={Events} />
-                <Route exact path='/posts' component={Posts} />
-                <Route exact path='/users' component={Users} />
+                <Route exact path='/' component={Landing} />
+
                 <Route component={NotFound} />
               </Switch>
             </div>
 
-            <div className='container'>
+            {/* <div className='container'>
               <Route component={Landing} />
-            </div>
+            </div> */}
           </div>
         </AuthContext.Provider>
       </BrowserRouter>
@@ -90,3 +85,10 @@ class App extends Component {
 }
 
 export default App;
+
+// <Route exact path='/login' component={Login} />
+// <Route exact path='/register' component={Register} />
+// <PrivateRoute exact path='/secret' component={Secret} />
+// <Route exact path='/events' component={Events} />
+// <Route exact path='/posts' component={Posts} />
+// <Route exact path='/users' component={Users} />
