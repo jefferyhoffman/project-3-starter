@@ -1,0 +1,5 @@
+.post-banner {
+  transition-property: transform;
+  transition-duration: 20s;
+  transform: rotateY(360deg);
+}

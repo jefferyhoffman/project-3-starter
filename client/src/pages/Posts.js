@@ -2,6 +2,8 @@ import React from 'react';
 import PostPostIt from '../components/Layout/PostPostIt';
 import PostModal from '../components/Posts/PostModal';
 import API from '../utils/API';
+import style from './transitionstyle.css';
+import { Transform } from 'stream';
 
 class Posts extends React.Component {
   state = {
@@ -21,9 +23,11 @@ class Posts extends React.Component {
   render() {
     return (
       <div className='posted-board'>
-        <h3>Help Wanted </h3>
-        <h3>&amp;</h3>
-        <h3>Services Offered</h3>
+        <div className='post-banner'>
+          <h3>Help Wanted </h3>
+          <h3>&amp;</h3>
+          <h3>Services Offered</h3>
+        </div>
         {/*passing getPosts to the add button so it can refresh*/}
         <PostModal PostModal={this.props.AddPost} />
         {/* <AddPost
