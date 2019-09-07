@@ -30,39 +30,41 @@ class LoginForm extends Component {
       <div className='LoginForm'>
         <div className='card'>
           <div className='card-body'>
-            <form className='LoginForm' onSubmit={this.handleSubmit}>
-              <div className='input-group mb-3'>
-                <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Mail} /></span>
+            <div className='text-center'>
+              <h3 className='white-text'>
+                <i className='fas fa-user white-text'></i> Log In:
+              </h3>
+              <hr className='hr-light' />
+              <form className='LoginForm' onSubmit={this.handleSubmit}>
+                <div className='md-form'>
+                  <i className='fas fa-envelope prefix white-text active'></i>
+                  <input
+                    className='form-control'
+                    id='email'
+                    type='email'
+                    name='email'
+                    value={email}
+                    onChange={this.handleInputChange}
+                  />
+                  <label htmlFor='form2'>{!this.state.email ? "Your email" : ""}</label>
                 </div>
-                <input
-                  className='form-control'
-                  id='email'
-                  type='email'
-                  name='email'
-                  placeholder='email@provider.com'
-                  value={email}
-                  onChange={this.handleInputChange}
-                />
-              </div>
 
-              <div className='input-group mb-3'>
-                <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Key} /></span>
+                <div className='md-form'>
+                  <i className='fas fa-lock prefix white-text active'></i>
+                  <input
+                    className='form-control'
+                    id='password'
+                    type='password'
+                    name='password'
+                    value={password}
+                    onChange={this.handleInputChange}
+                  />
+                  <label htmlFor='form4'>{!this.state.password ? "Your password" : ""}</label>
                 </div>
-                <input
-                  className='form-control'
-                  id='password'
-                  type='password'
-                  name='password'
-                  placeholder='password'
-                  value={password}
-                  onChange={this.handleInputChange}
-                />
-              </div>
 
-              <button className='btn btn-primary' type='submit'>Login</button>
-            </form>
+                <button type='submit' className='btn btn-outline-light'>Login</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
