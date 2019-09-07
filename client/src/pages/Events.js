@@ -1,5 +1,5 @@
 import React from 'react';
-import PostIt from '../components/Layout/PostIt';
+import EventPostIt from '../components/Layout/EventPostIt';
 import ModalPage from '../components/Event/EventModal';
 // import AddEvent from './components/??';
 import API from '../utils/API';
@@ -33,7 +33,7 @@ class Events extends React.Component {
         ) : (
           this.state.results.map(event => {
             return (
-              <PostIt
+              <EventPostIt
                 key={event._id}
                 event_url={event.event_url}
                 event_title={event.event_title}
