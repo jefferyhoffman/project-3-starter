@@ -21,13 +21,14 @@ class Posts extends React.Component {
   render() {
     return (
       <div className='posted-board'>
-        <h1>Help Wanted</h1>
+        <h3>Help Wanted </h3>
+        <h3>&amp;</h3>
+        <h3>Services Offered</h3>
         {/*passing getPosts to the add button so it can refresh*/}
         <PostModal PostModal={this.props.AddPost} />
         {/* <AddPost
           refreshPosts={this.getPosts}
         /> */}
-
         {!this.state.results.length ? (
           <h1>No Posts to Display</h1>
         ) : (
