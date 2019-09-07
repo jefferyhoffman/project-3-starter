@@ -1,8 +1,8 @@
-import React from "react";
-import PostIt from "../components/Layout/PostIt";
-import ModalPage from "../components/Event/EventModal";
+import React from 'react';
+import PostIt from '../components/Layout/PostIt';
+import ModalPage from '../components/Event/EventModal';
 // import AddEvent from './components/??';
-import API from "../utils/API";
+import API from '../utils/API';
 
 class Events extends React.Component {
   state = {
@@ -14,17 +14,16 @@ class Events extends React.Component {
   }
 
   getEvents = () => {
-    API.findAll("events")
+    API.findAll('events')
       .then(res => {
-        console.log('------------------------------------------')
-        console.log(res.data)
-        this.setState({ results: res.data })})
+        this.setState({ results: res.data });
+      })
       .catch(err => console.log(err));
   };
 
   render() {
     return (
-      <div className="event-board">
+      <div className='event-board'>
         <h1>Upcoming Events</h1>
         {/*passing getEvents to the add button so it can refresh*/}
         <ModalPage ModalPage={this.props.AddEvent} />
@@ -36,8 +35,11 @@ class Events extends React.Component {
             return (
               <PostIt
                 key={event._id}
-                title={event.title}
-                summary={event.summary}
+                event_url={event.event_url}
+                event_title={event.event_title}
+                event_details={event.event_details}
+                event_place={event.event_place}
+                html_url={event.html_url}
               />
             );
           })
