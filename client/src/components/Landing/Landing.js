@@ -155,6 +155,8 @@ class Landing extends Component {
                         Register
                       </button>
                     </Link>
+
+                    <div className='post-animation'></div>
                   </div>
                 </div>
               </div>

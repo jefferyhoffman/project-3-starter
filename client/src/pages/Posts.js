@@ -2,7 +2,6 @@ import React from 'react';
 import PostPostIt from '../components/Layout/PostPostIt';
 import PostModal from '../components/Posts/PostModal';
 import API from '../utils/API';
-import style from './transitionstyle.css';
 import { Transform } from 'stream';
 
 class Posts extends React.Component {
