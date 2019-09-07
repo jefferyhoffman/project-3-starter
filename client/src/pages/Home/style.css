@@ -11,6 +11,7 @@
     color: #2da1e9;
     font-family: 'Russo One', sans-serif;
 }
+
 .card {
     width: 50%;
     left: 25%;
@@ -39,4 +40,19 @@ h2 {
 }
 .card-text {
     color: aqua;
+}
+#customer-form-row {
+    display: block;
+    width: 100%;
+}
+#customer-form-card {
+    margin: 10px;
+    width: 80%;
+    left: 0%;
+    display: inline-flex;
+}
+#customer-form-body {
+    left: 0%;
+    width: 100%;
+    
 }
