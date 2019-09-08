@@ -27,6 +27,12 @@ class Posts extends React.Component {
           <h3>&amp;</h3>
           <h3>Services Offered</h3>
         </div>
+        <Link to='/events' style={{ float: 'right', marginLeft: '15px' }}>
+          <p>Events</p>{' '}
+        </Link>
+        <Link to='/' style={{ float: 'right' }}>
+          <p>Home</p>{' '}
+        </Link>
         {/*passing getPosts to the add button so it can refresh*/}
         <PostModal PostModal={this.props.AddPost} />
         {/* <AddPost

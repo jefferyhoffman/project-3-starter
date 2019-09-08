@@ -26,7 +26,7 @@ class Events extends React.Component {
     return (
       <div className='event-board'>
         <h1>Upcoming Events</h1>
-        <Link to='/posts' style={{ float: 'right' }}>
+        <Link to='/posts' style={{ float: 'right', marginLeft: '15px' }}>
           <p>Posts</p>{' '}
         </Link>
         <Link to='/' style={{ float: 'right' }}>
