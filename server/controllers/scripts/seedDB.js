@@ -525,17 +525,20 @@ const eventsData = [
     event_place: "Wooden Robot Brewery",
     event_date: new Date("2019-09-05T00:00:00.000Z"),
     html_url: "https://runsignup.com/Race/NC/Charlotte/SouthEndShuffle5",
+
     event_url:
       "https://d368g9lw5ileu7.cloudfront.net/races/race76167-logo.bC1ztB.png",
     event_details:
       "There is something for everyone at the South End Shuffle 5K & Mile Run, the event that has become a South End neighborhood tradition! ",
     event_time: "1567869399651",
     __v: 0
+
   }
 ];
 
 const postsData = [
   {
+
     _id: mongoose.Types.ObjectId("5d72ac328bd033130a84c2a9"),
     category: "yard",
     urgent: false,
@@ -587,8 +590,7 @@ const postsData = [
     trade: false,
     post_title: "Car Pooling Group",
     post_details:
-      "Car Pooling Group from Matthews Reserve Apartments to Uptown.  We take turns daily.  Right now there are 5 of us but we'd like to get a small group of up to 10.  Everyone contributes $3 per ride toward collective gas costs or a social hour that we hold monthly.",
-    __v: 0
+      "Car Pooling Group from Matthews Reserve Apartments to Uptown.  We take turns daily.  Right now there are 5 of us but we'd like to get a small group of up to 10.  Everyone contributes $3 per ride toward collective gas costs or a social hour that we hold monthly."
   }
 ];
 
@@ -617,6 +619,7 @@ db.Profiles.remove({})
 db.Users.remove({})
   .then(() => db.Users.collection.insertMany(usersData))
   .then(data => {
+
     console.log(data.result.n + " user records inserted!");
   })
   .catch(err => {
