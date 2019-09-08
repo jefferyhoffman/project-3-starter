@@ -33,14 +33,6 @@ const LOG_MODE = process.env.NODE_ENV === 'production' ? 'common' : 'dev';
 //-- Express -----------------------------------------------------------------
 const app = express();
 
-//-- Mongoose Setup ----------------------------------------------------------
-mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost/communityconnect'
-);
-mongoose.connection.on('error', err => {
-  console.log(`Mongoose connection err:\n${err}`);
-});
-
 //-- Middleware --------------------------------------------------------------
 app.use(logger(LOG_MODE));
 app.use(express.urlencoded({ extended: false }));
