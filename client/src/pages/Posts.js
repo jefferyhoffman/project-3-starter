@@ -3,6 +3,7 @@ import PostPostIt from '../components/Layout/PostPostIt';
 import PostModal from '../components/Posts/PostModal';
 import API from '../utils/API';
 import { Transform } from 'stream';
+import { Link } from 'react-router-dom';
 
 class Posts extends React.Component {
   state = {
