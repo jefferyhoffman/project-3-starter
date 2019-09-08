@@ -1,6 +1,6 @@
 import React from 'react';
 import EventPostIt from '../components/Layout/EventPostIt';
-import ModalPage from '../components/Event/EventModal';
+import ModalPage from '../components/Events/EventModal';
 // import AddEvent from './components/??';
 import API from '../utils/API';
 
