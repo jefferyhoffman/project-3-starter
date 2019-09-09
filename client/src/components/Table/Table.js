@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../pages/Login/style.css'
 
 export function Table({ children }) {
   return (
