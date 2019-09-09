@@ -1,0 +1,7 @@
+#footer {
+    background: black;
+    height: 50px;
+    bottom: 0;
+    z-index: 1;
+    margin-top: 100px;
+}

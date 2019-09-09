@@ -42,6 +42,15 @@ export default {
       console.log('-------------------------------------------')
       console.log(id)
       return axios.get(`/API/krystal/find/${id}`);
+    },
+    updateNotes: function(id){
+      return axios.put(`/API/krystal/addnote/${id}`)
+    },
+    deleteNotes: function(id){
+      return axios.put(`/API/krystal/deletenote/${id}`)
+    }, 
+    makeInactive: function(id){
+      return axios.put(`/API/krystal/makeInactive/${id}`)
     }
   }
 }

@@ -8,6 +8,7 @@ import { Form, FormItem, FormInput, FormLabel } from '../../components/Form/Form
 import Dropdown from 'react-dropdown';
 import { Row, Col } from '../../components/Grid/grid';
 import AuthContext from '../../contexts/AuthContext';
+import '../Login/style.css'
 
 const customStyles = {
   content: {
@@ -84,9 +85,9 @@ class Admin extends Component {
     const options2 = [true, false];
 
     return (
-      
+
       <div style={{ position: 'relative', zIndex: 0 }} >
-        
+
         <Modal
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}

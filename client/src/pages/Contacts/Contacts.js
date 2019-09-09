@@ -34,9 +34,9 @@ class Contacts extends Component {
           </div>
         </div>
         <div className='row'>
-          <div className="card" id="about">
+          <div className="card">
             <div className="card-header">
-              About
+              Customer Form
             </div>
             <div className="card-body" style={linkStyle} onMouseEnter={this.toggleHover}>              
                 <CustomerForm onSubmit={this.handleSubmit} />
