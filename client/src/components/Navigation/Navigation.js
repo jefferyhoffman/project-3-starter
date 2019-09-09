@@ -24,7 +24,7 @@ class Navigation extends Component {
     const { collapsed } = this.state;
     const targetClass = `collapse navbar-collapse ${!collapsed && 'show'}`;
     const togglerClass = `navbar-toggler ${collapsed && 'collapsed'}`;
-    const { user } = this.context
+    
     return (
       <div className='Navigation App-nav'>
         {!user &&
