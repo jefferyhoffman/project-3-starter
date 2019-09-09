@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 // import Customer from '../Customer/Customer';
 import API from '../../lib/API';
 import Modal from 'react-modal';
-import { Form, FormItem, FormInput, FormLabel } from '../../components/Form/Form';
+import { Form, FormItem, FormInput } from '../../components/Form/Form';
 import Dropdown from 'react-dropdown';
 import { Row, Col } from '../../components/Grid/grid';
-import AuthContext from '../../contexts/AuthContext';
+// import AuthContext from '../../contexts/AuthContext';
 import '../Login/style.css'
-
+import './Admin.css'
 const customStyles = {
   content: {
     top: '50%',
@@ -82,15 +82,15 @@ class Admin extends Component {
 
   render() {
     //this is where i'll console.log my state/props
-    let { user } = this.context
+    
     const { name, phone, email, address, tank_type, tank_size, contacted, date_contacted, service_notes, fish, products_used } = this.state;
     const options = ['Tank', 'Molded Pond', 'Plastic Pond', 'Rubber Pond', 'Glass Aquarium', 'Acrylic Aquarium'];
     const options2 = ['Yes', 'No'];
 
     return (
 
-      <div style={{ position: 'relative', zIndex: 0 }} >
-
+      <div x style={{ position: 'relative', zIndex: 0 }} >
+        
         <Modal
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
@@ -98,7 +98,7 @@ class Admin extends Component {
           style={customStyles}
           contentLabel="Modal">
           <div>
-            <h2>Add a Customer</h2>
+            <h2 >Add a Customer</h2>
             <Row>
               <Col size="md-6">
                 <Form onSubmit={(event) => this.handleSubmit(event)}>
@@ -128,7 +128,7 @@ class Admin extends Component {
             <h2>Customer Information</h2>
           </Col>
           <Col size="md-6">
-            <button className="btn btn-primary" onClick={() => this.openModal()}>Add Customer</button>
+            <button className="btn btn-primary spacer" onClick={() => this.openModal}>Add Customer</button>
           </Col>
         </Row>
         <Table>
