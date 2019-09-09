@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Table, TableHead, TableBody } from '../../components/Table/Table';
 import { Link } from 'react-router-dom';
-import Customer from '../Customer/Customer';
+// import Customer from '../Customer/Customer';
 import API from '../../lib/API';
 import Modal from 'react-modal';
 import { Form, FormItem, FormInput, FormLabel } from '../../components/Form/Form';

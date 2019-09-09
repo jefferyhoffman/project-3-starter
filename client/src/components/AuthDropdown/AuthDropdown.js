@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import Gravatar from 'react-gravatar';
 
 import AuthContext from '../../contexts/AuthContext';
@@ -19,7 +19,7 @@ class AuthDropdown extends Component {
 
   handleLogout = () => {
     this.context.onLogout();
-    this.props.onClick();
+    // this.props.onClick();
   }
 
   render() {
