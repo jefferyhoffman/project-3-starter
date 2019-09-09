@@ -34,9 +34,11 @@ class CustomerForm extends Component {
       [name]: value
     });
   }
+  
   _onSelect = option =>{
     this.setState({tank_type:option.value})
   }
+
   handleSubmit = event => {
     event.preventDefault();
     
