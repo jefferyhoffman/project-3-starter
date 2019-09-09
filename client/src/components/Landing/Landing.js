@@ -13,7 +13,8 @@ class Landing extends Component {
 
   state = {
     redirectToReferrer: false,
-    error: ""
+    error: "",
+    registered: false
   };
 
   handleSubmit = (email, password) => {
@@ -42,12 +43,25 @@ class Landing extends Component {
       });
   };
 
+  handleRegistrationSubmit = (email, password) => {
+    API.Users.create(email, password)
+    .then( res =>{
+      this.setState({registered: true})
+    })
+    .catch(err =>{
+      if (err.response.status === 404){
+        this.setState({error: 'Sorry, that email/password combination is not valid.  Please try again.'})
+      }
+    })
+
+  }
+
   render() {
     const { from } = this.props.location.state || { from: { pathname: "/" } };
     const { redirectToReferrer } = this.state;
 
     if (redirectToReferrer) {
-      return <Redirect to={from} />;
+      return <Redirect to='/events' />;
     }
 
     return (
@@ -71,7 +85,7 @@ class Landing extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-6 white-text text-center text-md-left">
-              <Link to="/events">
+              
                 <h1
                   id="cc"
                   style={{ marginTop: "10vh" }}
@@ -80,7 +94,7 @@ class Landing extends Component {
                 >
                   #GetPosted
                 </h1>{" "}
-              </Link>
+              
               <hr className="hr-light wow fadeInLeft" data-wow-delay="0.3s" />
               <h6 className="mb-3 wow fadeInLeft" data-wow-delay="0.3s">
                 Already have an account?
@@ -100,7 +114,7 @@ class Landing extends Component {
 
             {this.state.error && (
               <div className="row">
-                <div className="col">
+                <div style = {{"width": '200px'}}>
                   <div className="alert alert-danger mb-3" role="alert">
                     {this.state.error}
                   </div>
@@ -109,7 +123,7 @@ class Landing extends Component {
             )}
 
             <div id="reg" className="col-md-6">
-              <RegistrationForm />
+              <RegistrationForm onSubmit = {this.handleRegistrationSubmit} registered = {this.state.registered}/>
             </div>
           </div>
         </div>
