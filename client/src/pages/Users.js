@@ -21,35 +21,39 @@ class Users extends React.Component {
 
   render() {
     return (
-
-      <div className = "container">
-        <Navigation/>
-      <div style={{
-          border: "29px solid transparent",
-          backgroundImage:
-            "url('https://images.freeimages.com/images/large-previews/c3a/corkboard-1580988.jpg')",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundPosition: "center center",
-          borderImageSource:
-            'url("http://res.cloudinary.com/cspaveljb/image/upload/v1499110958/corkborder_f8cm3g.png")',
-          borderImageSlice: "29 29",
-          borderImageWidth: "29px 29px",
-          height: "100vh"
-        }} className="users-board">
-         
-        <h1>Your Neighbors</h1>
-        {!this.state.results.length ? (
-          <h1>No Neighbors to Display</h1>
-        ) : (
-          this.state.results.map(user => {
-            return (
-              <EventPostIt key={user._id} name={user.name} photo={user.photo} />
-            );
-          })
-        )}
-      </div>
-
+      <div className="container">
+        <Navigation />
+        <div
+          style={{
+            border: "29px solid transparent",
+            backgroundImage:
+              "url('https://images.freeimages.com/images/large-previews/c3a/corkboard-1580988.jpg')",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "center center",
+            borderImageSource:
+              'url("http://res.cloudinary.com/cspaveljb/image/upload/v1499110958/corkborder_f8cm3g.png")',
+            borderImageSlice: "29 29",
+            borderImageWidth: "29px 29px",
+            height: "100vh"
+          }}
+          className="users-board"
+        >
+          <h1>Your Neighbors</h1>
+          {!this.state.results.length ? (
+            <h1>No Neighbors to Display</h1>
+          ) : (
+            this.state.results.map(user => {
+              return (
+                <UserProfile
+                  key={user._id}
+                  name={user.name}
+                  photo={user.photo}
+                />
+              );
+            })
+          )}
+        </div>
       </div>
     );
   }
