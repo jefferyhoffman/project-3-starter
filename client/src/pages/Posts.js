@@ -1,7 +1,7 @@
-import React from 'react';
-import PostPostIt from '../components/Layout/PostPostIt';
-import PostModal from '../components/Posts/PostModal';
-import API from '../utils/API';
+import React from "react";
+import PostPostIt from "../components/PostIt_Post/PostPostIt";
+import PostModal from "../components/Posts/PostModal";
+import API from "../utils/API";
 
 class Posts extends React.Component {
   state = {
@@ -13,14 +13,14 @@ class Posts extends React.Component {
   }
 
   getPosts = () => {
-    API.findAll('posts')
+    API.findAll("posts")
       .then(res => this.setState({ results: res.data }))
       .catch(err => console.log(err));
   };
 
   render() {
     return (
-      <div className='posted-board'>
+      <div className="posted-board">
         <h3>Help Wanted </h3>
         <h3>&amp;</h3>
         <h3>Services Offered</h3>

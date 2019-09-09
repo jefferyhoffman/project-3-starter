@@ -1,0 +1,42 @@
+.PostPostIt {
+  z-index: 1;
+  background-color: #f8aa39;
+  float: left !important;
+  height: 15em;
+  width: 15em;
+  padding: 1em;
+  margin: 2em;
+  color: white;
+  -moz-box-shadow: 5px 5px 7px rgba(33, 33, 33, 1);
+  -webkit-box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+  box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+  transform: rotate(4deg);
+  -o-transform: rotate(4deg);
+  -webkit-transform: rotate(4deg);
+  -moz-transform: rotate(4deg);
+}
+
+.PostPostIt:nth-child(even) {
+  background: #bdddca;
+  color: #565555;
+  transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+}
+
+.PostPostIt:hover {
+  position: relative;
+  -moz-box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+  box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+  transform: scale(1.25);
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  z-index: 2;
+}
+
+h3 {
+  text-transform: uppercase;
+}
