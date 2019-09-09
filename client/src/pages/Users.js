@@ -43,7 +43,7 @@ class Users extends React.Component {
           {!this.state.results.length ? (
             <h1>No Neighbors to Display</h1>
           ) : (
-            this.state.results.map(user => {
+            this.state.results.map(profile => {
               return (
                 <UserProfile
                   key={profile._id}
