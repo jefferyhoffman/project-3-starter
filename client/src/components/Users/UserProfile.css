@@ -1,0 +1,32 @@
+.UserProfile {
+  background-color: #f3e372;
+  z-index: 1;
+  float: left !important;
+  height: 15em;
+  width: 15em;
+  padding: 1em;
+  margin: 2em;
+  color: black;
+  -moz-box-shadow: 5px 5px 7px rgba(33, 33, 33, 1);
+  -webkit-box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+  box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+  transform: rotate(4deg);
+  -o-transform: rotate(4deg);
+  -webkit-transform: rotate(4deg);
+  -moz-transform: rotate(4deg);
+}
+
+.UserProfile:nth-child(even) {
+  background: #96d266;
+  transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+}
+
+.UserProfile_img {
+  max-width: 5em;
+  max-height: 5em;
+  border-radius: 50%;
+  margin-bottom: 1em;
+}
