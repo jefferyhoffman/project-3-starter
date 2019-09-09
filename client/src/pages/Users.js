@@ -2,6 +2,7 @@ import React from "react";
 import UserProfile from "../components/Users/UserProfile";
 import API from "../utils/API";
 import Navigation from "../components/Navigation/Navigation";
+import border from "../components/Landing/corkborder.png";
 
 class Users extends React.Component {
   state = {
@@ -19,6 +20,7 @@ class Users extends React.Component {
   };
 
   render() {
+    const woodBorder = "url(" + border + ")";
     return (
       <div className="container">
         <Navigation />
@@ -30,8 +32,7 @@ class Users extends React.Component {
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             backgroundPosition: "center center",
-            borderImageSource:
-              'url("http://res.cloudinary.com/cspaveljb/image/upload/v1499110958/corkborder_f8cm3g.png")',
+            borderImageSource: woodBorder,
             borderImageSlice: "29 29",
             borderImageWidth: "29px 29px",
             height: "100vh"
@@ -42,7 +43,7 @@ class Users extends React.Component {
           {!this.state.results.length ? (
             <h1>No Neighbors to Display</h1>
           ) : (
-            this.state.results.map(profile => {
+            this.state.results.map(user => {
               return (
                 <UserProfile
                   key={profile._id}
