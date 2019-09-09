@@ -1,4 +1,5 @@
 import React from "react";
+import MoreButton from "../MoreButton/MoreButton";
 import "./PostPostIt.css";
 
 const PostPostIt = props => {
@@ -20,7 +21,10 @@ const PostPostIt = props => {
         />
         <h3>{props.category}</h3>
         <h5>{props.post_title}</h5>
-        <btn className="PostPostIt_btn btn">More</btn>
+        <MoreButton
+          type="posts"
+          id = {props._id}
+         />
       </div>
       <div></div>
     </div>

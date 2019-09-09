@@ -59,6 +59,7 @@ class Events extends React.Component {
                 event_details={event.event_details}
                 event_place={event.event_place}
                 html_url={event.html_url}
+                _id={event._id}
               />
             );
           })

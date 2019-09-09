@@ -1,7 +1,8 @@
 import React from "react";
-import EventPostIt from "../components/PostIt_Event/EventPostIt";
+import UserProfile from "../components/Users/UserProfile";
 import API from "../utils/API";
-import Navigation from "../components/Navigation/Navigation"
+import Navigation from "../components/Navigation/Navigation";
+import { Link } from "react-router-dom";
 
 class Users extends React.Component {
   state = {
@@ -13,13 +14,14 @@ class Users extends React.Component {
   }
 
   getUsers = () => {
-    API.findAll("users")
+    API.findAll("profiles")
       .then(res => this.setState({ results: res.data }))
       .catch(err => console.log(err));
   };
 
   render() {
     return (
+
       <div className = "container">
         <Navigation/>
       <div style={{
@@ -47,6 +49,7 @@ class Users extends React.Component {
           })
         )}
       </div>
+
       </div>
     );
   }
