@@ -5,7 +5,7 @@ const eventSchema = new Schema({
   event_title: { type: String, required: false },
   event_details: { type: String, required: false },
   community: { type: String, required: false },
-  category: { type: String, default: 'random' },
+  category: { type: String, default: 'other' },
   event_place: { type: String },
   event_url: { type: String },
   html_url: { type: String },
