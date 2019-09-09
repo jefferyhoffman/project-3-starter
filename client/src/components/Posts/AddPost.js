@@ -6,7 +6,6 @@ import {
   MDBCol,
   MDBInput,
   MDBBtn,
-  MDBFormInline,
   MDBDropdown,
   MDBDropdownToggle,
   MDBDropdownMenu,

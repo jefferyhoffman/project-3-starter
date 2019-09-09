@@ -2,7 +2,6 @@ import React from "react";
 import EventPostIt from "../components/PostIt_Event/EventPostIt";
 import ModalPage from "../components/Events/EventModal";
 import API from "../utils/API";
-import { Link } from "react-router-dom";
 import Navigation from "../components/Navigation/Navigation"
 
 class Events extends React.Component {
@@ -27,9 +26,22 @@ class Events extends React.Component {
       <div className = "container">
         <Navigation/>
 
-      <div className="event-board">
+      <div style={{
+          border: "29px solid transparent",
+          backgroundImage:
+            "url('https://images.freeimages.com/images/large-previews/c3a/corkboard-1580988.jpg')",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center center",
+          borderImageSource:
+            'url("http://res.cloudinary.com/cspaveljb/image/upload/v1499110958/corkborder_f8cm3g.png")',
+          borderImageSlice: "29 29",
+          borderImageWidth: "29px 29px",
+          height: "100vh"
+        }}  className="event-board">
         
         <h1>Upcoming Events</h1>
+       
       
 
         {/*passing getEvents to the add button so it can refresh*/}

@@ -4,9 +4,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import API from "../../lib/API";
 import TokenStore from "../../lib/TokenStore";
 import AuthContext from "../../contexts/AuthContext";
-import Navigation from "../../components/Navigation/Navigation";
 import PrivateRoute from "../../components/PrivateRoute/PrivateRoute";
-import Home from "../../pages/Home/Home";
 import Login from "../../pages/Login/Login";
 import Register from "../../pages/Register/Register";
 import Secret from "../../pages/Secret/Secret";
@@ -60,7 +58,6 @@ class App extends Component {
 
   render() {
     // const { user } = this.context;
-    const user = true;
     return (
       <BrowserRouter>
         <AuthContext.Provider value={this.state.auth}>
