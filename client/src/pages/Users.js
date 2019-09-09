@@ -42,12 +42,12 @@ class Users extends React.Component {
           {!this.state.results.length ? (
             <h1>No Neighbors to Display</h1>
           ) : (
-            this.state.results.map(user => {
+            this.state.results.map(profile => {
               return (
                 <UserProfile
-                  key={user._id}
-                  name={user.name}
-                  photo={user.photo}
+                  key={profile._id}
+                  user_name={profile.user_name}
+                  user_url={profile.user_url}
                 />
               );
             })
