@@ -39,13 +39,8 @@ export class AddPost extends Component {
   onSubmit = event => {
     event.preventDefault();
     console.log(this.state);
-<<<<<<< HEAD
     if (this.state.post_title && this.state.post_details) {
       API.createOne("posts", {
-=======
-    if (this.state.post_title) {
-      API.createOne('posts', {
->>>>>>> aabdaafa9bf94a2778183f07f3e45233ab14aee4
         post_title: this.state.post_title,
         post_details: this.state.post_details,
         category: this.state.category,
