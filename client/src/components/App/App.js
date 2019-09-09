@@ -12,7 +12,9 @@ import Register from "../../pages/Register/Register";
 import Secret from "../../pages/Secret/Secret";
 import NotFound from "../../pages/NotFound/NotFound";
 import Events from "../../pages/Events";
+import EventFlyer from "../../pages/EventFlyer";
 import Posts from "../../pages/Posts";
+import PostFlyer from "../../pages/PostFlyer";
 import Users from "../../pages/Users";
 import Landing from "../Landing/Landing";
 
@@ -70,7 +72,9 @@ class App extends Component {
               <Switch>
                 <Route exact path="/" component={Landing} />
                 <Route exact path="/events" component={Events} />
+                <Route path="/events/:id" component={EventFlyer} />
                 <Route exact path="/posts" component={Posts} />
+                <Route path="/posts/:id" component={PostFlyer} />
                 <Route exact path="/users" component={Users} />
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/register" component={Register} />
