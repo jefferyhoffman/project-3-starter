@@ -2,7 +2,6 @@ import React from "react";
 import UserProfile from "../components/Users/UserProfile";
 import API from "../utils/API";
 import Navigation from "../components/Navigation/Navigation";
-import { Link } from "react-router-dom";
 
 class Users extends React.Component {
   state = {
@@ -44,7 +43,7 @@ class Users extends React.Component {
         ) : (
           this.state.results.map(user => {
             return (
-              <EventPostIt key={user._id} name={user.name} photo={user.photo} />
+              <UserProfile key={user._id} name={user.name} photo={user.photo} />
             );
           })
         )}
