@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Table, TableHead, TableBody} from '../../components/Table/Table';
 import { Link } from 'react-router-dom';
-import Customer from '../Customer/Customer';
+// import Customer from '../Customer/Customer';
 import API from '../../lib/API';
 import '../Login/style.css'
 
@@ -31,6 +31,7 @@ class Admin extends Component {
         //this is where i'll console.log my state/props
         
         return (
+          // {user &&}
           <div style={{position: 'relative', zIndex: 0, top: '100px'}} >
             <Table>
               <TableHead>

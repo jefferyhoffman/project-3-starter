@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './style.css'
 import logo from './name.png'
-
+import AuthDropdown from '../../components/AuthDropdown/AuthDropdown'
 import AuthContext from '../../contexts/AuthContext';
 
 
@@ -23,9 +23,10 @@ class Navigation extends Component {
     const { collapsed } = this.state;
     const targetClass = `collapse navbar-collapse ${!collapsed && 'show'}`;
     const togglerClass = `navbar-toggler ${collapsed && 'collapsed'}`;
-
+    const { user } = this.context
     return (
       <div className='Navigation App-nav'>
+
         <nav className='navbar navbar-expand-lg navbar-light'>
           <img className='navbar-brand' src={logo} alt='Small logo' id='nav-logo' />
           <button className={togglerClass} onClick={this.toggleCollapse} data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
@@ -46,7 +47,7 @@ class Navigation extends Component {
             </ul>
             <ul className='navbar-nav'>
               <li className='nav-item fa fa-facebook'></li>
-              <li></li>
+              <li>{user && <AuthDropdown />}</li>
               <li className='nav-item'><a className='nav-link' href='https://www.facebook.com/krystalklearaquariums/'>Krystal Klear Aquariums</a></li>
               <li className='nav-item'><a className='nav-link' href='https://www.facebook.com/wetpetsgastonia/'>Wet Pets</a></li>
             </ul>

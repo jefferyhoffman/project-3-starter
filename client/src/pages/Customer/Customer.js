@@ -5,6 +5,7 @@ import './Customer.css';
 import API from '../../lib/API';
 // import API from '../../../../server/'
 
+
  class Customer extends Component {
    state = {
      customer: {}
@@ -20,7 +21,9 @@ import API from '../../lib/API';
 
    render() {
      const customer = this.state.customer
+     
      return (
+
       <Container className="text-left">
         <Row>
           <Col size="md-6">
