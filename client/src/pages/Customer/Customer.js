@@ -26,7 +26,7 @@ import API from '../../lib/API';
           <Col size="md-6">
             <List>
                 <ListItem>Name: {customer.name}</ListItem>
-                <ListItem>Phone:{customer.phone}</ListItem>
+                <ListItem>Phone: {customer.phone}</ListItem>
                 <ListItem>Email: {customer.email}</ListItem>
                 <ListItem>Address: {customer.address}</ListItem>
                 <ListItem>Tank Type: {customer.tank_type}</ListItem>
@@ -35,7 +35,7 @@ import API from '../../lib/API';
           <Col size="md-6">
             <List>
                <ListItem>Tank Size: {customer.tank_size}</ListItem>
-               {customer.contacted ? <ListItem>Contacted: Yes</ListItem> : <ListItem>Contacted: Yes</ListItem>}
+               {customer.contacted ? <ListItem>Contacted: Yes</ListItem> : <ListItem>Contacted: No</ListItem>}
                <ListItem>Date Contacted: {customer.date_contacted}</ListItem>
                {customer.active ? <ListItem>Active: Yes</ListItem> : <ListItem>Active: No</ListItem>}
             </List>
@@ -46,7 +46,7 @@ import API from '../../lib/API';
           <Col size="md-8">
             <List className="noteList">
               <ListItem>Service Notes: {customer.service_notes}</ListItem>
-              <ListItem>Fish: {customer.phone}</ListItem>
+              <ListItem>Fish: {customer.fish}</ListItem>
               <ListItem>Products Used: {customer.products_used}</ListItem>
               <ListItem>Message: {customer.message}</ListItem>  
             </List>

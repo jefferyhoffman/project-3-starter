@@ -20,12 +20,14 @@ class Navigation extends Component {
   }
 
   render() {
+    let {user} = this.context
     const { collapsed } = this.state;
     const targetClass = `collapse navbar-collapse ${!collapsed && 'show'}`;
     const togglerClass = `navbar-toggler ${collapsed && 'collapsed'}`;
 
     return (
       <div className='Navigation App-nav'>
+        {user &&
         <nav className='navbar navbar-expand-lg navbar-light'>
           <img className='navbar-brand' src={logo} alt='Small logo' id='nav-logo' />
           <button className={togglerClass} onClick={this.toggleCollapse} data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
@@ -51,7 +53,7 @@ class Navigation extends Component {
               <li className='nav-item'><a className='nav-link' href='https://www.facebook.com/wetpetsgastonia/'>Wet Pets</a></li>
             </ul>
           </div>
-        </nav>
+        </nav>}
       </div>
     );
   }
