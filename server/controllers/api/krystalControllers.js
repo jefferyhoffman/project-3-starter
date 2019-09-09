@@ -38,12 +38,35 @@ krystalControllers.get("/viewcustomer/", (req, res) =>{
 })
 
 krystalControllers.get("/find/:id", (req, res) =>{
-    console.log('=============================')
-    console.log(req.params.id)
     db.Customers.findOne({ _id: req.params.id })
         .then((response) => {
             console.log(response)
             res.json(response)
         })
 })
+
+krystalControllers.put("/addnote/:id", (req, res) => {
+    console.log("add note funciton working ===============")
+    db.Customers.updateOne({_id: req.params.id}, {$set: {service_notes: req.params.text}})
+    .then((response) => {
+        // idk what goes in here yet
+    })
+})
+
+krystalControllers.put("/deletenote/:id", (req, res) => {
+    console.log("delete note funciton working ==============")
+    db.Customers.updateOne({_id: req.params.id}, {$set: {service_notes: ''}})
+    .then((response) => {
+
+    })
+})
+
+krystalControllers.put("/makeInactive/:id", (req, res) => {
+    console.log("make inactive function working ==========")
+    db.Customers.updateOne({_id: req.params.id}, {$set: {active: false}})
+    then((response) => {
+        
+    })
+})
+
 module.exports = krystalControllers;
