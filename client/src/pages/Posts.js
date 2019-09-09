@@ -2,6 +2,7 @@ import React from "react";
 import PostPostIt from "../components/PostIt_Post/PostPostIt";
 import PostModal from "../components/Posts/PostModal";
 import API from "../utils/API";
+import Navigation from "../components/Navigation/Navigation";
 
 class Posts extends React.Component {
   state = {
@@ -21,6 +22,8 @@ class Posts extends React.Component {
   render() {
     return (
       <div className="posted-board">
+        <div className = "container">
+        <Navigation/>
         <h3>Help Wanted </h3>
         <h3>&amp;</h3>
         <h3>Services Offered</h3>
@@ -49,6 +52,7 @@ class Posts extends React.Component {
             );
           })
         )}
+      </div>
       </div>
     );
   }
