@@ -4,6 +4,8 @@ import { Redirect } from 'react-router-dom';
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
 import RegistrationForm from '../../components/RegistrationForm/RegistrationForm';
+import Navigation from "../../components/Navigation/Navigation"
+
 
 class Register extends Component {
   static contextType = AuthContext;
@@ -40,6 +42,8 @@ class Register extends Component {
 
     return (
       <div className='Login'>
+         <div className = "container">
+        <Navigation/>
         <div className='row'>
           <div className='col'>
             <h1>Register Account</h1>
@@ -59,6 +63,8 @@ class Register extends Component {
             <RegistrationForm onSubmit={this.handleSubmit} />
           </div>
         </div>
+      </div>
+
       </div>
     );
   }

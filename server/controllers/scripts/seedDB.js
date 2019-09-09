@@ -592,9 +592,6 @@ const postsData = [
   }
 ];
 
-///  Only uncomment this if you want to re-seed the database but BE CAREFUL ==  IT WILL REMOVE ALL EXISTING SEEDS IN THE DATABASE AND REPLACE EXISTING COMMUNITIES WITH THE STARTER SEED COMMUNITY DATA ONLY ///
-
-/// !!!  IF you do run yarn seed and uncomment, consider removing the db.remove() to not delete existing data populated by others !!!  ////
 
 db.Events.remove({})
   .then(() => db.Events.collection.insertMany(eventsData))
