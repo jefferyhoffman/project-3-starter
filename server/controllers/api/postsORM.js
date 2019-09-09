@@ -3,7 +3,7 @@ const db = require('../../models');
 // Defining methods for the PostsController
 module.exports = {
   findAll: function(req, res) {
-    console.log(db.Posts);
+    console.log(db.Posts, 'SERVER SIDE GET HTTP TO POSTS COLLECTION ******************');
     db.Posts.find(req.query)
       .sort({ date: -1 })
       .then(dbModel => {
