@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-import Octicon, { Mail, Key } from '@githubprimer/octicons-react';
+
 
 class RegistrationForm extends Component {
   state = {
     username: '',
     email: '',
-    password: '',
+    password: ''
   };
 
   handleInputChange = event => {
@@ -18,19 +18,19 @@ class RegistrationForm extends Component {
   }
 
   handleSubmit = event => {
+    event.preventDefault();
     const { email, password, username } = this.state;
 
     this.props.onSubmit(email, password, username);
-    event.preventDefault();
   }
 
   render() {
     const { email, password, username } = this.state;
 
-    return (
-      <div className='LoginForm'>
+    if (!this.props.registered){return (
+      <div id="login" className='LoginForm'>
         <div
-          style={{ marginTop: '10vh' }}
+          
           className='card wow fadeInRight size'
           data-wow-delay='0.3s'
         >
@@ -60,7 +60,7 @@ class RegistrationForm extends Component {
                   type='email'
                   id='form2'
                   name='email'
-                  type='email'
+               
                   className='white-text form-control'
                   value={email}
                   onChange={this.handleInputChange}
@@ -73,7 +73,7 @@ class RegistrationForm extends Component {
                   type='password'
                   id='form4'
                   className='white-text form-control'
-                  type='password'
+            
                   name='password'
                   value={password}
                   onChange={this.handleInputChange}
@@ -88,7 +88,10 @@ class RegistrationForm extends Component {
           </div>
         </div>
       </div>
-    )
+    )} else {
+      return(<div></div>)
+    }
+    
   }
 }
 

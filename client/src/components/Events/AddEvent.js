@@ -15,7 +15,6 @@ export class AddEvent extends Component {
     event_url: '',
     event_task: '',
     community: '',
-    event_task: '',
     isTaskCompleted: '',
     user: {}
   };
