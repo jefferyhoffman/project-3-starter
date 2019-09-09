@@ -48,6 +48,7 @@ class Posts extends React.Component {
                 cost_per_hour={post.cost_per_hour}
                 cost_per_service={post.cost_per_service}
                 trade={post.trade}
+                _id={post._id}
               />
             );
           })
