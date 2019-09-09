@@ -95,21 +95,9 @@ class Landing extends Component {
                   #GetPosted
                 </h1>{" "}
               
-              <hr className="hr-light wow fadeInLeft" data-wow-delay="0.3s" />
-              <h6 className="mb-3 wow fadeInLeft" data-wow-delay="0.3s">
-                Already have an account?
-              </h6>
+              <hr className="hr-light wow fadeInLeft" data-wow-delay="0.3s"/>
               <LoginForm onSubmit={this.handleSubmit} />
-              {/* <Link
-                to='/'
-                id='login'
-                variant='outline-warning'
-                style={{ color: 'black' }}
-                className='btn btn-outline-white wow fadeInLeft'
-                data-wow-delay='0.3s'
-              >
-                Login
-              </Link> */}
+           
             </div>
 
             {this.state.error && (
