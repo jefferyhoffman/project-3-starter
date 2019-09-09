@@ -21,7 +21,7 @@ const profilesData = [
   {
     id: "2",
     user_url:
-      "https://s3.amazonaws.com/one_org_international/international/media/international/2013/12/ubuntu2.jpg",
+      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
     user_name: "Michael Beck",
     user_password: "password",
     user_email: "MichaelBeck@rockingit.com",
@@ -31,7 +31,7 @@ const profilesData = [
   {
     id: "3",
     user_url:
-      "https://www.charlottefive.com/wp-content/uploads/2018/03/Lookingintothelobby.jpg",
+      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
     user_name: "Timothy Brahm",
     user_password: "password",
     user_email: "TimothyBrahms@rockingit.com",
@@ -41,7 +41,7 @@ const profilesData = [
   {
     id: "4",
     user_url:
-      "http://worldaffairscharlotte.org/wp-content/uploads/2018/09/Ifest-Social-Media-Post-2.png",
+      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
     user_name: "Leland Capps",
     user_password: "password",
     user_email: "LelandCapps@rockingit.com",
@@ -51,7 +51,7 @@ const profilesData = [
   {
     id: "5",
     user_url:
-      "http://www.therelatives.org/wp-content/uploads/2016/08/We-Walk-Together-group-May-2016.jpg",
+      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
     user_name: "Brad Evans",
     user_password: "password",
     user_email: "BradEvans@rockingit.com",
@@ -61,7 +61,7 @@ const profilesData = [
   {
     id: "6",
     user_url:
-      "https://festivalinthepark.org/wp-content/uploads/2019/08/FITP-2019_kiosk-banner.jpg",
+      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
     user_name: "Matthew Gennings",
     user_password: "password",
     user_email: "MatthewGennings@rockingit.com",
@@ -71,7 +71,7 @@ const profilesData = [
   {
     id: "7",
     user_url:
-      "http://clt250.com/files/2018/08/qcu_charlotte_unite_festival_pic_1.jpg",
+      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
     user_name: "Tony Goldsmith",
     user_password: "password",
     user_email: "TonyGoldsmith@rockingit.com",
@@ -81,7 +81,7 @@ const profilesData = [
   {
     id: "8",
     user_url:
-      "https://charlottekidsfest.org/wp-content/uploads/2019/05/charlotte-kids-fest-18_44023659955_o.jpg",
+      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
     user_name: "Cassidy Groenendaal",
     user_password: "password",
     user_email: "CassidyGroenendaal@rockingit.com",
@@ -91,7 +91,7 @@ const profilesData = [
   {
     id: "9",
     user_url:
-      "https://www.highlandcreek.com/wp-content/uploads/2017/03/stark-reality-logo.jpg",
+      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
     user_name: "Israel Harvin",
     user_password: "password",
     user_email: "IsraelHarvin@rockingit.com",
@@ -101,7 +101,7 @@ const profilesData = [
   {
     id: "10",
     user_url:
-      "https://s3-media1.fl.yelpcdn.com/ephoto/ev2QAWHDXdSW1gZBX0vhMw/300s.jpg",
+      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
     user_name: "Erin Maness",
     user_password: "password",
     user_email: "ErinManess@rockingit.com",
@@ -111,7 +111,7 @@ const profilesData = [
   {
     id: "11",
     user_url:
-      "https://s3-media1.fl.yelpcdn.com/ephoto/ev2QAWHDXdSW1gZBX0vhMw/300s.jpg",
+      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
     user_name: "David Martin",
     user_password: "password",
     user_email: "DavidMartin@rockingit.com",
@@ -213,7 +213,7 @@ const usersData = [
   {
     id: "2",
     user_url:
-      "https://s3.amazonaws.com/one_org_international/international/media/international/2013/12/ubuntu2.jpg",
+      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
     user_name: "Michael Beck",
     user_password: "password",
     user_email: "MichaelBeck@rockingit.com",
@@ -223,7 +223,7 @@ const usersData = [
   {
     id: "3",
     user_url:
-      "https://www.charlottefive.com/wp-content/uploads/2018/03/Lookingintothelobby.jpg",
+      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
     user_name: "Timothy Brahm",
     user_password: "password",
     user_email: "TimothyBrahms@rockingit.com",
@@ -233,7 +233,7 @@ const usersData = [
   {
     id: "4",
     user_url:
-      "http://worldaffairscharlotte.org/wp-content/uploads/2018/09/Ifest-Social-Media-Post-2.png",
+      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
     user_name: "Leland Capps",
     user_password: "password",
     user_email: "LelandCapps@rockingit.com",
@@ -243,7 +243,7 @@ const usersData = [
   {
     id: "5",
     user_url:
-      "http://www.therelatives.org/wp-content/uploads/2016/08/We-Walk-Together-group-May-2016.jpg",
+      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
     user_name: "Brad Evans",
     user_password: "password",
     user_email: "BradEvans@rockingit.com",
@@ -253,7 +253,7 @@ const usersData = [
   {
     id: "6",
     user_url:
-      "https://festivalinthepark.org/wp-content/uploads/2019/08/FITP-2019_kiosk-banner.jpg",
+      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
     user_name: "Matthew Gennings",
     user_password: "password",
     user_email: "MatthewGennings@rockingit.com",
@@ -263,7 +263,7 @@ const usersData = [
   {
     id: "7",
     user_url:
-      "http://clt250.com/files/2018/08/qcu_charlotte_unite_festival_pic_1.jpg",
+      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
     user_name: "Tony Goldsmith",
     user_password: "password",
     user_email: "TonyGoldsmith@rockingit.com",
@@ -273,7 +273,7 @@ const usersData = [
   {
     id: "8",
     user_url:
-      "https://charlottekidsfest.org/wp-content/uploads/2019/05/charlotte-kids-fest-18_44023659955_o.jpg",
+      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
     user_name: "Cassidy Groenendaal",
     user_password: "password",
     user_email: "CassidyGroenendaal@rockingit.com",
@@ -283,7 +283,7 @@ const usersData = [
   {
     id: "9",
     user_url:
-      "https://www.highlandcreek.com/wp-content/uploads/2017/03/stark-reality-logo.jpg",
+      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
     user_name: "Israel Harvin",
     user_password: "password",
     user_email: "IsraelHarvin@rockingit.com",
@@ -293,7 +293,7 @@ const usersData = [
   {
     id: "10",
     user_url:
-      "https://s3-media1.fl.yelpcdn.com/ephoto/ev2QAWHDXdSW1gZBX0vhMw/300s.jpg",
+      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
     user_name: "Erin Maness",
     user_password: "password",
     user_email: "ErinManess@rockingit.com",
@@ -303,7 +303,7 @@ const usersData = [
   {
     id: "11",
     user_url:
-      "https://s3-media1.fl.yelpcdn.com/ephoto/ev2QAWHDXdSW1gZBX0vhMw/300s.jpg",
+      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
     user_name: "David Martin",
     user_password: "password",
     user_email: "DavidMartin@rockingit.com",
@@ -409,7 +409,7 @@ const eventsData = [
     id: "2",
     event_url:
       "https://s3.amazonaws.com/one_org_international/international/media/international/2013/12/ubuntu2.jpg",
-    event_title: "UBUNTU - Power of Unity - A Community Building Course",
+    event_title: "UBUNTU - A Community Building Course",
     event_details: "Power of Unity",
     event_date: "Every Thursday starting Sept. 19th",
     event_task: "Bring your best work!",
@@ -591,10 +591,6 @@ const postsData = [
       "Car Pooling Group from Matthews Reserve Apartments to Uptown.  We take turns daily.  Right now there are 5 of us but we'd like to get a small group of up to 10.  Everyone contributes $3 per ride toward collective gas costs or a social hour that we hold monthly."
   }
 ];
-
-///  Only uncomment this if you want to re-seed the database but BE CAREFUL ==  IT WILL REMOVE ALL EXISTING SEEDS IN THE DATABASE AND REPLACE EXISTING COMMUNITIES WITH THE STARTER SEED COMMUNITY DATA ONLY ///
-
-/// !!!  IF you do run yarn seed and uncomment, consider removing the db.remove() to not delete existing data populated by others !!!  ////
 
 db.Events.remove({})
   .then(() => db.Events.collection.insertMany(eventsData))

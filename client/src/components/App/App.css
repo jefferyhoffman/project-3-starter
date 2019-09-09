@@ -31,17 +31,7 @@ body {
   background-image: url("https://lelandswallpaper.com/wp-content/uploads/2017/06/TE11300-jupiter-geometric-texture-wallpaper-white.jpg");
 }
 
-.navbar {
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 15px;
-  background: transparent !important;
-  text-align: right;
-}
 
-#home {
-  margin-left: 600px;
-}
 
 
 @keyframes App-logo-spin {

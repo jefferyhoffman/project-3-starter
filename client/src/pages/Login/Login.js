@@ -4,6 +4,7 @@ import { Link, Redirect } from 'react-router-dom';
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
 import LoginForm from '../../components/LoginForm/LoginForm';
+import Navigation from "../../components/Navigation/Navigation"
 
 class Login extends Component {
   static contextType = AuthContext;
@@ -49,6 +50,8 @@ class Login extends Component {
 
     return (
       <div className='Login'>
+         <div className = "container">
+        <Navigation/>
         <div className='row'>
           <div className='col'>
             <h1>Login</h1>
@@ -72,6 +75,7 @@ class Login extends Component {
             </div>
           </div>
         </div>
+      </div>
       </div>
     );
   }
