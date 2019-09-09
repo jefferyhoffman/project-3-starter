@@ -1,9 +1,7 @@
-import React from 'react';
-import PostPostIt from '../components/Layout/PostPostIt';
-import PostModal from '../components/Posts/PostModal';
-import API from '../utils/API';
-import { Transform } from 'stream';
-import { Link } from 'react-router-dom';
+import React from "react";
+import PostPostIt from "../components/PostIt_Post/PostPostIt";
+import PostModal from "../components/Posts/PostModal";
+import API from "../utils/API";
 
 class Posts extends React.Component {
   state = {
@@ -15,25 +13,17 @@ class Posts extends React.Component {
   }
 
   getPosts = () => {
-    API.findAll('posts')
+    API.findAll("posts")
       .then(res => this.setState({ results: res.data }))
       .catch(err => console.log(err));
   };
 
   render() {
     return (
-      <div className='posted-board'>
-        <div className='post-banner'>
-          <h3>Help Wanted </h3>
-          <h3>&amp;</h3>
-          <h3>Services Offered</h3>
-        </div>
-        <Link to='/events' style={{ float: 'right', marginLeft: '15px' }}>
-          <p>Events</p>{' '}
-        </Link>
-        <Link to='/' style={{ float: 'right' }}>
-          <p>Home</p>{' '}
-        </Link>
+      <div className="posted-board">
+        <h3>Help Wanted </h3>
+        <h3>&amp;</h3>
+        <h3>Services Offered</h3>
         {/*passing getPosts to the add button so it can refresh*/}
         <PostModal PostModal={this.props.AddPost} />
         {/* <AddPost

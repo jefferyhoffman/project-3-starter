@@ -1,4 +1,6 @@
 import React from "react";
+import propTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const headerStyle = {
   background: "orange",
@@ -7,16 +9,14 @@ const headerStyle = {
   padding: "10px"
 };
 
-function EvenInfo() {
+const EvenInfo = props => {
   return (
     <div style={{ textAlign: "center", padding: "10px", background: "white" }}>
       <header style={headerStyle}>
-        <h1>Neighborhood Event</h1>
+        <h1>Summer BBQ </h1>
       </header>
-      <h2 className="title" style={{ color: "orange", padding: "20px" }}>
-        Summer Barbeque
-      </h2>
-      <h3 className="location">Neighborhood Pond</h3>
+      <h2 className="title" style={{ color: "orange", padding: "20px" }}></h2>
+      <h3 className="location">At the Pond</h3>
       <h3 className="date">September 12th, 2019</h3>
       <h3 className="time">5pm - 8pm</h3>
       <p className="info">
@@ -30,6 +30,6 @@ function EvenInfo() {
       </p>
     </div>
   );
-}
+};
 
 export default EvenInfo;

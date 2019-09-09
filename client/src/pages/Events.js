@@ -1,9 +1,7 @@
-import React from 'react';
-import EventPostIt from '../components/Layout/EventPostIt';
-import ModalPage from '../components/Events/EventModal';
-// import AddEvent from './components/??';
-import API from '../utils/API';
-import { Link } from 'react-router-dom';
+import React from "react";
+import EventPostIt from "../components/PostIt_Event/EventPostIt";
+import ModalPage from "../components/Event/EventModal";
+import API from "../utils/API";
 
 class Events extends React.Component {
   state = {
@@ -15,7 +13,7 @@ class Events extends React.Component {
   }
 
   getEvents = () => {
-    API.findAll('events')
+    API.findAll("events")
       .then(res => {
         this.setState({ results: res.data });
       })
@@ -24,13 +22,13 @@ class Events extends React.Component {
 
   render() {
     return (
-      <div className='event-board'>
+      <div className="event-board">
         <h1>Upcoming Events</h1>
-        <Link to='/posts' style={{ float: 'right', marginLeft: '15px' }}>
-          <p>Posts</p>{' '}
+        <Link to="/posts" style={{ float: "right", marginLeft: "15px" }}>
+          <p>Posts</p>{" "}
         </Link>
-        <Link to='/' style={{ float: 'right' }}>
-          <p>Home</p>{' '}
+        <Link to="/" style={{ float: "right" }}>
+          <p>Home</p>{" "}
         </Link>
 
         {/*passing getEvents to the add button so it can refresh*/}

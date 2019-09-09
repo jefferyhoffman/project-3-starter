@@ -532,13 +532,11 @@ const eventsData = [
       "There is something for everyone at the South End Shuffle 5K & Mile Run, the event that has become a South End neighborhood tradition! ",
     event_time: "1567869399651",
     __v: 0
-
   }
 ];
 
 const postsData = [
   {
-
     _id: mongoose.Types.ObjectId("5d72ac328bd033130a84c2a9"),
     category: "yard",
     urgent: false,
@@ -598,30 +596,38 @@ const postsData = [
 
 /// !!!  IF you do run yarn seed and uncomment, consider removing the db.remove() to not delete existing data populated by others !!!  ////
 
-db.Events.remove({})
-  .then(() => db.Events.collection.insertMany(eventsData))
-  .then(data => {
-    console.log(data.result.n + "  event records inserted!");
-  })
-  .catch(err => {
-    console.error(err);
-  });
+// db.Events.remove({})
+//   .then(() => db.Events.collection.insertMany(eventsData))
+//   .then(data => {
+//     console.log(data.result.n + "  event records inserted!");
+//   })
+//   .catch(err => {
+//     console.error(err);
+//   });
 
-db.Profiles.remove({})
-  .then(() => db.Profiles.collection.insertMany(profilesData))
-  .then(data => {
-    console.log(data.result.n + " profile records inserted!");
-  })
-  .catch(err => {
-    console.error(err);
-  });
+// db.Profiles.remove({})
+//   .then(() => db.Profiles.collection.insertMany(profilesData))
+//   .then(data => {
+//     console.log(data.result.n + " profile records inserted!");
+//   })
+//   .catch(err => {
+//     console.error(err);
+//   });
 
-db.Users.remove({})
-  .then(() => db.Users.collection.insertMany(usersData))
-  .then(data => {
+// db.Users.remove({})
+//   .then(() => db.Users.collection.insertMany(usersData))
+//   .then(data => {
+//     console.log(data.result.n + " user records inserted!");
+//   })
+//   .catch(err => {
+//     console.error(err);
+//   });
 
-    console.log(data.result.n + " user records inserted!");
-  })
-  .catch(err => {
-    console.error(err);
-  });
+// db.Posts.remove({})
+//   .then(() => db.Posts.collection.insertMany(postsData))
+//   .then(data => {
+//     console.log(data.result.n + " post records inserted!");
+//   })
+//   .catch(err => {
+//     console.error(err);
+//   });
