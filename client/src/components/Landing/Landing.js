@@ -5,8 +5,8 @@ import API from "../../lib/API";
 import AuthContext from "../../contexts/AuthContext";
 import LoginForm from "../../components/LoginForm/LoginForm";
 import RegistrationForm from "../../components/RegistrationForm/RegistrationForm";
-
 import "./Landing.css";
+import border from  "./corkborder.png"
 
 class Landing extends Component {
   static contextType = AuthContext;
@@ -59,12 +59,14 @@ class Landing extends Component {
   render() {
     const { from } = this.props.location.state || { from: { pathname: "/" } };
     const { redirectToReferrer } = this.state;
+    const woodBorder = "url("+border+")"
 
     if (redirectToReferrer) {
       return <Redirect to='/events' />;
     }
 
     return (
+      <div className = "container" id = "corkboard">
       <div
         style={{
           border: "29px solid transparent",
@@ -73,8 +75,7 @@ class Landing extends Component {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center center",
-          borderImageSource:
-            'url("http://res.cloudinary.com/cspaveljb/image/upload/v1499110958/corkborder_f8cm3g.png")',
+          borderImageSource: woodBorder,
           borderImageSlice: "29 29",
           borderImageWidth: "29px 29px",
           height: "100vh"
@@ -115,6 +116,7 @@ class Landing extends Component {
             </div>
           </div>
         </div>
+      </div>
       </div>
     );
   }
