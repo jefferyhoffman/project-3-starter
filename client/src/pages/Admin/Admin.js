@@ -17,7 +17,9 @@ const customStyles = {
     right: 'auto',
     bottom: 'auto',
     marginRight: '-50%',
-    transform: 'translate(-50%, -50%)'
+    transform: 'translate(-50%, -50%)',
+    overflow: 'scroll',
+    height: '500px'
   }
 };
 
@@ -56,6 +58,7 @@ class Admin extends Component {
       [name]: value
     });
   }
+
   _onSelect = option => {
     this.setState({ tank_type: option.value })
   }
@@ -64,12 +67,12 @@ class Admin extends Component {
     this.setState({ modalIsOpen: true });
   }
 
-  afterOpenModal = () => {
-    this.subtitle.style.color = '#f00';
-  }
+  // afterOpenModal = () => {
+  //   this.subtitle.style.color = '#f00';
+  // }
 
   closeModal = () => {
-    this.setState({ modalIsOpen: false, redirect: true });
+    this.setState({ modalIsOpen: false });
   }
 
   makeInactive(id) {
@@ -82,7 +85,7 @@ class Admin extends Component {
     let { user } = this.context
     const { name, phone, email, address, tank_type, tank_size, contacted, date_contacted, service_notes, fish, products_used } = this.state;
     const options = ['Tank', 'Molded Pond', 'Plastic Pond', 'Rubber Pond', 'Glass Aquarium', 'Acrylic Aquarium'];
-    const options2 = [true, false];
+    const options2 = ['Yes', 'No'];
 
     return (
 
@@ -100,19 +103,19 @@ class Admin extends Component {
               <Col size="md-6">
                 <Form onSubmit={(event) => this.handleSubmit(event)}>
                   <FormItem>
-                    <FormInput type="text" id="name" value={name} name="name" placeholder="First and Last name"></FormInput>
-                    <FormInput type="tel" id="phone" value={phone} name="phone" placeholder="Phone Number"></FormInput>
-                    <FormInput type="email" id="email" value={email} name="email" placeholder="Example@email.com"></FormInput>
-                    <FormInput type="text" id="address" value={address} name="address" placeholder="Address"></FormInput>
-                    <Dropdown options={options} name="tank_type" value={tank_type} placeholder="Select a Tank Type" onChange={this._onSelect} />
-                    <FormInput type="number" id="tank_size" value={tank_size} name="tank_size" placeholder="Number of Gallons"></FormInput>
-                    <Dropdown options={options2} name="contacted" value={contacted} placeholder="Have they been Contacted?" onChange={this._onSelect} />
-                    <FormInput type="date" id="date_contacted" value={date_contacted} name="date_contacted" placeholder="Date Contacted"></FormInput>
-                    <FormInput type="text" id="service_notes" value={service_notes} name="service_notes" placeholder="Enter Notes Here"></FormInput>
-                    <FormInput type="text" id="fish" value={fish} name="fish" placeholder="Fish Owned"></FormInput>
-                    <FormInput type="text" id="products_used" value={products_used} name="products_used" placeholder="Products Used"></FormInput>
+                    <FormLabel>Name: <FormInput type="text" id="name" value={name} name="name" placeholder="First and Last name"></FormInput></FormLabel><br />
+                    <FormLabel>Phone: <FormInput type="tel" id="phone" value={phone} name="phone" placeholder="Phone Number"></FormInput></FormLabel><br />
+                    <FormLabel>Email: <FormInput type="email" id="email" value={email} name="email" placeholder="Example@email.com"></FormInput></FormLabel><br />
+                    <FormLabel>Address <FormInput type="text" id="address" value={address} name="address" placeholder="Address"></FormInput></FormLabel><br />
+                    <FormLabel>Tank Type: <Dropdown options={options} name="tank_type" value={tank_type} placeholder="Tank Type" onChange={this._onSelect} /></FormLabel><br />
+                    <FormLabel>Tank Size: <FormInput type="number" id="tank_size" value={tank_size} name="tank_size" placeholder="Number of Gallons"></FormInput></FormLabel><br />
+                    <FormLabel>Contaced: <Dropdown options={options2} name="contacted" value={contacted} placeholder="Contacted" onChange={this._onSelect} /></FormLabel><br />
+                    <FormLabel>Date Contacted: <FormInput type="date" id="date_contacted" value={date_contacted} name="date_contacted" placeholder="Date Contacted"></FormInput></FormLabel><br />
+                    <FormLabel>Service Notes: <FormInput type="text" id="service_notes" value={service_notes} name="service_notes" placeholder="Enter Notes Here"></FormInput></FormLabel><br />
+                    <FormLabel>Fish: <FormInput type="text" id="fish" value={fish} name="fish" placeholder="Fish Owned"></FormInput></FormLabel><br />
+                    <FormLabel>Products Used: <FormInput type="text" id="products_used" value={products_used} name="products_used" placeholder="Products Used"></FormInput></FormLabel>
                   </FormItem>
-                  <button type="submit" onSubmit={(event) => this.handleInputChange(event)}></button>
+                  <button type="submit" className="btn btn-primary" onSubmit={(event) => this.handleInputChange(event)}>Save</button>
                 </Form>
               </Col>
             </Row>
@@ -125,7 +128,7 @@ class Admin extends Component {
             <h2>Customer Information</h2>
           </Col>
           <Col size="md-6">
-            <button className="btn btn-primary" onClick={() => this.openModal}>Add Customer</button>
+            <button className="btn btn-primary" onClick={() => this.openModal()}>Add Customer</button>
           </Col>
         </Row>
         <Table>
