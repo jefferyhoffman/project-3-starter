@@ -1,8 +1,10 @@
+
 import React from "react";
 import UserProfile from "../components/Users/UserProfile";
 import API from "../utils/API";
 import Navigation from "../components/Navigation/Navigation";
 import border from  "../components/Landing/corkborder.png"
+
 
 class Users extends React.Component {
   state = {
@@ -14,7 +16,7 @@ class Users extends React.Component {
   }
 
   getUsers = () => {
-    API.findAll("profiles")
+    API.findAll('profiles')
       .then(res => this.setState({ results: res.data }))
       .catch(err => console.log(err));
   };
@@ -22,6 +24,7 @@ class Users extends React.Component {
   render() {
     const woodBorder = "url("+border+")"
     return (
+
 
       <div className = "container">
         <Navigation/>
@@ -49,6 +52,7 @@ class Users extends React.Component {
           })
         )}
       </div>
+
 
       </div>
     );
