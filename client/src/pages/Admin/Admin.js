@@ -53,7 +53,7 @@ class Admin extends Component {
 
   handleInputChange = event => {
     const { name, value } = event.target;
-
+// database function "makeNew" needs to be called somewhere here
     this.setState({
       [name]: value
     });

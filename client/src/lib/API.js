@@ -35,6 +35,9 @@ export default {
     send: function(data){
       return axios.post('/API/krystal/', data)
     },
+    makeNew: function(data){
+      return axios.post("API/krystal/makeNew/", data)
+    },
     grab: function(){
       return axios.get('/API/krystal/viewcustomer/');
     },
