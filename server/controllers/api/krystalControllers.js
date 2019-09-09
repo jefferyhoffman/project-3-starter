@@ -29,6 +29,13 @@ krystalControllers.post("/", (req, res) => {
     ).catch((err)=>console.log(err))
 })
 
+krystalControllers.post("/makeNew", (req, res) => {
+    CustomerStuff = req.body
+    db.Customers.create({...CustomerStuff}).then(
+        console.log("done")
+    )
+})
+
 krystalControllers.get("/viewcustomer/", (req, res) =>{
     db.Customers.find({}).then(
         (response) => {
