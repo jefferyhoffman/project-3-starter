@@ -97,18 +97,20 @@ class App extends Component {
           <Particles
             params={particlesOptions} />
           <Navigation />
+          
           <div className='main'>
-            <Switch>
+          <Switch>
               <Route exact path='/' component={Home} />
-              <Route exact path='/services' component={Services} />
+              <Route path='/services' component={Services} />
               <Route path='/login' component={Login} />
               <Route path='/contact' component={Contact} />
               <PrivateRoute path="/admin" component={Admin} />
               <PrivateRoute path="/customer/:id" component={Customer} />
               <Route path='/register' component={Register}/>
               <Route component={NotFound} />
-            </Switch>
+          </Switch>
           </div>
+          
           <Footer />
         </div>
       </AuthContext.Provider>
