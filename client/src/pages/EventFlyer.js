@@ -1,6 +1,7 @@
 import React from "react";
 import Navigation from "../components/Navigation/Navigation"
 import API from "../utils/API";
+import "./Flyer.css";
 
 
 class EventFlyer extends React.Component {
@@ -22,26 +23,23 @@ class EventFlyer extends React.Component {
             .catch(err => console.log(err));
     }
 
-    // here's the info we have in state:
-    // category: 
-    // community: 
-    // event_date: 
-    // event_details: 
-    // event_place: 
-    // event_task: 
-    // event_time: 
-    // event_title: 
-    // event_url: 
-    // html_url: 
-    // id: "1"
-    // isTaskCompleted: false
-
-
     render() {
         return (
             <div className="flyer-page">
                 <Navigation />
-                <h1>{this.state.oneEvent.event_title}</h1>
+                <div className="flyer">
+                    <h1>{this.state.oneEvent.event_title}</h1>
+                    {!this.state.oneEvent.event_url ? ""
+                        : <img src={this.state.oneEvent.event_url} />}
+                    {!this.state.oneEvent.event_place ? ""
+                        : <h3>Where: {this.state.oneEvent.event_place}</h3>}
+                    {!this.state.oneEvent.event_date ? ""
+                        : <h3>When: {this.state.oneEvent.event_date.split("T")[0]}</h3>}
+                    {!this.state.oneEvent.event_details ? ""
+                        : <h3>Details: {this.state.oneEvent.event_details}</h3>}
+                    {!this.state.oneEvent.html_url ? ""
+                        : <h3><a href={this.state.oneEvent.html_url}>More Info Here</a></h3>}
+                </div>
             </div>
         )
     }
