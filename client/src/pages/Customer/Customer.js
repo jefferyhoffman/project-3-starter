@@ -115,9 +115,6 @@ class Customer extends Component {
           </Col>
           <Col size="md-2"></Col>
         </Row>
-        <Row>
-          <button type="submit" className="btn btn-primary"></button>
-        </Row>
       </Container>
     )
   }

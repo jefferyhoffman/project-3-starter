@@ -137,7 +137,7 @@ class Admin extends Component {
 
     return (
 
-      <div style={{ position: 'relative', zIndex: 0 }} >
+      <div className="page"style={{ position: 'relative', zIndex: 0 }} >
 
         <Modal
           isOpen={this.state.modalIsOpen}

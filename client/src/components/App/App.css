@@ -2,9 +2,8 @@
   text-align: center;
   background-color: #004e8c;
   position: relative;
-
-
-
+  min-height: 100%;
+  background-size: cover;
 }
 
 .App-logo {
