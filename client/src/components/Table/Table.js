@@ -15,7 +15,7 @@ export function TableHead() {
       <tr>
         <th scope="col">Customer Name</th>
         <th scope="col">Contacted</th>
-        <th scope="col">Date Reached Out</th>
+        <th scope="col">Date Contacted</th>
         <th scope="col">Make Inactive</th>
       </tr>
     </thead>

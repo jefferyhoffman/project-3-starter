@@ -1,8 +1,8 @@
 import React from 'react';
 
-export function Form({ children }) {
+export function Form({ children, onSubmit }) {
   return(
-    <form>
+    <form onSubmit={onSubmit}>
       {children}
     </form>
   )
