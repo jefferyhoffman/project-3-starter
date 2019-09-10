@@ -11,7 +11,7 @@ const profilesData = [
   {
     id: "1",
     user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
-    user_name: "Anees Adams",
+    user_name: "Anees",
     user_password: "password",
     user_email: "AneesAdams@rockingit.com",
     user_number: "555-234-6789",
@@ -20,7 +20,7 @@ const profilesData = [
   {
     id: "2",
     user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
-    user_name: "Michael Beck",
+    user_name: "Michael",
     user_password: "password",
     user_email: "MichaelBeck@rockingit.com",
     user_number: "555-678-4563",
@@ -29,7 +29,7 @@ const profilesData = [
   {
     id: "3",
     user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
-    user_name: "Timothy Brahm",
+    user_name: "Timothy",
     user_password: "password",
     user_email: "TimothyBrahms@rockingit.com",
     user_number: "555-738-9374",
@@ -38,7 +38,7 @@ const profilesData = [
   {
     id: "4",
     user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
-    user_name: "Leland Capps",
+    user_name: "Leland",
     user_password: "password",
     user_email: "LelandCapps@rockingit.com",
     user_number: "555-222-7427",
@@ -47,7 +47,7 @@ const profilesData = [
   {
     id: "5",
     user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
-    user_name: "Brad Evans",
+    user_name: "Brad",
     user_password: "password",
     user_email: "BradEvans@rockingit.com",
     user_number: "555-973-4231",
@@ -56,7 +56,7 @@ const profilesData = [
   {
     id: "6",
     user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
-    user_name: "Matthew Gennings",
+    user_name: "Matthew",
     user_password: "password",
     user_email: "MatthewGennings@rockingit.com",
     user_number: "555-952-7132",
@@ -65,7 +65,7 @@ const profilesData = [
   {
     id: "7",
     user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
-    user_name: "Tony Goldsmith",
+    user_name: "Tony",
     user_password: "password",
     user_email: "TonyGoldsmith@rockingit.com",
     user_number: "555-352-4759",
@@ -74,7 +74,7 @@ const profilesData = [
   {
     id: "8",
     user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
-    user_name: "Cassidy Groenendaal",
+    user_name: "Cassidy",
     user_password: "password",
     user_email: "CassidyGroenendaal@rockingit.com",
     user_number: "555-829-9364",
@@ -83,7 +83,7 @@ const profilesData = [
   {
     id: "9",
     user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
-    user_name: "Israel Harvin",
+    user_name: "Israel",
     user_password: "password",
     user_email: "IsraelHarvin@rockingit.com",
     user_number: "555-098-1024",
@@ -92,7 +92,7 @@ const profilesData = [
   {
     id: "10",
     user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
-    user_name: "Erin Maness",
+    user_name: "Erin",
     user_password: "password",
     user_email: "ErinManess@rockingit.com",
     user_number: "555-764-5637",
@@ -101,7 +101,7 @@ const profilesData = [
   {
     id: "11",
     user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
-    user_name: "David Martin",
+    user_name: "David",
     user_password: "password",
     user_email: "DavidMartin@rockingit.com",
     user_number: "555-821-3482",
@@ -110,7 +110,7 @@ const profilesData = [
   {
     id: "12",
     user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
-    user_name: "Craig McAlister",
+    user_name: "Craig",
     user_password: "password",
     user_email: "CraigMcAlisters@rockingit.com",
     user_number: "555-085-7332",
@@ -119,7 +119,7 @@ const profilesData = [
   {
     id: "13",
     user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
-    user_name: "Caleb Myers",
+    user_name: "Caleb",
     user_password: "password",
     user_email: "CalebMyers@rockingit.com",
     user_number: "555-372-3817",
@@ -128,7 +128,7 @@ const profilesData = [
   {
     id: "14",
     user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
-    user_name: "Bonaventure Ndicunguye",
+    user_name: "Bonaventure",
     user_password: "password",
     user_email: "BonaventureNdicunguye@rockingit.com",
     user_number: "555-256-1782",
@@ -137,7 +137,7 @@ const profilesData = [
   {
     id: "15",
     user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
-    user_name: "Burton Pinckney",
+    user_name: "Burton",
     user_password: "password",
     user_email: "BurtonPinckney@rockingit.com",
     user_number: "555-327-2837",
@@ -146,7 +146,7 @@ const profilesData = [
   {
     id: "16",
     user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
-    user_name: "David Short",
+    user_name: "David",
     user_password: "password",
     user_email: "DavidShort@rockingit.com",
     user_number: "555-278-4726",
@@ -155,7 +155,7 @@ const profilesData = [
   {
     id: "17",
     user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
-    user_name: "Max Szczepaniak",
+    user_name: "Max",
     user_password: "password",
     user_email: "MaxSzczepaniak@rockingit.com",
     user_number: "555-284-9273",
@@ -164,7 +164,7 @@ const profilesData = [
   {
     id: "18",
     user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
-    user_name: "Katherine Walters",
+    user_name: "Katherine",
     user_password: "password",
     user_email: "KatherineWalters@rockingit.com",
     user_number: "555-422-7342",
@@ -173,7 +173,7 @@ const profilesData = [
   {
     id: "19",
     user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
-    user_name: "Robert Zuniga",
+    user_name: "Robert",
     user_password: "password",
     user_email: "RobertZuniga@rockingit.com",
     user_number: "555-827-9304",
@@ -182,7 +182,7 @@ const profilesData = [
   {
     id: "20",
     user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
-    user_name: "Zoe Djukic",
+    user_name: "Zoe",
     user_password: "password",
     user_email: "ZoeDjukic@rockingit.com",
     user_number: "555-234-6789",
