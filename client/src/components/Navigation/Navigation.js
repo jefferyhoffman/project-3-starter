@@ -30,7 +30,7 @@ class Navigation extends Component {
       <div className='Navigation'>
         <nav className='navbar navbar-expand-lg navbar-light bg-light mb-3'>
           <span className='navbarBrand'>
-            <img to="./Landing" src={logo}></img>
+            <img to="./Landing" src={logo} alt= '...'></img>
           </span>{' '}
           <Link className='navbar-brand' to='./Landing'></Link>
           <button
@@ -53,8 +53,11 @@ class Navigation extends Component {
                 <Link id="posts" className='nav-link' to='/Posts' onClick={this.toggleCollapse}>
                   Posts
                 </Link>
+                <Link id='events' className='nav-link' to='/Users' onClick={this.toggleCollapse}>
+                  Users
+                </Link>
               </li>
-              {user && (
+              {/* {user && (
                 <li className='nav-item'>
                   <Link
                     className='nav-link'
@@ -64,7 +67,7 @@ class Navigation extends Component {
                     Posts
                   </Link>
                 </li>
-              )}
+              )} */}
             </ul>
             <ul className='navbar-nav'>
               {user ? (
@@ -73,10 +76,10 @@ class Navigation extends Component {
                 <li className='nav-item'>
                   <Link
                     className='nav-link'
-                    to='/login'
+                    to='/'
                     onClick={this.toggleCollapse}
                   >
-                    Login/Register
+                    Logout
                   </Link>
                 </li>
               )}

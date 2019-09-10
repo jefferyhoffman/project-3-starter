@@ -1,5 +1,7 @@
 import React from "react";
+
 import MoreButton from "../MoreButton/MoreButton";
+
 import "./EventPostIt.css";
 
 const EventPostIt = props => {

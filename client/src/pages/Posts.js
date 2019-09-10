@@ -3,6 +3,7 @@ import PostPostIt from "../components/PostIt_Post/PostPostIt";
 import PostModal from "../components/Posts/PostModal";
 import API from "../utils/API";
 import Navigation from "../components/Navigation/Navigation";
+import border from  "../components/Landing/corkborder.png"
 
 class Posts extends React.Component {
   state = {
@@ -20,10 +21,23 @@ class Posts extends React.Component {
   };
 
   render() {
+    const woodBorder = "url("+border+")"
     return (
-      <div className="posted-board">
-        <div className = "container">
-        <Navigation/>
+      <div className = "container">
+      <Navigation/>
+      <div style={{
+          border: "29px solid transparent",
+          backgroundImage:
+            "url('https://images.freeimages.com/images/large-previews/c3a/corkboard-1580988.jpg')",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center center",
+          borderImageSource: woodBorder,
+          borderImageSlice: "29 29",
+          borderImageWidth: "29px 29px",
+          height: "100vh"
+        }} className="posted-board">
+       
         <h3>Help Wanted </h3>
         <h3>&amp;</h3>
         <h3>Services Offered</h3>
