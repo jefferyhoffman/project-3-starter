@@ -27,6 +27,7 @@ class ModalPage extends Component {
         <MDBModal isOpen={this.state.modal} toggle={this.toggle}>
           <MDBModalHeader toggle={this.toggle}>Create An Event</MDBModalHeader>
           <MDBModalBody>{<AddEvent />}</MDBModalBody>
+          <MDBBtn onClick={this.toggle}>Close</MDBBtn>
         </MDBModal>
       </MDBContainer>
     );
