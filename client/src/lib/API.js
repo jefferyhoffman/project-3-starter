@@ -55,5 +55,10 @@ export default {
     makeInactive: function(id){
       return axios.put(`/API/krystal/makeInactive/${id}`)
     }
+  },
+  Customer: {
+    update: function(id, name){
+      return axios.put('/API/customer/name/' +id, {name})
+    }
   }
 }

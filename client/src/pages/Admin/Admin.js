@@ -8,7 +8,9 @@ import { Form, FormItem, FormInput, FormLabel } from '../../components/Form/Form
 import Dropdown from 'react-dropdown';
 import { Row, Col } from '../../components/Grid/grid';
 import AuthContext from '../../contexts/AuthContext';
-import '../Login/style.css'
+import '../Login/style.css';
+import './Admin.css';
+import { AnimationFrameScheduler } from 'rxjs/internal/scheduler/AnimationFrameScheduler';
 
 const customStyles = {
   content: {
@@ -26,20 +28,18 @@ const customStyles = {
 class Admin extends Component {
   state = {
     customers: [],
-    modalIsOpen: false,
     name: "",
     phone: "",
     email: "",
     address: "",
     tank_type: "",
     tank_size: "",
-    truthy: "",
     date_contacted: "",
     service_notes: "",
     fish: "",
     products_used: "",
     active: "",
-    contacted: false,
+    contacted: false
   }
 
   componentDidMount(response) {
@@ -68,8 +68,8 @@ class Admin extends Component {
 
   handleSub = (e) => {
     e.preventDefault()
-    console.log(this.state)
-    console.log('sub<=====================================================')
+    // console.log(this.state)
+    // console.log('sub<=====================================================')
     if (this.state.truthy == "yes"){
       this.setState({contacted: true})
     }
@@ -94,7 +94,7 @@ class Admin extends Component {
       API.Krystal.grab()
       // console.log(response)
       .then(response => {
-        console.log(response)
+        // console.log(response)
         return this.setState({ customers: response.data })
       })
       .catch(err => console.log(err))
@@ -174,10 +174,10 @@ class Admin extends Component {
 
 
         <Row>
-          <Col size="md-6">
-            <h2>Customer Information</h2>
+          <Col className="top" size="md-6">
+            <h2>Active Customers</h2>
           </Col>
-          <Col size="md-6">
+          <Col className="top" size="md-6">
             <button className="btn btn-primary" onClick={() => this.openModal()}>Add Customer</button>
           </Col>
         </Row>

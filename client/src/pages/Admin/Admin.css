@@ -1,0 +1,14 @@
+
+.spacer{
+  margin-top:20%;
+}
+@media (max-width: 768px){
+  .spacer{
+    margin-top:2%;
+  }
+}
+table {
+  background-color: lightgray;
+  max-width: 80%;
+  margin: 0 auto;
+}

@@ -1,4 +1,4 @@
-const db = require("../../models")
+const db = require("../../models");
 const krystalControllers = require('express').Router();
 const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
@@ -44,7 +44,7 @@ krystalControllers.get("/viewcustomer/", (req, res) =>{
     )
 })
 
-krystalControllers.get("/find/:id", (req, res) =>{
+krystalControllers.get("/find/:id", (req, res) =>{ console.log(req.params.id)
     db.Customers.findOne({ _id: req.params.id })
         .then((response) => {
             console.log(response)
