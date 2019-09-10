@@ -22,21 +22,21 @@ class Contacts extends Component {
     return (
       <div className='Contacts'>
         <div id='header'>
-          <div className='col'>
+          <div id='number' className='col'>
             <p>Phone: 980-267-7483</p>
           </div>
-          <div className='col'>
+          <div id='logo' className='col'>
             <h2>Contact Us</h2>
             <img src={logo} className='App-logo' alt='logo' />
           </div>
-          <div className='col'>
+          <div id='email' className='col'>
             <p>E-Mail: krystalklearaquariums@gmail.com</p>
           </div>
         </div>
         <div className='row'>
           <div className="card">
             <div className="card-header">
-              Customer Form
+              Contact Form
             </div>
             <div className="card-body" style={linkStyle} onMouseEnter={this.toggleHover}>              
                 <CustomerForm onSubmit={this.handleSubmit} />
