@@ -1,6 +1,7 @@
 import React from "react";
 import Navigation from "../components/Navigation/Navigation";
 import API from "../utils/API";
+import "./Flyer.css";
 
 class PostFlyer extends React.Component {
     state = {
@@ -20,25 +21,32 @@ class PostFlyer extends React.Component {
             .catch(err => console.log(err));
     }
 
-    // here's the info we have in state:
-    // category: 
-    // cost_per_hour: 
-    // cost_per_service: 
-    // help_needed: 
-    // offering: 
+
     // post_details:
-    // post_title: 
     // trade: 
-    // urgent: 
-    // __v: 
-    // _id: 
 
 
     render() {
         return (
             <div className="flyer-page">
                 <Navigation />
-                <h1>{this.state.onePost.post_title}</h1>
+                <div className="flyer">
+                    {!this.state.onePost.urgent ? ""
+                        : <h1 className="urgent">URGENT!</h1>}
+                    {!this.state.onePost.help_needed ? ""
+                        : <h1>Help Needed: {this.state.onePost.post_title}</h1>}
+                    {!this.state.onePost.offering ? ""
+                        : <h1>Offering: {this.state.onePost.post_title}</h1>}
+                    {!this.state.onePost.post_details ? ""
+                        : <h3>{this.state.onePost.post_details}</h3>}
+                    {!this.state.onePost.cost_per_hour ? ""
+                        : <h3>Hourly Rate: ${this.state.onePost.cost_per_hour}</h3>}
+                    {!this.state.onePost.cost_per_service ? ""
+                        : <h3>Pay: ${this.state.onePost.cost_per_service}</h3>}
+                    {!this.state.onePost.trade ? ""
+                        : <h4>Willing to trade</h4>}
+
+                </div>
             </div>
         )
     }

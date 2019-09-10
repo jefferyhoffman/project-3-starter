@@ -1,0 +1,30 @@
+.flyer {
+    z-index: 1;
+    background-color: white;
+    width: 80%;
+    padding: 10%;
+    line-height: 1.5;
+    margin: 30px auto;
+    color: #c7872e;
+    font-family: Arial, Helvetica, sans-serif;
+    -moz-box-shadow: 5px 5px 7px rgba(33, 33, 33, 1);
+    -webkit-box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+    box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+    transform: rotate(1deg);
+    -o-transform: rotate(1deg);
+    -webkit-transform: rotate(1deg);
+    -moz-transform: rotate(1deg);
+}
+
+h1, h2, h3, h4 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    width: 40%;
+}
+
+.urgent {
+    color: red; 
+    font-weight: bolder;
+}
