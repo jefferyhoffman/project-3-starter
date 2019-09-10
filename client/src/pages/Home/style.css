@@ -56,3 +56,32 @@ h2 {
     width: 100%;
     
 }
+@media (max-width: 768px){
+    #number{
+      font-size: .6rem;
+    }
+    #email {
+        font-size: .6rem;
+    }
+    #logo {
+        padding: 20px;
+    }
+    nav {
+        background:  #1d71b6;
+        opacity: 1;
+    }
+    .App-logo {
+        width: 250px;
+    }
+  }
+@media (max-width: 600px){
+    #number{
+        font-size: .5rem;
+      }
+      #email {
+          font-size: .5rem;
+      }
+      .App-logo {
+          width: 200px;
+    }
+}
