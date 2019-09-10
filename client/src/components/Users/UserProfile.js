@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 import React, { Component } from "react";
 import "./UserProfile.css";
-=======
-import React from 'react';
->>>>>>> 766df15ab2293cb306e177b6ca4012fda37f11bb
 
 const UserProfile = props => {
   const postImageArray = [
