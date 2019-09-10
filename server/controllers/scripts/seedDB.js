@@ -10,8 +10,7 @@ mongoose.connect(
 const profilesData = [
   {
     id: "1",
-    user_url:
-      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
+    user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
     user_name: "Anees Adams",
     user_password: "password",
     user_email: "AneesAdams@rockingit.com",
@@ -20,8 +19,7 @@ const profilesData = [
   },
   {
     id: "2",
-    user_url:
-      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
+    user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
     user_name: "Michael Beck",
     user_password: "password",
     user_email: "MichaelBeck@rockingit.com",
@@ -30,8 +28,7 @@ const profilesData = [
   },
   {
     id: "3",
-    user_url:
-      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
+    user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
     user_name: "Timothy Brahm",
     user_password: "password",
     user_email: "TimothyBrahms@rockingit.com",
@@ -40,8 +37,7 @@ const profilesData = [
   },
   {
     id: "4",
-    user_url:
-      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
+    user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
     user_name: "Leland Capps",
     user_password: "password",
     user_email: "LelandCapps@rockingit.com",
@@ -50,8 +46,7 @@ const profilesData = [
   },
   {
     id: "5",
-    user_url:
-      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
+    user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
     user_name: "Brad Evans",
     user_password: "password",
     user_email: "BradEvans@rockingit.com",
@@ -60,8 +55,7 @@ const profilesData = [
   },
   {
     id: "6",
-    user_url:
-      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
+    user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
     user_name: "Matthew Gennings",
     user_password: "password",
     user_email: "MatthewGennings@rockingit.com",
@@ -70,8 +64,7 @@ const profilesData = [
   },
   {
     id: "7",
-    user_url:
-      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
+    user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
     user_name: "Tony Goldsmith",
     user_password: "password",
     user_email: "TonyGoldsmith@rockingit.com",
@@ -80,8 +73,7 @@ const profilesData = [
   },
   {
     id: "8",
-    user_url:
-      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
+    user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
     user_name: "Cassidy Groenendaal",
     user_password: "password",
     user_email: "CassidyGroenendaal@rockingit.com",
@@ -90,8 +82,7 @@ const profilesData = [
   },
   {
     id: "9",
-    user_url:
-      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
+    user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
     user_name: "Israel Harvin",
     user_password: "password",
     user_email: "IsraelHarvin@rockingit.com",
@@ -100,8 +91,7 @@ const profilesData = [
   },
   {
     id: "10",
-    user_url:
-      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
+    user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
     user_name: "Erin Maness",
     user_password: "password",
     user_email: "ErinManess@rockingit.com",
@@ -110,8 +100,7 @@ const profilesData = [
   },
   {
     id: "11",
-    user_url:
-      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
+    user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
     user_name: "David Martin",
     user_password: "password",
     user_email: "DavidMartin@rockingit.com",
@@ -120,8 +109,7 @@ const profilesData = [
   },
   {
     id: "12",
-    user_url:
-      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
+    user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
     user_name: "Craig McAlister",
     user_password: "password",
     user_email: "CraigMcAlisters@rockingit.com",
@@ -130,8 +118,7 @@ const profilesData = [
   },
   {
     id: "13",
-    user_url:
-      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
+    user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
     user_name: "Caleb Myers",
     user_password: "password",
     user_email: "CalebMyers@rockingit.com",
@@ -140,8 +127,7 @@ const profilesData = [
   },
   {
     id: "14",
-    user_url:
-      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
+    user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
     user_name: "Bonaventure Ndicunguye",
     user_password: "password",
     user_email: "BonaventureNdicunguye@rockingit.com",
@@ -150,8 +136,7 @@ const profilesData = [
   },
   {
     id: "15",
-    user_url:
-      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
+    user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
     user_name: "Burton Pinckney",
     user_password: "password",
     user_email: "BurtonPinckney@rockingit.com",
@@ -160,8 +145,7 @@ const profilesData = [
   },
   {
     id: "16",
-    user_url:
-      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
+    user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
     user_name: "David Short",
     user_password: "password",
     user_email: "DavidShort@rockingit.com",
@@ -170,8 +154,7 @@ const profilesData = [
   },
   {
     id: "17",
-    user_url:
-      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
+    user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
     user_name: "Max Szczepaniak",
     user_password: "password",
     user_email: "MaxSzczepaniak@rockingit.com",
@@ -180,8 +163,7 @@ const profilesData = [
   },
   {
     id: "18",
-    user_url:
-      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
+    user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
     user_name: "Katherine Walters",
     user_password: "password",
     user_email: "KatherineWalters@rockingit.com",
@@ -190,13 +172,21 @@ const profilesData = [
   },
   {
     id: "19",
-    user_url:
-      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
+    user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
     user_name: "Robert Zuniga",
     user_password: "password",
     user_email: "RobertZuniga@rockingit.com",
     user_number: "555-827-9304",
     user_community: "Midtown"
+  },
+  {
+    id: "20",
+    user_url: "https://image.flaticon.com/icons/svg/172/172163.svg",
+    user_name: "Zoe Djukic",
+    user_password: "password",
+    user_email: "ZoeDjukic@rockingit.com",
+    user_number: "555-234-6789",
+    user_community: "NoDa"
   }
 ];
 const usersData = [
@@ -389,6 +379,16 @@ const usersData = [
     user_email: "RobertZuniga@rockingit.com",
     user_number: "555-827-9304",
     user_community: "Midtown"
+  },
+  {
+    id: "20",
+    user_url:
+      "https://i.pinimg.com/originals/9b/31/21/9b3121caca953e05b28d8bf891d7b5df.png",
+    user_name: "Zoe Djukic",
+    user_password: "password",
+    user_email: "ZoeDjukic@rockingit.com",
+    user_number: "555-234-6789",
+    user_community: "NoDa"
   }
 ];
 const eventsData = [

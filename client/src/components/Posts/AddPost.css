@@ -1,8 +1,9 @@
 .md-form .prefix.active {
   color: orange;
 }
-.btn-default {
+.btn-secondary {
   background-color: orange !important;
+  margin-top: 25px;
 }
 
 .md-form input[type="text"]:focus:not([readonly]) + label,
@@ -18,4 +19,10 @@
 .md-form input[type="search"]:focus:not([readonly]) + label,
 .md-form textarea.md-textarea:focus:not([readonly]) + label {
   color: orange;
+}
+
+.form-check-input {
+  position: relative;
+  display: inline;
+  text-align: left;
 }
