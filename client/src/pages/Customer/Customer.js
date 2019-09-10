@@ -4,6 +4,7 @@ import ListItem from '../../components/List/ListItem'
 import { Container, Row, Col } from '../../components/Grid/grid';
 import './Customer.css';
 import API from '../../lib/API';
+import Moment from 'react-moment';
 // import API from '../../../../server/'
 
 
@@ -62,58 +63,12 @@ class Customer extends Component {
     API.Customer.update(id, this.state.name)
   }
 
-  handleBlurPhone = () => {
-    this.setState({ editingPhone: false });
-  }
-
-  handleBlurEmail = () => {
-    this.setState({ editingPhone: false });
-  }
-
-  handleBlurAddress = () => {
-    this.setState({ editingPhone: false });
-  }
-
-  handleBlurProductsUsed = () => {
-    this.setState({ editingPhone: false });
-  }
-
-  handleBlurFish = () => {
-    this.setState({ editingPhone: false });
-  }
-
-  handleBlurServiceNotes = () => {
-    this.setState({ editingPhone: false });
-  }
 
   //Field edits
   handleNameEdit = (e) => {
     this.setState({ editingName: true });
   }
 
-  handlePhoneEdit = () => {
-    this.setState({ editingPhone: true });
-  }
-
-  handleEmailEdit = () => {
-    this.setState({ editingEmail: true });
-  }
-
-  handleAddressEdit = () => {
-    this.setState({ editingAddress: true });
-  }
-
-  handleProductsUsedEdit = () => {
-    this.setState({ editingProducts_Used: true });
-  }
-
-  handleFishEdit = () => {
-    this.setState({ editingFish: true });
-  }
-
-  handleServiceNotesEdit = () => {
-    this.setState({ editingService_notes: true });
-  }
 
   renderName() {
     return
@@ -133,9 +88,9 @@ class Customer extends Component {
           <Col size="md-6">
             <List>
               <ListItem editing={this.state.editingName} className="list-group-item" onClick={(e) => this.handleNameEdit(e)} onBlur={() => this.handleBlurName(this.props.match.params.id)} onChange={this.handleInputChange}>Name: {customer.name}</ListItem>
-              <ListItem editing={this.state.editingPhone} className="list-group-item" onClick={this.handlePhoneEdit} onBlur={this.handleBlurPhone}>Phone: {customer.phone}</ListItem>
-              <ListItem editing={this.state.editingEmail} className="list-group-item" onClick={this.handleEmailEdit} onBlur={this.handleBlurEmail}>Email: {customer.email}</ListItem>
-              <ListItem editing={this.state.editingAddress} className="list-group-item" onClick={this.handleAddressEdit} onBlur={this.handleBlurAddress}>Address: {customer.address}</ListItem>
+              <ListItem>Phone: {customer.phone}</ListItem>
+              <ListItem>Email: {customer.email}</ListItem>
+              <ListItem>Address: {customer.address}</ListItem>
               <ListItem>Tank Type: {customer.tank_type}</ListItem>
             </List>
           </Col>
@@ -143,7 +98,7 @@ class Customer extends Component {
             <List>
               <ListItem>Tank Size: {customer.tank_size}</ListItem>
               {customer.contacted ? <ListItem>Contacted: Yes</ListItem> : <ListItem>Contacted: No</ListItem>}
-              <ListItem>Date Contacted: {customer.date_contacted}</ListItem>
+              <ListItem>Date Contacted: <Moment format="DD-MM-YYYY">{customer.date_contacted}</Moment></ListItem>
               {customer.active ? <ListItem>Active: Yes</ListItem> : <ListItem>Active: No</ListItem>}
             </List>
           </Col>
@@ -152,9 +107,9 @@ class Customer extends Component {
           <Col size="md-2"></Col>
           <Col size="md-8">
             <List className="noteList">
-              <ListItem editing={this.state.editingService_notes} className="list-group-item" onClick={this.handleServiceNoteEdit} onBlur={this.handleBlurServiceNotes}>Service Notes: {customer.service_notes}</ListItem>
-              <ListItem editing={this.state.editingFish} className="list-group-item" onClick={this.handleFishEdit} onBlur={this.handleBlurFish}>Fish: {customer.fish}</ListItem>
-              <ListItem editing={this.state.editingProducts_Used} className="list-group-item" onClick={this.handleProductsUsedEdit} onBlur={this.handleBlurProductsUsed}>Products Used: {customer.products_used}</ListItem>
+              <ListItem>Service Notes: {customer.service_notes}</ListItem>
+              <ListItem>Fish: {customer.fish}</ListItem>
+              <ListItem>Products Used: {customer.products_used}</ListItem>
               <ListItem>Message: {customer.message}</ListItem>
             </List>
           </Col>

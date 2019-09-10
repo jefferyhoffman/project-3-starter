@@ -1,4 +1,9 @@
-
+.btn-primary {
+  margin-top: 20%;
+}
+.App {
+  height: 100vh;
+}
 .spacer{
   margin-top:20%;
 }
@@ -11,4 +16,8 @@ table {
   background-color: lightgray;
   max-width: 80%;
   margin: 0 auto;
+}
+footer{
+  position: absolute;
+  bottom: 0;
 }

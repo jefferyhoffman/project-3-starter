@@ -10,6 +10,7 @@ import { Row, Col } from '../../components/Grid/grid';
 import AuthContext from '../../contexts/AuthContext';
 import '../Login/style.css';
 import './Admin.css';
+import Moment from 'react-moment';
 import { AnimationFrameScheduler } from 'rxjs/internal/scheduler/AnimationFrameScheduler';
 
 const customStyles = {
@@ -192,7 +193,7 @@ class Admin extends Component {
                 <tr key={customer._id}>
                   <th scope="row"><Link to={"/customer/" + customer._id}>{customer.name}</ Link></th>
                   {customer.contacted ? (<td>Yes</td>) : (<td>No</td>)}
-                  <td>{customer.date_contacted}</td>
+                  {customer.contacted ? (<td><Moment format="DD-MM-YYYY">{customer.date_contacted}</Moment></td>) : (<td>Need to Contact</td>)}
                   <td><button onClick={() => this.makeInactive()} className="btn btn-danger btn-sm">X</button></td>
                 </tr>
               )
