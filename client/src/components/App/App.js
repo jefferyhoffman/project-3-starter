@@ -54,7 +54,7 @@ class App extends Component {
             <Route exact path="/" component={Index} />
             <Route exact path="/UserSettings" component={UserSettings} />
             <Route exact path="/LoginPage" component={SignIn} />
-             {/* <PrivateRoute path='/secret' component={Secret} /> */}
+              {/* <PrivateRoute path='/secret' component={Secret} /> */}
               <Route component={NotFound} />
             </Switch>
         </div>
