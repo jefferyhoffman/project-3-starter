@@ -4,9 +4,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import API from '../../lib/API';
 import TokenStore from '../../lib/TokenStore';
 import AuthContext from '../../contexts/AuthContext';
-import Navigation from '../../components/Navigation/Navigation';
-import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
-import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
 import UserSettings from '../../pages/UserSettings.js';
 import Index from "../../pages/Index";
@@ -57,7 +54,7 @@ class App extends Component {
             <Route exact path="/" component={Index} />
             <Route exact path="/UserSettings" component={UserSettings} />
             <Route exact path="/LoginPage" component={SignIn} />
-              <PrivateRoute path='/secret' component={Secret} />
+             {/* <PrivateRoute path='/secret' component={Secret} /> */}
               <Route component={NotFound} />
             </Switch>
         </div>
