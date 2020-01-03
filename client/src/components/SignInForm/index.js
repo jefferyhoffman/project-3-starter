@@ -4,9 +4,6 @@ import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput, MDBBtn, M
 
 const FormPage = () => {
   return (
-    <MDBContainer>
-      <MDBRow>
-        <MDBCol md="6">
           <MDBCard>
             <MDBCardBody className="mx-4">
               <div className="text-center">
@@ -43,7 +40,7 @@ const FormPage = () => {
                   rounded
                   className="btn-block z-depth-1a"
                 >
-                  <MDBNavLink to="/UserSettings">Sign in</MDBNavLink>
+                  <MDBNavLink to="/UserDash" className="white-text">Sign in</MDBNavLink>
                 </MDBBtn>
               </div>
               <p className="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2">
@@ -80,16 +77,13 @@ const FormPage = () => {
             <MDBModalFooter className="mx-5 pt-3 mb-1">
               <p className="font-small grey-text d-flex justify-content-end">
                 Not a member?
-                <a href="#!" className="blue-text ml-1">
+                <a href="/SignupPage" className="blue-text ml-1">
 
                   Sign Up
                 </a>
               </p>
             </MDBModalFooter>
           </MDBCard>
-        </MDBCol>
-      </MDBRow>
-    </MDBContainer>
   );
 };
 
