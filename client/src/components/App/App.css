@@ -37,20 +37,18 @@
 }
 
 .parallax {
-  background-image: url("../../images/MainGrass.jpg");
-  min-height: 700px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+.parallax-1 {
+  background-image: url("../../images/MainGrass.jpg");
+  min-height: 700px;
+}
 
 .parallax-2 {
   background-image: url("../../images/elizabeth-explores-pk0du67cX4o-unsplash.jpg");
   min-height: 700px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }

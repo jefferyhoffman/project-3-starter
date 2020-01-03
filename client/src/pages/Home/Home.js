@@ -4,7 +4,11 @@ import React, { Component } from "react";
 // import MainGrass from "../../images/MainGrass.jpg";
 
 class HomePage extends Component {
+
+
   render() {
+    
+
     return (
       <div className="Home">
         <div className="container">
@@ -17,7 +21,7 @@ class HomePage extends Component {
             </div>
           </div>
         </div>
-        <div className="parallax">
+        <div className="parallax parallax-1">
           <h1>This is the best feature ever!!!</h1>
         </div>
         <div
@@ -40,7 +44,7 @@ class HomePage extends Component {
             </div>
           </div>
         </div>
-        <div className="parallax-2"></div>
+        <div className="parallax parallax-2"></div>
       </div>
     );
   }
