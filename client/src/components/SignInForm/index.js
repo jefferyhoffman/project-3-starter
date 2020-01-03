@@ -43,7 +43,7 @@ const FormPage = () => {
                   rounded
                   className="btn-block z-depth-1a"
                 >
-                  {/* <MDBNavLink to="/UserSettings">Sign in</MDBNavLink> */}
+                  <MDBNavLink to="/UserSettings">Sign in</MDBNavLink>
                 </MDBBtn>
               </div>
               <p className="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2">
