@@ -23,6 +23,10 @@
   color: #61dafb;
 }
 
+.logo {
+  animation: App-logo-spin infinite 20s linear;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -30,4 +34,23 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.parallax {
+  background-image: url("../../images/MainGrass.jpg");
+  min-height: 700px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.parallax-2 {
+  background-image: url("../../images/elizabeth-explores-pk0du67cX4o-unsplash.jpg");
+  min-height: 700px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
