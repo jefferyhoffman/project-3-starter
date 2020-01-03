@@ -1,8 +1,36 @@
-import React from "react";
+import React, { Component } from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput, MDBBtn, MDBIcon, MDBModalFooter, MDBNavLink} from 'mdbreact';
 // import "../../components/SignInForm/style.css"
+import Octicon, { Mail, Key } from '@githubprimer/octicons-react';
 
-const FormPage = () => {
+class FormPage extends Component {
+  state = {
+    email: '',
+    password: ''
+  };
+
+  handleInputChange = event => {
+    const { name, value } = event.target;
+
+    this.setState({
+      [name]: value
+    });
+    console.log(event.target.value)
+  }
+
+  handleSubmit = event => {
+    const { email, password } = this.state;
+
+    //this.props.onSubmit(email, password);
+    event.preventDefault();
+    alert("hello")
+  
+  }
+
+  render() {
+    const { email, password } = this.state;
+
+
   return (
     <MDBContainer>
       <MDBRow>
@@ -17,7 +45,11 @@ const FormPage = () => {
               <MDBInput
                 label="Your email"
                 group
+                id="email"
+                name="email"
                 type="email"
+                value={email}
+                onChange={this.handleInputChange}
                 validate
                 error="wrong"
                 success="right"
@@ -25,7 +57,11 @@ const FormPage = () => {
               <MDBInput
                 label="Your password"
                 group
+                id="password"
                 type="password"
+                name="password"
+                value={password}
+                onChange={this.handleInputChange}
                 validate
                 containerClass="mb-0"
               />
@@ -42,8 +78,9 @@ const FormPage = () => {
                   gradient="blue"
                   rounded
                   className="btn-block z-depth-1a"
+                  onClick={this.handleSubmit}
                 >
-                  <MDBNavLink to="/UserSettings">Sign in</MDBNavLink>
+                  Sign in
                 </MDBBtn>
               </div>
               <p className="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2">
@@ -91,6 +128,12 @@ const FormPage = () => {
       </MDBRow>
     </MDBContainer>
   );
-};
+
+  }
+}
+
+
+
+
 
 export default FormPage;
