@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import { MDBCol, MDBRow, MDBCard, MDBCardUp, MDBCardBody, MDBAvatar, MDBRotatingCard, MDBIcon } from "mdbreact";
+import guy from '../../images/Linus-Torvalds-2012.jpg'
+import cardTopImg from '../../images/mulitsymbols.png'
+import "./style.css"
+
 
 class UserCard extends Component {
 state = {
@@ -17,18 +21,18 @@ render() {
     <MDBRow>
       <MDBCol style={{ minHeight: '26rem' }}>
         <MDBRotatingCard flipped={this.state.flipped} className="text-center h-100 w-100" style={colStyle}>
-          <MDBCard className="face front">
+          <MDBCard className="face front shadow-lg">
             <MDBCardUp>
-              <img className="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/photo7.jpg" alt="" />
+              <img className="card-img-top" src={cardTopImg} alt="" />
             </MDBCardUp>
             <MDBAvatar className="mx-auto white" circle>
-              <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg" alt="" className="rounded-circle" />
+
+              <img src={guy} alt="" className="rounded-circle" />
             </MDBAvatar>
             <MDBCardBody>
               <h4 className="font-weight-bold mb-3">Marie Johnson</h4>
-              <p className="font-weight-bold blue-text">Web developer</p>
-              <a href="#!" className="rotate-btn" data-card="card-1" onClick={this.handleFlipping}>
-                <MDBIcon icon="redo" /> Click here to rotate
+              <a href="#!" className="rotate-btn ColorForRotate" data-card="card-1" onClick={this.handleFlipping}>
+                <MDBIcon icon="redo" />
               </a>
             </MDBCardBody>
           </MDBCard>

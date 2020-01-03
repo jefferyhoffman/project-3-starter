@@ -1,7 +1,7 @@
 import React from 'react';
 import { MDBIcon, MDBSideNavCat, MDBSideNavNav, MDBSideNav, MDBSideNavLink, MDBContainer, MDBRow, MDBBtn } from 'mdbreact';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import UserSettings from '../../pages/UserSettings.js'
+import UserDash from '../../pages/UserDash/UserDash.js/index.js'
 
 class SideNavPage extends React.Component {
   state = {
@@ -59,7 +59,7 @@ class SideNavPage extends React.Component {
                 icon="far fa-user"
               >
                 <MDBSideNavLink>Saved Cards</MDBSideNavLink>
-                <MDBSideNavLink to='/UserSettings' >Settings/Dash</MDBSideNavLink>
+                <MDBSideNavLink to='/UserDash' >Settings/Dash</MDBSideNavLink>
               </MDBSideNavCat>
               <MDBSideNavCat
                 name="Instruction"
