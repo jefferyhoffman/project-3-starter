@@ -7,6 +7,7 @@ import UserDash from '../../pages/UserDash/UserDash';
 import Index from "../../pages/Index";
 import SignIn from "../../pages/LoginPage/LoginPage";
 import Studio from "../../pages/Studio/index"
+import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
 
 import './App.css';
 

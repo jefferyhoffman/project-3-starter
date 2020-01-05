@@ -35,7 +35,7 @@ class SignIn extends Component {
                             </MDBCol>
                             <MDBCol>
                                 <MDBCol>
-                                    <FormPage />
+                                    <FormPage onSubmit={this.handleSubmit} />
                                     <br/>
                                     <br/>
                                     <br/>
