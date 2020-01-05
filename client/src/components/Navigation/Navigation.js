@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import AuthContext from '../../contexts/AuthContext';
 import AuthDropdown from '../../components/AuthDropdown/AuthDropdown';
-import logo from "../../images/logo.svg"
+import logo from "../../images/transaparentlogo.png"
 
 class Navigation extends Component {
   static contextType = AuthContext;
