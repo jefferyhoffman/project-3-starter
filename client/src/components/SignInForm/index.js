@@ -24,9 +24,6 @@ class FormPage extends Component {
     const { email, password } = this.state;
     event.preventDefault();
 
-<<<<<<< HEAD
-    // this.props.onSubmit(email, password);
-=======
   }
 
   showPassword = event => {
@@ -40,7 +37,6 @@ class FormPage extends Component {
       passwordState: "password",
       linkText: "Show Password"
     })}
->>>>>>> 6a88317b180cbdeb56bfa2fac73fc81fcbc56a8e
   }
 
   render() {
