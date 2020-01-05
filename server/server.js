@@ -19,7 +19,7 @@ const mongoose = require('mongoose');
 const { passport } = require('./lib/passport');
 
 //-- Constants ---------------------------------------------------------------
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 8080;
 const LOG_MODE = process.env.NODE_ENV === 'production' ? 'common' : 'dev';
 
 //-- Express -----------------------------------------------------------------
