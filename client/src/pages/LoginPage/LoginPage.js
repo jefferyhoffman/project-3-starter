@@ -5,7 +5,7 @@ import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 
 function SignIn() {
     return (
-        <div className="mainPageColor">
+        <div className="mainPageColor"> 
             <React.Fragment>
                 <br />
                 <MDBContainer>
@@ -17,11 +17,6 @@ function SignIn() {
                         <MDBCol>
                             <MDBCol>
                                 <FormPage />
-                                <br/>
-                                <br/>
-                                <br/>
-                                <br/>
-                                <br/>
                             </MDBCol>
                         </MDBCol>
                     </MDBRow>

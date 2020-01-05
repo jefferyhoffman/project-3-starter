@@ -3,11 +3,12 @@ import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBIcon, MDBInput } from 'mdbreac
 
 const NewCardForm = () => {
     return (
-            <MDBRow>
+        <React.Fragment>
+                        <MDBRow>
                 <MDBCol>
                     <form>
                         <p className="h5 text-center mb-4">Create a New Card</p>
-                        <div className="grey-text">
+                        <div className="grey-text text-left">
                             <MDBInput
                                 icon="user"
                                 label="Your name"
@@ -50,6 +51,8 @@ const NewCardForm = () => {
                     </form>
                 </MDBCol>
             </MDBRow>
+
+        </React.Fragment>
     );
 };
 

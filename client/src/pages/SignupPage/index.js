@@ -1,9 +1,9 @@
 import React from "react";
-import FormPage from "../../components/SignInForm";
+import SignupForm from "../../components/SignupForm"
 import "./style.css"
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 
-function SignIn() {
+function Signup() {
     return (
         <div className="mainPageColor">
             <React.Fragment>
@@ -16,12 +16,7 @@ function SignIn() {
                         </MDBCol>
                         <MDBCol>
                             <MDBCol>
-                                <FormPage />
-                                <br/>
-                                <br/>
-                                <br/>
-                                <br/>
-                                <br/>
+                                <SignupForm />
                             </MDBCol>
                         </MDBCol>
                     </MDBRow>
@@ -32,4 +27,4 @@ function SignIn() {
     );
 }
 
-export default SignIn;
+export default Signup;
