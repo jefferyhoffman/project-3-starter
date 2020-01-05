@@ -3,7 +3,6 @@ import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBIcon, MDBInput } from 'mdbreac
 
 const NewCardForm = () => {
     return (
-        <MDBContainer>
             <MDBRow>
                 <MDBCol>
                     <form>
@@ -51,7 +50,6 @@ const NewCardForm = () => {
                     </form>
                 </MDBCol>
             </MDBRow>
-        </MDBContainer>
     );
 };
 
