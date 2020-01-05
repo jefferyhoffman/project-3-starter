@@ -1,6 +1,7 @@
 import React from 'react';
 import { MDBContainer, MDBRow, MDBCol, MDBNavLink } from "mdbreact";
 import BasicCard from "../../components/BasicCard/Card"
+import NewCardForm from "../../components/NewCardForm/NewCardForm.js"
 
 
 
@@ -10,7 +11,7 @@ function Studio(){
         <React.Fragment>
                 <MDBRow>
                 <MDBCol>
-                    <BasicCard/>
+                    <NewCardForm />
                 </MDBCol>
                 </MDBRow> 
         </React.Fragment>
