@@ -23,7 +23,6 @@ function UserDash() {
                             <br/>
                             <br/>
                             <br/>
-                            <br/>
                             <div className="text-left sideNav">
                             <MDBNavLink to="/Studio"><h3>Design Studio</h3></MDBNavLink>
                             <br/>
