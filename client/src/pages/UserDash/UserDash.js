@@ -1,7 +1,7 @@
 import React from 'react';
 import UserCard from '../../components/UserCard/UserCard.js';
 import './style.css'
-import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
+import { MDBContainer, MDBRow, MDBCol, MDBNavLink } from "mdbreact";
 
 function UserDash() {
     return (
@@ -24,27 +24,17 @@ function UserDash() {
                             <br/>
                             <br/>
                             <br/>
-                            <br/>
                             <div className="text-left sideNav">
-                            <h3>Design Studio</h3>
+                            <MDBNavLink to="/Studio"><h3>Design Studio</h3></MDBNavLink>
                             <br/>
-                            <h3>Saved Designs</h3>
+                            <MDBNavLink to="/Studio"><h3>Saved Designs</h3></MDBNavLink>
                             <br/>
-                            <h3>Profile</h3>
+                            <MDBNavLink to="/Studio"><h3>Profile</h3></MDBNavLink>
                             <br/>
-                            <h3>Tutorial</h3>
+                            <MDBNavLink to="/Studio"><h3>Tutorial</h3></MDBNavLink>
                             </div>
                         </MDBCol>
                     </MDBRow>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
                 </MDBContainer>
             </React.Fragment>
 
