@@ -1,20 +1,53 @@
-import React from "react";
+import React, { Component } from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput, MDBBtn, MDBIcon, MDBModalFooter, MDBNavLink} from 'mdbreact';
 // import "../../components/SignInForm/style.css"
+import Octicon, { Mail, Key } from '@githubprimer/octicons-react';
 
-const FormPage = () => {
+class FormPage extends Component {
+  state = {
+    email: '',
+    password: ''
+  };
+
+  handleInputChange = event => {
+    const { name, value } = event.target;
+
+    this.setState({
+      [name]: value
+    });
+    console.log(event.target.value)
+  }
+
+  handleSubmit = event => {
+    const { email, password } = this.state;
+
+    this.props.onSubmit(email, password);
+    event.preventDefault();
+  
+  }
+
+  render() {
+    const { email, password } = this.state;
+
+
   return (
           <MDBCard>
+            <form onSubmit={this.handleSubmit}>
             <MDBCardBody className="mx-4">
               <div className="text-center">
                 <h3 className="dark-grey-text mb-5">
                   <strong>Sign in</strong>
                 </h3>
               </div>
+              
               <MDBInput
                 label="Your email"
                 group
+                id="email"
+                name="email"
                 type="email"
+                value={email}
+                onChange={this.handleInputChange}
                 validate
                 error="wrong"
                 success="right"
@@ -22,7 +55,11 @@ const FormPage = () => {
               <MDBInput
                 label="Your password"
                 group
+                id="password"
                 type="password"
+                name="password"
+                value={password}
+                onChange={this.handleInputChange}
                 validate
                 containerClass="mb-0"
               />
@@ -39,6 +76,7 @@ const FormPage = () => {
                   gradient="blue"
                   rounded
                   className="btn-block z-depth-1a"
+                  onClick={this.handleSubmit}
                 >
                   <MDBNavLink to="/UserDash" className="white-text">Sign in</MDBNavLink>
                 </MDBBtn>
@@ -72,8 +110,10 @@ const FormPage = () => {
                 >
                   <MDBIcon fab icon="google-plus-g" className="blue-text" />
                 </MDBBtn>
+              
               </div>
             </MDBCardBody>
+            </form>
             <MDBModalFooter className="mx-5 pt-3 mb-1">
               <p className="font-small grey-text d-flex justify-content-end">
                 Not a member?
@@ -85,6 +125,12 @@ const FormPage = () => {
             </MDBModalFooter>
           </MDBCard>
   );
-};
+
+  }
+}
+
+
+
+
 
 export default FormPage;

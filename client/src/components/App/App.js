@@ -3,8 +3,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import API from '../../lib/API';
 import TokenStore from '../../lib/TokenStore';
-import AuthContext from '../../contexts/AuthContext';
-import NotFound from '../../pages/NotFound/NotFound';
 import UserDash from '../../pages/UserDash/UserDash';
 import Index from "../../pages/Index";
 import SignIn from "../../pages/LoginPage/LoginPage";
@@ -48,7 +46,6 @@ class App extends Component {
 
   render() {
     return (
-      <AuthContext.Provider value={this.state.auth}>
         <div className='App'>
             <Switch>
             <Route exact path="/" component={Index} />
@@ -56,11 +53,8 @@ class App extends Component {
             <Route exact path="/LoginPage" component={SignIn} />
             <Route exact path="/SignupPage" component={SignIn}/>
             <Route exact path="/Studio" component={Studio}/>
-              {/* <PrivateRoute path='/secret' component={Secret} /> */}
-              <Route component={NotFound} />
             </Switch>
         </div>
-      </AuthContext.Provider>
     );
   }
 }
