@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import { Link, Redirect } from 'react-router-dom';
 import FormPage from "../../components/SignInForm";
 import "./LoginPage.css"
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
-import { Link, Redirect } from 'react-router-dom';
+
 
 
 class SignIn extends Component {
@@ -50,7 +51,7 @@ class SignIn extends Component {
       }
   
       return (
-        <div className="mainPageColor">
+        <div className="mainPageColor"> 
             <React.Fragment>
                 <br />
                 <MDBContainer>
@@ -62,11 +63,6 @@ class SignIn extends Component {
                         <MDBCol>
                             <MDBCol>
                                 <FormPage onSubmit={this.handleSubmit} />
-                                <br/>
-                                <br/>
-                                <br/>
-                                <br/>
-                                <br/>
                             </MDBCol>
                         </MDBCol>
                     </MDBRow>
@@ -75,11 +71,8 @@ class SignIn extends Component {
         </div>
 
     );
-
     }
   }
-
-
 
 
 

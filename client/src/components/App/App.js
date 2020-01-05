@@ -7,7 +7,11 @@ import UserDash from '../../pages/UserDash/UserDash';
 import Index from "../../pages/Index";
 import SignIn from "../../pages/LoginPage/LoginPage";
 import Studio from "../../pages/Studio/index"
-import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
+import Signup from '../../pages/SignupPage/index';
+
+
+//import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
+
 
 import './App.css';
 
@@ -52,7 +56,7 @@ class App extends Component {
             <Route exact path="/" component={Index} />
             <Route exact path="/UserDash" component={UserDash} />
             <Route exact path="/LoginPage" component={SignIn} />
-            <Route exact path="/SignupPage" component={SignIn}/>
+            <Route exact path="/SignupPage" component={Signup}/>
             <Route exact path="/Studio" component={Studio}/>
             </Switch>
         </div>
