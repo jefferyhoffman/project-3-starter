@@ -1,9 +1,27 @@
-import React from "react";
+import React, { Component } from 'react';
 import SignupForm from "../../components/SignupForm"
 import "./style.css"
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
+import API from '../../lib/API';
 
-function Signup(){
+
+class Signup extends Component {
+    state = {
+      error: ""
+    }
+  
+    handleSubmit = (email, password, confirm) => {
+      if (password !== confirm) {
+        return this.setState({ error: "Passwords do not match." });
+      }
+  
+      API.Users.create(email, password)
+        .then(response => response.data)
+        .then(user => console.log(user))
+        .catch(err => this.setState({ error: err.message }));
+    }
+  
+    render() {
         return (
             <div className="mainPageColor"> 
             <React.Fragment>
@@ -16,7 +34,7 @@ function Signup(){
                         </MDBCol>
                         <MDBCol>
                             <MDBCol>
-                                <SignupForm/>
+                                <SignupForm onSubmit={this.handleSubmit}/>
                             </MDBCol>
                         </MDBCol>
                     </MDBRow>
@@ -25,6 +43,11 @@ function Signup(){
         </div>
           )
     }
+  }
+
+
+ 
+    
     
   
 

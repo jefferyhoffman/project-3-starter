@@ -9,6 +9,10 @@ import SignIn from "../../pages/LoginPage/LoginPage";
 import Studio from "../../pages/Studio/index"
 import Signup from '../../pages/SignupPage/index';
 
+
+//import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
+
+
 import './App.css';
 
 class App extends Component {

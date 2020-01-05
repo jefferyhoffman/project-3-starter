@@ -1,10 +1,56 @@
-import React from "react";
+import React, { Component } from "react";
+import { Link, Redirect } from 'react-router-dom';
 import FormPage from "../../components/SignInForm";
 import "./LoginPage.css"
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 
-function SignIn() {
-    return (
+import API from '../../lib/API';
+import AuthContext from '../../contexts/AuthContext';
+
+
+
+class SignIn extends Component {
+    static contextType = AuthContext;
+  
+    state = {
+      redirectToReferrer: false,
+      error: ""
+    }
+  
+    handleSubmit = (email, password) => {
+      API.Users.login(email, password)
+        .then(response => response.data)
+        .then(({ user, token }) => {
+          this.context.onLogin(user, token);
+          this.setState({ redirectToReferrer: true, error: "" });
+        })
+        .catch(err => {
+          let message;
+  
+          switch (err.response.status) {
+            case 401:
+              message = 'Sorry, that email/password combination is not valid. Please try again.';
+              break;
+            case 500:
+              message = 'Server error. Please try again later.';
+              break;
+            default:
+              message = 'Unknown error.';
+          }
+  
+          this.setState({ error: message });
+        });
+    }
+  
+    render() {
+      const { from } = this.props.location.state || { from: { pathname: "/secret" } };
+      const { redirectToReferrer } = this.state;
+  
+      if (redirectToReferrer) {
+        return <Redirect to={from} />;
+      }
+  
+      return (
         <div className="mainPageColor"> 
             <React.Fragment>
                 <br />
@@ -16,7 +62,7 @@ function SignIn() {
                         </MDBCol>
                         <MDBCol>
                             <MDBCol>
-                                <FormPage />
+                                <FormPage onSubmit={this.handleSubmit} />
                             </MDBCol>
                         </MDBCol>
                     </MDBRow>
@@ -25,6 +71,9 @@ function SignIn() {
         </div>
 
     );
-}
+    }
+  }
+
+
 
 export default SignIn;
