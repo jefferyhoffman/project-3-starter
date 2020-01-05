@@ -5,10 +5,9 @@ import API from '../../lib/API';
 import TokenStore from '../../lib/TokenStore';
 import AuthContext from '../../contexts/AuthContext';
 import NotFound from '../../pages/NotFound/NotFound';
-import UserSettings from '../../pages/UserSettings.js';
+import UserDash from '../../pages/UserDash/UserDash';
 import Index from "../../pages/Index";
-import SignIn from "../../pages/LoginPage";
-
+import SignIn from "../../pages/LoginPage/LoginPage";
 
 import './App.css';
 
@@ -52,9 +51,10 @@ class App extends Component {
         <div className='App'>
             <Switch>
             <Route exact path="/" component={Index} />
-            <Route exact path="/UserSettings" component={UserSettings} />
+            <Route exact path="/UserDash" component={UserDash} />
             <Route exact path="/LoginPage" component={SignIn} />
-             {/* <PrivateRoute path='/secret' component={Secret} /> */}
+            <Route exact path="/SignupPage" component={SignIn}/>
+              {/* <PrivateRoute path='/secret' component={Secret} /> */}
               <Route component={NotFound} />
             </Switch>
         </div>
