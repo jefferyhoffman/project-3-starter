@@ -8,6 +8,7 @@ import NotFound from '../../pages/NotFound/NotFound';
 import UserDash from '../../pages/UserDash/UserDash';
 import Index from "../../pages/Index";
 import SignIn from "../../pages/LoginPage/LoginPage";
+import Studio from "../../pages/Studio/index"
 
 import './App.css';
 
@@ -54,6 +55,7 @@ class App extends Component {
             <Route exact path="/UserDash" component={UserDash} />
             <Route exact path="/LoginPage" component={SignIn} />
             <Route exact path="/SignupPage" component={SignIn}/>
+            <Route exact path="/Studio" component={Studio}/>
               {/* <PrivateRoute path='/secret' component={Secret} /> */}
               <Route component={NotFound} />
             </Switch>
