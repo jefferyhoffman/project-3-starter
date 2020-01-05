@@ -10,6 +10,14 @@ import Index from "../../pages/Index";
 import SignIn from "../../pages/LoginPage/LoginPage";
 import Studio from "../../pages/Studio/index"
 
+import Navigation from '../../components/Navigation/Navigation';
+import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
+import Home from '../../pages/Home/Home';
+import Login from '../../pages/Login/Login';
+import Register from '../../pages/Register/Register';
+import Secret from '../../pages/Secret/Secret';
+import NotFound from '../../pages/NotFound/NotFound';
+
 import './App.css';
 
 class App extends Component {
@@ -56,7 +64,7 @@ class App extends Component {
             <Route exact path="/LoginPage" component={SignIn} />
             <Route exact path="/SignupPage" component={SignIn}/>
             <Route exact path="/Studio" component={Studio}/>
-              {/* <PrivateRoute path='/secret' component={Secret} /> */}
+            <PrivateRoute path='/secret' component={Secret} />
               <Route component={NotFound} />
             </Switch>
         </div>
