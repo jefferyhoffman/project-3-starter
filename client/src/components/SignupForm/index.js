@@ -5,6 +5,7 @@ class SignupForm extends Component {
   state = {
     password: "",
     email: "",
+    passwordConfirm: "",
     passwordState: "password",
     linkText: "Show Password"
   };
@@ -21,12 +22,32 @@ class SignupForm extends Component {
       linkText: "Show Password"
     })}
   }
+  
+  handleInputChange = event => {
+    const { name, value } = event.target;
+
+    this.setState({
+      [name]: value
+    });
+  }
+
+  handleSubmit = event => {
+    const { email, password, passwordConfirm } = this.state;
+    
+    this.props.onSubmit(email, password, passwordConfirm);
+    console.log(email, password);
+    event.preventDefault();
+  }
+
+
   render() {
+    const { email, password, passwordConfirm } = this.state;
     return (
       <MDBContainer>
         <MDBRow>
           <MDBCol>
             <MDBCard>
+              <form onSubmit={this.handleSubmit}>
               <MDBCardBody className="mx-4">
                 <div className="text-center">
                   <h3 className="dark-grey-text mb-5">
@@ -40,6 +61,10 @@ class SignupForm extends Component {
                   validate
                   error="wrong"
                   success="right"
+                  onChange={this.handleInputChange}
+                  value={email}
+                  name='email'
+                  id="email"
                 />
                 <MDBInput
                   label="Your password"
@@ -47,18 +72,36 @@ class SignupForm extends Component {
                   type={this.state.passwordState}
                   validate
                   containerClass="mb-0"
+                  id='password'
+                  type='password'
+                  name='password'
+                  value={password}
+                  onChange={this.handleInputChange}
                 />
+                <MDBInput 
+                  label="Your password"
+                  group
+                  type={this.state.passwordState}
+                  validate
+                  containerClass="mb-0"
+                  id='passwordConfirm'
+                  type={this.state.passwordState}
+                  name='passwordConfirm'
+                  value={password}
+                  onChange={this.handleInputChange}
+                />
+                
                 <p className="font-small blue-text d-flex justify-content-end pb-3">
                   <a className="blue-text ml-1" onClick={this.showPassword}>{this.state.linkText}</a>
                 </p>
                 <div className="text-center mb-3">
                   <MDBBtn
                     type="button"
-                    gradient="peach"
+                    gradient="purple"
                     rounded
                     className="btn-block z-depth-1a"
                   >
-                    <MDBNavLink to="/UserDash" className="white-text">Sign Up</MDBNavLink>
+                    Sign Up
 
                   </MDBBtn>
                 </div>
@@ -93,6 +136,7 @@ class SignupForm extends Component {
                 </MDBBtn>
               </div>
             </MDBCardBody>
+            </form>
           </MDBCard>
         </MDBCol>
       </MDBRow>

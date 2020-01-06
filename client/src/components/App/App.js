@@ -1,21 +1,25 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+
+import AuthContext from '../../contexts/AuthContext';
+
 import API from '../../lib/API';
 import TokenStore from '../../lib/TokenStore';
 import UserDash from '../../pages/UserDash/UserDash';
 import Index from "../../pages/Index";
 import SignIn from "../../pages/LoginPage/LoginPage";
+import SignUp from "../../pages/SignupPage/index";
 import Studio from "../../pages/Studio/index"
-import Signup from '../../pages/SignupPage/index';
 import Results from '../../pages/Results'
+import Finale from '../../pages/Final'
 
 
 //import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
 
+import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
 
 import './App.css';
-import PrivateRoute from '../PrivateRoute/PrivateRoute';
 
 class App extends Component {
   constructor(props) {
@@ -53,18 +57,20 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
-          <div className='App'>
+      <AuthContext.Provider value={this.state.auth}>
+        <div className='App'>
             <Switch>
             <Route exact path="/" component={Index} />
             <Route exact path="/UserDash" component={UserDash} />
             <Route exact path="/LoginPage" component={SignIn} />
-            <Route exact path="/SignupPage" component={Signup}/>
+            <Route exact path="/SignupPage" component={SignUp}/>
             <Route exact path="/Studio" component={Studio}/>
             <Route exact path="/Results" component={Results}/>
+            <Route exact path="/Final" component={Finale}/>
             </Switch>
         </div>
-      </Router>
+      </AuthContext.Provider>
+
     );
   }
 }

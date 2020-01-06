@@ -1,11 +1,15 @@
 import React from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn, MDBCard, MDBCardBody } from 'mdbreact';
 
+const createCard = e => {
+    console.log("hi")
+}
+
 const NewCardForm = () => {
     return (
         <MDBContainer>
             <MDBRow>
-                <MDBCol md="6">
+                <MDBCol>
                     <MDBCard>
                         <MDBCardBody>
                             <form>
@@ -56,9 +60,9 @@ const NewCardForm = () => {
                                     />
                                 </div>
                                 <div className="text-center py-4 mt-3">
-                                    <MDBBtn color="orange" type="submit">
-                                        Register
-                  </MDBBtn>
+                                    <MDBBtn color="orange" type="submit" onSubmit={createCard()}>
+                                        Create Card
+                                </MDBBtn>
                                 </div>
                             </form>
                         </MDBCardBody>
