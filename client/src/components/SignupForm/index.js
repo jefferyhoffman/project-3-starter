@@ -21,6 +21,7 @@ class SignupForm extends Component {
       linkText: "Show Password"
     })}
   }
+  
   handleInputChange = event => {
     const { name, value } = event.target;
 
