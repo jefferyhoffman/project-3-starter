@@ -4,29 +4,28 @@ import {MDBCard, MDBCardBody, MDBInput, MDBBtn, MDBIcon, MDBModalFooter, MDBNavL
 class FormPage extends Component {
   state = {
     email: '',
-    password: ''
+    password: '',
+    passwordState: 'password',
+    linkText: 'Show Password'
   };
 
   handleInputChange = event => {
     const { name, value } = event.target;
-
     this.setState({
       [name]: value
     });
     console.log(event.target.value)
-  }
+  };
 
   handleSubmit = event => {
     const { email, password } = this.state;
 
     this.props.onSubmit(email, password);
     event.preventDefault();
-  
-  }
+  };
 
   render() {
     const { email, password } = this.state;
-
 
     return (
       <MDBCard>
@@ -62,12 +61,15 @@ class FormPage extends Component {
               containerClass="mb-0"
             />
             <p className="font-small blue-text d-flex justify-content-end pb-3">
+              <a className="blue-text ml-1">{this.state.linkText}</a>
+            </p>
+            {/* <p className="font-small blue-text d-flex justify-content-end pb-3">
               Forgot
                 <a href="#!" className="blue-text ml-1">
 
                   Password?
                 </a>
-            </p>
+            </p> */}
             <div className="text-center mb-3">
               <MDBBtn
                 type="submit"
