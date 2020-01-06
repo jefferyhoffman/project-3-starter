@@ -38,7 +38,7 @@ const SignupForm = () => {
               <div className="text-center mb-3">
                 <MDBBtn
                   type="button"
-                  gradient="peach"
+                  gradient="purple"
                   rounded
                   className="btn-block z-depth-1a"
                 >
@@ -57,7 +57,7 @@ const SignupForm = () => {
                   rounded
                   className="mr-md-3 z-depth-1a"
                 >
-                  <MDBIcon fab icon="facebook-f" className="green-text text-center" />
+                  <MDBIcon fab icon="facebook-f" className="red-text text-center" />
                 </MDBBtn>
                 <MDBBtn
                   type="button"
@@ -65,7 +65,7 @@ const SignupForm = () => {
                   rounded
                   className="mr-md-3 z-depth-1a"
                 >
-                  <MDBIcon fab icon="twitter" className="blue-text" />
+                  <MDBIcon fab icon="twitter" className="pink-text" />
                 </MDBBtn>
                 <MDBBtn
                   type="button"
@@ -73,7 +73,7 @@ const SignupForm = () => {
                   rounded
                   className="z-depth-1a"
                 >
-                  <MDBIcon fab icon="google-plus-g" className="blue-text" />
+                  <MDBIcon fab icon="google-plus-g" className="purple-text" />
                 </MDBBtn>
               </div>
             </MDBCardBody>
