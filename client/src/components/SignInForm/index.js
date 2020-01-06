@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput, MDBBtn, MDBIcon, MDBModalFooter, MDBNavLink } from 'mdbreact';
-// import "../../components/SignInForm/style.css"
-import Octicon, { Mail, Key } from '@githubprimer/octicons-react';
+import {MDBCard, MDBCardBody, MDBInput, MDBBtn, MDBIcon, MDBModalFooter, MDBNavLink } from 'mdbreact';
 
 class FormPage extends Component {
   state = {
@@ -78,9 +76,6 @@ class FormPage extends Component {
               containerClass="mb-0"
             />
             <p className="font-small blue-text d-flex justify-content-end pb-3">
-              <a className="blue-text ml-1" onClick={this.showPassword}>{this.state.linkText}</a>
-            </p>
-            <p className="font-small blue-text d-flex justify-content-end pb-3">
               Forgot
                 <a href="#!" className="blue-text ml-1">
 
@@ -90,7 +85,7 @@ class FormPage extends Component {
             <div className="text-center mb-3">
               <MDBBtn
                 type="button"
-                gradient="blue"
+                gradient="purple"
                 rounded
                 className="btn-block z-depth-1a"
                 onClick={this.handleSubmit}
@@ -109,7 +104,7 @@ class FormPage extends Component {
                 rounded
                 className="mr-md-3 z-depth-1a"
               >
-                <MDBIcon fab icon="facebook-f" className="blue-text text-center" />
+                <MDBIcon fab icon="facebook-f" className=" red-text text-center"/>
               </MDBBtn>
               <MDBBtn
                 type="button"
@@ -117,7 +112,7 @@ class FormPage extends Component {
                 rounded
                 className="mr-md-3 z-depth-1a"
               >
-                <MDBIcon fab icon="twitter" className="blue-text" />
+                <MDBIcon fab icon="twitter" className="pink-text" />
               </MDBBtn>
               <MDBBtn
                 type="button"
@@ -125,7 +120,7 @@ class FormPage extends Component {
                 rounded
                 className="z-depth-1a"
               >
-                <MDBIcon fab icon="google-plus-g" className="blue-text" />
+                <MDBIcon fab icon="google-plus-g" className="purple-text" />
               </MDBBtn>
 
             </div>

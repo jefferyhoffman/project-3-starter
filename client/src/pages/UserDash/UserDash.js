@@ -33,7 +33,7 @@ class UserDash extends Component {
                 <React.Fragment>
                     <br />
                     <strong>
-                    <h1 className="text-left">DashBoard</h1>
+                    <h1 className="text-left dashHeader">DashBoard</h1>
                     </strong>
                     <MDBContainer>
                         <br />
@@ -48,13 +48,13 @@ class UserDash extends Component {
                                 <br/>
                                 <br/>
                                 <div className="text-left sideNav">
-                                <MDBNavLink to="/Studio"><h3>Design Studio</h3></MDBNavLink>
+                                <MDBNavLink to="/Studio"><h3 className="sideNavText">Design Studio</h3></MDBNavLink>
                                 <br/>
-                                <MDBNavLink to="/Studio"><h3>Saved Designs</h3></MDBNavLink>
+                                <MDBNavLink to="/Studio"><h3 className="sideNavText">Saved Designs</h3></MDBNavLink>
                                 <br/>
-                                <MDBNavLink to="/Studio"><h3>Profile</h3></MDBNavLink>
+                                <MDBNavLink to="/Studio"><h3 className="sideNavText">Profile</h3></MDBNavLink>
                                 <br/>
-                                <MDBNavLink to="/Studio"><h3>Tutorial</h3></MDBNavLink>
+                                <MDBNavLink to="/Studio"><h3 className="sideNavText">Tutorial</h3></MDBNavLink>
                                 </div>
                             </MDBCol>
                         </MDBRow>

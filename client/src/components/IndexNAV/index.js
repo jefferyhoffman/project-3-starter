@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBDropdown,
 MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon } from "mdbreact";
-import { BrowserRouter as Router } from 'react-router-dom';
-import NavbarPage from "../TopNav/Nav";
 
 class IndexNAV extends Component {
 state = {

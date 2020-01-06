@@ -8,6 +8,7 @@ import Index from "../../pages/Index";
 import SignIn from "../../pages/LoginPage/LoginPage";
 import Studio from "../../pages/Studio/index"
 import Signup from '../../pages/SignupPage/index';
+import Results from '../../pages/Results'
 
 
 //import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
@@ -52,15 +53,18 @@ class App extends Component {
 
   render() {
     return (
-        <div className='App'>
+      <Router>
+          <div className='App'>
             <Switch>
             <Route exact path="/" component={Index} />
             <PrivateRoute exact path="/UserDash" component={UserDash} />
             <Route exact path="/LoginPage" component={SignIn} />
             <Route exact path="/SignupPage" component={Signup}/>
             <Route exact path="/Studio" component={Studio}/>
+            <Route exact path="/Results" component={Results}/>
             </Switch>
         </div>
+      </Router>
     );
   }
 }
