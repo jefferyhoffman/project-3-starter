@@ -4,9 +4,7 @@ import {MDBCard, MDBCardBody, MDBInput, MDBBtn, MDBIcon, MDBModalFooter, MDBNavL
 class FormPage extends Component {
   state = {
     email: '',
-    password: '',
-    passwordState: 'password',
-    linkText: 'Show Password'
+    password: ''
   };
 
   handleInputChange = event => {
@@ -20,22 +18,10 @@ class FormPage extends Component {
 
   handleSubmit = event => {
     const { email, password } = this.state;
+
     this.props.onSubmit(email, password);
     event.preventDefault();
-
-  }
-
-  showPassword = event => {
-    event.preventDefault();
-    if (this.state.passwordState === "password") {
-      this.setState({
-        passwordState: "text",
-        linkText: "Hide Password"
-      })
-    } else {this.setState({
-      passwordState: "password",
-      linkText: "Show Password"
-    })}
+  
   }
 
   render() {
@@ -79,18 +65,17 @@ class FormPage extends Component {
               Forgot
                 <a href="#!" className="blue-text ml-1">
 
-                Password?
+                  Password?
                 </a>
             </p>
             <div className="text-center mb-3">
               <MDBBtn
-                type="button"
+                type="submit"
                 gradient="purple"
                 rounded
                 className="btn-block z-depth-1a"
-                onClick={this.handleSubmit}
-              >
-                <MDBNavLink to="/UserDash" className="white-text">Sign in</MDBNavLink>
+               >
+                Sign in
               </MDBBtn>
             </div>
             <p className="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2">
@@ -131,12 +116,12 @@ class FormPage extends Component {
             Not a member?
                 <a href="/SignupPage" className="blue-text ml-1">
 
-              Sign Up
+                  Sign Up
                 </a>
-          </p>
-        </MDBModalFooter>
-      </MDBCard>
-    );
+              </p>
+            </MDBModalFooter>
+          </MDBCard>
+  );
 
   }
 }
