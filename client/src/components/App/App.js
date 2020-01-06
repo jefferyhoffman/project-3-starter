@@ -10,6 +10,10 @@ import Studio from "../../pages/Studio/index"
 import Signup from '../../pages/SignupPage/index';
 import Results from '../../pages/Results'
 
+
+//import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
+
+
 import './App.css';
 
 class App extends Component {
