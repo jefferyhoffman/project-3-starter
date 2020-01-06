@@ -42,7 +42,7 @@ class Signup extends Component {
             </React.Fragment>
         </div>
           )
-    }
+    }  
   }
 
 

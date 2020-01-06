@@ -13,7 +13,7 @@ class UserDash extends Component {
       error: ""
     }
   
-    /*componentDidMount() {
+    componentDidMount() {
       API.Secrets.getAll(this.context.authToken)
         .then(response => response.data)
         .then(secrets => this.setState({ secrets }))
@@ -25,7 +25,7 @@ class UserDash extends Component {
           console.log(err);
         })
         .finally(() => this.setState({ isLoading: false }));
-    }*/
+    }
   
     render() {
         return (

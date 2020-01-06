@@ -20,6 +20,7 @@ class FormPage extends Component {
 
   handleSubmit = event => {
     const { email, password } = this.state;
+    this.props.onSubmit(email, password);
     event.preventDefault();
 
   }
