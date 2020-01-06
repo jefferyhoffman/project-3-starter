@@ -70,13 +70,12 @@ class FormPage extends Component {
             </p>
             <div className="text-center mb-3">
               <MDBBtn
-                type="button"
+                type="submit"
                 gradient="purple"
                 rounded
                 className="btn-block z-depth-1a"
-                onClick={this.handleSubmit}
-              >
-                <MDBNavLink to="/UserDash" className="white-text">Sign in</MDBNavLink>
+               >
+                Sign in
               </MDBBtn>
             </div>
             <p className="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2">
