@@ -1,0 +1,16 @@
+.navbar {
+   background-color: black;
+   height: 150px;
+   position: fixed;
+   width: 100vw;
+}
+
+.Navigation {
+    position: fixed;
+    background-color: black;
+}
+
+.logo {
+    position: relative;
+    height: 50px;
+}

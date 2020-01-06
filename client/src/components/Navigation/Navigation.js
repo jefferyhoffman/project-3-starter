@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+import './navigation.css';
 import AuthContext from '../../contexts/AuthContext';
 import AuthDropdown from '../../components/AuthDropdown/AuthDropdown';
 import logo from "../../images/transaparentlogo.png"
@@ -26,10 +27,10 @@ class Navigation extends Component {
 
     return (
       <div className='Navigation'>
-        <nav className='navbar navbar-expand-lg navbar-light bg-light mb-3'>
+        <nav className='navbar navbar-expand-lg navbar-light bg-light'>
           <Link className='navbar-brand' to='#'>
             <img className="logo" src={logo}/>
-            Landscaping
+            
             </Link>
           <button className={togglerClass} onClick={this.toggleCollapse} data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
             <span className='navbar-toggler-icon'></span>

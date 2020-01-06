@@ -7,18 +7,18 @@ class HomePage extends Component {
 
 
   render() {
-    
+
 
     return (
       <div className="Home">
         <div className="container">
           <div className="row">
-            <div className="col">
+            {/* <div className="col">
               <p>
                 Scroll Up and Down this page to see the parallax scrolling
                 effect.{" "}
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="parallax parallax-1">
@@ -27,25 +27,36 @@ class HomePage extends Component {
         <div
           style={{
             height: "400px",
-            backgroundColor: "red",
-            fontSize: "36px"
+            backgroundColor: "#ffc41f",
+            fontSize: "36px",
+            zIndex: "1000"
+
+
           }}
         >
           <div className="container">
             <div className="row">
               <div className="col">
                 <div>
-                  Scroll Up and Down this page to see the parallax scrolling
-                  effect. This div is just here to enable scrolling. Tip: Try to
-                  remove the background-attachment property to remove the
-                  scrolling effect.
+                  Our mission is to provide our clients with the highest level of quality services at fair and competitive prices.  We believe that by providing our clients with exceptional workmanship, extraordinary service and professional integrity, we’ll ensure the longevity of our company through repeat and referral business
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div className="parallax parallax-2"></div>
+
+        <div className="container">
+          <div className="row">
+            <div className="col">
+
+            </div>
+          </div>
+        </div>
+        <div className="parallax parallax-3"></div>
+
       </div>
+
     );
   }
 }
