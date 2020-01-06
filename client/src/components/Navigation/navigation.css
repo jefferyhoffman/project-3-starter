@@ -1,5 +1,5 @@
 .navbar {
-   background-color: black;
+   background-color: #ffffff;
    height: 150px;
    position: fixed;
    width: 100vw;
@@ -7,10 +7,13 @@
 
 .Navigation {
     position: fixed;
-    background-color: black;
+    background-color: #ffffff;
 }
 
 .logo {
-    position: relative;
-    height: 50px;
+    
+    height: 100px;
+    display: block;
+    justify-content: center;
+   
 }

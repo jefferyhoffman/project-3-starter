@@ -23,9 +23,7 @@
   color: #61dafb;
 }
 
-.logo {
-  /* animation: App-logo-spin infinite 20s linear; */
-}
+
 
 @keyframes App-logo-spin {
   from {
@@ -49,7 +47,7 @@
 }
 
 .parallax-2 {
-  background-image: url("../../images/elizabeth-explores-pk0du67cX4o-unsplash.jpg");
+  background-image: url("../../images/grass-cut-image2.jpg");
   min-height: 700px;
 }
 
