@@ -58,7 +58,7 @@ class SignIn extends Component {
                     <MDBRow>
                         <MDBCol className="white-text">
                             <br/>                         
-                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis earum voluptas praesentium quod dolor adipisci! Ullam autem sapiente aliquid! Maiores a itaque in odio mollitia perspiciatis corporis soluta cupiditate esse!</h3>
+                            <h3 className="loremText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis earum voluptas praesentium quod dolor adipisci! Ullam autem sapiente aliquid! Maiores a itaque in odio mollitia perspiciatis corporis soluta cupiditate esse!</h3>
                         </MDBCol>
                         <MDBCol>
                             <MDBCol>
