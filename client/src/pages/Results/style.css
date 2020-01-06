@@ -3,3 +3,7 @@
     background:  linear-gradient(120deg, #DD252E, #6D26DD);
 
 }
+
+.rowPadding {
+    padding-top: 25px;
+}
