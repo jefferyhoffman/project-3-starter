@@ -74,11 +74,7 @@ class FormPage extends Component {
               containerClass="mb-0"
             />
             <p className="font-small blue-text d-flex justify-content-end pb-3">
-<<<<<<< HEAD
-    <a className="blue-text ml-1">{this.state.linkText}</a>
-=======
               <a className="blue-text ml-1" onClick={this.showPassword}>{this.state.linkText}</a>
->>>>>>> caf4d9a60774e6a34dfda76aa29ba0264ee77b8f
             </p>
             {/* <p className="font-small blue-text d-flex justify-content-end pb-3">
               Forgot
@@ -133,20 +129,16 @@ class FormPage extends Component {
         <MDBModalFooter className="mx-5 pt-3 mb-1">
           <p className="font-small grey-text d-flex justify-content-end">
             Not a member?
-                <a href="/SignupPage" className="blue-text ml-1">
+              <a href="/SignupPage" className="blue-text ml-1">
 
-                  Sign Up
-                </a>
-              </p>
-            </MDBModalFooter>
-          </MDBCard>
+                Sign Up
+              </a>
+            </p>
+          </MDBModalFooter>
+        </MDBCard>
   );
 
   }
 }
-
-
-
-
 
 export default FormPage;
