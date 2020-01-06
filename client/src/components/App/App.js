@@ -56,7 +56,7 @@ class App extends Component {
             <Route exact path="/" component={Index} />
             <PrivateRoute exact path="/UserDash" component={UserDash} />
             <Route exact path="/LoginPage" component={SignIn} />
-            <Route exact path="/SignupPage" component={SignIn}/>
+            <Route exact path="/SignupPage" component={SignUp}/>
             <Route exact path="/Studio" component={Studio}/>
             </Switch>
         </div>
