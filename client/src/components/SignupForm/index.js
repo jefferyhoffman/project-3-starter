@@ -45,6 +45,7 @@ class SignupForm extends Component {
         <MDBRow>
           <MDBCol>
             <MDBCard>
+              <form onSubmit={this.handleSubmit}>
               <MDBCardBody className="mx-4">
                 <div className="text-center">
                   <h3 className="dark-grey-text mb-5">
@@ -80,13 +81,12 @@ class SignupForm extends Component {
                 </p>
                 <div className="text-center mb-3">
                   <MDBBtn
-                    type="button"
+                    type="submit"
                     gradient="peach"
                     rounded
                     className="btn-block z-depth-1a"
-                    onClick={this.handleSubmit}
                   >
-                    <MDBNavLink to="/UserDash" className="white-text">Sign Up</MDBNavLink>
+                    Sign Up
 
                   </MDBBtn>
                 </div>
@@ -121,6 +121,7 @@ class SignupForm extends Component {
                 </MDBBtn>
               </div>
             </MDBCardBody>
+            </form>
           </MDBCard>
         </MDBCol>
       </MDBRow>
