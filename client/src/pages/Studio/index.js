@@ -1,6 +1,5 @@
 import React from 'react';
-import { MDBContainer, MDBRow, MDBCol, MDBNavLink } from "mdbreact";
-import BasicCard from "../../components/BasicCard/Card"
+import {MDBRow, MDBCol} from "mdbreact";
 import NewCardForm from "../../components/NewCardForm/NewCardForm.js"
 
 

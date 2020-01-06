@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput, MDBBtn, MDBIcon, MDBModalFooter, MDBNavLink } from 'mdbreact';
-// import "../../components/SignInForm/style.css"
-import Octicon, { Mail, Key } from '@githubprimer/octicons-react';
+import {MDBCard, MDBCardBody, MDBInput, MDBBtn, MDBIcon, MDBModalFooter, MDBNavLink } from 'mdbreact';
 
 class FormPage extends Component {
   state = {

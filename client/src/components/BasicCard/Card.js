@@ -1,5 +1,5 @@
 import React from 'react';
-import {MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBCol } from 'mdbreact';
+import {MDBCard, MDBCardImage,MDBCol } from 'mdbreact';
 
 const BasicCard = () => {
   return (
