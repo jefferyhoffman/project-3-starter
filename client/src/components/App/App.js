@@ -14,6 +14,7 @@ import Signup from '../../pages/SignupPage/index';
 
 
 import './App.css';
+import PrivateRoute from '../PrivateRoute/PrivateRoute';
 
 class App extends Component {
   constructor(props) {
@@ -54,7 +55,7 @@ class App extends Component {
         <div className='App'>
             <Switch>
             <Route exact path="/" component={Index} />
-            <Route exact path="/UserDash" component={UserDash} />
+            <PrivateRoute exact path="/UserDash" component={UserDash} />
             <Route exact path="/LoginPage" component={SignIn} />
             <Route exact path="/SignupPage" component={Signup}/>
             <Route exact path="/Studio" component={Studio}/>

@@ -16,8 +16,9 @@ usersController.get('/me', JWTVerifier, (req, res) => {
   res.json(req.user);
 });
 
-usersController.post('/login', (req, res) => {
+usersController.post('/LoginPage', (req, res) => {
   const { email, password } = req.body;
+  console.log(email)
 
   db.User.findOne({ where: { email } })
     .then(user => {
