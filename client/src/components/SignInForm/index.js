@@ -24,7 +24,6 @@ class FormPage extends Component {
 
   handleInputChange = event => {
     const { name, value } = event.target;
-
     this.setState({
       [name]: value
     });
@@ -40,7 +39,6 @@ class FormPage extends Component {
 
   render() {
     const { email, password } = this.state;
-
 
     return (
       <MDBCard>
@@ -76,7 +74,11 @@ class FormPage extends Component {
               containerClass="mb-0"
             />
             <p className="font-small blue-text d-flex justify-content-end pb-3">
+<<<<<<< HEAD
     <a className="blue-text ml-1">{this.state.linkText}</a>
+=======
+              <a className="blue-text ml-1" onClick={this.showPassword}>{this.state.linkText}</a>
+>>>>>>> caf4d9a60774e6a34dfda76aa29ba0264ee77b8f
             </p>
             {/* <p className="font-small blue-text d-flex justify-content-end pb-3">
               Forgot
