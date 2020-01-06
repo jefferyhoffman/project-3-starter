@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import RegistrationForm from '../../components/RegistrationForm/RegistrationForm';
 import API from '../../lib/API';
 
+
 class Register extends Component {
   state = {
     error: ""
@@ -17,7 +18,11 @@ class Register extends Component {
       .then(response => response.data)
       .then(user => console.log(user))
       .catch(err => this.setState({ error: err.message }));
+
+  
   }
+
+ 
 
   render() {
     return (
