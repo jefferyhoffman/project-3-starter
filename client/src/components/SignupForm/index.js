@@ -96,8 +96,8 @@ class SignupForm extends Component {
                 </p>
                 <div className="text-center mb-3">
                   <MDBBtn
-                    type="submit"
-                    gradient="peach"
+                    type="button"
+                    gradient="purple"
                     rounded
                     className="btn-block z-depth-1a"
                   >

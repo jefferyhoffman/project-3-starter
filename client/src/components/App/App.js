@@ -11,6 +11,12 @@ import Index from "../../pages/Index";
 import SignIn from "../../pages/LoginPage/LoginPage";
 import SignUp from "../../pages/SignupPage/index";
 import Studio from "../../pages/Studio/index"
+import Results from '../../pages/Results'
+import Finale from '../../pages/Final'
+
+
+//import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
+
 import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
 
 import './App.css';
@@ -59,6 +65,8 @@ class App extends Component {
             <Route exact path="/LoginPage" component={SignIn} />
             <Route exact path="/SignupPage" component={SignUp}/>
             <Route exact path="/Studio" component={Studio}/>
+            <Route exact path="/Results" component={Results}/>
+            <Route exact path="/Final" component={Finale}/>
             </Switch>
         </div>
       </AuthContext.Provider>

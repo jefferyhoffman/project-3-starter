@@ -5,30 +5,44 @@ import './style.css'
 
 
 
-function Results(){
-    return(
+function Results() {
+    return (
         <div className="MainBodyColor">
-        <React.Fragment>
-            <h1 className="text-white">Results</h1>
-            <MDBContainer>
-                <MDBRow>
-                    <MDBCol></MDBCol>
-                    <MDBView hover zoom>
-                    <MDBCol>
-                        <br/>
-                        <BasicCard/>
-                    </MDBCol>
-                    </MDBView>
-                    <MDBCol>
-                        <br/>
-                        <BasicCard/>
-                    </MDBCol>
-                    <MDBCol></MDBCol>
-                </MDBRow>
-            </MDBContainer>
-        </React.Fragment>
+            <React.Fragment>
+                <h1 className="text-white">Choose a Template</h1>
+                <MDBContainer>
+                    <MDBRow className="rowPadding">
+                        <MDBCol></MDBCol>
+                        <MDBView hover zoom>
+                            <MDBCol>
+                                <BasicCard />
+                            </MDBCol>
+                        </MDBView>
+                        <MDBView hover zoom>
+                            <MDBCol>
+                                <BasicCard />
+                            </MDBCol>
+                        </MDBView>
+                        <MDBCol></MDBCol>
+                    </MDBRow>
+                    <MDBRow className="rowPadding">
+                        <MDBCol></MDBCol>
+                        <MDBView hover zoom>
+                            <MDBCol>
+                                <BasicCard />
+                            </MDBCol>
+                        </MDBView>
+                        <MDBView hover zoom>
+                            <MDBCol>
+                                <BasicCard />
+                            </MDBCol>
+                        </MDBView>
+                        <MDBCol></MDBCol>
+                    </MDBRow>
+                </MDBContainer>
+                <p className="text-white rowPadding">Click A card to expand the designs</p>
+            </React.Fragment>
         </div>
     )
 }
-
 export default Results;
