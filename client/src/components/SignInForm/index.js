@@ -9,22 +9,6 @@ class FormPage extends Component {
     linkText: 'Show Password'
   };
 
-  handleInputChange = event => {
-    const { name, value } = event.target;
-
-    this.setState({
-      [name]: value
-    });
-    console.log(event.target.value)
-  }
-
-  handleSubmit = event => {
-    const { email, password } = this.state;
-    this.props.onSubmit(email, password);
-    event.preventDefault();
-
-  }
-
   showPassword = event => {
     event.preventDefault();
     if (this.state.passwordState === "password") {
@@ -36,11 +20,25 @@ class FormPage extends Component {
       passwordState: "password",
       linkText: "Show Password"
     })}
-  }
+  };
+
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+    console.log(event.target.value)
+  };
+
+  handleSubmit = event => {
+    const { email, password } = this.state;
+
+    this.props.onSubmit(email, password);
+    event.preventDefault();
+  };
 
   render() {
     const { email, password } = this.state;
-
 
     return (
       <MDBCard>
@@ -76,21 +74,23 @@ class FormPage extends Component {
               containerClass="mb-0"
             />
             <p className="font-small blue-text d-flex justify-content-end pb-3">
+              <a className="blue-text ml-1" onClick={this.showPassword}>{this.state.linkText}</a>
+            </p>
+            {/* <p className="font-small blue-text d-flex justify-content-end pb-3">
               Forgot
                 <a href="#!" className="blue-text ml-1">
 
-                Password?
+                  Password?
                 </a>
-            </p>
+            </p> */}
             <div className="text-center mb-3">
               <MDBBtn
-                type="button"
+                type="submit"
                 gradient="purple"
                 rounded
                 className="btn-block z-depth-1a"
-                onClick={this.handleSubmit}
-              >
-                <MDBNavLink to="/UserDash" className="white-text">Sign in</MDBNavLink>
+               >
+                Sign in
               </MDBBtn>
             </div>
             <p className="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2">
@@ -131,12 +131,12 @@ class FormPage extends Component {
             Not a member?
                 <a href="/SignupPage" className="blue-text ml-1">
 
-              Sign Up
+                  Sign Up
                 </a>
-          </p>
-        </MDBModalFooter>
-      </MDBCard>
-    );
+              </p>
+            </MDBModalFooter>
+          </MDBCard>
+  );
 
   }
 }

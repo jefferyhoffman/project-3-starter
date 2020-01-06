@@ -21,7 +21,25 @@ class SignupForm extends Component {
       linkText: "Show Password"
     })}
   }
+  
+  handleInputChange = event => {
+    const { name, value } = event.target;
+
+    this.setState({
+      [name]: value
+    });
+  }
+
+  handleSubmit = event => {
+    const { email, password} = this.state;
+
+    this.props.onSubmit(email, password);
+    event.preventDefault();
+  }
+
+
   render() {
+    const { email, password} = this.state;
     return (
       <MDBContainer>
         <MDBRow>
@@ -40,6 +58,10 @@ class SignupForm extends Component {
                   validate
                   error="wrong"
                   success="right"
+                  onChange={this.handleInputChange}
+                  value={email}
+                  name='email'
+                  id="email"
                 />
                 <MDBInput
                   label="Your password"
@@ -47,6 +69,11 @@ class SignupForm extends Component {
                   type={this.state.passwordState}
                   validate
                   containerClass="mb-0"
+                  id='password'
+                  type='password'
+                  name='password'
+                  value={password}
+                  onChange={this.handleInputChange}
                 />
                 <p className="font-small blue-text d-flex justify-content-end pb-3">
                   <a className="blue-text ml-1" onClick={this.showPassword}>{this.state.linkText}</a>
@@ -57,6 +84,7 @@ class SignupForm extends Component {
                     gradient="purple"
                     rounded
                     className="btn-block z-depth-1a"
+                    onClick={this.handleSubmit}
                   >
                     <MDBNavLink to="/UserDash" className="white-text">Sign Up</MDBNavLink>
 

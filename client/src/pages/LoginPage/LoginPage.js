@@ -18,6 +18,7 @@ class SignIn extends Component {
     }
   
     handleSubmit = (email, password) => {
+        console.log(email, password)
       API.Users.login(email, password)
         .then(response => response.data)
         .then(({ user, token }) => {
@@ -43,7 +44,7 @@ class SignIn extends Component {
     }
   
     render() {
-      const { from } = this.props.location.state || { from: { pathname: "/secret" } };
+      const { from } = this.props.location.state || { from: { pathname: "/UserDash" } };
       const { redirectToReferrer } = this.state;
   
       if (redirectToReferrer) {
