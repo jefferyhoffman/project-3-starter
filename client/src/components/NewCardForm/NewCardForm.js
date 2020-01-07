@@ -1,5 +1,7 @@
 import React from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBInput, MDBBtn, MDBCard, MDBCardBody } from 'mdbreact';
+import "./index.css"
+
 
 const createCard = e => {
     console.log("hi")
@@ -7,7 +9,7 @@ const createCard = e => {
 
 const NewCardForm = () => {
     return (
-        <MDBContainer>
+        <MDBContainer className="NewCardForm">
             <MDBRow>
                 <MDBCol>
                     <MDBCard>

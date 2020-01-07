@@ -9,19 +9,16 @@ import "./index.css"
 
 function Studio(){
     return (
-        <div className="studioBcg">
+        
         <React.Fragment>
+        <div className="studioBcg"></div>
         <IndexNav/>
             <br/>
-            <MDBRow>
-                <MDBCol size="2"></MDBCol>
-                <MDBCol size="8" >
+           
                     <NewCardForm />
-                </MDBCol>
-                <MDBCol size="2" id="rightColumn"></MDBCol>
-                </MDBRow> 
+        
         </React.Fragment>
-        </div>
+     
     )
 }
 
