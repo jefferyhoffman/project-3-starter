@@ -34,7 +34,7 @@ render() {
               <img src={guy} alt="" className="rounded-circle" />
             </MDBAvatar>
             <MDBCardBody>
-              <h4 className="font-weight-bold mb-3">{user.email}</h4>
+              <h4 className="font-weight-bold mb-3">{ user ? user.name : "loading..." }</h4>
               <a href="#!" className="rotate-btn ColorForRotate" data-card="card-1" onClick={this.handleFlipping}>
                 <MDBIcon icon="redo" />
               </a>
