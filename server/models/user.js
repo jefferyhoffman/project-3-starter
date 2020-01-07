@@ -25,31 +25,7 @@ const UserSchema = new Schema({
     required: true,
     default: "User"
   },
-  admin: {
-    type: String,
-    trim: true,
-    required: "",
-    validate: []
-  },
-  employee: {
-    type: String,
-    trim: true,
-    required: "",
-    validate: []
-  },
-  client: {
-    type: String,
-    trim: true,
-    required: "",
-    validate: []
-  },
-  userid: {
-    type: Number,
-  },
-  properties: {
-    type: Array
-  }
-})
+});
 
 class newUser {
   constructor({ id, email, password }) {
