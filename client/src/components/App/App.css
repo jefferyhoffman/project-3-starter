@@ -65,6 +65,7 @@
   font-weight: 700;
   color: white;
   margin-top: 20%;
+  font-family: 'Bungee Inline', cursive;
 }
 
 .mission{
@@ -72,8 +73,8 @@
   font-size: 23px;
   background-color: rgba(216, 191, 216, 0.6);
   padding: 16px;
-  font-weight: 500;
-  
+  font-weight: 700;
+  font-family: 'Playfair Display SC', serif;
  
 }
 
