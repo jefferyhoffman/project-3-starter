@@ -43,18 +43,17 @@ class NewCardForm extends Component {
                             <form>
                                 <p className="h4 text-center py-4">Fill in the information you would like on your card</p>
                                 <div className="grey-text text-left">
-                                    <MDBInput
-                                        label="Name"
-                                        name="name"
+                                <MDBInput
+                                        label="Name to be displayed on the card"
+                                        name="newname"
                                         value={newname}
                                         onChange={this.handleInputChange}
                                         group
                                         icon="user"
                                         type="text"
-                                        validate
                                         error="wrong"
                                         success="right"
-                                        />
+                                    />
                                     <MDBInput
                                         label="Company Name (optional)"
                                         name="company"
@@ -69,7 +68,7 @@ class NewCardForm extends Component {
 
                                     <MDBInput
                                         label="Email (doesn't have to be sign in email)"
-                                        name="email"
+                                        name="newemail"
                                         value={newemail}
                                         onChange={this.handleInputChange}
                                         icon="envelope"
@@ -93,12 +92,12 @@ class NewCardForm extends Component {
                                         />
                                     <MDBInput
                                         label="Phone"
-                                        name="phoneNum"
+                                        name="phonenumber"
                                         value={phonenumber}
                                         onChange={this.handleInputChange}
                                         icon="phone"
                                         group
-                                        type="text"
+                                        type="number"
                                         validate
                                         />
                                 </div>

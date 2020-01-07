@@ -31,11 +31,11 @@ export default {
 
   newCards: {
     create: function (newname, company, newemail, website, phonenumber) {
-      return axios.post('/api/studio', { newname, company, newemail, website, phonenumber });
+      return axios.post('/api/Studio', { newname, company, newemail, website, phonenumber });
     },
 
     getCards: function () {
-      return axios.get('/api/studio/myCards');
+      return axios.get('/api/Studio/myCards');
     }
   }
 }
