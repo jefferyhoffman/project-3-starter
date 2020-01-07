@@ -1,6 +1,13 @@
 .App {
   text-align: center;
 }
+/* 
+.container {
+  height: 400px;
+  background-color: transparent;
+  z-index: 1000;
+  position: absolute;
+} */
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -24,7 +31,6 @@
 }
 
 
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -34,11 +40,40 @@
   }
 }
 
+.centeredContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-55%, -50%);
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  justify-content: space-around;
+}
+
+/* .overlayImage {
+  width: 67%;
+} */
+
+.mission{
+  /* width: 30%; */
+  font-size: 20px;
+  background-color: rgba(216, 191, 216, 0.5);
+  padding: 16px;
+}
+
+.Home {
+  margin-top: 150px;
+}
+
 .parallax {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  -webkit-transition:all 0.2s ease;
+	-moz-transition:all 0.2s ease;
+  transition:all 0.2s ease;
+  position: relative;
 }
 
 .parallax-1 {
