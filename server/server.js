@@ -16,6 +16,11 @@ const express = require('express');
 const logger = require('morgan');
 const mongoose = require('mongoose');
 
+//Adding dependencies for gridfs
+const fs = require('fs');
+const Schema = mongoose.Schema;
+const multer = require('multer');
+
 const { passport } = require('./lib/passport');
 
 //-- Constants ---------------------------------------------------------------
@@ -39,6 +44,13 @@ app.use(logger(LOG_MODE));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(passport.initialize());
+
+//Adding path of image to be uploaded using Multer
+app.use(multer({ dest: ‘./uploads/’,
+  rename: function (fieldname, filename) {
+    return filename;
+  },
+ }));
 
 //-- Static Server (Production) ----------------------------------------------
 if (process.env.NODE_ENV === 'production') {

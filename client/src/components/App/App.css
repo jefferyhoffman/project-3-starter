@@ -30,30 +30,12 @@
   color: #61dafb;
 }
 
-<<<<<<< HEAD
-.logo {
-   
-    animation-duration: 3s;
-    animation-name: slidein;
-}
-  
-@keyframes slidein {
-    from {
-      margin-left: 100%;
-      width: 300%; 
-    }
-  
-    to {
-      margin-left: 0%;
-      width: 100%;
-    }
-=======
 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
->>>>>>> 7c79560b4fcb325755b3b7df4763ac1cb3ccf753
   }
+}
 
 .centeredContent {
   position: absolute;
