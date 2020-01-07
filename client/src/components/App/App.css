@@ -45,8 +45,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-55%, -50%);
-  /* display: flex; */
-  /* flex-wrap: wrap; */
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   width: 60%;
 }
@@ -54,12 +54,12 @@
 .overlayImage {
   transform: rotateZ(-40deg);
   height: 50%;
-  width: 80%;
+  width: 70%;
   bottom: 20px;
 }
 
 .phrase{
-  /* width: 30%; */
+  width: 30%;
   font-size: 40px;
   /* background-color: rgba(216, 191, 216, 0.5); */
   padding: 16px;
@@ -67,6 +67,7 @@
   margin-top: 20px;
   font-weight: 700;
   color: white;
+  margin-top: 20%;
 }
 
 .mission{
