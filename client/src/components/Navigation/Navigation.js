@@ -28,7 +28,7 @@ class Navigation extends Component {
       <div className='Navigation'>
         <nav className='navbar navbar-expand-lg navbar-light bg-light mb-3'>
           <Link className='navbar-brand' to='#'>
-            <img className="logo" src={logo}/>
+            <img className="logo" src={logo} />
             Landscaping
             </Link>
           <button className={togglerClass} onClick={this.toggleCollapse} data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
@@ -46,19 +46,23 @@ class Navigation extends Component {
                 </li>}
             </ul> */}
             <ul className='navbar-nav ml-auto'>
-            <li className='nav-item'>
+              <li className='nav-item'>
                 <Link className='nav-link' to='/' onClick={this.toggleCollapse}>Home</Link>
               </li>
               {user &&
                 <li className='nav-item'>
                   <Link className='nav-link' to='/secret' onClick={this.toggleCollapse}>Secret</Link>
                 </li>}
+              {user && user.role === "Admin" &&
+                <li className='nav-item'>
+                  <Link className='nav-link' to='/admin' onClick={this.toggleCollapse}>Admin</Link>
+                </li>}
               {user
                 ? <AuthDropdown onClick={this.toggleCollapse} />
                 : <>
                   <li className='nav-item'><Link className='nav-link' to='/login' onClick={this.toggleCollapse}>Login</Link></li>
                   <li className='nav-item'><Link className='nav-link' to='/register' onClick={this.toggleCollapse}>Register</Link></li>
-                  </>}
+                </>}
             </ul>
           </div>
         </nav>
