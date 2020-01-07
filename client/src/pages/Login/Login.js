@@ -47,7 +47,7 @@ class Login extends Component {
     }
 
     return (
-      <div className='Login mt-5'>
+      <div className='Login'>
         <div className='container'>
         <div className='row'>
           <div className='col'>
