@@ -1,27 +1,66 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import logo from './logo.svg';
+// import logo from "./logo.svg";
+// import MainGrass from "../../images/MainGrass.jpg";
+import overlayLogo from "../../images/transaparentlogo.png";
 
 class HomePage extends Component {
   render() {
     return (
-      <div className='Home'>
-        <div className='row'>
-          <div className='col'>
-            <img src={logo} className='App-logo' alt='logo' />
-            <p>
-              Edit <code>src/pages/Home.js</code> and save to reload.
-            </p>
-            <a
-              className='App-link'
-              href='https://reactjs.org'
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
+      <div className="Home">
+        <div className="parallax parallax-1">
+          <div className="container">
+            <div className="row">
+              <div className="centeredContent">
+                <img className="overlayImage" src={overlayLogo} />
+                <p class="mission">
+                  Our mission is to provide our clients with the highest level
+                  of quality services at fair and competitive prices. We believe
+                  that by providing our clients with exceptional workmanship,
+                  extraordinary service and professional integrity, we’ll ensure
+                  the longevity of our company through repeat and referral
+                  business
+                </p>
+              </div>
+              {/* <h1>This is the best feature ever!!!</h1> */}
+            </div>
           </div>
         </div>
+
+        {/* <div
+          style={{
+            // height: "200px",
+            backgroundColor: "#ffc41f",
+            fontSize: "36px",
+            textAlign: "center",
+            // opacity: "100",
+            // backgroundColor: "#11ffee00",
+            // zIndex: "1000",
+            position: "center",
+          }}
+        >
+          <div className="container">
+            <div className="row">
+              <div className="col">
+                <div>
+                  Our mission is to provide our clients with the highest level of quality services at fair and competitive prices.  We believe that by providing our clients with exceptional workmanship, extraordinary service and professional integrity, we’ll ensure the longevity of our company through repeat and referral business
+                </div>
+              </div>
+            </div>
+          </div>
+          </div> */}
+
+        <div className="parallax parallax-2">
+
+          
+        </div>
+
+        <div className="container">
+          <div className="row">
+            <div className="col"></div>
+          </div>
+        </div>
+        <div className="parallax parallax-3"></div>
       </div>
     );
   }
