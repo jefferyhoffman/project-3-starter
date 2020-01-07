@@ -1,6 +1,13 @@
 .App {
   text-align: center;
 }
+/* 
+.container {
+  height: 400px;
+  background-color: transparent;
+  z-index: 1000;
+  position: absolute;
+} */
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -36,11 +43,19 @@
   }
 }
 
+.overlayLogo {
+  position: absolute;
+}
+
 .parallax {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  -webkit-transition:all 0.2s ease;
+	-moz-transition:all 0.2s ease;
+  transition:all 0.2s ease;
+  position: relative;
 }
 
 .parallax-1 {

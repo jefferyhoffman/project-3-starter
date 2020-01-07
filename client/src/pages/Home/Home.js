@@ -2,13 +2,10 @@ import React, { Component } from "react";
 
 // import logo from "./logo.svg";
 // import MainGrass from "../../images/MainGrass.jpg";
+import overlayLogo from "../../images/transaparentlogo.png";
 
 class HomePage extends Component {
-
-
   render() {
-    
-
     return (
       <div className="Home">
         <div className="container">
@@ -21,14 +18,22 @@ class HomePage extends Component {
             </div>
           </div>
         </div>
+
         <div className="parallax parallax-1">
           <h1>This is the best feature ever!!!</h1>
+          <img className="overlayLogo" src={overlayLogo}/>
         </div>
+
         <div
           style={{
-            height: "400px",
-            backgroundColor: "red",
-            fontSize: "36px"
+            height: "200px",
+            backgroundColor: "#ffc41f",
+            fontSize: "36px",
+            textAlign: "center",
+            // opacity: "100",
+            // backgroundColor: "#11ffee00",
+            // zIndex: "1000",
+            position: "center",
           }}
         >
           <div className="container">
@@ -44,6 +49,7 @@ class HomePage extends Component {
             </div>
           </div>
         </div>
+
         <div className="parallax parallax-2"></div>
       </div>
     );
