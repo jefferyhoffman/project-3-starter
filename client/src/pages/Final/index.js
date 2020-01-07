@@ -3,7 +3,7 @@ import { MDBContainer, MDBRow, MDBCol, MDBView } from "mdbreact";
 import FinalCard from '../../components/FinalCard/index';
 import IndexNAV from '../../components/IndexNAV/index';
 import './style.css'
-import dude from '../../images/final-body.png'
+import PlainJane from '../../components/PlainJane';
 
 function Finale() {
     return (
@@ -13,7 +13,7 @@ function Finale() {
                 <MDBRow className="rowPadding">
                     <MDBCol></MDBCol>
                     <MDBCol>
-                        <FinalCard/>
+                        <PlainJane />
                     </MDBCol>
                     <MDBCol></MDBCol>
                 </MDBRow>

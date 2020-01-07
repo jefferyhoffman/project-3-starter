@@ -1,5 +1,12 @@
 .studioBcg {
     height: 100vh;
+    width: 100vw;
+    overflow: hidden;
     background: linear-gradient(120deg, #DD252E, #6D26DD);
-    
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    z-index: -1;
 }

@@ -5,9 +5,6 @@ import IndexNav from "../../components/IndexNAV/index.js"
 import "./index.css"
 import API from '../../lib/API.js';
 
-
-
-
 class Studio extends Component{
     state = {
         error: ""
@@ -25,19 +22,13 @@ class Studio extends Component{
 
     render() {
         return (
-        <div className="studioBcg">
-        <React.Fragment>
+            <React.Fragment>
+            <div className="studioBcg"></div>
             <IndexNav/>
             <br/>
-            <MDBRow>
-                <MDBCol size="2"></MDBCol>
-                <MDBCol size="8" >
-                    <NewCardForm onSubmit={this.handleSubmit}/>
-                </MDBCol>
-                <MDBCol size="2" id="rightColumn"></MDBCol>
-            </MDBRow> 
+            <NewCardForm onSubmit={this.handleSubmit}/>
         </React.Fragment>
-        </div>
+
         )
     }
 }
