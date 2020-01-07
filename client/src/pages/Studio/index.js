@@ -10,12 +10,12 @@ class Studio extends Component{
         error: ""
     }
 
-    handleSubmit = (name, company, email, website, phoneNum) => {
-        if (name === "" || email === "" || website === "" || phoneNum === "") {
+    handleSubmit = (newname, company, newemail, website, phonenumber) => {
+        if (newname === "" || newemail === "" || website === "" || phonenumber === "") {
             return this.setState({ error: "Please enter your name, email, website and phone number" });
         }
 
-        API.newCards.create(name, company, email, website, phoneNum)
+        API.newCards.create(newname, company, newemail, website, phonenumber)
             .then(response => response.data)
             .catch(err => this.setState({ error: err.message }));
     }
