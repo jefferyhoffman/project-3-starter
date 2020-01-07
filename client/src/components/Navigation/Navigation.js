@@ -30,13 +30,8 @@ class Navigation extends Component {
         <nav className='navbar navbar-expand-lg '>
           <Link className='navbar-brand' to='#'>
             <img className="logo" src={logo} />
-<<<<<<< HEAD
-            Landscaping
-            </Link>
-=======
 
           </Link>
->>>>>>> 7c79560b4fcb325755b3b7df4763ac1cb3ccf753
           <button className={togglerClass} onClick={this.toggleCollapse} data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
             <span className='navbar-toggler-icon'></span>
           </button>
@@ -65,6 +60,10 @@ class Navigation extends Component {
               {user && user.role === "Admin" &&
                 <li className='nav-item'>
                   <Link className='nav-link' to='/admin' onClick={this.toggleCollapse}>Admin</Link>
+                </li>}
+                {user && user.role === "Employee" &&
+                <li className='nav-item'>
+                  <Link className='nav-link' to='/employee' onClick={this.toggleCollapse}>Employee</Link>
                 </li>}
               {user
                 ? <AuthDropdown onClick={this.toggleCollapse} />

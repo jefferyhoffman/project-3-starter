@@ -12,6 +12,7 @@ import Login from '../../pages/Login/Login';
 import Register from '../../pages/Register/Register';
 import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
+import Employee from "../../pages/Employee/Employee";
 
 import './App.css';
 
@@ -61,6 +62,7 @@ class App extends Component {
               <Route path='/register' component={Register} />
               <PrivateRoute path='/secret' component={Secret} />
               <PrivateRoute path='/admin' component={Admin} />
+              <PrivateRoute path='/employee' component={Employee} />
               <Route component={NotFound} />
             </Switch>
           {/* </div> */}
