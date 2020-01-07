@@ -6,20 +6,21 @@ import overlayLogo from "../../images/transaparentlogo.png";
 
 class HomePage extends Component {
   render() {
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cfc9ead29bebb0b06226d07854cf2bc8a09f55d3
     return (
       <div className="Home">
         <div className="container">
           <div className="row">
-            <div className="col">
-              <p>
-                Scroll Up and Down this page to see the parallax scrolling
-                effect.{" "}
-              </p>
-            </div>
+            
           </div>
         </div>
 
         <div className="parallax parallax-1">
+<<<<<<< HEAD
           <h1>This is the best feature ever!!!</h1>
           <img className="overlayLogo" src={overlayLogo}/>
         </div>
@@ -36,22 +37,39 @@ class HomePage extends Component {
             position: "center",
           }}
         >
+=======
+          
+        </div>
+        
+>>>>>>> cfc9ead29bebb0b06226d07854cf2bc8a09f55d3
           <div className="container">
             <div className="row">
               <div className="col">
-                <div>
-                  Scroll Up and Down this page to see the parallax scrolling
-                  effect. This div is just here to enable scrolling. Tip: Try to
-                  remove the background-attachment property to remove the
-                  scrolling effect.
-                </div>
+                {/* <div>
+                  Our mission is to provide our clients with the highest level of quality services at fair and competitive prices.  We believe that by providing our clients with exceptional workmanship, extraordinary service and professional integrity, we’ll ensure the longevity of our company through repeat and referral business
+                </div> */}
               </div>
             </div>
           </div>
+<<<<<<< HEAD
         </div>
 
+=======
+        
+>>>>>>> cfc9ead29bebb0b06226d07854cf2bc8a09f55d3
         <div className="parallax parallax-2"></div>
+
+        <div className="container">
+          <div className="row">
+            <div className="col">
+
+            </div>
+          </div>
+        </div>
+        <div className="parallax parallax-3"></div>
+
       </div>
+
     );
   }
 }
