@@ -3,9 +3,12 @@ import { MDBCol, MDBRow, MDBCard, MDBCardUp, MDBCardBody, MDBAvatar, MDBRotating
 import guy from '../../images/Linus-Torvalds-2012.jpg'
 import cardTopImg from '../../images/mulitsymbols.png'
 import "./style.css"
+import AuthContext from '../../contexts/AuthContext';
 
 
 class UserCard extends Component {
+static contextType = AuthContext;
+
 state = {
   flipped: false
 }
@@ -16,6 +19,7 @@ handleFlipping = () => {
 
 render() {
   const colStyle = { maxWidth: "22rem" };
+  const { user } = this.context;
 
   return (
     <MDBRow>
@@ -30,7 +34,7 @@ render() {
               <img src={guy} alt="" className="rounded-circle" />
             </MDBAvatar>
             <MDBCardBody>
-              <h4 className="font-weight-bold mb-3">Marie Johnson</h4>
+              <h4 className="font-weight-bold mb-3">{ user ? user.name : "loading..." }</h4>
               <a href="#!" className="rotate-btn ColorForRotate" data-card="card-1" onClick={this.handleFlipping}>
                 <MDBIcon icon="redo" />
               </a>

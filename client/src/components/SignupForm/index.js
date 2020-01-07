@@ -4,6 +4,7 @@ import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput, MDBBtn, M
 class SignupForm extends Component {
   state = {
     password: "",
+    name: "",
     email: "",
     passwordConfirm: "",
     passwordState: "password",
@@ -32,16 +33,15 @@ class SignupForm extends Component {
   }
 
   handleSubmit = event => {
-    const { email, password, passwordConfirm } = this.state;
+    const { email, name, password, passwordConfirm } = this.state;
     
-    this.props.onSubmit(email, password, passwordConfirm);
-    console.log(email, password);
+    this.props.onSubmit(email, name, password, passwordConfirm);
+    console.log(email, name, password);
     event.preventDefault();
   }
 
-
   render() {
-    const { email, password, passwordConfirm } = this.state;
+    const { email, name, password, passwordConfirm } = this.state;
     return (
       <MDBContainer>
         <MDBRow>
@@ -55,7 +55,7 @@ class SignupForm extends Component {
                   </h3>
                 </div>
                 <MDBInput
-                  label="Your email"
+                  label="Email"
                   group
                   type="email"
                   validate
@@ -66,8 +66,20 @@ class SignupForm extends Component {
                   name='email'
                   id="email"
                 />
+                 <MDBInput
+                  label="Dashboard name"
+                  group
+                  type="name"
+                  validate
+                  error="wrong"
+                  success="right"
+                  onChange={this.handleInputChange}
+                  value={name}
+                  name='name'
+                  id="name"
+                />
                 <MDBInput
-                  label="Your password"
+                  label="Password"
                   group
                   type={this.state.passwordState}
                   validate
@@ -85,7 +97,7 @@ class SignupForm extends Component {
                   containerClass="mb-0"
                   id='passwordConfirm'
                   name='passwordConfirm'
-                  value={password}
+                  value={passwordConfirm}
                   onChange={this.handleInputChange}
                 />
                 <p className="font-small blue-text d-flex justify-content-end pb-3">
@@ -93,7 +105,7 @@ class SignupForm extends Component {
                 </p>
                 <div className="text-center mb-3">
                   <MDBBtn
-                    type="button"
+                    type="submit"
                     gradient="purple"
                     rounded
                     className="btn-block z-depth-1a"

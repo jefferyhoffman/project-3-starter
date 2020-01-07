@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useReducer } from 'react';
 import UserCard from '../../components/UserCard/UserCard.js';
 import './style.css'
 import { MDBContainer, MDBRow, MDBCol, MDBNavLink } from "mdbreact";
@@ -28,6 +28,7 @@ class UserDash extends Component {
     }
   
     render() {
+      const { user } = this.context;
         return (
             <div className="mainBodyColor">
                 <React.Fragment>
@@ -52,7 +53,7 @@ class UserDash extends Component {
                                 <br/>
                                 <MDBNavLink to="/Studio"><h3 className="sideNavText">Saved Designs</h3></MDBNavLink>
                                 <br/>
-                                <MDBNavLink to="/Studio"><h3 className="sideNavText">Profile</h3></MDBNavLink>
+                                <MDBNavLink to="/Studio"><h3 className="sideNavText">{ user ? user.name : "loading..." }'s Profile</h3></MDBNavLink>
                                 <br/>
                                 <MDBNavLink to="/Studio"><h3 className="sideNavText">Tutorial</h3></MDBNavLink>
                                 </div>
