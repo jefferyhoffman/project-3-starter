@@ -40,8 +40,25 @@
   }
 }
 
-.overlayLogo {
-  /* position: absolute; */
+.centeredContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-55%, -50%);
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  justify-content: space-around;
+}
+
+.overlayImage {
+  /* width: 67%; */
+}
+
+.mission{
+  /* width: 30%; */
+  font-size: 20px;
+  background-color: rgba(216, 191, 216, 0.5);
+  padding: 16px;
 }
 
 .Home {
@@ -56,7 +73,7 @@
   -webkit-transition:all 0.2s ease;
 	-moz-transition:all 0.2s ease;
   transition:all 0.2s ease;
-  /* position: relative; */
+  position: relative;
 }
 
 .parallax-1 {

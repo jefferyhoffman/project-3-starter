@@ -8,20 +8,28 @@ class HomePage extends Component {
   render() {
     return (
       <div className="Home">
-
         <div className="parallax parallax-1">
-        <div className="container">
-          <div className="row">
-            
-          <h1>This is the best feature ever!!!</h1>
-          <img className="overlayLogo" src={overlayLogo}/>
+          <div className="container">
+            <div className="row">
+              <div className="centeredContent">
+                <img className="overlayImage" src={overlayLogo} />
+                <p class="mission">
+                  Our mission is to provide our clients with the highest level
+                  of quality services at fair and competitive prices. We believe
+                  that by providing our clients with exceptional workmanship,
+                  extraordinary service and professional integrity, we’ll ensure
+                  the longevity of our company through repeat and referral
+                  business
+                </p>
+              </div>
+              {/* <h1>This is the best feature ever!!!</h1> */}
+            </div>
           </div>
         </div>
-        </div>
 
-        <div
+        {/* <div
           style={{
-            height: "200px",
+            // height: "200px",
             backgroundColor: "#ffc41f",
             fontSize: "36px",
             textAlign: "center",
@@ -34,27 +42,23 @@ class HomePage extends Component {
           <div className="container">
             <div className="row">
               <div className="col">
-                {/* <div>
+                <div>
                   Our mission is to provide our clients with the highest level of quality services at fair and competitive prices.  We believe that by providing our clients with exceptional workmanship, extraordinary service and professional integrity, we’ll ensure the longevity of our company through repeat and referral business
-                </div> */}
+                </div>
               </div>
             </div>
           </div>
-        </div>
+          </div> */}
 
         <div className="parallax parallax-2"></div>
 
         <div className="container">
           <div className="row">
-            <div className="col">
-
-            </div>
+            <div className="col"></div>
           </div>
         </div>
         <div className="parallax parallax-3"></div>
-
       </div>
-
     );
   }
 }
