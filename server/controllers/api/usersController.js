@@ -33,4 +33,11 @@ usersController.post('/LoginPage', (req, res) => {
     });
 });
 
+usersController.post('/Studio', (req, res) => {
+  const { newname, company, newemail, website, phonenumber } = req.body;
+  db.Newcardinfos.create({ newname, company, newemail, website, phonenumber })
+  .then(user => res.json(user))
+  .catch(err => res.json(err));
+})
+
 module.exports = usersController;
