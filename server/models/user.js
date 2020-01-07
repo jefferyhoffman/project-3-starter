@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 const UserSchema = new Schema({
   email: {
     type: String,
+    match: [/.+@.+\..+/, "Please enter a valid e-mail address"],
     trim: true,
     required: 'Email address is required'
   },
@@ -23,6 +24,30 @@ const UserSchema = new Schema({
     trim: true,
     required: true,
     default: "User"
+  },
+  admin: {
+    type: String,
+    trim: true,
+    required: "",
+    validate: []
+  },
+  employee: {
+    type: String,
+    trim: true,
+    required: "",
+    validate: []
+  },
+  client: {
+    type: String,
+    trim: true,
+    required: "",
+    validate: []
+  },
+  userid: {
+    type: Number,
+  },
+  properties: {
+    type: Array
   }
 })
 
