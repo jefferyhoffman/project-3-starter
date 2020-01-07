@@ -31,7 +31,6 @@
 }
 
 
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -42,7 +41,11 @@
 }
 
 .overlayLogo {
-  position: absolute;
+  /* position: absolute; */
+}
+
+.Home {
+  margin-top: 150px;
 }
 
 .parallax {
@@ -53,7 +56,7 @@
   -webkit-transition:all 0.2s ease;
 	-moz-transition:all 0.2s ease;
   transition:all 0.2s ease;
-  position: relative;
+  /* position: relative; */
 }
 
 .parallax-1 {

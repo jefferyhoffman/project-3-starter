@@ -6,23 +6,17 @@ import overlayLogo from "../../images/transaparentlogo.png";
 
 class HomePage extends Component {
   render() {
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cfc9ead29bebb0b06226d07854cf2bc8a09f55d3
     return (
       <div className="Home">
+
+        <div className="parallax parallax-1">
         <div className="container">
           <div className="row">
             
-          </div>
-        </div>
-
-        <div className="parallax parallax-1">
-<<<<<<< HEAD
           <h1>This is the best feature ever!!!</h1>
           <img className="overlayLogo" src={overlayLogo}/>
+          </div>
+        </div>
         </div>
 
         <div
@@ -37,11 +31,6 @@ class HomePage extends Component {
             position: "center",
           }}
         >
-=======
-          
-        </div>
-        
->>>>>>> cfc9ead29bebb0b06226d07854cf2bc8a09f55d3
           <div className="container">
             <div className="row">
               <div className="col">
@@ -51,12 +40,8 @@ class HomePage extends Component {
               </div>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
 
-=======
-        
->>>>>>> cfc9ead29bebb0b06226d07854cf2bc8a09f55d3
         <div className="parallax parallax-2"></div>
 
         <div className="container">
