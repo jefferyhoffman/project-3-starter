@@ -50,7 +50,10 @@ class HomePage extends Component {
           </div>
           </div> */}
 
-        <div className="parallax parallax-2"></div>
+        <div className="parallax parallax-2">
+
+          
+        </div>
 
         <div className="container">
           <div className="row">
