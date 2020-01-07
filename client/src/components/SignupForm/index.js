@@ -73,24 +73,21 @@ class SignupForm extends Component {
                   validate
                   containerClass="mb-0"
                   id='password'
-                  type='password'
                   name='password'
                   value={password}
                   onChange={this.handleInputChange}
                 />
                 <MDBInput 
-                  label="Your password"
+                  label="Confirm password"
                   group
                   type={this.state.passwordState}
                   validate
                   containerClass="mb-0"
                   id='passwordConfirm'
-                  type={this.state.passwordState}
                   name='passwordConfirm'
                   value={password}
                   onChange={this.handleInputChange}
                 />
-                
                 <p className="font-small blue-text d-flex justify-content-end pb-3">
                   <a className="blue-text ml-1" onClick={this.showPassword}>{this.state.linkText}</a>
                 </p>
