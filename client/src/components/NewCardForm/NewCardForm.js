@@ -33,7 +33,7 @@ class NewCardForm extends Component {
     }
 
     render() {
-        const { name, company, email, website, phoneNum } = this.state;
+        const { newname, company, newemail, website, phonenumber } = this.state;
         return (
             <MDBContainer>
             <MDBRow>
@@ -46,7 +46,7 @@ class NewCardForm extends Component {
                                     <MDBInput
                                         label="Name"
                                         name="name"
-                                        value={name}
+                                        value={newname}
                                         onChange={this.handleInputChange}
                                         group
                                         icon="user"
@@ -70,7 +70,7 @@ class NewCardForm extends Component {
                                     <MDBInput
                                         label="Email (doesn't have to be sign in email)"
                                         name="email"
-                                        value={email}
+                                        value={newemail}
                                         onChange={this.handleInputChange}
                                         icon="envelope"
                                         group
@@ -94,7 +94,7 @@ class NewCardForm extends Component {
                                     <MDBInput
                                         label="Phone"
                                         name="phoneNum"
-                                        value={phoneNum}
+                                        value={phonenumber}
                                         onChange={this.handleInputChange}
                                         icon="phone"
                                         group
