@@ -42,7 +42,7 @@ class NewCardForm extends Component {
                                 <p className="h4 text-center py-4">Fill in the information you would like on your card</p>
                                 <div className="grey-text text-left">
                                     <MDBInput
-                                        label="Your Name"
+                                        label="Name"
                                         name="name"
                                         value={name}
                                         onChange={this.handleInputChange}
@@ -54,7 +54,7 @@ class NewCardForm extends Component {
                                         success="right"
                                         />
                                     <MDBInput
-                                        label="Your Company Name (optional)"
+                                        label="Company Name (optional)"
                                         name="company"
                                         value={company}
                                         onChange={this.handleInputChange}
@@ -66,7 +66,7 @@ class NewCardForm extends Component {
                                     />
 
                                     <MDBInput
-                                        label="Your Email (doesn't have to be sign in email)"
+                                        label="Email (doesn't have to be sign in email)"
                                         name="email"
                                         value={email}
                                         onChange={this.handleInputChange}
@@ -78,7 +78,7 @@ class NewCardForm extends Component {
                                         success="right"
                                         />
                                     <MDBInput
-                                        label="Your Website"
+                                        label="Website"
                                         name="website"
                                         value={website}
                                         onChange={this.handleInputChange}
@@ -90,7 +90,7 @@ class NewCardForm extends Component {
                                         success="right"
                                         />
                                     <MDBInput
-                                        label="Your Phone"
+                                        label="Phone"
                                         name="phoneNum"
                                         value={phoneNum}
                                         onChange={this.handleInputChange}

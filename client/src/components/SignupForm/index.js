@@ -55,7 +55,7 @@ class SignupForm extends Component {
                   </h3>
                 </div>
                 <MDBInput
-                  label="Your email"
+                  label="Email"
                   group
                   type="email"
                   validate
@@ -67,7 +67,7 @@ class SignupForm extends Component {
                   id="email"
                 />
                  <MDBInput
-                  label="name"
+                  label="Dashboard name"
                   group
                   type="name"
                   validate
@@ -79,7 +79,7 @@ class SignupForm extends Component {
                   id="name"
                 />
                 <MDBInput
-                  label="Your password"
+                  label="Password"
                   group
                   type={this.state.passwordState}
                   validate
