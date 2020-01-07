@@ -14,9 +14,6 @@ import Studio from "../../pages/Studio/index"
 import Results from '../../pages/Results'
 import Finale from '../../pages/Final'
 
-
-//import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
-
 import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
 
 import './App.css';
