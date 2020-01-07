@@ -85,7 +85,7 @@ class SignupForm extends Component {
                   containerClass="mb-0"
                   id='passwordConfirm'
                   name='passwordConfirm'
-                  value={password}
+                  value={passwordConfirm}
                   onChange={this.handleInputChange}
                 />
                 <p className="font-small blue-text d-flex justify-content-end pb-3">
