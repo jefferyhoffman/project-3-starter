@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import './navigation.css';
 import AuthContext from '../../contexts/AuthContext';
 import AuthDropdown from '../../components/AuthDropdown/AuthDropdown';
-import logo from "../../images/BGM-logo.jpg"
+import logo from "../../images/BGM_LOGO_10.11.17_1038697311177295.png"
 
 class Navigation extends Component {
   static contextType = AuthContext;
@@ -56,6 +55,14 @@ class Navigation extends Component {
               {user &&
                 <li className='nav-item'>
                   <Link className='nav-link' to='/secret' onClick={this.toggleCollapse}>Secret</Link>
+                </li>}
+              {user && user.role === "Admin" &&
+                <li className='nav-item'>
+                  <Link className='nav-link' to='/admin' onClick={this.toggleCollapse}>Admin</Link>
+                </li>}
+                {user && user.role === "Employee" &&
+                <li className='nav-item'>
+                  <Link className='nav-link' to='/employee' onClick={this.toggleCollapse}>Employee</Link>
                 </li>}
               {user
                 ? <AuthDropdown onClick={this.toggleCollapse} />
