@@ -4,8 +4,11 @@ import "./style.css";
 class Form extends Component {
   // Setting the component's initial state
   state = {
-    firstName: "",
-    lastName: ""
+    property: ["2020 Main St", "100 Washington Ave", "450 West Blvd", "1330 Green St", "78 Bigsby Rd"],
+    date: "",
+    time: "",
+    task: "",
+    comments: ""
   };
 
   handleInputChange = event => {
@@ -34,23 +37,34 @@ class Form extends Component {
     // Notice how each input has a `value`, `name`, and `onChange` prop
     return (
       <div>
-        <p>
-          Hello {this.state.firstName} {this.state.lastName}
-        </p>
         <form className="form">
           <input
-            value={this.state.firstName}
-            name="firstName"
+            value={this.state.date}
+            name="date"
             onChange={this.handleInputChange}
             type="text"
-            placeholder="First Name"
+            placeholder="Date"
           />
           <input
-            value={this.state.lastName}
-            name="lastName"
+            value={this.state.time}
+            name="time"
             onChange={this.handleInputChange}
             type="text"
-            placeholder="Last Name"
+            placeholder="Time"
+          />
+          <input
+            value={this.state.task}
+            name="task"
+            onChange={this.handleInputChange}
+            type="text"
+            placeholder="Task"
+          />
+          <input
+            value={this.state.comments}
+            name="comments"
+            onChange={this.handleInputChange}
+            type="text"
+            placeholder="Comments"
           />
           <button onClick={this.handleFormSubmit}>Submit</button>
         </form>
