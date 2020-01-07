@@ -19,6 +19,12 @@ const UserSchema = new Schema({
       'Password should be four characters or longer'
     ]
   },
+  role: {
+    type: String,
+    trim: true,
+    required: true,
+    default: "User"
+  },
   admin: {
     type: String,
     trim: true,
