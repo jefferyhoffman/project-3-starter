@@ -48,17 +48,35 @@
   /* display: flex; */
   /* flex-wrap: wrap; */
   justify-content: space-around;
+  width: 60%;
 }
 
-/* .overlayImage {
-  width: 67%;
-} */
+.overlayImage {
+  transform: rotateZ(-40deg);
+  height: 50%;
+  width: 80%;
+  bottom: 20px;
+}
+
+.phrase{
+  /* width: 30%; */
+  font-size: 40px;
+  /* background-color: rgba(216, 191, 216, 0.5); */
+  padding: 16px;
+  /* width: 40%; */
+  margin-top: 20px;
+  font-weight: 700;
+  color: white;
+}
 
 .mission{
   /* width: 30%; */
-  font-size: 20px;
-  background-color: rgba(216, 191, 216, 0.5);
+  font-size: 23px;
+  background-color: rgba(216, 191, 216, 0.6);
   padding: 16px;
+  font-weight: 500;
+  
+ 
 }
 
 .Home {
