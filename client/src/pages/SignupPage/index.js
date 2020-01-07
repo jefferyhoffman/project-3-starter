@@ -16,14 +16,14 @@ class Signup extends Component {
       redirectToReferrer: false
     }
   
-    handleSubmit = (email, password, confirm) => {
+    handleSubmit = (email, name, password, confirm) => {
       if (password !== confirm) {
         return this.setState({ error: "Passwords do not match." });
       }
   
-      API.Users.create(email, password)
+      API.Users.create(email, password, name)
         .then(response => response.data)
-        .then((user )=> {
+        .then(()=> {
           this.setState({redirectToReferrer: true, error: ""})
         })
         .catch(err => this.setState({ error: err.message }));

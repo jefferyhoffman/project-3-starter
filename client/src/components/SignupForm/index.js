@@ -4,6 +4,7 @@ import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput, MDBBtn, M
 class SignupForm extends Component {
   state = {
     password: "",
+    name: "",
     email: "",
     passwordConfirm: "",
     passwordState: "password",
@@ -65,15 +66,17 @@ class SignupForm extends Component {
                   name='email'
                   id="email"
                 />
-                <MDBInput
-                  label="Your dashboard username"
+                 <MDBInput
+                  label="name"
                   group
-                  type="input"
+                  type="name"
                   validate
-                  id="username"
-                  name="username"
-                  value={name}
+                  error="wrong"
+                  success="right"
                   onChange={this.handleInputChange}
+                  value={name}
+                  name='name'
+                  id="name"
                 />
                 <MDBInput
                   label="Your password"
