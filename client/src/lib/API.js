@@ -29,9 +29,9 @@ export default {
     }
   },
 
-  newCards: {
+  Newcardinfos: {
     create: function (newname, company, newemail, website, phonenumber) {
-      return axios.post('/api/Studio', { newname, company, newemail, website, phonenumber });
+      return axios.post('/api/card/newcardinfos', { newname, company, newemail, website, phonenumber });
     },
 
     getCards: function () {

@@ -15,7 +15,7 @@ class Studio extends Component{
             return this.setState({ error: "Please enter your name, email, website and phone number" });
         }
 
-        API.newCards.create(newname, company, newemail, website, phonenumber)
+        API.Newcardinfos.create(newname, company, newemail, website, phonenumber)
             .then(response => response.data)
             .catch(err => this.setState({ error: err.message }));
     }
