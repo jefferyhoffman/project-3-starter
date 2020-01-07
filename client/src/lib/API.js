@@ -27,5 +27,19 @@ export default {
         }
       });
     }
+  },
+
+  newCards: {
+    create: function (name, company, email, website, phoneNum) {
+      return axios.post('/api/studio', { name, company, email, website, phoneNum });
+    },
+
+    getCard: function (authToken) {
+      return axios.get('/api/studio/myCard', {
+        headers: {
+          'Authorization': `Bearer ${authToken}`
+        }
+      });
+    }
   }
 }

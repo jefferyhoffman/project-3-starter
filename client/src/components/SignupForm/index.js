@@ -39,7 +39,6 @@ class SignupForm extends Component {
     event.preventDefault();
   }
 
-
   render() {
     const { email, password, passwordConfirm } = this.state;
     return (
