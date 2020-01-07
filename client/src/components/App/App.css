@@ -49,14 +49,16 @@
 }
 
 .overlayImage {
-  transform: rotateZ(-40deg);
+  /* transform: rotateZ(-40deg); */
   height: 50%;
   width: 70%;
   bottom: 20px;
+  opacity: 50%;
+  background-blend-mode: overlay;
 }
 
 .phrase{
-  width: 30%;
+  width: 50%;
   font-size: 40px;
   /* background-color: rgba(216, 191, 216, 0.5); */
   padding: 16px;
@@ -65,6 +67,8 @@
   font-weight: 700;
   color: white;
   margin-top: 20%;
+  font-family: 'Bungee Inline', cursive;
+  
 }
 
 .mission{
@@ -72,8 +76,8 @@
   font-size: 23px;
   background-color: rgba(216, 191, 216, 0.6);
   padding: 16px;
-  font-weight: 500;
-  
+  font-weight: 700;
+  font-family: 'Playfair Display SC', serif;
  
 }
 
@@ -93,13 +97,13 @@
 }
 
 .parallax-1 {
-  background-image: url("../../images/MainGrass.jpg");
+  background-image: url("../../images/WeedCutter.jpeg");
   min-height: 700px;
 }
 
 .parallax-2 {
   background-image: url("../../images/grass-cut-image2.jpg");
-  min-height: 700px;
+  min-height: 900px;
 }
 
 .parallax-3 {
