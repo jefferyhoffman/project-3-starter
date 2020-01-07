@@ -1,0 +1,35 @@
+#CardBCGPlainJoe {
+    background-image: url(../../images/blackmarble.jpg);
+    background-size: 100%;
+}
+
+#namePlainJoe {
+    padding-right: 55px;
+}
+#emailPlainJoe {
+    padding-right: 55px;
+}
+#phonePlainJoe {
+    padding-right: 55px;
+}
+#websitePlainJoe {
+    padding-right: 55px;
+}
+#companyPlainJoe {
+    padding-right: 55px;
+}
+#cardBodyPlainJoe {
+    font-family: 'Baskervville', serif;
+}
+.line2 {
+    width: 112px;
+    height: 47px;
+    border-bottom: 1px solid green;
+    -webkit-transform:
+        translateY(20px)
+        translateX(5px)
+        rotate(-26deg);
+    position: absolute;
+    top: -33px;
+    left: -13px;
+}
