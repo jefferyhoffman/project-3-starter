@@ -40,7 +40,7 @@ class NewCardForm extends Component {
                 <MDBCol>
                     <MDBCard>
                         <MDBCardBody>
-                            <form>
+                            <form onSubmit={this.handleSubmit}>
                                 <p className="h4 text-center py-4">Fill in the information you would like on your card</p>
                                 <div className="grey-text text-left">
                                 <MDBInput

@@ -4,6 +4,7 @@ import FinalCard from '../../components/FinalCard/index';
 import IndexNAV from '../../components/IndexNAV/index';
 import './style.css'
 import PlainJane from '../../components/PlainJane';
+import PlainJoe from '../../components/PlainJoe';
 
 function Finale() {
     return (
@@ -14,6 +15,8 @@ function Finale() {
                     <MDBCol></MDBCol>
                     <MDBCol>
                         <PlainJane />
+                        <br/>
+                        <PlainJoe />
                     </MDBCol>
                     <MDBCol></MDBCol>
                 </MDBRow>
