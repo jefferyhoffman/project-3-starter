@@ -69,7 +69,7 @@ class SignupForm extends Component {
                  <MDBInput
                   label="Dashboard name"
                   group
-                  type="name"
+                  type="text"
                   validate
                   error="wrong"
                   success="right"
