@@ -9,11 +9,11 @@ const createCard = e => {
 
 class NewCardForm extends Component {
     state = {
-        name: "",
+        newname: "",
         company: "",
-        email: "",
+        newemail: "",
         website: "",
-        phoneNum: ""
+        phonenumber: ""
     }
 
     handleInputChange = event => {
@@ -25,10 +25,10 @@ class NewCardForm extends Component {
     };
 
     handleSubmit = event => {
-        const { name, company, email, website, phoneNum } = this.state;
+        const { newname, company, newemail, website, phonenumber } = this.state;
 
-        this.props.onSubmit(name, company, email, website, phoneNum);
-        console.log(name, company, email, website, phoneNum);
+        this.props.onSubmit(newname, company, newemail, website, phonenumber);
+        console.log(newname, company, newemail, website, phonenumber);
         event.preventDefault();
     }
 
