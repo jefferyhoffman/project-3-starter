@@ -24,17 +24,22 @@
 }
 
 .logo {
-  animation: App-logo-spin infinite 20s linear;
+   
+    animation-duration: 3s;
+    animation-name: slidein;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%; 
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 .parallax {
   background-attachment: fixed;
