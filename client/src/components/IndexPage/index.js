@@ -31,6 +31,7 @@ class FullPageIntroWithNonFixedTransparentNavbar extends React.Component {
                     <MDBNavbarNav right>
                       <MDBNavItem>
                         <MDBNavLink to="/LoginPage">Sign In</MDBNavLink>
+                        <MDBNavLink to="/SignupPage">Sign Up</MDBNavLink>
                       </MDBNavItem>
                     </MDBNavbarNav>
                   </MDBCollapse>
@@ -39,6 +40,7 @@ class FullPageIntroWithNonFixedTransparentNavbar extends React.Component {
           <MDBView src="https://mdbootstrap.com/img/Photos/Others/img%20(42).jpg">
 
             <MDBMask overlay="indigo-slight" className="   text-white text-center">
+            <br/>
             <br/>
             <br/>
             <br/>
