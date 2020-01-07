@@ -32,15 +32,15 @@ class SignupForm extends Component {
   }
 
   handleSubmit = event => {
-    const { email, password, passwordConfirm } = this.state;
+    const { email, name, password, passwordConfirm } = this.state;
     
-    this.props.onSubmit(email, password, passwordConfirm);
-    console.log(email, password);
+    this.props.onSubmit(email, name, password, passwordConfirm);
+    console.log(email, name, password);
     event.preventDefault();
   }
 
   render() {
-    const { email, password, passwordConfirm } = this.state;
+    const { email, name, password, passwordConfirm } = this.state;
     return (
       <MDBContainer>
         <MDBRow>
@@ -64,6 +64,16 @@ class SignupForm extends Component {
                   value={email}
                   name='email'
                   id="email"
+                />
+                <MDBInput
+                  label="Your dashboard username"
+                  group
+                  type="input"
+                  validate
+                  id="username"
+                  name="username"
+                  value={name}
+                  onChange={this.handleInputChange}
                 />
                 <MDBInput
                   label="Your password"
