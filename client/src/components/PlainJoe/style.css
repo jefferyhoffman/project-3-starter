@@ -1,6 +1,7 @@
 #CardBCGPlainJoe {
-    background-image: url(../../images/blackmarble.jpg);
-    background-size: 100%;
+    background-image: url(../../images/newMarble.jpg);
+    background-size: 150%;
+    background-repeat: no-repeat;
 }
 
 #namePlainJoe {
@@ -20,16 +21,4 @@
 }
 #cardBodyPlainJoe {
     font-family: 'Baskervville', serif;
-}
-.line2 {
-    width: 112px;
-    height: 47px;
-    border-bottom: 1px solid green;
-    -webkit-transform:
-        translateY(20px)
-        translateX(5px)
-        rotate(-26deg);
-    position: absolute;
-    top: -33px;
-    left: -13px;
 }
