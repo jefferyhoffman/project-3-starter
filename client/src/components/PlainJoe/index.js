@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { MDBCol, MDBRow, MDBCard, MDBCardUp, MDBCardBody, MDBAvatar, MDBIcon, MDBCardImage } from "mdbreact";
+import dude from '../../images/PlainJoeLogo.png'
 import "./style.css";
 import API from "../../lib/API";
 import AuthContext from "../../contexts/AuthContext";
@@ -43,7 +44,7 @@ class PlainJoe extends Component {
                         <MDBRow>
                             <MDBCol>
                             <div className="line2"></div>
-                            {/* <img src={dude} className="img-fluid rounded-circle"/> */}
+                            <img src={dude} className="img-fluid"/>
                             </MDBCol>
                             <MDBCol>
                                 <h1 style={{fontSize: '72'}} id='namePlainJoe'>{this.state.newcardinfo[mostRecent].newname}</h1>
