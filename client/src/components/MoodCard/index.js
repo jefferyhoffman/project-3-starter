@@ -1,6 +1,8 @@
 import React from "react";
 import { MDBCol, MDBRow, MDBCard, MDBCardUp, MDBCardBody, MDBAvatar, MDBIcon, MDBCardImage } from "mdbreact";
 import "./style.css";
+import AuthContext from "../../contexts/AuthContext";
+import API from '../../lib/API';
 
 const MoodCard = () => {
   return (

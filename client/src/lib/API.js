@@ -30,12 +30,20 @@ export default {
   },
 
   Newcardinfos: {
-    create: function (newname, company, newemail, website, phonenumber) {
-      return axios.post('/api/card/newcardinfos', { newname, company, newemail, website, phonenumber });
+    create: function (authToken, newname, company, newemail, website, phonenumber) {
+      return axios.post('/api/card/newcardinfos', { newname, company, newemail, website, phonenumber }, {
+        headers: {
+          'Authorization': `Bearer ${authToken}`
+        }
+      });
     },
 
-    getCards: function () {
-      return axios.get('/api/card/mycards');
+    getCards: function (authToken) {
+      return axios.get('/api/card/mycards', {
+        headers: {
+          'Authorization': `Bearer ${authToken}`
+        }
+      });
     }
   }
 }
