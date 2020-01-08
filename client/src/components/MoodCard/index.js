@@ -1,18 +1,8 @@
 import React, { Component } from "react";
-import {
-  MDBCol,
-  MDBRow,
-  MDBCard,
-  MDBCardUp,
-  MDBCardBody,
-  MDBAvatar,
-  MDBIcon,
-  MDBCardImage
-} from "mdbreact";
+import { MDBCol, MDBRow, MDBCard, MDBCardUp, MDBCardBody, MDBAvatar, MDBIcon, MDBCardImage } from "mdbreact";
 import "./style.css";
 import AuthContext from "../../contexts/AuthContext";
 import API from '../../lib/API';
-
 
 class MoodCard extends Component {
   static contextType = AuthContext;
@@ -47,31 +37,18 @@ class MoodCard extends Component {
     return (
       <React.Fragment>
         <MDBCol>
-          <MDBCard
-            className="just"
-            id="MoodCardBorder"
-            style={{ width: "45rem", height: "22.815rem" }}
-          >
+          <MDBCard className="just" id="MoodCardBorder" style={{ width: "45rem", height: "22.815rem" }}>
             <MDBCol>
               <MDBCardBody>
                 <MDBRow>
-                  <MDBCard
-                    id="CardBCGMood"
-                    style={{ width: "40rem", height: "17.8125rem" }}
-                  >
+                  <MDBCard id="CardBCGMood" style={{ width: "43rem", height: "20.5rem" }}>
                     <MDBCardBody className="white-text" id="cardBodyMood">
                       <MDBRow>
                         <MDBCol>
-                          <h1 style={{ fontSize: "72" }} id="nameMood">
-                            {this.state.newcardinfo[0].newname}
-                          </h1>
-                          <h1 style={{ fontSize: "72" }} id="companyMood">
-                            {this.state.newcardinfo[0].company}
-                          </h1>
+                          <h1 style={{ fontSize: "72" }} id="nameMood">{this.state.newcardinfo[0].newname}</h1>
+                          <h1 style={{ fontSize: "72" }} id="companyMood">{this.state.newcardinfo[0].company}</h1>
                           <p id="phoneMood">{this.state.newcardinfo[0].phonenumber}</p>
-                          <p id="emailMood">
-                            {this.state.newcardinfo[0].newemail}
-                          </p>
+                          <p id="emailMood">{this.state.newcardinfo[0].newemail}</p>
                           <p id="websiteMood">{this.state.newcardinfo[0].website}</p>
                         </MDBCol>
                       </MDBRow>

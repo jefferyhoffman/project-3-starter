@@ -6,9 +6,6 @@ import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
 import { Link, Redirect } from 'react-router-dom';
 
-
-
-
 class Signup extends Component {
   static contextType =  AuthContext;
     state = {
