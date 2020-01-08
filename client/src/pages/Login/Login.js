@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
+import FlashMessage from 'react-flash-message';
 
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
@@ -49,25 +50,27 @@ class Login extends Component {
     return (
       <div className='Login'>
         <div className='container'>
-        <div className='row'>
-          <div className='col'>
-            <h1>Login</h1>
-          </div>
-        </div>
-        {this.state.error &&
           <div className='row'>
             <div className='col'>
-              <div className='alert alert-danger mb-3' role='alert'>
-                {this.state.error}
-              </div>
+              <h1>Login</h1>
             </div>
-          </div>}
-        <div className='row'>
-          <div className='col'>
-            <LoginForm onSubmit={this.handleSubmit} />
-            <div className='mt-3'>Don't have an account? <Link to='/register'>Click here to register.</Link></div>
           </div>
-        </div>
+          {this.state.error &&
+            <div className='row'>
+              <div className='col'>
+                <FlashMessage duration={3000}>
+                  <div className='alert alert-danger mb-3' role='alert'>
+                    {this.state.error}
+                  </div>
+                </FlashMessage>
+              </div>
+            </div>}
+          <div className='row'>
+            <div className='col'>
+              <LoginForm onSubmit={this.handleSubmit} />
+              <div className='mt-3'>Don't have an account? <Link to='/register'>Click here to register.</Link></div>
+            </div>
+          </div>
         </div>
       </div>
     );
