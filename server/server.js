@@ -20,7 +20,7 @@ const mongoose = require('mongoose');
 const { passport } = require('./lib/passport');
 
 //-- Constants ---------------------------------------------------------------
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3001;
 const LOG_MODE = process.env.NODE_ENV === 'production' ? 'common' : 'dev';
 
 //-- Express -----------------------------------------------------------------
@@ -40,6 +40,7 @@ app.use(logger(LOG_MODE));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(passport.initialize());
+
 
 //-- Static Server (Production) ----------------------------------------------
 if (process.env.NODE_ENV === 'production') {

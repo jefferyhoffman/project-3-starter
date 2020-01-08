@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Redirect } from "react-router-dom";
 import AuthContext from "../../contexts/AuthContext";
+import Form from "../Form/index";
 
 const Employee = () => {
     const { user }  = useContext(AuthContext);
@@ -9,7 +10,7 @@ const Employee = () => {
         return <Redirect to = "/" />
     }
 
-    return <h1>Hello Employee</h1>;
+    return <Form />;
 };
 
-export default Employee
+export default Employee;

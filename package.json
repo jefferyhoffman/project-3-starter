@@ -17,6 +17,7 @@
   "devDependencies": {
     "concurrently": "^4.1.0",
     "nodemon": "^1.18.10"
+<<<<<<< HEAD
   },
   "dependencies": {
     "multer": "^1.4.2"
@@ -31,4 +32,7 @@
     "url": "https://github.com/GTJ82/project-3-starter/issues"
   },
   "homepage": "https://github.com/GTJ82/project-3-starter#readme"
+=======
+  }
+>>>>>>> b755eddcae44ad026c2c65342e333ed534b0895f
 }
