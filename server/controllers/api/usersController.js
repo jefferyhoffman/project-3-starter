@@ -1,5 +1,5 @@
 const usersController = require('express').Router();
-
+const mongoose = require('mongoose')
 const db = require('../../models');
 const { JWTVerifier } = require('../../lib/passport');
 const jwt = require('jsonwebtoken');
@@ -42,6 +42,13 @@ usersController.post('/login', (req, res) => {
 });
 usersController.put('/', JWTVerifier, (req, res)=>{
   console.log(req.body)
-})
+
+  db.Users.findByIdAndUpdate({_id:req.body.user}, {$set:{ role: req.body.role} })
+    .then(users => {
+      console.log(users)
+      res.json(users)})
+    .catch(err => console.log(err));
+}
+);
 
 module.exports = usersController;
