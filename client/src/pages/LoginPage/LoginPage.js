@@ -52,7 +52,7 @@ class SignIn extends Component {
       }
   
       return (
-        <div className="mainPageColor"> 
+        <div id="loginPageColor"> 
             <React.Fragment>
                 <br />
                 <MDBContainer>
