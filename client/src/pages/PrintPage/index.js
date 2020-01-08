@@ -8,17 +8,28 @@ const PrintPage = () => {
     return (
         <div>
             <React.Fragment>
-                <MDBRow>
+                <MDBRow id='printPagePadding'>
                     <MDBCol className='d-flex justify-content-center'>
-                        <p>Don't be so kind</p>
-                        <MoodCardSmall />
-                        <p>If you say so</p>
+                        <MoodCardSmall className='float-left'/>
+                        <MoodCardSmall className='float-left'/>
                     </MDBCol>
                 </MDBRow>
-                <MDBRow>
+                <MDBRow id='printPagePadding'>
                     <MDBCol className='d-flex justify-content-center'>
-                        <p>Don't be so kind</p>
-                        <p>If you say so</p>
+                        <MoodCardSmall className='float-left'/>
+                        <MoodCardSmall className='float-left'/>
+                    </MDBCol>
+                </MDBRow>
+                <MDBRow id='printPagePadding'>
+                    <MDBCol className='d-flex justify-content-center'>
+                        <MoodCardSmall className='float-left'/>
+                        <MoodCardSmall className='float-left'/>
+                    </MDBCol>
+                </MDBRow>
+                <MDBRow id='printPagePadding'>
+                    <MDBCol className='d-flex justify-content-center'>
+                        <MoodCardSmall className='float-left'/>
+                        <MoodCardSmall className='float-left'/>
                     </MDBCol>
                 </MDBRow>
             </React.Fragment>
