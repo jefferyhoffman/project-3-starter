@@ -5,7 +5,7 @@ import AuthContext from "../../contexts/AuthContext";
 import API from '../../lib/API';
 
 class MoodCard extends Component {
-  static contextType = AuthContext;
+static contextType = AuthContext;
 
   state = {
     isLoading: true,
@@ -26,13 +26,14 @@ class MoodCard extends Component {
   }
 
   render() {
-    const { user } = this.context;
+  const { user } = this.context;
 
     if(!user || this.state.isLoading){
       return(
         <h1>loading ...</h1>
       )
     }
+    
     const qrCode = 
         "http://api.qrserver.com/v1/create-qr-code/?size=50x50&data=";
     const mostRecent = this.state.newcardinfo.length - 1; 
