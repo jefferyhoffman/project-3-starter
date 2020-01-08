@@ -28,50 +28,42 @@ class UserDash extends Component {
     }
   
     render() {
-      const { user } = this.context;
-        return (
-            <div className="mainBodyColor">
-                <React.Fragment>
+    const { user } = this.context;
+      return (
+        <div className="mainBodyColor">
+            <React.Fragment>
+                <br />
+                <strong>
+                <h1 className="text-left dashHeader">DashBoard</h1>
+                </strong>
+                <MDBContainer>
                     <br />
-                    <strong>
-                    <h1 className="text-left dashHeader">DashBoard</h1>
-                    </strong>
-                    <MDBContainer>
-                        <br />
-                        <br />
-                        <br />
-                        <MDBRow>
-                            <MDBCol>
-                                <UserCard />
-                            </MDBCol>
-                            <MDBCol>
-                                <br/>
-                                <br/>
-                                <br/>
-                                <div className="text-left sideNav">
-                                <MDBNavLink to="/Studio"><h3 className="sideNavText">Design Studio</h3></MDBNavLink>
-                                <br/>
-                                <MDBNavLink to="/Studio"><h3 className="sideNavText">Saved Designs</h3></MDBNavLink>
-                                <br/>
-                                <MDBNavLink to="/Studio"><h3 className="sideNavText">{ user ? user.name : "User" }'s Profile</h3></MDBNavLink>
-                                <br/>
-                                <MDBNavLink to="/Studio"><h3 className="sideNavText">Tutorial</h3></MDBNavLink>
-                                </div>
-                            </MDBCol>
-                        </MDBRow>
-                    </MDBContainer>
-                </React.Fragment>
-    
-            </div>
-        );
-    
+                    <br />
+                    <br />
+                    <MDBRow>
+                        <MDBCol>
+                            <UserCard />
+                        </MDBCol>
+                        <MDBCol>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <div className="text-left sideNav">
+                            <MDBNavLink to="/Studio"><h3 className="sideNavText">Design Studio</h3></MDBNavLink>
+                            <br/>
+                            <MDBNavLink to="/Studio"><h3 className="sideNavText">Saved Designs</h3></MDBNavLink>
+                            <br/>
+                            <MDBNavLink to="/Studio"><h3 className="sideNavText">{ user ? user.name : "User" }'s Profile</h3></MDBNavLink>
+                            <br/>
+                            <MDBNavLink to="/Studio"><h3 className="sideNavText">Tutorial</h3></MDBNavLink>
+                            </div>
+                        </MDBCol>
+                    </MDBRow>
+                </MDBContainer>
+            </React.Fragment>
+        </div>
+      );
     }
   }
-
-
-
-
-
-
 
 export default UserDash;
