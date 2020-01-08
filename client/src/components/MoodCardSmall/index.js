@@ -5,7 +5,7 @@ import AuthContext from "../../contexts/AuthContext";
 import API from '../../lib/API';
 
 class MoodCardSmall extends Component {
-  static contextType = AuthContext;
+static contextType = AuthContext;
 
   state = {
     isLoading: true,
@@ -25,7 +25,6 @@ class MoodCardSmall extends Component {
       .finally(() => this.setState({ isLoading: false }));
   }
 
-
   render() {
     const { user } = this.context;
 
@@ -34,6 +33,10 @@ class MoodCardSmall extends Component {
         <h1>loading ...</h1>
       )
     }
+
+    const qrCode = 
+        "http://api.qrserver.com/v1/create-qr-code/?size=50x50&data=";
+    const mostRecent = this.state.newcardinfo.length - 1;
 
     return (
       <React.Fragment>
@@ -46,11 +49,11 @@ class MoodCardSmall extends Component {
                     <MDBCardBody className="white-text" id="cardBodyMoodSmall">
                       <MDBRow>
                         <MDBCol>
-                          <h1 id="nameAndCompanyMoodSmall">{this.state.newcardinfo[0].newname}</h1>
-                          <h1 id="nameAndCompanyMoodSmall">{this.state.newcardinfo[0].company}</h1>
-                          <p id="textMoodSmall">{this.state.newcardinfo[0].phonenumber}</p>
-                          <p id="textMoodSmall">{this.state.newcardinfo[0].newemail}</p>
-                          <p id="textMoodSmall">{this.state.newcardinfo[0].website}</p>
+                          <h1 id="nameAndCompanyMoodSmall">{this.state.newcardinfo[mostRecent].newname}</h1>
+                          <h1 id="nameAndCompanyMoodSmall">{this.state.newcardinfo[mostRecent].company}</h1>
+                          <p id="textMoodSmall">{this.state.newcardinfo[mostRecent].phonenumber}</p>
+                          <p id="textMoodSmall">{this.state.newcardinfo[mostRecent].newemail}</p>
+                          <p id="textMoodSmall"><img src={qrCode + encodeURIComponent(this.state.newcardinfo[mostRecent].website)} /></p>
                         </MDBCol>
                       </MDBRow>
                     </MDBCardBody>
