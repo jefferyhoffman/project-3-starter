@@ -33,12 +33,4 @@ usersController.post('/LoginPage', (req, res) => {
     });
 });
 
-usersController.post('/newcardinfos', (req, res) => {
-  const { newname, company, newemail, website, phonenumber } = req.body;
-  console.log(newname, company, newemail, website, phonenumber, "<====================================")
-  db.Newcardinfo.create({ newname, company, newemail, website, phonenumber })
-  .then(user => res.json(user))
-  .catch(err => res.json(err));
-})
-
 module.exports = usersController;

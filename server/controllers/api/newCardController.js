@@ -12,6 +12,10 @@ newCardController.post('/newcardinfos', (req, res) => {
   db.Newcardinfo.create({ newname, company, newemail, website, phonenumber })
   .then(user => res.json(user))
   .catch(err => res.json(err));
-})
+});
+
+newCardController.get('/mycards', (req, res) => {
+  res.json(req.newcardinfo);
+});
 
 module.exports = newCardController;

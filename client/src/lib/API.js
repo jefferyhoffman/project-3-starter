@@ -35,7 +35,7 @@ export default {
     },
 
     getCards: function () {
-      return axios.get('/api/Studio/myCards');
+      return axios.get('/api/card/mycards');
     }
   }
 }
