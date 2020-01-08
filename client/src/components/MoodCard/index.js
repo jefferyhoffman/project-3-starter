@@ -63,16 +63,16 @@ class MoodCard extends Component {
                       <MDBRow>
                         <MDBCol>
                           <h1 style={{ fontSize: "72" }} id="nameMood">
-                            {user.name}
+                            {this.state.newcardinfo[0].newname}
                           </h1>
                           <h1 style={{ fontSize: "72" }} id="companyMood">
-                            HR Inovations Incorporated
+                            {this.state.newcardinfo[0].company}
                           </h1>
                           <p id="phoneMood">{this.state.newcardinfo[0].phonenumber}</p>
                           <p id="emailMood">
                             {this.state.newcardinfo[0].newemail}
                           </p>
-                          <p id="websiteMood">Futurum-est-nostrum.com</p>
+                          <p id="websiteMood">{this.state.newcardinfo[0].website}</p>
                         </MDBCol>
                       </MDBRow>
                     </MDBCardBody>
