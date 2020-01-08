@@ -2,7 +2,8 @@ import React, { Component } from "react";
 
 // import logo from "./logo.svg";
 // import MainGrass from "../../images/MainGrass.jpg";
-import overlayImage1 from "../../images/rotatedTransparentSaw.png";
+// import overlayImage1 from "../../images/rotatedTransparentSaw.png";
+import overlayImage1 from "../../images/BGM_LOGO_10.11.17_1038697311177295.png";
 
 class HomePage extends Component {
   render() {
@@ -13,7 +14,7 @@ class HomePage extends Component {
             <div className="row">
               <div className="centeredContent">
                 <img className="overlayImage" src={overlayImage1} />
-                <h1 className="phrase">Your Commercial Landscaping Company!</h1>
+                <h1 className="phrase">Charlotte & Surrounding Area's Premier Commercial Landscaping Company</h1>
               </div>
             </div>
           </div>
