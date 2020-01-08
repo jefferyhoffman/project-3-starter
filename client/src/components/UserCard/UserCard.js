@@ -4,6 +4,8 @@ import guy from '../../images/Linus-Torvalds-2012.jpg'
 import cardTopImg from '../../images/mulitsymbols.png'
 import "./style.css"
 import AuthContext from '../../contexts/AuthContext';
+import Gravatar from 'react-gravatar';
+
 
 
 class UserCard extends Component {
@@ -27,11 +29,13 @@ render() {
         <MDBRotatingCard flipped={this.state.flipped} className="text-center h-100 w-100" style={colStyle}>
           <MDBCard className="face front shadow-lg">
             <MDBCardUp>
-              <img className="card-img-top" src={cardTopImg} alt="" />
+            <img className="card-img-top" src={cardTopImg} alt="" />
             </MDBCardUp>
             <MDBAvatar className="mx-auto white" circle>
 
-              <img src={guy} alt="" className="rounded-circle" />
+              {/*<img src={guy} alt="" className="rounded-circle" />*/}
+              <Gravatar className="rounded-circle" email={user ? user.email : "loading ...."} size={30} />
+
             </MDBAvatar>
             <MDBCardBody>
               <h4 className="font-weight-bold mb-3">{ user ? user.name : "loading..." }</h4>
