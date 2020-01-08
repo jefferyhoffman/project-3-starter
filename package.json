@@ -20,5 +20,15 @@
   },
   "dependencies": {
     "multer": "^1.4.2"
-  }
+  },
+  "description": "*All models are imported too and exported out of index*",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GTJ82/project-3-starter.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/GTJ82/project-3-starter/issues"
+  },
+  "homepage": "https://github.com/GTJ82/project-3-starter#readme"
 }
