@@ -38,6 +38,7 @@ class Secret extends Component {
                 : <div>
                   <p>Shh, the secret is...</p>
                   <p><em>{this.state.secrets[0].message}</em></p>
+                  <h1>HElllooooooooooo</h1>
                 </div>}
           </div>
         </div>

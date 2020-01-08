@@ -1,0 +1,12 @@
+#CardBCGMood {
+    background-image: url(../../images/blackslate.jpg);
+
+}
+#MoodCardBorder {
+    background-image: url(../../images/white-waves.png);
+}
+#cardBodyMood {
+    font-family: 'Maven Pro', sans-serif;
+}
+#companyBodyMood {
+}

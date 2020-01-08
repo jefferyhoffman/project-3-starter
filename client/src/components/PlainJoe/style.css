@@ -1,0 +1,24 @@
+#CardBCGPlainJoe {
+    background-image: url(../../images/newMarble.jpg);
+    background-size: 150%;
+    background-repeat: no-repeat;
+}
+
+#namePlainJoe {
+    padding-right: 55px;
+}
+#emailPlainJoe {
+    padding-right: 55px;
+}
+#phonePlainJoe {
+    padding-right: 55px;
+}
+#websitePlainJoe {
+    padding-right: 55px;
+}
+#companyPlainJoe {
+    padding-right: 55px;
+}
+#cardBodyPlainJoe {
+    font-family: 'Baskervville', serif;
+}
