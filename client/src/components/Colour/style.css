@@ -8,3 +8,37 @@
 
 }
 
+
+.topLogoPadding {
+ padding-top: 100px;
+}
+
+.colorMainPadding {
+    padding-top: 15px;
+}
+
+.nameColour {
+    font-family: 'Pacifico', cursive;
+}
+
+.fontColourp {
+    font-family: 'Satisfy', cursive;
+    padding-top: 20px;
+}
+
+.colorCompName{
+padding-right: 200px ;
+}
+
+.colorEmail{
+padding-right: 100px;
+}
+
+.colorWebsite{
+    padding-right: 120px ;
+}
+
+.colorPhone{
+    padding-right: 90px ;
+}
+

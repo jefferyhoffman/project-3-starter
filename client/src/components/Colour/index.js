@@ -34,23 +34,32 @@ class Colour extends Component {
         return (
             <React.Fragment>
             <MDBCol>
-                <MDBCard id="HH" style={{width:"45rem", height: "22.8125rem"}}>
-                    <MDBCardBody className="ColourBody">
+                <MDBCard id="HH" className="ColourBody" style={{width:"45rem", height: "22.8125rem"}}>
                         <MDBRow>
                             <MDBCol>
-                            <MDBCard>
-                            <MDBCardBody className="logoSideColour">
-                            <img src={logo}></img>
-                            </MDBCardBody>
-                        </MDBCard>
+                            <MDBCard style={{width: "300px"}}>
+                                <MDBCardBody className="logoSideColour rounded topLogoPadding" style={{height: "22.8125rem"}}>
+                                <img src={logo}></img>
+                                </MDBCardBody>
+                            </MDBCard>
                             </MDBCol>
-                            <MDBCol></MDBCol>
+                            <MDBCol>
+                            <div className="text-white">
+                                    <h2 className="nameColour colorMainPadding">John Parker Hodges</h2>
+                                    <div className="fontColourp">
+                                    <strong>
+                                    <p className="colorCompName">JP Designs</p>
+                                    <p className="colorEmail">johnparker@jphodges.io</p>
+                                    <p className="colorWebsite">jphodges.io</p>
+                                    <p className="colorPhone">561-531-2134</p>
+                                    </strong>
+                                    </div>
+                            </div>
+                            </MDBCol>
                         </MDBRow>
-                    </MDBCardBody>
                 </MDBCard>
             </MDBCol>
-            </React.Fragment>
-        )
+            </React.Fragment>        )
     }
 }
 
