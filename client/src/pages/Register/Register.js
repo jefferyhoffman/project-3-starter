@@ -13,8 +13,8 @@ class Register extends Component {
     error: ""
   }
 
-  handleSubmit = (email, password) => {
-    API.Users.create(email, password)
+  handleSubmit = (firstName, lastName, email, password) => {
+    API.Users.create(firstName, lastName, email, password)
       .then(response => {
         this.setState({ redirectToReferrer: true })
       })
