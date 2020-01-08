@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+
+import AuthContext from '../../contexts/AuthContext';
 
 import API from '../../lib/API';
 import TokenStore from '../../lib/TokenStore';
-import AuthContext from '../../contexts/AuthContext';
-import Navigation from '../../components/Navigation/Navigation';
+import UserDash from '../../pages/UserDash/UserDash';
+import Index from "../../pages/Index";
+import SignIn from "../../pages/LoginPage/LoginPage";
+import SignUp from "../../pages/SignupPage/index";
+import Studio from "../../pages/Studio/index"
+import Results from '../../pages/Results'
+import Finale from '../../pages/Final'
+
 import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
-import Home from '../../pages/Home/Home';
-import Login from '../../pages/Login/Login';
-import Register from '../../pages/Register/Register';
-import Secret from '../../pages/Secret/Secret';
-import NotFound from '../../pages/NotFound/NotFound';
 
 import './App.css';
 
@@ -52,18 +56,18 @@ class App extends Component {
     return (
       <AuthContext.Provider value={this.state.auth}>
         <div className='App'>
-          <Navigation />
-          <div className='container'>
             <Switch>
-              <Route exact path='/' component={Home} />
-              <Route path='/login' component={Login} />
-              <Route path='/register' component={Register} />
-              <PrivateRoute path='/secret' component={Secret} />
-              <Route component={NotFound} />
+            <Route exact path="/" component={Index} />
+            <Route exact path="/UserDash" component={UserDash} />
+            <Route exact path="/LoginPage" component={SignIn} />
+            <Route exact path="/SignupPage" component={SignUp}/>
+            <Route exact path="/Studio" component={Studio}/>
+            <Route exact path="/Results" component={Results}/>
+            <Route exact path="/Final" component={Finale}/>
             </Switch>
-          </div>
         </div>
       </AuthContext.Provider>
+
     );
   }
 }

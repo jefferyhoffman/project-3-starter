@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
 
-import RegistrationForm from '../../components/RegistrationForm/RegistrationForm';
+import RegistrationForm from '../../components/SignupForm/index';
 import API from '../../lib/API';
+
 
 class Register extends Component {
   state = {
     error: ""
   }
 
-  handleSubmit = (email, password, confirm) => {
+  handleSubmit = (email, name, password, confirm) => {
     if (password !== confirm) {
       return this.setState({ error: "Passwords do not match." });
     }
 
-    API.Users.create(email, password)
+    API.Users.create(email, name, password)
       .then(response => response.data)
       .then(user => console.log(user))
       .catch(err => this.setState({ error: err.message }));
