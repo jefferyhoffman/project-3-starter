@@ -1,20 +1,28 @@
 import React, { Component } from 'react';
 import { MDBCol, MDBRow, MDBCard, MDBCardUp, MDBCardBody, MDBAvatar, MDBIcon, MDBCardImage } from "mdbreact";
-import dude from "../../images/final-body.png"
-import women from "../../images/women2.png"
-import "./style.css"
+import dude from "../../images/final-body.png";
+import women from "../../images/women2.png";
+import "./style.css";
 import API from '../../lib/API';
+import AuthContext from "../../contexts/AuthContext";
 
 
 class PlainJane extends Component {
+    static contextType = AuthContext;
     state = {
         isLoading: true,
-        error: ""
+        error: "",
+        newname: "",
+        company: "",
+        newemail: "",
+        website: "",
+        phonenumber: ""
     }
 
     componentDidMount() {
-        API.Newcardinfos.getCards()
+        API.Newcardinfos.getCards(this.context.authToken)
             .then(response => response.data)
+            .then(info => this.setState({ info }))
             .catch(err => {
                 if (err) {
                     return this.setState({ error: "Error in create card" });
@@ -35,9 +43,9 @@ class PlainJane extends Component {
                             </MDBCol>
                             <MDBCol>
                                 <div>
-                                <h2 id="BisJane">Name:</h2>
+                                <h2 id="BisJane" value={newname}>{this.state.newname}</h2>
                                 <div id="pFont">
-                                <p className="GenPadding text-left" id="NameJane">Company Name:</p>
+        <p className="GenPadding text-left" id="NameJane" value={company}>Company Name: {this.state.company}</p>
                                 <p className="text-left GenPadding" id="EmailJane">Email:</p>
                                 <p className="text-left GenPadding"id="WebsiteJane">Website:</p>
                                 <p className="text-left GenPadding"id="phoneJane">Phone:</p>
