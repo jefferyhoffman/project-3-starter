@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import './navigation.css';
 import AuthContext from '../../contexts/AuthContext';
 import AuthDropdown from '../../components/AuthDropdown/AuthDropdown';
-import logo from "../../images/BGM-logo.jpg"
+import logo from "../../images/BGM_LOGO_10.11.17_1038697311177295.png"
 
 class Navigation extends Component {
   static contextType = AuthContext;

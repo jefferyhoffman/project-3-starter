@@ -41,7 +41,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-55%, -50%);
+  transform: translate(-50%, -50%);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -49,37 +49,45 @@
 }
 
 .overlayImage {
-  transform: rotateZ(-40deg);
+  /* transform: rotateZ(-40deg); */
   height: 50%;
   width: 70%;
   bottom: 20px;
+  /* opacity: 50%; */
+  background-blend-mode: overlay;
+  position: relative;
+  top: 170px;
 }
 
 .phrase{
-  width: 30%;
+  width: 50%;
   font-size: 40px;
   /* background-color: rgba(216, 191, 216, 0.5); */
-  padding: 16px;
+  /* padding: 16px; */
   /* width: 40%; */
   margin-top: 20px;
-  font-weight: 700;
+  font-weight: 550;
   color: white;
   margin-top: 20%;
+  font-family: alternate-gothic-no-3-d;
+  line-height: 40px;
+  
 }
 
 .mission{
   /* width: 30%; */
   font-size: 23px;
-  background-color: rgba(216, 191, 216, 0.6);
+  background-color: rgba(216, 191, 216, 0.829);
   padding: 16px;
-  font-weight: 500;
-  
+  font-weight: 700;
+  font-family: alternate-gothic-no-3-d;
+  border-radius: 40px;
  
 }
 
-.Home {
+/* .mainContent {
   margin-top: 150px;
-}
+} */
 
 .parallax {
   background-attachment: fixed;
@@ -93,13 +101,13 @@
 }
 
 .parallax-1 {
-  background-image: url("../../images/MainGrass.jpg");
+  background-image: url("../../images/grass-cut-image2.jpg");
   min-height: 700px;
 }
 
 .parallax-2 {
-  background-image: url("../../images/grass-cut-image2.jpg");
-  min-height: 700px;
+  background-image: url("../../images/MainGrass.jpg");
+  min-height: 900px;
 }
 
 .parallax-3 {
@@ -107,3 +115,32 @@
   min-height: 700px;
 }
 
+
+.navbar {
+  background-color: #ffffffa8;
+ height: 150px;
+ position: fixed;
+ top: 0;
+ width: 100vw;
+ box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.43);
+ z-index: 10;
+}
+
+
+.nav-link {
+  font-size: x-large;
+  color: black;
+  font-family: alternate-gothic-no-3-d;
+}
+
+.logo {
+  
+  height: 100px;
+  display: block;
+  justify-content: center;
+ 
+}
+
+.Login{
+  margin-top: 165px;
+}
