@@ -1,85 +1,38 @@
 import React, { Component } from 'react';
 
+class Form extends Component {
+  state = {
+    property: ["2020 Main St", "100 Washington Ave", "450 West Blvd", "1330 Green St", "78 Bigsby Rd"],
+    date: "",
+    time: "",
+    task: "",
+    comments: ""
+  };
 
+  render() {
+    return (
+      <div>
+        
+        <div class="dropdown">
+          <button class="dropbtn">Dropdown
+          <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            {this.state.property.map(property => (
+              <p>{property}</p>
+            ))}
+          </div>
+        </div>
 
-function Client() {
-    // Setting our component's initial state
-    const [client, setClient] = useState([])
-    const [formObject, setFormObject] = useState({})
-  
-    // Load all books and store them with setBooks
-    useEffect(() => {
-      loadClientInfo()
-    }, [])
-  
-    // Loads all books and sets them to books
-    function loadClientInfo() {
-      API.getBooks()
-        .then(res => 
-          setClient(res.data)
-        )
-        .catch(err => console.log(err));
-    };
-  
-      return (
-        <Container fluid>
-          <Row>
-            <Col size="md-6">
-              <Jumbotron>
-                <h1>Property Information</h1>
-              </Jumbotron>
-              <form>
-                <TextArea
-                  onChange={handleInputChange}
-                  name="date"
-                  placeholder="Date (required)"
-                />
-                <TextArea
-                  onChange={handleInputChange}
-                  name="task"
-                  placeholder="Task (required)"
-                />
-                {/* <TextArea
-                  onChange={handleInputChange}
-                  name=""
-                  placeholder="Synopsis (Optional)"
-                /> */}
-                <FormBtn
-                  disabled={!(formObject.author && formObject.title)}
-                  onClick={handleFormSubmit}
-                >
-                  Submit Book
-                </FormBtn>
-              </form>
-            </Col>
-            <Col size="md-6 sm-12">
-              <Jumbotron>
-                <h1>Books On My List</h1>
-              </Jumbotron>
-              {books.length ? (
-                <List>
-                  {Client.map(book => {
-                    return (
-                      <ListItem key={book._id}>
-                        <a href={"/books/" + book._id}>
-                          <strong>
-                            {book.title} by {book.author}
-                          </strong>
-                        </a>
-                        <DeleteBtn onClick={() => deleteBook(book._id)} />
-                      </ListItem>
-                    );
-                  })}
-                </List>
-              ) : (
-                <h3>No Results to Display</h3>
-              )}
-            </Col>
-          </Row>
-        </Container>
-      );
-    }
-  
-  
-  export default Client;
-  
+        <input
+          value={this.state.comments}
+          name="comments"
+          onChange={this.handleInputChange}
+          type="text"
+          placeholder="Comments"
+        />
+        <button onClick={this.handleFormSubmit}>Submit</button>
+      </div>
+    );
+  }
+}
