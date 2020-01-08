@@ -6,8 +6,8 @@ export default {
       return axios.post('/api/users/login', { email, password });
     },
 
-    create: function (email, password) {
-      return axios.post('/api/users', { email, password });
+    create: function (firstName, lastName, email, password) {
+      return axios.post('/api/users', { firstName, lastName, email, password });
     },
 
     getMe: function (authToken) {
@@ -16,6 +16,9 @@ export default {
           'Authorization': `Bearer ${authToken}`
         }
       });
+    },
+    getAll: function () {
+      return axios.get('/api/users');
     }
   },
 

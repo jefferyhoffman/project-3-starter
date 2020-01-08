@@ -60,9 +60,13 @@ class Navigation extends Component {
                 <li className='nav-item'>
                   <Link className='nav-link' to='/admin' onClick={this.toggleCollapse}>Admin</Link>
                 </li>}
-                {user && user.role === "Employee" &&
+              {user && user.role === "Employee" &&
                 <li className='nav-item'>
                   <Link className='nav-link' to='/employee' onClick={this.toggleCollapse}>Employee</Link>
+                </li>}
+              {user && user.role === "Client" &&
+                <li className='nav-item'>
+                  <Link className='nav-link' to='/client' onClick={this.toggleCollapse}>Client</Link>
                 </li>}
               {user
                 ? <AuthDropdown onClick={this.toggleCollapse} />
