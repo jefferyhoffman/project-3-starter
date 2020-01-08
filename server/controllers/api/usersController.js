@@ -40,5 +40,8 @@ usersController.post('/login', (req, res) => {
       });
     });
 });
+usersController.put('/', JWTVerifier, (req, res)=>{
+  console.log(req.body)
+})
 
 module.exports = usersController;
