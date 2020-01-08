@@ -23,7 +23,7 @@ module.exports = {
       website: {
         type: Sequelize.STRING
       },
-      userId: {
+      UserId: {
         type: Sequelize.INTEGER
       },
       createdAt: {
