@@ -53,7 +53,7 @@ class Signup extends Component {
                 </MDBContainer>
             </React.Fragment>
         </div>
-          )
+      )
     }  
   }
 
