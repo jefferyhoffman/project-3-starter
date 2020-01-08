@@ -4,6 +4,13 @@ const db = require('../../models');
 const { JWTVerifier } = require('../../lib/passport');
 const jwt = require('jsonwebtoken');
 
+usersController.get('/', (req, res) => {
+  db.Users.find()
+    .then(users => {
+      return res.json({ users })
+    })
+});
+
 usersController.post('/', (req, res) => {
   const { email, password } = req.body;
 
