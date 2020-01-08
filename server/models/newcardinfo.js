@@ -1,4 +1,5 @@
 'use strict';
+
 module.exports = (sequelize, DataTypes) => {
   const Newcardinfo = sequelize.define('Newcardinfo', {
     newname: DataTypes.STRING,

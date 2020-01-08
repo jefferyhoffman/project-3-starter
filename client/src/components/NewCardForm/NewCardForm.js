@@ -103,7 +103,7 @@ class NewCardForm extends Component {
                                 </div>
                                 <div className="text-center py-4 mt-3">
                                     <MDBBtn color="orange" rounded type="submit">
-                                        Create Card
+                                        Create Cards
                                     </MDBBtn>
                                 </div>
                             </form>
