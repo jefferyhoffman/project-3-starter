@@ -26,24 +26,24 @@ function Client() {
           <Row>
             <Col size="md-6">
               <Jumbotron>
-                <h1>What Books Should I Read?</h1>
+                <h1>Property Information</h1>
               </Jumbotron>
               <form>
-                <Input
+                <TextArea
                   onChange={handleInputChange}
-                  name="title"
-                  placeholder="Title (required)"
-                />
-                <Input
-                  onChange={handleInputChange}
-                  name="author"
-                  placeholder="Author (required)"
+                  name="date"
+                  placeholder="Date (required)"
                 />
                 <TextArea
                   onChange={handleInputChange}
-                  name="synopsis"
-                  placeholder="Synopsis (Optional)"
+                  name="task"
+                  placeholder="Task (required)"
                 />
+                {/* <TextArea
+                  onChange={handleInputChange}
+                  name=""
+                  placeholder="Synopsis (Optional)"
+                /> */}
                 <FormBtn
                   disabled={!(formObject.author && formObject.title)}
                   onClick={handleFormSubmit}
