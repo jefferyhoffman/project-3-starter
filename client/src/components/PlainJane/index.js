@@ -32,6 +32,8 @@ class PlainJane extends Component {
     }
 
     render() {
+        const { user } = this.context;
+
         return (
             <React.Fragment>
             <MDBCol>
@@ -43,9 +45,9 @@ class PlainJane extends Component {
                             </MDBCol>
                             <MDBCol>
                                 <div>
-                                <h2 id="BisJane" value={newname}>{this.state.newname}</h2>
+                                <h2 id="BisJane">{user}</h2>
                                 <div id="pFont">
-        <p className="GenPadding text-left" id="NameJane" value={company}>Company Name: {this.state.company}</p>
+                                <p className="GenPadding text-left" id="NameJane">Company Name: {user}</p>
                                 <p className="text-left GenPadding" id="EmailJane">Email:</p>
                                 <p className="text-left GenPadding"id="WebsiteJane">Website:</p>
                                 <p className="text-left GenPadding"id="phoneJane">Phone:</p>
