@@ -4,10 +4,19 @@ const db = require('../../models');
 const { JWTVerifier } = require('../../lib/passport');
 const jwt = require('jsonwebtoken');
 
-usersController.post('/', (req, res) => {
-  const { email, password } = req.body;
+usersController.get('/', (req, res) => {
+  db.Users.find()
+    .then(users => {
+      return res.json({ users })
+    })
+});
 
-  db.Users.create({ email, password })
+usersController.post('/', (req, res) => {
+  const { firstName, lastName, email, password } = req.body;
+
+  console.log("BODY===============================", req.body)
+
+  db.Users.create({ firstName, lastName, email, password })
     .then(user => res.json(user))
     .catch(err => res.json(err));
 });
@@ -19,7 +28,7 @@ usersController.get('/me', JWTVerifier, (req, res) => {
 usersController.post('/login', (req, res) => {
   const { email, password } = req.body;
 
-  db.Users.findOne({ where: { email } })
+  db.Users.findOne({ email })
     .then(user => {
       if (!user || !user.comparePassword(password)) {
         return res.status(401).send("Unauthorized");

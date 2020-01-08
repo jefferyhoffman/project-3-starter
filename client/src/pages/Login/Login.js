@@ -48,6 +48,7 @@ class Login extends Component {
 
     return (
       <div className='Login'>
+        <div className='container'>
         <div className='row'>
           <div className='col'>
             <h1>Login</h1>
@@ -66,6 +67,7 @@ class Login extends Component {
             <LoginForm onSubmit={this.handleSubmit} />
             <div className='mt-3'>Don't have an account? <Link to='/register'>Click here to register.</Link></div>
           </div>
+        </div>
         </div>
       </div>
     );

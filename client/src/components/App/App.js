@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
+import Admin from '../../pages/Admin/Admin';
 import API from '../../lib/API';
 import TokenStore from '../../lib/TokenStore';
 import AuthContext from '../../contexts/AuthContext';
@@ -11,6 +12,8 @@ import Login from '../../pages/Login/Login';
 import Register from '../../pages/Register/Register';
 import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
+import Employee from "../../pages/Employee/Employee";
+import Client from "../../pages/Client/Client";
 
 import './App.css';
 
@@ -53,15 +56,19 @@ class App extends Component {
       <AuthContext.Provider value={this.state.auth}>
         <div className='App'>
           <Navigation />
-          <div className='container'>
+          <div className="mainContent">
             <Switch>
               <Route exact path='/' component={Home} />
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />
               <PrivateRoute path='/secret' component={Secret} />
+              <PrivateRoute path='/admin' component={Admin} />
+              <PrivateRoute path='/employee' component={Employee} />
+              <PrivateRoute path='/client' component={Client} />
               <Route component={NotFound} />
             </Switch>
           </div>
+          {/* </div> */}
         </div>
       </AuthContext.Provider>
     );
