@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Redirect } from "react-router-dom";
 import AuthContext from "../../contexts/AuthContext";
-import Form from "../Form/index";
+import Form from "../InputForm/index";
 
 const Employee = () => {
     const { user }  = useContext(AuthContext);
