@@ -12,9 +12,11 @@ usersController.get('/', (req, res) => {
 });
 
 usersController.post('/', (req, res) => {
-  const { email, password } = req.body;
+  const { firstName, lastName, email, password } = req.body;
 
-  db.Users.create({ email, password })
+  console.log("BODY===============================", req.body)
+
+  db.Users.create({ firstName, lastName, email, password })
     .then(user => res.json(user))
     .catch(err => res.json(err));
 });
