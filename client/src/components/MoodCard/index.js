@@ -24,7 +24,8 @@ class MoodCard extends Component {
 
   componentDidMount() {
     API.Newcardinfos.getCards(this.context.authToken)
-      .then(response => console.log(response.data))
+      .then(response => response.data)
+      .then(newcardinfo => this.setState({newcardinfo}))
       .catch(err => {
         if (err) {
           return this.setState({ error: "Error in create card" });
@@ -36,7 +37,13 @@ class MoodCard extends Component {
 
   render() {
     const { user } = this.context;
-    console.log(user);
+
+    if(!user || this.state.isLoading){
+      return(
+        <h1>loading ...</h1>
+      )
+    }
+
     return (
       <React.Fragment>
         <MDBCol>
@@ -56,14 +63,14 @@ class MoodCard extends Component {
                       <MDBRow>
                         <MDBCol>
                           <h1 style={{ fontSize: "72" }} id="nameMood">
-                            {user ? user.name : "loading...."}
+                            {user.name}
                           </h1>
                           <h1 style={{ fontSize: "72" }} id="companyMood">
                             HR Inovations Incorporated
                           </h1>
-                          <p id="phoneMood">{user ? user.phonenumber : "loading ...."}</p>
+                          <p id="phoneMood">{this.state.newcardinfo[0].phonenumber}</p>
                           <p id="emailMood">
-                            {user ? user.email : "loading ...."}
+                            {this.state.newcardinfo[0].newemail}
                           </p>
                           <p id="websiteMood">Futurum-est-nostrum.com</p>
                         </MDBCol>
