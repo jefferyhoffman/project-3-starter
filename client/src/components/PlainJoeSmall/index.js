@@ -4,12 +4,12 @@ import "./style.css"
 import dude from '../../images/PlainJoeLogo.png'
 
 
-const PlainJoe = () => {
+const PlainJoeSmall = () => {
     return (
         <React.Fragment>
         <MDBCol>
-            <MDBCard id="CardBCGPlainJoe" style={{width:"45rem", height: "22.8125rem"}}>
-                <MDBCardBody className='white-text' id="cardBodyPlainJoe">
+            <MDBCard id="CardBCGPlainJoeSmall" style={{width:"45rem", height: "22.8125rem"}}>
+                <MDBCardBody className='white-text' id="cardBodyPlainJoeSmall">
                     <MDBRow>
                         <MDBCol>
                         <div className="line2"></div>
@@ -17,10 +17,10 @@ const PlainJoe = () => {
                         </MDBCol>
                         <MDBCol>
                             <h1 style={{fontSize: '72'}} id='namePlainJoe'>Gabriel Mangum</h1>
-                            <p id='emailPlainJoe'>GabrielTMangum@gmail.com</p>
-                            <p id='phonePlainJoe'>(123)-456-7890</p>
-                            <p id='websitePlainJoe'>Futurum-est-nostrum.com</p>
-                            <h1 style={{fontSize: '72', paddingTop: '1rem'}} id='companyPlainJoe'>HR Inovations Incorporated</h1>
+                            <p id='emailPlainJoeSmall'>GabrielTMangum@gmail.com</p>
+                            <p id='phonePlainJoeSmall'>(123)-456-7890</p>
+                            <p id='websitePlainJoeSmall'>Futurum-est-nostrum.com</p>
+                            <h1 style={{fontSize: '72', paddingTop: '1rem'}} id='companyPlainJoeSmall'>HR Inovations Incorporated</h1>
                         </MDBCol>
                     </MDBRow>
                 </MDBCardBody>
@@ -31,4 +31,4 @@ const PlainJoe = () => {
 }
 
 
-export default PlainJoe;
+export default PlainJoeSmall;
