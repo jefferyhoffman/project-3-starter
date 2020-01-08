@@ -34,7 +34,7 @@ render() {
             <MDBAvatar className="mx-auto white" circle>
 
               {/*<img src={guy} alt="" className="rounded-circle" />*/}
-              <Gravatar className="rounded-circle" email={user ? user.email : "loading ...."} size={30} />
+              <Gravatar className="rounded-circle" email={user ? user.email : "loading ...."} size={150} />
 
             </MDBAvatar>
             <MDBCardBody>
