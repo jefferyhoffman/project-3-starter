@@ -13,6 +13,7 @@ import SignUp from "../../pages/SignupPage/index";
 import Studio from "../../pages/Studio/index"
 import Results from '../../pages/Results'
 import Finale from '../../pages/Final'
+import PrintPage from '../../pages/PrintPage'
 
 import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
 
@@ -64,6 +65,7 @@ class App extends Component {
             <Route exact path="/Studio" component={Studio}/>
             <Route exact path="/Results" component={Results}/>
             <Route exact path="/Final" component={Finale}/>
+            <Route exact path="/PrintPage" component={PrintPage}/>
             </Switch>
         </div>
       </AuthContext.Provider>

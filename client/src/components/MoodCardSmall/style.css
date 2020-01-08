@@ -1,17 +1,16 @@
-#CardBCGMood {
+#CardBCGMoodSmall {
     background-image: url(../../images/blackslate.jpg);
 
 }
-#MoodCardBorder {
+#MoodCardBorderSmall {
     background-image: url(../../images/white-waves.png);
 }
-#cardBodyMood {
+#cardBodyMoodSmall {
     font-family: 'Maven Pro', sans-serif;
 }
-#paddingMood {
-    padding-right: 0px;
+#nameAndCompanyMoodSmall {
+    font-size: 25px;
 }
-
-#nameMood {
-    padding-top: 2rem;
+#textMoodSmall {
+    font-size: 12px;
 }
