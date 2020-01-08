@@ -7,7 +7,7 @@ import API from '../../lib/API';
 
 
 
-class miniColourCard extends Component {
+class MiniColourCard extends Component {
     static contextType = AuthContext;
     
     state = {
@@ -31,29 +31,43 @@ class miniColourCard extends Component {
 
     render() {
         const { user } = this.context;
+
+        if(!user || this.state.isLoading){
+          return(
+            <h1>loading ...</h1>
+          )
+        }
+        const qrCode = 
+            "http://api.qrserver.com/v1/create-qr-code/?size=40x40&data=";
+        const mostRecent = this.state.newcardinfo.length - 1;
         return (
+        
+    
             <React.Fragment>
             <MDBCol>
-                <MDBCard id="HH" className="ColourBody" style={{width: "27rem", height: "16rem" }}>
+                <MDBCard className="miniColourBody" style={{width: "27rem", height: "16rem" }}>
                         <MDBRow>
                             <MDBCol>
-                            <MDBCard style={{width: "300px"}}>
-                                <MDBCardBody className="logoSideColour rounded topLogoPadding" style={{height: "22.8125rem"}}>
+                            <MDBCard style={{width: '13rem'}}>
+                                <MDBCardBody className="minilogoSideColour rounded minitopLogoPadding" style={{height: "16rem"}}>
                                 <img src={logo}></img>
                                 </MDBCardBody>
                             </MDBCard>
                             </MDBCol>
                             <MDBCol>
                             <div className="text-white">
-                                    <h2 className="nameColour colorMainPadding">John Parker Hodges</h2>
-                                    <div className="fontColourp">
+                                    <h2 className="mininameColour minicolorMainPadding">John Parker Hodges</h2>
+                                    <div className="minifontColourp">
                                     <strong>
-                                    <p className="colorCompName">JP Designs</p>
-                                    <p className="colorEmail">johnparker@jphodges.io</p>
-                                    <p className="colorWebsite">jphodges.io</p>
-                                    <p className="colorPhone">561-531-2134</p>
+                                    <p className="minicolorCompName">JP Designs</p>
+                                    <p className="minicolorEmail">johnparker@jphodges.io</p>
+                                    <p className="minicolorWebsite">jphodges.io</p>
+                                    <p className="minicolorPhone">561-531-2134</p>
                                     </strong>
                                     </div>
+                            </div>
+                            <div className="QRCODEPadding">
+                            <img src={qrCode + encodeURIComponent(this.state.newcardinfo[mostRecent].website)} />
                             </div>
                             </MDBCol>
                         </MDBRow>
@@ -64,4 +78,4 @@ class miniColourCard extends Component {
 }
 
 
-export default miniColourCard;
+export default MiniColourCard;
