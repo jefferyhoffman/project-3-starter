@@ -31,7 +31,6 @@ class FullPageIntroWithNonFixedTransparentNavbar extends React.Component {
                     <MDBNavbarNav right>
                       <MDBNavItem>
                         <MDBNavLink to="/LoginPage">Sign In</MDBNavLink>
-                        <MDBNavLink to="/SignupPage">Sign Up</MDBNavLink>
                       </MDBNavItem>
                     </MDBNavbarNav>
                   </MDBCollapse>
