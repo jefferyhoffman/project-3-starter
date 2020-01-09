@@ -27,9 +27,16 @@ static contextType = AuthContext;
 
   render() {
     const { user } = this.context;
-    let isInfo = "";
+
+    if(!user || this.state.isLoading){
+      return(
+        <h1>loading ...</h1>
+      )
+    }
+
     const qrCode = 
         "http://api.qrserver.com/v1/create-qr-code/?size=50x50&data=";
+    const mostRecent = this.state.newcardinfo.length - 1;
 
     return (
       <React.Fragment>
@@ -42,11 +49,14 @@ static contextType = AuthContext;
                     <MDBCardBody className="white-text" id="cardBodyMoodSmall">
                       <MDBRow>
                         <MDBCol>
-                          <h1 id="nameAndCompanyMoodSmall">{isInfo ? this.state.newcardinfo[this.state.newcardinfo.length - 1].newname : "Your Name"}</h1>
-                          <h1 id="nameAndCompanyMoodSmall">{isInfo ? this.state.newcardinfo[this.state.newcardinfo.length - 1].company : "Your Company"}</h1>
-                          <p id="textMoodSmall">{isInfo ? this.state.newcardinfo[this.state.newcardinfo.length - 1].phonenumber : "Your Phone Number"}</p>
-                          <p id="textMoodSmall">{isInfo ? this.state.newcardinfo[this.state.newcardinfo.length - 1].newemail : "Your Email"}</p>
-                          <p id="textMoodSmall"><img src={qrCode + encodeURIComponent(isInfo ? this.state.newcardinfo[this.state.newcardinfo.length - 1].website : "Hello World!")} /></p>
+                          <h1 id="nameAndCompanyMoodSmall">{this.state.newcardinfo[mostRecent].newname}</h1>
+                          <h1 id="nameAndCompanyMoodSmall">{this.state.newcardinfo[mostRecent].company}</h1>
+                          <p id="textMoodSmall">{this.state.newcardinfo[mostRecent].phonenumber}</p>
+                          <p id="textMoodSmall">{this.state.newcardinfo[mostRecent].newemail}</p>
+                          <div className="qrCodeMOOD">
+                              <p><img src={qrCode + encodeURIComponent(this.state.newcardinfo[mostRecent].website)} /></p>
+                          </div>
+                          {/* <p id="textMoodSmallWith" ><img src={qrCode + encodeURIComponent(this.state.newcardinfo[mostRecent].website)} /></p> */}
                         </MDBCol>
                       </MDBRow>
                     </MDBCardBody>
