@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, componentDidMount} from 'react';
 import './style.css'
 import { MDBContainer, MDBRow, MDBCol, MDBView } from "mdbreact";
 import MoodCardSmall from '../../components/MoodCardSmall'
@@ -21,9 +21,15 @@ const PrintPage = (props) => {
                 return <PlainJoeSmall className='float-left'/>;
         }
     }
+
+    const makeItPrint =() => {
+        setInterval(() => {
+            window.print()
+        }, 50);
+    }
     
     return (
-        <div>
+        <div onLoad={makeItPrint()}>
             <React.Fragment>
                 <MDBRow id='printPagePadding'>
                     <MDBCol className='d-flex justify-content-center'>
