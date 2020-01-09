@@ -28,7 +28,7 @@ class Studio extends Component{
     }
 
     render() {
-        const { from } = this.props.location.state || { from: { pathname: "/UserDash" } };
+        const { from } = this.props.location.state || { from: { pathname: "/results" } };
         const { redirectToReferrer } = this.state;
 
         if (redirectToReferrer) {

@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import {
-  MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBDropdown,
+  MDBNavbar, MDBBtn, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBDropdown,
   MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon
 } from "mdbreact";
 import Index from "../../pages/Index"
+import AuthContext from '../../contexts/AuthContext';
 
 class IndexNAV extends Component {
+  static contextType = AuthContext;
   state = {
     isOpen: false
   };
@@ -13,8 +15,15 @@ class IndexNAV extends Component {
   toggleCollapse = () => {
     this.setState({ isOpen: !this.state.isOpen });
   }
+  handleLogout = () => {
+    this.context.onLogout();
+    //this.props.onClick();
+  }
 
   render() {
+    const { user } = this.context;
+    
+
     return (
       <MDBNavbar dark expand="md">
         <MDBNavbarBrand>
@@ -47,9 +56,10 @@ class IndexNAV extends Component {
             </MDBNavItem>
           </MDBNavbarNav>
           <MDBNavbarNav right>
-            <MDBNavLink to="/">
+            <MDBBtn onClick={this.handleLogout} >
               <p><MDBIcon icon="sign-out-alt " /> Sign Out</p>
-            </MDBNavLink>
+            </MDBBtn>
+          
           </MDBNavbarNav>
         </MDBCollapse>
       </MDBNavbar>
