@@ -4,28 +4,31 @@ import FlashMessage from 'react-flash-message';
 
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
+import StatusContext from '../../contexts/StatusContext';
 import LoginForm from '../../components/LoginForm/LoginForm';
 
 class Login extends Component {
-  static contextType = AuthContext;
+  // static contextType = AuthContext;
+  // static contextType = StatusContext;
 
   state = {
-    redirectToReferrer: false,
-    error: ""
+    redirectToReferrer: false
   }
 
   handleSubmit = (email, password) => {
     API.Users.login(email, password)
       .then(response => response.data)
       .then(({ user, token }) => {
-        this.context.onLogin(user, token);
-        this.setState({ redirectToReferrer: true, error: "" });
+        this.props.auth.onLogin(user, token);
+        this.props.status.onSuccess("You've been successfully logged in!");
+        this.setState({ redirectToReferrer: true});
       })
       .catch(err => {
         let message;
+        console.log(err)
 
-        switch (err.response.status) {
-          case 401:
+       switch (err.response.status) {
+         case 401:
             message = 'Sorry, that email/password combination is not valid. Please try again.';
             break;
           case 500:
@@ -35,7 +38,7 @@ class Login extends Component {
             message = 'Unknown error.';
         }
 
-        this.setState({ error: message });
+       this.props.status.onError(message);
       });
   }
 
@@ -55,16 +58,29 @@ class Login extends Component {
               <h1>Login</h1>
             </div>
           </div>
-          {this.state.error &&
+
+          {this.props.status.error &&
             <div className='row'>
               <div className='col'>
-                <FlashMessage duration={3000}>
+                <FlashMessage>
                   <div className='alert alert-danger mb-3' role='alert'>
-                    {this.state.error}
+                    {this.props.status.error}
                   </div>
                 </FlashMessage>
               </div>
             </div>}
+
+          {this.props.status.success &&
+            <div className='row'>
+              <div className='col'>
+                <FlashMessage>
+                  <div className='alert alert-success mb-3' role='alert'>
+                    {this.props.status.success}
+                  </div>
+                </FlashMessage>
+              </div>
+            </div>}
+
           <div className='row'>
             <div className='col'>
               <LoginForm onSubmit={this.handleSubmit} />
