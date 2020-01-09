@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { MDBCol, MDBRow, MDBCard, MDBCardUp, MDBCardBody, MDBAvatar, MDBIcon, MDBCardImage } from "mdbreact";
-import dude from "../../images/final-body.png";
 import women from "../../images/women2.png";
 import "./style.css";
 import API from '../../lib/API';
 import AuthContext from "../../contexts/AuthContext";
+import Gravatar from 'react-gravatar';
+
 
 
 class PlainJaneSmall extends Component {
@@ -28,34 +29,26 @@ class PlainJaneSmall extends Component {
     
     render() {
     const { user } = this.context;
-
-    if(!user || this.state.isLoading){
-      return(
-        <h1>loading ...</h1>
-      )
-    }
-    const qrCode = 
-        "http://api.qrserver.com/v1/create-qr-code/?size=40x40&data=";
-    const mostRecent = this.state.newcardinfo.length - 1;
+    let isInfo = "";
     
         return (
             <React.Fragment>
                 <MDBCol>
-                    <MDBCard id="CardBCGPlainJaneSmall" style={{width:"27rem", height: "16rem"}}>
+                    <MDBCard id="CardBCGPlainJaneSmall" style={{width:"27rem", height: "15.6rem"}}>
                         <MDBCardBody>
                             <MDBRow>
                                 <MDBCol>
-                                    <img src={women} className="img-fluid rounded-circle"/>
+                                <Gravatar className="rounded-circle plainJaneImgSmall" email={user ? user.email : "loading ...."} size={100} />
                                 </MDBCol>
                                 <MDBCol>
                                     <div>
-                                    <h2 id="BisJaneSmall">{this.state.newcardinfo[mostRecent].newname}</h2>
-                                    <div id="pFontSmall">
-                                    <p className="GenPadding text-left" id="NameJaneSmall">{this.state.newcardinfo[mostRecent].company}</p>
-                                    <p className="text-left GenPadding" id="EmailJaneSmall">{this.state.newcardinfo[mostRecent].newemail}</p>
-                                    <p className="text-left GenPadding"id="WebsiteJaneSmall"><img src={qrCode + encodeURIComponent(this.state.newcardinfo[mostRecent].website)} /></p>
-                                    <p className="text-left GenPadding"id="phoneJaneSmall">{this.state.newcardinfo[mostRecent].phonenumber}</p>
-                                    </div>
+                                        <h2 id="BisJaneSmall">{isInfo ? this.state.newcardinfo[this.state.newcardinfo.length - 1].newname : "Your Name"}</h2>
+                                        <div id="pFontSmall">
+                                            <p className="GenPadding text-left" id="NameJaneSmall">{isInfo ? this.state.newcardinfo[this.state.newcardinfo.length - 1].company : "Your Company"}</p>
+                                            <p className="text-left GenPadding" id="EmailJaneSmall">{isInfo ? this.state.newcardinfo[this.state.newcardinfo.length - 1].newemail : "Your Email"}</p>
+                                            <p className="text-left GenPadding"id="WebsiteJaneSmall">{isInfo ? this.state.newcardinfo[this.state.newcardinfo.length - 1].website : "Your Website"}</p>
+                                            <p className="text-left GenPadding"id="phoneJaneSmall">{isInfo ? this.state.newcardinfo[this.state.newcardinfo.length - 1].phonenumber : "Your Phone Number"}</p>
+                                        </div>
                                     </div>
                                 </MDBCol>
                             </MDBRow>

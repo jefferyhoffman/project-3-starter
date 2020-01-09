@@ -12,8 +12,8 @@
     "start:dev": "concurrently -n client,server \"yarn run client:dev\" \"yarn run server:dev\"",
     "client:dev": "cd client && yarn start",
     "server:dev": "cd server && yarn start:dev",
-    "heroku-prebuild": "bash preinstall.sh",
-    "heroku-postbuild": "bash postinstall.sh && yarn build"
+    "heroku-prebuild": "cd client/src && bash preinstall.sh",
+    "heroku-postbuild": "cd cliet/src && bash postinstall.sh && yarn build"
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
