@@ -37,7 +37,7 @@ class PlainJoeSmall extends Component {
         "http://api.qrserver.com/v1/create-qr-code/?size=40x40&data=";
     const mostRecent = this.state.newcardinfo.length - 1;
 
-        return (
+    return (
         <React.Fragment>
             <MDBCol>
                 <MDBCard id="CardBCGPlainJoeSmall" style={{ width: "27rem", height: "16rem" }}>
@@ -49,10 +49,10 @@ class PlainJoeSmall extends Component {
                             </MDBCol>
                             <MDBCol>
                                 <h1 id='nameAndCompanyPlainJoeSmall'>{this.state.newcardinfo[mostRecent].newname}</h1>
-                                <p id='textPlainJoeSmall'>{this.state.newcardinfo[mostRecent].newemail}</p>
+                                <p id='textPlainJoeSmall'>{this.state.newcardinfo[mostRecent].email}</p>
                                 <p id='textPlainJoeSmall'>{this.state.newcardinfo[mostRecent].phonenumber}</p>
-                                <p id='textPlainJoeSmall'><img src={qrCode + encodeURIComponent(this.state.newcardinfo[mostRecent].website)} /></p>
-                                <h1 style={{fontSize: '72'}} id='nameAndCompanyPlainJoeSmall'>{this.state.newcardinfo[mostRecent].company}</h1>
+                                <p id='textPlainJoeSmall'>{this.state.newcardinfo[mostRecent].website}</p>
+                                <h1 style={{fontSize: '72'}} id='nameAndCompanyPlainJoeSmall'> {this.state.newcardinfo[mostRecent].company}</h1>
                             </MDBCol>
                         </MDBRow>
                     </MDBCardBody>

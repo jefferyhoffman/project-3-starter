@@ -52,11 +52,8 @@ static contextType = AuthContext;
                           <h1 id="nameAndCompanyMoodSmall">{this.state.newcardinfo[mostRecent].newname}</h1>
                           <h1 id="nameAndCompanyMoodSmall">{this.state.newcardinfo[mostRecent].company}</h1>
                           <p id="textMoodSmall">{this.state.newcardinfo[mostRecent].phonenumber}</p>
-                          <p id="textMoodSmall">{this.state.newcardinfo[mostRecent].newemail}</p>
-                          <div className="qrCodeMOOD">
-                              <p><img src={qrCode + encodeURIComponent(this.state.newcardinfo[mostRecent].website)} /></p>
-                          </div>
-                          {/* <p id="textMoodSmallWith" ><img src={qrCode + encodeURIComponent(this.state.newcardinfo[mostRecent].website)} /></p> */}
+                          <p id="textMoodSmall">{this.state.newcardinfo[mostRecent].email}</p>
+                          <p id="textMoodSmall">{this.state.newcardinfo[mostRecent].website}</p>
                         </MDBCol>
                       </MDBRow>
                     </MDBCardBody>
