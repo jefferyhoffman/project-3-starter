@@ -59,10 +59,10 @@ class MiniColourCard extends Component {
                                     <h2 className="mininameColour minicolorMainPadding">John Parker Hodges</h2>
                                     <div className="minifontColourp">
                                     <strong>
-                                    <p className="minicolorCompName">JP Designs</p>
-                                    <p className="minicolorEmail">johnparker@jphodges.io</p>
-                                    <p className="minicolorWebsite">jphodges.io</p>
-                                    <p className="minicolorPhone">561-531-2134</p>
+                                    <p className="minicolorCompName"></p>
+                                    <p className="minicolorEmail"></p>
+                                    <p className="minicolorWebsite"></p>
+                                    <p className="minicolorPhone"></p>
                                     </strong>
                                     </div>
                             </div>
