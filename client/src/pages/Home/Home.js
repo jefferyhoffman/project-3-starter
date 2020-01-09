@@ -72,6 +72,8 @@ class HomePage extends Component {
             <div className="col"></div>
           </div>
         </div>
+
+        
         <div className="parallax parallax-3">
           <div className="container">
             <div className="row">
