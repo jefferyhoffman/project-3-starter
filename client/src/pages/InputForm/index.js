@@ -30,6 +30,16 @@ class Form extends Component {
   render() {
     return (
       <div>
+        <div class="dropdown">
+          <button class="dropbtn">Dropdown
+      <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            {this.state.property.map(property => (
+              <p>{property}</p>
+            ))}
+          </div>
+        </div>
         <form className="form">
           <input
             value={this.state.date}
