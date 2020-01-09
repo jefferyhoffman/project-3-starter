@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import FlashMessage from "react-flash-message";
 
 // import logo from "./logo.svg";
 // import MainGrass from "../../images/MainGrass.jpg";
@@ -12,6 +13,27 @@ class HomePage extends Component {
         <div className="parallax parallax-1">
           <div className="container">
             <div className="row">
+            {this.props.status.error &&
+            <div className='row'>
+              <div className='col'>
+                <FlashMessage>
+                  <div className='alert alert-danger mb-3' role='alert'>
+                    {this.props.status.error}
+                  </div>
+                </FlashMessage>
+              </div>
+            </div>}
+
+          {this.props.status.success &&
+            <div className='row'>
+              <div className='col'>
+                <FlashMessage>
+                  <div className='alert alert-success mb-3' role='alert'>
+                    {this.props.status.success}
+                  </div>
+                </FlashMessage>
+              </div>
+            </div>}
               <div className="centeredContent">
                 <img className="overlayImage" src={overlayImage1} />
                 <h1 className="phrase">Charlotte & Surrounding Area's Premier Commercial Landscaping Company</h1>
