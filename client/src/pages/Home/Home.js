@@ -7,6 +7,8 @@ import { Scrollbars } from 'react-custom-scrollbars';
 // import overlayImage1 from "../../images/rotatedTransparentSaw.png";
 import overlayImage1 from "../../images/BGM_LOGO_10.11.17_1038697311177295.png";
 import AuthContext from "../../contexts/AuthContext";
+import mower from "../../images/LawnMower.jpeg";
+
 
 class HomePage extends Component {
   render() {
@@ -34,37 +36,38 @@ class HomePage extends Component {
                   <img className="overlayImage" src={overlayImage1} />
                   <h1 className="phrase">Charlotte & Surrounding Area's Premier Commercial Landscaping Company</h1>
                 </div>
-              </div>
-            </div>
-          </div>
+        </div>
+        </div>
+        </div>
+        </div>
 
+        
 
+        <div className="parallax parallax-2">
 
-          {/* <div
-          style={{
-            // height: "200px",
-            backgroundColor: "#ffc41f",
-            fontSize: "36px",
-            textAlign: "center",
-            // opacity: "100",
-            // backgroundColor: "#11ffee00",
-            // zIndex: "1000",
-            position: "center",
-          }}
-        >
           <div className="container">
             <div className="row">
-              <div className="col">
-                <div>
-                  Our mission is to provide our clients with the highest level of quality services at fair and competitive prices.  We believe that by providing our clients with exceptional workmanship, extraordinary service and professional integrity, we’ll ensure the longevity of our company through repeat and referral business
-                </div>
+              <div className="centeredContent">
+                <p class="services">
+                  <h1 style={{textAlign: "center"}}>Services</h1>
+                  <ul>
+                    <li>Commercial Landscape Maintenance</li>
+                    <li>Truck Court Maintentance</li>
+                    <li>Plant Design and Installation</li>
+                    <li>Weed Control</li>
+                    <li>Seasonal Flower Installation</li>
+                    <li>Aeration and Seeding</li>
+                    <li>Pine Needles</li>
+                    <li>Mulching</li>
+                    <li>Leaf Removal</li>
+                  </ul>
+                </p>
               </div>
             </div>
           </div>
-          </div> */}
+        </div>
 
-          <div className="parallax parallax-2"></div>
-
+        <div className="parallax parallax-3">
           <div className="container">
             <div className="row">
               <div className="col"></div>
@@ -87,6 +90,7 @@ class HomePage extends Component {
             </div>
           </div>
         </div>
+    
       </Scrollbars>
     );
   }
