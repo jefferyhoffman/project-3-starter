@@ -25,7 +25,7 @@ const PrintPage = (props) => {
     const makeItPrint =() => {
         setInterval(() => {
             window.print()
-        }, 50);
+        }, 2000);
     }
     
     return (
