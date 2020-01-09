@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './style.css'
-import { MDBContainer, MDBRow, MDBCol, MDBView, MDBBtn } from "mdbreact";
+import { MDBContainer, MDBRow, MDBCol, MDBView, MDBBtn, MDBIcon } from "mdbreact";
 import FinalCard from '../../components/FinalCard/index';
 import IndexNAV from '../../components/IndexNAV/index';
 import PlainJane from '../../components/PlainJane';
@@ -32,7 +32,7 @@ const Finale = () => {
                             <MoodCard />
                         </MDBCol>
                         <MDBCol>
-                            <MDBBtn className='purple-gradient' rounded hover onClick='printBtn()' id='printBtn' onClick='printPageBtn()'>Print ></MDBBtn>
+                            <MDBBtn className='purple-gradient' rounded hover onClick='printBtn()' id='printBtn' onClick='printPageBtn()'><MDBIcon icon="print" /> Print</MDBBtn>
                         </MDBCol>
                     </MDBRow>
                 </MDBContainer>
