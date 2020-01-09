@@ -60,9 +60,14 @@ static contextType = AuthContext;
                                   <strong>
                                   <p className="colorCompName">{this.state.newcardinfo[mostRecent].company}</p>
                                   <p className="colorEmail">{this.state.newcardinfo[mostRecent].newemail}</p>
-                                  <p className="colorWebsite"><img src={qrCode + encodeURIComponent(this.state.newcardinfo[mostRecent].website)} /></p>
+                                  <p className="colorWebsite">{this.state.newcardinfo[mostRecent].website}</p>
                                   <p className="colorPhone">{this.state.newcardinfo[mostRecent].phonenumber}</p>
                                   </strong>
+                                  </div>
+                                  <div className="ColorPaddingforQRCODE">
+                                    <p>
+                                    <p className="text-left GenPadding"id="WebsiteJane"><img src={qrCode + encodeURIComponent(this.state.newcardinfo[mostRecent].website)} /></p>
+                                    </p>
                                   </div>
                           </div>
                           </MDBCol>
