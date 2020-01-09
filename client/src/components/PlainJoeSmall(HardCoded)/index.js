@@ -1,35 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { MDBCol, MDBRow, MDBCard, MDBCardUp, MDBCardBody, MDBAvatar, MDBIcon, MDBCardImage } from "mdbreact";
 import "./style.css"
 import dude from '../../images/PlainJoeLogo.png'
-import API from '../../lib/API';
-import AuthContext from "../../contexts/AuthContext";
 
 
-class PlainJoeSmallHardCoded extends Component {
-    static contextType = AuthContext;
-    state = {
-        isLoading: true,
-        error: ""
-    }
-
-    componentDidMount() {
-        API.Newcardinfos.getCards(this.context.authToken)
-            .then(response => response.data)
-            .then(newcardinfo => this.setState({ newcardinfo }))
-            .catch(err => {
-                if (err) {
-                    return this.setState({ error: "Error in create card" });
-                }
-                console.log(err);
-            }).finally(() => this.setState({ isLoading: false }));
-    }
-
-    render() {
-    const { user } = this.context;
-    
-
-        return (
+const PlainJoeSmallHardCoded = () => {
+    return (
         <React.Fragment>
             <MDBCol>
                 <MDBCard id="CardBCGPlainJoeSmall" style={{ width: "27rem", height: "16rem" }}>
@@ -51,9 +27,7 @@ class PlainJoeSmallHardCoded extends Component {
                 </MDBCard>
             </MDBCol>
         </React.Fragment>
-        )
-    }
-}
-
+    );
+};
 
 export default PlainJoeSmallHardCoded;

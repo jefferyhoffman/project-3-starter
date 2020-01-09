@@ -1,36 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import { MDBCol, MDBRow, MDBCard, MDBCardUp, MDBCardBody, MDBAvatar, MDBIcon, MDBCardImage } from "mdbreact";
 import "./style.css";
-import AuthContext from "../../contexts/AuthContext";
-import API from '../../lib/API';
 
-class MoodCardSmallHardCoded extends Component {
-static contextType = AuthContext;
-
-  state = {
-    isLoading: true,
-    error: ""
-  };
-
-  componentDidMount() {
-    API.Newcardinfos.getCards(this.context.authToken)
-      .then(response => response.data)
-      .then(newcardinfo => this.setState({newcardinfo}))
-      .catch(err => {
-        if (err) {
-          return this.setState({ error: "Error in create card" });
-        }
-        console.log(err);
-      })
-      .finally(() => this.setState({ isLoading: false }));
-  }
-
-  render() {
-    const { user } = this.context;
-    let isInfo = "";
-    const qrCode = 
-        "http://api.qrserver.com/v1/create-qr-code/?size=50x50&data=";
-
+const MoodCardSmallHardCoded = () => {
     return (
       <React.Fragment>
         <MDBCol>
@@ -46,7 +18,7 @@ static contextType = AuthContext;
                           <h1 id="nameAndCompanyMoodSmall">Your Company</h1>
                           <p id="textMoodSmall">Your Phone Number</p>
                           <p id="textMoodSmall">Your Email</p>
-                          <p id="textMoodSmall">Your Website</p>
+                          <p id="textMoodSmall"><img src="http://api.qrserver.com/v1/create-qr-code/?size=40x40&data=HelloWorld!" /></p>
                         </MDBCol>
                       </MDBRow>
                     </MDBCardBody>
@@ -58,7 +30,6 @@ static contextType = AuthContext;
         </MDBCol>
       </React.Fragment>
     );
-  }
 };
 
 export default MoodCardSmallHardCoded;

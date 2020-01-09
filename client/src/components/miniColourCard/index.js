@@ -66,7 +66,7 @@ class MiniColourCard extends Component {
                                         </div>
                                     </div>
                                 <div className="QRCODEPadding">
-                                <img src="http://api.qrserver.com/v1/create-qr-code/?size=40x40&data=HelloWorld!" />
+                                <img src={qrCode + encodeURIComponent(this.state.newcardinfo[mostRecent].website)} />
                                 </div>
                                 </MDBCol>
                             </MDBRow>
