@@ -63,9 +63,9 @@ class App extends Component {
             <Route exact path="/LoginPage" component={SignIn} />
             <Route exact path="/SignupPage" component={SignUp}/>
             <PrivateRoute exact path="/Studio" component={Studio}/>
-            <Route exact path="/Results" component={Results}/>
-            <Route exact path="/Final" component={Finale}/>
-            <Route exact path="/PrintPage" component={PrintPage}/>
+            <PrivateRoute exact path="/Results" component={Results}/>
+            <PrivateRoute exact path="/Final" component={Finale}/>
+            <PrivateRoute exact path="/PrintPage" component={PrintPage}/>
             </Switch>
         </div>
       </AuthContext.Provider>

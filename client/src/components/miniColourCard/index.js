@@ -55,18 +55,18 @@ class MiniColourCard extends Component {
                                 </MDBCol>
                                 <MDBCol>
                                     <div className="text-white">
-                                        <h2 className="mininameColour minicolorMainPadding">{this.state.newcardinfo[mostRecent].newname}</h2>
+                                    <h2 className="mininameColour minicolorMainPadding">{this.state.newcardinfo[mostRecent].newname}</h2>
                                         <div className="minifontColourp">
                                             <strong>
                                             <p className="minicolorCompName">{this.state.newcardinfo[mostRecent].company}</p>
-                                            <p className="minicolorEmail">{this.state.newcardinfo[mostRecent].newemail}</p>
+                                            <p className="minicolorEmail">{this.state.newcardinfo[mostRecent].email}</p>
                                             <p className="minicolorWebsite">{this.state.newcardinfo[mostRecent].website}</p>
                                             <p className="minicolorPhone">{this.state.newcardinfo[mostRecent].phonenumber}</p>
                                             </strong>
                                         </div>
                                     </div>
                                 <div className="QRCODEPadding">
-                                <img src={qrCode + encodeURIComponent(this.state.newcardinfo[mostRecent].website)} />
+                                <img src="http://api.qrserver.com/v1/create-qr-code/?size=40x40&data=HelloWorld!" />
                                 </div>
                                 </MDBCol>
                             </MDBRow>
