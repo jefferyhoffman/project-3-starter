@@ -53,7 +53,7 @@ class PlainJane extends Component {
                                     <div id="pFont">
                                     <p className="GenPadding text-left" id="NameJane">{this.state.newcardinfo[mostRecent].company}</p>
                                     <p className="text-left GenPadding" id="EmailJane">{this.state.newcardinfo[mostRecent].newemail}</p>
-                                    <p className="text-left GenPadding"id="WebsiteJane"><img src={qrCode + encodeURIComponent(this.state.newcardinfo[mostRecent].website)} /></p>
+                                    <p className="text-left GenPadding"id="WebsiteJane">{this.state.newcardinfo[mostRecent].website}</p>
                                     <p className="text-left GenPadding"id="phoneJane">{this.state.newcardinfo[mostRecent].phonenumber}</p>
                                     </div>
                                     </div>
