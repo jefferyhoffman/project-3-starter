@@ -8,6 +8,7 @@
     "axios": "^0.18.1",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
+    "react-flash-message": "^1.0.2",
     "react-gravatar": "^2.6.3",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
