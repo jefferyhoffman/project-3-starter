@@ -62,7 +62,7 @@ class Login extends Component {
           {this.props.status.error &&
             <div className='row'>
               <div className='col'>
-                <FlashMessage>
+                <FlashMessage duration={50000}>
                   <div className='alert alert-danger mb-3' role='alert'>
                     {this.props.status.error}
                   </div>
@@ -70,16 +70,7 @@ class Login extends Component {
               </div>
             </div>}
 
-          {this.props.status.success &&
-            <div className='row'>
-              <div className='col'>
-                <FlashMessage>
-                  <div className='alert alert-success mb-3' role='alert'>
-                    {this.props.status.success}
-                  </div>
-                </FlashMessage>
-              </div>
-            </div>}
+          
 
           <div className='row'>
             <div className='col'>
