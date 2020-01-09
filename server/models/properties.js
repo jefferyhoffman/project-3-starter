@@ -10,7 +10,7 @@ const PropertiesSchema = new Schema ({
     },
     propertyId:{
         type: Number,
-        required:"Property ID is required"
+        
     },
     date: Date,
     task: {

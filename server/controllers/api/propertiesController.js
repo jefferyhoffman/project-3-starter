@@ -18,13 +18,14 @@ router.get('/', (req, res) => {
   });
 
   router.post('/', (req, res) => {
-    const { address, date, task, employeeComments, clientComments, photo, propertyId } = req.body;
+    const { address, date, task, employeeComments, clientComments, photo, propertyId} = req.body;
   
-    console.log("BODY===============================", req.body)
+    
   
     db.Properties.create({ address, date, task, employeeComments, clientComments, photo, propertyId})
       .then(property => res.json({property}))
       .catch(err => res.json(err));
+   
   });
   
 
