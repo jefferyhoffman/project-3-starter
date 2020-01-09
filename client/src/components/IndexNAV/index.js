@@ -56,10 +56,9 @@ class IndexNAV extends Component {
             </MDBNavItem>
           </MDBNavbarNav>
           <MDBNavbarNav right>
-            <MDBBtn onClick={this.handleLogout} >
-              <p><MDBIcon icon="sign-out-alt " /> Sign Out</p>
+            <MDBBtn  tag="a" size="sm" floating gradient="purple" rounded onClick={this.handleLogout} >
+              <p><MDBIcon onClick={this.handleLogout} icon="sign-out-alt "/> Sign Out</p>
             </MDBBtn>
-          
           </MDBNavbarNav>
         </MDBCollapse>
       </MDBNavbar>
