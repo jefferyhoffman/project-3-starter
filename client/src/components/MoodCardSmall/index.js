@@ -56,7 +56,6 @@ static contextType = AuthContext;
                           <div className="qrCodeMOOD">
                               <p><img src={qrCode + encodeURIComponent(this.state.newcardinfo[mostRecent].website)} /></p>
                           </div>
-                          {/* <p id="textMoodSmallWith" ><img src={qrCode + encodeURIComponent(this.state.newcardinfo[mostRecent].website)} /></p> */}
                         </MDBCol>
                       </MDBRow>
                     </MDBCardBody>
