@@ -50,7 +50,7 @@ class PlainJoe extends Component {
                                 <h1 style={{fontSize: '72'}} id='namePlainJoe'>{this.state.newcardinfo[mostRecent].newname}</h1>
                                 <p id='emailPlainJoe'>{this.state.newcardinfo[mostRecent].newemail}</p>
                                 <p id='phonePlainJoe'>{this.state.newcardinfo[mostRecent].phonenumber}</p>
-                                <p id='websitePlainJoe'><img src={qrCode + encodeURIComponent(this.state.newcardinfo[mostRecent].website)} /></p>
+                                <p id='websitePlainJoe'>{this.state.newcardinfo[mostRecent].website}</p>
                                 <h1 style={{fontSize: '72', paddingTop: '1rem'}} id='companyPlainJoe'>{this.state.newcardinfo[mostRecent].company}</h1>
                             </MDBCol>
                         </MDBRow>

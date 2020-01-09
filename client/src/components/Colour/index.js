@@ -66,7 +66,7 @@ static contextType = AuthContext;
                                   </div>
                                   <div className="ColorPaddingforQRCODE">
                                     <p>
-                                    <p className="text-left GenPadding"id="WebsiteJane"><img src={qrCode + encodeURIComponent(this.state.newcardinfo[mostRecent].website)} /></p>
+                                      <p className="text-left GenPadding"id="WebsiteJane"><img src={qrCode + encodeURIComponent(this.state.newcardinfo[mostRecent].website)} /></p>
                                     </p>
                                   </div>
                           </div>
