@@ -7,8 +7,3 @@
 .rowPadding {
     padding-top: 25px;
 }
-
-.resultsColourCard:hover {
-    border: 5px solid #333333;
-    overflow: hidden;
-}

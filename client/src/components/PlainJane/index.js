@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { MDBCol, MDBRow, MDBCard, MDBCardUp, MDBCardBody, MDBAvatar, MDBIcon, MDBCardImage } from "mdbreact";
 import dude from "../../images/final-body.png";
-import women from "../../images/women2.png";
+import image from "../../images/women2.png";
 import "./style.css";
 import API from '../../lib/API';
 import AuthContext from "../../contexts/AuthContext";
-
+import Gravatar from 'react-gravatar';
 
 class PlainJane extends Component {
     static contextType = AuthContext;
@@ -45,7 +45,7 @@ class PlainJane extends Component {
                         <MDBCardBody>
                             <MDBRow>
                                 <MDBCol>
-                                    <img src={women} className="img-fluid rounded-circle"/>
+                                <Gravatar className="rounded-circle plainJaneImg" email={user ? user.email : "loading ...."} size={150} />
                                 </MDBCol>
                                 <MDBCol>
                                     <div>

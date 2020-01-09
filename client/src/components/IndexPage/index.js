@@ -1,5 +1,5 @@
 import React from 'react';
-import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBContainer, MDBMask, MDBView, MDBRow, MDBCol } from 'mdbreact';
+import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBContainer, MDBMask, MDBView, MDBRow, MDBCol, MDBSideNavLink } from 'mdbreact';
 import BasicCard from '../BasicCard/Card'
 import "./style.css"
 import MiniColourCard from '../../components/miniColourCard';
@@ -24,52 +24,56 @@ class FullPageIntroWithNonFixedTransparentNavbar extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='scrollbar scrollbar-juicy-peach'>
         <header>
-              <MDBNavbar color="bg-primary" fixed="top" dark expand="md" scrolling transparent>
-                <MDBContainer>
-                  <MDBNavbarBrand href="/">
-                    <strong>futurum est nostrum</strong>
-                  </MDBNavbarBrand>
-                  <MDBNavbarToggler onClick={this.onClick} />
-                  <MDBCollapse isOpen={this.state.collapse} navbar>
-                    <MDBNavbarNav right>
-                      <MDBNavItem>
-                        <MDBNavLink to="/LoginPage">Sign In</MDBNavLink>
-                      </MDBNavItem>
-                    </MDBNavbarNav>
-                  </MDBCollapse>
-                </MDBContainer>
-              </MDBNavbar>
+          <MDBNavbar color="bg-primary" fixed="top" dark expand="md" scrolling transparent>
+            <MDBContainer>
+              <MDBNavbarBrand href="/">
+                <strong>futurum est nostrum</strong>
+              </MDBNavbarBrand>
+              <MDBNavbarToggler onClick={this.onClick} />
+              <MDBCollapse isOpen={this.state.collapse} navbar>
+                <MDBNavbarNav right>
+                  <MDBNavItem>
+                    <MDBNavLink to="/LoginPage">Sign In</MDBNavLink>
+                  </MDBNavItem>
+                </MDBNavbarNav>
+              </MDBCollapse>
+            </MDBContainer>
+          </MDBNavbar>
           <MDBView src="https://mdbootstrap.com/img/Photos/Others/img%20(42).jpg">
 
-          <MDBMask overlay="indigo-slight" className="text-white text-center IndexPadding">
-            <h1 className="BottomPaddingIndex"> Our Templates</h1>
-            <MDBRow className="">
+            <MDBMask overlay="indigo-slight" className="text-white text-center IndexPadding">
+              <h1 className="BottomPaddingIndex"> Our Templates</h1>
+              <MDBRow className="">
                 <MDBCol></MDBCol>
-                <MDBCol> <MiniColourCard/> </MDBCol>
-                <MDBCol> <PlainJoeSmall/> </MDBCol>
+                <MDBCol> <MiniColourCard /> </MDBCol>
+                <MDBCol> <PlainJoeSmall /> </MDBCol>
                 <MDBCol></MDBCol>
-            </MDBRow>
-            <br/>
-            <MDBRow>
+              </MDBRow>
+              <br />
+              <MDBRow>
                 <MDBCol></MDBCol>
-                <MDBCol> <MoodCardSmall/> </MDBCol>
-                <MDBCol> <PlainJaneSmall/> </MDBCol>
+                <MDBCol> <MoodCardSmall /> </MDBCol>
+                <MDBCol> <PlainJaneSmall /> </MDBCol>
                 <MDBCol></MDBCol>
-            </MDBRow>
+              </MDBRow>
             </MDBMask>
           </MDBView>
         </header>
 
         <main>
           <MDBContainer className="text-center my-5">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo hic commodi est, laudantium magni, consectetur natus corrupti beatae vel quibusdam similique recusandae iusto odio sed repellat voluptas ad laboriosam enim?
-          </MDBContainer>
+            <p>&copy;2020</p>
+            <MDBSideNavLink to='#'> - Contact  </MDBSideNavLink>  
+            <MDBSideNavLink to='#'> - FAQ  </MDBSideNavLink>  
+            <MDBSideNavLink to='#'> - Meat the Team - </MDBSideNavLink>  
+
+  </MDBContainer>
         </main>
       </div>
-    );
-  }
-}
-
+        );
+      }
+    }
+    
 export default FullPageIntroWithNonFixedTransparentNavbar;
