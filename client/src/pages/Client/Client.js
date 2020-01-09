@@ -15,8 +15,8 @@ const Client = () => {
       address: "2020 Main St",
       date: "date here",
       task: "task sample",
-      employeeComments:["emp comment 1", "emp comment 2"],
-      clientComments:["client comment 1", "client comment 2"],
+      employeeComments: ["emp comment 1", "emp comment 2"],
+      clientComments: ["client comment 1", "client comment 2"],
       photo: "www.google.com"
     },
     {
@@ -24,13 +24,13 @@ const Client = () => {
       address: "450 West Blvd",
       date: "date here",
       task: "task sample",
-      employeeComments:["emp comment 1", "emp comment 2"],
-      clientComments:["client comment 1", "client comment 2"],
+      employeeComments: ["emp comment 1", "emp comment 2"],
+      clientComments: ["client comment 1", "client comment 2"],
       photo: "www.google.com"
     }
-]);
+  ]);
 
-  const [selectedPropertyIndex, setSelectedPropertyIndex] = useState( properties[0].propertyId -1 );
+  const [selectedPropertyIndex, setSelectedPropertyIndex] = useState(properties[0].propertyId - 1);
 
   // useEffect(()=>{
   //  api call to get properties here
@@ -61,22 +61,36 @@ const Client = () => {
   //   return ( EVERYTHING IN THE RETURN BELOW )
 
   return (
-    <div style={{marginTop:"20vh"}}>
+    <div style={{ marginTop: "40vh" }}>
       <form onSubmit={handleSubmit}>
         <label>
           Select your property
           <select value={selectedPropertyIndex} onChange={handleChange}>
-            {properties.length && properties.map(property =>  <option value={property.propertyId - 1}>{property.address}</option>)}
+            {properties.length && properties.map(property => <option value={property.propertyId - 1}>{property.address}</option>)}
           </select>
         </label>
         <input type="submit" value="Select Property" />
       </form>
 
-
-      {/* 
-        build a form with inputs to modify each property detail
-        
-      */}
+      <form>
+        <label>
+          Is going:
+          <input
+            name="isGoing"
+            type="checkbox"
+            checked={this.state.isGoing}
+            onChange={this.handleInputChange} />
+        </label>
+        <br />
+        <label>
+          Number of guests:
+          <input
+            name="numberOfGuests"
+            type="number"
+            value={this.state.numberOfGuests}
+            onChange={this.handleInputChange} />
+        </label>
+      </form>
     </div>
   )
 };
