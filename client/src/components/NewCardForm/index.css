@@ -2,6 +2,10 @@
     width: 50vw;
 }
 
+.file-path {
+    margin-top: 15px;
+}
+
 @media only screen and (max-width: 1050px) {
     .NewCardForm {
         width: 80vw;
