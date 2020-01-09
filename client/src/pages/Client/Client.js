@@ -34,7 +34,7 @@ const Client = () => {
   return (
     <div style={{ marginTop: "40vh" }}>
 
-      {/* <h1>New Property Form</h1>
+      <h1>New Property Form</h1>
       <form>
         <label>
           Address:
@@ -49,13 +49,13 @@ const Client = () => {
           <input placeholder={properties.length && properties[selectedPropertyIndex].task} />
         </label>
         <input type="submit" value="Submit New Property" />
-      </form> */}
+      </form>
 
       
 
       <h1>Property Details</h1>
       <form>
-        <label>
+        <label className="text">
           Select your property
           <select value={selectedPropertyIndex} onChange={handleChange}>
             {properties.length && properties.map(property => <option value={property.propertyId - 1}>{property.address}</option>)}

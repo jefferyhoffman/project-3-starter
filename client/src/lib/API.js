@@ -42,6 +42,9 @@ export default {
   Properties: {
     getAll: function(){
       return axios.get('/api/properties')
+    },
+    create: function( address, task, date){
+      return axios.post("/api/properties", { address, task, date })
     }
   }
 }
