@@ -4,7 +4,7 @@ import "./style.css";
 import AuthContext from "../../contexts/AuthContext";
 import API from '../../lib/API';
 
-class MoodCardSmall extends Component {
+class MoodCardSmallHardCoded extends Component {
 static contextType = AuthContext;
 
   state = {
@@ -27,16 +27,9 @@ static contextType = AuthContext;
 
   render() {
     const { user } = this.context;
-
-    if(!user || this.state.isLoading){
-      return(
-        <h1>loading ...</h1>
-      )
-    }
-
+    let isInfo = "";
     const qrCode = 
         "http://api.qrserver.com/v1/create-qr-code/?size=50x50&data=";
-    const mostRecent = this.state.newcardinfo.length - 1;
 
     return (
       <React.Fragment>
@@ -49,11 +42,11 @@ static contextType = AuthContext;
                     <MDBCardBody className="white-text" id="cardBodyMoodSmall">
                       <MDBRow>
                         <MDBCol>
-                          <h1 id="nameAndCompanyMoodSmall">{this.state.newcardinfo[mostRecent].newname}</h1>
-                          <h1 id="nameAndCompanyMoodSmall">{this.state.newcardinfo[mostRecent].company}</h1>
-                          <p id="textMoodSmall">{this.state.newcardinfo[mostRecent].phonenumber}</p>
-                          <p id="textMoodSmall">{this.state.newcardinfo[mostRecent].email}</p>
-                          <p id="textMoodSmall">{this.state.newcardinfo[mostRecent].website}</p>
+                          <h1 id="nameAndCompanyMoodSmall">Your Name</h1>
+                          <h1 id="nameAndCompanyMoodSmall">Your Company</h1>
+                          <p id="textMoodSmall">Your Phone Number</p>
+                          <p id="textMoodSmall">Your Email</p>
+                          <p id="textMoodSmall">Your Website</p>
                         </MDBCol>
                       </MDBRow>
                     </MDBCardBody>
@@ -68,4 +61,4 @@ static contextType = AuthContext;
   }
 };
 
-export default MoodCardSmall;
+export default MoodCardSmallHardCoded;

@@ -1,26 +1,27 @@
-#CardBCGPlainJane {
+#CardBCGPlainJaneSmall {
     background-image: url(../../images/whitemarble.jpg);
     background-size: 100%;
+    height: 100%;
     
 }
 
-#pFont{
+#pFontSmall{
     font-family: 'Libre Baskerville', serif;
+    color: black;
     text-shadow: 1px 0.1px grey;
-
+    font-size: 12px;
 }
 
-.GenPadding {
-    padding-top: 15px;
+#NameJaneSmall {
+    font-size: 12px;
 }
 
-#BisJane {
+#BisJaneSmall {
     font-family: 'Libre Baskerville', serif;
+    color: black;
     text-shadow: 1px 0.1px grey;
-    font-size: 40px;
-
+    font-size: 28px;
 }
-.plainJaneImg{
-    margin-top: 5rem;
+.plainJaneImgSmall{
+    margin-top: 3rem;
 }
-

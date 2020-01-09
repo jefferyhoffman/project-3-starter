@@ -1,11 +1,10 @@
 import React from 'react';
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBContainer, MDBMask, MDBView, MDBRow, MDBCol, MDBSideNavLink } from 'mdbreact';
-import BasicCard from '../BasicCard/Card'
 import "./style.css"
-import MiniColourCard from '../../components/miniColourCard';
-import MoodCardSmall from '../../components/MoodCardSmall';
-import PlainJaneSmall from '../../components/PlainJaneSmall';
-import PlainJoeSmall from '../../components/PlainJoeSmall';
+import MiniColourCardHardCoded from '../../components/miniColourCard(HardCoded)';
+import MoodCardSmallHardCoded from '../../components/MoodCardSmall(HardCoded)';
+import PlainJaneSmallHardCoded from '../../components/PlainJaneSmall(HardCoded)';
+import PlainJoeSmallHardCoded from '../../components/PlainJoeSmall(HardCoded)';
 
 class FullPageIntroWithNonFixedTransparentNavbar extends React.Component {
   constructor(props) {
@@ -47,15 +46,15 @@ class FullPageIntroWithNonFixedTransparentNavbar extends React.Component {
               <h1 className="BottomPaddingIndex"> Our Templates</h1>
               <MDBRow className="">
                 <MDBCol></MDBCol>
-                <MDBCol> <MiniColourCard /> </MDBCol>
-                <MDBCol> <PlainJoeSmall /> </MDBCol>
+                <MDBCol> <MiniColourCardHardCoded /> </MDBCol>
+                <MDBCol> <PlainJoeSmallHardCoded /> </MDBCol>
                 <MDBCol></MDBCol>
               </MDBRow>
               <br />
               <MDBRow>
                 <MDBCol></MDBCol>
-                <MDBCol> <MoodCardSmall /> </MDBCol>
-                <MDBCol> <PlainJaneSmall /> </MDBCol>
+                <MDBCol> <MoodCardSmallHardCoded /> </MDBCol>
+                <MDBCol> <PlainJaneSmallHardCoded /> </MDBCol>
                 <MDBCol></MDBCol>
               </MDBRow>
             </MDBMask>

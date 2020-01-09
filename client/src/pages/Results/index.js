@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 import { MDBContainer, MDBRow, MDBCol, MDBView } from "mdbreact";
 import MiniColourCard from '../../components/miniColourCard'
 import MoodCardSmall from '../../components/MoodCardSmall'
@@ -8,7 +8,16 @@ import IndexNav from "../../components/IndexNAV/index.js"
 import './style.css'
 
 
-function Results() {
+function Results(props) {
+
+    const handleClick = (cardId) => {
+        props.history.push('/Final', {
+            selectedCard: cardId
+        })
+    }
+
+
+
     return (
         <div className="MainBodyColor">
             <React.Fragment>
@@ -19,20 +28,20 @@ function Results() {
                         <MDBCol>
 
                         </MDBCol>
-                        <MDBView hover zoom waves>
-                                <MiniColourCard className='resultsColourCard' />
+                        <MDBView hover zoom waves onClick={()=>handleClick(0)}>
+                                <MiniColourCard className='resultsColourCard'/>
                         </MDBView>
-                        <MDBView hover zoom waves>
+                        <MDBView hover zoom waves onClick={()=>handleClick(1)}>
                                 <MoodCardSmall />
                         </MDBView>
                         <MDBCol></MDBCol>
                     </MDBRow>
                     <MDBRow className="rowPadding">
                         <MDBCol></MDBCol>
-                        <MDBView hover zoom waves>
+                        <MDBView hover zoom waves onClick={()=>handleClick(2)}>
                                 <PlainJaneSmall />
                         </MDBView>
-                        <MDBView hover zoom waves>
+                        <MDBView hover zoom waves onClick={()=>handleClick(3)}>
                                 <PlainJoeSmall />
                         </MDBView>
                         <MDBCol></MDBCol>

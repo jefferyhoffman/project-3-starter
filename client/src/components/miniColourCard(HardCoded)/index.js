@@ -7,7 +7,7 @@ import API from '../../lib/API';
 
 
 
-class MiniColourCard extends Component {
+class MiniColourCardHardCoded extends Component {
     static contextType = AuthContext;
     
     state = {
@@ -31,15 +31,9 @@ class MiniColourCard extends Component {
 
     render() {
         const { user } = this.context;
-
-        if(!user || this.state.isLoading){
-          return(
-            <h1>loading ...</h1>
-          )
-        }
+        let isInfo = "";
         const qrCode = 
             "http://api.qrserver.com/v1/create-qr-code/?size=40x40&data=";
-        const mostRecent = this.state.newcardinfo.length - 1;
         
         return (
             <React.Fragment>
@@ -55,13 +49,13 @@ class MiniColourCard extends Component {
                                 </MDBCol>
                                 <MDBCol>
                                     <div className="text-white">
-                                    <h2 className="mininameColour minicolorMainPadding">{this.state.newcardinfo[mostRecent].newname}</h2>
+                                        <h2 className="mininameColour minicolorMainPadding">Your Name</h2>
                                         <div className="minifontColourp">
                                             <strong>
-                                            <p className="minicolorCompName">{this.state.newcardinfo[mostRecent].company}</p>
-                                            <p className="minicolorEmail">{this.state.newcardinfo[mostRecent].email}</p>
-                                            <p className="minicolorWebsite">{this.state.newcardinfo[mostRecent].website}</p>
-                                            <p className="minicolorPhone">{this.state.newcardinfo[mostRecent].phonenumber}</p>
+                                            <p className="minicolorCompName">Your Company</p>
+                                            <p className="minicolorEmail">Your Email</p>
+                                            <p className="minicolorWebsite">"Your Website</p>
+                                            <p className="minicolorPhone">Your Phone Number</p>
                                             </strong>
                                         </div>
                                     </div>
@@ -78,5 +72,5 @@ class MiniColourCard extends Component {
 }
 
 
-export default MiniColourCard;
+export default MiniColourCardHardCoded;
 

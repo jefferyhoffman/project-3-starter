@@ -6,7 +6,7 @@ import API from '../../lib/API';
 import AuthContext from "../../contexts/AuthContext";
 
 
-class PlainJoeSmall extends Component {
+class PlainJoeSmallHardCoded extends Component {
     static contextType = AuthContext;
     state = {
         isLoading: true,
@@ -27,17 +27,9 @@ class PlainJoeSmall extends Component {
 
     render() {
     const { user } = this.context;
+    
 
-    if(!user || this.state.isLoading){
-      return(
-        <h1>loading ...</h1>
-      )
-    }
-    const qrCode = 
-        "http://api.qrserver.com/v1/create-qr-code/?size=40x40&data=";
-    const mostRecent = this.state.newcardinfo.length - 1;
-
-    return (
+        return (
         <React.Fragment>
             <MDBCol>
                 <MDBCard id="CardBCGPlainJoeSmall" style={{ width: "27rem", height: "16rem" }}>
@@ -48,11 +40,11 @@ class PlainJoeSmall extends Component {
                                 <img src={dude} className="img-fluid" id='PlainJoeSmallLogo' />
                             </MDBCol>
                             <MDBCol>
-                                <h1 id='nameAndCompanyPlainJoeSmall'>{this.state.newcardinfo[mostRecent].newname}</h1>
-                                <p id='textPlainJoeSmall'>{this.state.newcardinfo[mostRecent].email}</p>
-                                <p id='textPlainJoeSmall'>{this.state.newcardinfo[mostRecent].phonenumber}</p>
-                                <p id='textPlainJoeSmall'>{this.state.newcardinfo[mostRecent].website}</p>
-                                <h1 style={{fontSize: '72'}} id='nameAndCompanyPlainJoeSmall'> {this.state.newcardinfo[mostRecent].company}</h1>
+                                <h1 id='nameAndCompanyPlainJoeSmall'>Your Name</h1>
+                                <p id='textPlainJoeSmall'>Your Email</p>
+                                <p id='textPlainJoeSmall'>Your Phone Number</p>
+                                <p id='textPlainJoeSmall'>Your Website</p>
+                                <h1 style={{fontSize: '72'}} id='nameAndCompanyPlainJoeSmall'> Your Company Name</h1>
                             </MDBCol>
                         </MDBRow>
                     </MDBCardBody>
@@ -64,4 +56,4 @@ class PlainJoeSmall extends Component {
 }
 
 
-export default PlainJoeSmall;
+export default PlainJoeSmallHardCoded;
