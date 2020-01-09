@@ -28,15 +28,7 @@ class PlainJaneSmall extends Component {
     
     render() {
     const { user } = this.context;
-
-    if(!user || this.state.isLoading){
-      return(
-        <h1>loading ...</h1>
-      )
-    }
-    const qrCode = 
-        "http://api.qrserver.com/v1/create-qr-code/?size=40x40&data=";
-    const mostRecent = this.state.newcardinfo.length - 1;
+    let isInfo = "";
     
         return (
             <React.Fragment>
@@ -49,13 +41,13 @@ class PlainJaneSmall extends Component {
                                 </MDBCol>
                                 <MDBCol>
                                     <div>
-                                    <h2 id="BisJaneSmall">{this.state.newcardinfo[mostRecent].newname}</h2>
-                                    <div id="pFontSmall">
-                                    <p className=" text-left" id="NameJaneSmall">{this.state.newcardinfo[mostRecent].company}</p>
-                                    <p className="text-left" id="EmailJaneSmall">{this.state.newcardinfo[mostRecent].newemail}</p>
-                                    <p className="text-left"id="WebsiteJaneSmall"><img src={qrCode + encodeURIComponent(this.state.newcardinfo[mostRecent].website)} /></p>
-                                    <p className="text-left"id="phoneJaneSmall">{this.state.newcardinfo[mostRecent].phonenumber}</p>
-                                    </div>
+                                        <h2 id="BisJaneSmall">{isInfo ? this.state.newcardinfo[this.state.newcardinfo.length - 1].newname : "Your Name"}</h2>
+                                        <div id="pFontSmall">
+                                            <p className="GenPadding text-left" id="NameJaneSmall">{isInfo ? this.state.newcardinfo[this.state.newcardinfo.length - 1].company : "Your Company"}</p>
+                                            <p className="text-left GenPadding" id="EmailJaneSmall">{isInfo ? this.state.newcardinfo[this.state.newcardinfo.length - 1].newemail : "Your Email"}</p>
+                                            <p className="text-left GenPadding"id="WebsiteJaneSmall">{isInfo ? this.state.newcardinfo[this.state.newcardinfo.length - 1].website : "Your Website"} /></p>
+                                            <p className="text-left GenPadding"id="phoneJaneSmall">{isInfo ? this.state.newcardinfo[this.state.newcardinfo.length - 1].phonenumber : "Your Phone Number"}</p>
+                                        </div>
                                     </div>
                                 </MDBCol>
                             </MDBRow>
