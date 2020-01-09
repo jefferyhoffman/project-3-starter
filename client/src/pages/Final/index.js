@@ -1,14 +1,11 @@
 import React, { Component, useState } from 'react';
 import './style.css'
-import { MDBContainer, MDBRow, MDBCol, MDBView, MDBBtn } from "mdbreact";
-import FinalCard from '../../components/FinalCard/index';
-import IndexNAV from '../../components/IndexNAV/index';
+import { MDBContainer, MDBRow, MDBCol, MDBView, MDBBtn, MDBIcon } from "mdbreact";
 import PlainJane from '../../components/PlainJane';
 import PlainJoe from '../../components/PlainJoe';
 import MoodCard from '../../components/MoodCard';
 import Colour from '../../components/Colour';
-import API from "../../lib/API";
-import AuthContext from "../../contexts/AuthContext";
+import IndexNAV from '../../components/IndexNAV';
 
 
 const printPageBtn = () => {
@@ -41,6 +38,7 @@ const Finale = (props) => {
     return (
         <div className="MainBody">
             <React.Fragment>
+                <IndexNAV/>
                 <MDBContainer>
                     <MDBRow className="rowPadding">
                         <MDBCol></MDBCol>
@@ -59,7 +57,11 @@ const Finale = (props) => {
                             <MoodCard /> */}
                         </MDBCol>
                         <MDBCol>
+<<<<<<< HEAD
                             <MDBBtn className='purple-gradient' rounded hover onClick={()=>handlePrint()} id='printBtn'>Print ></MDBBtn>
+=======
+                            <MDBBtn className='purple-gradient' rounded hover onClick='printBtn()' id='printBtn' onClick='printPageBtn()' href="/PrintPage"><MDBIcon icon="print" /> Print</MDBBtn>
+>>>>>>> b187f138cbce8776d32a70dbeb6ea85c04892ae7
                         </MDBCol>
                     </MDBRow>
                 </MDBContainer>
