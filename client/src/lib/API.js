@@ -37,5 +37,11 @@ export default {
         }
       });
     }
+  },
+
+  Properties: {
+    getAll: function(){
+      return axios.get('/api/properties')
+    }
   }
 }
