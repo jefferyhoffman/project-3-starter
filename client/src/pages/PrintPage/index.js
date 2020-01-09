@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './style.css'
 import { MDBContainer, MDBRow, MDBCol, MDBView } from "mdbreact";
 import MoodCardSmall from '../../components/MoodCardSmall'
@@ -6,32 +6,47 @@ import PlainJoeSmall from '../../components/PlainJoeSmall'
 import MiniColourCard from '../../components/miniColourCard'
 import PlainJaneSmall from '../../components/PlainJaneSmall'
 
-const PrintPage = () => {
+const PrintPage = (props) => {
+    const [selectedCard, setSelectedCard] = useState(props.location.state.selectedCard)
+
+    const renderCards = (cardNum) =>{
+        switch(cardNum){
+            case 0:
+                return <MiniColourCard className='float-left'/>;
+            case 1:
+                return <MoodCardSmall className='float-left'/>;
+            case 2:
+                return <PlainJaneSmall className='float-left'/>;
+            case 3:
+                return <PlainJoeSmall className='float-left'/>;
+        }
+    }
+    
     return (
         <div>
             <React.Fragment>
                 <MDBRow id='printPagePadding'>
                     <MDBCol className='d-flex justify-content-center'>
-                        <MoodCardSmall className='float-left'/>
-                        <MoodCardSmall className='float-left'/>
+                        {renderCards(selectedCard)}
+                        {renderCards(selectedCard)}
                     </MDBCol>
                 </MDBRow>
                 <MDBRow id='printPagePadding'>
                     <MDBCol className='d-flex justify-content-center'>
-                        <PlainJoeSmall className='float-left'/>
-                        <PlainJoeSmall className='float-left'/>
+                        {renderCards(selectedCard)}
+                        {renderCards(selectedCard)}
                     </MDBCol>
                 </MDBRow>
                 <MDBRow id='printPagePadding'>
                     <MDBCol className='d-flex justify-content-center'>
-                        <MiniColourCard className='float-left'/>
-                        <MiniColourCard className='float-left'/>
+                        {renderCards(selectedCard)}
+                        {renderCards(selectedCard)}
                     </MDBCol>
                 </MDBRow>
                 <MDBRow id='printPagePadding'>
                     <MDBCol className='d-flex justify-content-center'>
-                        <PlainJaneSmall className='float-left'/>
-                        <PlainJaneSmall className='float-left'/>
+                        {renderCards(selectedCard)}
+                        {renderCards(selectedCard)}
                     </MDBCol>
                 </MDBRow>
 
