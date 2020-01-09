@@ -19,6 +19,13 @@ export default {
     },
     getAll: function () {
       return axios.get('/api/users');
+    },
+    updateRole: function(authToken, user, role){
+      return axios.put('/api/users', {user:user, role:role}, {
+        headers: {
+          'Authorization': `Bearer ${authToken}`
+        }
+      })
     }
   },
 
