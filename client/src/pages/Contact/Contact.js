@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 
-class ServicesPage extends Component {
+class Contact extends Component {
 render() {
     return (
-      <div className='Services'>
+      <div className='Services Login'>
         <div className='row'>
           <div className='col'>
-                  <p>Shh, the secret is...</p>
-                  <p>hello</p>
+              <h1>Contact Us!</h1>
                 </div>
           </div>
         </div>
@@ -16,4 +15,4 @@ render() {
   }
 }
 
-export default Services;
+export default Contact;

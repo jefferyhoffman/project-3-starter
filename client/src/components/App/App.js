@@ -11,10 +11,10 @@ import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
 import Home from '../../pages/Home/Home';
 import Login from '../../pages/Login/Login';
 import Register from '../../pages/Register/Register';
-import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
 import Employee from "../../pages/Employee/Employee";
 import Client from "../../pages/Client/Client";
+import Contact from "../../pages/Contact/Contact";
 
 import './App.css';
 
@@ -86,7 +86,7 @@ class App extends Component {
                         <Route exact path='/' render={(props => <Home {...props} auth={auth} status={status} />)} />
                         <Route path='/login' render={(props => <Login {...props} auth={auth} status={status} />)} />
                         <Route path='/register' component={Register} />
-                        <PrivateRoute path='/secret' component={Secret} />
+                        <Route path='/contact' component={Contact} />
                         <PrivateRoute path='/admin' component={Admin} />
                         <PrivateRoute path='/employee' component={Employee} />
                         <PrivateRoute path='/client' component={Client} />
