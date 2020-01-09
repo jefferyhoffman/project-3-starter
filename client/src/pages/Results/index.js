@@ -16,28 +16,24 @@ function Results() {
                 <h1 className="text-white">Choose a Template</h1>
                 <MDBContainer>
                     <MDBRow className="rowPadding">
-                        <MDBCol></MDBCol>
+                        <MDBCol>
+
+                        </MDBCol>
                         <MDBView hover zoom waves>
                                 <MiniColourCard className='resultsColourCard' />
                         </MDBView>
                         <MDBView hover zoom>
-                            <MDBCol>
                                 <MoodCardSmall />
-                            </MDBCol>
                         </MDBView>
                         <MDBCol></MDBCol>
                     </MDBRow>
                     <MDBRow className="rowPadding">
                         <MDBCol></MDBCol>
                         <MDBView hover zoom>
-                            <MDBCol>
                                 <PlainJaneSmall />
-                            </MDBCol>
                         </MDBView>
                         <MDBView hover zoom>
-                            <MDBCol>
                                 <PlainJoeSmall />
-                            </MDBCol>
                         </MDBView>
                         <MDBCol></MDBCol>
                     </MDBRow>
