@@ -1,6 +1,6 @@
 import React from 'react';
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBContainer, MDBMask, MDBView, MDBRow, MDBCol } from 'mdbreact';
-import BasicCard from '../BasicCard/Card'
+import BasicCard from '../BasicCard/Card';
 
 class FullPageIntroWithNonFixedTransparentNavbar extends React.Component {
   constructor(props) {

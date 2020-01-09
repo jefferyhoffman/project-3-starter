@@ -26,15 +26,15 @@ class NewCardForm extends Component {
     };
 
     handleSubmit = event => {
-        const { newname, image, company, newemail, website, phonenumber } = this.state;
+        const { newname, company, newemail, website, phonenumber, image } = this.state;
 
-        this.props.onSubmit(newname, image, company, newemail, website, phonenumber);
+        this.props.onSubmit(newname, company, newemail, website, phonenumber, image);
         console.log(newname, image, company, newemail, website, phonenumber);
         event.preventDefault();
     }
 
     render() {
-        const { newname, image, company, newemail, website, phonenumber } = this.state;
+        const { newname, company, newemail, website, phonenumber, image } = this.state;
         return (
             <MDBContainer>
             <MDBRow>
@@ -57,7 +57,7 @@ class NewCardForm extends Component {
                                     error="wrong"
                                     success="right"
                                 /> */}
-                                <div class="file-field">
+                                <div value={image} class="file-field">
                                     <a class="btn btn-rounded purple-gradient">
                                         <i class="fas fa-paperclip" aria-hidden="true"></i>
                                         <input type="file" />
