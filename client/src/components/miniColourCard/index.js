@@ -40,42 +40,43 @@ class MiniColourCard extends Component {
         const qrCode = 
             "http://api.qrserver.com/v1/create-qr-code/?size=40x40&data=";
         const mostRecent = this.state.newcardinfo.length - 1;
-        return (
         
-    
+        return (
             <React.Fragment>
-            <MDBCol>
-                <MDBCard className="miniColourBody" style={{width: "27rem", height: "16rem" }}>
-                        <MDBRow>
-                            <MDBCol>
-                            <MDBCard style={{width: '13rem'}}>
-                                <MDBCardBody className="minilogoSideColour rounded minitopLogoPadding" style={{height: "16rem"}}>
-                                <img src={logo}></img>
-                                </MDBCardBody>
-                            </MDBCard>
-                            </MDBCol>
-                            <MDBCol>
-                            <div className="text-white">
-                                    <h2 className="mininameColour minicolorMainPadding">John Parker Hodges</h2>
-                                    <div className="minifontColourp">
-                                    <strong>
-                                    <p className="minicolorCompName"></p>
-                                    <p className="minicolorEmail"></p>
-                                    <p className="minicolorWebsite"></p>
-                                    <p className="minicolorPhone"></p>
-                                    </strong>
+                <MDBCol>
+                    <MDBCard className="miniColourBody" style={{width: "27rem", height: "16rem" }}>
+                            <MDBRow>
+                                <MDBCol>
+                                <MDBCard style={{width: '13rem'}}>
+                                    <MDBCardBody className="minilogoSideColour rounded minitopLogoPadding" style={{height: "16rem"}}>
+                                    <img src={logo}></img>
+                                    </MDBCardBody>
+                                </MDBCard>
+                                </MDBCol>
+                                <MDBCol>
+                                    <div className="text-white">
+                                        <h2 className="mininameColour minicolorMainPadding">{this.state.newcardinfo[mostRecent].newname}</h2>
+                                        <div className="minifontColourp">
+                                            <strong>
+                                            <p className="minicolorCompName">{this.state.newcardinfo[mostRecent].company}</p>
+                                            <p className="minicolorEmail">{this.state.newcardinfo[mostRecent].newemail}</p>
+                                            <p className="minicolorWebsite">{this.state.newcardinfo[mostRecent].website}</p>
+                                            <p className="minicolorPhone">{this.state.newcardinfo[mostRecent].phonenumber}</p>
+                                            </strong>
+                                        </div>
                                     </div>
-                            </div>
-                            <div className="QRCODEPadding">
-                            <img src={qrCode + encodeURIComponent(this.state.newcardinfo[mostRecent].website)} />
-                            </div>
-                            </MDBCol>
-                        </MDBRow>
-                </MDBCard>
-            </MDBCol>
-            </React.Fragment>        )
+                                <div className="QRCODEPadding">
+                                <img src={qrCode + encodeURIComponent(this.state.newcardinfo[mostRecent].website)} />
+                                </div>
+                                </MDBCol>
+                            </MDBRow>
+                    </MDBCard>
+                </MDBCol>
+            </React.Fragment>        
+        )
     }
 }
 
 
 export default MiniColourCard;
+
