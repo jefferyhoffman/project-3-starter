@@ -1,15 +1,11 @@
 import React from 'react';
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBContainer, MDBMask, MDBView, MDBRow, MDBCol } from 'mdbreact';
-<<<<<<< HEAD
-import BasicCard from '../BasicCard/Card';
-=======
 import BasicCard from '../BasicCard/Card'
 import "./style.css"
 import MiniColourCard from '../../components/miniColourCard';
 import MoodCardSmall from '../../components/MoodCardSmall';
 import PlainJaneSmall from '../../components/PlainJaneSmall';
 import PlainJoeSmall from '../../components/PlainJoeSmall';
->>>>>>> 2085c289a30f812f437f0752f0900c4dcd57dabe
 
 class FullPageIntroWithNonFixedTransparentNavbar extends React.Component {
   constructor(props) {
