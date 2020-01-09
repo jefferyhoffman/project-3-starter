@@ -27,7 +27,7 @@ class PlainJaneSmall extends Component {
     }
     
     render() {
-        const { user } = this.context;
+    const { user } = this.context;
 
     if(!user || this.state.isLoading){
       return(
