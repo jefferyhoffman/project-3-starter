@@ -27,7 +27,7 @@ class PlainJoeSmallHardCoded extends Component {
 
     render() {
     const { user } = this.context;
-    let isInfo = "";
+    
 
         return (
         <React.Fragment>
@@ -44,7 +44,7 @@ class PlainJoeSmallHardCoded extends Component {
                                 <p id='textPlainJoeSmall'>Your Email</p>
                                 <p id='textPlainJoeSmall'>Your Phone Number</p>
                                 <p id='textPlainJoeSmall'>Your Website</p>
-                                <h1 style={{fontSize: '72'}} id='nameAndCompanyPlainJoeSmall'> Your Website</h1>
+                                <h1 style={{fontSize: '72'}} id='nameAndCompanyPlainJoeSmall'> Your Company Name</h1>
                             </MDBCol>
                         </MDBRow>
                     </MDBCardBody>
