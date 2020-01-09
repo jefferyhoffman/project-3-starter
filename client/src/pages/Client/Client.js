@@ -11,7 +11,7 @@ const Client = () => {
   // ["2020 Main St", "100 Washington Ave", "450 West Blvd", "1330 Green St", "78 Bigsby Rd"]
 
   const [properties, setProperties] = useState([]);
-  const [selectedPropertyIndex, setSelectedPropertyIndex] = useState(0);
+  const [selectedPropertyId, setSelectedPropertyId] = useState(0);
 
   useEffect(() => {
     API.Properties.getAll()
@@ -21,7 +21,7 @@ const Client = () => {
   }, [])
 
   const handleChange = event => {
-    setSelectedPropertyIndex(parseInt(event.target.value));
+    setSelectedPropertyId(event.target.value);
   }
 
 
@@ -31,42 +31,31 @@ const Client = () => {
   // }
   //   return ( EVERYTHING IN THE RETURN BELOW )
 
+  console.log(properties);
+  console.log(selectedPropertyId);
+  
+  const selectedPropertyIndex = properties.findIndex(property => property._id === selectedPropertyId);
+  console.log(selectedPropertyIndex);
+  
+
+
   return (
     <div style={{ marginTop: "40vh" }}>
-
-      <h1>New Property Form</h1>
-      <form>
-        <label>
-          Address:
-          <input placeholder={properties.length && properties[selectedPropertyIndex].address} />
-        </label>
-        <label>
-          Date:
-          <input placeholder={properties.length && properties[selectedPropertyIndex].date} />
-        </label>
-        <label>
-          Task:
-          <input placeholder={properties.length && properties[selectedPropertyIndex].task} />
-        </label>
-        <input type="submit" value="Submit New Property" />
-      </form>
-
-      
 
       <h1>Property Details</h1>
       <form>
         <label className="text">
           Select your property
-          <select value={selectedPropertyIndex} onChange={handleChange}>
-            {properties.length && properties.map(property => <option value={property.propertyId - 1}>{property.address}</option>)}
+          <select value={selectedPropertyId} onChange={handleChange}>
+            {properties.map(property => <option value={property._id}>{property.address}</option>)}
           </select>
         </label>
       </form>
       <br></br>
       <ul style={{width: "20vw", margin: "0 auto"}}>
-        <li> Address: {properties.length && properties[selectedPropertyIndex].address}</li>
-        <li> Date: {properties.length && properties[selectedPropertyIndex].date}</li>
-        <li> Task: {properties.length && properties[selectedPropertyIndex].task}</li>
+        <li> Address: {selectedPropertyIndex !== -1 && properties[selectedPropertyIndex].address}</li>
+        <li> Date: {selectedPropertyIndex !== -1  && properties[selectedPropertyIndex].date}</li>
+        <li> Task: {selectedPropertyIndex !== -1 && properties[selectedPropertyIndex].task}</li>
       </ul>
     </div>
   )
