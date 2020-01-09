@@ -16,7 +16,7 @@ const Client = () => {
       date: "date here",
       task: "task sample",
       employeeComments: ["emp comment 1", "emp comment 2"],
-      clientComments: ["client comment 1", "client comment 2"],
+      ntComments: ["nt comment 1", "nt comment 2"],
       photo: "www.google.com"
     },
     {
@@ -25,7 +25,7 @@ const Client = () => {
       date: "date here",
       task: "task sample",
       employeeComments: ["emp comment 1", "emp comment 2"],
-      clientComments: ["client comment 1", "client comment 2"],
+      ntComments: ["nt comment 1", "nt comment 2"],
       photo: "www.google.com"
     }
   ]);
@@ -48,14 +48,14 @@ const Client = () => {
     Selected Property Date: ${properties[selectedPropertyIndex].date}
     Selected Property Task: ${properties[selectedPropertyIndex].task}
     Selected Property Employee Comments: ${properties[selectedPropertyIndex].employeeComments}
-    Selected Property Client Comments: ${properties[selectedPropertyIndex].clientComments}
+    Selected Property nt Comments: ${properties[selectedPropertyIndex].ntComments}
     Selected Property photo url: ${properties[selectedPropertyIndex].photo}
     `);
     event.preventDefault();
   }
 
 
-  // if (!user || user.role !== "Client") {
+  // if (!user || user.role !== "nt") {
   //     return <Redirect to = "/" />
   // }
   //   return ( EVERYTHING IN THE RETURN BELOW )
