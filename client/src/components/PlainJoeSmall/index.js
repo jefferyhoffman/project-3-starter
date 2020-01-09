@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { MDBCol, MDBRow, MDBCard, MDBCardUp, MDBCardBody, MDBAvatar, MDBIcon, MDBCardImage } from "mdbreact";
 import "./style.css"
 import dude from '../../images/PlainJoeLogo.png'

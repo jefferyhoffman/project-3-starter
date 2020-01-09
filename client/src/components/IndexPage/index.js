@@ -1,6 +1,11 @@
 import React from 'react';
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBContainer, MDBMask, MDBView, MDBRow, MDBCol } from 'mdbreact';
 import BasicCard from '../BasicCard/Card'
+import "./style.css"
+import MiniColourCard from '../../components/miniColourCard';
+import MoodCardSmall from '../../components/MoodCardSmall';
+import PlainJaneSmall from '../../components/PlainJaneSmall';
+import PlainJoeSmall from '../../components/PlainJoeSmall';
 
 class FullPageIntroWithNonFixedTransparentNavbar extends React.Component {
   constructor(props) {
@@ -38,31 +43,21 @@ class FullPageIntroWithNonFixedTransparentNavbar extends React.Component {
               </MDBNavbar>
           <MDBView src="https://mdbootstrap.com/img/Photos/Others/img%20(42).jpg">
 
-            <MDBMask overlay="indigo-slight" className="   text-white text-center">
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <h1> Our Templates</h1>
-            <br/>
-            <MDBRow>
-                <MDBCol size="2"></MDBCol>
-                <MDBCol size="4"> <BasicCard/> </MDBCol>
-                <MDBCol size="4"> <BasicCard/> </MDBCol>
-                <MDBCol size="2"></MDBCol>
+          <MDBMask overlay="indigo-slight" className="text-white text-center IndexPadding">
+            <h1 className="BottomPaddingIndex"> Our Templates</h1>
+            <MDBRow className="">
+                <MDBCol></MDBCol>
+                <MDBCol> <MiniColourCard/> </MDBCol>
+                <MDBCol> <PlainJoeSmall/> </MDBCol>
+                <MDBCol></MDBCol>
             </MDBRow>
             <br/>
             <MDBRow>
-                <MDBCol size="2"></MDBCol>
-                <MDBCol size="4"> <BasicCard/> </MDBCol>
-                <MDBCol size="4"> <BasicCard/> </MDBCol>
-                <MDBCol size="2"></MDBCol>
+                <MDBCol></MDBCol>
+                <MDBCol> <MoodCardSmall/> </MDBCol>
+                <MDBCol> <PlainJaneSmall/> </MDBCol>
+                <MDBCol></MDBCol>
             </MDBRow>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
             </MDBMask>
           </MDBView>
         </header>

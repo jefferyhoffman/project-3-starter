@@ -51,10 +51,10 @@ class PlainJaneSmall extends Component {
                                     <div>
                                     <h2 id="BisJaneSmall">{this.state.newcardinfo[mostRecent].newname}</h2>
                                     <div id="pFontSmall">
-                                    <p className="GenPadding text-left" id="NameJaneSmall">{this.state.newcardinfo[mostRecent].company}</p>
-                                    <p className="text-left GenPadding" id="EmailJaneSmall">{this.state.newcardinfo[mostRecent].newemail}</p>
-                                    <p className="text-left GenPadding"id="WebsiteJaneSmall"><img src={qrCode + encodeURIComponent(this.state.newcardinfo[mostRecent].website)} /></p>
-                                    <p className="text-left GenPadding"id="phoneJaneSmall">{this.state.newcardinfo[mostRecent].phonenumber}</p>
+                                    <p className=" text-left" id="NameJaneSmall">{this.state.newcardinfo[mostRecent].company}</p>
+                                    <p className="text-left" id="EmailJaneSmall">{this.state.newcardinfo[mostRecent].newemail}</p>
+                                    <p className="text-left"id="WebsiteJaneSmall"><img src={qrCode + encodeURIComponent(this.state.newcardinfo[mostRecent].website)} /></p>
+                                    <p className="text-left"id="phoneJaneSmall">{this.state.newcardinfo[mostRecent].phonenumber}</p>
                                     </div>
                                     </div>
                                 </MDBCol>

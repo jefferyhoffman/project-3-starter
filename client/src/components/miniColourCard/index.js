@@ -79,3 +79,4 @@ class MiniColourCard extends Component {
 
 
 export default MiniColourCard;
+
