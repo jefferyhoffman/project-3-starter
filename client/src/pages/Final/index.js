@@ -9,6 +9,7 @@ import MoodCard from '../../components/MoodCard';
 import Colour from '../../components/Colour';
 import API from "../../lib/API";
 import AuthContext from "../../contexts/AuthContext";
+import PrintPage from "../../pages/PrintPage"
 
 
 const printPageBtn = () => {
@@ -32,7 +33,7 @@ const Finale = () => {
                             <MoodCard />
                         </MDBCol>
                         <MDBCol>
-                            <MDBBtn className='purple-gradient' rounded hover onClick='printBtn()' id='printBtn' onClick='printPageBtn()'><MDBIcon icon="print" /> Print</MDBBtn>
+                            <MDBBtn className='purple-gradient' rounded hover onClick='printBtn()' id='printBtn' onClick='printPageBtn()' href="/PrintPage"><MDBIcon icon="print" /> Print</MDBBtn>
                         </MDBCol>
                     </MDBRow>
                 </MDBContainer>
