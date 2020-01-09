@@ -22,17 +22,17 @@ function Results() {
                         <MDBView hover zoom waves>
                                 <MiniColourCard className='resultsColourCard' />
                         </MDBView>
-                        <MDBView hover zoom>
+                        <MDBView hover zoom waves>
                                 <MoodCardSmall />
                         </MDBView>
                         <MDBCol></MDBCol>
                     </MDBRow>
                     <MDBRow className="rowPadding">
                         <MDBCol></MDBCol>
-                        <MDBView hover zoom>
+                        <MDBView hover zoom waves>
                                 <PlainJaneSmall />
                         </MDBView>
-                        <MDBView hover zoom>
+                        <MDBView hover zoom waves>
                                 <PlainJoeSmall />
                         </MDBView>
                         <MDBCol></MDBCol>

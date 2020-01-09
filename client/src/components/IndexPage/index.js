@@ -24,7 +24,7 @@ class FullPageIntroWithNonFixedTransparentNavbar extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='scrollbar scrollbar-juicy-peach'>
         <header>
           <MDBNavbar color="bg-primary" fixed="top" dark expand="md" scrolling transparent>
             <MDBContainer>
