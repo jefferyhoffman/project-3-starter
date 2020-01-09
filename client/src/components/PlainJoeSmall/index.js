@@ -27,7 +27,15 @@ class PlainJoeSmall extends Component {
 
     render() {
     const { user } = this.context;
-    let isInfo = "";
+
+    if(!user || this.state.isLoading){
+      return(
+        <h1>loading ...</h1>
+      )
+    }
+    const qrCode = 
+        "http://api.qrserver.com/v1/create-qr-code/?size=40x40&data=";
+    const mostRecent = this.state.newcardinfo.length - 1;
 
         return (
         <React.Fragment>
@@ -40,11 +48,11 @@ class PlainJoeSmall extends Component {
                                 <img src={dude} className="img-fluid" id='PlainJoeSmallLogo' />
                             </MDBCol>
                             <MDBCol>
-                                <h1 id='nameAndCompanyPlainJoeSmall'>{isInfo ? this.state.newcardinfo[this.state.newcardinfo.length - 1].newname : "Your Name"}</h1>
-                                <p id='textPlainJoeSmall'>{isInfo ? this.state.newcardinfo[this.state.newcardinfo.length - 1].newemail : "Your Email"}</p>
-                                <p id='textPlainJoeSmall'>{isInfo ? this.state.newcardinfo[this.state.newcardinfo.length - 1].phonenumber : "Your Phone Number"}</p>
-                                <p id='textPlainJoeSmall'>{isInfo ? this.state.newcardinfo[this.state.newcardinfo.length - 1].website : "Your Website"}</p>
-                                <h1 style={{fontSize: '72'}} id='nameAndCompanyPlainJoeSmall'>{isInfo ? this.state.newcardinfo[this.state.newcardinfo.length - 1].company : "Your Company"}</h1>
+                                <h1 id='nameAndCompanyPlainJoeSmall'>{this.state.newcardinfo[mostRecent].newname}</h1>
+                                <p id='textPlainJoeSmall'>{this.state.newcardinfo[mostRecent].newemail}</p>
+                                <p id='textPlainJoeSmall'>{this.state.newcardinfo[mostRecent].phonenumber}</p>
+                                <p id='textPlainJoeSmall'><img src={qrCode + encodeURIComponent(this.state.newcardinfo[mostRecent].website)} /></p>
+                                <h1 style={{fontSize: '72'}} id='nameAndCompanyPlainJoeSmall'>{this.state.newcardinfo[mostRecent].company}</h1>
                             </MDBCol>
                         </MDBRow>
                     </MDBCardBody>
