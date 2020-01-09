@@ -27,7 +27,7 @@ class PlainJane extends Component {
     }
     
     render() {
-        const { user } = this.context;
+    const { user } = this.context;
 
     if(!user || this.state.isLoading){
       return(
@@ -35,7 +35,7 @@ class PlainJane extends Component {
       )
     }
     const qrCode = 
-        "http://api.qrserver.com/v1/create-qr-code/?size=100x100&data=";
+        "http://api.qrserver.com/v1/create-qr-code/?size=50x50&data=";
     const mostRecent = this.state.newcardinfo.length - 1;
     
         return (

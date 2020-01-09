@@ -62,7 +62,7 @@ class App extends Component {
             <PrivateRoute exact path="/UserDash" component={UserDash} />
             <Route exact path="/LoginPage" component={SignIn} />
             <Route exact path="/SignupPage" component={SignUp}/>
-            <Route exact path="/Studio" component={Studio}/>
+            <PrivateRoute exact path="/Studio" component={Studio}/>
             <Route exact path="/Results" component={Results}/>
             <Route exact path="/Final" component={Finale}/>
             <Route exact path="/PrintPage" component={PrintPage}/>

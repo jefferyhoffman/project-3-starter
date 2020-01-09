@@ -46,7 +46,7 @@ render() {
           </MDBCard>
           <MDBCard className="face back">
             <MDBCardBody>
-              <h4 className="font-weight-bold">About me</h4>
+              <h4 className="font-weight-bold">About { user ? user.name : "loading..." }:</h4>
               <hr />
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
