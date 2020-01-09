@@ -57,11 +57,7 @@ const Finale = (props) => {
                             <MoodCard /> */}
                         </MDBCol>
                         <MDBCol>
-<<<<<<< HEAD
                             <MDBBtn className='purple-gradient' rounded hover onClick={()=>handlePrint()} id='printBtn'>Print ></MDBBtn>
-=======
-                            <MDBBtn className='purple-gradient' rounded hover onClick='printBtn()' id='printBtn' onClick='printPageBtn()' href="/PrintPage"><MDBIcon icon="print" /> Print</MDBBtn>
->>>>>>> b187f138cbce8776d32a70dbeb6ea85c04892ae7
                         </MDBCol>
                     </MDBRow>
                 </MDBContainer>
