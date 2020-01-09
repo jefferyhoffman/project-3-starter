@@ -1,3 +1,11 @@
 .ColorForRotate {
     color: black;
 }
+
+.AVApadding {
+    padding-top: 15px;
+}
+
+.BottomHalfImg {
+    background-image: url(../../images/white-waves.png);
+}

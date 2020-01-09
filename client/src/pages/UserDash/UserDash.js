@@ -39,9 +39,8 @@ class UserDash extends Component {
                 <MDBContainer>
                     <br />
                     <br />
-                    <br />
                     <MDBRow>
-                        <MDBCol>
+                        <MDBCol size="5">
                             <UserCard />
                         </MDBCol>
                         <MDBCol>
