@@ -1,0 +1,17 @@
+#CardBCGPlainJoeSmall {
+    background-image: url(../../images/blackmarble.jpg);
+    background-size: 150%;
+    background-repeat: no-repeat;
+}
+#nameAndCompanyPlainJoeSmall {
+    font-size: 24px;
+}
+#textPlainJoeSmall {
+    font-size: 11px;
+}
+#cardBodyPlainJoeSmall {
+    font-family: 'Baskervville', serif;
+}
+#PlainJoeSmallLogo {
+    width: 125px;
+}
