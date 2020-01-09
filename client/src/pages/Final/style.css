@@ -1,0 +1,10 @@
+.MainBody {
+  background-image: url(../../images/final-body.png);
+  background-repeat: repeat;
+  height: 100%;
+  width: 100vw;
+}
+
+#printBtn {
+  background-color: brown;
+}
