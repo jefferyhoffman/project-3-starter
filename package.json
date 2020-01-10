@@ -4,7 +4,7 @@
   "license": "MIT",
   "main": "server/server.js",
   "scripts": {
-    "install": "yarn run install:client && yarn run install:server",
+    "install": "yarn run install:client && yarn run install:server && yarn build",
     "install:client": "cd client && yarn",
     "install:server": "cd server && yarn",
     "build": "cd client && yarn build",
@@ -12,8 +12,8 @@
     "start:dev": "concurrently -n client,server \"yarn run client:dev\" \"yarn run server:dev\"",
     "client:dev": "cd client && yarn start",
     "server:dev": "cd server && yarn start:dev",
-    "heroku-prebuild": "cd client/src && bash preinstall.sh",
-    "heroku-postbuild": "cd cliet/src && bash postinstall.sh && yarn build"
+    "heroku-prebuild": "bash preinstall.sh",
+    "heroku-postbuild": "bash postinstall.sh"
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
