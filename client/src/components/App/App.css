@@ -157,9 +157,26 @@
   margin-top: 165px;
 }
 
-.text {
-  font-size: 23px;
+.textClient {
+  font-size: 5vh;
   font-family: alternate-gothic-no-3-d;
+  margin-right: 5vw;
+  justify-content: center;
+  
+}
+
+.clientList {
+  font-family: alternate-gothic-no-3-d; 
+  font-size: 5vh;
+  
+}
+
+.client {
+  font-family: alternate-gothic-no-3-d; 
+  font-size: 5vh;
+  text-decoration: underline;
+  text-decoration-color: #ffc41f;
+  text-decoration-style: double;
 }
 
 .employee {

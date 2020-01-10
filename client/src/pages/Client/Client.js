@@ -3,6 +3,8 @@ import React, { useContext, useState, useEffect } from "react";
 import { Redirect } from "react-router-dom";
 import AuthContext from "../../contexts/AuthContext";
 import API from '../../lib/API';
+import overlayImage2 from "../../images/Client_BG.jpg";
+
 
 
 const Client = () => {
@@ -33,30 +35,32 @@ const Client = () => {
 
   console.log(properties);
   console.log(selectedPropertyId);
-  
+
   const selectedPropertyIndex = properties.findIndex(property => property._id === selectedPropertyId);
   console.log(selectedPropertyIndex);
-  
+
 
 
   return (
-    <div style={{ marginTop: "40vh" }}>
+    <div className="overlayImage2" src={overlayImage2} >
+      <div className="clientContainer" style={{ marginTop: "30vh" }}>
 
-      <h1>Property Details</h1>
-      <form>
-        <label className="text">
-          Select your property
+        <h1 className="client">Property Details</h1>
+        <form>
+          <label className="textClient">
+            Select your property:
           <select value={selectedPropertyId} onChange={handleChange}>
-            {properties.map(property => <option value={property._id}>{property.address}</option>)}
-          </select>
-        </label>
-      </form>
-      <br></br>
-      <ul style={{width: "20vw", margin: "0 auto"}}>
-        <li> Address: {selectedPropertyIndex !== -1 && properties[selectedPropertyIndex].address}</li>
-        <li> Date: {selectedPropertyIndex !== -1  && properties[selectedPropertyIndex].date}</li>
-        <li> Task: {selectedPropertyIndex !== -1 && properties[selectedPropertyIndex].task}</li>
-      </ul>
+              {properties.map(property => <option value={property._id}>{property.address}</option>)}
+            </select>
+          </label>
+        </form>
+        <br></br>
+        <ul style={{ width: "30vw", margin: "0 auto" }}>
+          <li className="clientList"> Address: {selectedPropertyIndex !== -1 && properties[selectedPropertyIndex].address}</li>
+          <li className="clientList"> Date: {selectedPropertyIndex !== -1 && properties[selectedPropertyIndex].date}</li>
+          <li className="clientList"> Task: {selectedPropertyIndex !== -1 && properties[selectedPropertyIndex].task}</li>
+        </ul>
+      </div>
     </div>
   )
 };
