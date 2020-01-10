@@ -47,7 +47,7 @@ Registration Page
 
 * **Josh Eskew** - *Initial work* - [GitHUb](#)
 * **Darcey Meus** - *Initial work* - [GitHUb](#)
-* **Dan Kelly** - *Initial work* - [GitHUb](#)
+* **Dan Shelly** - *Initial work* - [GitHUb](#)
 * **Tamara Golub** - *Initial work* - [GitHUb](#)
 
 See also the repository specifically for this activity - 
