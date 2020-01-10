@@ -21,8 +21,8 @@ class HomePage extends Component {
               <div className="row">
 
                 {this.props.status.success &&
-                  <div className='row' style={{zIndex:10}}>
-                    <div className='col centeredContent' style={{marginTop:"-150px"}}>
+                  <div className='row' style={{ zIndex: 10 }}>
+                    <div className='col centeredContent' style={{ marginTop: "-150px" }}>
                       <FlashMessage duration={5000}>
                         <div className='alert alert-success mb-3' role='alert'>
                           {this.props.status.success}
@@ -36,12 +36,12 @@ class HomePage extends Component {
                   <img className="overlayImage" src={overlayImage1} />
                   <h1 className="phrase">Charlotte & Surrounding Area's Premier Commercial Landscaping Company</h1>
                 </div>
-        </div>
-        </div>
-        </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        
+
 
         <div className="parallax parallax-2">
 
@@ -49,7 +49,7 @@ class HomePage extends Component {
             <div className="row">
               <div className="centeredContent">
                 <p class="services">
-                  <h1 style={{textAlign: "center"}}>Services</h1>
+                  <h1 style={{ textAlign: "center" }}>Services</h1>
                   <ul>
                     <li>Commercial Landscape Maintenance</li>
                     <li>Truck Court Maintentance</li>
@@ -90,7 +90,7 @@ class HomePage extends Component {
             </div>
           </div>
         </div>
-    
+
       </Scrollbars>
     );
   }
