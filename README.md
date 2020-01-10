@@ -54,7 +54,7 @@ Registration Page
 See also the repository specifically for this activity - 
 [Heroku](https://guarded-scrubland-18440.herokuapp.com/) 
 [Github Repository](https://github.com/GTJ82/project-3-starter)
-[Github Pages Link](https://github.com/GTJ82/project-3-starter) 
+[Github Pages Link]() 
 
 
 ## Acknowledgments
