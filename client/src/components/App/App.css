@@ -256,4 +256,17 @@
 /* 
 .empInput {
 
-} */
+}
+.email {
+  width: 30%;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  display: flexbox;
+  justify-content: center;
+}
+.contacForm {
+  font-size: 2vh;
+  background-color: #ffc41f;
+  /* margin-left: 5vw; */
+  box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.43);
+}
