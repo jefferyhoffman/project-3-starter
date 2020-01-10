@@ -24,18 +24,19 @@ const Contact = (props) => {
     }
   }
   return (
-    <div className='Services Login'>
+    <div className='Login'>
       <div className='row'>
-        <div className='col'>
+        <div className='col contactForm'>
 
-          <h1>Contact Us!</h1>
-     
+          <h1 className="admin">Contact Us!</h1>
+      <form className="contactForm">
         {error ? <h1>{error}</h1> : null}
-        Email: <input value={userEmail} onChange={(event) => setUserEmail(event.target.value)} type="email" /><br />
-        Telephone #: <input value={userPhone} onChange={(event) => setUserPhone(event.target.value)} type="tel" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" /><br />
-        Name: <input value={userName} onChange={(event) => setUserName(event.target.value)} type="text" /><br />
-        Message: <input value={userMessage} onChange={(event) => setUserMessage(event.target.value)} type="text" /><br />
-        <input onClick={submitForm} type="submit" />
+        Email: <input className="email" value={userEmail} onChange={(event) => setUserEmail(event.target.value)} type="email" id="role" /><br />
+        Telephone #: <input className="email" value={userPhone} onChange={(event) => setUserPhone(event.target.value)}id="role" type="tel" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" /><br />
+        Name: <input className="email" value={userName} onChange={(event) => setUserName(event.target.value)} type="text" id="role" /><br />
+        Message: <input className="email" value={userMessage} onChange={(event) => setUserMessage(event.target.value)} type="text" id="role" /><br />
+        <input className="email" onClick={submitForm} type="submit"className="submitBtn" />
+        </form>
       </div>
     </div>
       </div >
