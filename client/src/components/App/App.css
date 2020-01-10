@@ -154,14 +154,106 @@
 }
 
 .Login{
-  margin-top: 165px;
+  margin-top: 30vh;
 }
 
-.text {
-  font-size: 23px;
-  font-family: alternate-gothic-no-3-d;
+.admin {
+  font-family: alternate-gothic-no-3-d; 
+  font-size: 5vh;
+  text-decoration: underline;
+  text-decoration-color: #78c14b;
+  text-decoration-style: double;
+  margin-bottom: 3vh;
+  
 }
+
+#role {
+  font-size: 2vh;
+  background-color: #ffc41f;
+  /* margin-left: 5vw; */
+  box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.43);
+
+}
+
+#use {
+  font-size: 2vh;
+  background-color:#ffc41f;
+  margin-right: 3vw;
+  box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.43);
+}
+
+.submitBtn {
+  font-family: alternate-gothic-no-3-d; 
+  margin-top: 3vh;
+  border-radius: 20px;
+  background-color:  #78c14b;
+  font-weight: bolder;
+  width: 10%;
+  margin-left: 45%;
+  margin-right: 45%;
+  box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.43);
+  
+  
+}
+
+.client {
+  font-family: alternate-gothic-no-3-d; 
+  font-size: 5vh;
+  text-decoration: underline;
+  text-decoration-color: #ffc41f;
+  text-decoration-style: double;
+}
+
+.textClient {
+  font-size: 3vh;
+  font-family: alternate-gothic-no-3-d;
+  /* margin-left: 5vw; */
+  justify-content: center;
+  
+}
+
+.clientList {
+  font-family: alternate-gothic-no-3-d; 
+  font-size: 3vh;
+  background: #78c14b;
+  margin: 5px;
+  border-radius: 20px;
+  
+}
+
+.list {
+  list-style-position: outside;
+  list-style-type: none;
+  background: #ffc41f;
+  padding: 20px;
+  border-radius: 20px;
+  
+}
+
 
 .employee {
   margin-top: 40vh;
+  font-family: alternate-gothic-no-3-d; 
+  font-size: 4vh;
+  text-decoration: underline;
+  text-decoration-color: black;
+  text-decoration-style: single;
+}
+
+
+.employeeLabel {
+  font-family: alternate-gothic-no-3-d; 
+  font-size: 3vh;
+}
+
+.empButton {
+  font-family: alternate-gothic-no-3-d; 
+  background-color: #78c14b;
+  border-radius: 20px;
+  box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.43);
+  margin-left: 1vw;
+}
+
+.empInput {
+
 }

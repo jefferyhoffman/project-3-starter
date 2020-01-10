@@ -34,14 +34,14 @@ const Admin = () => {
     return (
 
         <div className="Login">
-            <div className="container">
+            
 
-                <h1>Hello Admin</h1>
+                <h1 className="admin">Hello Admin</h1>
                 <form onSubmit={handleSub}>
 
 
                     <select id="use" onChange={event=> setSelectedUser(event.target.value)} value={selectedUser} name="setSelectedUser">
-                    <option key={123452435} value="select user">select user</option>
+                    <option className="user" key={123452435} value="select user">Select User</option>
                         {users.map(currentUser => {
                             return (<option
                                 key={currentUser._id}
@@ -52,16 +52,16 @@ const Admin = () => {
 
                     </select>
                     <select id="role" onChange={event=>setRole(event.target.value)}>
-                        <option key={1432345} value="set role">set role</option>
+                        <option key={1432345} value="set role">Set Role</option>
                         <option key={1657457} value="User">Client</option>
                         <option key={287989} value="Employee">Employee</option>
                         <option key={36457} value="Admin">Admin</option>
                     </select>
                     <br />
-                    <input type="submit" />
+                    <input type="submit" className="submitBtn"/>
                 </form>
 
-            </div>
+            
 
         </div>
     );
