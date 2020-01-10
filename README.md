@@ -22,8 +22,9 @@ What things you need to install the software
 -Heroku
 -Yarn
 -React
+-Npm
 
-## Screenshot of the display
+## Screenshots of the display
 
 Main Page
 ![image](https://user-images.githubusercontent.com/55814090/72128630-8b3ad180-3341-11ea-91cd-5159d2017a1f.png)
@@ -51,8 +52,9 @@ Registration Page
 * **Tamara Golub** - *Initial work* - [GitHUb](#)
 
 See also the repository specifically for this activity - 
-[Heroku] - 
-[Github Repository] - 
+[Heroku](https://guarded-scrubland-18440.herokuapp.com/) 
+[Github Repository](https://github.com/GTJ82/project-3-starter)
+[Github Pages Link](https://github.com/GTJ82/project-3-starter) 
 
 
 ## Acknowledgments
