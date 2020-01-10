@@ -30,6 +30,8 @@ The website input is what is going to be linked to the QR code so your business 
 
 On the form that populates your business card on the website input section it would be best to either add in your Github profile page, LinkedIn Profile, your deployed portfolio page, or your most impressive App you have worked on.
 
+When you get to the PRINT screen you may need to check a box in the more options menu and add in background graphics so the whole card renders.
+
 ## Contributors 
 * **Gabriel Mangum's** - [GitHub](https://github.com/GabrielTMangum)
 * **Jean Tubay's** - [GitHub](https://github.com/jtubay)
@@ -47,6 +49,23 @@ On the form that populates your business card on the website input section it wo
 * [React-Router-Dom](https://www.npmjs.com/package/react-router-dom)
 
 ## Photos
+
+### Homepage
+![Homepage](/client/public/photos/homepage.png)
+### Sign In Page
+![Sign in](/client/public/photos/signin.png)
+### Sign Up Page
+![Sign up](/client/public/photos/signup.png)
+### User Dashboard
+![User dash](/client/public/photos/userdash.png)
+### Card Form Page
+![Card form](/client/public/photos/cardform.png)
+### Choose Template Page
+![Template page](/client/public/photos/templatescreen.png)
+### Card Preview Page
+![Preview page](/client/public/photos/preview.png)
+### Print Screen Page
+![Print Page](/client/public/photos/printscreen.png)
 
 ## Difficulties and Solutions
 As with any project there are always going to be difficulties that arise. We wanted to generate a QR Code that the user could link to a website of their choice. We found a 3rd party API that we can generate a QR Code with. The next issue we had with it is we needed to encode the URL so that it would talk with the API properly. There is a handle function with Javascript (encodeURIComponent()) that handled that for us.
