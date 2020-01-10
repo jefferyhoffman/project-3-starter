@@ -55,7 +55,7 @@ const Client = () => {
           </label>
         </form>
         <br></br>
-        <ul style={{ width: "30vw", margin: "0 auto" }}>
+        <ul className="list" style={{ width: "30vw", margin: "0 auto" }}>
           <li className="clientList"> Address: {selectedPropertyIndex !== -1 && properties[selectedPropertyIndex].address}</li>
           <li className="clientList"> Date: {selectedPropertyIndex !== -1 && properties[selectedPropertyIndex].date}</li>
           <li className="clientList"> Task: {selectedPropertyIndex !== -1 && properties[selectedPropertyIndex].task}</li>

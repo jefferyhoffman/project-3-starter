@@ -214,11 +214,46 @@
 
 .clientList {
   font-family: alternate-gothic-no-3-d; 
-  font-size: 5vh;
+  font-size: 3vh;
+  background: #78c14b;
+  margin: 5px;
+  border-radius: 20px;
+  
+}
+
+.list {
+  list-style-position: outside;
+  list-style-type: none;
+  background: #ffc41f;
+  padding: 20px;
+  border-radius: 20px;
   
 }
 
 
 .employee {
   margin-top: 40vh;
+  font-family: alternate-gothic-no-3-d; 
+  font-size: 4vh;
+  text-decoration: underline;
+  text-decoration-color: black;
+  text-decoration-style: single;
+}
+
+
+.employeeLabel {
+  font-family: alternate-gothic-no-3-d; 
+  font-size: 3vh;
+}
+
+.empButton {
+  font-family: alternate-gothic-no-3-d; 
+  background-color: #78c14b;
+  border-radius: 20px;
+  box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.43);
+  margin-left: 1vw;
+}
+
+.empInput {
+
 }
