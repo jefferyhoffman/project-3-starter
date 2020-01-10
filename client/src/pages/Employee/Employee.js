@@ -32,19 +32,19 @@ const Employee = () => {
 
     return <div className="employee"><h1>New Property Form</h1>
         <form onSubmit={handleSubmit}>
-            <label>
+            <label className="employeeLabel">
                 Address:
-        <input type="text" placeholder="123 State St." value={address} onChange={(event) => setAddress(event.target.value)} />
+        <input className="empInput"type="text" placeholder="123 State St." value={address} onChange={(event) => setAddress(event.target.value)} />
             </label>
-            <label>
+            <label className="employeeLabel">
                 Date:
         <input type="date" placeholder="#" value={date} onChange={(event) => setDate(new Date(event.target.value).toISOString().slice(0, 10).replace(/-/g, "-"))} />
             </label>
-            <label>
+            <label className="employeeLabel">
                 Task:
-        <input type="text" placeholder="#" value={task} onChange={(event) => setTask(event.target.value)} />
+        <input type="text" placeholder="" value={task} onChange={(event) => setTask(event.target.value)} />
             </label>
-            <button type="submit" value="Submit New Property" />
+            <button className="empButton" type="submit" value="Submit New Property"> Submit New Property </button>
         </form>
     </div>;
 };
