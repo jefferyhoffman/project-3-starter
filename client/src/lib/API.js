@@ -28,7 +28,11 @@ export default {
       })
     }
   },
-
+  Contact: {
+    send: function (info){
+      return axios.post('/api/contact', info)
+    }
+  },
   Secrets: {
     getAll: function (authToken) {
       return axios.get('/api/secrets', {
