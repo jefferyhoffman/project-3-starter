@@ -49,7 +49,7 @@ class HomePage extends Component {
             <div className="row">
               <div className="centeredContent">
                 <p class="services">
-                  <h1 style={{textAlign: "center"}}>Services</h1>
+                  <h1 style={{textAlign: "center", fontStyle: "bold"}}>Services</h1>
                   <ul>
                     <li>Commercial Landscape Maintenance</li>
                     <li>Truck Court Maintentance</li>
