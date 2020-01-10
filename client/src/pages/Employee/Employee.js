@@ -38,11 +38,11 @@ const Employee = () => {
             </label>
             <label className="employeeLabel">
                 Date:
-        <input type="date" placeholder="#" value={date} onChange={(event) => setDate(new Date(event.target.value).toISOString().slice(0, 10).replace(/-/g, "-"))} />
+        <input className="empInput" type="date" placeholder="#" value={date} onChange={(event) => setDate(new Date(event.target.value).toISOString().slice(0, 10).replace(/-/g, "-"))} />
             </label>
             <label className="employeeLabel">
                 Task:
-        <input type="text" placeholder="" value={task} onChange={(event) => setTask(event.target.value)} />
+        <input className="empInput" type="text" placeholder="" value={task} onChange={(event) => setTask(event.target.value)} />
             </label>
             <button className="empButton" type="submit" value="Submit New Property"> Submit New Property </button>
         </form>
