@@ -1,182 +1,64 @@
-# Mongoose & Project 3 Starter
+# Project 3
 
-*All models are imported too and exported out of index*
+# Becker Grounds Management
 
-**Via the mongo shell, you will need to insert a message into your secret model**
+Group Project #3
 
-**All uses can be created via the registration form on the site**
-* Models
-    * index
-    * secret
-    * user
+In this assignment, we worked in a group of 4 people. WE had to build and design a full-stack web application using everything that we have learned in the class. The application had to be made using React. 
 
-*Remember, this is a basic starter template. You can do so much more if you set your mind too it. Read documentation, test your code, and explain it to yourself or others in order to undestand it*
-
-__*Mastery of a skill requires you to fail more than any novice has succeeded*__
-
-# Project 3 Starter
+Our application is a website for a landscaping company. We have three different sections of the application available. The first one is for the Admin: the admin will be able to access all of the database and user information available, manage it, and update as necessary. The second one is the employee login: the employee will be able to select the property that they are working on, the date when they worked on it, and add comments or information about the property. The third section is for the client: the client will be able to see information about their property, add comments, and select when they want the service done. 
 
 ## Getting Started
 
-1. Fork this repo on GitHub:
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
 
-2. Rename your fork:
+### Prerequisites
 
-3. Clone your fork to your computer:
+What things you need to install the software 
 
-4. Copy `.env.sample` to `.env` and modify it:
-   ```bash
-   $ cp .env.sample .env
-   $ code .env
-   ```
+-GitHub
+-Visual Studio Code
+-Bootstrap
+-Heroku
+-Yarn
+-React
 
-5. Launch the client and server in development mode:
-   ```bash
-   $ yarn start:dev
-   ```
+## Screenshot of the display
 
-## Organization
+Main Page
+![image](https://user-images.githubusercontent.com/55814090/72128630-8b3ad180-3341-11ea-91cd-5159d2017a1f.png)
 
-First, let's look at how things are organized.
+Login Page
+![image](https://user-images.githubusercontent.com/55814090/72128665-a574af80-3341-11ea-86e4-0e29055f15c8.png)
 
-```
-.
-├── client
-└── server
-```
+Registration Page
+![image](https://user-images.githubusercontent.com/55814090/72128699-c210e780-3341-11ea-99bc-3bcd98dfc181.png)
 
-At the top level, everything is divided into two folders. The `client` folder contains the React client, while the `server` folder contains the Express server.
 
-In the root folder, you'll also notice `.gitignore` and `package.json`. The former ignores `node_modules` folders project-wide, while the latter contains scripts for development and deployment.
+## Table of Contents
 
-### client
+* [client]
+* [server]
+* [package.json]
+* [README.md]
+* [yarn.lock]
 
-The `client` folder is organized as follows:
+## Authors
 
-```
-client
-├── public
-└── src
-    ├── components
-    │   ├── App
-    │   ├── AuthDropdown
-    │   ├── LoginForm
-    │   ├── Navigation
-    │   └── PrivateRoute
-    ├── contexts
-    ├── lib
-    └── pages
-        ├── Home
-        ├── Login
-        ├── NotFound
-        └── Secret
-```
+* **Josh Eskew** - *Initial work* - [GitHUb](#)
+* **Darcey Meus** - *Initial work* - [GitHUb](#)
+* **Dan Kelly** - *Initial work* - [GitHUb](#)
+* **Tamara Golub** - *Initial work* - [GitHUb](#)
 
-#### client/public
+See also the repository specifically for this activity - 
+[Heroku] - 
+[Github Repository] - 
 
-The `public` folder contains the one-and-only HTML file used on the client: `index.html`. The only modification I made from the default is to add a link to the Bootstrap CDN.
 
-#### client/src
+## Acknowledgments
 
-The `src` folder contains all the JavaScript code, organized into `components`, `contexts`, `lib`, and `pages`.
+* Darcey Meus and Dan Shelly worked on the backend part of the application.
+* Josh Eskew and Tamara Golub worked on the front-end design and formatting. 
+* Tamara Golub worked on the ReadMe file and the presentation of the project.
+* This assignment was challenging and fun!!
 
-#### client/src/components
-
-Inside the `components` folder you'll find most of the React components used on the client:
-
-The `App` component is the "root" of the component tree. All other components (including those in the `pages` folder, see below) are children of `App`. This component also manages user authentication state, and provides the `AuthContext` context allowing child components to easily access authentication state.
-
-Used in the navigation bar, `AuthDropdown` displays the currently logged in user (or a link to login/register) and allows them to logout. It consumes the `AuthContext` provided by `App` to access authentication state.
-
-The `LoginForm` component is used on the `Login` page. It has no state, and is used to collect the user's email/password for authentication.
-
-Then we have the `Navigation` component, which is used at the top of the page to provide--you guessed it--navigation. As discussed above, it delegates to the `AuthDropdown` component to manage authentication.
-
-Lastly, we have the `PrivateRoute` component. Never seen by the user, this is a high-order component that protects private routes from being accessed by logged-out users. It's used in `App` to designate any routes that should not be publicly accessible, and consumes `AuthContext` to know whether or not it should redirect.
-
-#### client/src/contexts
-
-`AuthContext` provides authentication state and functions to modify that state. This is used by the `App` component to pass authentication data to its children without prop-drilling. Any child component may consume this data as follows:
-
-```javascript
-import AuthContext from '../../contexts/AuthContext';
-
-const MyStatelessChildWithAuth = props => (
-  <AuthContext.Consumer>
-    {({ authToken, user, onLogin, onLogout }) => (
-      <div>{user.email}</div>
-    )}
-  </AuthContext.Consumer>
-);
-
-class MyStatefulChildWithAuth extends React.Component {
-  static contextType = AuthContext;
-
-  componentDidMount() {
-    API.someCall(this.context.authToken)
-      .then(res => console.log(res))
-      .catch(err => console.log(err));
-  }
-
-  render() {
-    return (
-      <div>{this.context.user.email}</div>
-    );
-  }
-}
-```
-
-#### client/src/lib
-
-The `API` module wraps all axios calls to the express server, providing one convenient place to look for anything API-related. 
-
-As you build out your app's features and add more API routes to your server, you will add corresponding client-side code in `client/src/lib/API.js`. For every API route on your server, there should be a function in this module that hits the route and returns the result.
-
-#### client/src/pages
-
-This is a personal preference, but I like to organize my "page" components into their own folder. These are the top-level components rendered by React Router when the user goes to a specific URL. Doing this separates "components" (which are intended to be reused) from pages (which generally aren't.)
-
-### Server
-
-The `server` folder is organized as follows:
-
-```
-server
-├── controllers
-│   └── api
-├── lib
-└── models
-```
-
-#### server/controllers/api
-
-Since React Router is handling all of our client-side routing, the only server routes we need to worry about are for our API. In this folder, you'll find those routes.
-
-Divided into controllers, one for each model, they are all loaded into Express via `server/controllers/api/index.js`. If you add a controller, make sure to import and register its URL-stub there.
-
-Inside each controller, you'll see the routes to get, create, update and delete one kind of model:
-
-- `usersController` has routes to register, login, and get the currently authenticated user.
-- `secretsController` has one route to get an array of Secrets (a dummy model I created to demonstrate protected data.)
-
-Each time you create a new model, remember to create a new controller for its API routes. And remember to import and use it in `index.js`.
-
-#### server/lib
-
-This folder holds modules that don't belong anywhere else in the MVC structure. Currently, that's only one file: `passport.js`.
-
-Passport is used for user authentication, and for protecting API routes against unauthorized access. In `server/lib/passport.js`, you'll find the primary Passport configuration for the server.
-
-Importantly, the logic that verifies each user's authentication token resides here. Depending on which database you end up storing your users in, you'll want to customize this logic to query the correct user data.
-
-#### server/models
-
-In the `master` branch, these models are just simple JS mocks that return hard-coded data. They are there to act as placeholders for a real database. See the `sequelize` or `mongoose` branches for Sequelize and Mongoose implementations, respectively.
-
-## Scripts
-
-### client
-
-### server
-
-## Deployment
