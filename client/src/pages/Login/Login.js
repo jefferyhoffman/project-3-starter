@@ -55,7 +55,7 @@ class Login extends Component {
         <div className='container'>
           <div className='row'>
             <div className='col'>
-              <h1>Login</h1>
+              <h1 className="loginTitle">Login</h1>
             </div>
           </div>
 
@@ -75,7 +75,7 @@ class Login extends Component {
           <div className='row'>
             <div className='col'>
               <LoginForm onSubmit={this.handleSubmit} />
-              <div className='mt-3'>Don't have an account? <Link to='/register'>Click here to register.</Link></div>
+              <div className='mt-3 text'>Don't have an account? <Link to='/register'>Click here to register.</Link></div>
             </div>
           </div>
         </div>

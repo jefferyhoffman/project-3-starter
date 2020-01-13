@@ -28,7 +28,7 @@ class LoginForm extends Component {
 
     return (
       <div className='LoginForm'>
-        <div className='card'>
+        <div className='card loginForm'>
           <div className='card-body'>
             <form className='LoginForm' onSubmit={this.handleSubmit}>
               <div className='input-group mb-3'>
@@ -61,7 +61,7 @@ class LoginForm extends Component {
                 />
               </div>
 
-              <button className='btn btn-primary' type='submit'>Login</button>
+              <button className='btn btn-primary loginBtn' type='submit'>Login</button>
             </form>
           </div>
         </div>
