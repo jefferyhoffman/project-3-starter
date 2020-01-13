@@ -60,6 +60,7 @@ const Client = () => {
           <li className="clientList"> Date: {selectedPropertyIndex !== -1 && properties[selectedPropertyIndex].date}</li>
           <li className="clientList"> Task: {selectedPropertyIndex !== -1 && properties[selectedPropertyIndex].task}</li>
         </ul>
+        
       </div>
     </div>
   )
