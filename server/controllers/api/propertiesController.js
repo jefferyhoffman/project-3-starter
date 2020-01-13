@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
     const { address, date, task, employeeComments, clientComments, photo, propertyId} = req.body;
   
     
-  
+    console.log(date, '<=======')
     db.Properties.create({ address, date, task, employeeComments, clientComments, photo, propertyId})
       .then(property => res.json({property}))
       .catch(err => res.json(err));
