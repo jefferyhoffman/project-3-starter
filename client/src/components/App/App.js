@@ -16,7 +16,7 @@ import Employee from "../../pages/Employee/Employee";
 import Client from "../../pages/Client/Client";
 import Contact from "../../pages/Contact/Contact";
 
-import './App.css';
+import './App.scss';
 
 class App extends Component {
   constructor(props) {
