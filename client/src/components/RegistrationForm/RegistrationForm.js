@@ -31,7 +31,7 @@ class RegistrationForm extends Component {
 
     return (
       <div className='LoginForm'>
-        <div className='card'>
+        <div className='card registerForm'>
           <div className='card-body'>
             <form onSubmit={this.handleSubmit}>
               <div className='input-group mb-3'>
@@ -109,7 +109,7 @@ class RegistrationForm extends Component {
                 />
               </div>
 
-              <button className='btn btn-primary' type='submit'>Register Now!</button>
+              <button className='btn btn-primary registerBtn' type='submit'>Register Now!</button>
             </form>
           </div>
         </div>
