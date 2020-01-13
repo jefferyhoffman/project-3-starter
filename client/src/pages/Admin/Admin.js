@@ -53,7 +53,7 @@ const Admin = () => {
                     </select>
                     <select id="role" onChange={event=>setRole(event.target.value)}>
                         <option key={1432345} value="set role">Set Role</option>
-                        <option key={1657457} value="User">Client</option>
+                        <option key={1657457} value="Client">Client</option>
                         <option key={287989} value="Employee">Employee</option>
                         <option key={36457} value="Admin">Admin</option>
                     </select>
