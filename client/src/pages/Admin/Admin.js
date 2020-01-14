@@ -83,13 +83,17 @@ const Admin = () => {
                             </FlashMessage>
                         </div>
                     </div>
+                    
                 )}
             </form>
+            
 
 
 
         </div>
+        
     );
+   
 };
 
-export default Admin
+export default Admin;
