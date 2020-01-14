@@ -14,6 +14,7 @@ const Client = () => {
 
   const [properties, setProperties] = useState([]);
   const [selectedPropertyId, setSelectedPropertyId] = useState(0);
+  const [task, setTask] = useState("");
 
   useEffect(() => {
     API.Properties.getAll()
@@ -24,7 +25,16 @@ const Client = () => {
 
   const handleChange = event => {
     setSelectedPropertyId(event.target.value);
+  };
+
+  const handleSubmit = event => {
+    event.prevent.default()
+
+    API.Properties.create(task).then(response => {
+      setTask("");
+    })
   }
+
 
 
 
@@ -60,6 +70,12 @@ const Client = () => {
           <li className="clientList"> Date: {selectedPropertyIndex !== -1 && <Moment parse="YYYY-MM-DD" format="MMM Do YYYY"> {properties[selectedPropertyIndex].date}</Moment>}</li>
           <li className="clientList"> Task: {selectedPropertyIndex !== -1 && properties[selectedPropertyIndex].task}</li>
         </ul>
+        <br></br>
+        Comments:
+        <label className="employeeLabel">
+        <input className="empInput" type="text" placeholder="" value={task} onChange={(event) => setTask(event.target.value)} />
+            </label>
+            <button className="empButton" type="submit" value="Submit New Property"> Submit Comments </button>
       </div>
     </div>
   )
