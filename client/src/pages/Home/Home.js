@@ -10,6 +10,9 @@ import AuthContext from "../../contexts/AuthContext";
 import mower from "../../images/LawnMower.jpeg";
 import mulch from "../../images/mulch.jpeg";
 import weed from "../../images/weedControl.jpeg";
+import seed from "../../images/aerateSeed.jpg";
+import install from "../../images/plant-install.jpg";
+
 
 class HomePage extends Component {
   render() {
@@ -35,7 +38,7 @@ class HomePage extends Component {
                 )}
 
                 <div className="centeredContent">
-                  <img className="overlayImage" src={ overlayImage1 } />
+                  <img className="overlayImage" src={overlayImage1} />
                   <h1 className="phrase">
                     Charlotte & Surrounding Area's Premier Commercial
                     Landscaping Company
@@ -51,25 +54,62 @@ class HomePage extends Component {
             <div className="row">
               <div className="centeredContent">
 
-                <div className="card">
-                  <img src={ mulch } className="card-image" />
+
+                <section className="images">
+
+                  <div className="image-card">
+                    <img src={mulch} className="card-image" />
                     <div className="cardText">
                       <h3 className="cardTitle">Mulch Install</h3>
                       <p className="cardBody"></p>
 
                     </div>
 
-                </div>
+                  </div>
 
-                <div className="card">
-                  <img src={ weed } className="card-image"/>
+                  <div className="image-card">
+                    <img src={ install } className="card-image" />
+                    <div className="cardText">
+                      <h3 className="cardTitle"> Plant Install</h3>
+                      <p className="cardBody"></p>
+
+                    </div>
+
+                  </div>
+
+                  {/* <div className="card">
+                    <img src={} className="card-image" />
+                    <div className="cardText">
+                      <h3 className="cardTitle"></h3>
+                      <p className="cardBody"></p>
+
+                    </div>
+
+                  </div> */}
+
+
+                  <div className="image-card">
+                    <img src={seed} className="card-image" />
+                    <div className="cardText">
+                      <h3 className="cardTitle">Aerate & Seed</h3>
+                      <p className="cardBody"></p>
+
+                    </div>
+
+                  </div>
+
+
+                  <div className="image-card">
+                    <img src={weed} className="card-image" />
                     <div className="cardText">
                       <h3 className="cardTitle">Weed Control</h3>
                       <p className="cardBody"></p>
 
                     </div>
 
-                </div>
+                  </div>
+
+                </section>
 
               </div>
             </div>
