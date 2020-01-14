@@ -26,7 +26,7 @@ class Register extends Component {
   }
 
   render() {
-    const { from } = this.props.location.state || { from: { pathname: "/secret" } };
+    const { from } = this.props.location.state || { from: { pathname: "/login" } };
     const { redirectToReferrer } = this.state;
 
     if (redirectToReferrer) {
@@ -34,10 +34,10 @@ class Register extends Component {
     }
 
     return (
-      <div className='Login'>
+      <div className='LoginRegister'>
         <div className='row'>
           <div className='col'>
-            <h1>Register Account</h1>
+            <h1 className="registerTitle">Register Account</h1>
           </div>
         </div>
         {this.state.error &&

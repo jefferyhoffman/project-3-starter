@@ -4,7 +4,7 @@ import { Redirect } from "react-router-dom";
 import AuthContext from "../../contexts/AuthContext";
 import API from '../../lib/API';
 import overlayImage2 from "../../images/Client_BG.jpg";
-
+import Moment from 'react-moment';
 
 
 const Client = () => {
@@ -67,7 +67,7 @@ const Client = () => {
         <br></br>
         <ul className="list" style={{ width: "30vw", margin: "0 auto" }}>
           <li className="clientList"> Address: {selectedPropertyIndex !== -1 && properties[selectedPropertyIndex].address}</li>
-          <li className="clientList"> Date: {selectedPropertyIndex !== -1 && properties[selectedPropertyIndex].date}</li>
+          <li className="clientList"> Date: {selectedPropertyIndex !== -1 && <Moment parse="YYYY-MM-DD" format="MMM Do YYYY"> {properties[selectedPropertyIndex].date}</Moment>}</li>
           <li className="clientList"> Task: {selectedPropertyIndex !== -1 && properties[selectedPropertyIndex].task}</li>
         </ul>
         <br></br>
