@@ -38,7 +38,7 @@ class HomePage extends Component {
                 )}
 
                 <div className="centeredContent">
-                  <img className="overlayImage" src={overlayImage1} />
+                  <img className="overlayImage" src={overlayImage1} alt=""/>
                   <h1 className="phrase">
                     Charlotte & Surrounding Area's Premier Commercial
                     Landscaping Company
@@ -57,8 +57,8 @@ class HomePage extends Component {
 
                 <section className="images">
 
-                  <div className="image-card">
-                    <img src={mulch} className="card-image" />
+                  <div className="card-layout">
+                    <img src={mulch} className="card-image" alt=""/>
                     <div className="cardText">
                       <h3 className="cardTitle">Mulch Install</h3>
                       <p className="cardBody"></p>
@@ -67,10 +67,10 @@ class HomePage extends Component {
 
                   </div>
 
-                  <div className="image-card">
-                    <img src={ install } className="card-image" />
+                  <div className="card-layout">
+                    <img src={ install } className="card-image" alt=""/>
                     <div className="cardText">
-                      <h3 className="cardTitle"> Plant Install</h3>
+                      <h3 className="cardTitle">Plant Install</h3>
                       <p className="cardBody"></p>
 
                     </div>
@@ -88,8 +88,8 @@ class HomePage extends Component {
                   </div> */}
 
 
-                  <div className="image-card">
-                    <img src={seed} className="card-image" />
+                  <div className="card-layout">
+                    <img src={seed} className="card-image" alt=""/>
                     <div className="cardText">
                       <h3 className="cardTitle">Aerate & Seed</h3>
                       <p className="cardBody"></p>
@@ -99,8 +99,8 @@ class HomePage extends Component {
                   </div>
 
 
-                  <div className="image-card">
-                    <img src={weed} className="card-image" />
+                  <div className="card-layout">
+                    <img src={weed} className="card-image" alt=""/>
                     <div className="cardText">
                       <h3 className="cardTitle">Weed Control</h3>
                       <p className="cardBody"></p>
