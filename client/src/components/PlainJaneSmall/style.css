@@ -1,0 +1,28 @@
+#CardBCGPlainJaneSmall {
+    background-image: url(../../images/whitemarble.jpg);
+    background-size: 100%;
+    height: 100%;
+    
+}
+
+#pFontSmall{
+    font-family: 'Libre Baskerville', serif;
+    color: black;
+    text-shadow: 1px 0.1px grey;
+    font-size: 12px;
+}
+
+#NameJaneSmall {
+    font-size: 12px;
+}
+
+#BisJaneSmall {
+    font-family: 'Libre Baskerville', serif;
+    color: black;
+    text-shadow: 1px 0.1px grey;
+    font-size: 28px;
+}
+.plainJaneImgSmall{
+    margin-top: 3rem;
+}
+
