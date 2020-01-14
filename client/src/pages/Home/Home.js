@@ -18,7 +18,7 @@ class HomePage extends Component {
             <div className="container">
               <div className="row">
                 {this.props.status.success && (
-                  <div className="row" style={{ zIndex: 10 }}>
+                  <div className="row flash" style={{ zIndex: 10 }}>
                     <div
                       className="col centeredContent"
                       style={{ marginTop: "-150px" }}

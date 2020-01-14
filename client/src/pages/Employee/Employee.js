@@ -24,8 +24,8 @@ const Employee = () => {
             setAddress("");
             setDate(new Date().toISOString().slice(0, 10).replace(/-/g, "-"));
             setTask("");
-            setMessage("Successfully submitted work")
-            setSubmitted(true)
+            setMessage("Successfully added property information.");
+            setSubmitted(true);
         })
     }
 
