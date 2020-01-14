@@ -38,10 +38,10 @@ const Employee = () => {
                   <div className="row" style={{ zIndex: 10 }}>
                     <div
                       className="col centeredContent"
-                      style={{ marginTop: "-150px" }}
+                      style={{ marginTop: "-90px" }}
                     >
                       <FlashMessage duration={5000}>
-                        <div className="alert alert-success mb-3" role="alert">
+                        <div className="alert alert-success mb-3 flash" role="alert">
                           {message}
                         </div>
                       </FlashMessage>

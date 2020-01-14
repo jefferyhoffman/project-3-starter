@@ -63,7 +63,7 @@ class Login extends Component {
             <div className='row'>
               <div className='col'>
                 <FlashMessage duration={50000}>
-                  <div className='alert alert-danger mb-3' role='alert'>
+                  <div className='alert alert-danger mb-3 flash' role='alert'>
                     {this.props.status.error}
                   </div>
                 </FlashMessage>
