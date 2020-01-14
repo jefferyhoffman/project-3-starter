@@ -16,14 +16,18 @@ class Signup extends Component {
   handleSubmit = (email, name, password, confirm) => {
     if (password !== confirm) {
       return this.setState({ error: "Passwords do not match." });
-    }
+    } else if (email === "" || name === "") {
+      return this.setState({ error: "Please enter a name and unique email."})
+    } else {
 
+      
     API.Users.create(email, password, name)
       .then(response => response.data)
       .then(() => {
         this.setState({ redirectToReferrer: true, error: "" })
       })
       .catch(err => this.setState({ error: err.message }));
+    }
   }
 
   render() {
@@ -50,6 +54,15 @@ class Signup extends Component {
               </MDBCol>
               <MDBCol>
                 <MDBCol>
+                {this.state.error && (
+                  <div className="row">
+                    <div className="col">
+                      <div className="alert alert-danger mb-3" role="alert">
+                        {this.state.error}
+                      </div>
+                    </div>
+                  </div>
+                )}
                   <SignupForm onSubmit={this.handleSubmit} />
                 </MDBCol>
               </MDBCol>
