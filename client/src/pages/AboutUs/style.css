@@ -1,0 +1,11 @@
+.mainBodyColorAboutUs {
+    height: 100vh + 15rem;
+    background:   linear-gradient(120deg, #DD252E, #6D26DD);
+}
+
+.paddingLeftAboutMe {
+    padding-left: 3rem;
+}
+.paddingRightAboutMe {
+    padding-Right: 3rem;
+}
