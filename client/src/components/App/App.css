@@ -1,13 +1,13 @@
 .App {
   text-align: center;
 }
-/* 
+
 .container {
   height: 400px;
   background-color: transparent;
   z-index: 1000;
   position: absolute;
-} */
+} 
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -49,11 +49,11 @@
 }
 
 .overlayImage {
-  /* transform: rotateZ(-40deg); */
+   transform: rotateZ(-40deg); 
   height: 50%;
   width: 70%;
   bottom: 20px;
-  /* opacity: 50%; */
+  opacity: 50%; 
   background-blend-mode: overlay;
   position: relative;
   top: 170px;
@@ -62,9 +62,9 @@
 .phrase{
   width: 50%;
   font-size: 40px;
-  /* background-color: rgba(216, 191, 216, 0.5); */
-  /* padding: 16px; */
-  /* width: 40%; */
+   background-color: rgba(216, 191, 216, 0.5); 
+  padding: 16px; 
+  width: 40%; 
   margin-top: 20px;
   font-weight: 550;
   color: white;
@@ -75,7 +75,7 @@
 }
 
 .mission{
-  /* width: 30%; */
+   width: 30%; 
   font-size: 23px;
   background-color: rgba(216, 191, 216, 0.829);
   padding: 16px;
@@ -86,7 +86,7 @@
 }
 
 .services{
-  /* width: 30%; */
+   width: 30%; 
   font-size: 30px;
   background-color: rgba(255, 255, 255, 0.699);
   padding: 16px;
@@ -97,9 +97,9 @@
  
 }
 
-/* .mainContent {
+ .mainContent {
   margin-top: 150px;
-} */
+} 
 
 .parallax {
   background-attachment: fixed;
@@ -231,7 +231,7 @@ background-color: #ffffffa8;
 #role {
   font-size: 2vh;
   background-color: #ffc41f;
-  /* margin-left: 5vw; */
+  margin-left: 5vw;
   box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.43);
 
 }
@@ -268,7 +268,7 @@ background-color: #ffffffa8;
 .textClient {
   font-size: 3vh;
   font-family: alternate-gothic-no-3-d;
-  /* margin-left: 5vw; */
+  margin-left: 5vw; 
   justify-content: center;
   
 }
