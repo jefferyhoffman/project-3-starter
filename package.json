@@ -19,7 +19,11 @@
     "nodemon": "^1.18.10"
   },
   "dependencies": {
+<<<<<<< HEAD
     "google-translate": "^3.0.0",
+=======
+    "node-sass": "^4.13.0",
+>>>>>>> 9a390ab6105bce030102946ccefeee4c1edc936a
     "react-custom-scrollbars": "^4.2.1",
     "react-flash-message": "^1.0.2",
     "react-moment": "^0.9.7"
