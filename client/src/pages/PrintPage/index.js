@@ -27,9 +27,11 @@ const PrintPage = (props) => {
             window.print()
         }, 2000);
     }
+
+    
     
     return (
-        <div onLoad={makeItPrint()}>
+        <div onLoad={makeItPrint()} >
             <React.Fragment>
                 <MDBRow id='printPagePadding'>
                     <MDBCol className='d-flex justify-content-center'>

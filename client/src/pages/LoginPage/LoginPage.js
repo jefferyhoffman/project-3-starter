@@ -20,7 +20,6 @@ class SignIn extends Component {
   };
 
   handleSubmit = (email, password) => {
-    console.log(email, password);
     API.Users.login(email, password)
       .then(response => response.data)
       .then(({ user, token }) => {
