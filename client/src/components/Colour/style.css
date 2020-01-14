@@ -1,0 +1,56 @@
+.ColourBody{
+    background:   linear-gradient(120deg, #DD252E, #6D26DD);
+  
+}
+
+.logoSideColour {
+    background-image: url(../../images/white-waves.png);
+
+}
+
+
+.topLogoPadding {
+ padding-top: 100px;
+}
+
+.colorMainPadding {
+    padding-top: 15px;
+}
+
+.nameColour {
+    font-family: 'Pacifico', cursive;
+    font-size: 35px;
+}
+
+.fontColourp {
+    font-family: 'Satisfy', cursive;
+    padding-top: 30px;
+}
+
+.colorCompName{
+padding-right: 200px ;
+font-size: 18px;
+}
+
+.colorEmail{
+padding-right: 100px;
+font-size: 18px;
+
+}
+
+.colorWebsite{
+    padding-right: 120px ;
+    font-size: 18px;
+
+}
+
+.colorPhone{
+    padding-right: 90px ;
+    font-size: 18px;
+
+}
+
+.ColorPaddingforQRCODE {
+    padding-left: 290px;
+    padding-top: 30px;
+}
