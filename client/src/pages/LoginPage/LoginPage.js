@@ -4,6 +4,10 @@ import FormPage from "../../components/SignInForm";
 import "./LoginPage.css";
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 
+
+
+
+
 import API from "../../lib/API";
 import AuthContext from "../../contexts/AuthContext";
 
@@ -50,6 +54,11 @@ class SignIn extends Component {
 
     if (redirectToReferrer) {
       return <Redirect to={from} />;
+    }
+
+    const { user } = this.context
+    if(user) {
+      return <Redirect to={"UserDash"}/>
     }
 
     return (
