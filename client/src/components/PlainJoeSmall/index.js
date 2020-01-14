@@ -49,7 +49,7 @@ class PlainJoeSmall extends Component {
                             </MDBCol>
                             <MDBCol>
                                 <h1 id='nameAndCompanyPlainJoeSmall'>{this.state.newcardinfo[mostRecent].newname}</h1>
-                                <p id='textPlainJoeSmall'>{this.state.newcardinfo[mostRecent].email}</p>
+                                <p id='textPlainJoeSmall'>{this.state.newcardinfo[mostRecent].newemail}</p>
                                 <p id='textPlainJoeSmall'>{this.state.newcardinfo[mostRecent].phonenumber}</p>
                                 <p id='textPlainJoeSmall'>{this.state.newcardinfo[mostRecent].website}</p>
                                 <h1 style={{fontSize: '72'}} id='nameAndCompanyPlainJoeSmall'> {this.state.newcardinfo[mostRecent].company}</h1>

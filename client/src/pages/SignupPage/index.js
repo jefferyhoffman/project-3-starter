@@ -37,7 +37,11 @@ class Signup extends Component {
     if (redirectToReferrer) {
       return <Redirect to={from} />;
     }
-
+    
+    const { user } = this.context
+    if(user) {
+      return <Redirect to={"UserDash"}/>
+    }
     return (
       <div className="mainPageColor">
         <React.Fragment>
