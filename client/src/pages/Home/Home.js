@@ -7,7 +7,7 @@ import { Scrollbars } from "react-custom-scrollbars";
 // import overlayImage1 from "../../images/rotatedTransparentSaw.png";
 import overlayImage1 from "../../images/BGM_LOGO_10.11.17_1038697311177295.png";
 import AuthContext from "../../contexts/AuthContext";
-import mower from "../../images/LawnMower.jpeg";
+
 
 class HomePage extends Component {
   render() {
