@@ -10,8 +10,12 @@ import AuthContext from "../../contexts/AuthContext";
 import mower from "../../images/LawnMower.jpeg";
 import mulch from "../../images/mulch.jpeg";
 import weed from "../../images/weedControl.jpeg";
-import seed from "../../images/aerateSeed.jpg";
+import seed from "../../images/aerate.jpeg";
 import install from "../../images/plant-install.jpg";
+import leaf from "../../images/leaf-removal.jpeg";
+import needle from "../../images/pine-needles.jpg";
+import truckcourt from "../../images/truckcourtmaintenance.jpg";
+
 
 
 class HomePage extends Component {
@@ -43,7 +47,7 @@ class HomePage extends Component {
                 
 
                 <div className="centeredContent">
-                  <img className="overlayImage" src={overlayImage1} />
+                  <img className="overlayImage" src={overlayImage1} alt="" />
                   <h1 className="phrase">
                     Charlotte & Surrounding Area's Premier Commercial
                     Landscaping Company
@@ -63,58 +67,84 @@ class HomePage extends Component {
 
 
                 <section className="images">
+                  
+                    
 
-                  <div className="image-card">
-                    <img src={mulch} className="card-image" />
-                    <div className="cardText">
-                      <h3 className="cardTitle">Mulch Install</h3>
-                      <p className="cardBody"></p>
+                      <div className="card-layout">
+                        <img src={mulch} className="card-image" alt="" />
+                        <div className="cardText">
+                          <h3 className="cardTitle">Mulch Install</h3>
+                          <p className="cardBody"></p>
 
-                    </div>
+                        </div>
 
-                  </div>
+                      </div>
 
-                  <div className="image-card">
-                    <img src={ install } className="card-image" />
-                    <div className="cardText">
-                      <h3 className="cardTitle"> Plant Install</h3>
-                      <p className="cardBody"></p>
+                      <div className="card-layout">
+                        <img src={needle} className="card-image" alt="" />
+                        <div className="cardText">
+                          <h3 className="cardTitle">Pine Needle Install</h3>
+                          <p className="cardBody"></p>
 
-                    </div>
+                        </div>
 
-                  </div>
+                      </div>
 
-                  {/* <div className="card">
-                    <img src={} className="card-image" />
-                    <div className="cardText">
-                      <h3 className="cardTitle"></h3>
-                      <p className="cardBody"></p>
+                      <div className="card-layout">
+                        <img src={truckcourt} className="card-image" alt="" />
+                        <div className="cardText">
+                          <h3 className="cardTitle">Truck Court Maintenance</h3>
+                          <p className="cardBody"></p>
 
-                    </div>
+                        </div>
 
-                  </div> */}
+                      </div>
+                      
+
+                      <div className="card-layout">
+                        <img src={install} className="card-image" alt="" />
+                        <div className="cardText">
+                          <h3 className="cardTitle">Plant Design & Install</h3>
+                          <p className="cardBody"></p>
+
+                        </div>
+
+                      </div>
+
+                      <div className="card-layout">
+                        <img src={leaf} className="card-image" />
+                        <div className="cardText">
+                          <h3 className="cardTitle">Leaf Removal</h3>
+                          <p className="cardBody"></p>
+
+                        </div>
+
+                      </div>
 
 
-                  <div className="image-card">
-                    <img src={seed} className="card-image" />
-                    <div className="cardText">
-                      <h3 className="cardTitle">Aerate & Seed</h3>
-                      <p className="cardBody"></p>
+                      <div className="card-layout">
+                        <img src={seed} className="card-image" alt="" />
+                        <div className="cardText">
+                          <h3 className="cardTitle">Aerate & Seed</h3>
+                          <p className="cardBody"></p>
 
-                    </div>
+                        </div>
 
-                  </div>
+                      </div>
 
 
-                  <div className="image-card">
-                    <img src={weed} className="card-image" />
-                    <div className="cardText">
-                      <h3 className="cardTitle">Weed Control</h3>
-                      <p className="cardBody"></p>
+                      <div className="card-layout">
+                        <img src={weed} className="card-image" alt="" />
+                        <div className="cardText">
+                          <h3 className="cardTitle">Weed Control</h3>
+                          <p className="cardBody"></p>
 
-                    </div>
+                        </div>
 
-                  </div>
+                      </div>
+
+                    
+                  
 
                 </section>
 
