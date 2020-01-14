@@ -1,22 +1,20 @@
 .App {
   text-align: center;
 }
-
+/* 
 .container {
   height: 400px;
   background-color: transparent;
   z-index: 1000;
   position: absolute;
-} 
-
+} */
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
   pointer-events: none;
 }
-
 .App-header {
-  background-color: #282c34;
+  background-color: #282C34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,18 +23,14 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
 .App-link {
-  color: #61dafb;
+  color: #61DAFB;
 }
-
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
 }
-
 .centeredContent {
   position: absolute;
   top: 50%;
@@ -47,24 +41,22 @@
   justify-content: space-around;
   width: 60%;
 }
-
 .overlayImage {
-   transform: rotateZ(-40deg); 
+  /* transform: rotateZ(-40deg); */
   height: 50%;
   width: 70%;
   bottom: 20px;
-  opacity: 50%; 
+  /* opacity: 50%; */
   background-blend-mode: overlay;
   position: relative;
   top: 170px;
 }
-
 .phrase{
   width: 50%;
   font-size: 40px;
-   background-color: rgba(216, 191, 216, 0.5); 
-  padding: 16px; 
-  width: 40%; 
+  /* background-color: rgba(216, 191, 216, 0.5); */
+  /* padding: 16px; */
+  /* width: 40%; */
   margin-top: 20px;
   font-weight: 550;
   color: white;
@@ -73,9 +65,8 @@
   line-height: 40px;
   
 }
-
 .mission{
-   width: 30%; 
+  /* width: 30%; */
   font-size: 23px;
   background-color: rgba(216, 191, 216, 0.829);
   padding: 16px;
@@ -84,9 +75,8 @@
   border-radius: 40px;
  
 }
-
 .services{
-   width: 30%; 
+  /* width: 30%; */
   font-size: 30px;
   background-color: rgba(255, 255, 255, 0.699);
   padding: 16px;
@@ -96,40 +86,33 @@
   text-align: left;
  
 }
-
- .mainContent {
+/* .mainContent {
   margin-top: 150px;
-} 
-
+} */
 .parallax {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-transition:all 0.2s ease;
-	-moz-transition:all 0.2s ease;
+  -moz-transition:all 0.2s ease;
   transition:all 0.2s ease;
   position: relative;
 }
-
 .parallax-1 {
   background-image: url("../../images/grass-cut-image2.jpg");
   min-height: 700px;
 }
-
 .parallax-2 {
   background-image: url("../../images/MainGrass.jpg");
   min-height: 900px;
 }
-
 .parallax-3 {
   background-image: url("../../images/charlotte.jpg");
   min-height: 700px;
 }
-
-
 .navbar {
-background-color: #ffffffa8;
+background-color: #FFFFFFA8;
  height: 150px;
  position: fixed;
  top: 0;
@@ -137,117 +120,100 @@ background-color: #ffffffa8;
  box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.43);
  z-index: 10;
 }
-
-
 .nav-link {
   font-size: x-large;
   color: black;
   font-family: alternate-gothic-no-3-d;
 }
-
 .logo {
   height: 100px;
   display: block;
   justify-content: center;
 }
-
 .text {
   font-family: alternate-gothic-no-3-d; 
 }
-
 .Login{
   margin-top: 30vh;
   
 }
-
 .loginForm {
   border-radius: 15px;
   border-width: 4px;
-  border-color:  #78c14b;
+  border-color:  #78C14B;
   border-style: groove;
 }
-
 .loginTitle {
   font-family: alternate-gothic-no-3-d; 
   font-size: 5vh;
 }
-
 .loginBtn {
   font-family: alternate-gothic-no-3-d; 
   color:black;
   margin-top: 3vh;
   border-radius: 20px;
-  background-color: #ffc41f;
+  background-color: #FFC41F;
   font-weight: bolder;
   width: 10%;
   margin-left: 45%;
   margin-right: 45%;
   box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.43);
 }
-
 .registerTitle {
   font-family: alternate-gothic-no-3-d; 
   font-size: 5vh;
   margin-top: 30vh;
 }
-
 .LoginRegister {
   margin-left: 10%;
   margin-right: 10%;
 }
-
 .registerBtn {
   font-family: alternate-gothic-no-3-d; 
   color:black;
   margin-top: 3vh;
   border-radius: 20px;
-  background-color: #ffc41f;
+  background-color: #FFC41F;
   font-weight: bolder;
   width: 10%;
   margin-left: 45%;
   margin-right: 45%;
   box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.43);
 }
-
 .registerForm {
-  /* background-color: #ffc41f; */
+  /* background-color: #FFC41F; */
   border-radius: 15px;
   border-width: 4px;
-  border-color:  #78c14b;
+  border-color:  #78C14B;
   border-style: groove;
   
 }
-
 .admin {
   font-family: alternate-gothic-no-3-d; 
   font-size: 5vh;
   text-decoration: underline;
-  text-decoration-color: #78c14b;
+  text-decoration-color: #78C14B;
   text-decoration-style: double;
   margin-bottom: 3vh;
   
 }
-
 #role {
   font-size: 2vh;
-  background-color: #ffc41f;
-  margin-left: 5vw;
+  background-color: #FFC41F;
+  /* margin-left: 5vw; */
   box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.43);
-
 }
-
 #use {
   font-size: 2vh;
   background-color:#ffc41f;
   margin-right: 3vw;
   box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.43);
 }
-
 .submitBtn {
   font-family: alternate-gothic-no-3-d; 
   margin-top: 3vh;
   border-radius: 20px;
-  background-color:  #78c14b;
+  background-color:  #78C14B;
   font-weight: bolder;
   width: 10%;
   margin-left: 45%;
@@ -256,42 +222,36 @@ background-color: #ffffffa8;
   
   
 }
-
 .client {
   font-family: alternate-gothic-no-3-d; 
   font-size: 5vh;
   text-decoration: underline;
-  text-decoration-color: #ffc41f;
+  text-decoration-color: #FFC41F;
   text-decoration-style: double;
 }
-
 .textClient {
   font-size: 3vh;
   font-family: alternate-gothic-no-3-d;
-  margin-left: 5vw; 
+  /* margin-left: 5vw; */
   justify-content: center;
   
 }
-
 .clientList {
   font-family: alternate-gothic-no-3-d; 
   font-size: 3vh;
-  background: #78c14b;
+  background: #78C14B;
   margin: 5px;
   border-radius: 20px;
   
 }
-
 .list {
   list-style-position: outside;
   list-style-type: none;
-  background: #ffc41f;
+  background: #FFC41F;
   padding: 20px;
   border-radius: 20px;
   
 }
-
-
 .employee {
   margin-top: 40vh;
   font-family: alternate-gothic-no-3-d; 
@@ -300,23 +260,19 @@ background-color: #ffffffa8;
   text-decoration-color: black;
   text-decoration-style: single;
 }
-
-
 .employeeLabel {
   font-family: alternate-gothic-no-3-d; 
   font-size: 3vh;
   
   
 }
-
 .empButton {
   font-family: alternate-gothic-no-3-d; 
-  background-color: #78c14b;
+  background-color: #78C14B;
   border-radius: 20px;
   box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.43);
   margin-left: 1vw;
 }
-
 .empInput {
 border-radius: 15px;
 box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.43);
@@ -328,9 +284,16 @@ box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.43);
   display: flexbox;
   justify-content: center;
 }
-.contacForm {
+/*.contactForm {
   font-size: 2vh;
-  background-color: #ffc41f;
+  background-color: #FFC41F;
   margin-left: 5vw;
-  box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.43); 
-} 
+  box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.43); 
+} */
+
+.flash {
+  font-family: alternate-gothic-no-3-d;
+  box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.43);
+}
+
+
