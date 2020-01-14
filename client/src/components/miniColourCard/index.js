@@ -59,7 +59,7 @@ class MiniColourCard extends Component {
                                         <div className="minifontColourp">
                                             <strong>
                                             <p className="minicolorCompName">{this.state.newcardinfo[mostRecent].company}</p>
-                                            <p className="minicolorEmail">{this.state.newcardinfo[mostRecent].email}</p>
+                                            <p className="minicolorEmail">{this.state.newcardinfo[mostRecent].newemail}</p>
                                             <p className="minicolorWebsite">{this.state.newcardinfo[mostRecent].website}</p>
                                             <p className="minicolorPhone">{this.state.newcardinfo[mostRecent].phonenumber}</p>
                                             </strong>
