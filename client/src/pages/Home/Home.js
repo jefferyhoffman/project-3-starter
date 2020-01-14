@@ -29,13 +29,18 @@ class HomePage extends Component {
                       style={{ marginTop: "-150px" }}
                     >
                       <FlashMessage duration={5000}>
-                        <div className="alert alert-success mb-3 flash" role="alert">
+                        <div
+                          className="alert alert-success mb-3 flash"
+                          role="alert"
+                        >
                           {this.props.status.success}
                         </div>
                       </FlashMessage>
                     </div>
                   </div>
                 )}
+
+                
 
                 <div className="centeredContent">
                   <img className="overlayImage" src={overlayImage1} />
@@ -48,6 +53,8 @@ class HomePage extends Component {
             </div>
           </div>
         </div>
+
+        
 
         <div className="parallax parallax-2">
           <div className="container">
