@@ -42,7 +42,7 @@ const Contact = (props) => {
                   <div className="row" style={{ zIndex: 10 }}>
                     <div
                       className="col centeredContent"
-                      style={{ marginTop: "-90px" }}
+                      style={{ marginTop: "-100px" }}
                     >
                       <FlashMessage duration={5000}>
                         <div className="alert alert-success mb-3 flash" role="alert">

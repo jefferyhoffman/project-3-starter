@@ -2,12 +2,16 @@ import React, { useContext, useEffect, useState } from "react";
 import { Redirect } from "react-router-dom";
 import AuthContext from "../../contexts/AuthContext";
 import API from "../../lib/API";
+import FlashMessage from "react-flash-message";
 
 const Admin = () => {
     const { user,authToken } = useContext(AuthContext);
     const [users, setUsers] = useState([]);
     const [selectedUser, setSelectedUser] = useState("select user")
     const [role, setRole] = useState("set role")
+    const [submitted, setSubmitted] = useState(false)
+    const [message, setMessage] = useState("")
+
     useEffect(() => {
         loadUsers()
     }, [])
@@ -21,6 +25,11 @@ const Admin = () => {
             }
             )
             .catch(err => console.log(err));
+            API.Properties.create().then(response => {
+
+                setMessage("Successfully registered user.");
+                setSubmitted(true);
+            })
     }
 
     const handleSub = (event) => {
@@ -34,6 +43,20 @@ const Admin = () => {
     return (
 
         <div className="Login">
+            {submitted && (
+                  <div className="row" style={{ zIndex: 10 }}>
+                    <div
+                      className="col centeredContent"
+                      style={{ marginTop: "-100px" }}
+                    >
+                      <FlashMessage duration={5000}>
+                        <div className="alert alert-success mb-3 flash" role="alert">
+                          {message}
+                        </div>
+                      </FlashMessage>
+                    </div>
+                  </div>
+                )}
             
 
                 <h1 className="admin">Hello Admin</h1>
