@@ -23,7 +23,7 @@ const PrintPage = (props) => {
     }
 
     const makeItPrint =() => {
-        setInterval(() => {
+        setTimeout(() => {
             window.print()
         }, 2000);
     }

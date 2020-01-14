@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
-
 import AuthContext from '../../contexts/AuthContext';
-
 import API from '../../lib/API';
 import TokenStore from '../../lib/TokenStore';
 import UserDash from '../../pages/UserDash/UserDash';
@@ -14,6 +11,7 @@ import Studio from "../../pages/Studio/index"
 import Results from '../../pages/Results'
 import Finale from '../../pages/Final'
 import PrintPage from '../../pages/PrintPage'
+import AboutUs from '../../pages/AboutUs'
 
 import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
 
@@ -62,6 +60,7 @@ class App extends Component {
             <PrivateRoute exact path="/UserDash" component={UserDash} />
             <Route exact path="/LoginPage" component={SignIn} />
             <Route exact path="/SignupPage" component={SignUp}/>
+            <Route exact path="/AboutUs" component={AboutUs} />
             <PrivateRoute exact path="/Studio" component={Studio}/>
             <PrivateRoute exact path="/Results" component={Results}/>
             <PrivateRoute exact path="/Final" component={Finale}/>
