@@ -1,166 +1,85 @@
-# Project 3 Starter
+# Futurm-Est-Nostrum
+
+## Synopsis
+As a group of inspiring web developers it can be difficult to set yourself apart when you are first searching for a job. We wanted to create an app that can showcase the skills we have learned over the course of our Bootcamp, is also a professional looking website and that can be useful for web developers to use!
+
+## Link
+<a href="https://stormy-harbor-93453.herokuapp.com/" target="_blank">Click here to go to our app!</a>
+
+#### Table of Contents
+1. [How to Start](#Getting-Started)
+2. [Recommendations](#Recommendations)
+3. [Contributors](#Contributors)
+4. [Built With](#Built-With)
+5. [Photos](#Photos)
+6. [Difficulties & Solutions](#Difficulties-and-Solutions)
+7. [For the Future](#For-the-Future)
+8. [License](#License)
 
 ## Getting Started
+Once the user comes to our homepage they will be able to navigate to the sign in page. If they are an existing user they can re-sign in, or at the bottom of the form the user can create a log in with an email and password. 
 
-1. Fork this repo on GitHub:
+After a user has logged in they will navigate to the studio page where the user will be prompted to fill in information which will be populated onto the business cards. 
 
-2. Rename your fork:
+Once the user chooses a template they like they will be navigated to a page where they can print out their business cards. 
 
-3. Clone your fork to your computer:
+## Recommendations
+We advise before you print your business cards that you use a good quality card stock in the printer to ensure the best looking business card.
 
-4. Copy `.env.sample` to `.env` and modify it:
-   ```bash
-   $ cp .env.sample .env
-   $ code .env
-   ```
+The website input is what is going to be linked to the QR code so your business card can be scanned. It is best in your browser window to go to the website you wish to enter and copy the URL in the URL line and paste it into the form where it says Website.
 
-5. Launch the client and server in development mode:
-   ```bash
-   $ yarn start:dev
-   ```
+On the form that populates your business card on the website input section it would be best to either add in your Github profile page, LinkedIn Profile, your deployed portfolio page, or your most impressive App you have worked on.
 
-## Organization
+When you get to the PRINT screen you may need to check a box in the more options menu and add in background graphics so the whole card renders.
 
-First, let's look at how things are organized.
+## Contributors 
+* **Gabriel Mangum's** - [GitHub](https://github.com/GabrielTMangum)
+* **Jean Tubay's** - [GitHub](https://github.com/jtubay)
+* **John Parker Hodges'** - [GitHub](https://github.com/JohnParkerHodges)
+* **Michael Trpak's** - [GitHub](https://github.com/mrtrpak)
 
-```
-.
-├── client
-└── server
-```
+## Built With
+* [Axios](https://www.axios.com/)
+* [Gravatar](https://github.com/KyleAMathews/react-gravatar)
+* [Heroku](https://dashboard.heroku.com/)
+* [MDB](https://mdbootstrap.com/)
+* [MySQL](https://www.mysql.com/)
+* [QR Code](http://goqr.me/)
+* [React](https://reactjs.org/)
+* [React-Router-Dom](https://www.npmjs.com/package/react-router-dom)
 
-At the top level, everything is divided into two folders. The `client` folder contains the React client, while the `server` folder contains the Express server.
+## Photos
 
-In the root folder, you'll also notice `.gitignore` and `package.json`. The former ignores `node_modules` folders project-wide, while the latter contains scripts for development and deployment.
+### Homepage
+![Homepage](/client/public/photos/homepage.png)
+### Sign In Page
+![Sign in](/client/public/photos/signin.png)
+### Sign Up Page
+![Sign up](/client/public/photos/signup.png)
+### User Dashboard
+![User dash](/client/public/photos/userdash.png)
+### Card Form Page
+![Card form](/client/public/photos/cardform.png)
+### Choose Template Page
+![Template page](/client/public/photos/templatescreen.png)
+### Card Preview Page
+![Preview page](/client/public/photos/preview.png)
+### Print Screen Page
+![Print Page](/client/public/photos/printscreen.png)
 
-### client
+## Difficulties and Solutions
+As with any project there are always going to be difficulties that arise. We wanted to generate a QR Code that the user could link to a website of their choice. We found a 3rd party API that we can generate a QR Code with. The next issue we had with it is we needed to encode the URL so that it would talk with the API properly. There is a handle function with Javascript (encodeURIComponent()) that handled that for us.
 
-The `client` folder is organized as follows:
+We wanted to have two separate forms between the user sign in and the info form which populates the business cards so the user can login and create many business cards all with different information on them. With that we needed the two to talk to each other so the information is linked. We used associations in MySql to join them with the user Id so that one user can have multiple form card entries.
 
-```
-client
-├── public
-└── src
-    ├── components
-    │   ├── App
-    │   ├── AuthDropdown
-    │   ├── LoginForm
-    │   ├── Navigation
-    │   └── PrivateRoute
-    ├── contexts
-    ├── lib
-    └── pages
-        ├── Home
-        ├── Login
-        ├── NotFound
-        └── Secret
-```
+One major time suck in this App was creating the cards. We strived to have four unique business card templates for which the user can choose from. To accomplish this we needed to create a small and large version of each template and also 4 dummy cards which can be viewed from our homepage. With using components in React it made it easier to handle the boilerplate of the cards, but it still look a lot of trial and error to get the styling to look better on the cards.
 
-#### client/public
+## For the Future
+In the future we would love to add a feature where once they choose a template and go to the print page screen that it also downloads a pdf file of it so they can save and store their business cards for later and print it when it is convenient for them.
 
-The `public` folder contains the one-and-only HTML file used on the client: `index.html`. The only modification I made from the default is to add a link to the Bootstrap CDN.
+We would like to implement a save card feature where they can view all of their created cards in their user dashboard so they can scroll through all of their different cards. 
 
-#### client/src
+At the beginning of the project we contemplated using a drag and drop feature to edit your business cards. It would be a nice fancy feature to have in the app if we could find a way to use drag and drop within our App.
 
-The `src` folder contains all the JavaScript code, organized into `components`, `contexts`, `lib`, and `pages`.
-
-#### client/src/components
-
-Inside the `components` folder you'll find most of the React components used on the client:
-
-The `App` component is the "root" of the component tree. All other components (including those in the `pages` folder, see below) are children of `App`. This component also manages user authentication state, and provides the `AuthContext` context allowing child components to easily access authentication state.
-
-Used in the navigation bar, `AuthDropdown` displays the currently logged in user (or a link to login/register) and allows them to logout. It consumes the `AuthContext` provided by `App` to access authentication state.
-
-The `LoginForm` component is used on the `Login` page. It has no state, and is used to collect the user's email/password for authentication.
-
-Then we have the `Navigation` component, which is used at the top of the page to provide--you guessed it--navigation. As discussed above, it delegates to the `AuthDropdown` component to manage authentication.
-
-Lastly, we have the `PrivateRoute` component. Never seen by the user, this is a high-order component that protects private routes from being accessed by logged-out users. It's used in `App` to designate any routes that should not be publicly accessible, and consumes `AuthContext` to know whether or not it should redirect.
-
-#### client/src/contexts
-
-`AuthContext` provides authentication state and functions to modify that state. This is used by the `App` component to pass authentication data to its children without prop-drilling. Any child component may consume this data as follows:
-
-```javascript
-import AuthContext from '../../contexts/AuthContext';
-
-const MyStatelessChildWithAuth = props => (
-  <AuthContext.Consumer>
-    {({ authToken, user, onLogin, onLogout }) => (
-      <div>{user.email}</div>
-    )}
-  </AuthContext.Consumer>
-);
-
-class MyStatefulChildWithAuth extends React.Component {
-  static contextType = AuthContext;
-
-  componentDidMount() {
-    API.someCall(this.context.authToken)
-      .then(res => console.log(res))
-      .catch(err => console.log(err));
-  }
-
-  render() {
-    return (
-      <div>{this.context.user.email}</div>
-    );
-  }
-}
-```
-
-#### client/src/lib
-
-The `API` module wraps all axios calls to the express server, providing one convenient place to look for anything API-related. 
-
-As you build out your app's features and add more API routes to your server, you will add corresponding client-side code in `client/src/lib/API.js`. For every API route on your server, there should be a function in this module that hits the route and returns the result.
-
-#### client/src/pages
-
-This is a personal preference, but I like to organize my "page" components into their own folder. These are the top-level components rendered by React Router when the user goes to a specific URL. Doing this separates "components" (which are intended to be reused) from pages (which generally aren't.)
-
-### Server
-
-The `server` folder is organized as follows:
-
-```
-server
-├── controllers
-│   └── api
-├── lib
-└── models
-```
-
-#### server/controllers/api
-
-Since React Router is handling all of our client-side routing, the only server routes we need to worry about are for our API. In this folder, you'll find those routes.
-
-Divided into controllers, one for each model, they are all loaded into Express via `server/controllers/api/index.js`. If you add a controller, make sure to import and register its URL-stub there.
-
-Inside each controller, you'll see the routes to get, create, update and delete one kind of model:
-
-- `usersController` has routes to register, login, and get the currently authenticated user.
-- `secretsController` has one route to get an array of Secrets (a dummy model I created to demonstrate protected data.)
-
-Each time you create a new model, remember to create a new controller for its API routes. And remember to import and use it in `index.js`.
-
-#### server/lib
-
-This folder holds modules that don't belong anywhere else in the MVC structure. Currently, that's only one file: `passport.js`.
-
-Passport is used for user authentication, and for protecting API routes against unauthorized access. In `server/lib/passport.js`, you'll find the primary Passport configuration for the server.
-
-Importantly, the logic that verifies each user's authentication token resides here. Depending on which database you end up storing your users in, you'll want to customize this logic to query the correct user data.
-
-#### server/models
-
-In the `master` branch, these models are just simple JS mocks that return hard-coded data. They are there to act as placeholders for a real database. See the `sequelize` or `mongoose` branches for Sequelize and Mongoose implementations, respectively.
-
-## Scripts
-
-### client
-
-### server
-
-## Deployment
+## License
+This project is not under license
