@@ -12,6 +12,10 @@ class UserDash extends Component {
       isLoading: true,
       error: ""
     }
+
+    handleLogout = () => {
+      this.context.onLogout();
+    }
   
     componentDidMount() {
       API.Secrets.getAll(this.context.authToken)
@@ -49,9 +53,9 @@ class UserDash extends Component {
                             <br/>
                             <div className="text-left sideNav">
                             <MDBNavLink to="/Studio"><h3 className="sideNavText">Design Studio</h3></MDBNavLink>
-                            <MDBNavLink to="/Studio"><h3 className="sideNavText">About Us</h3></MDBNavLink>
-                            <MDBNavLink to="/Studio"><h3 className="sideNavText">FAQ</h3></MDBNavLink>
-                            <MDBNavLink to="/Studio"><h3 className="sideNavText">Logout</h3></MDBNavLink>
+                            <MDBNavLink to="/AboutUs"><h3 className="sideNavText">About Us</h3></MDBNavLink>
+                            <MDBNavLink to="/FAQ"><h3 className="sideNavText">FAQ</h3></MDBNavLink>
+                            <MDBNavLink to="#!" onClick={this.handleLogout}><h3 className="sideNavText">Logout</h3></MDBNavLink>
                             </div>
                         </MDBCol>
                     </MDBRow>

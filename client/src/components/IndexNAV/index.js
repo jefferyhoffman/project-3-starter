@@ -35,10 +35,10 @@ class IndexNAV extends Component {
               <MDBNavLink to="/UserDash">DashBoard</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBNavLink to="#!">Saved Cards</MDBNavLink>
+              <MDBNavLink to="/AboutUs">About Us</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBNavLink to="#!">FAQ</MDBNavLink>
+              <MDBNavLink to="/FAQ">FAQ</MDBNavLink>
             </MDBNavItem>
           </MDBNavbarNav>
           <MDBNavbarNav right>

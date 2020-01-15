@@ -64,15 +64,11 @@ class FullPageIntroWithNonFixedTransparentNavbar extends React.Component {
         <main>
           <MDBContainer className="text-center my-5">
             <p>&copy;2020</p>
-            <MDBSideNavLink to='#'> - Contact  </MDBSideNavLink>  
-            <MDBSideNavLink to='#'> - FAQ  </MDBSideNavLink>  
-            <MDBSideNavLink to='/Hidden'> - Meat the Team - </MDBSideNavLink>  
-
-  </MDBContainer>
+          </MDBContainer>
         </main>
       </div>
-        );
-      }
-    }
-    
+    );
+  }
+}
+
 export default FullPageIntroWithNonFixedTransparentNavbar;
