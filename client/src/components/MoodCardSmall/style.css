@@ -1,0 +1,20 @@
+#CardBCGMoodSmall {
+    background-image: url(../../images/blackslate.jpg);
+
+}
+#MoodCardBorderSmall {
+    background-image: url(../../images/white-waves.png);
+}
+#cardBodyMoodSmall {
+    font-family: 'Maven Pro', sans-serif;
+}
+#nameAndCompanyMoodSmall {
+    font-size: 25px;
+}
+#textMoodSmall {
+    font-size: 12px;
+}
+
+.qrCodeMOOD {
+    padding-left: 150px;
+}

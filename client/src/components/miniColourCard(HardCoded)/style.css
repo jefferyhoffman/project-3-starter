@@ -1,0 +1,60 @@
+.miniColourBody{
+    background:   linear-gradient(120deg, #DD252E, #6D26DD);
+  
+}
+
+.minilogoSideColour {
+    background-image: url(../../images/white-waves.png);
+
+}
+
+.minitopLogoPadding {
+ padding-top: 35px;
+ padding-left: 5px;
+
+}
+
+.minicolorMainPadding {
+    padding-top: 15px;
+}
+
+.mininameColour {
+    font-family: 'Pacifico', cursive;
+    font-size:20px;
+    padding-right: 15px;
+}
+
+.minifontColourp {
+    font-family: 'Satisfy', cursive;
+    padding-top: 15px;
+}
+
+.minicolorCompName{
+padding-right: 20px;
+font-size: 12px;
+padding-right: 110px;
+}
+
+.minicolorEmail{
+padding-right: 10px;
+font-size: 12px;
+}
+
+.minicolorWebsite{
+    padding-right: 1px ;
+    font-size: 12px;
+}
+
+.minicolorPhone{
+    padding-left: 30px ;
+    font-size: 12px;
+}
+
+
+
+
+.QRCODEPadding {
+    padding-top: 15px;
+    padding-left: 145px;
+}
+
