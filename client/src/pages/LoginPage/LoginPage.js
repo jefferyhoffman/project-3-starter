@@ -4,10 +4,6 @@ import FormPage from "../../components/SignInForm";
 import "./LoginPage.css";
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 
-
-
-
-
 import API from "../../lib/API";
 import AuthContext from "../../contexts/AuthContext";
 
