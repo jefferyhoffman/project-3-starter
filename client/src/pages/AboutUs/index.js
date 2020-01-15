@@ -69,7 +69,7 @@ class AboutUs extends Component {
                                 <MDBCardImage cascade className="MichaelHeadShot" src={Michael}/>
                                 <MDBCardBody cascade>
                                     <MDBCardTitle>Michael Trpak</MDBCardTitle>
-                                    <MDBCardText>A full stack web developer and a degree in communication studies with interpersonal communication skills grown through my work as a supervisor.</MDBCardText>
+                                    <MDBCardText>A full stack web developer and a degree in communication studies with interpersonal communication skills grown through my work as a supervisor. I strive in a group atmosphere and work well collaboratively. I'm looking forward to continuing my learning and expanding my knowledge in a every growing industry. </MDBCardText>
                                     <MDBRow>
                                             <MDBCol>
                                                 <MDBBtn tag="a" floating gradient="purple">
