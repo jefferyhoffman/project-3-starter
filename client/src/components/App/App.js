@@ -65,7 +65,7 @@ class App extends Component {
               <PrivateRoute exact path="/Results" component={Results} />
               <PrivateRoute exact path="/Final" component={Finale} />
               <PrivateRoute exact path="/PrintPage" component={PrintPage} />
-              <Route exact path="/AboutUs" component={AboutUs} />
+              <PrivateRoute exact path="/AboutUs" component={AboutUs} />
             </Switch>
         </div>
       </AuthContext.Provider>
