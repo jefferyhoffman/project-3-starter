@@ -10,10 +10,11 @@ import UserDash from '../../pages/UserDash/UserDash';
 import Index from "../../pages/Index";
 import SignIn from "../../pages/LoginPage/LoginPage";
 import SignUp from "../../pages/SignupPage/index";
-import Studio from "../../pages/Studio/index"
-import Results from '../../pages/Results'
-import Finale from '../../pages/Final'
-import PrintPage from '../../pages/PrintPage'
+import Studio from "../../pages/Studio/index";
+import Results from '../../pages/Results';
+import Finale from '../../pages/Final';
+import PrintPage from '../../pages/PrintPage';
+import FAQsPage from "../../pages/FAQsPage/FAQsPage";
 
 import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
 
@@ -58,14 +59,15 @@ class App extends Component {
       <AuthContext.Provider value={this.state.auth}>
         <div className='App'>
             <Switch>
-            <Route exact path="/" component={Index} />
-            <PrivateRoute exact path="/UserDash" component={UserDash} />
-            <Route exact path="/LoginPage" component={SignIn} />
-            <Route exact path="/SignupPage" component={SignUp}/>
-            <PrivateRoute exact path="/Studio" component={Studio}/>
-            <PrivateRoute exact path="/Results" component={Results}/>
-            <PrivateRoute exact path="/Final" component={Finale}/>
-            <PrivateRoute exact path="/PrintPage" component={PrintPage}/>
+              <Route exact path="/" component={Index} />
+              <PrivateRoute exact path="/UserDash" component={UserDash} />
+              <Route exact path="/LoginPage" component={SignIn} />
+              <Route exact path="/SignupPage" component={SignUp} />
+              <Route exact path="/FAQ" component={FAQsPage} />
+              <PrivateRoute exact path="/Studio" component={Studio} />
+              <PrivateRoute exact path="/Results" component={Results} />
+              <PrivateRoute exact path="/Final" component={Finale} />
+              <PrivateRoute exact path="/PrintPage" component={PrintPage} />
             </Switch>
         </div>
       </AuthContext.Provider>

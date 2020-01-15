@@ -54,7 +54,7 @@ class UserDash extends Component {
                             <br/>
                             <MDBNavLink to="/Studio"><h3 className="sideNavText">{ user ? user.name : "User" }'s Profile</h3></MDBNavLink>
                             <br/>
-                            <MDBNavLink to="/Studio"><h3 className="sideNavText">Tutorial</h3></MDBNavLink>
+                            <MDBNavLink to="/FAQ"><h3 className="sideNavText">FAQ</h3></MDBNavLink>
                             </div>
                         </MDBCol>
                     </MDBRow>
