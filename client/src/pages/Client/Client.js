@@ -7,6 +7,7 @@ import overlayImage2 from "../../images/Client_BG.jpg";
 import Moment from 'react-moment';
 
 
+
 const Client = () => {
   const { user } = useContext(AuthContext);
 
@@ -15,6 +16,8 @@ const Client = () => {
   const [properties, setProperties] = useState([]);
   const [selectedPropertyId, setSelectedPropertyId] = useState(0);
   const [task, setTask] = useState("");
+  const [submitted, setSubmitted] = useState(false)
+  const [message, setMessage] = useState("")
 
   useEffect(() => {
     API.Properties.getAll()
@@ -32,6 +35,7 @@ const Client = () => {
 
     API.Properties.create(task).then(response => {
       setTask("");
+      
     })
   }
 
@@ -54,6 +58,7 @@ const Client = () => {
   return (
     <div className="overlayImage2" src={overlayImage2} >
       <div className="clientContainer" style={{ marginTop: "30vh" }}>
+      
 
         <h1 className="client">Property Details</h1>
         <form>
