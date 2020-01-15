@@ -36,7 +36,8 @@
   width: 100%;
   margin: 0 auto;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .card-layout {
@@ -84,12 +85,15 @@
 }
 
 .card-image {
-  max-width: 100%;
-  height: 25vh;
-  display: block;
-  transition: opacity ease-out 250ms;
-  opacity: 1;
-  border-radius: 20px;
+   // max-width: 100%;
+   width: 250px;
+   // height: 25vh;
+   height: 200px;
+   object-fit: cover;
+   display: block;
+   transition: opacity ease-out 250ms;
+   opacity: 1;
+   border-radius: 20px;
 }
 
 .card-image:hover {
