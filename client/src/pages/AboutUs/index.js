@@ -13,6 +13,7 @@ class AboutUs extends Component {
                 <React.Fragment>
                     <IndexNav />
                     <MDBRow>
+                        <MDBCol></MDBCol>
                         <MDBCol className='paddingLeftAboutMe' size='3'>
                             <MDBCard cascade>
                                 <MDBCardImage cascade className="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/men.jpg" />
@@ -33,8 +34,10 @@ class AboutUs extends Component {
                                 </MDBCardBody>
                             </MDBCard>
                         </MDBCol>
+                        <MDBCol></MDBCol>
                     </MDBRow>
                     <MDBRow>
+                        <MDBCol></MDBCol>
                         <MDBCol className='paddingLeftAboutMe' size='3'>
                             <MDBCard cascade>
                                 <MDBCardImage cascade className="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/men.jpg" />
@@ -55,6 +58,7 @@ class AboutUs extends Component {
                                 </MDBCardBody>
                             </MDBCard>
                         </MDBCol>
+                        <MDBCol></MDBCol>
                     </MDBRow>
                 </React.Fragment>
             </div >
