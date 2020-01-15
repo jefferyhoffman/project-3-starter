@@ -35,6 +35,8 @@ const Admin = () => {
 
             setMessage("Successfully registered user.");
             setSubmitted(true);
+
+            setTimeout(()=>setSubmitted(false),5000);
         })
     }
     if (!user || user.role !== "Admin") {
