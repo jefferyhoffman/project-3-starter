@@ -72,6 +72,7 @@ class Navigation extends Component {
                 </>}
             </ul>
           </div>
+          <div id="google_translate_element"></div>
         </nav>
       </div>
     );
