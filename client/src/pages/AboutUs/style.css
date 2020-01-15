@@ -1,5 +1,5 @@
 .mainBodyColorAboutUs {
-    height: 100vh + 15rem;
+    height: 100vh + 20rem;
     background:   linear-gradient(120deg, #DD252E, #6D26DD);
 }
 
@@ -15,4 +15,24 @@
 
 .paddingTopAboutMe {
     padding-top: 1rem;
+}
+
+.ParkerHeadShot {
+    height: 242.69px ;
+    width: 364.5px
+}
+
+.JeanHeadShot {
+    height: 242.69px;
+    width: 364.5px;
+}
+
+.MichaelHeadShot {
+    height: 242.69px;
+    width: 364.5px;
+}
+
+.GabrielHeadShot {
+    height: 242.69px;
+    width: 364.5px;
 }
