@@ -1,6 +1,6 @@
 import React from 'react';
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBContainer, MDBMask, MDBView, MDBRow, MDBCol, MDBSideNavLink } from 'mdbreact';
-import "./style.css"
+import "./style.css";
 import MiniColourCardHardCoded from '../../components/miniColourCard(HardCoded)';
 import MoodCardSmallHardCoded from '../../components/MoodCardSmall(HardCoded)';
 import PlainJaneSmallHardCoded from '../../components/PlainJaneSmall(HardCoded)';

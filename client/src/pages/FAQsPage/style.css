@@ -1,0 +1,31 @@
+.mainBodyColorFAQ {
+    height: 100vh + 15rem;
+    background: linear-gradient(120deg, #DD252E, #6D26DD);
+}
+
+.textFAQ {
+    padding-top: 2rem;
+}
+
+.FAQBody {
+    background: white;
+    padding-top: 1rem;
+    text-align: left;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.question {
+    text-shadow: 1px 1px 2px rgba(0, 0.1, 0.1, 0.3);
+    font-size: 20px;
+}
+
+.answer {
+    padding-left: 2rem;
+    font-size: 18px;
+}
+
+.QA {
+    font-family: 'Pacifico', cursive;
+    font-size: 36px;
+}
