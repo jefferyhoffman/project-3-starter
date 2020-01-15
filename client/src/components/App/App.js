@@ -12,8 +12,8 @@ import Results from '../../pages/Results';
 import Finale from '../../pages/Final';
 import PrintPage from '../../pages/PrintPage';
 import AboutUs from '../../pages/AboutUs';
-import FAQsPage from '../../pages/FAQsPage';
 import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
+import FAQsPage from '../../pages/FAQsPage/FAQsPage'
 
 import './App.css';
 
@@ -60,7 +60,7 @@ class App extends Component {
               <PrivateRoute exact path="/UserDash" component={UserDash} />
               <Route exact path="/LoginPage" component={SignIn} />
               <Route exact path="/SignupPage" component={SignUp} />
-              <Route exact path="/FAQ" component={FAQsPage} />
+              <Route exact path="/FAQsPage" component={FAQsPage} />
               <PrivateRoute exact path="/Studio" component={Studio} />
               <PrivateRoute exact path="/Results" component={Results} />
               <PrivateRoute exact path="/Final" component={Finale} />
