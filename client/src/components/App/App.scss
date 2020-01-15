@@ -389,9 +389,10 @@ box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.43);
   // font-size: 2vh;
   // background-color: #FFC41F;
   margin: 5vw;
-  box-shadow: 5px 6px 5px 6px rgba(0, 0, 0, 0.43); 
+  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.43); 
   justify-content: left;
   padding: 20px;
-  border-style: groove;
+  border-style: solid;
+  border-width: 1.25px;
   border-radius: 15px;
 } 
