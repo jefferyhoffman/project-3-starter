@@ -47,7 +47,9 @@ class HomePage extends Component {
                 
 
                 <div className="centeredContent">
+                  
                   <img className="overlayImage" src={overlayImage1} alt="" />
+                  
                   <h1 className="phrase">
                     Charlotte & Surrounding Area's Premier Commercial
                     Landscaping Company
@@ -65,10 +67,10 @@ class HomePage extends Component {
             <div className="row">
               <div className="centeredContent">
 
+                    <h2>Services Offered</h2>
 
                 <section className="images">
                   
-                    
 
                       <div className="card-layout">
                         <img src={mulch} className="card-image" alt="" />
@@ -163,6 +165,9 @@ class HomePage extends Component {
             <div className="container">
               <div className="row">
                 <div className="centeredContent">
+
+                <h2>Our Mission</h2>
+                
                   <p class="mission">
                     Our mission is to provide our clients with the highest level
                     of quality services at fair and competitive prices. We

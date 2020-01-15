@@ -36,7 +36,8 @@
   width: 100%;
   margin: 0 auto;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .card-layout {
@@ -84,12 +85,15 @@
 }
 
 .card-image {
-  max-width: 100%;
-  height: 25vh;
-  display: block;
-  transition: opacity ease-out 250ms;
-  opacity: 1;
-  border-radius: 20px;
+   // max-width: 100%;
+   width: 250px;
+   // height: 25vh;
+   height: 200px;
+   object-fit: cover;
+   display: block;
+   transition: opacity ease-out 250ms;
+   opacity: 1;
+   border-radius: 20px;
 }
 
 .card-image:hover {
@@ -135,15 +139,13 @@
 .phrase{
   width: 50%;
   font-size: 40px;
-  /* background-color: rgba(216, 191, 216, 0.5); */
-  /* padding: 16px; */
-  /* width: 40%; */
   margin-top: 20px;
   font-weight: 550;
   color: white;
   margin-top: 20%;
   font-family: alternate-gothic-no-3-d;
   line-height: 40px;
+  text-shadow: 2px 2px #282C34;
   
 }
 .mission{
@@ -153,7 +155,9 @@
   padding: 16px;
   font-weight: 700;
   font-family: alternate-gothic-no-3-d;
-  border-radius: 40px;
+  border-radius: 20px;
+  box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.43);
+
  
 }
 .services{
@@ -167,9 +171,16 @@
   text-align: left;
  
 }
-/* .mainContent {
-  margin-top: 150px;
-} */
+
+h2 {
+  color: white;
+  font-family: alternate-gothic-no-3-d;
+  font-size: 5vh;
+  width: 25vw;
+  margin-bottom: 1.5em;
+  text-shadow: 2px 2px #282C34;
+  
+}
 .parallax {
   background-attachment: fixed;
   background-position: center;
