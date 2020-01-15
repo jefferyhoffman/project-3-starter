@@ -19,20 +19,24 @@ class AboutUs extends Component {
                     <MDBRow className='paddingBottomAboutMe paddingTopAboutMe'>
                         <MDBCol></MDBCol>
                         <MDBCol className='paddingLeftAboutMe' size='3'>
-                            <MDBCard cascade>
+                            <MDBCard cascade className="GenCardSizeAboutUS">
                                 <MDBCardImage cascade className="JeanHeadShot" src={Jean}/>
                                 <MDBCardBody cascade>
                                     <MDBCardTitle>Jean Tubay</MDBCardTitle>
-                                    <MDBCardText>Full-Stack Web Developer successful in collaborative team environments, reaching creative and innovative solutions and refining competency in various languages. Experienced in developing responsive consumer-focused web sites utilizing JavaScript, CSS, React.js, Node, Express.js, and jQuery.</MDBCardText>
+                                    <MDBCardText>Full-Stack Web Developer successful in collaborative team environments, reaching creative and innovative solutions and refining competency in various languages. Experienced in team environment through prior employment. Capable of working in a team environment to reach interdependent innovative solutions. Experienced in developing responsive consumer-focused web sites utilizing JavaScript, CSS, React.js, Node, Express.js, and jQuery.</MDBCardText>
                                     <MDBRow>
-                                            <MDBCol>
+                                    <MDBCol>
                                                 <MDBBtn tag="a" floating gradient="purple">
+                                                    <a href="https://www.linkedin.com/in/jean-tubay-8b0050192/" target="_blank">
                                                     <MDBIcon fab icon="linkedin-in" />
+                                                    </a>
                                                 </MDBBtn>
                                             </MDBCol>
                                             <MDBCol>
                                                 <MDBBtn tag="a" floating gradient="purple">
+                                                    <a href="https://github.com/jtubay" target="_blank">
                                                     <MDBIcon fab icon="github" />
+                                                    </a>
                                                 </MDBBtn>
                                             </MDBCol>
                                     </MDBRow>
@@ -40,20 +44,24 @@ class AboutUs extends Component {
                             </MDBCard>
                         </MDBCol>
                         <MDBCol className='paddingRightAboutMe' size='3'>
-                            <MDBCard cascade>
+                            <MDBCard cascade className="GenCardSizeAboutUS">
                                 <MDBCardImage cascade className="ParkerHeadShot" src={Parker}/>
                                 <MDBCardBody cascade>
                                     <MDBCardTitle>John Parker</MDBCardTitle>
                                     <MDBCardText>I am an established leader seasoned by my years in hospitality and manufacturing, prepared to transition into a role as a full stack web developer. From childhood, I discovered a passion for tinkering with electronics and designing implementations for solutions to problems I was intrigued by. My love for technology was in full swing by the time I was building my first computer at age ten and watching it post.</MDBCardText>
                                     <MDBRow>
-                                            <MDBCol>
+                                    <MDBCol>
                                                 <MDBBtn tag="a" floating gradient="purple">
+                                                    <a href="https://www.linkedin.com/in/john-parker-hodges-72aa38187/" target="_blank">
                                                     <MDBIcon fab icon="linkedin-in" />
+                                                    </a>
                                                 </MDBBtn>
                                             </MDBCol>
                                             <MDBCol>
                                                 <MDBBtn tag="a" floating gradient="purple">
+                                                    <a href="https://github.com/JohnParkerHodges" target="_blank">
                                                     <MDBIcon fab icon="github" />
+                                                    </a>
                                                 </MDBBtn>
                                             </MDBCol>
                                     </MDBRow>
@@ -65,20 +73,24 @@ class AboutUs extends Component {
                     <MDBRow>
                         <MDBCol></MDBCol>
                         <MDBCol className='paddingLeftAboutMe' size='3'>
-                            <MDBCard cascade>
+                            <MDBCard cascade className="GenCardSizeAboutUS">
                                 <MDBCardImage cascade className="MichaelHeadShot" src={Michael}/>
                                 <MDBCardBody cascade>
                                     <MDBCardTitle>Michael Trpak</MDBCardTitle>
                                     <MDBCardText>A full stack web developer and a degree in communication studies with interpersonal communication skills grown through my work as a supervisor.</MDBCardText>
                                     <MDBRow>
-                                            <MDBCol>
+                                    <MDBCol>
                                                 <MDBBtn tag="a" floating gradient="purple">
+                                                    <a href="https://www.linkedin.com/in/michael-trpak/" target="_blank">
                                                     <MDBIcon fab icon="linkedin-in" />
+                                                    </a>
                                                 </MDBBtn>
                                             </MDBCol>
                                             <MDBCol>
                                                 <MDBBtn tag="a" floating gradient="purple">
+                                                    <a href="https://github.com/mrtrpak" target="_blank">
                                                     <MDBIcon fab icon="github" />
+                                                    </a>
                                                 </MDBBtn>
                                             </MDBCol>
                                     </MDBRow>
@@ -86,7 +98,7 @@ class AboutUs extends Component {
                             </MDBCard>
                         </MDBCol>
                         <MDBCol className='paddingRightAboutMe' size='3'>
-                            <MDBCard cascade>
+                            <MDBCard cascade className="GenCardSizeAboutUS">
                                 <MDBCardImage cascade className="GabrielHeadShot" src={Gabriel}/>
                                 <MDBCardBody cascade>
                                     <MDBCardTitle>Gabriel Mangum</MDBCardTitle>
@@ -94,17 +106,17 @@ class AboutUs extends Component {
                                     <MDBRow>
                                             <MDBCol>
                                                 <MDBBtn tag="a" floating gradient="purple">
+                                                    <a href="https://www.linkedin.com/in/gabriel-mangum-584031170/" target="_blank">
                                                     <MDBIcon fab icon="linkedin-in" />
+                                                    </a>
                                                 </MDBBtn>
                                             </MDBCol>
                                             <MDBCol>
-                                                    <MDBNavLink to="https://github.com/GabrielTMangum" target="_blank">
-                                                        <MDBBtn tag="a" floating gradient="purple">
-                                                            <a>
-                                                            <MDBIcon fab icon="github" />
-                                                            </a>
-                                                        </MDBBtn>
-                                                    </MDBNavLink>
+                                                <MDBBtn tag="a" floating gradient="purple">
+                                                    <a href="https://github.com/GabrielTMangum" target="_blank">
+                                                    <MDBIcon fab icon="github" />
+                                                    </a>
+                                                </MDBBtn>
                                             </MDBCol>
                                     </MDBRow>
                                 </MDBCardBody>
