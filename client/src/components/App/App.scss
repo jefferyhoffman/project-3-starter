@@ -136,7 +136,9 @@
   background-blend-mode: overlay;
   position: relative;
   top: 170px;
+  
 }
+
 .phrase{
   width: 50%;
   font-size: 40px;
@@ -259,6 +261,7 @@ background-color: #FFFFFFA8;
   margin-top: 30vh;
 }
 .LoginRegister {
+  z-index: 1;
   margin-left: 10%;
   margin-right: 10%;
 }
@@ -390,9 +393,10 @@ box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.43);
   // font-size: 2vh;
   // background-color: #FFC41F;
   margin: 5vw;
-  box-shadow: 5px 6px 5px 6px rgba(0, 0, 0, 0.43); 
+  box-shadow: 1px 3px 3px 0px rgba(0, 0, 0, 0.356); 
   justify-content: left;
   padding: 20px;
-  border-style: groove;
+  border-style: solid;
+  border-width: 1.5px;
   border-radius: 15px;
 } 

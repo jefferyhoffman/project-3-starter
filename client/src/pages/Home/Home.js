@@ -114,7 +114,7 @@ class HomePage extends Component {
                       </div>
 
                       <div className="card-layout">
-                        <img src={leaf} className="card-image" />
+                        <img src={leaf} className="card-image" alt="" />
                         <div className="cardText">
                           <h3 className="cardTitle">Leaf Removal</h3>
                           <p className="cardBody"></p>

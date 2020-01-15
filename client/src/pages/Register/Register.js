@@ -4,6 +4,7 @@ import { Redirect } from 'react-router-dom';
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
 import RegistrationForm from '../../components/RegistrationForm/RegistrationForm';
+import backgoundImage from "../../images/backgorundImage-1.JPG";
 
 class Register extends Component {
   static contextType = AuthContext;
@@ -35,6 +36,7 @@ class Register extends Component {
 
     return (
       <div className='LoginRegister'>
+       
         <div className='row'>
           <div className='col'>
             <h1 className="registerTitle">Register Account</h1>
