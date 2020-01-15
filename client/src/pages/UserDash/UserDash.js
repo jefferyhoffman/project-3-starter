@@ -50,7 +50,7 @@ class UserDash extends Component {
                             <div className="text-left sideNav">
                             <MDBNavLink to="/Studio"><h3 className="sideNavText">Design Studio</h3></MDBNavLink>
                             <MDBNavLink to="/Studio"><h3 className="sideNavText">About Us</h3></MDBNavLink>
-                            <MDBNavLink to="/Studio"><h3 className="sideNavText">FAQ</h3></MDBNavLink>
+                            <MDBNavLink to="/FAQ"><h3 className="sideNavText">FAQ</h3></MDBNavLink>
                             <MDBNavLink to="/Studio"><h3 className="sideNavText">Logout</h3></MDBNavLink>
                             </div>
                         </MDBCol>

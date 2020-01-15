@@ -38,7 +38,7 @@ class IndexNAV extends Component {
               <MDBNavLink to="#!">Saved Cards</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBNavLink to="#!">FAQ</MDBNavLink>
+              <MDBNavLink to="/FAQ">FAQ</MDBNavLink>
             </MDBNavItem>
           </MDBNavbarNav>
           <MDBNavbarNav right>
