@@ -5,12 +5,16 @@
   "proxy": "http://localhost:3001",
   "dependencies": {
     "@githubprimer/octicons-react": "^8.5.0",
+    "mdbreact": "git+ssh://git@git.mdbootstrap.com:mdb/react/re-pro.git",
+    "bootstrap": "^4.4.1",
+    "react-beautiful-dnd": "^12.2.0",
     "axios": "^0.18.1",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-gravatar": "^2.6.3",
-    "react-router": "^5.0.1",
-    "react-router-dom": "^5.0.1",
+    "react-router": "^5.1.2",
+    "react-error-overlay": "^6.0.4",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.1.1"
   },
   "scripts": {
