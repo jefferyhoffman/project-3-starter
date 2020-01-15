@@ -1,11 +1,16 @@
 import React, { Component, useState } from 'react';
 import API from '../../lib/API';
+import FlashMessage from "react-flash-message";
+
 const Contact = (props) => {
   const [userEmail, setUserEmail] = useState("")
   const [userPhone, setUserPhone] = useState("")
   const [userName, setUserName] = useState("")
   const [userMessage, setUserMessage] = useState("")
   const [error, setError] = useState("")
+  const [submitted, setSubmitted] = useState(false)
+  const [message, setMessage] = useState("")
+
   const submitForm = (event) => {
     event.preventDefault()
     console.log('test')
@@ -19,14 +24,34 @@ const Contact = (props) => {
         email: userEmail
       }
       API.Contact.send(holder).then(() => {
-        setError("Your message has been sent!")
+        setError("Your message has been sent!");
+        
       })
+      API.Properties.create().then(response => {
+
+        setMessage("Successfully sent email.");
+        setSubmitted(true);
+    })
     }
   }
   return (
     <div className='Login'>
       <div className='row'>
         <div className='col contactForm'>
+        {submitted && (
+                  <div className="row" style={{ zIndex: 10 }}>
+                    <div
+                      className="col centeredContent"
+                      style={{ marginTop: "-100px" }}
+                    >
+                      <FlashMessage duration={5000}>
+                        <div className="alert alert-success mb-3 flash" role="alert">
+                          {message}
+                        </div>
+                      </FlashMessage>
+                    </div>
+                  </div>
+                )}
 
           <h1 className="admin">Contact Us!</h1>
       <form className="contactForm">
