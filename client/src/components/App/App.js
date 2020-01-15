@@ -12,7 +12,6 @@ import Results from '../../pages/Results';
 import Finale from '../../pages/Final';
 import PrintPage from '../../pages/PrintPage';
 import AboutUs from '../../pages/AboutUs';
-import FAQsPage from '../../pages/FAQsPage';
 import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
 
 import './App.css';
