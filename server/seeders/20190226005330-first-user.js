@@ -1,16 +1,23 @@
-'use strict';
+"use strict";
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.bulkInsert('Users', [{
-      email: 'jeffhoffman@trilogyed.com',
-      password: 'test',
-      createdAt: new Date,
-      updatedAt: new Date
-    }], {});
+    return queryInterface.bulkInsert(
+      "Users",
+      [
+        {
+          email: "test@test.com",
+          password: "test",
+          name: "test",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+      ],
+      {}
+    );
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete('Users', null, {});
-  }
+    return queryInterface.bulkDelete("Users", null, {});
+  },
 };
