@@ -1,8 +1,6 @@
 'use strict';
-
-module.exports = function(sequelize, DataTypes) {
-  const Action = sequelize.define("Action", {
-    
+module.exports = (sequelize, DataTypes) => {
+  const Action = sequelize.define('Action', {
     category: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -28,15 +26,11 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       defaultValue: 1, 
     }
-    
-  });
-
-  // Needs work
+  }, {});
   Action.associate = function(models) {
     Action.belongsToMany(models.Challenge, {
       through: models.ChallengeAction
     });
   };
-
   return Action;
 };
