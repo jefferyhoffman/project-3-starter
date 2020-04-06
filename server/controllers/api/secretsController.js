@@ -4,7 +4,7 @@ const db = require('../../models')
 const { JWTVerifier } = require('../../lib/passport');
 
 secretsController.get('/', JWTVerifier, (req, res) => {
-
+  
   db.Secrets.find({})
     .then(results => {
       res.json(results);
@@ -13,5 +13,11 @@ secretsController.get('/', JWTVerifier, (req, res) => {
       if (error) throw error
     })
 })
+
+secretsController.post('/', (req, res) => {
+  db.Secrets.create({})
+    .then(user => res.json(user))
+    .catch(err => res.json(err));
+});
 
 module.exports = secretsController;
