@@ -6,11 +6,21 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       unique: true
     },
-    password: DataTypes.STRING
+    password: DataTypes.STRING,
+    name: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      validate: {
+        len: [1, 50]
+      }
+    }
   }, {});
 
   User.associate = function (models) {
     // associations can be defined here
+    User.hasMany(models.Challenge, {
+      onDelete: "cascade"
+    });
   };
 
   User.prototype.comparePassword = function (challenge) {
