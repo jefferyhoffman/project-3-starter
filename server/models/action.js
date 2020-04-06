@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function(sequelize, DataTypes) {
-  const Actions = sequelize.define("Actions", {
+  const Action = sequelize.define("Action", {
     
     category: {
       type: DataTypes.STRING,
@@ -19,7 +19,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     description: {
       type: DataTypes.TEXT,
-      allowNull: false,
+      allowNull: true,
       validate: {
         len: [1, 500]
       }
@@ -30,11 +30,13 @@ module.exports = function(sequelize, DataTypes) {
     }
     
   });
+
   // Needs work
-  Actions.associate = function(models) {
-    Actions.belongsToMany(models.Challenges, {
-      through: something
+  Action.associate = function(models) {
+    Action.belongsToMany(models.Challenge, {
+      through: models.ChallengeAction
     });
   };
-  return Actions;
+
+  return Action;
 };
