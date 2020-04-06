@@ -18,6 +18,9 @@ const UserSchema = new Schema({
       'Password should be four characters or longer'
     ]
   },
+  image:{
+    type: String
+  }
 })
 
 class newUser {
