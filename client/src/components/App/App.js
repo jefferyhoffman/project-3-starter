@@ -9,6 +9,7 @@ import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
 import Home from '../../pages/Home/Home';
 import Login from '../../pages/Login/Login';
 import Register from '../../pages/Register/Register';
+import Galleries from '../../pages/Galleries'
 import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
 
@@ -34,7 +35,44 @@ class App extends Component {
         authToken: TokenStore.getToken(),
         onLogin: this.handleLogin,
         onLogout: this.handleLogout
-      }
+      }, 
+      galleries: [
+        {
+          key: 1,
+          name: 'Sketches Vol 01', 
+          images: ['https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample3.jpg', 
+          'https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample2.jpg', 
+          'https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample1.jpg'] 
+        }, 
+        {
+          key: 2,
+          name: 'Sketches Vol 02', 
+          images: ['https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample3.jpg', 
+          'https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample2.jpg', 
+          'https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample1.jpg'] 
+        }, 
+        {
+          key: 3,
+          name: 'Sketches Vol 03', 
+          images: ['https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample3.jpg', 
+          'https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample2.jpg', 
+          'https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample1.jpg'] 
+        }, 
+        {
+          key: 4,
+          name: 'Sketches Vol 04', 
+          images: ['https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample3.jpg', 
+          'https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample2.jpg', 
+          'https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample1.jpg'] 
+        }, 
+        {
+          key: 5,
+          name: 'Sketches Vol 05', 
+          images: ['https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample3.jpg', 
+          'https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample2.jpg', 
+          'https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample1.jpg'] 
+        }
+      ]
     }
   }
 
@@ -50,15 +88,19 @@ class App extends Component {
 
   render() {
     return (
-      <AuthContext.Provider value={this.state.auth}>
+      <AuthContext.Provider value={this.state.auth} images={this.state.galleries}>
         <div className='App'>
           <Navigation />
-          <div className='container'>
+          <div>
             <Switch>
               <Route exact path='/' component={Home} />
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />
-              <PrivateRoute path='/secret' component={Secret} />
+              <Route 
+                path='/galleries' 
+                render={() => <Galleries galleries={this.state.galleries} />}  
+              />
+              <PrivateRoute path='/secret' component={Secret}/>
               <Route component={NotFound} />
             </Switch>
           </div>
