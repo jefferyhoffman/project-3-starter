@@ -5,7 +5,9 @@ const Schema = mongoose.Schema;
 const boardSchema = new Schema({
     title: {
         type: String,
-        required: true
+        required: true,
+        minlength: 1,
+        maxlength: 15
     },
     userId: {
         type: Schema.Types.ObjectId,
