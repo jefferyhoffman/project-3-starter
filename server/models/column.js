@@ -16,6 +16,6 @@ const columnSchema = new Schema({
   }
 });
 
-const Column = mongoose.model("Column", columnSchema);
+let Column = mongoose.model("Column", columnSchema);
 
 module.exports = Column;
