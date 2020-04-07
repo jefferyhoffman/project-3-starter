@@ -17,5 +17,9 @@
   "devDependencies": {
     "concurrently": "^4.1.0",
     "nodemon": "^1.18.10"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.9.9",
+    "@material-ui/icons": "^4.9.1"
   }
 }
