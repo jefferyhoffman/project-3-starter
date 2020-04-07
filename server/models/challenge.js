@@ -13,7 +13,9 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
           }
         });
-        Challenge.hasMany(models.Action)
+        Challenge.belongsToMany(models.Action, {
+          through: models.ChallengeAction
+        })
       };
       return Challenge;
 };
