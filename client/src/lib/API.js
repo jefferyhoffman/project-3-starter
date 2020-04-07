@@ -38,8 +38,9 @@ export default {
   //     })
   //   },
 
+  //   // done
   //   getPastChallenges: function(){
-  //     return axios.get('/api/', {
+  //     return axios.get('/api/challenges', {
   //       headers: {
   //         'Authorization': `Bearer ${authToken}`
   //       }
@@ -54,9 +55,10 @@ export default {
   //   }
   // },
 
+  // done
   // Actions: {
   //   getAll: function(){
-  //     return axios.get('/api/', {
+  //     return axios.get('/api/actions', {
         
   //     })
   //   }
