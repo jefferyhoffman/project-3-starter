@@ -27,5 +27,38 @@ export default {
         }
       });
     }
-  }
+  },
+
+  Challenges: {
+    getCurrentChallenge: function(){
+      return axios.get('/api/', {
+        headers: {
+          'Authorization': `Bearer ${authToken}`
+        }
+      })
+    },
+
+    getPastChallenges: function(){
+      return axios.get('/api/', {
+        headers: {
+          'Authorization': `Bearer ${authToken}`
+        }
+      })
+    },
+
+    // ??
+    create: function(points){
+      return axios.post('/api/', {
+        points
+      })
+    }
+  },
+
+  Actions: {
+    getAll: function(){
+      return axios.get('/api/', {
+        
+      })
+    }
+  }  
 }
