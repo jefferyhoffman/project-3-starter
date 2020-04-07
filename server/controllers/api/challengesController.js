@@ -8,21 +8,30 @@ challengesController.get("/:UserId", JWTVerifier, (req, res) => {
   db.Challenge.findAll({
     limit: 5,
     order: [['createdAt', 'DESC']],
-    where: req.params.UserId
+    where: req.user.id
   })
     .then(challenges => res.json(challenges))
     .catch((err) => console.log(err));
 });
 
-// get current challenge
-challengesController.get("/", JWTVerifier, (req, res) => {
+// get current challenge JWTVerifier
+// ????
+challengesController.get("/", (req, res) => {
   db.Challenge.findAll({
     limit: 1,
     order: [['createdAt', 'DESC']],
-    where: req.params.UserId
+    // where: req.user.id
   })
-    .then()
-    .then(challenges => res.json(challenges))
+    .then(challenge => {
+      if (!challenge) {
+        return res
+          .status(404)
+          .send(`Challenge with id ${req.params.id} not found.`);
+      }
+      // .getActions is not a function
+      return  challenge.getActions();
+    })
+    .then(challenge => res.json(challenge))
     .catch((err) => console.log(err));
 });
 
@@ -37,6 +46,7 @@ challengesController.post("/", JWTVerifier, (req, res) => {
 
 // Add actions to a challenge
 // Add JWTVerifier back in later
+// working
 challengesController.put("/:id", (req, res) => {
   console.log(req.body.actions);
 
@@ -57,12 +67,22 @@ challengesController.put("/:id", (req, res) => {
 // update challenge score
 
 
-// delete an action from a challenge
-// challengesController.get("/", JWTVerifier, (req, res) => {
-//   db.Challenge.findAll()
-//     .then(challenges => res.json(challenges))
-//     .catch((err) => console.log(err));
-// });
+// delete an action from a challenge JWTVerifier
+// working
+challengesController.delete("/:id", (req, res) => {
+  db.Challenge.findByPk(req.params.id)
+    .then(challenge => {
+      if (!challenge) {
+        return res
+          .status(404)
+          .send(`Challenge with id ${req.params.id} not found.`);
+      }
+      
+      return challenge.removeActions(req.body.actions);
+    })
+    .then((updatedChallenge) => res.json(updatedChallenge))
+    .catch((err) => console.log(err));
+});
 
 // delete an entire challenge
 // challengesController.get("/", JWTVerifier, (req, res) => {
