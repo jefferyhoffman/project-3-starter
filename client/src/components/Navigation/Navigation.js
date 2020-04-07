@@ -1,70 +1,97 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from "react";
+// import withStyles from "@material-ui/styles/withStyles";
+// import { Link, withRouter } from "react-router-dom";
+// import Grid from "@material-ui/core/Grid";
+import Typography from "@material-ui/core/Typography";
+import Toolbar from "@material-ui/core/Toolbar";
+import AppBar from "@material-ui/core/AppBar";
+// import Tabs from "@material-ui/core/Tabs";
+// import Tab from "@material-ui/core/Tab";
+import MenuIcon from "@material-ui/icons/Menu";
+import IconButton from "@material-ui/core/IconButton";
+// import List from "@material-ui/core/List";
+// import ListItem from "@material-ui/core/ListItem";
+// import ListItemText from "@material-ui/core/ListItemText";
+// import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
+// import { Link as MaterialLink } from "@material-ui/core";
+// import Menu from "./Menu";
 
-import AuthContext from '../../contexts/AuthContext';
-import AuthDropdown from '../../components/AuthDropdown/AuthDropdown';
-import DashBoard from '../../pages/DashBoard';
-
-class Navigation extends Component {
-  static contextType = AuthContext;
-
-  state = {
-    collapsed: true
+const useStyles = theme => ({
+  appBar: {
+    position: "relative",
+    boxShadow: "none",
+    // borderBottom: `1px solid ${theme.palette.grey["100"]}`,
+    backgroundColor: "white"
+  },
+  inline: {
+    display: "inline"
+  },
+  flex: {
+    display: "flex",
+    [theme.breakpoints.down("sm")]: {
+      display: "flex",
+      justifyContent: "space-evenly",
+      alignItems: "center"
+    }
+  },
+  // link: {
+  //   textDecoration: "none",
+  //   color: "inherit"
+  // },
+  // productLogo: {
+  //   display: "inline-block",
+  //   borderLeft: `1px solid ${theme.palette.grey["A100"]}`,
+  //   marginLeft: 32,
+  //   paddingLeft: 24,
+  //   [theme.breakpoints.up("md")]: {
+  //     paddingTop: "1.5em"
+  //   }
+  // },
+  tagline: {
+    display: "inline-block",
+    marginLeft: 10,
+    [theme.breakpoints.up("md")]: {
+      paddingTop: "0.8em"
+    }
+  },
+  // iconContainer: {
+  //   display: "none",
+  //   [theme.breakpoints.down("sm")]: {
+  //     display: "block"
+  //   }
+  // },
+  iconButton: {
+    float: "right"
   }
+  // tabContainer: {
+  //   marginLeft: 32,
+  //   [theme.breakpoints.down("sm")]: {
+  //     display: "none"
+  //   }
+  // },
+  // tabItem: {
+  //   paddingTop: 20,
+  //   paddingBottom: 20,
+  //   minWidth: "auto"
+  // }
+})
 
-  toggleCollapse = () => {
-    this.setState({
-      collapsed: !this.state.collapsed
-    });
-  }
+export default function ButtonAppBar() {
+  const classes = useStyles();
 
-  render() {
-    const { user } = this.context;
-    const { collapsed } = this.state;
-    const targetClass = `collapse navbar-collapse ${!collapsed && 'show'}`;
-    const togglerClass = `navbar-toggler ${collapsed && 'collapsed'}`;
-
-    return (
-      <div className='Navigation'>
-        <nav className='navbar navbar-expand-lg navbar-light bg-light mb-3'>
-          <Link className='navbar-brand' to='#'>Project 3</Link>
-          <button className={togglerClass} onClick={this.toggleCollapse} data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
-            <span className='navbar-toggler-icon'></span>
-          </button>
-
-          <div className={targetClass} id='navbarSupportedContent'>
-            <ul className='navbar-nav mr-auto'>
-              <li className='nav-item'>
-                <Link className='nav-link' to='/' onClick={this.toggleCollapse}>Home</Link>
-              </li>
-              
-
-              {user &&
-              <>
-              <li className='nav-item'>
-                <Link className='nav-link' to='/dashboard' onClick={this.toggleCollapse}>DashBoard</Link>
-              </li>
-                <li className='nav-item'>
-                  <Link className='nav-link' to='/secret' onClick={this.toggleCollapse}>Secret</Link>
-                </li>
-                </>
-                }
-            </ul>
-            <ul className='navbar-nav'>
-              {user
-                ? <AuthDropdown onClick={this.toggleCollapse} />
-                : <>
-                  <li className='nav-item'><Link className='nav-link' to='/login' onClick={this.toggleCollapse}>Login</Link></li>
-                  <li className='nav-item'><Link className='nav-link' to='/register' onClick={this.toggleCollapse}>Register</Link></li>
-                  </>}
-            </ul>
-
-            
-          </div>
-        </nav>
-      </div>
-    );
-  }
-}
-
-export default Navigation;
+  return (
+    <div className={classes.root}>
+      <AppBar position="static">
+        <Toolbar>
+          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" className={classes.title}>
+            News
+          </Typography>
+          <button color="inherit">Login</button>
+        </Toolbar>
+      </AppBar>
+    </div>
+  );
+};
