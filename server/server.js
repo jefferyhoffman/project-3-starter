@@ -15,8 +15,12 @@ if (process.env.NODE_ENV !== 'production') {
 const express = require('express');
 const logger = require('morgan');
 const mongoose = require('mongoose');
-
 const { passport } = require('./lib/passport');
+const bodyParser = require("body-parser")
+const multer = require("multer");
+const GridFsStorage = require("multer-gridfs-storage");
+const Grid = require("gridfs-stream");
+
 
 //-- Constants ---------------------------------------------------------------
 const PORT = process.env.PORT || 3001;
@@ -30,12 +34,14 @@ mongoose.connect(
   process.env.MONGODB_URI ||
   'mongodb://localhost/ProjectThree'
 )
+
 mongoose.connection.on('error', err => {
   console.log(`Mongoose connection err:\n${err}`)
 })
 
 //-- Middleware --------------------------------------------------------------
 app.use(logger(LOG_MODE));
+app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(passport.initialize());

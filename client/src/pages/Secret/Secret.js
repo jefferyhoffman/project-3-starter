@@ -20,7 +20,6 @@ class Secret extends Component {
         if (err.response.status === 401) {
           return this.setState({ error: "Unauthorized. Please login." });
         }
-
         console.log(err);
       })
       .finally(() => this.setState({ isLoading: false }));
