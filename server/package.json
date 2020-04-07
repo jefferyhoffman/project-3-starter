@@ -11,7 +11,8 @@
     "mysql2": "^2.1.0",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
-    "sequelize": "^4.42.0"
+    "sequelize": "^4.42.0",
+    "sequelize-cli": "^5.5.1"
   },
   "scripts": {
     "start": "node server",
