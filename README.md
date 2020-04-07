@@ -155,6 +155,10 @@ Importantly, the logic that verifies each user's authentication token resides he
 
 #### server/models
 
+
+
+
+
 In the `master` branch, these models are just simple JS mocks that return hard-coded data. They are there to act as placeholders for a real database. See the `sequelize` or `mongoose` branches for Sequelize and Mongoose implementations, respectively.
 
 ## Scripts

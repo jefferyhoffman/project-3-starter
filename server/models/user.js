@@ -1,13 +1,31 @@
-class User {
-  constructor({ id, email, password }) {
-    this.id = id;
-    this.email = email;
-    this.password = password;
-  }
+'use strict';
 
-  comparePassword(challenge) {
+module.exports = (sequelize, DataTypes) => {
+  const User = sequelize.define('User', {
+    email: {
+      type: DataTypes.STRING,
+      unique: true
+    },
+    password: DataTypes.STRING,
+    name: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      validate: {
+        len: [1, 50]
+      }
+    }
+  }, {});
+
+  User.associate = function (models) {
+    // associations can be defined here
+    User.hasMany(models.Challenge, {
+      onDelete: "cascade"
+    });
+  };
+
+  User.prototype.comparePassword = function (challenge) {
     return this.password === challenge;
   }
-}
 
-module.exports = User;
+  return User;
+};
