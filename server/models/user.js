@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
 
   User.associate = function (models) {
     // associations can be defined here
-    User.hasMany(models.Post);
+    User.hasMany(models.Reply);
   };
 
   User.prototype.comparePassword = function (challenge) {
