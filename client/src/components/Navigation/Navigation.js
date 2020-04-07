@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import AuthContext from '../../contexts/AuthContext';
 import AuthDropdown from '../../components/AuthDropdown/AuthDropdown';
+import DashBoard from '../../pages/DashBoard';
 
 class Navigation extends Component {
   static contextType = AuthContext;
@@ -36,10 +37,18 @@ class Navigation extends Component {
               <li className='nav-item'>
                 <Link className='nav-link' to='/' onClick={this.toggleCollapse}>Home</Link>
               </li>
+              
+
               {user &&
+              <>
+              <li className='nav-item'>
+                <Link className='nav-link' to='/dashboard' onClick={this.toggleCollapse}>DashBoard</Link>
+              </li>
                 <li className='nav-item'>
                   <Link className='nav-link' to='/secret' onClick={this.toggleCollapse}>Secret</Link>
-                </li>}
+                </li>
+                </>
+                }
             </ul>
             <ul className='navbar-nav'>
               {user
@@ -49,6 +58,8 @@ class Navigation extends Component {
                   <li className='nav-item'><Link className='nav-link' to='/register' onClick={this.toggleCollapse}>Register</Link></li>
                   </>}
             </ul>
+
+            
           </div>
         </nav>
       </div>
