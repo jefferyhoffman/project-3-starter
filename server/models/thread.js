@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    var Thread = sequelize.define("Post", {
+    var Thread = sequelize.define("Thread", {
         title: {
             type: DataTypes.STRING,
             allowNull: false,
