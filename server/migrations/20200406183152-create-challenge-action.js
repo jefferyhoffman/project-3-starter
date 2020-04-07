@@ -15,6 +15,14 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
+      },
+      ActionId: {
+        type: Sequelize.INTEGER,
+        allowNull: true
+       },
+      ChallengeId: {
+        type: Sequelize.INTEGER,
+        allowNull: true
       }
     });
   },
