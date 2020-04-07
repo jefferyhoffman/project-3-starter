@@ -20,6 +20,10 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE,
       },
+      UserId: {
+        type: Sequelize.INTEGER,
+        allowNull: false
+      }
     });
   },
   down: (queryInterface, Sequelize) => {
