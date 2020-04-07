@@ -6,6 +6,8 @@ const columnSchema = new Schema({
   title: {
     type: String,
     required: true,
+    minlength: 1,
+    maxlength: 15
   },
   boardId: {
       type: Schema.Types.ObjectId,

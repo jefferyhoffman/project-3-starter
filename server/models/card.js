@@ -15,11 +15,17 @@ const cardSchema = new Schema({
   },
   title: {
     type: String,
-    required: true
+    required: true,
+    minlength: 1,
+    maxlength: 15
   },
   description: {
     type: String,
     required: true
+  },
+  priority: {
+    enum: ["low", "medium", "high"],
+    required: false
   }
 });
 
