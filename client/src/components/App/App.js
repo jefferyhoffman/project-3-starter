@@ -11,8 +11,9 @@ import Login from '../../pages/Login/Login';
 import Register from '../../pages/Register/Register';
 import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
+import TaskBoard from '../../pages/TaskBoard';
 
-import './App.css';
+//import './App.css';
 
 class App extends Component {
   constructor(props) {
@@ -59,6 +60,7 @@ class App extends Component {
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />
               <PrivateRoute path='/secret' component={Secret} />
+              <Route path="/taskboard" component={TaskBoard} />
               <Route component={NotFound} />
             </Switch>
           </div>
