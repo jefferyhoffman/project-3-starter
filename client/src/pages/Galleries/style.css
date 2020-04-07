@@ -1,0 +1,21 @@
+.galleries {
+    display: grid;
+    width: 80vw;
+    height: 100vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    margin: auto;
+    padding: 0;
+}
+
+.btn {
+    margin-bottom: 1%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.button {
+    margin-bottom: 1%;
+}
