@@ -10,28 +10,36 @@
 * [Authors](#authors)  
 * [Visuals](#visuals)  
 
+### User Story
+As young people yearning to create and conversate about music notation with other users online,  
+We want to be able to discuss music theory in detail with friends online on a music notation based forum board.  
+So That we can safely communicate with other users online in a musically driven environment  
 
 ### Description
-When a user comes to our site, they are asked to enter information.  
-This information includes name, age, and instrument that they play.  
-They then can see a card with all of this information on it.  
+Discussion Board with heavy emphasis on music notation and conversation.  
+In-tune sense of music composition and arrangement.  
+
+When a user comes to our site, they are asked to enter login information (username and password).  
+If this information is unavailable, they are sent to the sign-up page.  
+Once logged in they are able to see all posts on the board, also they are able to create a post, or reply to an existing one.
+
 Automatically pairs up with third party API.  
 Cards can be moved and grouped together  
 
 It's essentially a forum that allows users to create music notation sheets through an npm that is then printed on the screen they can send to each other (along with some other features).
-If the music notation part proves too difficult I had a backup idea of a karaoke database list that is arranged by artist/name/song/id number that a user can add onto through the forum.
 -Alex  
 
 ### Installation
 Git clone the repository.  
-Go to server.js folder and "npm install" to install the required dependencies.  
-Go to root directory and "npm start" to start client.  
+Go to the server folder and "yarn install" to install the required dependencies.  
+Go to root directory and "yarn start:dev" to start client.  
 
 ### Usage
-React  
-Express.js  
-Node.js  
-MongoDB / MySQL  
+<ul><li>Vexflow</li>  
+<li>MySQL</li>
+<li>React</li>
+<li>Express.js</li>
+<li>Node.js</li></ul>  
 
 ### License
 
