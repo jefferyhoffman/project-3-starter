@@ -20,19 +20,23 @@ const UserSchema = new Schema({
   },
 })
 
-class newUser {
-  constructor({ id, email, password }) {
-    this.id = id;
-    this.email = email;
-    this.password = password;
-  }
-
-  comparePassword(challenge) {
-    return this.password === challenge;
-  }
+UserSchema.methods.comparePassword = function(challenge) {
+  return this.password === challenge;
 }
 
-UserSchema.loadClass(newUser);
+// class newUser {
+//   constructor({ id, email, password }) {
+//     this.id = id;
+//     this.email = email;
+//     this.password = password;
+//   }
+
+//   comparePassword(challenge) {
+//     return this.password === challenge;
+//   }
+// }
+
+// UserSchema.loadClass(newUser);
 let User = mongoose.model('User', UserSchema);
 
 
