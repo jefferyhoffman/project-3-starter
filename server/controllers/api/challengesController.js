@@ -21,11 +21,11 @@ challengesController.get("/:UserId", JWTVerifier, (req, res) => {
 
 // get current challenge 
 // must add JWTVerifier
-challengesController.get("/", (req, res) => {
+challengesController.get("/", JWTVerifier, (req, res) => {
   db.Challenge.findAll({
     limit: 1,
     order: [['createdAt', 'DESC']],
-    // where: req.user.id
+    where: req.user.id
   })
     .then(challenge => {
       if (!challenge) {
@@ -34,7 +34,7 @@ challengesController.get("/", (req, res) => {
           .send(`Challenge with id ${req.params.id} not found.`);
       }
       // .getActions is not a function
-      return  challenge.getActions();
+      return  challenge;
     })
     .then(challenge => res.json(challenge))
     .catch((err) => console.log(err));
@@ -77,7 +77,7 @@ challengesController.put("/:id", (req, res) => {
 // updates a challenge score when given a new total
 // working
 // would be better if this could be included in add actions route, with a way to add all points assosiaceted with actions
-challengesController.put("/points/:id", (req, res) => {
+challengesController.put("/points/:id", JWTVerifier, (req, res) => {
   console.log(req.body.actions);
 
   db.Challenge.findByPk(req.params.id)
@@ -98,7 +98,7 @@ challengesController.put("/points/:id", (req, res) => {
 
 // delete an action from a challenge JWTVerifier
 // working
-challengesController.delete("/:id", (req, res) => {
+challengesController.delete("/:id", JWTVerifier, (req, res) => {
   db.Challenge.findByPk(req.params.id)
     .then(challenge => {
       if (!challenge) {
@@ -117,7 +117,7 @@ challengesController.delete("/:id", (req, res) => {
 
 // delete an entire challenge, add JWTVerifier, 
 // working
-challengesController.delete("/deletechallenge/:id", (req, res) => {
+challengesController.delete("/deletechallenge/:id", JWTVerifier, (req, res) => {
   db.Challenge.destroy({
     where: {
       id: req.params.id
