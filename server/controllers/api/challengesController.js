@@ -20,7 +20,7 @@ challengesController.get("/:UserId", JWTVerifier, (req, res) => {
 
 
 // get current challenge 
-// 
+// working
 challengesController.get("/", JWTVerifier, (req, res) => {
   db.Challenge.findAll({
     limit: 1,
@@ -43,7 +43,7 @@ challengesController.get("/", JWTVerifier, (req, res) => {
 
 
 // post challenge 
-// must pass UserId 
+// working
 challengesController.post("/", JWTVerifier, (req, res) => {
   db.Challenge.create({ UserId: req.user.id })
     .then(challenges => res.json(challenges))
