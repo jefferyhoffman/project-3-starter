@@ -1,22 +1,12 @@
-const mongoose = require("mongoose");
+// models/board.js
+var CardSchema = new Schema({ title: String, body: String });
 
-const Schema = mongoose.Schema;
+var ColumnSchema = new Schema({ title: String, cards: [CardSchema] });
 
-const boardSchema = new Schema({
-  title: {
-    type: String,
-    required: true,
-    minlength: 1,
-    maxlength: 15
-  },
-  columns: [],
-  userId: {
-    type: Schema.Types.ObjectId,
-    ref: "User",
-    required: true
-  }
-})
+var BoardSchema = new Schema({
+  title: String,
+  columns: [ColumnSchema],
+});
 
-let Board = mongoose.model("Board", boardSchema);
-
-module.exports = Board
+var Board = mongoose.model("Board", BoardSchema);
+module.exports = Board;
