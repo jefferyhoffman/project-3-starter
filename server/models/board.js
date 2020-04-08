@@ -1,4 +1,6 @@
-// models/board.js
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+
 var CardSchema = new Schema({
   title: {
     type: String,
@@ -26,4 +28,9 @@ var BoardSchema = new Schema({
 });
 
 var Board = mongoose.model("Board", BoardSchema);
+var Column = mongoose.model("Column", ColumnSchema);
+var Card = mongoose.model("Card", CardSchema);
+
 module.exports = Board;
+module.exports = Column;
+module.exports = Card;

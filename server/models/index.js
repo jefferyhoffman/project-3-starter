@@ -1,5 +1,6 @@
 module.exports = {
   Users: require('./user'),
   Secrets: require('./secret'),
-  Board: require("./board")
+  Board: require("./board"),
+  Card: require("./board")
 }
