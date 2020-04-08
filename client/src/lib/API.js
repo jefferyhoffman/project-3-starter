@@ -97,7 +97,7 @@ export default {
       })
     },
 
-    // adds actions to a challenge by updating a challenge 
+    // adds actions to a challenge and updates the totalScore of said challenge
     updateChallenge: function(id, actions, authToken){
       return axios.put('/api/challenges/'+id, {
         actions: actions,
@@ -105,17 +105,19 @@ export default {
           'Authorization': `Bearer ${authToken}`
         }
       })
-    },
-
-    // updates a challenges totalPoints when passed an id and a new points total, would have to calc on front end for now
-    updatePoints: function(id, totalPoints, authToken){
-      return axios.put('/api/challenges/points/'+id, {
-        totalPoints: totalPoints,
-        headers: {
-          'Authorization': `Bearer ${authToken}`
-        }
-      })
     }
+
+
+    // NOT NEEDED
+    // updates a challenges totalPoints when passed an id and a new points total, would have to calc on front end for now
+    // updatePoints: function(id, totalPoints, authToken){
+    //   return axios.put('/api/challenges/points/'+id, {
+    //     totalPoints: totalPoints,
+    //     headers: {
+    //       'Authorization': `Bearer ${authToken}`
+    //     }
+    //   })
+    // }
   },
  
 }
