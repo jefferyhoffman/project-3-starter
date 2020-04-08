@@ -11,7 +11,7 @@ import Login from '../../pages/Login/Login';
 import Register from '../../pages/Register/Register';
 import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
-
+import UserPage from '../../pages/User'
 import './App.css';
 
 class App extends Component {
@@ -51,7 +51,7 @@ class App extends Component {
   render() {
     return (
       <AuthContext.Provider value={this.state.auth}>
-        <div className='App'>
+        <div>
           <Navigation />
           <div className='container'>
             <Switch>
@@ -59,6 +59,7 @@ class App extends Component {
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />
               <PrivateRoute path='/secret' component={Secret} />
+              <PrivateRoute path='/userpage' component={UserPage} />
               <Route component={NotFound} />
             </Switch>
           </div>
