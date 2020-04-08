@@ -1,7 +1,24 @@
 // models/board.js
-var CardSchema = new Schema({ title: String, body: String });
+var CardSchema = new Schema({
+  title: {
+    type: String,
+    minlength: 1,
+    maxlength: 15,
+  },
+  body: String,
+  priority: {
+    enum: ["low", "medium", "high"],
+  },
+});
 
-var ColumnSchema = new Schema({ title: String, cards: [CardSchema] });
+var ColumnSchema = new Schema({
+  title: {
+    type: String,
+    minlength: 1,
+    maxlength: 15,
+  },
+  cards: [CardSchema],
+});
 
 var BoardSchema = new Schema({
   title: String,
