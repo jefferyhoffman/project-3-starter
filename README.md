@@ -1,7 +1,6 @@
 # Music Forum
 
 ## Table of Contents
-* [User Story](#user_story)
 * [Description](#description)  
 * [Installation](#installation)  
 * [Usage](#usage)  
@@ -12,9 +11,9 @@
 * [Visuals](#visuals)  
 
 ### User Story
-AS young people yearning to create and conversate about music notation with other users online,  
-WE want to be able to discuss music theory in detail online through a music notation based forum board.  
-SO we can communicate with other users online in a musical discussion.  
+AS young people yearning to create and conversate music notation with other users online,  
+WE want to be able to discuss music theory in detail through a music notation based forum board  
+SO we can communicate with other users online in a music/composition based discussion.  
 
 ### Description
 Discussion Board with heavy emphasis on music notation and conversation.  
@@ -24,9 +23,9 @@ The user can also create music notation sheets and post them to the board as wel
 Initial proposal: It's essentially a forum that allows users to create music notation sheets through an npm that is then printed on the screen they can send to each other (along with some other features).
 
 MVP:  
-<ul><li>Login / Sign Up</li>  
+<ol><li>Login / Sign Up</li>  
 <li>Users are able to "Post" on the forum</li>  
-<li>Users are able to "Reply" to a post</li></ul>  
+<li>Users are able to "Reply" to a post</li></ol>  
 
 ### Installation
 Git clone the repository.  
