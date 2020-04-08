@@ -10,7 +10,7 @@ columnController.post("/", (req, res) => {
 
 // Update a column
 columnController.put("/:id", ({ params, body }, res) => {
-  db.Card.findByIdAndUpdate(
+  db.Column.findByIdAndUpdate(
     {
       _id: params.id,
     },
@@ -26,7 +26,9 @@ columnController.put("/:id", ({ params, body }, res) => {
 
 // Delete a column
 columnController.delete("/:id", ({ params }, res) => {
-  db.Column.findByIdAndDelete({ _id: params.id })
+  db.Column.findByIdAndDelete({
+    _id: params.id,
+  })
     .then((deletedColumn) => res.json(deletedColumn))
     .catch((err) => res.json(err));
 });
