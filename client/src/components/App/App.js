@@ -12,11 +12,33 @@ import Register from '../../pages/Register/Register';
 import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
 //new
-import DashBoard from '../../pages/DashBoard';
+import {ThemeProvider } from '@material-ui/styles';
+import {createMuiTheme} from '@material-ui/core/styles';
+import {blue, indigo} from '@material-ui/core/colors';
 
 import './App.css';
 
+const theme = createMuiTheme ({
+  palette: {
+      primary: {
+          main: indigo[700]
+      },
+
+      secondary: {
+          main: blue[900]
+    }
+  },
+  typography: {
+      //changes from default Roboto
+      fontFamily: [
+          '"Lato"',
+          'sans-serif'
+        ].join(',')
+
+  }
+});
 class App extends Component {
+
   constructor(props) {
     super(props);
 
@@ -52,24 +74,29 @@ class App extends Component {
 
   render() {
     return (
+
       <AuthContext.Provider value={this.state.auth}>
+
         <div className='App'>
           <Navigation />
           <div className='container'>
+          <ThemeProvider theme={theme}>
+
             <Switch>
               <Route exact path='/' component={Home} />
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />
               <PrivateRoute path='/secret' component={Secret} />
-              <Route path='/dashboard' component={DashBoard} />
+              {/* <Route path='/dashboard' component={DashBoard} /> */}
               <Route component={NotFound} />
              
             </Switch>
+        </ThemeProvider>
           </div>
+
         </div>
       </AuthContext.Provider>
     );
   }
 }
-
 export default App;
