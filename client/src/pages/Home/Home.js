@@ -9,7 +9,7 @@ class HomePage extends Component {
   render() {
     return (
       <div>
-        <p>Welcome to The Cadenza forums!</p>
+        <p>Welcome to The Cadenza forums! {Date}</p>
       </div>
     );
   }
