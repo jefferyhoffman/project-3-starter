@@ -1,30 +1,31 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
+// import BackgroundImage from "../components/BackgroundImage"
+import "./style.css";
 
-import logo from './logo.svg';
+
 
 class HomePage extends Component {
-  render() {
-    return (
-      <div className='Home'>
-        <div className='row'>
-          <div className='col'>
-            <img src={logo} className='App-logo' alt='logo' />
-            <p>
-              Edit <code>src/pages/Home.js</code> and save to reload.
-            </p>
-            <a
-              className='App-link'
-              href='https://reactjs.org'
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
-          </div>
-        </div>
-      </div>
-    );
+ 
+  componentDidMount(props){
+    this.props.backgroundImageChanger('maryPoppins')
   }
+  componentWillUnmount(props){
+   this.props.backgroundImageChanger('')
+  }
+    render() {
+        return (
+            // <BackgroundImage>
+                <div>
+                    <div className="jumbotron">
+                        <div className="container">
+                            <h1 className="display-4">Fluid jumbotron</h1>
+                            <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                        </div>
+                    </div>
+                </div>
+            // </BackgroundImage>
+        );
+    }
 }
 
 export default HomePage;
