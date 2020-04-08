@@ -9,6 +9,7 @@ const boardSchema = new Schema({
     minlength: 1,
     maxlength: 15
   },
+  columns: [],
   userId: {
     type: Schema.Types.ObjectId,
     ref: "User",
