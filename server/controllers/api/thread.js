@@ -2,7 +2,7 @@ const router = require("express").Router();
 // const threadController = require("../");
 
 
-//Gets forums that are present on homepage
+//Gets threads that are present on homepage
 router
     .route("/")
     .get(threadController.findAll)
