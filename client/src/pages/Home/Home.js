@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 
 import logo from './logo.svg';
 
+var { DateTime } = require('luxon');
+const Date = DateTime.local().toLocaleString(DateTime.DATETIME_MED); /* Luxon capturing date hour and time.*/
+
 class HomePage extends Component {
   render() {
     return (
@@ -10,7 +13,7 @@ class HomePage extends Component {
           <div className='col'>
             <img src={logo} className='App-logo' alt='logo' />
             <p>
-              Edit <code>src/pages/Home.js</code> and save to reload.
+              Edit <code>src/pages/Home.js</code> and save to reload.  {Date}
             </p>
             <a
               className='App-link'
