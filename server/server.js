@@ -15,6 +15,7 @@ if (process.env.NODE_ENV !== 'production') {
 const express = require('express');
 const logger = require('morgan');
 
+const db = require('./models');
 const { passport } = require('./lib/passport');
 
 //-- Constants ---------------------------------------------------------------
@@ -46,9 +47,12 @@ app.get('*', (req, res) => {
 });
 
 //-- Main --------------------------------------------------------------------
-app.listen(PORT, () => {
-  console.log(`🚀 Server listening on port ${PORT}...`);
-});
+db.sequelize.sync({ force: process.env.NODE_ENV === 'test' })
+  .then(() => {
+    app.listen(PORT, () => {
+      console.log(`🚀 Server listening on port ${PORT}...`);
+    });
+  });
 
 //-- Export to Tests ---------------------------------------------------------
 module.exports = app;
