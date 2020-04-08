@@ -1,7 +1,7 @@
 # Music Forum
 
 ## Table of Contents
-* [User Story](#user+story)
+* [User Story](#user_story)
 * [Description](#description)  
 * [Installation](#installation)  
 * [Usage](#usage)  
@@ -23,7 +23,7 @@ The user can also create music notation sheets and post them to the board as wel
 
 Initial proposal: It's essentially a forum that allows users to create music notation sheets through an npm that is then printed on the screen they can send to each other (along with some other features).
 
-to get to MVP!:  
+MVP:  
 <ul><li>Login / Sign Up</li>  
 <li>Users are able to "Post" on the forum</li>  
 <li>Users are able to "Reply" to a post</li></ul>  
