@@ -1,3 +1,60 @@
+# Music Forum
+
+## Table of Contents
+* [Description](#description)  
+* [Installation](#installation)  
+* [Usage](#usage)  
+* [License](#license)  
+* [Link](#link)  
+* [Contributors](#contributors)  
+* [Authors](#authors)  
+* [Visuals](#visuals)  
+
+### User Story
+AS young people yearning to create and conversate music notation with other users online,  
+WE want to be able to discuss music theory in detail through a music notation based forum board  
+SO we can communicate with other users online in a music/composition based discussion.  
+
+### Description
+Discussion Board with heavy emphasis on music notation and conversation.  
+Once logged in, user is able to see all posts on the board, user is able to create a post, or reply to an existing one.  
+The user can also create music notation sheets and post them to the board as well.  
+
+Initial proposal: It's essentially a forum that allows users to create music notation sheets through an npm that is then printed on the screen they can send to each other (along with some other features).
+
+MVP:  
+<ol><li>Login / Sign Up</li>  
+<li>Users are able to "Post" on the forum</li>  
+<li>Users are able to "Reply" to a post</li></ol>  
+
+### Installation
+Git clone the repository.  
+Go to the server folder and "yarn install" to install the required dependencies.  
+Go to root directory and "yarn start:dev" to start client.  
+
+### Usage
+<ul><li>MySQL</li>  
+<li>Express.js</li>  
+<li>React</li>  
+<li>Node.js</li>  
+<li>Vexflow</li></ul>  
+
+### License
+
+### Link
+[Visit this Site](#)
+
+### Contributors
+
+### Authors
+Martin Hargett | [GitHub](https://github.com/MHargett23)  
+Alex Stiles | [GitHub](https://github.com/kffl3496)  
+Owen Edwards | [GitHub](https://github.com/Ivyparade)  
+Zachary Meadows | [GitHub](https://github.com/zachmdws)  
+
+### Visuals
+![Screenshot of Site](#)  
+
 # Project 3 Starter
 
 ## Getting Started
