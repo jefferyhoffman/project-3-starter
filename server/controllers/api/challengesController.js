@@ -20,30 +20,30 @@ challengesController.get("/:UserId", JWTVerifier, (req, res) => {
 
 
 // get current challenge 
-// must add JWTVerifier
+// working
 challengesController.get("/", JWTVerifier, (req, res) => {
   db.Challenge.findAll({
     limit: 1,
     order: [['createdAt', 'DESC']],
     where: req.user.id
   })
-    .then(challenge => {
-      if (!challenge) {
+    .then(challenges => {
+      if (!challenges.length) {
         return res
           .status(404)
           .send(`Challenge with id ${req.params.id} not found.`);
       }
       // .getActions is not a function
-      return  challenge;
+      return challenges[0].getActions();
     })
-    .then(challenge => res.json(challenge))
+    .then(actions => res.json(actions))
     .catch((err) => console.log(err));
 });
 
 
 
 // post challenge 
-// must pass UserId 
+// working
 challengesController.post("/", JWTVerifier, (req, res) => {
   db.Challenge.create({ UserId: req.user.id })
     .then(challenges => res.json(challenges))
@@ -55,7 +55,7 @@ challengesController.post("/", JWTVerifier, (req, res) => {
 // Add actions to a challenge
 // Add JWTVerifier back in later
 // working
-challengesController.put("/:id", (req, res) => {
+challengesController.put("/:id", JWTVerifier, (req, res) => {
   console.log(req.body.actions);
 
   db.Challenge.findByPk(req.params.id)
@@ -65,7 +65,7 @@ challengesController.put("/:id", (req, res) => {
           .status(404)
           .send(`Challenge with id ${req.params.id} not found.`);
       }
-
+      
       return challenge.setActions(req.body.actions);
     })
     .then((updatedChallenge) => res.json(updatedChallenge))
