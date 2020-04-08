@@ -6,4 +6,4 @@ class DashBoard extends React.Component {
   }
 }
 
-export default DashBoard;
+// export default DashBoard;
