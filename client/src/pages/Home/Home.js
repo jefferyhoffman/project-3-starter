@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import "./Home.css";
 // import logo from './logo.svg';
 
+var { DateTime } = require('luxon');
+const Date = DateTime.local().toLocaleString(DateTime.DATETIME_MED); /* Luxon capturing date hour and time.*/
+
 class HomePage extends Component {
   render() {
     return (
