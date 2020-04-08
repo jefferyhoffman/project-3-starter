@@ -7,11 +7,11 @@ import React, { Component } from 'react';
       collapsed: true
     }
   
-    toggleCollapse = () => {
-      this.setState({
-        collapsed: !this.state.collapsed
-      });
-    }
+    // toggleCollapse = () => {
+    //   this.setState({
+    //     collapsed: !this.state.collapsed
+    //   });
+    // }
 
     render() {
         return (

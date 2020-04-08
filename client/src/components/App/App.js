@@ -54,7 +54,6 @@ class App extends Component {
     return (
       <AuthContext.Provider value={this.state.auth}>
         <div className='App'>
-          {/* <Newlogo /> */}
           <Navigation />
           <div className='container'>
             <Switch>
