@@ -48,7 +48,7 @@ app.get("*", (req, res) => {
 
 //-- Main --------------------------------------------------------------------
 // db.sequelize.sync({ force: process.env.NODE_ENV === 'test' })
-db.sequelize.sync({ force: false }).then(() => {
+db.sequelize.sync({ force: false}).then(() => {
   app.listen(PORT, () => {
     console.log(`🚀 Server listening on port ${PORT}...`);
   });
