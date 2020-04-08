@@ -1,11 +1,21 @@
 import React, {Component} from 'react';
+// import BackgroundImage from "../components/BackgroundImage"
 import "./style.css";
 
+
+
 class HomePage extends Component {
+ 
+  componentDidMount(props){
+    this.props.backgroundImageChanger('maryPoppins')
+  }
+  componentWillUnmount(props){
+   this.props.backgroundImageChanger('')
+  }
     render() {
         return (
-            <div className='container'>
-                <div className="red_background container">
+            // <BackgroundImage>
+                <div>
                     <div className="jumbotron">
                         <div className="container">
                             <h1 className="display-4">Fluid jumbotron</h1>
@@ -13,7 +23,7 @@ class HomePage extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
+            // </BackgroundImage>
         );
     }
 }
