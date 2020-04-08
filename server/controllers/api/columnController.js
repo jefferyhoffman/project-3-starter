@@ -9,15 +9,24 @@ columnController.post("/", (req, res) => {
 });
 
 // Update a column
-columnController.put("/:id", (req, res) => {
-  db.Column.update(req.body)
-    .then((dbColumn) => res.json(dbColumn))
+columnController.put("/:id", ({ params, body }, res) => {
+  db.Card.findByIdAndUpdate(
+    {
+      _id: params.id,
+    },
+    {
+      $set: {
+        title: body.title,
+      },
+    }
+  )
+    .then((updatedColumn) => res.json(updatedColumn))
     .catch((err) => res.json(err));
 });
 
 // Delete a column
-columnController.delete("/:id", (req, res) => {
-  db.Column.findByIdAndDelete({_id: req.params.id,})
+columnController.delete("/:id", ({ params }, res) => {
+  db.Column.findByIdAndDelete({ _id: params.id })
     .then((deletedColumn) => res.json(deletedColumn))
     .catch((err) => res.json(err));
 });

@@ -4,5 +4,6 @@ apiControllers.use('/users', require('./usersController'));
 apiControllers.use('/secrets', require('./secretsController'));
 apiControllers.use("/boards", require("./boardController"));
 apiControllers.use("/columns", require("./boardController"));
+apiControllers.use("/cards", require("./cardController"));
 
 module.exports = apiControllers;
