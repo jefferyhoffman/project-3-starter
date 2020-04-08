@@ -1,4 +1,4 @@
-# Music Link App
+# Music Forum
 
 ## Table of Contents
 * [Description](#description)  
@@ -10,28 +10,34 @@
 * [Authors](#authors)  
 * [Visuals](#visuals)  
 
+### User Story
+AS young people yearning to create and conversate music notation with other users online,  
+WE want to be able to discuss music theory in detail through a music notation based forum board  
+SO we can communicate with other users online in a music/composition based discussion.  
 
 ### Description
-When a user comes to our site, they are asked to enter information.  
-This information includes name, age, and instrument that they play.  
-They then can see a card with all of this information on it.  
-Automatically pairs up with third party API.  
-Cards can be moved and grouped together  
+Discussion Board with heavy emphasis on music notation and conversation.  
+Once logged in, user is able to see all posts on the board, user is able to create a post, or reply to an existing one.  
+The user can also create music notation sheets and post them to the board as well.  
 
-It's essentially a forum that allows users to create music notation sheets through an npm that is then printed on the screen they can send to each other (along with some other features).
-If the music notation part proves too difficult I had a backup idea of a karaoke database list that is arranged by artist/name/song/id number that a user can add onto through the forum.
--Alex  
+Initial proposal: It's essentially a forum that allows users to create music notation sheets through an npm that is then printed on the screen they can send to each other (along with some other features).
+
+MVP:  
+<ol><li>Login / Sign Up</li>  
+<li>Users are able to "Post" on the forum</li>  
+<li>Users are able to "Reply" to a post</li></ol>  
 
 ### Installation
 Git clone the repository.  
-Go to server.js folder and "npm install" to install the required dependencies.  
-Go to root directory and "npm start" to start client.  
+Go to the server folder and "yarn install" to install the required dependencies.  
+Go to root directory and "yarn start:dev" to start client.  
 
 ### Usage
-React  
-Express.js  
-Node.js  
-MongoDB / MySQL  
+<ul><li>MySQL</li>  
+<li>Express.js</li>  
+<li>React</li>  
+<li>Node.js</li>  
+<li>Vexflow</li></ul>  
 
 ### License
 
