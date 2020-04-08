@@ -3,11 +3,6 @@ import { Link } from 'react-router-dom';
 
 import AuthContext from '../../contexts/AuthContext';
 import AuthDropdown from '../../components/AuthDropdown/AuthDropdown';
-import theme from "../../App.js"
-import {ThemeProvider } from '@material-ui/styles';
-// import {createMuiTheme} from '@material-ui/core/styles';
-// import {blue, indigo} from '@material-ui/core/colors';
-
 
 class Navigation extends Component {
   static contextType = AuthContext;
@@ -23,8 +18,6 @@ class Navigation extends Component {
   }
 
   render() {
-    const class = theme(ThemeProvider);
-
     const { user } = this.context;
     const { collapsed } = this.state;
     const targetClass = `collapse navbar-collapse ${!collapsed && 'show'}`;
@@ -74,4 +67,3 @@ class Navigation extends Component {
 }
 
 export default Navigation;
-

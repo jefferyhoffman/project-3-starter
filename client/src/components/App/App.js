@@ -35,27 +35,7 @@ const theme = createMuiTheme({
   },
 });
 
-const theme = createMuiTheme ({
-  palette: {
-      primary: {
-          main: indigo[700]
-      },
-
-      secondary: {
-          main: blue[900]
-    }
-  },
-  typography: {
-      //changes from default Roboto
-      fontFamily: [
-          '"Lato"',
-          'sans-serif'
-        ].join(',')
-
-  }
-});
 class App extends Component {
-
   constructor(props) {
     super(props);
 
@@ -119,4 +99,5 @@ class App extends Component {
     );
   }
 }
+
 export default App;
