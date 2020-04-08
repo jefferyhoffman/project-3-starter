@@ -6,10 +6,16 @@ const dumbyData =[{id:'1', category:'Food', name:'Composting Food Waste', descri
 
 export default {
   Actions:{
-    getSelected:function(userId){
+    getSelected: function(userId){
       return dumbyData
       //API Call goes here
-    }
+    },
+
+    // this produces an array of action objects
+    getAll: function(){
+      return axios.get('/api/actions', {})
+     }
+
   },
   Users: {
     login: function (email, password) {
@@ -39,36 +45,33 @@ export default {
     }
   },
 
-  // Challenges: {
-  //   getCurrentChallenge: function(){
-  //     return axios.get('/api/', {
-  //       headers: {
-  //         'Authorization': `Bearer ${authToken}`
-  //       }
-  //     })
-  //   },
+  Challenges: {
 
-  //   getPastChallenges: function(){
-  //     return axios.get('/api/', {
-  //       headers: {
-  //         'Authorization': `Bearer ${authToken}`
-  //       }
-  //     })
-  //   },
+    // this produces an array with one challenge object
+    // will not work until we use a authToken
+    getCurrentChallenge: function(){
+      return axios.get('/api/', {
+        // headers: {
+        //   'Authorization': `Bearer ${authToken}`
+        // }
+      })
+    },
 
-  //   // ??
-  //   create: function(points){
-  //     return axios.post('/api/', {
-  //       points
-  //     })
-  //   }
-  // },
+    // this produces an array with the last five challence objects
+    getPastChallenges: function(){
+      return axios.get('/api/', {
+        // headers: {
+        //   'Authorization': `Bearer ${authToken}`
+        // }
+      })
+    },
 
-  // Actions: {
-  //   getAll: function(){
-  //     return axios.get('/api/', {
-        
-  //     })
-  //   }
-  // }  
+    // ??
+    create: function(points){
+      return axios.post('/api/', {
+        points
+      })
+    }
+  },
+ 
 }
