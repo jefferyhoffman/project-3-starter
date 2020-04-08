@@ -3,6 +3,8 @@ const challengesController = require("express").Router();
 const db = require("../../models");
 const { JWTVerifier } = require('../../lib/passport');
 
+
+
 // searches for last five challenges
 challengesController.get("/:UserId", JWTVerifier, (req, res) => {
   db.Challenge.findAll({
@@ -14,6 +16,8 @@ challengesController.get("/:UserId", JWTVerifier, (req, res) => {
     .then(challenges => res.json(challenges))
     .catch((err) => console.log(err));
 });
+
+
 
 // get current challenge 
 // must add JWTVerifier
@@ -37,6 +41,7 @@ challengesController.get("/", (req, res) => {
 });
 
 
+
 // post challenge 
 // must pass UserId 
 challengesController.post("/", JWTVerifier, (req, res) => {
@@ -44,6 +49,7 @@ challengesController.post("/", JWTVerifier, (req, res) => {
     .then(challenges => res.json(challenges))
     .catch((err) => console.log(err));
 });
+
 
 
 // Add actions to a challenge
@@ -68,7 +74,26 @@ challengesController.put("/:id", (req, res) => {
 
 
 
-// *****update challenge score******
+// updates a challenge score when given a new total
+// working
+// would be better if this could be included in add actions route, with a way to add all points assosiaceted with actions
+challengesController.put("/points/:id", (req, res) => {
+  console.log(req.body.actions);
+
+  db.Challenge.findByPk(req.params.id)
+    .then((challenge) => {
+      if (!challenge) {
+        return res
+          .status(404)
+          .send(`Challenge with id ${req.params.id} not found.`);
+      }
+
+      return challenge.updateAttributes({totalPoints: req.body.totalPoints});
+    })
+    .then((updatedChallenge) => res.json(updatedChallenge))
+    .catch((err) => console.log(err));
+});
+
 
 
 // delete an action from a challenge JWTVerifier
@@ -89,6 +114,7 @@ challengesController.delete("/:id", (req, res) => {
 });
 
 
+
 // delete an entire challenge, add JWTVerifier, 
 // working
 challengesController.delete("/deletechallenge/:id", (req, res) => {
@@ -100,5 +126,7 @@ challengesController.delete("/deletechallenge/:id", (req, res) => {
     .then(challenges => res.json(challenges))
     .catch((err) => console.log(err));
 });
+
+
 
 module.exports = challengesController;

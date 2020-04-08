@@ -88,6 +88,13 @@ export default {
       return axios.put('/api/challenges/'+id, {
         actions: actions
       })
+    },
+
+    // updates a challenges totalPoints when passed an id and a new points total, would have to calc on front end for now
+    updatePoints: function(id, totalPoints){
+      return axios.put('/api/challenges/points/'+id, {
+        totalPoints: totalPoints
+      })
     }
   },
  
