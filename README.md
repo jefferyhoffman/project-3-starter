@@ -23,6 +23,10 @@ When a user comes to our site, they are asked to enter login information (userna
 If this information is unavailable, they are sent to the sign-up page.  
 Once logged in they are able to see all posts on the board, also they are able to create a post, or reply to an existing one.
 
+Login / Sign Up
+Users are able to "Post" on the forum
+Users are then able to "Reply" to the post.
+
 Automatically pairs up with third party API.  
 Cards can be moved and grouped together  
 
