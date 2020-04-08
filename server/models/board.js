@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+// models/board.js
 var CardSchema = new Schema({
   title: {
     type: String,
