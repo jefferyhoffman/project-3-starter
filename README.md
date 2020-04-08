@@ -11,27 +11,20 @@
 * [Visuals](#visuals)  
 
 ### User Story
-As young people yearning to create and conversate about music notation with other users online,  
-We want to be able to discuss music theory in detail with friends online on a music notation based forum board.  
-So That we can safely communicate with other users online in a musically driven environment  
+AS young people yearning to create and conversate about music notation with other users online,  
+WE want to be able to discuss music theory in detail online through a music notation based forum board.  
+SO we can communicate with other users online in a musical discussion.  
 
 ### Description
 Discussion Board with heavy emphasis on music notation and conversation.  
-In-tune sense of music composition and arrangement.  
+Once logged in, user is able to see all posts on the board, user is able to create a post, or reply to an existing one.  
+The user can also create music notation sheets and post them to the board as well.
 
-When a user comes to our site, they are asked to enter login information (username and password).  
-If this information is unavailable, they are sent to the sign-up page.  
-Once logged in they are able to see all posts on the board, also they are able to create a post, or reply to an existing one.
+Login / Sign Up  
+Users are able to "Post" on the forum.  
+Users are able to "Reply" to a post.  
 
-Login / Sign Up
-Users are able to "Post" on the forum
-Users are then able to "Reply" to the post.
-
-Automatically pairs up with third party API.  
-Cards can be moved and grouped together  
-
-It's essentially a forum that allows users to create music notation sheets through an npm that is then printed on the screen they can send to each other (along with some other features).
--Alex  
+Initial proposal: It's essentially a forum that allows users to create music notation sheets through an npm that is then printed on the screen they can send to each other (along with some other features).
 
 ### Installation
 Git clone the repository.  
@@ -39,11 +32,11 @@ Go to the server folder and "yarn install" to install the required dependencies.
 Go to root directory and "yarn start:dev" to start client.  
 
 ### Usage
-<ul><li>Vexflow</li>  
+<ol><li>Vexflow</li>  
 <li>MySQL</li>
 <li>React</li>
 <li>Express.js</li>
-<li>Node.js</li></ul>  
+<li>Node.js</li></ol>  
 
 ### License
 
