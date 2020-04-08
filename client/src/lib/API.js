@@ -58,18 +58,35 @@ export default {
     },
 
     // this produces an array with the last five challence objects
-    getPastChallenges: function(){
-      return axios.get('/api/', {
+    // must be given a UserId
+    // will also need the authToken
+    getPastChallenges: function(UserId){
+      return axios.get('/api/challenges/'+UserId, {
         // headers: {
         //   'Authorization': `Bearer ${authToken}`
         // }
       })
     },
 
-    // ??
-    create: function(points){
-      return axios.post('/api/', {
-        points
+    // Creates a Challenge
+    createChallenge: function(points){
+      return axios.post('/api/challenges', {})
+    },
+
+    // deletes and entire challenge
+    deleteChallenge: function(id){
+      return axios.delete('/api/challenges/deletechallenge/'+id, {})
+    },
+
+    // deletes actions from a challenge
+    deleteActionFromChallenge: function(id){
+      return axios.delete('/api/challenges/'+id, {})
+    },
+
+    // adds actions to a challenge by updating a challenge 
+    updateChallenge: function(id, actions){
+      return axios.put('/api/challenges/'+id, {
+        actions: actions
       })
     }
   },

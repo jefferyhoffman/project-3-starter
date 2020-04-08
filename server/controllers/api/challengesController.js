@@ -10,12 +10,13 @@ challengesController.get("/:UserId", JWTVerifier, (req, res) => {
     order: [['createdAt', 'DESC']],
     where: req.user.id
   })
+  // Add code to include actions ie. getActions
     .then(challenges => res.json(challenges))
     .catch((err) => console.log(err));
 });
 
-// get current challenge JWTVerifier
-// ????
+// get current challenge 
+// must add JWTVerifier
 challengesController.get("/", (req, res) => {
   db.Challenge.findAll({
     limit: 1,
@@ -35,7 +36,7 @@ challengesController.get("/", (req, res) => {
     .catch((err) => console.log(err));
 });
 
-// ASK T.A ABOUT THIS
+
 // post challenge 
 // must pass UserId 
 challengesController.post("/", JWTVerifier, (req, res) => {
@@ -43,6 +44,7 @@ challengesController.post("/", JWTVerifier, (req, res) => {
     .then(challenges => res.json(challenges))
     .catch((err) => console.log(err));
 });
+
 
 // Add actions to a challenge
 // Add JWTVerifier back in later
@@ -64,7 +66,9 @@ challengesController.put("/:id", (req, res) => {
     .catch((err) => console.log(err));
 });
 
-// update challenge score
+
+
+// *****update challenge score******
 
 
 // delete an action from a challenge JWTVerifier
@@ -84,11 +88,17 @@ challengesController.delete("/:id", (req, res) => {
     .catch((err) => console.log(err));
 });
 
-// delete an entire challenge
-// challengesController.get("/", JWTVerifier, (req, res) => {
-//   db.Challenge.findAll()
-//     .then(challenges => res.json(challenges))
-//     .catch((err) => console.log(err));
-// });
+
+// delete an entire challenge, add JWTVerifier, 
+// working
+challengesController.delete("/deletechallenge/:id", (req, res) => {
+  db.Challenge.destroy({
+    where: {
+      id: req.params.id
+    }
+  })
+    .then(challenges => res.json(challenges))
+    .catch((err) => console.log(err));
+});
 
 module.exports = challengesController;
