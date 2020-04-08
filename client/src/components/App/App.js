@@ -11,7 +11,9 @@ import Login from '../../pages/Login/Login';
 import Register from '../../pages/Register/Register';
 import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
-
+// import Profile from '../../pages/UserProfile/profile';
+// import Newlogo from '../../components/NewLogo/newlogo';
+import '../../components/Navigation/Navigation.css';
 import './App.css';
 
 class App extends Component {
@@ -52,12 +54,14 @@ class App extends Component {
     return (
       <AuthContext.Provider value={this.state.auth}>
         <div className='App'>
+          {/* <Newlogo /> */}
           <Navigation />
           <div className='container'>
             <Switch>
               <Route exact path='/' component={Home} />
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />
+              {/* <Route path='/profile' component={Profile} /> */}
               <PrivateRoute path='/secret' component={Secret} />
               <Route component={NotFound} />
             </Switch>
