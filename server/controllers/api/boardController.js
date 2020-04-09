@@ -48,6 +48,10 @@ boardController.get("/userBoard", JWTVerifier, (req, res) => {
     .catch((err) => res.json(err));
 });
 
+// <<<<<<< HEAD
+// =======
+// <<<<<<< HEAD
+// >>>>>>> 7d7e0a3a64bf789623a1ad7ddac35dface7064bc
 boardController.post("/:id/columns/:index/cards", JWTVerifier, (req, res) => {
   db.Board.findById(req.params.id)
     .then((board) => {
@@ -64,6 +68,10 @@ boardController.post("/:id/columns/:index/cards", JWTVerifier, (req, res) => {
       board.columns[index].cards.push(req.body);
       return board.save();
     })
+// <<<<<<< HEAD
+// =======
+// =======
+// >>>>>>> 7d7e0a3a64bf789623a1ad7ddac35dface7064bc
 // UPDATE BOARD
 boardController.put("/:id", ({ params, body }, res) => {
   db.Board.findByIdAndUpdate(
@@ -76,10 +84,13 @@ boardController.put("/:id", ({ params, body }, res) => {
       },
     }
   )
+// >>>>>>> 114889959e72e70210db7d076d99dbc6621bfe1e
     .then((updatedBoard) => res.json(updatedBoard))
     .catch((err) => res.json(err));
 });
 
+// <<<<<<< HEAD
+// =======
 // -------------------------------------------------------------------------
 
 // CREATE COLUMN
@@ -154,4 +165,6 @@ boardController.delete("/:id/columns/:column/cards/:card", ({ params }, res) => 
     .catch((err) => res.json(err));
 });
 })
+
+// >>>>>>> 7d7e0a3a64bf789623a1ad7ddac35dface7064bc
 module.exports = boardController;
