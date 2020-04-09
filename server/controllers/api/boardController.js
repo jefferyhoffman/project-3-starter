@@ -10,25 +10,42 @@ const template = {
       cards: [
         {
           title: "Learn this app!",
-          body: "How to use Kanban..."
-        }
-      ]
+          body: "How to use Kanban...",
+        },
+      ],
     },
     {
-      title: "In Progress"
+      title: "In Progress",
     },
     {
-      title: "Done"
-    }
-  ]
+      title: "Done",
+    },
+  ],
 };
 
 boardController.post("/", JWTVerifier, (req, res) => {
-  db.Board.create({ ...template, 
-    title: req.body.title,
-    userId: req.user._id
-  })
+  db.Board.create(
+    { ...template, 
+      title: req.body.title, 
+      userId: req.user._id 
+    }
+  )
     .then((dbBoard) => res.json(dbBoard))
+    .catch((err) => res.json(err));
+});
+
+boardController.put("/:id", ({ params, body }, res) => {
+  db.Board.findByIdAndUpdate(
+    {
+      _id: params.id,
+    },
+    {
+      $set: {
+        title: body.title,
+      },
+    }
+  )
+    .then((updatedBoard) => res.json(updatedBoard))
     .catch((err) => res.json(err));
 });
 
