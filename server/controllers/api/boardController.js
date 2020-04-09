@@ -43,7 +43,7 @@ boardController.get("/userBoard", JWTVerifier, (req, res) => {
     .catch((err) => res.json(err));
 });
 
-// UPDATE BOARD
+// UPDATE BOARD (by board ID)
 boardController.put("/:id", ({ params, body }, res) => {
   db.Board.findByIdAndUpdate(
     {
