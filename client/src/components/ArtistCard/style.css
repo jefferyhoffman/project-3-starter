@@ -1,0 +1,45 @@
+/* .card:hover{
+    opacity:.5
+} */
+ 
+.hover-title{
+    align-self: center;
+    position: absolute;
+    left:42%;
+    top: 15%;
+    margin-bottom: 10%;
+    opacity: 0;
+
+} 
+
+.test:hover h2,.test:hover p
+{
+ opacity: 1;
+}
+
+.test:hover img{
+    opacity: .5;
+}
+
+.hover-p{
+    position: absolute;
+    bottom: 56%;
+    opacity: 0;
+    left:40%;
+
+}
+
+
+/* .hover-p:hover,.hover-title:hover{
+    opacity: 1;
+} */
+
+/* .hoverMe{
+    left:50%;
+    top: 15%;
+    background-color: violet;
+} */
+
+.hoverDiv:hover{
+    opacity: 0;
+}

@@ -1,30 +1,43 @@
-import React, { Component } from 'react';
+import React from 'react';
+import ArtistCard from "../../components/ArtistCard/ArtistCard"
+import "./Home.css"
 
-import logo from './logo.svg';
+function HomePage(props) {
+ 
 
-class HomePage extends Component {
-  render() {
-    return (
-      <div className='Home'>
-        <div className='row'>
-          <div className='col'>
-            <img src={logo} className='App-logo' alt='logo' />
-            <p>
-              Edit <code>src/pages/Home.js</code> and save to reload.
-            </p>
-            <a
-              className='App-link'
-              href='https://reactjs.org'
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
+  
+    return (<div>
+      <div className="row">
+        <div className="col">
+
+          <div className="jumbotron">
+            <h1 className="display-4">Baton Pass!</h1>
+            <p className="lead">instruction on what to do/or what the site is about</p>
+            <hr className="my-4" />
+            {/* <p>*some optional text</p>
+            <a className="btn btn-lg" href="/" role="button">Login/Signup</a> */}
           </div>
         </div>
       </div>
+
+      <div className="row ml-3">
+          {props.homeGallery.map(homeGal =>
+            <ArtistCard
+            key={homeGal.artist}
+            title={homeGal.title}
+            artist={homeGal.artist}
+            image={homeGal.image}
+            caption ={homeGal.caption} 
+             />
+
+          )}
+        
+      </div>
+      
+
+    </div>
     );
   }
-}
+
 
 export default HomePage;
