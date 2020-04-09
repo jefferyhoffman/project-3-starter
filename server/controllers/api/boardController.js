@@ -18,14 +18,19 @@ const template = {
     },
     {
       title: "In Progress",
+      cards: []
     },
     {
       title: "Done",
-    },
-  ],
+      cards: []
+    }
+  ]
 };
 
-// CREATE BOARD
+boardController.get("/", JWTVerifier, (req, res) => {
+  res.json({ ...template, _id: "12345" });
+});
+
 boardController.post("/", JWTVerifier, (req, res) => {
   db.Board.create({ ...template, 
     title: req.body.title, 
@@ -43,6 +48,24 @@ boardController.get("/userBoard", JWTVerifier, (req, res) => {
     .catch((err) => res.json(err));
 });
 
+<<<<<<< HEAD
+boardController.post("/:id/columns/:index/cards", JWTVerifier, (req, res) => {
+  db.Board.findById(req.params.id)
+    .then((board) => {
+      if (!board) {
+        throw new Error("Invalid board ID");
+      }
+      
+      const index = parseInt(req.params.index);
+
+      if (!board.columns[index]) {
+        throw new Error("Invalid column index");
+      }
+
+      board.columns[index].cards.push(req.body);
+      return board.save();
+    })
+=======
 // UPDATE BOARD
 boardController.put("/:id", ({ params, body }, res) => {
   db.Board.findByIdAndUpdate(
@@ -55,10 +78,13 @@ boardController.put("/:id", ({ params, body }, res) => {
       },
     }
   )
+>>>>>>> 114889959e72e70210db7d076d99dbc6621bfe1e
     .then((updatedBoard) => res.json(updatedBoard))
     .catch((err) => res.json(err));
 });
 
+<<<<<<< HEAD
+=======
 // -------------------------------------------------------------------------
 
 // CREATE COLUMN
@@ -133,4 +159,5 @@ boardController.delete("/:id/columns/:column/cards/:card", ({ params }, res) => 
     .catch((err) => res.json(err));
 });
 
+>>>>>>> 114889959e72e70210db7d076d99dbc6621bfe1e
 module.exports = boardController;
