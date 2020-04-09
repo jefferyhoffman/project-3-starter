@@ -1,5 +1,5 @@
 const router = require("express").Router();
-
+const postController = require("../api/postController");
 
 router
     .route("/")
