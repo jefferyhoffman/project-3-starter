@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-// import BackgroundImage from "../components/BackgroundImage"
+
 import "./style.css";
 
 
@@ -14,16 +14,17 @@ class HomePage extends Component {
   }
     render() {
         return (
-            // <BackgroundImage>
-                <div>
-                    <div className="jumbotron">
-                        <div className="container">
-                            <h1 className="display-4">Fluid jumbotron</h1>
-                            <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-                        </div>
+            
+            <div>
+                <div className="jumbotron">
+                    <div className="container">
+                        <h1 className="display-4">Fluid jumbotron</h1>
+                        <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
                     </div>
                 </div>
-            // </BackgroundImage>
+            </div>
+
+            
         );
     }
 }

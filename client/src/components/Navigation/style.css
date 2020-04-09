@@ -1,0 +1,33 @@
+.nav_navbar_bglight {
+  background-color: #ffffffa2;  
+}
+
+.nav_navbar_br {
+  border-style: none;
+  border-radius: 8px;  
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.heading_dark {
+  font-family: 'Cuprum', sans-serif;
+  color: #000000;  
+}
+
+.heading_dark_bold {
+  font-family: 'Cuprum', sans-serif;
+  font-weight: bolder;
+  color: #000000;  
+}
+
+/* overwriting bootstrap */
+.navbar-brand{
+  font-size: 2rem;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  font-size: 1.25rem;
+  color: #000000;
+}

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
 import AuthContext from '../../contexts/AuthContext';
 import AuthDropdown from '../../components/AuthDropdown/AuthDropdown';
+import "./style.css"
 
 class Navigation extends Component {
   static contextType = AuthContext;
@@ -24,12 +24,12 @@ class Navigation extends Component {
     const togglerClass = `navbar-toggler ${collapsed && 'collapsed'}`;
 
     return (
-      <div className='Navigation container_br_top_left yellow_background'>
-        <nav className='navbar navbar-expand-lg navbar-light mb-3'>
+      <div className='Navigation nav_navbar_bglight nav_navbar_br'>
+        <nav className='navbar navbar-expand-sm navbar-expand-md navbar-expand-lg navbar-light mb-3'>
           <Link className='navbar-brand heading_dark_bold' to='/'>smaller footprint</Link>
-          {/* <button className={togglerClass} onClick={this.toggleCollapse} data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
+          <button className={togglerClass} onClick={this.toggleCollapse} data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
             <span className='navbar-toggler-icon'></span>
-          </button> */}
+          </button>
 
           <div className={targetClass} id='navbarSupportedContent'>
             <ul className='navbar-nav mr-auto'>
