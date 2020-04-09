@@ -69,41 +69,41 @@ class LoginForm extends Component {
     const { classes } = this.props;
 
     const { email, password } = this.state;
-
     return (
-      
-          <FormControl className='LoginForm' onSubmit={this.handleSubmit}>
-            <Grid item>
-              <Icon>mail</Icon>
-              <TextField className='form-control'
-                id='email'
-                type='email'
-                name='email'
-                placeholder='email@provider.com'
-                value={email}
-                onChange={this.handleInputChange}
-              >
-              </TextField>
-            </Grid>
-            <Grid item>
-              <Icon>lock</Icon>
-              <TextField
-                className='form-control'
-                id='password'
-                type='password'
-                name='password'
-                placeholder='password'
-                value={password}
-                onChange={this.handleInputChange}
-              >
-              </TextField>
-            </Grid>
-            
-            <Button color="primary"
-              variant="contained"
-              className={classes.actionButtom}>Login</Button>
-          </FormControl>
+      <form onSubmit={this.handleSubmit}>
+        <FormControl className='LoginForm' >
+          <Grid item>
+            <Icon>mail</Icon>
+            <TextField className='form-control'
+              id='email'
+              type='email'
+              name='email'
+              placeholder='email@provider.com'
+              value={email}
+              onChange={this.handleInputChange}
+            >
+            </TextField>
+          </Grid>
+          <Grid item>
+            <Icon>lock</Icon>
+            <TextField
+              className='form-control'
+              id='password'
+              type='password'
+              name='password'
+              placeholder='password'
+              value={password}
+              onChange={this.handleInputChange}
+            >
+            </TextField>
+          </Grid>
 
+          <Button color="primary"
+            variant="contained"
+            type="submit"
+            className={classes.actionButton}>Login</Button>
+        </FormControl>
+      </form>
     )
   }
 }

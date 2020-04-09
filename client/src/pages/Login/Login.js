@@ -103,12 +103,11 @@ class Login extends Component {
 
               <Paper className={classes.paper}>
                   <Typography
-                    style={{ textTransform: "uppercase" }}
+                    style={{ textTransform: "uppercase", fontSize:40 }}
                     color="secondary"
                     align='center'
-                  >
-                    <h1>Login</h1>
-                  </Typography>
+                    variant="h1"
+                  >Login</Typography>
 
                   {this.state.error &&
                     <div className={classes.box}>

@@ -13,7 +13,7 @@ const styles = theme => ({
   root: {
     flexGrow: 1,
     backgroundColor: theme.palette.grey["100"],
-    overflow: "hidden",
+    overflow: "visible",
     background: `url(${backgroundShape}) no-repeat`,
     backgroundSize: "cover",
     backgroundPosition: "0 200px",
@@ -33,7 +33,7 @@ const styles = theme => ({
   },
   box: {
     marginBottom: 40,
-    height: 65,
+    height: 80,
   },
   actionButtom: {
     textTransform: "uppercase",
@@ -92,30 +92,27 @@ class Register extends Component {
 
                 <Paper className={classes.paper}>
                   <Typography
-                    style={{ textTransform: "uppercase" }}
+                    style={{ textTransform: "uppercase", fontSize: 40 }}
                     color="secondary"
                     align='center'
-                  >
-                    <h1>Register Account</h1>
-                  </Typography>
+                    variant="h1"
+                  >Register Account</Typography>
+
                   {this.state.error &&
-                    <Grid item >
-                      <div >
-                        <div role='alert'>
-                          {this.state.error}
-                        </div>
+                    <div className={classes.box} >
+                      <div role='alert'>
+                        {this.state.error}
                       </div>
-                    </Grid>}
-                  <div className='row'>
-                    <div className='col'>
-                      <RegistrationForm onSubmit={this.handleSubmit} />
                     </div>
+                  }
+                  <div>
+                    <RegistrationForm onSubmit={this.handleSubmit} />
                   </div>
                 </Paper>
               </Grid>
             </Grid>
           </Grid>
-          </Grid>
+        </Grid>
       </div>
     );
   }

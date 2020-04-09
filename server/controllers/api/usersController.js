@@ -18,7 +18,7 @@ usersController.get('/me', JWTVerifier, (req, res) => {
 
 usersController.post('/login', (req, res) => {
   const { email, password } = req.body;
-
+  console.log(email,'<===')
   db.Users.findOne({ email })
     .then(user => {
       if (!user || !user.comparePassword(password)) {
