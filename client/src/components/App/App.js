@@ -12,6 +12,7 @@ import Register from '../../pages/Register/Register';
 import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
 import Profile from '../../pages/UserProfile/profile';
+// import NewThreadButton from '../../components/NewThreadButton/NewThreadButton';
 // import Newlogo from '../../components/NewLogo/newlogo';
 import '../../components/Navigation/Navigation.css';
 import './App.css';
