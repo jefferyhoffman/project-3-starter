@@ -72,22 +72,13 @@ class LoginForm extends Component {
     const { email, password } = this.state;
 
     return (
-      <div className={classes.root}>
         <Grid container justify="center">
-          <Grid
-            spacing={4}
-            alignItems="center"
-            justify="center"
-            container
-            className={classes.grid}
-          >
+          
             <FormControl item xs={12} md={4}>
-              <Paper className={classes.paper}>
-                <div className={classes.box}>
+           
                   <form className='LoginForm' onSubmit={this.handleSubmit}>
                     <div className='input-group mb-3'>
                       <Icon>mail</Icon>
-
                       <TextField className='form-control'
                         id='email'
                         type='email'
@@ -98,6 +89,7 @@ class LoginForm extends Component {
                       >
                       </TextField>
                     </div>
+                    
                     <div className='input-group mb-3'>
                       <Icon>password</Icon>
                       <TextField
@@ -115,17 +107,10 @@ class LoginForm extends Component {
                       variant="contained"
                       className={classes.actionButtom}>Login</Button>
                   </form>
-                </div>
-              </Paper>
-            </FormControl>
-
+                </FormControl>
           </Grid>
 
-        </Grid>
-      </div>
     )
   }
 }
-
 export default withStyles(styles)(LoginForm);
-

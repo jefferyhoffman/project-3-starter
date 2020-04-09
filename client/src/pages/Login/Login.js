@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
-
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
 import LoginForm from '../../components/LoginForm/LoginForm';
 import withStyles from "@material-ui/styles/withStyles";
-import { Grid, Typography } from "@material-ui/core";
+import { Grid, Paper, Typography } from "@material-ui/core";
 const backgroundShape = require("../../images/shape.svg");
 
 
@@ -98,29 +97,36 @@ class Login extends Component {
             container
             className={classes.grid}
           >
-                <div className={classes.box}>
+            <Grid item xs={20} md={4}>
+              <Paper className={classes.paper}>
+                <Grid item className={classes.box}>
                   <Typography
                     style={{ textTransform: "uppercase" }}
                     color="secondary"
-                    gutterBottom
+                    align='center'
                   >
                     <h1>Login</h1>
                   </Typography>
-                </div>
 
-            {this.state.error &&
-              <div className={classes.box}>
-                  <div className='alert alert-danger mb-3' role='alert'>
-                    {this.state.error}
+                  {this.state.error &&
+                    <div className={classes.box}>
+                      <div>
+                        {this.state.error}
+                      </div>
+                    </div>
+                  }
+                  <div>
+                  <LoginForm align='center' onSubmit={this.handleSubmit} />
+                  <div >Don't have an account? <Link to='/register'>Click here to register.</Link>
                   </div>
-              </div>}
-              <Grid item xs={12} md={4}>
-                <LoginForm onSubmit={this.handleSubmit} />
-                <Grid item xs={12} md={8} justify='center'>Don't have an account? <Link to='/register'>Click here to register.</Link>
-              </Grid>
+                  </div>
+                </Grid>
+              </Paper>
             </Grid>
           </Grid>
-          </Grid>
+
+        </Grid>
+
       </div>
     );
   }
