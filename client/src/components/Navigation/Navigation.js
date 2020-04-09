@@ -1,69 +1,177 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import { withStyles } from "@material-ui/styles";
+import { Typography, Tabs, Tab, Grid } from "@material-ui/core";
+import Menu from "./Menu";
+import AuthContext from "../../contexts/AuthContext";
+import AuthDropdown from "../../components/AuthDropdown/AuthDropdown";
 
-import AuthContext from '../../contexts/AuthContext';
-import AuthDropdown from '../../components/AuthDropdown/AuthDropdown';
+const logo = require("../../images/logo.svg");
+
+// Tab styles
+const styles = (theme) => ({
+  tabContainer: {
+    flexgrow: 1,
+    marginLeft: 32,
+    [theme.breakpoints.down("sm")]: {
+      display: "inline",
+    },
+  },
+  tabItem: {
+    paddingTop: 20,
+    paddingBottom: 20,
+    minWidth: "auto",
+  },
+
+  tagline: {
+    display: "inline-block",
+    marginLeft: 10,
+    [theme.breakpoints.up("md")]: {
+      paddingTop: "0.8em",
+    },
+  },
+  flex: {
+    display: "flex",
+    [theme.breakpoints.down("sm")]: {
+      display: "flex",
+      justifyContent: "space-evenly",
+      alignItems: "center"
+    }
+  },
+
+  inline: {
+    display: "inline",
+    float: "left",
+  },
+  inline2: {
+    display: "inline",
+    float: "right",
+    marginRight: 0,
+  },
+  
+
+  link: {
+    textDecoration: "none",
+    color: "inherit",
+  },
+});
 
 class Navigation extends Component {
-  static contextType = AuthContext;
-
   state = {
-    collapsed: true
-  }
+    value: 0,
+    menuDrawer: false,
+  };
 
-  toggleCollapse = () => {
-    this.setState({
-      collapsed: !this.state.collapsed
-    });
-  }
+  handleChange = (event, value) => {
+    this.setState({ value });
+  };
+
+  current = () => {
+    if (this.props.currentPath === "/") {
+      return 0;
+    }
+    if (this.props.currentPath === "/dashboard") {
+      return 1;
+    }
+    if (this.props.currentPath === "/register") {
+      return 2;
+    }
+    if (this.props.currentPath === "/login") {
+      return 3;
+    }
+    if (this.props.currentPath === "/secret") {
+      return 4;
+    }
+  };
 
   render() {
+    const { classes } = this.props;
     const { user } = this.context;
-    const { collapsed } = this.state;
-    const targetClass = `collapse navbar-collapse ${!collapsed && 'show'}`;
-    const togglerClass = `navbar-toggler ${collapsed && 'collapsed'}`;
-
     return (
-      <div className='Navigation'>
-        <nav className='navbar navbar-expand-lg navbar-light bg-light mb-3'>
-          <Link className='navbar-brand' to='#'>Project 3</Link>
-          <button className={togglerClass} onClick={this.toggleCollapse} data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
-            <span className='navbar-toggler-icon'></span>
-          </button>
+      // Tab markup
+      //
+      <div className={classes.tabContainer}>
+        <Grid container spacing={3}>
+          <Grid item sx={12} className={classes.flex} >
+            <div className={classes.inline}>
+              <Typography variant="h5" color="inherit">
+                <Link to="#" className={classes.link}>
+                  <img width={20} src={logo} alt="react" />
+                  <span className={classes.tagline}>Project 3 title</span>
+                </Link>
+              </Typography>
+            </div>
+          </Grid>
+          <Grid item sx={6}>
+            <div>
+              <Tabs
+                value={this.current() || this.state.value}
+                indicatorColor="primary"
+                textColor="primary"
+                onChange={this.handleChange}
+              >
+                {Menu.public.map((item, index) => (
+                  <Tab
+                    key={index}
+                    component={Link}
+                    to={{ pathname: item.pathname }}
+                    classes={{ root: classes.tabItem }}
+                    label={item.label}
+                  />
+                ))}
+                            {/* {user &&
+                        {Menu.private.map((item, index) => (
+                            <Tab
+                            key={index}
+                            component={Link}
+                            to={{ pathname: item.pathname }}
+                            classes={{ root: classes.tabItem }}
+                            label={item.label}
+                            />
+                        ))
+                    }}
+                    {user 
+                    ? <AuthDropdown />
+                    : {Menu.loggedIn.map((item, index) => (
+                        <Tab
+                        key={index}
+                        component={Link}
+                        to={{ pathname: item.pathname }}
+                        classes={{ root: classes.tabItem }}
+                        label={item.label}
+                        />
+                    ))
 
-          <div className={targetClass} id='navbarSupportedContent'>
-            <ul className='navbar-nav mr-auto'>
-              <li className='nav-item'>
-                <Link className='nav-link' to='/' onClick={this.toggleCollapse}>Home</Link>
-              </li>
-              
+                    } }*/}
+              </Tabs>
+            </div>
+          </Grid>
+          <Grid item xs={6} >
 
-              {user &&
-              <>
-              <li className='nav-item'>
-                <Link className='nav-link' to='/' onClick={this.toggleCollapse}>DashBoard</Link>
-              </li>
-                <li className='nav-item'>
-                  <Link className='nav-link' to='/secret' onClick={this.toggleCollapse}>Secret</Link>
-                </li>
-                </>
-                }
-            </ul>
-            <ul className='navbar-nav'>
-              {user
-                ? <AuthDropdown onClick={this.toggleCollapse} />
-                : <>
-                  <li className='nav-item'><Link className='nav-link' to='/login' onClick={this.toggleCollapse}>Login</Link></li>
-                  <li className='nav-item'><Link className='nav-link' to='/register' onClick={this.toggleCollapse}>Register</Link></li>
-                  </>}
-            </ul>
-
-            
-          </div>
-        </nav>
+              <div className={classes.inline2}>
+              <Tabs
+                //value={this.current() || this.state.value}
+                indicatorColor="primary"
+                textColor="primary"
+                //onChange={this.handleChange}
+              >
+                {Menu.loggedIn.map((item, index) => (
+                  <Tab
+                    key={index}
+                    component={Link}
+                    to={{ pathname: item.pathname }}
+                    classes={{ root: classes.tabItem }}
+                    label={item.label}
+                  />
+                ))}
+                </Tabs>
+              </div>
+          </Grid>
+          
+        </Grid>
       </div>
     );
   }
 }
 
-export default Navigation;
+export default withStyles(styles)(Navigation);

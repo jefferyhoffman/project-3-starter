@@ -12,9 +12,10 @@ const styles = theme => ({
     overflow: "hidden",
     background: `url(${backgroundShape}) no-repeat`,
     backgroundSize: "cover",
-    backgroundPosition: "0 200px",
-    paddingBottom: 200,
+    backgroundPosition: "0 400px",
+    paddingBottom: 600
   },
+  
   grid: {
     width: 1200,
     marginTop: 40,
@@ -47,7 +48,7 @@ class HomePage extends Component {
     const { classes } = this.props;
 
     return (
-      <div className={classes.root}>
+       <div  className={classes.root}>
         <Grid container justify="center">
           <Grid
             spacing={4}

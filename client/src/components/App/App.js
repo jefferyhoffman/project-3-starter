@@ -16,6 +16,7 @@ import Secret from "../../pages/Secret/Secret";
 import NotFound from "../../pages/NotFound/NotFound";
 //new
 import DashBoard from "../../pages/DashBoard";
+//const backgroundShape = require("../../images/shape.svg");
 
 //import './App.css';
 
@@ -32,7 +33,7 @@ const theme = createMuiTheme({
   typography: {
     //changes from default Roboto
     fontFamily: ['"Lato"', "sans-serif"].join(","),
-  },
+  }
 });
 
 class App extends Component {
@@ -74,13 +75,12 @@ class App extends Component {
       )
       .catch((err) => console.log(err));
   }
-
+  
   render() {
     return (
-      
-        <AuthContext.Provider value={this.state.auth}>
-          <div>
-            <ThemeProvider theme={theme}>
+      <AuthContext.Provider value={this.state.auth}>
+        <div> 
+          <ThemeProvider theme={theme}>
             <Navigation />
             <div>
               <Switch>
@@ -92,10 +92,9 @@ class App extends Component {
                 <Route component={NotFound} />
               </Switch>
             </div>
-            </ThemeProvider>
-          </div>
-        </AuthContext.Provider>
-      
+          </ThemeProvider>
+        </div>
+      </AuthContext.Provider>
     );
   }
 }
