@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import withStyles from "@material-ui/styles/withStyles";
-import { Grid, Paper, Button } from "@material-ui/core";
+import { Grid, Button } from "@material-ui/core";
 import FormControl from '@material-ui/core/FormControl';
 import { TextField } from "@material-ui/core"
 import Icon from '@material-ui/core/Icon';
-
 const backgroundShape = require("../../images/shape.svg");
 
 
@@ -72,43 +71,38 @@ class LoginForm extends Component {
     const { email, password } = this.state;
 
     return (
-        <Grid container justify="center">
-          
-            <FormControl item xs={12} md={4}>
-           
-                  <form className='LoginForm' onSubmit={this.handleSubmit}>
-                    <div className='input-group mb-3'>
-                      <Icon>mail</Icon>
-                      <TextField className='form-control'
-                        id='email'
-                        type='email'
-                        name='email'
-                        placeholder='email@provider.com'
-                        value={email}
-                        onChange={this.handleInputChange}
-                      >
-                      </TextField>
-                    </div>
-                    
-                    <div className='input-group mb-3'>
-                      <Icon>password</Icon>
-                      <TextField
-                        className='form-control'
-                        id='password'
-                        type='password'
-                        name='password'
-                        placeholder='password'
-                        value={password}
-                        onChange={this.handleInputChange}
-                      >
-                      </TextField>
-                    </div>
-                    <Button color="primary"
-                      variant="contained"
-                      className={classes.actionButtom}>Login</Button>
-                  </form>
-                </FormControl>
-          </Grid>
+      
+          <FormControl className='LoginForm' onSubmit={this.handleSubmit}>
+            <Grid item>
+              <Icon>mail</Icon>
+              <TextField className='form-control'
+                id='email'
+                type='email'
+                name='email'
+                placeholder='email@provider.com'
+                value={email}
+                onChange={this.handleInputChange}
+              >
+              </TextField>
+            </Grid>
+            <Grid item>
+              <Icon>lock</Icon>
+              <TextField
+                className='form-control'
+                id='password'
+                type='password'
+                name='password'
+                placeholder='password'
+                value={password}
+                onChange={this.handleInputChange}
+              >
+              </TextField>
+            </Grid>
+            
+            <Button color="primary"
+              variant="contained"
+              className={classes.actionButtom}>Login</Button>
+          </FormControl>
 
     )
   }

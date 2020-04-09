@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { withStyles } from "@material-ui/styles";
 import { Typography, Tabs, Tab, Grid } from "@material-ui/core";
 import Menu from "./Menu";
-import AuthContext from "../../contexts/AuthContext";
-import AuthDropdown from "../../components/AuthDropdown/AuthDropdown";
+// import AuthContext from "../../contexts/AuthContext";
+// import AuthDropdown from "../../components/AuthDropdown/AuthDropdown";
 
 const logo = require("../../images/logo.svg");
 
@@ -86,7 +86,7 @@ class Navigation extends Component {
 
   render() {
     const { classes } = this.props;
-    const { user } = this.context;
+    // const { user } = this.context;
     return (
       // Tab markup
       //

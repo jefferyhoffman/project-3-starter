@@ -16,7 +16,7 @@ const styles = theme => ({
     background: `url(${backgroundShape}) no-repeat`,
     backgroundSize: "cover",
     backgroundPosition: "0 200px",
-    paddingBottom: 200,
+    paddingBottom: 200
   },
   grid: {
     width: 1200,
@@ -94,12 +94,14 @@ class Login extends Component {
             spacing={4}
             alignItems="center"
             justify="center"
+            gutterbottom="True"
             container
             className={classes.grid}
           >
-            <Grid item xs={20} md={4}>
+            <Grid item xs={12} md={4}>
+            <Grid item className={classes.box}>
+
               <Paper className={classes.paper}>
-                <Grid item className={classes.box}>
                   <Typography
                     style={{ textTransform: "uppercase" }}
                     color="secondary"
@@ -116,12 +118,13 @@ class Login extends Component {
                     </div>
                   }
                   <div>
-                  <LoginForm align='center' onSubmit={this.handleSubmit} />
-                  <div >Don't have an account? <Link to='/register'>Click here to register.</Link>
+                    <LoginForm align='center' onSubmit={this.handleSubmit} />
+                    <div >Don't have an account? <Link to='/register'>Click here to register.</Link>
+                    </div>
                   </div>
-                  </div>
+                  </Paper>
+
                 </Grid>
-              </Paper>
             </Grid>
           </Grid>
 
