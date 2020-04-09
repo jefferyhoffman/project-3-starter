@@ -37,6 +37,7 @@ Go to root directory and "yarn start:dev" to start client.
 <li>Express.js</li>  
 <li>React</li>  
 <li>Node.js</li>  
+<li>Yarn</li>
 <li>Vexflow</li></ul>  
 
 ### License
