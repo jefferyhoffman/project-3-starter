@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
 import { Modal, Button } from 'react-bootstrap'
+import Slideshow from '../Slideshow'
 import './style.css'
 
 function Gallery(props) {
 
     const [show, setShow] = useState(false);
+    const [interval, setInterval] = useState(30000);
+
+    const handleTime = time => {
+        setInterval(time)
+        console.log(interval)
+    }
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -18,9 +25,23 @@ function Gallery(props) {
                     <button 
                         className='btn btn-dark' 
                         num={props.num}
-                        onClick={handleShow}
+                        onClick={() => {handleTime(30);handleShow();}}
                     >
-                        Draw!
+                        30 Seconds
+                    </button>
+                    <button 
+                        className='btn btn-dark' 
+                        num={props.num}
+                        onClick={() => {handleTime(5000);handleShow();}}
+                    >
+                        60 Seconds
+                    </button>
+                    <button 
+                        className='btn btn-dark' 
+                        num={props.num}
+                        onClick={() => {handleTime(50000);handleShow();}}
+                    >
+                        90 Seconds
                     </button>
                 </div>
             </div>
@@ -30,7 +51,7 @@ function Gallery(props) {
                     <Modal.Title>{props.name}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <img className='card-img-top' src={props.images[0]} alt="gallery"/>
+                    <Slideshow images={props.images} interval={interval}/>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="dark" onClick={handleClose}>
