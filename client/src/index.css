@@ -1,28 +1,6 @@
-/* spread styles below where needed in different components  */
-/* HEADINGS ONLY font-family: 'Cuprum', sans-serif; */
-/* PARAGRAPH TEXT font-family: 'Roboto', sans-serif; */
-
-.heading {
-  font-family: 'Cuprum', sans-serif;
-  color: white;
+.body {
+  /* margin: 2%; */
+  font-family: 'Cuprum', sans-serif, 'Roboto', sans-serif;    
 }
+  
 
-.bodyText {
-  font-family: 'Roboto', sans-serif;
-}
-
-.travel {
-  background: #2F7C8F;
-}
-
-.home {
-  background: #08A68E;
-}
-
-.stuff {
-  background: #4FB06F;
-}
-
-.food {
-  background: #F2CB1D;
-}
