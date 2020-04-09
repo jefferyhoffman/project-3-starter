@@ -3,14 +3,19 @@ import { Accordion, Card, Button } from "react-bootstrap";
 import AuthContext from "../../contexts/AuthContext";
 import Selected from "../../components/SelectedChallenges";
 import API from "../../lib/API";
+
 const User = (props) => {
   const userInfo = useContext(AuthContext);
   const [theSelected, setTheSelected] = useState([]);
+  const [allActions, setAllActions] = useState();
+
   useEffect(() => {
-    API.Actions.getAll(userInfo.authToken)
-    .then(({data}) => setTheSelected(data))
+    API.Actions.getAll(userInfo.authToken).then(({ data }) =>
+      setTheSelected(data)
+    );
     //setTheSelected(selected);
   }, []);
+  console.log(allActions);
   console.log(userInfo);
   return (
     <>
