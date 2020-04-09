@@ -5,7 +5,7 @@ cardController.post("/", (req, res) => {
   db.Card.create({
     title: req.body.title,
     body: req.body.body,
-    priority: req.body.priority,
+    // priority: req.body.priority,
   })
     .then((dbCard) => res.json(dbCard))
     .catch((err) => res.json(err));
@@ -20,7 +20,7 @@ cardController.put("/:id", ({ params, body }, res) => {
       $set: {
         title: body.title,
         body: body.body,
-        priority: body.priority,
+        // priority: body.priority,
       },
     }
   )

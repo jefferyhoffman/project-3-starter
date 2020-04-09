@@ -12,9 +12,9 @@ var CardSchema = new Schema({
     minlength: 5,
     maxlength: 140,
   },
-  priority: {
-    enum: ["low", "medium", "high"],
-  },
+  // priority: {
+  //   enum: ["low", "medium", "high"],
+  // },
 });
 
 var ColumnSchema = new Schema({
@@ -27,6 +27,10 @@ var ColumnSchema = new Schema({
 });
 
 var BoardSchema = new Schema({
+  userId: {
+    type: Schema.Types.ObjectId,
+    ref: "User"
+  },
   title: {
     type: String,
     minlength: 1,
@@ -39,6 +43,8 @@ var Board = mongoose.model("Board", BoardSchema);
 var Column = mongoose.model("Column", ColumnSchema);
 var Card = mongoose.model("Card", CardSchema);
 
-module.exports = Board;
-module.exports = Column;
-module.exports = Card;
+module.exports = {
+  Board: Board,
+  Column: Column,
+  Card: Card
+}
