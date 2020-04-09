@@ -10,6 +10,8 @@ class HomePage extends Component {
     return (
       <div>
         <p>Welcome to The Cadenza forums! {Date}</p>
+      
+        
       </div>
     );
   }
