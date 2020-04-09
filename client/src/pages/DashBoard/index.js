@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React,  { Component } from "react";
 
-class DashBoard extends React.Component {
+class DashBoard extends Component {
   render() {
     return <div> Test Material UI </div>;
   }
 }
 
-// export default DashBoard;
+export default DashBoard;
