@@ -1,8 +1,10 @@
 require("dotenv").config
-const imageController = require("express").Router
+const express = require("express");
 const cloudinary = require("cloudinary");
 const formData = require("express-form-data");
 const cors = require("cors");
+
+const app = express()
 
 app.use(cors());
 app.use(formData.parse());
