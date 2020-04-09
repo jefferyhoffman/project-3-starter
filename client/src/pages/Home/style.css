@@ -1,0 +1,15 @@
+.jumbotron {
+  background-image: url("/trees.jpg");
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top:50px;
+  box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.30);
+}
+.jumbotron h1, p {
+  background-color: #ffffff73;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  padding: 5%;
+  color: #000000;
+}

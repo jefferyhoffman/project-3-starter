@@ -48,47 +48,76 @@ export default {
   Challenges: {
 
     // this produces an array with one challenge object
-    // will not work until we use a authToken
-    getCurrentChallenge: function(){
-      return axios.get('/api/', {
-        // headers: {
-        //   'Authorization': `Bearer ${authToken}`
-        // }
+    // still needs some work on the back end so that assosiated actions are sent
+    getCurrentChallenge: function(authToken){
+      return axios.get('/api/challenges', {
+        headers: {
+          'Authorization': `Bearer ${authToken}`
+        }
       })
     },
 
     // this produces an array with the last five challence objects
-    // must be given a UserId
-    // will also need the authToken
-    getPastChallenges: function(UserId){
+    // not bringing in actions, just challenges
+    // Workin
+    getPastChallenges: function(UserId, authToken){
       return axios.get('/api/challenges/'+UserId, {
-        // headers: {
-        //   'Authorization': `Bearer ${authToken}`
-        // }
+        headers: {
+          'Authorization': `Bearer ${authToken}`
+        }
       })
     },
 
     // Creates a Challenge
-    createChallenge: function(points){
-      return axios.post('/api/challenges', {})
+    // working, don't have to pass in points
+    createChallenge: function(authToken){
+      return axios.post('/api/challenges', {
+        headers: {
+          'Authorization': `Bearer ${authToken}`
+        }
+      })
     },
 
     // deletes and entire challenge
-    deleteChallenge: function(id){
-      return axios.delete('/api/challenges/deletechallenge/'+id, {})
+    // 
+    deleteChallenge: function(id, authToken){
+      return axios.delete('/api/challenges/deletechallenge/'+id, {
+        headers: {
+          'Authorization': `Bearer ${authToken}`
+        }
+      })
     },
 
     // deletes actions from a challenge
-    deleteActionFromChallenge: function(id){
-      return axios.delete('/api/challenges/'+id, {})
+    deleteActionFromChallenge: function(id, authToken){
+      return axios.delete('/api/challenges/'+id, {
+        headers: {
+          'Authorization': `Bearer ${authToken}`
+        }
+      })
     },
 
-    // adds actions to a challenge by updating a challenge 
-    updateChallenge: function(id, actions){
+    // adds actions to a challenge and updates the totalScore of said challenge
+    updateChallenge: function(id, actions, authToken){
       return axios.put('/api/challenges/'+id, {
-        actions: actions
+        actions: actions,
+        headers: {
+          'Authorization': `Bearer ${authToken}`
+        }
       })
     }
+
+
+    // NOT NEEDED
+    // updates a challenges totalPoints when passed an id and a new points total, would have to calc on front end for now
+    // updatePoints: function(id, totalPoints, authToken){
+    //   return axios.put('/api/challenges/points/'+id, {
+    //     totalPoints: totalPoints,
+    //     headers: {
+    //       'Authorization': `Bearer ${authToken}`
+    //     }
+    //   })
+    // }
   },
  
 }
