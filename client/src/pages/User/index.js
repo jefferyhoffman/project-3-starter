@@ -65,7 +65,15 @@ const User = (props) => {
             </Accordion.Toggle>
           </Card.Header>
           <Accordion.Collapse eventKey="2">
-            <Card.Body>Action Item 1</Card.Body>
+            <Card.Body>
+              <span
+                style={{ cursor: "pointer" }}
+                onClick={() => alert("clicked")}
+              >
+                +
+              </span>{" "}
+              Action Item 1
+            </Card.Body>
           </Accordion.Collapse>
         </Card>
         <Card>
@@ -75,7 +83,15 @@ const User = (props) => {
             </Accordion.Toggle>
           </Card.Header>
           <Accordion.Collapse eventKey="3">
-            <Card.Body>Action Item 1</Card.Body>
+            <Card.Body>
+              <span
+                style={{ cursor: "pointer" }}
+                onClick={() => alert("clicked")}
+              >
+                +
+              </span>{" "}
+              Action Item 1
+            </Card.Body>
           </Accordion.Collapse>
         </Card>
       </Accordion>
