@@ -1,6 +1,3 @@
-/* .card:hover{
-    opacity:.5
-} */
  
 .hover-title{
     align-self: center;
@@ -12,8 +9,7 @@
 
 } 
 
-.test:hover h2,.test:hover p
-{
+.test:hover h2, .test:hover p{
  opacity: 1;
 }
 
