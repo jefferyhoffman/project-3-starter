@@ -11,7 +11,7 @@
 * [Visuals](#visuals)  
 
 ### User Story
-AS young people yearning to create and conversate music notation with other users online,  
+AS young people yearning to create and converse music notation with other users online,  
 WE want to be able to discuss music theory in detail through a music notation based forum board  
 SO we can communicate with other users online in a music/composition based discussion.  
 
@@ -37,6 +37,7 @@ Go to root directory and "yarn start:dev" to start client.
 <li>Express.js</li>  
 <li>React</li>  
 <li>Node.js</li>  
+<li>Yarn</li>
 <li>Vexflow</li></ul>  
 
 ### License
