@@ -17,9 +17,30 @@ const User = (props) => {
   }, []);
   console.log(allActions);
   console.log(userInfo);
+  const makeBody = (cat, eventKey) => {
+    const filteredList = theSelected.filter((act) => act.category === cat);
+
+    return filteredList.map((act) => (
+      <Accordion.Collapse key={act.id} eventKey={eventKey}>
+        <Card.Body>
+          <span
+            style={{ cursor: "pointer" }}
+            onClick={() => alert("added " + act.points)}
+          >
+            +
+          </span>{" "}
+          {act.name}: points - {act.points}
+        </Card.Body>
+      </Accordion.Collapse>
+    ));
+  };
+
   return (
     <>
-      <h1>Welcome to the world of tomorrow {userInfo.user.name}!!!</h1>
+      <h1>
+        Please choose from the options below to create your first challenge!
+        {userInfo.user.name}!!!
+      </h1>
       {theSelected && <Selected selections={theSelected} />}
       <Accordion defaultActiveKey="0">
         <Card>
@@ -28,39 +49,8 @@ const User = (props) => {
               Travel
             </Accordion.Toggle>
           </Card.Header>
-          <Accordion.Collapse eventKey="0">
-            <Card.Body>
-              <span
-                style={{ cursor: "pointer" }}
-                onClick={() => alert("clicked")}
-              >
-                +
-              </span>{" "}
-              Regularly Biking to Work/School: points - 60
-            </Card.Body>
-          </Accordion.Collapse>
-          <Accordion.Collapse eventKey="0">
-            <Card.Body>
-              <span
-                style={{ cursor: "pointer" }}
-                onClick={() => alert("clicked")}
-              >
-                +
-              </span>{" "}
-              Buying an electric vehicle: points - 150
-            </Card.Body>
-          </Accordion.Collapse>
-          <Accordion.Collapse eventKey="0">
-            <Card.Body>
-              <span
-                style={{ cursor: "pointer" }}
-                onClick={() => alert("clicked")}
-              >
-                +
-              </span>{" "}
-              Go economy class: points - 150
-            </Card.Body>
-          </Accordion.Collapse>
+
+          {theSelected && makeBody("Travel", "0")}
         </Card>
         <Card>
           <Card.Header>
@@ -68,7 +58,8 @@ const User = (props) => {
               Food
             </Accordion.Toggle>
           </Card.Header>
-          <Accordion.Collapse eventKey="1">
+          {theSelected && makeBody("Food", "1")}
+          {/* <Accordion.Collapse eventKey="1">
             <Card.Body>
               <span
                 style={{ cursor: "pointer" }}
@@ -78,7 +69,7 @@ const User = (props) => {
               </span>{" "}
               Food items
             </Card.Body>
-          </Accordion.Collapse>
+          </Accordion.Collapse> */}
         </Card>
         <Card>
           <Card.Header>
@@ -86,7 +77,8 @@ const User = (props) => {
               Home
             </Accordion.Toggle>
           </Card.Header>
-          <Accordion.Collapse eventKey="2">
+          {theSelected && makeBody("Home", "2")}
+          {/* <Accordion.Collapse eventKey="2">
             <Card.Body>
               {" "}
               <span
@@ -97,7 +89,7 @@ const User = (props) => {
               </span>{" "}
               Home items
             </Card.Body>
-          </Accordion.Collapse>
+          </Accordion.Collapse> */}
         </Card>
         <Card>
           <Card.Header>
@@ -105,7 +97,8 @@ const User = (props) => {
               Consumable Items
             </Accordion.Toggle>
           </Card.Header>
-          <Accordion.Collapse eventKey="3">
+          {theSelected && makeBody("Consumable Items", "3")}
+          {/* <Accordion.Collapse eventKey="3">
             <Card.Body>
               {" "}
               <span
@@ -116,7 +109,7 @@ const User = (props) => {
               </span>{" "}
               Consumable items
             </Card.Body>
-          </Accordion.Collapse>
+          </Accordion.Collapse> */}
         </Card>
       </Accordion>
     </>
