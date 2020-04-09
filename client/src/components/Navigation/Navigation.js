@@ -26,7 +26,7 @@ class Navigation extends Component {
     return (
       <div className="Navigation nav_navbar_bglight nav_navbar_br">
         <nav className="navbar navbar-expand-md navbar-expand-lg navbar-light mb-3">
-          <Link className="navbar-brand heading_dark_bold " to="/">
+          <Link className="navbar-brand nav_heading_dark_bold " to="/">
             Smaller Footprint
           </Link>
           <button
@@ -49,7 +49,7 @@ class Navigation extends Component {
               {user && (
                 <li className="nav-item">
                   <Link
-                    className="nav-link heading_dark"
+                    className="nav-link nav_heading_dark"
                     to="/userpage"
                     onClick={this.toggleCollapse}
                   >
@@ -62,7 +62,7 @@ class Navigation extends Component {
               {user ? (
                 <AuthDropdown onClick={this.toggleCollapse} />
               ) : (
-                <li className="nav-item heading_dark ">
+                <li className="nav-item nav_heading_dark ">
                   <Link
                     className="nav-link"
                     to="/login"

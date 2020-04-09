@@ -3,7 +3,7 @@ import { Accordion, Card, Button } from "react-bootstrap";
 import AuthContext from "../../contexts/AuthContext";
 import Selected from "../../components/SelectedChallenges";
 import API from "../../lib/API";
-
+import "./style.css"
 const User = (props) => {
   const userInfo = useContext(AuthContext);
   const [theSelected, setTheSelected] = useState([]);

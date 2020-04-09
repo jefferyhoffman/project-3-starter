@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Octicon, { Mail, Key } from '@githubprimer/octicons-react';
-
+import "./style.css"
 class RegistrationForm extends Component {
   state = {
     email: '',
