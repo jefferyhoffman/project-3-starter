@@ -72,20 +72,23 @@ boardController.post("/:id/columns", (req, res) => {
 });
 
 // UPDATE COLUMN
-boardController.put("/:id/columns/:column", ({ params, body }, res) => {
-  db.Column.findByIdAndUpdate(
+boardController.put("/:id/columns/:column", (req, res) => {
+  db.Board.findOneAndUpdate(
     {
-      _id: params.id,
+      "_id": req.params.id,
+      "columns._id": req.params.column
     },
     {
-      $set: {
-        title: body.title,
+      $set: 
+      {
+        "columns.$.title": req.body.title
       },
     }
   )
     .then((updatedColumn) => res.json(updatedColumn))
     .catch((err) => res.json(err));
 });
+
 
 // DELETE COLUMN
 boardController.delete("/:id/columns/:column", ({ params }, res) => {
