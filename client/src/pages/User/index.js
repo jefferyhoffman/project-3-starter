@@ -18,8 +18,8 @@ const User = (props) => {
   }, []);
   console.log(userInfo);
 
-  const addAction = (name, points) => {
-    setTheSelected([...theSelected, { name, points }]);
+  const addAction = (points, name, description) => {
+    setTheSelected([...theSelected, { points, name, description }]);
   };
 
   const makeBody = (cat, eventKey) => {
@@ -31,11 +31,11 @@ const User = (props) => {
           <span
             style={{ cursor: "pointer" }}
             // onClick={() => alert("added " + act.points)}
-            onClick={() => addAction(act.name, act.points)}
+            onClick={() => addAction(act.points, act.name, act.description)}
           >
             +
           </span>{" "}
-          {act.name}: points - {act.points}
+          points: {act.points} - {act.name} - {act.description}
         </Card.Body>
       </Accordion.Collapse>
     ));
