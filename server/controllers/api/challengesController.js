@@ -56,43 +56,47 @@ challengesController.post("/", JWTVerifier, (req, res) => {
 // Add JWTVerifier back in later
 // working
 challengesController.put("/:id", JWTVerifier, (req, res) => {
-  console.log(req.body.actions);
+  let currentChallenge;
 
   db.Challenge.findByPk(req.params.id)
     .then((challenge) => {
-      if (!challenge) {
+      currentChallenge = challenge;
+
+      if (!currentChallenge) {
         return res
           .status(404)
           .send(`Challenge with id ${req.params.id} not found.`);
       }
       
-      return challenge.setActions(req.body.actions);
+      return currentChallenge.setActions(req.body.actions);
     })
+    .then(() => currentChallenge.getActions())
+    .then(actions => currentChallenge.updateAttributes({
+      totalPoints: actions.reduce((total, action) => total + action.points, 0) }))
     .then((updatedChallenge) => res.json(updatedChallenge))
     .catch((err) => console.log(err));
 });
 
 
-
+// NOT NEEDED
 // updates a challenge score when given a new total
-// working
-// would be better if this could be included in add actions route, with a way to add all points assosiaceted with actions
-challengesController.put("/points/:id", JWTVerifier, (req, res) => {
-  console.log(req.body.actions);
+// workin
+// challengesController.put("/points/:id", JWTVerifier, (req, res) => {
+//   console.log(req.body.actions);
 
-  db.Challenge.findByPk(req.params.id)
-    .then((challenge) => {
-      if (!challenge) {
-        return res
-          .status(404)
-          .send(`Challenge with id ${req.params.id} not found.`);
-      }
+//   db.Challenge.findByPk(req.params.id)
+//     .then((challenge) => {
+//       if (!challenge) {
+//         return res
+//           .status(404)
+//           .send(`Challenge with id ${req.params.id} not found.`);
+//       }
 
-      return challenge.updateAttributes({totalPoints: req.body.totalPoints});
-    })
-    .then((updatedChallenge) => res.json(updatedChallenge))
-    .catch((err) => console.log(err));
-});
+//       return challenge.updateAttributes({totalPoints: req.body.totalPoints});
+//     })
+//     .then((updatedChallenge) => res.json(updatedChallenge))
+//     .catch((err) => console.log(err));
+// });
 
 
 
