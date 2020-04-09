@@ -1,5 +1,5 @@
 const router = require("express").Router();
-// const threadController = require("../");
+const threadController = require("../api/threadController");
 
 
 //Gets threads that are present on homepage
