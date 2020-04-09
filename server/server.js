@@ -16,10 +16,6 @@ const express = require('express');
 const logger = require('morgan');
 const mongoose = require('mongoose');
 const { passport } = require('./lib/passport');
-const bodyParser = require("body-parser")
-const multer = require("multer");
-const GridFsStorage = require("multer-gridfs-storage");
-const Grid = require("gridfs-stream");
 
 
 //-- Constants ---------------------------------------------------------------
@@ -29,11 +25,7 @@ const LOG_MODE = process.env.NODE_ENV === 'production' ? 'common' : 'dev';
 //-- Express -----------------------------------------------------------------
 const app = express();
 
-//-- Mongoose Setup ----------------------------------------------------------
-mongoose.connect(
-  process.env.MONGODB_URI ||
-  'mongodb://localhost/ProjectThree'
-)
+//-- Mongoose Setup & GFS Setup----------------------------------------------------------
 
 mongoose.connection.on('error', err => {
   console.log(`Mongoose connection err:\n${err}`)
