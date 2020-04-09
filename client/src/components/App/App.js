@@ -82,10 +82,11 @@ class App extends Component {
             'backgroundImage': `url(${
                 this.state.backgroundImage
             })`,
-            'height': "100vh",
+             
             'backgroundPosition': "center",
             'backgroundRepeat': "no-repeat",
-            'backgroundSize': "cover"
+            'backgroundSize': "cover",
+            'backgroundAttachment': 'fixed'
         }
         return (
             <AuthContext.Provider value={

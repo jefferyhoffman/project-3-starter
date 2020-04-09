@@ -68,3 +68,13 @@
 .red_bg {
   background-color: #DB6C4B;  
 }
+
+html, body{
+  height: 100vh;
+}
+#root{
+  height: 100%;
+}
+#test{
+  height: 100%;
+}
