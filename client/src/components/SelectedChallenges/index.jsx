@@ -2,11 +2,11 @@ import React from "react";
 import { Tabs, Tab, Row, Col, Nav } from "react-bootstrap";
 
 const SelectedChallenges = (props) => {
+  console.log(props);
   return (
     <>
       <Tab.Container id="left-tabs-example" defaultActiveKey="first">
         <Row>
-
           <Col sm={9}>
             <Tabs
               defaultActiveKey="home"
@@ -15,6 +15,11 @@ const SelectedChallenges = (props) => {
             >
               <Tab eventKey="Current Challenge" title="Current Challenge">
                 Create a challenge
+                {props.selections.map((action) => (
+                  <p>
+                    {action.name} - {action.points}
+                  </p>
+                ))}
               </Tab>
               {/* <Tab eventKey="Update" title="Update">
                 Update a challenge
