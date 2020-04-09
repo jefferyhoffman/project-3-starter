@@ -18,20 +18,18 @@ const template = {
     },
     {
       title: "In Progress",
-      cards: []
+      cards: [],
     },
     {
       title: "Done",
-      cards: []
-    }
-  ]
+      cards: [],
+    },
+  ],
 };
 
 // CREATE BOARD
 boardController.post("/", JWTVerifier, (req, res) => {
-  db.Board.create({ ...template, 
-    title: req.body.title, 
-    userId: req.user._id })
+  db.Board.create({ ...template, title: req.body.title, userId: req.user._id })
     .then((dbBoard) => res.json(dbBoard))
     .catch((err) => res.json(err));
 });
@@ -57,20 +55,18 @@ boardController.put("/:id", ({ params, body }, res) => {
     .catch((err) => res.json(err));
 });
 
-// READ USER'S BOARD  **needs refactor**
-// boardController.get("/userBoard", JWTVerifier, (req, res) => {
-//   db.Board.findById({
-//     userId: req.user._id,
-//   })
-//     .then((dbBoard) => res.json(dbBoard))
-//     .catch((err) => res.json(err));
-// });
-
 // -------------------------------------------------------------------------
 
 // CREATE COLUMN
 boardController.post("/:id/columns", (req, res) => {
-  db.Column.create(req.body)
+  db.Board.findByIdAndUpdate(
+    {
+      _id: req.params.id,
+    },
+    {
+      $push: { "columns": req.body },
+    }
+  )
     .then((dbColumn) => res.json(dbColumn))
     .catch((err) => res.json(err));
 });
@@ -104,48 +100,53 @@ boardController.delete("/:id/columns/:column", ({ params }, res) => {
 
 // CREATE CARD
 boardController.post("/:id/columns/:index/cards", JWTVerifier, (req, res) => {
-  db.Board.findById(req.params.id)
-    .then((board) => {
-      if (!board) {
-        throw new Error("Invalid board ID");
-      }
-      
-      const index = parseInt(req.params.index);
+  db.Board.findById(req.params.id).then((board) => {
+    if (!board) {
+      throw new Error("Invalid board ID");
+    }
 
-      if (!board.columns[index]) {
-        throw new Error("Invalid column index");
-      }
+    const index = parseInt(req.params.index);
 
-      board.columns[index].cards.push(req.body);
-      return board.save();
-    });
+    if (!board.columns[index]) {
+      throw new Error("Invalid column index");
+    }
+
+    board.columns[index].cards.push(req.body);
+    return board.save();
+  });
+});
 
 // UPDATE CARD
-boardController.put("/:id/columns/:column/cards/:card", ({ params, body }, res) => {
-  db.Card.findByIdAndUpdate(
-    {
-      _id: params.id,
-    },
-    {
-      $set: {
-        title: body.title,
-        body: body.body,
-        // priority: body.priority,
+boardController.put(
+  "/:id/columns/:column/cards/:card",
+  ({ params, body }, res) => {
+    db.Card.findByIdAndUpdate(
+      {
+        _id: params.id,
       },
-    }
-  )
-    .then((updatedCard) => res.json(updatedCard))
-    .catch((err) => res.json(err));
-});
+      {
+        $set: {
+          title: body.title,
+          body: body.body,
+          // priority: body.priority,
+        },
+      }
+    )
+      .then((updatedCard) => res.json(updatedCard))
+      .catch((err) => res.json(err));
+  }
+);
 
 // DELETE CARD
-boardController.delete("/:id/columns/:column/cards/:card", ({ params }, res) => {
-  db.Card.findByIdAndDelete({
-    _id: params.id,
-  
-  })
-    .then((deletedCard) => res.json(deletedCard))
-    .catch((err) => res.json(err));
-});
+boardController.delete(
+  "/:id/columns/:column/cards/:card",
+  ({ params }, res) => {
+    db.Card.findByIdAndDelete({
+      _id: params.id,
+    })
+      .then((deletedCard) => res.json(deletedCard))
+      .catch((err) => res.json(err));
+  }
+);
 
 module.exports = boardController;
