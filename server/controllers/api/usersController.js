@@ -32,4 +32,65 @@ usersController.post('/login', (req, res) => {
     });
 });
 
+
+
+// get all of the people that the user is following
+usersController.get("/follows", JWTVerifier, (req, res) => {
+  
+  db.User.findByPk(req.user.id)
+    .then((user)=> {
+      if (!user) {
+        return res
+          .status(404)
+          .send(`Challenge with id ${req.params.id} not found.`);
+      }
+
+      console.log(user)
+      // return user.getUsers();
+    })
+    .then(followers => res.json(followers))
+    .catch(err=> console.log(err));
+    
+});
+
+
+// add to the people a user is following
+usersController.put("/", JWTVerifier, (req, res)=> {
+  
+  db.User.findByPk(req.user.id)
+    .then(user => {
+      if (!user.length) {
+        return res
+          .status(404)
+          .send(`User with id ${req.user.id} not found.`);
+      }
+      // is not a function
+      console.log(user);
+      // return user[0].setUsers(req.body.userFollowie);
+    })
+    .then(user => res.json(user))
+    .catch((err) => console.log(err));
+
+})
+
+
+
+// remove a userFollowie for a user
+usersController.delete("/", JWTVerifier, (req, res) => {
+  
+  db.User.findByPk(req.user.id)
+    .then(User => {
+      if (!User) {
+        return res
+          .status(404)
+          .send(`User with id ${req.user.id} not found.`);
+      }
+      
+      return User.removeUsers(req.body.userFollowie);
+    })
+    .then((updatedUser) => res.json(updatedUser))
+    .catch((err) => console.log(err));
+
+});
+
 module.exports = usersController;

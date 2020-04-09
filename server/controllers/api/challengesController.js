@@ -67,7 +67,7 @@ challengesController.put("/:id", JWTVerifier, (req, res) => {
           .status(404)
           .send(`Challenge with id ${req.params.id} not found.`);
       }
-      
+      console.log(currentChallenge);
       return currentChallenge.setActions(req.body.actions);
     })
     .then(() => currentChallenge.getActions())

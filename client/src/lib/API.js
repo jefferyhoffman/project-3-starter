@@ -32,6 +32,43 @@ export default {
           'Authorization': `Bearer ${authToken}`
         }
       });
+    },
+
+
+    // retrieves an array of objects with all of the people a user follows
+    // NOT FINISHED
+    getThoseIFollow: function(authToken){
+      return axios.get("/api/users/follows", {
+        headers: {
+          'Authorization': `Bearer ${authToken}`
+        }
+      })
+    },
+
+
+    // add to the people a user is following
+    // must pass in the id of person they want to follow
+    // NOT FINISHED
+    addToThoseIFollow: function(userFollowie, authToken){
+      return axios.put("/api/users/", {
+        userFollowie: userFollowie,
+        headers: {
+          'Authorization': `Bearer ${authToken}`
+        }
+      })
+    },
+
+
+    // remove a userFollowie for a user
+    // must pass in the id of person they want to unfollow
+    // NOT FINISHED
+    removeFromThoseIFollow: function(userFollowie, authToken){
+      return axios.put("/api/users/", {
+        userFollowie: userFollowie,
+        headers: {
+          'Authorization': `Bearer ${authToken}`
+        }
+      })
     }
   },
 
@@ -98,6 +135,7 @@ export default {
     },
 
     // adds actions to a challenge and updates the totalScore of said challenge
+    // pass in both the id of challenge and the id of the action
     updateChallenge: function(id, actions, authToken){
       return axios.put('/api/challenges/'+id, {
         actions: actions,
