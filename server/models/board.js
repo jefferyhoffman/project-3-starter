@@ -36,10 +36,9 @@ var BoardSchema = new Schema({
 });
 
 var Board = mongoose.model("Board", BoardSchema);
-module.exports = Board;
-
 var Column = mongoose.model("Column", ColumnSchema);
-// module.exports = Column;
-
 var Card = mongoose.model("Card", CardSchema);
-// module.exports = Card;
+
+module.exports = Board;
+module.exports = Column;
+module.exports = Card;
