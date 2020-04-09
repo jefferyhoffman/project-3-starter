@@ -19,6 +19,8 @@
     "nodemon": "^1.18.10"
   },
   "dependencies": {
-    "luxon": "^1.23.0"
+    "luxon": "^1.23.0",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.6"
   }
 }
