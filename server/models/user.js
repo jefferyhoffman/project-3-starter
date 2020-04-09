@@ -18,10 +18,15 @@ const UserSchema = new Schema({
       'Password should be four characters or longer'
     ]
   },
-  image:{
-    type: String
-  }
-})
+  galleries: [
+   {
+     name: {
+       type:String
+     }, 
+     images: []
+   }
+  ]
+});
 
 class newUser {
   constructor({ id, email, password }) {
