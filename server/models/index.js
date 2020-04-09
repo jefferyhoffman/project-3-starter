@@ -1,7 +1,9 @@
+var boardModels = require("./board");
+
 module.exports = {
   Users: require('./user'),
   Secrets: require('./secret'),
-  Board: require("./board"),
-  Column: require("./board"),
-  Card: require("./board")
+  Board: boardModels.Board,
+  Column: boardModels.Column,
+  Card: boardModels.Card
 }
