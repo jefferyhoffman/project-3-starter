@@ -35,8 +35,8 @@ const styles = (theme) => ({
     [theme.breakpoints.down("sm")]: {
       display: "flex",
       justifyContent: "space-evenly",
-      alignItems: "center"
-    }
+      alignItems: "center",
+    },
   },
 
   inline: {
@@ -48,7 +48,6 @@ const styles = (theme) => ({
     float: "right",
     marginRight: 0,
   },
-  
 
   link: {
     textDecoration: "none",
@@ -57,6 +56,7 @@ const styles = (theme) => ({
 });
 
 class Navigation extends Component {
+  static contextType = AuthContext;
   state = {
     value: 0,
     menuDrawer: false,
@@ -86,13 +86,14 @@ class Navigation extends Component {
 
   render() {
     const { classes } = this.props;
-    // const { user } = this.context;
+    const { user } = this.context;
+    console.log(user);
     return (
       // Tab markup
       //
       <div className={classes.tabContainer}>
         <Grid container spacing={3}>
-          <Grid item sx={12} className={classes.flex} >
+          <Grid item sx={12} className={classes.flex}>
             <div className={classes.inline}>
               <Typography variant="h5" color="inherit">
                 <Link to="#" className={classes.link}>
@@ -119,55 +120,55 @@ class Navigation extends Component {
                     label={item.label}
                   />
                 ))}
-                            {/* {user &&
-                        {Menu.private.map((item, index) => (
-                            <Tab
-                            key={index}
-                            component={Link}
-                            to={{ pathname: item.pathname }}
-                            classes={{ root: classes.tabItem }}
-                            label={item.label}
-                            />
-                        ))
-                    }}
-                    {user 
-                    ? <AuthDropdown />
-                    : {Menu.loggedIn.map((item, index) => (
-                        <Tab
-                        key={index}
-                        component={Link}
-                        to={{ pathname: item.pathname }}
-                        classes={{ root: classes.tabItem }}
-                        label={item.label}
-                        />
-                    ))
-
-                    } }*/}
               </Tabs>
             </div>
           </Grid>
-          <Grid item xs={6} >
+          <Grid item sx={6}>
+            <div>
+              <Tabs
+                value={this.current() || this.state.value}
+                indicatorColor="primary"
+                textColor="primary"
+                onChange={this.handleChange}
+              >
+                {user &&
+                  Menu.private.map((item, index) => (
+                    <Tab
+                      key={index}
+                      component={Link}
+                      to={{ pathname: item.pathname }}
+                      classes={{ root: classes.tabItem }}
+                      label={item.label}
+                    />
+                  ))}
+              </Tabs>
+            </div>
+          </Grid>
 
-              <div className={classes.inline2}>
+          <Grid item xs={6}>
+            <div className={classes.inline2}>
               <Tabs
                 //value={this.current() || this.state.value}
                 indicatorColor="primary"
                 textColor="primary"
                 //onChange={this.handleChange}
               >
-                {Menu.loggedIn.map((item, index) => (
-                  <Tab
-                    key={index}
-                    component={Link}
-                    to={{ pathname: item.pathname }}
-                    classes={{ root: classes.tabItem }}
-                    label={item.label}
-                  />
-                ))}
-                </Tabs>
-              </div>
+                {user ? (
+                  <AuthDropdown />
+                ) : (
+                  Menu.loggedIn.map((item, index) => (
+                    <Tab
+                      key={index}
+                      component={Link}
+                      to={{ pathname: item.pathname }}
+                      classes={{ root: classes.tabItem }}
+                      label={item.label}
+                    />
+                  ))
+                )}
+              </Tabs>
+            </div>
           </Grid>
-          
         </Grid>
       </div>
     );

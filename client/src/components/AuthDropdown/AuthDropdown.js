@@ -19,7 +19,7 @@ class AuthDropdown extends Component {
 
   handleLogout = () => {
     this.context.onLogout();
-    this.props.onClick();
+    //this.props.onClick();
   }
 
   render() {
