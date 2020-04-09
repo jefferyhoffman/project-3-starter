@@ -7,8 +7,9 @@ const User = (props) => {
   const userInfo = useContext(AuthContext);
   const [theSelected, setTheSelected] = useState([]);
   useEffect(() => {
-    const selected = API.Actions.getSelected();
-    setTheSelected(selected);
+    API.Actions.getAll(userInfo.authToken)
+    .then(({data}) => setTheSelected(data))
+    //setTheSelected(selected);
   }, []);
   console.log(userInfo);
   return (
@@ -19,7 +20,7 @@ const User = (props) => {
         <Card>
           <Card.Header>
             <Accordion.Toggle as={Button} variant="link" eventKey="0">
-              Click me!
+              Travel
             </Accordion.Toggle>
           </Card.Header>
           <Accordion.Collapse eventKey="0">
@@ -30,38 +31,86 @@ const User = (props) => {
               >
                 +
               </span>{" "}
-              Hello! I'm the body
+              Regularly Biking to Work/School: points - 60
+            </Card.Body>
+          </Accordion.Collapse>
+          <Accordion.Collapse eventKey="0">
+            <Card.Body>
+              <span
+                style={{ cursor: "pointer" }}
+                onClick={() => alert("clicked")}
+              >
+                +
+              </span>{" "}
+              Buying an electric vehicle: points - 150
+            </Card.Body>
+          </Accordion.Collapse>
+          <Accordion.Collapse eventKey="0">
+            <Card.Body>
+              <span
+                style={{ cursor: "pointer" }}
+                onClick={() => alert("clicked")}
+              >
+                +
+              </span>{" "}
+              Go economy class: points - 150
             </Card.Body>
           </Accordion.Collapse>
         </Card>
         <Card>
           <Card.Header>
             <Accordion.Toggle as={Button} variant="link" eventKey="1">
-              Click me!
+              Food
             </Accordion.Toggle>
           </Card.Header>
           <Accordion.Collapse eventKey="1">
-            <Card.Body>Hello! I'm another body</Card.Body>
+            <Card.Body>
+              <span
+                style={{ cursor: "pointer" }}
+                onClick={() => alert("clicked")}
+              >
+                +
+              </span>{" "}
+              Food items
+            </Card.Body>
           </Accordion.Collapse>
         </Card>
         <Card>
           <Card.Header>
-            <Accordion.Toggle as={Button} variant="link" eventKey="1">
-              Click me!
+            <Accordion.Toggle as={Button} variant="link" eventKey="2">
+              Home
             </Accordion.Toggle>
           </Card.Header>
-          <Accordion.Collapse eventKey="1">
-            <Card.Body>Hello! I'm another body</Card.Body>
+          <Accordion.Collapse eventKey="2">
+            <Card.Body>
+              {" "}
+              <span
+                style={{ cursor: "pointer" }}
+                onClick={() => alert("clicked")}
+              >
+                +
+              </span>{" "}
+              Home items
+            </Card.Body>
           </Accordion.Collapse>
         </Card>
         <Card>
           <Card.Header>
-            <Accordion.Toggle as={Button} variant="link" eventKey="1">
-              Click me!
+            <Accordion.Toggle as={Button} variant="link" eventKey="3">
+              Consumable Items
             </Accordion.Toggle>
           </Card.Header>
-          <Accordion.Collapse eventKey="1">
-            <Card.Body>Hello! I'm another body</Card.Body>
+          <Accordion.Collapse eventKey="3">
+            <Card.Body>
+              {" "}
+              <span
+                style={{ cursor: "pointer" }}
+                onClick={() => alert("clicked")}
+              >
+                +
+              </span>{" "}
+              Consumable items
+            </Card.Body>
           </Accordion.Collapse>
         </Card>
       </Accordion>
