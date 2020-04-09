@@ -10,10 +10,10 @@ const User = (props) => {
   const [allActions, setAllActions] = useState();
 
   useEffect(() => {
-    const allTheActions = API.Actions.getAll();
-    setAllActions(allTheActions);
-    const selected = API.Actions.getSelected();
-    setTheSelected(selected);
+    API.Actions.getAll(userInfo.authToken).then(({ data }) =>
+      setTheSelected(data)
+    );
+    //setTheSelected(selected);
   }, []);
   console.log(allActions);
   console.log(userInfo);
@@ -25,7 +25,7 @@ const User = (props) => {
         <Card>
           <Card.Header>
             <Accordion.Toggle as={Button} variant="link" eventKey="0">
-              Food Actions Category
+              Travel
             </Accordion.Toggle>
           </Card.Header>
           <Accordion.Collapse eventKey="0">
@@ -36,14 +36,36 @@ const User = (props) => {
               >
                 +
               </span>{" "}
-              Action Item 1
+              Regularly Biking to Work/School: points - 60
+            </Card.Body>
+          </Accordion.Collapse>
+          <Accordion.Collapse eventKey="0">
+            <Card.Body>
+              <span
+                style={{ cursor: "pointer" }}
+                onClick={() => alert("clicked")}
+              >
+                +
+              </span>{" "}
+              Buying an electric vehicle: points - 150
+            </Card.Body>
+          </Accordion.Collapse>
+          <Accordion.Collapse eventKey="0">
+            <Card.Body>
+              <span
+                style={{ cursor: "pointer" }}
+                onClick={() => alert("clicked")}
+              >
+                +
+              </span>{" "}
+              Go economy class: points - 150
             </Card.Body>
           </Accordion.Collapse>
         </Card>
         <Card>
           <Card.Header>
             <Accordion.Toggle as={Button} variant="link" eventKey="1">
-              Travel Actions Category
+              Food
             </Accordion.Toggle>
           </Card.Header>
           <Accordion.Collapse eventKey="1">
@@ -54,43 +76,45 @@ const User = (props) => {
               >
                 +
               </span>{" "}
-              Action Item 1
+              Food items
             </Card.Body>
           </Accordion.Collapse>
         </Card>
         <Card>
           <Card.Header>
             <Accordion.Toggle as={Button} variant="link" eventKey="2">
-              Home Actions Category
+              Home
             </Accordion.Toggle>
           </Card.Header>
           <Accordion.Collapse eventKey="2">
             <Card.Body>
+              {" "}
               <span
                 style={{ cursor: "pointer" }}
                 onClick={() => alert("clicked")}
               >
                 +
               </span>{" "}
-              Action Item 1
+              Home items
             </Card.Body>
           </Accordion.Collapse>
         </Card>
         <Card>
           <Card.Header>
             <Accordion.Toggle as={Button} variant="link" eventKey="3">
-              Consumable Actions Category
+              Consumable Items
             </Accordion.Toggle>
           </Card.Header>
           <Accordion.Collapse eventKey="3">
             <Card.Body>
+              {" "}
               <span
                 style={{ cursor: "pointer" }}
                 onClick={() => alert("clicked")}
               >
                 +
               </span>{" "}
-              Action Item 1
+              Consumable items
             </Card.Body>
           </Accordion.Collapse>
         </Card>
