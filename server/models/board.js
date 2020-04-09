@@ -1,17 +1,20 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-// models/board.js
 var CardSchema = new Schema({
   title: {
     type: String,
     minlength: 1,
     maxlength: 15,
   },
-  body: String,
-  priority: {
-    enum: ["low", "medium", "high"],
+  body: {
+    type: String,
+    minlength: 5,
+    maxlength: 140,
   },
+  // priority: {
+  //   enum: ["low", "medium", "high"],
+  // },
 });
 
 var ColumnSchema = new Schema({
@@ -24,7 +27,15 @@ var ColumnSchema = new Schema({
 });
 
 var BoardSchema = new Schema({
-  title: String,
+  userId: {
+    type: Schema.Types.ObjectId,
+    ref: "User"
+  },
+  title: {
+    type: String,
+    minlength: 1,
+    maxlength: 15,
+  },
   columns: [ColumnSchema],
 });
 
@@ -32,6 +43,8 @@ var Board = mongoose.model("Board", BoardSchema);
 var Column = mongoose.model("Column", ColumnSchema);
 var Card = mongoose.model("Card", CardSchema);
 
-module.exports = Board;
-module.exports = Column;
-module.exports = Card;
+module.exports = {
+  Board: Board,
+  Column: Column,
+  Card: Card
+}
