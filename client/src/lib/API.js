@@ -19,6 +19,27 @@ export default {
     }
   },
 
+  Boards: {
+    getMy: function(authToken) {
+      return axios.get('/api/boards', {
+        headers: {
+          'Authorization': `Bearer ${authToken}`
+        }
+      });
+    },
+
+    createCardInColumn: function(authToken, boardId, colIndex, title, body) {
+      return axios.post(`/api/boards/${boardId}/columns/${colIndex}/cards`, {
+        title,
+        body
+      }, {
+        headers: {
+          'Authorization': `Bearer ${authToken}`
+        }
+      });
+    }
+  },
+
   Secrets: {
     getAll: function (authToken) {
       return axios.get('/api/secrets', {
