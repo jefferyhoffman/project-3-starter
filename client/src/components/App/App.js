@@ -63,7 +63,7 @@ class App extends Component {
 
       galleries: [
         {
-          name: 'Sketches Vol 01', 
+          name: 'Sketches Vol 01',
           images: ['https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample3.jpg', 
           'https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample2.jpg', 
           'https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample1.jpg'] 
