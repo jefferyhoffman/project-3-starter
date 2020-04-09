@@ -17,7 +17,8 @@ const SelectedChallenges = (props) => {
                 Create a challenge
                 {props.selections.map((action) => (
                   <p>
-                    {action.name} - {action.points}
+                    points: {action.points} - {action.name} -{" "}
+                    {action.description}
                   </p>
                 ))}
               </Tab>
