@@ -3,8 +3,12 @@
   border-style: none;
   border-radius: 8px;  
 }
-
-
+html, body{
+  height: 100vh;
+}
+#root, #test{
+  height: 100%;
+}
 /* theme colors */
 .bluegreen_bg {
   background-color: #2F7C8F;
