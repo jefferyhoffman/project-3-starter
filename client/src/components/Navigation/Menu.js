@@ -1,5 +1,5 @@
 const Menu = {
-  public: [
+  publicTabs: [
     {
       label: "Home",
       pathname: "/",
