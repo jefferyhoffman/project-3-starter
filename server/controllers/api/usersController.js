@@ -36,6 +36,24 @@ usersController.post('/login', (req, res) => {
 
 
 
+// get searched email
+// working
+usersController.get('/search', (req, res) => {
+  const { email } = req.body;
+  db.User.findOne({ where: { email } })
+    .then(user => {
+      if(!user){
+        return res
+          .status(404)
+          .send(`A User with the email of ${email} could not be found.`)
+      }
+
+      return res.json(user);
+    })
+})
+
+
+
 // get all of the people that the user is following
 usersController.get("/follows", JWTVerifier, (req, res) => {
   
@@ -44,7 +62,7 @@ usersController.get("/follows", JWTVerifier, (req, res) => {
       if (!user) {
         return res
           .status(404)
-          .send(`Challenge with id ${req.user.id} not found.`);
+          .send(`User with id ${req.user.id} not found.`);
       }
 
       console.log(user)
@@ -54,6 +72,7 @@ usersController.get("/follows", JWTVerifier, (req, res) => {
     .catch(err=> console.log(err));
     
 });
+
 
 
 // add to the people a user is following
