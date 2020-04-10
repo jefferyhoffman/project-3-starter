@@ -41,8 +41,14 @@
 }
 
 /* media q for iPhone5 */
-@media (min-width: 320px) and (max-width:575) {
+@media screen and (min-width:320px) {
   .nav_heading_dark_bold{
     font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width:560px) {
+  .nav_heading_dark_bold{
+    font-size: 2rem;
   }
 }

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import JumbotronNav from '../../components/JumbotronNav';
-
+import './home.css'
 
 
 class HomePage extends Component {
@@ -13,7 +13,7 @@ class HomePage extends Component {
   }
     render() {
         return (            
-            <div>
+            <div id='home'>
                 <JumbotronNav/>
             </div>           
         );
