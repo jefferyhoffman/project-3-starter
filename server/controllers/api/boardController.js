@@ -143,7 +143,6 @@ boardController.post("/:id/columns/:index/cards", JWTVerifier, (req, res) => {
     board.columns[index].cards.push(req.body);
     return board.save();
   })
-    // this code was added from tutor?:
     .then((updatedBoard) => res.json(updatedBoard))
     .catch((err) => res.json(err));
 });
