@@ -79,9 +79,9 @@ class Navigation extends Component {
     if (this.props.currentPath === "/login") {
       return 3;
     }
-    if (this.props.currentPath === "/secret") {
-      return 4;
-    }
+    // if (this.props.currentPath === "/secret") {
+    //   return 4;
+    // }
   };
 
   render() {

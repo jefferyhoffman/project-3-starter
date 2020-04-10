@@ -12,7 +12,7 @@ import PrivateRoute from "../../components/PrivateRoute/PrivateRoute";
 import Home from "../../pages/Home/Home";
 import Login from "../../pages/Login/Login";
 import Register from "../../pages/Register/Register";
-import Secret from "../../pages/Secret/Secret";
+// import Secret from "../../pages/Secret/Secret";
 import NotFound from "../../pages/NotFound/NotFound";
 //new
 import DashBoard from "../../pages/DashBoard";
@@ -87,8 +87,8 @@ class App extends Component {
                 <Route exact path="/" component={Home} />
                 <Route path="/login" component={Login} />
                 <Route path="/register" component={Register} />
-                <PrivateRoute path="/secret" component={Secret} />
-                <Route path="/dashboard" component={DashBoard} />
+                {/* <PrivateRoute path="/secret" component={Secret} /> */}
+                <PrivateRoute path="/dashboard" component={DashBoard} />
                 <Route component={NotFound} />
               </Switch>
             </div>

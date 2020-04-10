@@ -7,10 +7,10 @@ const Menu = {
 
   ],
   privateTabs: [
-    {
-      label: "Secret",
-      pathname: "/secret",
-    },
+    // {
+    //   label: "Secret",
+    //   pathname: "/secret",
+    // },
     {
         label: "Dashboard",
         pathname: "/dashboard",

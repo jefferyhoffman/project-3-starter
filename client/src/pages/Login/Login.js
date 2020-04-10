@@ -80,7 +80,7 @@ class Login extends Component {
   render() {
     const { classes } = this.props;
 
-    const { from } = this.props.location.state || { from: { pathname: "/secret" } };
+    const { from } = this.props.location.state || { from: { pathname: "/Dashboard" } };
     const { redirectToReferrer } = this.state;
 
     if (redirectToReferrer) {
