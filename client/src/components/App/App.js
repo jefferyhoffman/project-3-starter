@@ -13,6 +13,7 @@ import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
 import Profile from '../../pages/UserProfile/profile';
 import Threads from "../../pages/Thread/Thread";
+import Footer from '../../components/Footer/footer';
 // import Newlogo from '../../components/NewLogo/newlogo';
 import '../../components/Navigation/Navigation.css';
 import './App.css';
