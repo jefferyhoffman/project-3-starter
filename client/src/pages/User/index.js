@@ -51,20 +51,20 @@ const User = (props) => {
       <Accordion defaultActiveKey="0">
         <Card>
           <Card.Header>
-            <Accordion.Toggle as={Button} variant="link" eventKey="0">
+            <Accordion.Toggle as={Button} variant="link" eventKey="1">
               Travel
             </Accordion.Toggle>
           </Card.Header>
 
-          {allActions && makeBody("Travel", "0")}
+          {allActions && makeBody("Travel", "1")}
         </Card>
         <Card>
           <Card.Header>
-            <Accordion.Toggle as={Button} variant="link" eventKey="1">
+            <Accordion.Toggle as={Button} variant="link" eventKey="2">
               Food
             </Accordion.Toggle>
           </Card.Header>
-          {allActions && makeBody("Food", "1")}
+          {allActions && makeBody("Food", "2")}
           {/* <Accordion.Collapse eventKey="1">
             <Card.Body>
               <span
@@ -79,11 +79,11 @@ const User = (props) => {
         </Card>
         <Card>
           <Card.Header>
-            <Accordion.Toggle as={Button} variant="link" eventKey="2">
+            <Accordion.Toggle as={Button} variant="link" eventKey="3">
               Home
             </Accordion.Toggle>
           </Card.Header>
-          {allActions && makeBody("Home", "2")}
+          {allActions && makeBody("Home", "3")}
           {/* <Accordion.Collapse eventKey="2">
             <Card.Body>
               {" "}
@@ -99,11 +99,11 @@ const User = (props) => {
         </Card>
         <Card>
           <Card.Header>
-            <Accordion.Toggle as={Button} variant="link" eventKey="3">
+            <Accordion.Toggle as={Button} variant="link" eventKey="4">
               Consumable Items
             </Accordion.Toggle>
           </Card.Header>
-          {allActions && makeBody("Consumable Items", "3")}
+          {allActions && makeBody("Consumable Items", "4")}
           {/* <Accordion.Collapse eventKey="3">
             <Card.Body>
               {" "}

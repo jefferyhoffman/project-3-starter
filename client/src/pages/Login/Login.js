@@ -39,7 +39,12 @@ class Login extends Component {
         // this.setState({ error: message });
       });
   };
-
+  componentDidMount(props){
+    this.props.backgroundImageChanger('login')
+  }
+  componentWillUnmount(props){
+   this.props.backgroundImageChanger('')
+  }
   render() {
     const { from } = this.props.location.state || {
       from: { pathname: "/userpage" },
