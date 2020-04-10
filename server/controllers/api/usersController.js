@@ -6,9 +6,11 @@ const jwt = require('jsonwebtoken');
 
 usersController.post('/', (req, res) => {
   const { email, password } = req.body;
-
+  console.log(email)
   db.Users.create({ email, password })
-    .then(user => res.json(user))
+    .then(user => {
+      console.log(user)
+      res.json(user)})
     .catch(err => res.json(err));
 });
 
