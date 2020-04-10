@@ -42,10 +42,10 @@ boardController.post("/", JWTVerifier, (req, res) => {
 
 // READ USER'S BOARD
 boardController.get("/", JWTVerifier, (req, res) => {
-  db.Board.findById({ userId: req.user._id })
-    .then(results => { res.json(results) })
-    .catch((err) => res.json(err));
-  // res.json({ ...template });
+  // db.Board.find({})
+  //   .then(results => { res.json(results) })
+  //   .catch((err) => res.json(err));
+  res.json({ ...template, _id: "123456789012345678901234" });
 });
 
 // boardController.get("/", JWTVerifier, (req, res) => {
