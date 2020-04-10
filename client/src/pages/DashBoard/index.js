@@ -30,13 +30,11 @@ const styles = (theme) => ({
       width: "calc(100% - 20px)",
       flexFlow: "column",
     },
-  
-  
+
     display: "flex",
     flexFlow: "row nowrap",
     justifyContent: "center",
   },
-
 });
 
 class DashBoard extends Component {
@@ -69,22 +67,13 @@ class DashBoard extends Component {
           <div>Loading...</div>
         ) : (
           <Grid container justify="left">
-            <Grid
-              xs={12}
-              md={4}
-              spacing={2}
-              container
-              item
-              className={classes.grid}
-            >
+            <Grid xs={12} spacing={4} container item className={classes.grid}>
               {board.columns.map((column) => (
-               
                 <ColumnBoard
                   boardId={board._id}
                   {...column}
                   handleRefresh={this.refreshBoard}
                 />
-                
               ))}
               {/* <ColumnBoard title="To Do" />
               <ColumnBoard title = "In Progress"  />

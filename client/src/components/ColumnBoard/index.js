@@ -12,6 +12,7 @@ const styles = (theme) => ({
     alignItems: "flex-end",
     width: 500,
     marginLeft: 20,
+    marginBottom: 30,
   },
 
   paper: {
