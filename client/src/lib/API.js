@@ -49,7 +49,6 @@ export default {
     },
 
     // retrieves an array of objects with all of the people a user follows
-    // NOT FINISHED
     getThoseIFollow: function (authToken) {
       return axios.get("/api/users/follows", {
         headers: {
@@ -60,7 +59,6 @@ export default {
 
     // add to the people a user is following
     // must pass in the id of person they want to follow
-    // NOT FINISHED
     addToThoseIFollow: function (userFollowie, authToken) {
       return axios.put("/api/users/follows", 
       {
@@ -75,7 +73,6 @@ export default {
 
     // remove a userFollowie for a user
     // must pass in the id of person they want to unfollow
-    // NOT FINISHED
     removeFromThoseIFollow: function (userFollowie, authToken) {
       return axios.put("/api/users/follows", 
         {
@@ -87,6 +84,15 @@ export default {
           },
         });
     },
+
+    // Search for a user by entering their email
+    // returns an object
+    searchForUser: function (email) {
+      return axios.put("/api/users/search",
+      {
+        email: email
+      });
+    }
   },
 
   Secrets: {
