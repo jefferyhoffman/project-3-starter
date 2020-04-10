@@ -7,7 +7,7 @@ module.exports = {
     // Return a promise to correctly handle asynchronicity.
 
     // Example:
-    return queryInterface.bulkInsert('Followers', [
+    return queryInterface.bulkInsert('UserFollowers', [
       {
         createdAt: new Date(),
         updatedAt: new Date(),
@@ -36,7 +36,7 @@ module.exports = {
     // Return a promise to correctly handle asynchronicity.
 
     // Example:
-    return queryInterface.bulkDelete('Followers', null, {});
+    return queryInterface.bulkDelete('UserFollowers', null, {});
 
   }
 };

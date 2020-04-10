@@ -50,7 +50,7 @@ export default {
     // must pass in the id of person they want to follow
     // NOT FINISHED
     addToThoseIFollow: function(userFollowie, authToken){
-      return axios.put("/api/users/", {
+      return axios.put("/api/users/follows", {
         userFollowie: userFollowie,
         headers: {
           'Authorization': `Bearer ${authToken}`
@@ -63,7 +63,7 @@ export default {
     // must pass in the id of person they want to unfollow
     // NOT FINISHED
     removeFromThoseIFollow: function(userFollowie, authToken){
-      return axios.put("/api/users/", {
+      return axios.put("/api/users/follows", {
         userFollowie: userFollowie,
         headers: {
           'Authorization': `Bearer ${authToken}`

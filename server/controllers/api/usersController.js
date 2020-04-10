@@ -48,7 +48,7 @@ usersController.get("/follows", JWTVerifier, (req, res) => {
       }
 
       console.log(user)
-      // return user.getUsers();
+      return user.getFollowers();
     })
     .then(followers => res.json(followers))
     .catch(err=> console.log(err));
@@ -57,18 +57,18 @@ usersController.get("/follows", JWTVerifier, (req, res) => {
 
 
 // add to the people a user is following
-usersController.put("/", JWTVerifier, (req, res)=> {
+usersController.post("/follows", JWTVerifier, (req, res)=> {
   
   db.User.findByPk(req.user.id)
     .then(user => {
-      if (!user.length) {
+      if (!user) {
         return res
           .status(404)
           .send(`User with id ${req.user.id} not found.`);
       }
       // is not a function
       console.log(user);
-      return user.setUsers(req.body.userFollowie);
+      return user.setFollowers(req.body.userFollowie);
     })
     .then(user => res.json(user))
     .catch((err) => console.log(err));
@@ -78,7 +78,7 @@ usersController.put("/", JWTVerifier, (req, res)=> {
 
 
 // remove a userFollowie for a user
-usersController.delete("/", JWTVerifier, (req, res) => {
+usersController.delete("/follows", JWTVerifier, (req, res) => {
   
   db.User.findByPk(req.user.id)
     .then(User => {
@@ -88,7 +88,7 @@ usersController.delete("/", JWTVerifier, (req, res) => {
           .send(`User with id ${req.user.id} not found.`);
       }
       
-      return User.removeUsers(req.body.userFollowie);
+      return User.removeFollowers(req.body.userFollowie);
     })
     .then((updatedUser) => res.json(updatedUser))
     .catch((err) => console.log(err));
