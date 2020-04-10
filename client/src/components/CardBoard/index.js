@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import withStyles from "@material-ui/styles/withStyles";
 import {
   Button,
@@ -6,7 +6,12 @@ import {
   CardContent,
   CardActions,
   TextField,
+  CardHeader,
+  IconButton,
+  Menu,
+  MenuItem
 } from "@material-ui/core";
+import MoreVertIcon from "@material-ui/icons/MoreVert";
 
 const styles = (theme) => ({
   root: {
@@ -27,24 +32,80 @@ const styles = (theme) => ({
     fontSize: 18,
   },
   formStyle: {
-    '& > *': {
-        margin: theme.spacing(1),
-        width: "90%",
-      },
+    "& > *": {
+      margin: theme.spacing(1),
+      width: "90%",
+    },
   },
 });
+const cardMenu = ["To Do", "In Progress", "Done"];
+const ITEM_HEIGHT = 20;
 
 const CardBoard = (props) => {
+
   const { classes, title, body, handleSave, handleDelete } = props;
+
+  // card menu
+  const [anchorMenu, setAnchorMenu] = useState(null);
+  const open = Boolean(anchorMenu);
+  const handleClick = (event) => {
+    setAnchorMenu(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorMenu(null);
+  }
+
   return (
     <div>
       <Card variant="outlined">
         <div>
+          
+          <div>
+            {/* <CardHeader> */}
+           
+              <IconButton 
+                aria-label="Status"
+                aria-controls="long-menu"
+                aria-haspopup="true"
+                onClick={handleClick}
+
+              >
+                <MoreVertIcon />
+              </IconButton>
+              
+                <Menu
+                  id="long-menu"
+                  anchorMenu={anchorMenu}
+                  keepMounted
+                  open={open}
+                  onClose={handleClose}
+                  PaperProps={{
+                    style: {
+                      maxHeight: ITEM_HEIGHT * 4.5,
+                      width: '20ch',
+                    },
+                  }}
+                >
+                  {cardMenu.map((menuoption) => (
+                    <MenuItem key={menuoption} selected={menuoption === 'Pyxis'} onClick={handleClose}>
+                      {menuoption}
+                    </MenuItem>
+                  ))}
+                </Menu>
+              
+            
+
+
+          {/* </CardHeader> */}
+
+          </div>
+
           <CardContent>
             <form noValidate autoComplete="off" className={classes.formStyle}>
               <TextField
                 id="standard-basic"
-                label="Title"
+                label="Task Title"
                 multiline
                 rows="1"
                 defaultValue="Title"
@@ -77,7 +138,6 @@ const CardBoard = (props) => {
               variant="contained"
               color="secondary"
               size="small"
-              variant="contained"
               className={classes.actionButtom}
               //value={value}
               onClick={() => handleSave(props)}
@@ -85,15 +145,16 @@ const CardBoard = (props) => {
               Save
             </Button>
             <Button
-            color="primary"
-            variant="contained"
-            size="small"
-            className={classes.actionButton}
-          >
-            Edit
-          </Button>
+              color="primary"
+              variant="contained"
+              size="small"
+              className={classes.actionButton}
+            >
+              Edit
+            </Button>
             <Button
               //onClick={this.openDialog}
+              color="primary"
               variant="outlined"
               size="small"
               className={classes.actionButton}
