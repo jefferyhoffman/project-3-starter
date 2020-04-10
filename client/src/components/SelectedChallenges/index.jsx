@@ -1,5 +1,5 @@
 import React from "react";
-import { Tabs, Tab, Row, Col, Nav } from "react-bootstrap";
+import { Tabs, Tab, Row, Col, Nav, Button } from "react-bootstrap";
 
 const SelectedChallenges = (props) => {
   console.log(props);
@@ -17,6 +17,11 @@ const SelectedChallenges = (props) => {
                 eventKey="Current Challenge"
                 title="Current Challenge/Create a Challenge"
               >
+                {props.selections.length > 0 ? (
+                  <Button variant="success" onClick={props.clickHandler}>
+                    Saved
+                  </Button>
+                ) : null}
                 {props.selections.map((action) => (
                   <p>
                     points: {action.points} - {action.name} -{" "}

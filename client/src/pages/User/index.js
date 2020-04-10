@@ -4,7 +4,7 @@ import AuthContext from "../../contexts/AuthContext";
 import Selected from "../../components/SelectedChallenges";
 // import CreateChallenge from "../../components/CreateChallenge";
 import API from "../../lib/API";
-import "./style.css"
+import "./style.css";
 const User = (props) => {
   const userInfo = useContext(AuthContext);
   const [theSelected, setTheSelected] = useState([]);
@@ -18,8 +18,22 @@ const User = (props) => {
   }, []);
   console.log(userInfo);
 
-  const addAction = (points, name, description) => {
-    setTheSelected([...theSelected, { points, name, description }]);
+  const addAction = (points, name, description, id) => {
+    setTheSelected([...theSelected, { points, name, description, id }]);
+  };
+
+  const createChallenge = () => {
+    API.Challenges.createChallenge(userInfo.authToken)
+      .then(({ data }) => {
+        let idArray = theSelected.map((action) => action.id);
+        return API.Challenges.updateChallenge(
+          data.id,
+          idArray,
+          userInfo.authToken
+        );
+      })
+      .then(({ data }) => console.log("Challenge saved"))
+      .catch((err) => console.log(err));
   };
 
   const makeBody = (cat, eventKey) => {
@@ -31,7 +45,9 @@ const User = (props) => {
           <span
             style={{ cursor: "pointer" }}
             // onClick={() => alert("added " + act.points)}
-            onClick={() => addAction(act.points, act.name, act.description)}
+            onClick={() =>
+              addAction(act.points, act.name, act.description, act.id)
+            }
           >
             +
           </span>{" "}
@@ -47,7 +63,9 @@ const User = (props) => {
         Please choose from the options below to create your first challenge!
         {userInfo.user.name}!!!
       </h1>
-      {allActions && <Selected selections={theSelected} />}
+      {allActions && (
+        <Selected selections={theSelected} clickHandler={createChallenge} />
+      )}
       <Accordion defaultActiveKey="0">
         <Card>
           <Card.Header>
