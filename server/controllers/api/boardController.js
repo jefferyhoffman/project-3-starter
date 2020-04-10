@@ -158,18 +158,6 @@ boardController.put("/:id/columns/:colIndex/cards/:cardIndex", JWTVerifier, (req
     .then((updatedBoard) => res.json(updatedBoard))
     .catch(err => console.log(err));
 });
-<<<<<<< HEAD
-// DELETE CARD
-boardController.delete("/:id/columns/:column/cards/:card", ({ params }, res) => {
-  db.Card.findByIdAndDelete({
-    _id: params.id,
-  })
-    .then((deletedCard) => res.json(deletedCard))
-    .catch((err) => res.json(err));
-});
-
-module.exports = boardController;
-=======
 
 // DELETE CARD
 boardController.delete("/:id/columns/:columnIndex/cards/:cardIndex", JWTVerifier, (req, res) => {
@@ -195,4 +183,3 @@ boardController.delete("/:id/columns/:columnIndex/cards/:cardIndex", JWTVerifier
 });
 
 module.exports = boardController;
->>>>>>> 746d7da259b8d4a8fc1d93f2c83f425f4e5d6a4e

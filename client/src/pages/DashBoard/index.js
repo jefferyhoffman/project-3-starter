@@ -53,7 +53,10 @@ class DashBoard extends Component {
     const { authToken } = this.context;
 
     API.Boards.getMy(authToken)
-      .then((res) => this.setState({ board: res.data, isLoading: false }))
+      .then((res) => {
+        console.log(res.data)
+        this.setState({ board: res.data, isLoading: false })
+      })
       .catch((err) => console.log(err));
   };
 
@@ -65,7 +68,7 @@ class DashBoard extends Component {
       <div className={classes.root}>
         {isLoading ? (
           <div>Loading...</div>
-        ) : (
+        ) : board ? (
           <Grid container justify="left">
             <Grid xs={12} spacing={4} container item className={classes.grid}>
               {board.columns.map((column) => (
@@ -82,7 +85,7 @@ class DashBoard extends Component {
              */}
             </Grid>
           </Grid>
-        )}
+        ): null }
       </div>
     );
   }
