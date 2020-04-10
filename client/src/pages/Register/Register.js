@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import RegistrationForm from '../../components/RegistrationForm/RegistrationForm';
 import API from '../../lib/API';
+import "./style.css";
 
 class Register extends Component {
   state = {
@@ -24,7 +25,7 @@ class Register extends Component {
       <div className='Register'>
         <div className='row'>
           <div className='col'>
-            <h1>Register</h1>
+            <h3 className="h3_heading_dark">Register</h3>
           </div>
         </div>
         {this.state.error &&
