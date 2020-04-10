@@ -4,16 +4,16 @@ const Menu = {
       label: "Home",
       pathname: "/",
     },
-    {
-        label: "Dashboard",
-        pathname: "/dashboard",
-    }
+    // {
+    //     label: "Dashboard",
+    //     pathname: "/dashboard",
+    // }
   ],
   private: [
-    {
-      label: "Secret",
-      pathname: "/secret",
-    },
+    // {
+    //   label: "Secret",
+    //   pathname: "/secret",
+    // },
     {
         label: "Dashboard",
         pathname: "/dashboard",

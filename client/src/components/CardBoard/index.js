@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import withStyles from "@material-ui/styles/withStyles";
 import {
   Button,
@@ -88,7 +88,7 @@ const CardBoard = (props) => {
             color="primary"
             variant="contained"
             size="small"
-            className={classes.actionButtom}
+            className={classes.actionButton}
           >
             Edit
           </Button> */}
@@ -96,7 +96,7 @@ const CardBoard = (props) => {
               //onClick={this.openDialog}
               variant="outlined"
               size="small"
-              className={classes.actionButtom}
+              className={classes.actionButton}
               onClick={() => handleDelete(props)}
             >
               Delete
