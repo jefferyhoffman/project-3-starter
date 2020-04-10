@@ -36,9 +36,34 @@ class App extends Component {
         onLogin: this.handleLogin,
         onLogout: this.handleLogout
       }, 
+
+      homeGallery:[
+        {
+        key:1,
+        artist: "joe",
+        title:"hand",
+        caption: "my name is joe i like to draw",
+        image:"https://cdn.pixabay.com/photo/2016/07/14/00/27/hand-1515895_960_720.png"
+      },
+      {
+        key:2,
+        artist: "Mark",
+        title:"old man",
+        caption: "my name is Mark i like to draw",
+        image:"https://cdn.pixabay.com/photo/2017/01/22/00/18/the-old-man-1998604_1280.jpg"
+      },
+      {
+        key:3,
+        artist: "Tim",
+        title:"Deku",
+        caption: "My name is Tim i like to draw",
+        image:"https://i.pinimg.com/originals/86/0d/da/860ddae3f7e378a2e8e9450e6518d877.jpg"
+      }
+    ],
+
       galleries: [
         {
-          name: 'Sketches Vol 01', 
+          name: 'Sketches Vol 01',
           images: ['https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample3.jpg', 
           'https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample2.jpg', 
           'https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample1.jpg'] 
@@ -88,7 +113,8 @@ class App extends Component {
           <Navigation />
           <div>
             <Switch>
-              <Route exact path='/' component={Home} />
+              <Route exact path='/' render={()=> <Home homeGallery={this.state.homeGallery}/>}
+               />
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />
               <Route 

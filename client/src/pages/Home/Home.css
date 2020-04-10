@@ -1,0 +1,25 @@
+body{
+    background-color:#DDE1E4;
+}
+
+.btn{
+    background-color: black;
+    color: white;
+    
+}
+.drawbtn{
+    color: red;
+}
+
+
+.jumbotron{
+    background-color:black;
+    color: white;
+}
+
+
+.hex{
+    color:#C1B4AE ;
+    color: #d5aca9;
+    color:#C1CAD6 ;
+}

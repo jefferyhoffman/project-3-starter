@@ -1,30 +1,46 @@
-import React, { Component } from 'react';
+import React from 'react';
+import DrawModal from "../../components/drawModal/draw"
+import "./Home.css"
+import { Carousel } from 'react-bootstrap'
 
-import logo from './logo.svg';
+function HomePage(props) {
 
-class HomePage extends Component {
-  render() {
-    return (
-      <div className='Home'>
-        <div className='row'>
-          <div className='col'>
-            <img src={logo} className='App-logo' alt='logo' />
-            <p>
-              Edit <code>src/pages/Home.js</code> and save to reload.
-            </p>
-            <a
-              className='App-link'
-              href='https://reactjs.org'
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
-          </div>
+  return (<div>
+    <div className="row">
+      <div className="col mb-5">
+
+        <div className="jumbotron">
+          <h1 className="display-4">Baton Pass!</h1>
+          <p className="lead">instruction on what to do/or what the site is about</p>
+          <hr className="my-4" />
         </div>
       </div>
-    );
-  }
+    </div>
+
+    <div className="row">
+      <div className="col-9">
+
+        <Carousel interval="10000">
+          {props.homeGallery.map((image) =>
+
+            <Carousel.Item>
+              <div>
+                <img className="img-fluid" src={image.image} alt='timed slide' />
+            </div>
+
+
+              <DrawModal image={image.image} src={image.image} alt={"image.caption"} />
+              {console.log(image)}
+            </Carousel.Item>)}
+        </Carousel>
+
+      </div>
+    </div>
+
+
+  </div>
+  );
 }
+
 
 export default HomePage;
