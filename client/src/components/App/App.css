@@ -36,21 +36,13 @@
 
 @media (min-width: 360px) {
   .container {
-    width: 95%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+    width: 95%;    
   }
 }
 
 @media (min-width: 360px) and (max-width:575) {
   .container {
-    width: 95%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+    width: 95%;   
   }
 }
 
