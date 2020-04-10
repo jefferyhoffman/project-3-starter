@@ -24,7 +24,6 @@ usersController.post('/login', (req, res) => {
       if (!user || !user.comparePassword(password)) {
         return res.status(401).send("Unauthorized");
       }
-
       res.json({
         token: jwt.sign({ sub: user.id }, process.env.JWT_SECRET),
         user

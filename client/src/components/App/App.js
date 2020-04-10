@@ -12,7 +12,7 @@ import PrivateRoute from "../../components/PrivateRoute/PrivateRoute";
 import Home from "../../pages/Home/Home";
 import Login from "../../pages/Login/Login";
 import Register from "../../pages/Register/Register";
-// import Secret from "../../pages/Secret/Secret";
+import Secret from "../../pages/Secret/Secret";
 import NotFound from "../../pages/NotFound/NotFound";
 //new
 import DashBoard from "../../pages/DashBoard";
