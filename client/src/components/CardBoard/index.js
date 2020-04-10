@@ -8,6 +8,8 @@ import {
   TextField,
 } from "@material-ui/core";
 
+import CardHeaderMenu from "../CardHeaderMenu";
+
 const styles = (theme) => ({
   root: {
     nimWidth: 275,
@@ -27,24 +29,27 @@ const styles = (theme) => ({
     fontSize: 18,
   },
   formStyle: {
-    '& > *': {
-        margin: theme.spacing(1),
-        width: "90%",
-      },
+    "& > *": {
+      margin: theme.spacing(1),
+      width: "90%",
+    },
   },
 });
 
 const CardBoard = (props) => {
   const { classes, title, body, handleSave, handleDelete } = props;
+
   return (
     <div>
       <Card variant="outlined">
         <div>
+          <CardHeaderMenu />
+
           <CardContent>
             <form noValidate autoComplete="off" className={classes.formStyle}>
               <TextField
                 id="standard-basic"
-                label="Title"
+                label="Task Title"
                 multiline
                 rows="1"
                 defaultValue="Title"
@@ -53,10 +58,6 @@ const CardBoard = (props) => {
                 value={title}
               />
             </form>
-
-            {/* {<AutoComplete>
-                  {body}
-              </AutoComplete> */}
 
             <form noValidate autoComplete="off" className={classes.formStyle}>
               <TextField
@@ -77,7 +78,6 @@ const CardBoard = (props) => {
               variant="contained"
               color="secondary"
               size="small"
-              variant="contained"
               className={classes.actionButtom}
               //value={value}
               onClick={() => handleSave(props)}
@@ -85,15 +85,16 @@ const CardBoard = (props) => {
               Save
             </Button>
             <Button
-            color="primary"
-            variant="contained"
-            size="small"
-            className={classes.actionButton}
-          >
-            Edit
-          </Button>
+              color="primary"
+              variant="contained"
+              size="small"
+              className={classes.actionButton}
+            >
+              Edit
+            </Button>
             <Button
               //onClick={this.openDialog}
+              color="primary"
               variant="outlined"
               size="small"
               className={classes.actionButton}
