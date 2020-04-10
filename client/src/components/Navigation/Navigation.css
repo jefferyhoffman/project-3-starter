@@ -1,5 +1,9 @@
 
 
+/* #sitelogo{
+    width: 100%
+} */
+
 .Header {
     background-color: black;
     color: purple;
@@ -7,6 +11,14 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: left;
 }
+
+@media only screen and (max-width: 600px) {
+    #sitelogo{
+        width: 100%
+    }
+  }
+
+
 /* .navbar navbar-expand-lg navbar-dark bg-dark {
     font-size: larger;
 } */

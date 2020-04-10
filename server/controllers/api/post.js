@@ -3,7 +3,7 @@ const postController = require("../api/postController");
 
 router
     .route("/")
-    .get(postController.findAll)
+    .get(postController.findById)
     .post(postController.create);
 
 router

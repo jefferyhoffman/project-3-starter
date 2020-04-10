@@ -12,8 +12,7 @@ import Register from '../../pages/Register/Register';
 import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
 import Profile from '../../pages/UserProfile/profile';
-import footer from '../../components/footer/footer';
-// import NewThreadButton from '../../components/NewThreadButton/NewThreadButton';
+import Footer from '../../components/Footer/footer';
 // import Newlogo from '../../components/NewLogo/newlogo';
 import '../../components/Navigation/Navigation.css';
 import './App.css';
@@ -66,6 +65,9 @@ class App extends Component {
               <PrivateRoute path='/secret' component={Secret} />
               <Route component={NotFound} />
             </Switch>
+          </div>
+          <div className='App'>
+            <Footer />
           </div>
         </div>
       </AuthContext.Provider>

@@ -27,7 +27,7 @@ class Navigation extends Component {
     return (
       <div> 
         <div className="Header">
-        <img src={SiteLogo} alt=""></img>
+        <img src={SiteLogo} alt="The Cadenza logo" id="sitelogo"></img>
         </div>
       <div className='Navigation'>
         <nav className='navbar navbar-expand-lg navbar-dark bg-dark mb-3'>
