@@ -75,35 +75,25 @@ class App extends Component {
 
       galleries: [
         {
-          name: 'Sketches Vol 01',
-          images: ['https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample3.jpg', 
-          'https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample2.jpg', 
-          'https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample1.jpg'] 
+          name: 'Sketches Vol 01', 
+          images: 'https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample3.jpg'
         }, 
         {
           name: 'Sketches Vol 02', 
-          images: ['https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample3.jpg', 
-          'https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample2.jpg', 
-          'https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample1.jpg'] 
+          images: 'https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample3.jpg' 
         }, 
         {
-          name: 'Sketches Vol 03', 
-          images: ['https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample3.jpg', 
-          'https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample2.jpg', 
-          'https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample1.jpg'] 
+          name: 'Sketches Vol 02', 
+          images: 'https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample3.jpg' 
         }, 
         {
-          name: 'Sketches Vol 04', 
-          images: ['https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample3.jpg', 
-          'https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample2.jpg', 
-          'https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample1.jpg'] 
+          name: 'Sketches Vol 02', 
+          images: 'https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample3.jpg' 
         }, 
         {
-          name: 'Sketches Vol 05', 
-          images: ['https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample3.jpg', 
-          'https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample2.jpg', 
-          'https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample1.jpg'] 
-        }
+          name: 'Sketches Vol 02', 
+          images: 'https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample3.jpg' 
+        },
       ]
     }
   }
