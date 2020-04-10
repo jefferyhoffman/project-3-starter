@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import AuthContext from "../../contexts/AuthContext";
 import AuthDropdown from "../../components/AuthDropdown/AuthDropdown";
+import { TiLeaf } from "react-icons/ti";
+import { MdLineWeight } from "react-icons/md";
+
 import "./style.css";
 
 class Navigation extends Component {
@@ -27,7 +30,7 @@ class Navigation extends Component {
       <div className="Navigation nav_navbar_bglight nav_navbar_br">
         <nav className="navbar navbar-expand-md navbar-expand-lg navbar-light mb-3">
           <Link className="navbar-brand nav_heading_dark_bold " to="/">
-            Smaller Footprint
+          <TiLeaf/>Smaller Footprint
           </Link>
           <button
             className={togglerClass}
@@ -38,14 +41,11 @@ class Navigation extends Component {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <MdLineWeight/>           
           </button>
 
           <div className={targetClass} id="navbarSupportedContent">
-            <ul className="navbar-nav mr-auto">
-              {/* <li className='nav-item'>
-                <Link className='nav-link heading_dark' to='/' onClick={this.toggleCollapse}>Home</Link>
-              </li> */}
+            <ul className="navbar-nav mr-auto">            
               {user && (
                 <li className="nav-item">
                   <Link

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-
-import Octicon, { Mail, Key } from '@githubprimer/octicons-react';
+import { FiMail, FiKey } from "react-icons/fi";
 import "./style.css"
 
 class LoginForm extends Component {
@@ -29,19 +28,21 @@ class LoginForm extends Component {
 
     return (
       <div className='LoginForm'>
-        <div className='card'>
+        <div className='card card_no_border'>
           <div className='card-body'>
             <form className='LoginForm' onSubmit={this.handleSubmit}>
               <div className='input-group mb-3'>
                 <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Mail} /></span>
+                  <span className="input-group-text">
+                  <FiMail/>                    
+                  </span>
                 </div>
                 <input
                   className='form-control'
                   id='email'
                   type='email'
                   name='email'
-                  placeholder='email@provider.com'
+                  placeholder='name@email.com'
                   value={email}
                   onChange={this.handleInputChange}
                 />
@@ -49,7 +50,9 @@ class LoginForm extends Component {
 
               <div className='input-group mb-3'>
                 <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Key} /></span>
+                  <span className="input-group-text">
+                    <FiKey />
+                  </span>
                 </div>
                 <input
                   className='form-control'
@@ -62,7 +65,7 @@ class LoginForm extends Component {
                 />
               </div>
 
-              <button className='btn btn-primary' type='submit'>Login</button>
+              <button className='btn btn_orange' type='submit'>Log in</button>
             </form>
           </div>
         </div>

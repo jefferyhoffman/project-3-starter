@@ -31,5 +31,18 @@
 .navbar-light .navbar-nav .nav-link {
   font-size: 1.25rem;
   color: #000000;
+  text-align: end;
 }
 
+.navbar-light .navbar-toggler {
+  color: #000000;
+  border-style: none;
+  padding: .25rem 0rem;
+}
+
+/* media q for iPhone5 */
+@media (min-width: 320px) and (max-width:575) {
+  .nav_heading_dark_bold{
+    font-size: 1.5rem;
+  }
+}

@@ -7,22 +7,18 @@
 
 /* theme colors */
 .bluegreen_bg {
-  background: #2F7C8F;
+  background-color: #2F7C8F;
 }
 
 .greenblue_bg {
-  background: #08A68E;
+  background-color: #08A68E;
 }
 
 .green_bg {
-  background: #4FB06F;
+  background-color: #4FB06F;
 }
 
 .yellow_bg {
-  background: #F2CB1D;
-}
-
-.yellow_bg{
   background-color:#F2CB1D;  
 }
 
@@ -32,4 +28,56 @@
 
 .red_bg {
   background-color: #DB6C4B;  
+}
+
+/* media queries for mobile first  */
+/* device width is greater than or equal to xpx */
+
+
+@media (min-width: 360px) {
+  .container {
+    width: 95%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 360px) and (max-width:575) {
+  .container {
+    width: 95%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .container {
+    width: 95%;   
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    width: 60%;    
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    width: 60%;    
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    width: 60%;    
+  }
 }

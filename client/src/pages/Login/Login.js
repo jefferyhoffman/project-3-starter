@@ -1,16 +1,10 @@
 import React, { Component } from "react";
 import { Link, Redirect } from "react-router-dom";
 
-<<<<<<< HEAD
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
 import LoginForm from '../../components/LoginForm/LoginForm';
 import "./style.css";
-=======
-import API from "../../lib/API";
-import AuthContext from "../../contexts/AuthContext";
-import LoginForm from "../../components/LoginForm/LoginForm";
->>>>>>> a55919de72e4491c202071b7e930e82d6e64e2cd
 
 class Login extends Component {
   static contextType = AuthContext;
@@ -57,17 +51,10 @@ class Login extends Component {
     }
 
     return (
-<<<<<<< HEAD
       <div className='Login'>
         <div className='row'>
           <div className='col'>
-            <h3 className="h3_heading_dark">Log in</h3>
-=======
-      <div className="Login">
-        <div className="row">
-          <div className="col">
-            <h1>Login</h1>
->>>>>>> a55919de72e4491c202071b7e930e82d6e64e2cd
+            <h3 className="h3_heading_dark">Welcome back!</h3>
           </div>
         </div>
         {this.state.error && (
@@ -82,14 +69,7 @@ class Login extends Component {
         <div className="row">
           <div className="col">
             <LoginForm onSubmit={this.handleSubmit} />
-<<<<<<< HEAD
-            <div className='mt-3 p_text_dark'>Create your own account <Link to='/register'>here.</Link></div>
-=======
-            <div className="mt-3">
-              Don't have an account?{" "}
-              <Link to="/register">Click here to register.</Link>
-            </div>
->>>>>>> a55919de72e4491c202071b7e930e82d6e64e2cd
+            <div className='mt-3 p_text_dark'>If you have not joined, create your own account <Link to='/register'><span className="form_link">here</span></Link>.</div>
           </div>
         </div>
       </div>

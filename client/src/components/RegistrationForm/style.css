@@ -76,3 +76,33 @@
   color: #000000;
   font-size: 1.125rem;
 }
+
+.btn_orange {
+  color: #fff;
+  background-color: #E68D20;
+  border-color: #E68D20;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+/* overwriting bootstrap */
+.form_link {
+  color: #E68D20;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:hover{
+  color: #DB6C4B;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.input-group-text {
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.card_no_border {
+  border-style: none;
+}
