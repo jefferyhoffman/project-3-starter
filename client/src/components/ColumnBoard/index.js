@@ -89,7 +89,7 @@ class ColumnBoard extends Component {
                   <Typography
                     style={{ textTransform: "uppercase" }}
                     color="secondary"
-                    gutterBottom
+                    gutterBottom='true'
                   >
                     {this.props.title}
                   </Typography>
@@ -99,7 +99,7 @@ class ColumnBoard extends Component {
                   <Button
                     color="primary"
                     variant="contained"
-                    className={classes.actionButtom}
+                    className={classes.actionButton}
                     onClick={this.handleAdd}
                   >
                     Add
