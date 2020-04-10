@@ -6,6 +6,7 @@ const replyRoutes = require("./post");
 
 //Thread routes
 router.use("/thread", threadRoutes);
+router.use("/reply", replyRoutes);
 
 // const router = require("express").Router();
 // // const apiControllers = require('express').Router();
