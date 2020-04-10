@@ -48,6 +48,7 @@ boardController.get("/userBoard", JWTVerifier, (req, res) => {
     .catch((err) => res.json(err));
 });
 
+// CREATE CARD
 boardController.post("/:id/columns/:index/cards", JWTVerifier, (req, res) => {
   db.Board.findById(req.params.id)
     .then((board) => {
@@ -95,7 +96,8 @@ boardController.put("/:id/columns/:column", ({ params, body }, res) => {
 
 // DELETE COLUMN
 boardController.delete("/:id/columns/:column", ({ params }, res) => {
-  db.Column.findByIdAndDelete({
+  db.Column.findByIdAndDelete(
+  {
     _id: params.id,
   })
     .then((deletedColumn) => res.json(deletedColumn))
@@ -104,16 +106,16 @@ boardController.delete("/:id/columns/:column", ({ params }, res) => {
 
 // -------------------------------------------------------------------------
 
-// CREATE CARD
-boardController.post("/:id/columns/:column/cards", (req, res) => {
-  db.Card.create({
-    title: req.body.title,
-    body: req.body.body,
-    // priority: req.body.priority,
-  })
-    .then((dbCard) => res.json(dbCard))
-    .catch((err) => res.json(err));
-});
+// // CREATE CARD
+// boardController.post("/:id/columns/:column/cards", (req, res) => {
+//   db.Card.create({
+//     title: req.body.title,
+//     body: req.body.body,
+//     // priority: req.body.priority,
+//   })
+//     .then((dbCard) => res.json(dbCard))
+//     .catch((err) => res.json(err));
+// });
 
 // UPDATE CARD
 boardController.put("/:id/columns/:column/cards/:card", ({ params, body }, res) => {
