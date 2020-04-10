@@ -146,41 +146,33 @@ boardController.post("/:id/columns/:index/cards", JWTVerifier, (req, res) => {
 });
 
 // UPDATE CARD
-boardController.put("/:id/columns/:column/cards/:card", ({ params, body }, res) => {
-  db.Card.findByIdAndUpdate(
-    {
-      _id: params.id,
-    },
-    {
-      $set: {
-        title: body.title,
-        body: body.body,
-        // priority: body.priority,
-      },
-    }
-  )
-    .then((updatedCard) => res.json(updatedCard))
-    .catch((err) => res.json(err));
-});
+// PUT /1/columns/0/cards/0
+boardController.put("/:id/columns/:colIndex/cards/:cardIndex", JWTVerifier, (req, res) => {
+  db.Board.findById(req.params.id)
+    .then(board => {
+      if (!board) {
+        throw new Error("Invalid board ID");
+      }
 
-// UPDATE CARD
-boardController.put("/:id/columns/:column/cards/:card", ({ params, body }, res) => {
-  db.Card.findByIdAndUpdate(
-    {
-      _id: params.id,
-    },
-    {
-      $set: {
-        title: body.title,
-        body: body.body,
-        // priority: body.priority,
-      },
-    }
-  )
-    .then((updatedCard) => res.json(updatedCard))
-    .catch((err) => res.json(err));
-});
+      const colIndex = parseInt(req.params.colIndex);
+      const cardIndex = parseInt(req.params.cardIndex);
 
+      const card = board.columns[colIndex].cards[cardIndex];
+      if (!card) {
+        throw new Error("Invalid colIndex or cardIndex");
+      }
+
+      card.title = req.body.title;
+      card.body = req.body.body;
+      // card.priority = req.body.priority;
+
+      return board.save();
+    })
+    .then((updatedBoard) => res.json(updatedBoard))
+    .catch(err => console.log(err));
+
+
+});
 // DELETE CARD
 boardController.delete("/:id/columns/:column/cards/:card", ({ params }, res) => {
   db.Card.findByIdAndDelete({
