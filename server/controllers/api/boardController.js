@@ -48,13 +48,13 @@ boardController.get("/userBoard", JWTVerifier, (req, res) => {
     .catch((err) => res.json(err));
 });
 
-<<<<<<< HEAD
 boardController.post("/:id/columns/:index/cards", JWTVerifier, (req, res) => {
   db.Board.findById(req.params.id)
     .then((board) => {
       if (!board) {
         throw new Error("Invalid board ID");
       }
+      
       
       const index = parseInt(req.params.index);
 
@@ -65,26 +65,10 @@ boardController.post("/:id/columns/:index/cards", JWTVerifier, (req, res) => {
       board.columns[index].cards.push(req.body);
       return board.save();
     })
-=======
-// UPDATE BOARD
-boardController.put("/:id", ({ params, body }, res) => {
-  db.Board.findByIdAndUpdate(
-    {
-      _id: params.id,
-    },
-    {
-      $set: {
-        title: body.title,
-      },
-    }
-  )
->>>>>>> 114889959e72e70210db7d076d99dbc6621bfe1e
     .then((updatedBoard) => res.json(updatedBoard))
     .catch((err) => res.json(err));
 });
 
-<<<<<<< HEAD
-=======
 // -------------------------------------------------------------------------
 
 // CREATE COLUMN
@@ -133,22 +117,22 @@ boardController.post("/:id/columns/:column/cards", (req, res) => {
 });
 
 // UPDATE CARD
-boardController.put("/:id/columns/:column/cards/:card", ({ params, body }, res) => {
-  db.Card.findByIdAndUpdate(
-    {
-      _id: params.id,
-    },
-    {
-      $set: {
-        title: body.title,
-        body: body.body,
-        // priority: body.priority,
-      },
-    }
-  )
-    .then((updatedCard) => res.json(updatedCard))
-    .catch((err) => res.json(err));
-});
+// boardController.put("/:id/columns/:column/cards/:card", ({ params, body }, res) => {
+//   db.Card.findByIdAndUpdate(
+//     {
+//       _id: params.id,
+//     },
+//     {
+//       $set: {
+//         title: body.title,
+//         body: body.body,
+//         // priority: body.priority,
+//       },
+//     }
+//   )
+//     .then((updatedCard) => res.json(updatedCard))
+//     .catch((err) => res.json(err));
+// });
 
 // DELETE CARD
 boardController.delete("/:id/columns/:column/cards/:card", ({ params }, res) => {
@@ -159,5 +143,4 @@ boardController.delete("/:id/columns/:column/cards/:card", ({ params }, res) => 
     .catch((err) => res.json(err));
 });
 
->>>>>>> 114889959e72e70210db7d076d99dbc6621bfe1e
 module.exports = boardController;
