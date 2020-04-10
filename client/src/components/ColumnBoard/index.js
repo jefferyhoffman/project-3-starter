@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import withStyles from "@material-ui/styles/withStyles";
-import { Grid, Paper, Typography, Button, TextField, Menu, MenuItem } from "@material-ui/core";
+import { Grid, Paper, Typography, Button, TextField } from "@material-ui/core";
 import CardBoard from "../../components/CardBoard";
 import AuthContext from "../../contexts/AuthContext";
 import API from "../../lib/API";
@@ -96,7 +96,7 @@ class ColumnBoard extends Component {
                     {this.props.title}
                   </Typography>
                   {/* to input column text */}
-                  <form noValidate autoComplete="off" >
+                  <form noValidate autoComplete="off">
                     <TextField
                       id="outlined-basic"
                       label="Column Title"
@@ -127,7 +127,6 @@ class ColumnBoard extends Component {
                   >
                     Add a Task
                   </Button>
-                  
                 </div>
               </div>
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import withStyles from "@material-ui/styles/withStyles";
 import {
   Button,
@@ -6,12 +6,9 @@ import {
   CardContent,
   CardActions,
   TextField,
-  CardHeader,
-  IconButton,
-  Menu,
-  MenuItem
 } from "@material-ui/core";
-import MoreVertIcon from "@material-ui/icons/MoreVert";
+
+import CardHeaderMenu from "../CardHeaderMenu";
 
 const styles = (theme) => ({
   root: {
@@ -38,68 +35,15 @@ const styles = (theme) => ({
     },
   },
 });
-const cardMenu = ["To Do", "In Progress", "Done"];
-const ITEM_HEIGHT = 20;
 
 const CardBoard = (props) => {
-
   const { classes, title, body, handleSave, handleDelete } = props;
-
-  // card menu
-  const [anchorMenu, setAnchorMenu] = useState(null);
-  const open = Boolean(anchorMenu);
-  const handleClick = (event) => {
-    setAnchorMenu(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorMenu(null);
-  }
 
   return (
     <div>
       <Card variant="outlined">
         <div>
-          
-          <div>
-            {/* <CardHeader> */}
-           
-              <IconButton 
-                aria-label="Status"
-                aria-controls="long-menu"
-                aria-haspopup="true"
-                onClick={handleClick}
-
-              >
-                <MoreVertIcon />
-              </IconButton>
-              
-                <Menu
-                  id="long-menu"
-                  anchorMenu={anchorMenu}
-                  keepMounted
-                  open={open}
-                  onClose={handleClose}
-                  PaperProps={{
-                    style: {
-                      maxHeight: ITEM_HEIGHT * 4.5,
-                      width: '20ch',
-                    },
-                  }}
-                >
-                  {cardMenu.map((menuoption) => (
-                    <MenuItem key={menuoption} selected={menuoption === 'Pyxis'} onClick={handleClose}>
-                      {menuoption}
-                    </MenuItem>
-                  ))}
-                </Menu>
-              
-            
-
-
-          {/* </CardHeader> */}
-
-          </div>
+          <CardHeaderMenu />
 
           <CardContent>
             <form noValidate autoComplete="off" className={classes.formStyle}>
@@ -114,10 +58,6 @@ const CardBoard = (props) => {
                 value={title}
               />
             </form>
-
-            {/* {<AutoComplete>
-                  {body}
-              </AutoComplete> */}
 
             <form noValidate autoComplete="off" className={classes.formStyle}>
               <TextField
