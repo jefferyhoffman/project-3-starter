@@ -1,23 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Modal, Button } from 'react-bootstrap'
-import Slideshow from '../Slideshow'
 import './style.css'
 
 function Gallery(props) {
 
     const [show, setShow] = useState(false);
-    const [interval, setInterval] = useState(30000);
-
-    const handleTime = time => {
-        setInterval(time)
-        console.log(interval)
-    }
+    const [counter, setCounter] = useState();
 
     const handleClose = () => setShow(false);
-    const handleShow = () => {
-        setShow(true)
-        setTimeout(() => {handleClose()}, interval)
+    const handleShow = (seconds) => {
+        setShow(true);
+        setCounter(seconds)
     }
+
+    useEffect(() => {
+        counter > 0 && setTimeout(() => setCounter(counter - 1), 1000)
+    }, [counter]);
+
+    useEffect(() => {
+        if (counter === 0) {
+            handleClose();
+        }
+    })
 
     return (
         <div>
@@ -27,32 +31,34 @@ function Gallery(props) {
                 <div className='card-body'>
                     <p className='card-text'>{props.name}</p>
                     <button 
-                        className='btn btn-dark' 
+                        className='modern-btn' 
                         num={props.num}
-                        onClick={() => {handleTime(5000);handleShow();}}
+                        onClick={() => {handleShow(1)}}
                     >
-                        30 Seconds
+                        1 Seconds
                     </button>
                     <button 
-                        className='btn btn-dark' 
+                        className='modern-btn' 
                         num={props.num}
-                        onClick={() => {handleTime(10000);handleShow();}}
+                        onClick={() => {handleShow(5)}}
                     >
-                        60 Seconds
+                        5 Seconds
                     </button>
                     <button 
-                        className='btn btn-dark' 
+                        className='modern-btn' 
                         num={props.num}
-                        onClick={() => {handleTime(15000);handleShow();}}
+                        onClick={() => {handleShow(10)}}
                     >
-                        90 Seconds
+                        10 Seconds
                     </button>
                 </div>
             </div>
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>{props.name}</Modal.Title>
+                    <Modal.Title className='col-11 text-center'>
+                        <p>{counter}</p>
+                    </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                         <img 
@@ -61,7 +67,7 @@ function Gallery(props) {
                             alt='timed slide'
                         />
                 </Modal.Body>
-                <Modal.Footer>
+                <Modal.Footer className='col-12 text-center'>
                     <Button variant="dark" onClick={handleClose}>
                         Close
                     </Button>
