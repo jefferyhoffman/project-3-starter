@@ -40,5 +40,11 @@ export default {
         }
       });
     }
+  },
+
+  homeGallery:{
+  allGalleries:function(){
+    return axios.get('/api/usergallery')
+  }
   }
 }
