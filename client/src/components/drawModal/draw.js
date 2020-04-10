@@ -10,8 +10,7 @@ function DrawModal(props) {
   
   
   return (<>
-      
-    
+
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Draw</Modal.Title>
@@ -25,8 +24,6 @@ function DrawModal(props) {
           </Button>
         </Modal.Footer>
       </Modal>
-
-    
   </>
   )
 }

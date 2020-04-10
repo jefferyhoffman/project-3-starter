@@ -8,11 +8,11 @@ body{
     
 }
 .drawbtn{
-    color: red;
+    color:white;
     margin-top: 5%;
 }
 .drawbtn:hover{
-    color: red;
+    color:rgb(151, 7, 7);
 }
 
 .home-footer{
