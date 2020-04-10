@@ -9,7 +9,19 @@ module.exports = {
   findById: function (req, res) {
     db.Thread.findAll({
       where: { id: req.params.id },
-      include: [{ model: db.Reply }],
+      include: [
+        {
+          model: db.Reply,
+          include: [{ 
+            model: db.User,
+            attributes: ['email']
+          }]
+        },
+        {
+          model: db.User,
+          attributes: ['email']
+        }
+      ],
     })
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
