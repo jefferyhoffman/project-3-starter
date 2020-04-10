@@ -29,24 +29,22 @@ const template = {
 
 // CREATE BOARD
 boardController.post("/", JWTVerifier, (req, res) => {
-  db.Board.create({
-    ...template,
-    title: req.body.title,
-    userId: req.user._id,
-  })
+  db.Board.create(
+    {
+      ...template,
+      title: req.body.title,
+      userId: req.user._id,
+    }
+  )
     .then((dbBoard) => res.json(dbBoard))
     .catch((err) => res.json(err));
 });
 
-// READ USER'S BOARD
+// READ USER'S BOARD  **INCOMPLETE**
 boardController.get("/", JWTVerifier, (req, res) => {
   db.Board.find({})
-    .then(results => {
-      res.json(results);
-    })
-    .catch(error => {
-      if (error) throw error
-    })
+    .then(results => { res.json(results) })
+    .catch((err) => res.json(err));
   // res.json({ ...template });
 });
 
@@ -57,12 +55,13 @@ boardController.put("/:id", ({ params, body }, res) => {
       _id: params.id,
     },
     {
-      $set: {
+      $set:
+      {
         title: body.title,
       },
     }
   )
-    .then((updatedBoard) => res.json(updatedBoard))
+    .then(updatedBoard => { res.json(updatedBoard) })
     .catch((err) => res.json(err));
 });
 
@@ -108,8 +107,6 @@ boardController.delete("/:id/columns/:column", (req, res) => {
     .then((deletedColumn) => res.json(deletedColumn))
     .catch((err) => res.json(err));
 });
-// { $pull: { 'geoGraphicalFilter.aCoordinates':  {'_id' : ObjectId(itemA.id)}} }
-// { $pull: { fruits: { $in: [ "apples", "oranges" ] },
 
 // -------------------------------------------------------------------------
 
@@ -128,13 +125,14 @@ boardController.post("/:id/columns/:index/cards", JWTVerifier, (req, res) => {
 
     board.columns[index].cards.push(req.body);
     return board.save();
-  });
+  })
+    // this code was added from tutor?:
+    .then((updatedBoard) => res.json(updatedBoard))
+    .catch((err) => res.json(err));
 });
 
 // UPDATE CARD
-boardController.put(
-  "/:id/columns/:column/cards/:card",
-  ({ params, body }, res) => {
+boardController.put("/:id/columns/:column/cards/:card", ({ params, body }, res) => {
     db.Card.findByIdAndUpdate(
       {
         _id: params.id,
@@ -149,19 +147,15 @@ boardController.put(
     )
       .then((updatedCard) => res.json(updatedCard))
       .catch((err) => res.json(err));
-  }
-);
+});
 
 // DELETE CARD
-boardController.delete(
-  "/:id/columns/:column/cards/:card",
-  ({ params }, res) => {
+boardController.delete("/:id/columns/:column/cards/:card", ({ params }, res) => {
     db.Card.findByIdAndDelete({
       _id: params.id,
     })
       .then((deletedCard) => res.json(deletedCard))
       .catch((err) => res.json(err));
-  }
-);
+});
 
 module.exports = boardController;

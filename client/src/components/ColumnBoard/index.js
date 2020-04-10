@@ -2,15 +2,17 @@ import React, { Component } from "react";
 import withStyles from "@material-ui/styles/withStyles";
 import { Grid, Paper, Typography, Button } from "@material-ui/core";
 import CardBoard from "../../components/CardBoard";
-import AuthContext from '../../contexts/AuthContext';
-import API from '../../lib/API';
+import AuthContext from "../../contexts/AuthContext";
+import API from "../../lib/API";
 
 const styles = (theme) => ({
   grid: {
     flexGrow: 1,
-    justifyContent: "center",
-    alignItems: "flex-start",
+    justifyContent: "flex-end",
+    alignItems: "flex-end",
     width: 500,
+    marginLeft: 20,
+    marginBottom: 30,
   },
 
   paper: {
@@ -18,14 +20,10 @@ const styles = (theme) => ({
     textAlign: "left",
     color: theme.palette.text.secondary,
   },
-  box: {
-    marginBottom: 40,
-    height: 65,
-  },
   actionButtom: {
     textTransform: "uppercase",
     margin: theme.spacing(1),
-    width: 152,
+    width: 100,
   },
   alignRight: {
     display: "flex",
@@ -41,42 +39,80 @@ class ColumnBoard extends Component {
     const { handleRefresh, boardId } = this.props;
     const { authToken } = this.context;
 
-    API.Boards.createCardInColumn(authToken, boardId, 0, "My Name", "Lorem ipsum...")
+    API.Boards.createCardInColumn(
+      authToken,
+      boardId,
+      0,
+      "My Name",
+      "Lorem ipsum..."
+    )
       .then(() => handleRefresh())
-      .catch(err => console.log(err));
-  }
+      .catch((err) => console.log(err));
+  };
+
+  handleSave =  (card) => {
+    const { authToken } = this.context;
+    API.Boards.createCardInColumn(
+      authToken,
+      this.props.id,
+      this.props.index,
+      card.title,
+      card.id,
+      card.body
+    ).then((res) => {
+      console.log(res);
+    }).catch((err) => console.log(err));
+  };
+
+  handleDelete = (card) => {
+    const { authToken } = this.context;
+    API.Cards.deleteCardInColumn(
+      authToken,
+      this.props.id,
+      this.props.index,
+      card.id
+    )
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+  };
 
   render() {
     const { classes, title, cards } = this.props;
 
     return (
       <div>
-        <Grid container item xs={12} md={4} className={classes.grid0}>
-          <Grid item>
+        <Grid container item>
+          <Grid item className={classes.grid} xs={12}>
             <Paper className={classes.paper}>
-              <div className={classes.box}>
-                <Typography
-                  style={{ textTransform: "uppercase" }}
-                  color="secondary"
-                  gutterBottom
-                >
-                  {this.props.title}
-                </Typography>
-              </div>
-              <div className={classes.alignRight}>
-                {/* Should add a CardBoard onClick*/}
-                <Button
-                  color="primary"
-                  variant="contained"
-                  className={classes.actionButtom}
-                  onClick={this.handleAdd}
-                >
-                  Add
-                </Button>
+              <div>
+                <div>
+                  <Typography
+                    style={{ textTransform: "uppercase" }}
+                    color="secondary"
+                    gutterBottom
+                  >
+                    {this.props.title}
+                  </Typography>
+                </div>
+                <div className={classes.alignRight}>
+                  {/* Should add a CardBoard onClick*/}
+                  <Button
+                    color="primary"
+                    variant="contained"
+                    className={classes.actionButtom}
+                    onClick={this.handleAdd}
+                  >
+                    Add
+                  </Button>
+                </div>
               </div>
 
-              {cards.map(card => (
-                <CardBoard {...card} />
+              {cards.map((card) => (
+                <CardBoard
+                  {...card}
+                  handleSave={this.handleSave}
+                  handleDelete={this.handleDelete}
+                />
               ))}
             </Paper>
           </Grid>
