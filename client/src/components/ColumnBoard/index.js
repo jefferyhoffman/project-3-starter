@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import withStyles from "@material-ui/styles/withStyles";
-import { Grid, Paper, Typography, Button } from "@material-ui/core";
+import { Grid, Paper, Typography, Button, TextField } from "@material-ui/core";
 import CardBoard from "../../components/CardBoard";
 import AuthContext from "../../contexts/AuthContext";
 import API from "../../lib/API";
@@ -50,7 +50,7 @@ class ColumnBoard extends Component {
       .catch((err) => console.log(err));
   };
 
-  handleSave =  (card) => {
+  handleSave = (card) => {
     const { authToken } = this.context;
     API.Boards.createCardInColumn(
       authToken,
@@ -59,9 +59,11 @@ class ColumnBoard extends Component {
       card.title,
       card.id,
       card.body
-    ).then((res) => {
-      console.log(res);
-    }).catch((err) => console.log(err));
+    )
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => console.log(err));
   };
 
   handleDelete = (card) => {
@@ -93,16 +95,37 @@ class ColumnBoard extends Component {
                   >
                     {this.props.title}
                   </Typography>
+                  {/* to input column text */}
+                  <form noValidate autoComplete="off">
+                    <TextField
+                      id="outlined-basic"
+                      label="Column Title"
+                      variant="outlined"
+                      color="secondary"
+                      //value = {this.props.title}
+                      // onChange = {this.editColumnTitle}
+                    />
+                  </form>
                 </div>
                 <div className={classes.alignRight}>
                   {/* Should add a CardBoard onClick*/}
                   <Button
+                    size="small"
+                    color="secondary"
+                    variant="contained"
+                    className={classes.actionButtom}
+                    //onClick={this.handleEdit}
+                  >
+                    Edit
+                  </Button>
+                  <Button
                     color="primary"
                     variant="contained"
-                    className={classes.actionButton}
+                    size="small"
+                    className={classes.actionButtom}
                     onClick={this.handleAdd}
                   >
-                    Add
+                    Add a Task
                   </Button>
                 </div>
               </div>
