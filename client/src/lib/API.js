@@ -62,8 +62,11 @@ export default {
     // must pass in the id of person they want to follow
     // NOT FINISHED
     addToThoseIFollow: function (userFollowie, authToken) {
-      return axios.put("/api/users/follows", {
-        userFollowie: userFollowie,
+      return axios.put("/api/users/follows", 
+      {
+        userFollowie: userFollowie
+      }, 
+      {
         headers: {
           Authorization: `Bearer ${authToken}`,
         },
@@ -74,12 +77,15 @@ export default {
     // must pass in the id of person they want to unfollow
     // NOT FINISHED
     removeFromThoseIFollow: function (userFollowie, authToken) {
-      return axios.put("/api/users/follows", {
-        userFollowie: userFollowie,
-        headers: {
-          Authorization: `Bearer ${authToken}`,
+      return axios.put("/api/users/follows", 
+        {
+          userFollowie: userFollowie
         },
-      });
+        {
+          headers: {
+            Authorization: `Bearer ${authToken}`,
+          },
+        });
     },
   },
 
@@ -132,7 +138,7 @@ export default {
     // deletes and entire challenge
     //
     deleteChallenge: function (id, authToken) {
-      return axios.delete("/api/challenges/deletechallenge/" + id, {
+      return axios.delete("/api/challenges/deletechallenge/" + id, {}, {
         headers: {
           Authorization: `Bearer ${authToken}`,
         },
@@ -141,7 +147,7 @@ export default {
 
     // deletes actions from a challenge
     deleteActionFromChallenge: function (id, authToken) {
-      return axios.delete("/api/challenges/" + id, {
+      return axios.delete("/api/challenges/" + id, {}, {
         headers: {
           Authorization: `Bearer ${authToken}`,
         },
