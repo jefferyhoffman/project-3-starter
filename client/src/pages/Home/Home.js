@@ -5,40 +5,45 @@ import { Carousel } from 'react-bootstrap'
 
 function HomePage(props) {
 
-  return (<div>
+  return (<>
     <div className="row">
       <div className="col mb-5">
 
         <div className="jumbotron">
           <h1 className="display-4">Baton Pass!</h1>
           <p className="lead">instruction on what to do/or what the site is about</p>
-          <hr className="my-4" />
         </div>
       </div>
     </div>
+    
+<div className="container">
 
-    <div className="row">
-      <div className="col-9">
+      <div className="row">
+        <div className="col-9 move-right">
 
-        <Carousel interval="10000">
-          {props.homeGallery.map((image) =>
+          <Carousel interval="10000">
+            {props.homeGallery.map((image) =>
 
-            <Carousel.Item>
-              <div>
-                <img className="img-fluid" src={image.image} alt='timed slide' />
-            </div>
+<Carousel.Item>
+                <div>
+                  <DrawModal image={image.image} src={image.image} alt={"image.alt"} key={image.name} />
+                  <img className="img-fluid" src={image.image} alt={image.alt} />
+                </div>
 
 
-              <DrawModal image={image.image} src={image.image} alt={"image.caption"} />
-              {console.log(image)}
-            </Carousel.Item>)}
-        </Carousel>
+                {console.log(image)}
+              </Carousel.Item>)}
+          </Carousel>
 
+        </div>
       </div>
-    </div>
+</div>
+   <footer className="home-footer">
+     copyright...
+   </footer>
 
 
-  </div>
+  </>
   );
 }
 

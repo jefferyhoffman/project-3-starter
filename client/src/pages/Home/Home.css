@@ -10,13 +10,25 @@ body{
 .drawbtn{
     color: red;
 }
+.drawbtn:hover{
+    color: red;
+}
 
+.home-footer{
+    background-color: black;
+    color: white;
+    margin-top: 2%;
+    padding: .5px;
+}
 
 .jumbotron{
     background-color:black;
     color: white;
 }
 
+.move-right{
+margin-left: 15%;
+}
 
 .hex{
     color:#C1B4AE ;
