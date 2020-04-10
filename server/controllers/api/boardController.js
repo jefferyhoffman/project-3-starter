@@ -1,6 +1,4 @@
 const boardController = require("express").Router();
-const columnController = require("express").Router();
-const cardController = require("express").Router();
 const { JWTVerifier } = require("../../lib/passport");
 const db = require("../../models");
 
@@ -46,6 +44,8 @@ boardController.get("/", JWTVerifier, (req, res) => {
     .then(results => { res.json(results) })
     .catch((err) => res.json(err));
 });
+// req.user.id will be used to get user id
+
 
 // UPDATE BOARD
 boardController.put("/:id", JWTVerifier, ({ params, body }, res) => {
