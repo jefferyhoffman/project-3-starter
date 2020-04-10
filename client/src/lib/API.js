@@ -56,15 +56,14 @@ export default {
       }
       );
     },
-  },
-
-  Secrets: {
-    getAll: function (authToken) {
-      return axios.get("/api/secrets", {
-        headers: {
-          Authorization: `Bearer ${authToken}`,
-        },
-      });
-    },
-  },
+  }
+  // Secrets: {
+  //   getAll: function (authToken) {
+  //     return axios.get("/api/secrets", {
+  //       headers: {
+  //         Authorization: `Bearer ${authToken}`,
+  //       },
+  //     });
+  //   },
+  // },
 };

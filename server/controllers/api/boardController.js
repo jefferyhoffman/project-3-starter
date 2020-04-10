@@ -1,6 +1,6 @@
 const boardController = require("express").Router();
-// const columnController = require("express").Router();
-// const cardController = require("express").Router();
+const columnController = require("express").Router();
+const cardController = require("express").Router();
 const { JWTVerifier } = require("../../lib/passport");
 const db = require("../../models");
 
@@ -186,5 +186,6 @@ boardController.delete("/:id/columns/:column/cards/:card", ({ params }, res) => 
     .then((deletedCard) => res.json(deletedCard))
     .catch((err) => res.json(err));
 });
+
 
 module.exports = boardController;
