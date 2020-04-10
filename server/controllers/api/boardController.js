@@ -1,6 +1,4 @@
 const boardController = require("express").Router();
-// const columnController = require("express").Router();
-// const cardController = require("express").Router();
 const { JWTVerifier } = require("../../lib/passport");
 const db = require("../../models");
 
