@@ -1,7 +1,8 @@
 const router = require("express").Router();
-const apiControllers = require('express').Router();
 const threadRoutes = require("./thread");
 const replyRoutes = require("./post");
+
+
 
 //Thread routes
 router.use("/thread", threadRoutes);
@@ -10,8 +11,9 @@ router.use("/thread", threadRoutes);
 router.use("/reply", replyRoutes);
 
 
-apiControllers.use('/users', require('./usersController'));
-apiControllers.use('/secrets', require('./secretsController'));
 
-module.exports = apiControllers;
+router.use('/users', require('./usersController'));
+router.use('/secrets', require('./secretsController'));
+
+
 module.exports = router;
