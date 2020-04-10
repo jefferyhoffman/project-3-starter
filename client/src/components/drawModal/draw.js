@@ -7,17 +7,16 @@ function DrawModal(props) {
   const [show, setShow] = useState(false)
   
   const handleClose = () => setShow(false)
-  const handleShow = () => setShow(true)
+  
   
   return (<>
-    <button onClick={handleShow} className="btn btn drawbtn">Draw Me</button>
-      
+
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Draw</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <img className='card-img-top' src={props.image} alt={props.caption} />
+          <img className='card-img-top h-auto' src={props.image} alt={props.alt} />
         </Modal.Body>
         <Modal.Footer>
           <Button variant="dark" onClick={handleClose}>
@@ -25,8 +24,6 @@ function DrawModal(props) {
           </Button>
         </Modal.Footer>
       </Modal>
-
-    
   </>
   )
 }
