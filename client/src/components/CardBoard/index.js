@@ -84,14 +84,14 @@ const CardBoard = (props) => {
             >
               Save
             </Button>
-            {/* <Button
+            <Button
             color="primary"
             variant="contained"
             size="small"
             className={classes.actionButtom}
           >
             Edit
-          </Button> */}
+          </Button>
             <Button
               //onClick={this.openDialog}
               variant="outlined"
