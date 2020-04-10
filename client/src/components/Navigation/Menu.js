@@ -1,15 +1,12 @@
 const Menu = {
-  public: [
+  publicTabs: [
     {
       label: "Home",
       pathname: "/",
     },
-    {
-        label: "Dashboard",
-        pathname: "/dashboard",
-    }
+
   ],
-  private: [
+  privateTabs: [
     {
       label: "Secret",
       pathname: "/secret",

@@ -111,7 +111,7 @@ class Navigation extends Component {
                 textColor="primary"
                 onChange={this.handleChange}
               >
-                {Menu.public.map((item, index) => (
+                {Menu.publicTabs.map((item, index) => (
                   <Tab
                     key={index}
                     component={Link}
@@ -132,7 +132,7 @@ class Navigation extends Component {
                 onChange={this.handleChange}
               >
                 {user &&
-                  Menu.private.map((item, index) => (
+                  Menu.privateTabs.map((item, index) => (
                     <Tab
                       key={index}
                       component={Link}
