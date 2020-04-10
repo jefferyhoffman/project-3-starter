@@ -9,7 +9,7 @@ const backgroundShape = require("../../images/shape.svg");
 
 const styles = (theme) => ({
   root: {
-    flexGrow: 1,
+    display: "flex",
     backgroundColor: theme.palette.grey["100"],
     overflow: "hidden",
     background: `url(${backgroundShape}) no-repeat`,
@@ -19,15 +19,24 @@ const styles = (theme) => ({
     height: "100%",
   },
   grid: {
+    flexGrow: 1,
     maxWidth: 1000,
     margin: "30px auto 30px",
     [theme.breakpoints.down("sm")]: {
       width: "calc(100% - 20px)",
+      flexFlow: "column",
     },
+    [theme.breakpoints.down("md")]: {
+      width: "calc(100% - 20px)",
+      flexFlow: "column",
+    },
+  
+  
     display: "flex",
     flexFlow: "row nowrap",
     justifyContent: "center",
   },
+
 });
 
 class DashBoard extends Component {
@@ -47,8 +56,8 @@ class DashBoard extends Component {
 
     API.Boards.getMy(authToken)
       .then((res) => this.setState({ board: res.data, isLoading: false }))
-      .catch((err) => console.log(err));    
-  }
+      .catch((err) => console.log(err));
+  };
 
   render() {
     const { classes } = this.props;
@@ -60,9 +69,22 @@ class DashBoard extends Component {
           <div>Loading...</div>
         ) : (
           <Grid container justify="left">
-            <Grid spacing={2} container item className={classes.grid}>
+            <Grid
+              xs={12}
+              md={4}
+              spacing={2}
+              container
+              item
+              className={classes.grid}
+            >
               {board.columns.map((column) => (
-                <ColumnBoard boardId={board._id} {...column} handleRefresh={this.refreshBoard} />
+               
+                <ColumnBoard
+                  boardId={board._id}
+                  {...column}
+                  handleRefresh={this.refreshBoard}
+                />
+                
               ))}
               {/* <ColumnBoard title="To Do" />
               <ColumnBoard title = "In Progress"  />
