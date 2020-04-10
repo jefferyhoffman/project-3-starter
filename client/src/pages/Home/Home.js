@@ -29,7 +29,7 @@ function HomePage(props) {
             </div>
 
 
-              <DrawModal src={image} alt={"image.caption"} />
+              <DrawModal src={image.image} alt={"image.caption"} />
               {console.log(image)}
             </Carousel.Item>)}
         </Carousel>

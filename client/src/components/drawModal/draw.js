@@ -10,7 +10,7 @@ function DrawModal(props) {
   const handleShow = () => setShow(true)
   
   return (<>
-          <button onClick={handleShow} className="btn btn">Draw Me</button>
+    <button onClick={handleShow} className="btn btn drawbtn">Draw Me</button>
       
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
