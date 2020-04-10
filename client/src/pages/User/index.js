@@ -4,7 +4,7 @@ import AuthContext from "../../contexts/AuthContext";
 import Selected from "../../components/SelectedChallenges";
 // import CreateChallenge from "../../components/CreateChallenge";
 import API from "../../lib/API";
-
+import "./style.css"
 const User = (props) => {
   const userInfo = useContext(AuthContext);
   const [theSelected, setTheSelected] = useState([]);

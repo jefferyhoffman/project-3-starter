@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { Link, Redirect } from "react-router-dom";
 
-import API from "../../lib/API";
-import AuthContext from "../../contexts/AuthContext";
-import LoginForm from "../../components/LoginForm/LoginForm";
+import API from '../../lib/API';
+import AuthContext from '../../contexts/AuthContext';
+import LoginForm from '../../components/LoginForm/LoginForm';
+import "./style.css";
 
 class Login extends Component {
   static contextType = AuthContext;
@@ -50,10 +51,10 @@ class Login extends Component {
     }
 
     return (
-      <div className="Login">
-        <div className="row">
-          <div className="col">
-            <h1>Login</h1>
+      <div className='Login'>
+        <div className='row'>
+          <div className='col'>
+            <h3 className="h3_heading_dark">Welcome back!</h3>
           </div>
         </div>
         {this.state.error && (
@@ -68,10 +69,7 @@ class Login extends Component {
         <div className="row">
           <div className="col">
             <LoginForm onSubmit={this.handleSubmit} />
-            <div className="mt-3">
-              Don't have an account?{" "}
-              <Link to="/register">Click here to register.</Link>
-            </div>
+            <div className='mt-3 p_text_dark'>If you have not joined, create your own account <Link to='/register'><span className="form_link">here</span></Link>.</div>
           </div>
         </div>
       </div>
