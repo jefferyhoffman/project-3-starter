@@ -3,20 +3,23 @@ import API from "../../lib/API";
 import { Link } from "react-router-dom";
 
 function Threads() {
-  const [threads, setThreads] = useState({});
+  const [threads, setThreads] = useState({})
 
   useEffect(() => {
     loadThreads();
   }, []);
 
   function loadThreads() {
-    API.getThreads()
+    API.Threads.getThreads()
       .then((res) => setThreads(res.data))
       .catch((err) => console.log(err));
   }
 
 return ( 
-    <h1>{threads}</h1>
+<div>
+<h1>{threads.title}</h1>
+<p>{threads.body}</p>
+</div>
 )
 
 };

@@ -41,6 +41,9 @@ class Navigation extends Component {
               <li className='nav-item'>
                 <Link className='nav-link' to='/' onClick={this.toggleCollapse}>Home</Link>
               </li>
+              <li className='nav-item'>
+                <Link className='nav-link' to='/thread' onClick={this.toggleCollapse}>Thread</Link>
+              </li>
               {user &&
                 <li className='nav-item'>
                   <Link className='nav-link' to='/secret' onClick={this.toggleCollapse}>Secret</Link>
@@ -55,11 +58,6 @@ class Navigation extends Component {
               {user
                 ? <AuthDropdown onClick={this.toggleCollapse} />
                 : <li className='nav-item'><Link className='nav-link' to='/login' onClick={this.toggleCollapse}>Login/Register</Link></li>}
-            </ul>
-            <ul className='navbar-nav'>
-              {user
-                ? <AuthDropdown onClick={this.toggleCollapse} />
-                : <li className='nav-item'><Link className='nav-link' to='/thread' onClick={this.toggleCollapse}>Thread</Link></li>}
             </ul>
           </div>
         </nav>
