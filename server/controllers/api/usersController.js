@@ -44,7 +44,7 @@ usersController.get("/follows", JWTVerifier, (req, res) => {
       if (!user) {
         return res
           .status(404)
-          .send(`Challenge with id ${req.params.id} not found.`);
+          .send(`Challenge with id ${req.user.id} not found.`);
       }
 
       console.log(user)
@@ -68,7 +68,7 @@ usersController.put("/", JWTVerifier, (req, res)=> {
       }
       // is not a function
       console.log(user);
-      // return user[0].setUsers(req.body.userFollowie);
+      return user.setUsers(req.body.userFollowie);
     })
     .then(user => res.json(user))
     .catch((err) => console.log(err));
