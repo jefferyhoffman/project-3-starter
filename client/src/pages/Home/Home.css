@@ -3,30 +3,18 @@ body{
 }
 
 .btn{
-    background-color: #DDE1E4;
+    background-color: black;
+    color: white;
+    
 }
 
-.card-link{
-    color: black
-
-}
-
-.timer{
-    text-align:center
-}
-
-.cardbody{
-    color: #C1CAD6;
-}
 
 .jumbotron{
     background-color:black;
     color: white;
 }
 
-/* .col-3{
-    background-color: black;
-} */
+
 .hex{
     color:#C1B4AE ;
     color: #d5aca9;

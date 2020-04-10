@@ -1,43 +1,46 @@
 import React from 'react';
-import ArtistCard from "../../components/ArtistCard/ArtistCard"
+import DrawModal from "../../components/drawModal/draw"
 import "./Home.css"
+import { Carousel } from 'react-bootstrap'
 
 function HomePage(props) {
- 
 
-  
-    return (<div>
-      <div className="row">
-        <div className="col">
+  return (<div>
+    <div className="row">
+      <div className="col mb-5">
 
-          <div className="jumbotron">
-            <h1 className="display-4">Baton Pass!</h1>
-            <p className="lead">instruction on what to do/or what the site is about</p>
-            <hr className="my-4" />
-            {/* <p>*some optional text</p>
-            <a className="btn btn-lg" href="/" role="button">Login/Signup</a> */}
-          </div>
+        <div className="jumbotron">
+          <h1 className="display-4">Baton Pass!</h1>
+          <p className="lead">instruction on what to do/or what the site is about</p>
+          <hr className="my-4" />
         </div>
       </div>
-
-      <div className="row ml-3">
-          {props.homeGallery.map(homeGal =>
-            <ArtistCard
-            key={homeGal.artist}
-            title={homeGal.title}
-            artist={homeGal.artist}
-            image={homeGal.image}
-            caption ={homeGal.caption} 
-             />
-
-          )}
-        
-      </div>
-      
-
     </div>
-    );
-  }
+
+    <div className="row">
+      <div className="col-9">
+
+        <Carousel interval="10000">
+          {props.homeGallery.map((image) =>
+
+            <Carousel.Item>
+              <div>
+                <img className="img-fluid" src={image.image} alt='timed slide' />
+            </div>
+
+
+              <DrawModal src={image} alt={"image.caption"} />
+              {console.log(image)}
+            </Carousel.Item>)}
+        </Carousel>
+
+      </div>
+    </div>
+
+
+  </div>
+  );
+}
 
 
 export default HomePage;
