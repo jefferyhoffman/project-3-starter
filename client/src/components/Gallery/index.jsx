@@ -16,34 +16,34 @@ function Gallery(props) {
     const handleClose = () => setShow(false);
     const handleShow = () => {
         setShow(true)
-        setTimeout(() => {handleClose()}, 5000)
+        setTimeout(() => {handleClose()}, interval)
     }
 
     return (
         <div>
             <div className='card gallery h-100'>
             {props.web ? <img className='card-img-top'   src={props.images} alt="gallery"/> :  
-            <img className='card-img-top'   src={props.images[0]} alt="gallery"/>}
+            <img className='card-img-top'   src={props.images} alt="gallery"/>}
                 <div className='card-body'>
                     <p className='card-text'>{props.name}</p>
                     <button 
                         className='btn btn-dark' 
                         num={props.num}
-                        onClick={() => {handleTime(30);handleShow();}}
+                        onClick={() => {handleTime(5000);handleShow();}}
                     >
                         30 Seconds
                     </button>
                     <button 
                         className='btn btn-dark' 
                         num={props.num}
-                        onClick={() => {handleTime(5000);handleShow();}}
+                        onClick={() => {handleTime(10000);handleShow();}}
                     >
                         60 Seconds
                     </button>
                     <button 
                         className='btn btn-dark' 
                         num={props.num}
-                        onClick={() => {handleTime(50000);handleShow();}}
+                        onClick={() => {handleTime(15000);handleShow();}}
                     >
                         90 Seconds
                     </button>
