@@ -16,6 +16,19 @@ export default {
           'Authorization': `Bearer ${authToken}`
         }
       });
+    },
+    upload: function (theFile, authToken){
+      console.log(authToken)
+        const url = '/api/photos'
+        const formData = new FormData()
+        formData.append('file', theFile)
+        const config = {
+          headers: {
+            'Authorization': `Bearer ${authToken}`,
+            'content-type': 'multipart/form-data'
+          }
+        }
+        return axios.post(url, formData, config)
     }
   },
 
