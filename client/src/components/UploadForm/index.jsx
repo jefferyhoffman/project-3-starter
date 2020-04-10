@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 import AuthContext from '../../contexts/AuthContext';
-
+import API from  '../../lib/API'
 class UploadForm extends React.Component {
     static contextType = AuthContext;
     constructor(props) {
@@ -26,13 +26,18 @@ class UploadForm extends React.Component {
     }
 
     handleSubmit = event => {
-      console.log(this.state)
-      console.log(this.context.user)
+      event.preventDefault()
+      //fetch()
+      
+      
+      const theFile = document.getElementById('file').files[0]
+      API.Users.upload(theFile, this.context.authToken).then(res=>console.log(res))
+
     }
   
     render() {
       return (
-        <div className='form'>
+        <div className='form' action="/api/img-upload" method="POST" >
           <input name='title' type='text' onChange={this.handleInputChange} />
           <input type="file" name="file" id="file" className="inputfile" onChange={this.handleInputChange}/>
           <label htmlFor="file">Choose a file</label>

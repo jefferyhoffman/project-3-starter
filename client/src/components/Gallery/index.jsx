@@ -19,7 +19,8 @@ function Gallery(props) {
     return (
         <div>
             <div className='card gallery h-100'>
-                <img className='card-img-top' src={props.images[0]} alt="gallery"/>
+            {props.web ? <img className='card-img-top'   src={props.images} alt="gallery"/> :  
+            <img className='card-img-top'   src={props.images[0]} alt="gallery"/>}
                 <div className='card-body'>
                     <p className='card-text'>{props.name}</p>
                     <button 
