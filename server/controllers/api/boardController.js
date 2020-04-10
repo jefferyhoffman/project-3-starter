@@ -29,14 +29,25 @@ const template = {
 
 // CREATE BOARD
 boardController.post("/", JWTVerifier, (req, res) => {
-  db.Board.create({ ...template, title: req.body.title, userId: req.user._id })
+  db.Board.create({
+    ...template,
+    title: req.body.title,
+    userId: req.user._id,
+  })
     .then((dbBoard) => res.json(dbBoard))
     .catch((err) => res.json(err));
 });
 
 // READ USER'S BOARD
 boardController.get("/", JWTVerifier, (req, res) => {
-  res.json({ ...template, _id: "12345" });
+  db.Board.find({})
+    .then(results => {
+      res.json(results);
+    })
+    .catch(error => {
+      if (error) throw error
+    })
+  // res.json({ ...template });
 });
 
 // UPDATE BOARD
@@ -64,7 +75,7 @@ boardController.post("/:id/columns", (req, res) => {
       _id: req.params.id,
     },
     {
-      $push: { "columns": req.body },
+      $push: { columns: req.body },
     }
   )
     .then((dbColumn) => res.json(dbColumn))
@@ -75,13 +86,12 @@ boardController.post("/:id/columns", (req, res) => {
 boardController.put("/:id/columns/:column", (req, res) => {
   db.Board.findOneAndUpdate(
     {
-      "_id": req.params.id,
-      "columns._id": req.params.column
+      _id: req.params.id,
+      "columns._id": req.params.column,
     },
     {
-      $set: 
-      {
-        "columns.$.title": req.body.title
+      $set: {
+        "columns.$.title": req.body.title,
       },
     }
   )
@@ -89,15 +99,17 @@ boardController.put("/:id/columns/:column", (req, res) => {
     .catch((err) => res.json(err));
 });
 
-
 // DELETE COLUMN
-boardController.delete("/:id/columns/:column", ({ params }, res) => {
-  db.Column.findByIdAndDelete({
-    _id: params.id,
+boardController.delete("/:id/columns/:column", (req, res) => {
+  db.Board.findByIdAndDelete({
+    _id: req.params.id,
+    "columns._id": req.params.column,
   })
     .then((deletedColumn) => res.json(deletedColumn))
     .catch((err) => res.json(err));
 });
+// { $pull: { 'geoGraphicalFilter.aCoordinates':  {'_id' : ObjectId(itemA.id)}} }
+// { $pull: { fruits: { $in: [ "apples", "oranges" ] },
 
 // -------------------------------------------------------------------------
 
