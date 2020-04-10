@@ -7,7 +7,7 @@ module.exports = {
       // Return a promise to correctly handle asynchronicity.
 
       // Example:
-      return queryInterface.bulkInsert('Challengeactions', [{
+      return queryInterface.bulkInsert('ChallengeActions', [{
         createdAt: new Date(),
         updatedAt: new Date(),
         ActionId: 1,
@@ -22,7 +22,7 @@ module.exports = {
       // Return a promise to correctly handle asynchronicity.
 
       // Example:
-      return queryInterface.bulkDelete('Challengeactions', null, {});
+      return queryInterface.bulkDelete('ChallengeActions', null, {});
     
   }
 };
