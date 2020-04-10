@@ -1,6 +1,6 @@
 .jumbotron {  
   padding: 5%;
-  margin: 0%;
+  margin: 0% auto;
   box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.30);
   background-color: #ffffff73;
   border-radius: 8px;
@@ -31,3 +31,28 @@
   border-radius: 8px;
   text-align: center;
 }
+
+
+@media (min-width: 320px) {
+  /* .container {
+    width: 95%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  } */
+
+  .jumbotron_p {
+    font-size: 1.5rem;
+  
+  }
+  .jumbotron_heading_dark_bold {
+    font-size: 2.5rem;
+  }
+}
+
+
+
+
+
+

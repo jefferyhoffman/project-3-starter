@@ -13,8 +13,10 @@ const SelectedChallenges = (props) => {
               transition={false}
               id="noanim-tab-example"
             >
-              <Tab eventKey="Current Challenge" title="Current Challenge/Create a Challenge">
-                
+              <Tab
+                eventKey="Current Challenge"
+                title="Current Challenge/Create a Challenge"
+              >
                 {props.selections.map((action) => (
                   <p>
                     points: {action.points} - {action.name} -{" "}
@@ -25,9 +27,7 @@ const SelectedChallenges = (props) => {
               {/* <Tab eventKey="Update" title="Update">
                 Update a challenge
               </Tab> */}
-              <Tab eventKey="Past Challenge" title="Past Challenges">
-                
-              </Tab>
+              <Tab eventKey="Past Challenge" title="Past Challenges"></Tab>
             </Tabs>
           </Col>
         </Row>

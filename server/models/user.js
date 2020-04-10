@@ -21,6 +21,10 @@ module.exports = (sequelize, DataTypes) => {
     User.hasMany(models.Challenge, {
       onDelete: "cascade"
     });
+    User.belongsToMany(models.User, {
+      as: "Followers",
+      through: "UserFollowers"
+    });
   };
 
   User.prototype.comparePassword = function (challenge) {

@@ -14,6 +14,7 @@ import NotFound from '../../pages/NotFound/NotFound';
 import UserPage from '../../pages/User'
 import './App.css';
 import theBackground from './images/trees.jpg'
+import muirWoods from './images/muirwoods.jpg'
 class App extends Component {
     constructor(props) {
         super(props);
@@ -42,6 +43,7 @@ class App extends Component {
         this.changeIt =(url) =>{
           let selected
           if(url === 'maryPoppins') selected = theBackground
+          else if(url === 'login') selected = muirWoods
           else selected = ""
           console.log(selected)
           this.setState({backgroundImage:selected})
@@ -103,7 +105,9 @@ class App extends Component {
                                     props => <Home {...props} {...this.state}/>}/>
                                 />
                             <Route path='/login'
-                                component={Login}/>
+                                render={
+                                  props => <Login {...props} {...this.state}/>}/>
+                              />
                             <Route path='/register'
                                 component={Register}/>
                             <PrivateRoute path='/secret'
