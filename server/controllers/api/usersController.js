@@ -3,10 +3,12 @@ const usersController = require('express').Router();
 const db = require('../../models');
 const { JWTVerifier } = require('../../lib/passport');
 const jwt = require('jsonwebtoken');
+const sendGrid = require('../../lib/emailSendgrid');
+
 
 usersController.post('/', (req, res) => {
   const { email, password } = req.body;
-
+  sendGrid("welcome", email);
   db.User.create({ email, password })
     .then(user => res.json(user))
     .catch(err => res.json(err));
