@@ -45,6 +45,8 @@ boardController.get("/", JWTVerifier, (req, res) => {
   //   .catch((err) => res.json(err));
   res.json({ ...template, _id: "123456789012345678901234" });
 });
+// req.user.id will be used to get user id
+
 
 // boardController.get("/", JWTVerifier, (req, res) => {
 //   db.Board.findById({ _id:  })
