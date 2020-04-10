@@ -14,7 +14,10 @@ function Gallery(props) {
     }
 
     const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const handleShow = () => {
+        setShow(true)
+        setTimeout(() => {handleClose()}, 5000)
+    }
 
     return (
         <div>
@@ -52,7 +55,11 @@ function Gallery(props) {
                     <Modal.Title>{props.name}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Slideshow images={props.images} interval={interval}/>
+                        <img 
+                            className="d-block w-100"
+                            src={props.images}
+                            alt='timed slide'
+                        />
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="dark" onClick={handleClose}>
