@@ -91,7 +91,7 @@ class ColumnBoard extends Component {
                   <Typography
                     style={{ textTransform: "uppercase" }}
                     color="secondary"
-                    gutterBottom
+                    gutterBottom='true'
                   >
                     {this.props.title}
                   </Typography>
