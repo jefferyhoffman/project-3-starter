@@ -40,23 +40,15 @@ boardController.post("/", JWTVerifier, (req, res) => {
 
 // READ USER'S BOARD
 boardController.get("/", JWTVerifier, (req, res) => {
-  // db.Board.find({})
-  //   .then(results => { res.json(results) })
-  //   .catch((err) => res.json(err));
-  res.json({ ...template, _id: "123456789012345678901234" });
+  db.Board.findOne({ userId: req.user._id })
+    .then(results => { res.json(results) })
+    .catch((err) => res.json(err));
 });
 // req.user.id will be used to get user id
 
 
-// boardController.get("/", JWTVerifier, (req, res) => {
-//   db.Board.findById({ _id:  })
-//     .then(results => { res.json(results) })
-//     .catch((err) => res.json(err));
-//   // res.json({ ...template });
-// });
-
 // UPDATE BOARD
-boardController.put("/:id", ({ params, body }, res) => {
+boardController.put("/:id", JWTVerifier, ({ params, body }, res) => {
   db.Board.findByIdAndUpdate(
     {
       _id: params.id,
@@ -89,7 +81,7 @@ boardController.post("/:id/columns", (req, res) => {
 });
 
 // UPDATE COLUMN
-boardController.put("/:id/columns/:column", (req, res) => {
+boardController.put("/:id/columns/:column", JWTVerifier, (req, res) => {
   db.Board.findOneAndUpdate(
     {
       _id: req.params.id,
@@ -116,14 +108,7 @@ boardController.delete("/:id/columns/:column", (req, res) => {
     .catch((err) => res.json(err));
 });
 
-// boardController.delete("/:id/columns/:column", (req, res) => {
-//   db.Board.findByIdAndDelete({
-//     _id: req.params.id,
-//     "columns._id": req.params.column,
-//   })
-//     .then((deletedColumn) => res.json(deletedColumn))
-//     .catch((err) => res.json(err));
-// });
+// UPDATE COLUMN: DELETE CARD
 
 // -------------------------------------------------------------------------
 
@@ -172,9 +157,8 @@ boardController.put("/:id/columns/:colIndex/cards/:cardIndex", JWTVerifier, (req
     })
     .then((updatedBoard) => res.json(updatedBoard))
     .catch(err => console.log(err));
-
-
 });
+<<<<<<< HEAD
 // DELETE CARD
 boardController.delete("/:id/columns/:column/cards/:card", ({ params }, res) => {
   db.Card.findByIdAndDelete({
@@ -185,3 +169,30 @@ boardController.delete("/:id/columns/:column/cards/:card", ({ params }, res) => 
 });
 
 module.exports = boardController;
+=======
+
+// DELETE CARD
+boardController.delete("/:id/columns/:columnIndex/cards/:cardIndex", JWTVerifier, (req, res) => {
+  db.Board.findById(req.params.id)
+    .then(board => {
+      if (!board) {
+        throw new Error("Invalid board ID");
+      }
+
+      const colIndex = parseInt(req.params.columnIndex);
+      const cardIndex = parseInt(req.params.cardIndex);
+
+      const removed = board.columns[colIndex].cards.splice(cardIndex, 1);
+      if (!removed.length) {
+        throw new Error("No items removed. Hmn...");
+      }
+
+      console.log(JSON.stringify(board, null, 2));
+      return board.save();
+    })
+    .then(updatedBoard => res.json(updatedBoard))
+    .catch(err => console.log(err))
+});
+
+module.exports = boardController;
+>>>>>>> 746d7da259b8d4a8fc1d93f2c83f425f4e5d6a4e
