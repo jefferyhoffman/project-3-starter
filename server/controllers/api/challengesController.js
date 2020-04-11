@@ -17,7 +17,33 @@ challengesController.get("/:UserId", JWTVerifier, (req, res) => {
     .catch((err) => console.log(err));
 });
 
+// searches for the last five challenges and returns an array of objects (one for each challenge) and each object has the points by catagory
+// NOT WORKING
+// challengesController.get("/multipast", JWTVerifier, (req, res) => {
+//   db.Challenge.findAll({
+//     limit: 5,
+//     order: [['createdAt', 'DESC']],
+//     where: req.user.id
+//   })
+//     .then(challenges => {
+//       if (!challenges.length) {
+//         return res
+//           .status(404)
+//           .send(`Challenge with id ${req.params.id} not found.`);
+//       }
+//       // console.log(challenges);
+//       // console.log(challenges.forEach(val=>{
+//       //   val.getActions();
+//       // }))
+//       // {where: 'category === "food"'}
 
+//       return (challenges.forEach(val=>{
+//         val.getActions();
+//       }))
+//     })
+//     .then(data=> res.json(data))
+//     .catch((err) => console.log(err));
+// });
 
 // get current challenge 
 // working
