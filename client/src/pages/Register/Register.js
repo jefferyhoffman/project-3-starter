@@ -51,71 +51,102 @@ class Register extends Component {
 
   state = {
     redirectToReferrer: false,
-    error: ""
+    error: "",
+    boardCreated: false
   }
 
-  handleSubmit = (email, password) => {
+  newBoard = (title, userId) => {
+    console.log(`title: ${title}`);
+    console.log(`user ID: ${userId}`);
+
+    API.Boards.createBoard(title, userId)
+      .then(response => {
+        this.setState({ boardCreated: true });
+        console.log("response: " + response);
+        console.log("this.state: " + this.state);
+
+      })
+      .catch(err => {
+        if (err.response.status === 401) {
+          this.setState({ error: "board not created." });
+        }
+      });
+  }
+
+  handleSubmit = (email, password, title, userId) => {
     API.Users.create(email, password)
       .then(response => {
-        this.setState({ redirectToReferrer: true })
+        this.setState({ redirectToReferrer: true });
       })
       .catch(err => {
         if (err.response.status === 401) {
           this.setState({ error: "Sorry, that email/password combination is not valid. Please try again." });
         }
       });
+
+    API.Boards.createBoard(title, userId)
+      .then(response => {
+        this.setState({ boardCreated: true });
+        console.log("response: " + response);
+        console.log("this.state: " + this.state);
+      })
+      .catch(err => {
+        if (err.response.status === 401) {
+          this.setState({ error: "board not created." });
+        }
+      });
+}
+
+render() {
+  const { classes } = this.props;
+
+  const { from } = this.props.location.state || { from: { pathname: "/secret" } };
+  const { redirectToReferrer } = this.state;
+
+  if (redirectToReferrer) {
+    return <Redirect to={from} />;
   }
 
-  render() {
-    const { classes } = this.props;
+  return (
+    <div className={classes.root}>
+      <Grid container justify="center">
+        <Grid
+          spacing={4}
+          alignItems="center"
+          justify="center"
+          gutterbottom="True"
+          container
+          className={classes.grid}
+        >
+          <Grid item xs={12} md={4}>
+            <Grid item className={classes.box}>
 
-    const { from } = this.props.location.state || { from: { pathname: "/secret" } };
-    const { redirectToReferrer } = this.state;
+              <Paper className={classes.paper}>
+                <Typography
+                  style={{ textTransform: "uppercase", fontSize: 40 }}
+                  color="secondary"
+                  align='center'
+                  variant="h1"
+                >Register Account</Typography>
 
-    if (redirectToReferrer) {
-      return <Redirect to={from} />;
-    }
-
-    return (
-      <div className={classes.root}>
-        <Grid container justify="center">
-          <Grid
-            spacing={4}
-            alignItems="center"
-            justify="center"
-            gutterbottom="True"
-            container
-            className={classes.grid}
-          >
-            <Grid item xs={12} md={4}>
-              <Grid item className={classes.box}>
-
-                <Paper className={classes.paper}>
-                  <Typography
-                    style={{ textTransform: "uppercase", fontSize: 40 }}
-                    color="secondary"
-                    align='center'
-                    variant="h1"
-                  >Register Account</Typography>
-
-                  {this.state.error &&
-                    <div className={classes.box} >
-                      <div role='alert'>
-                        {this.state.error}
-                      </div>
+                {this.state.error &&
+                  <div className={classes.box} >
+                    <div role='alert'>
+                      {this.state.error}
                     </div>
-                  }
-                  <div>
-                    <RegistrationForm onSubmit={this.handleSubmit} />
                   </div>
-                </Paper>
-              </Grid>
+                }
+                <div>
+                  <RegistrationForm onSubmit={this.handleSubmit} />
+                </div>
+              </Paper>
             </Grid>
           </Grid>
         </Grid>
-      </div>
-    );
-  }
+      </Grid>
+    </div>
+  );
+}
 }
 
 export default withStyles(styles)(Register);
