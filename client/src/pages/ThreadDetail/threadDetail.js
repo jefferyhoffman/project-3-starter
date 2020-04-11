@@ -11,17 +11,18 @@ function ThreadDetail(props) {
     useEffect(() => { 
         API.Threads.getThread(id)
             .then(res => setThread(res.data))
-            .catch(err => console.log(err));
+            .catch(err => console.log(err))
     }, [])
-
+    
     return (
+        
         <div>
             <Jumbotron>
                 <List>
                 
                 </List>
                 
-        <h1>Hi {console.log(thread)}</h1>
+        <h1>Hi {console.log(thread[0].id)}</h1>
             </Jumbotron>
           
           {/* <p>{thread.body}</p> */}
