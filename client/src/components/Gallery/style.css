@@ -3,3 +3,9 @@
     height: 20vw;
     object-fit: cover;
 }
+
+.modalmodal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -41,7 +41,7 @@ class UploadForm extends React.Component {
           <input name='title' type='text' onChange={this.handleInputChange} />
           <input type="file" name="file" id="file" className="inputfile" onChange={this.handleInputChange}/>
           <label htmlFor="file">Choose a file</label>
-          <button className='btn btn-dark' onClick={this.handleSubmit}>Create!</button>
+          <button className='modern-btn' onClick={this.handleSubmit}>Create!</button>
         </div>
       );
     }

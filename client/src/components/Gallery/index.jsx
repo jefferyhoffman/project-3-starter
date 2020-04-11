@@ -25,36 +25,46 @@ function Gallery(props) {
 
     return (
         <div>
-            <div className='card gallery h-100'>
-            {props.web ? <img className='card-img-top'   src={props.images} alt="gallery"/> :  
-            <img className='card-img-top'   src={props.images} alt="gallery"/>}
+            {/* <div className='card gallery h-100'>
+            <img className='card-img-top' src={props.images} alt="gallery"/>  
                 <div className='card-body'>
                     <p className='card-text'>{props.name}</p>
                     <button 
                         className='modern-btn' 
-                        num={props.num}
                         onClick={() => {handleShow(1)}}
                     >
                         1 Seconds
                     </button>
                     <button 
                         className='modern-btn' 
-                        num={props.num}
                         onClick={() => {handleShow(5)}}
                     >
                         5 Seconds
                     </button>
                     <button 
                         className='modern-btn' 
-                        num={props.num}
                         onClick={() => {handleShow(10)}}
                     >
                         10 Seconds
                     </button>
                 </div>
+            </div> */}
+
+            <div className='image-holder'>
+                {<img className='image' src={props.images}/>}
+                <div className='btns'>
+                    <button 
+                        className='invis-btn'
+                        onClick={() => {handleShow(30)}}
+                    >
+                        30s
+                    </button>
+                    <button className='invis-btn'>60s</button>
+                    <button className='invis-btn'>90s</button>
+                </div>
             </div>
 
-            <Modal show={show} onHide={handleClose}>
+            <Modal className='modalmodal' show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title className='col-11 text-center'>
                         <p>{counter}</p>
