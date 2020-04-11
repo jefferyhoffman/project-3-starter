@@ -70,6 +70,7 @@ class App extends Component {
               <Route component={NotFound} />
             </Switch>
           </div>
+          {/* <Route path='/footer' component={Footer} /> */}
         </div>
       </AuthContext.Provider>
     );

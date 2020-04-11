@@ -6,10 +6,15 @@ const replyRoutes = require("./post");
 
 //Thread routes
 router.use("/thread", threadRoutes);
-
-//Post routes
 router.use("/reply", replyRoutes);
 
+// const router = require("express").Router();
+// // const apiControllers = require('express').Router();
+// const threadRoutes = require("./thread");
+// const replyRoutes = require("./post");
+
+// const apiControllers = require("./usersController");
+// const secretsController = require('./secretsController');
 
 
 router.use('/users', require('./usersController'));
