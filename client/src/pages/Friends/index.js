@@ -14,14 +14,23 @@ const Friends = (props) => {
   
   //create a function that takes the input of the user (friend's email)
   const captureSearch = event => {
-    setSearch(event.target.value)
-    console.log(event.target.value)   
+    const email = event.target.value;
+    setSearch(email)
+    console.log(email)   
   }
   
   const handleSubmit = event => {
     event.preventDefault();
   }
   //sends value to API to search if they are in our users table
+  useEffect(() => {
+    // For demonstration purposes, we mock an API call.
+    // API.searchForUser.then((res) => {
+      
+      
+    // });
+  }, []);
+  
   //then create a function to handle the response from API with either 0 or 1 results
   //send api response as props to child (CREATE COMPONENT e.g. followed friends) to display the result
   //if result is a found friend, child component needs to display a button to FOLLOW friend
