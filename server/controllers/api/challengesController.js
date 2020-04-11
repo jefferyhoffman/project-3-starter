@@ -105,7 +105,7 @@ challengesController.get("/challengeaction/:id", (req, res) => {
 })
 
 // get current challenge of any user
-// ????????????
+// ????????????smallChange
 // challengesController.get("/other/:id", (req, res) => {
 //   let convenienceId = req.params.id 
 //   console.log(convenienceId + "**************************************");
