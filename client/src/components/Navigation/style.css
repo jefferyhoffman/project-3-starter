@@ -22,6 +22,8 @@
   font-size: 2rem;
 }
 
+
+
 /* overwriting bootstrap */
 .navbar-brand{
   padding-top: 0;
@@ -38,6 +40,10 @@
   color: #000000;
   border-style: none;
   padding: .25rem 0rem;
+}
+
+.nav-item, dropdown {
+  text-align: right;
 }
 
 /* media q for iPhone5 */
