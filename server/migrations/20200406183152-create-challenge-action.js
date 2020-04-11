@@ -16,6 +16,10 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       },
+      accomplished: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false
+      },
       ActionId: {
         type: Sequelize.INTEGER,
         allowNull: true
