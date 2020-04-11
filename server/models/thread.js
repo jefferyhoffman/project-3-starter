@@ -3,14 +3,14 @@ module.exports = (sequelize, DataTypes) => {
   const Thread = sequelize.define('Thread', {
     title: {
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
       validate: {
           len: [1]
       }
     },
     body: {
         type: DataTypes.TEXT,
-        allowNull: false,
+        // allowNull: false,
         len: [1]
     }
   }, {});
@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
 
     Thread.belongsTo(models.User, {
         foreignKey: {
-            allowNull: false
+            // allowNull: false
         }
     });
   };

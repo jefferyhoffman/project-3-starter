@@ -14,8 +14,9 @@ usersController.post('/', (req, res) => {
 });
 
 usersController.get('/me', JWTVerifier, (req, res) => {
-  res.json(req.user);
+    res.json(req.user);
 });
+
 
 usersController.post('/login', (req, res) => {
 
@@ -32,6 +33,8 @@ usersController.post('/login', (req, res) => {
         user
       });
     });
+
+    
 });
 
 module.exports = usersController;

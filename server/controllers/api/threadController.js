@@ -27,9 +27,11 @@ module.exports = {
       .catch((err) => res.status(422).json(err));
   },
   create: function (req, res) {
-    db.Thread.create(req.body)
-      .then((dbModel) => res.json(dbModel))
-      .catch((err) => res.status(422).json(err));
+    console.log(res)
+    const { title, body } = req.body;
+    db.Thread.create({ title, body })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => console.log(err + "test"));
   },
   update: function (req, res) {
     db.Thread.findOneandUpdate({ _id: req.params.id }, req.body)

@@ -7,6 +7,7 @@ import { Input, TextArea, FormBtn } from "../../components/ThreadForm";
 function Threads() {
   const [threads, setThreads] = useState({});
   const [formObject, setFormObject] = useState({});
+  const [users, setUsers] = useState({});
 
   useEffect(() => {
     loadThreads();
@@ -18,6 +19,12 @@ function Threads() {
       .catch((err) => console.log(err));
   };
 
+  function loadUserId() { 
+      API.Users.getMe()
+      .then((res) => console.log(res.data))
+      .catch((err) => console.log(err));
+  }
+
   function handleInputChange(event) { 
       const { name, value } = event.target;
       setFormObject({...formObject, [name]: value})
@@ -25,7 +32,10 @@ function Threads() {
 
   function handleFormSubmit(event) { 
       event.preventDefault();
+      loadUserId();
+     
       if (formObject.title && formObject.body) { 
+          
           API.Threads.createThread({
               title: formObject.title,
               body: formObject.body

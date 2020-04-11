@@ -1,46 +1,50 @@
-import axios from 'axios';
+import axios from "axios";
 
 export default {
   Users: {
     login: async function (email, password) {
-      return axios.post('/api/users/login', { email, password });
+      return axios.post("/api/users/login", { email, password });
     },
 
     create: function (email, password) {
-      return axios.post('/api/users', { email, password });
+      return axios.post("/api/users", { email, password });
     },
 
     getMe: function (authToken) {
-      return axios.get('/api/users/me', {
+      return axios.get("/api/users/me", {
         headers: {
-          'Authorization': `Bearer ${authToken}`
-        }
+          Authorization: `Bearer ${authToken}`,
+        },
       });
+    },
+
+    createThread: function (threadData) { 
+      return axios.post("/api/thread", threadData);
     }
   },
 
   Secrets: {
     getAll: function (authToken) {
-      return axios.get('/api/secrets', {
+      return axios.get("/api/secrets", {
         headers: {
-          'Authorization': `Bearer ${authToken}`
-        }
+          Authorization: `Bearer ${authToken}`,
+        },
       });
-    }
+    },
   },
 
-  Threads: { 
+  Threads: {
     //gets all threads
-    getThreads: function() { 
+    getThreads: function () {
       return axios.get("/api/thread");
     },
     //Gets thread with specific id
-    getThread: function(id) { 
+    getThread: function (id) {
       return axios.get("/api/thread/" + id);
     },
-    //Creates a thread
-    createThread: function(threadData) { 
+    // Creates a thread
+    createThread: function (threadData) {
       return axios.post("/api/thread", threadData);
-    }
-  }
-}
+    },
+  },
+};
