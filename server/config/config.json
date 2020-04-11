@@ -1,7 +1,11 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password": "root",
+=======
+    "password": "Daphne93!",
+>>>>>>> a727df0680df341f64bf97adc53ea4a80a031578
     "database": "project3_development",
     "host": "127.0.0.1",
     "dialect": "mysql",
