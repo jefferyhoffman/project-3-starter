@@ -36,6 +36,43 @@ class App extends Component {
         onLogin: this.handleLogin,
         onLogout: this.handleLogout
       }, 
+
+      homeGallery:[
+        {
+        alt:"A sketch of a woman inside of a fishbol",
+        image:"https://paintingvalley.com/sketches/nice-sketches-13.jpg"
+      },
+      {
+        
+        alt:"A sketch of a wold",
+        image:"https://paintingvalley.com/sketches/sketch-a-wolf-23.jpg"
+      },
+      {
+        alt:"A sketch of Deku",
+        image:"https://i.pinimg.com/originals/86/0d/da/860ddae3f7e378a2e8e9450e6518d877.jpg"
+      },
+      {
+        alt:"A sketch of a sad woman",
+        image:"https://bestsketches.com/wp-content/uploads/2020/04/Facial-cute-sketches-easy.jpg"
+      },
+      {
+        alt:"A sketch of a mountain",
+        image:"https://1.bp.blogspot.com/-KsHtmvIza_U/T6APoSGzB-I/AAAAAAAAA2Y/YfetAFJVrYc/w640/Sketch-of-Mt-Ama-Dablam.jpg"
+      },
+      {
+        alt:"A sketch of a Rose",
+        image:"https://i.pinimg.com/originals/29/53/7a/29537a687d5a399483294ed3bebe22aa.jpg"
+      },
+      {
+        alt:"a sketch of woman wearing glasses",
+        image:"https://clip.cookdiary.net/sites/default/files/wallpaper/drawn-portrait/345000/drawn-portrait-easy-sketch-345000-2227516.jpg"
+      },
+      {
+        alt:"a sketch of a landscape",
+        image:"https://i.ytimg.com/vi/1rHYcXmKd9o/maxresdefault.jpg"
+      },
+    ],
+
       galleries: [
         {
           name: 'Sketches Vol 01', 
@@ -102,7 +139,8 @@ class App extends Component {
           <Navigation />
           <div>
             <Switch>
-              <Route exact path='/' component={Home} />
+              <Route exact path='/' render={()=> <Home homeGallery={this.state.homeGallery}/>}
+               />
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />
               <Route 
