@@ -91,6 +91,7 @@ challengesController.post("/", JWTVerifier, (req, res) => {
 
 // update through table "accomplished"
 // actually updates challengeaction
+// Working
 challengesController.put("/challengeaction", JWTVerifier, (req, res)=>{
   const { ChallengeId, ActionId } = req.body
   

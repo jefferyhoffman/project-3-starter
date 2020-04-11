@@ -176,6 +176,34 @@ export default {
       );
     },
 
+
+    // This function Toggles an actions accomplished actribute both from true to false and false to true
+    // returns an object with ChallengeAction data 
+    challengeActionAccomplishedToggle: function(ChallengeId, ActionId, authToken){
+      return axios.put("/api/challenges/challengeaction", {
+        ChallengeId: ChallengeId,
+        ActionId: ActionId
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${authToken}`,
+        },
+      });
+    },
+    
+
+    // get current score of challenge based on actions accomplished
+    // must pass ChallengeId and authToken
+    // returns a number
+    getCurrentScoreOfChallenge: function(ChallengeId, authToken){
+      return axios.get("/api/challenges/challengeaction/"+ ChallengeId, {
+        headers: {
+          Authorization: `Bearer ${authToken}`,
+        }
+      } )
+    }
+
+
     // NOT NEEDED
     // updates a challenges totalPoints when passed an id and a new points total, would have to calc on front end for now
     // updatePoints: function(id, totalPoints, authToken){
