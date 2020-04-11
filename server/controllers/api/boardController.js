@@ -46,7 +46,6 @@ boardController.get("/", JWTVerifier, (req, res) => {
 });
 // req.user.id will be used to get user id
 
-
 // UPDATE BOARD
 boardController.put("/:id", JWTVerifier, ({ params, body }, res) => {
   db.Board.findByIdAndUpdate(
@@ -66,20 +65,6 @@ boardController.put("/:id", JWTVerifier, ({ params, body }, res) => {
 
 // -------------------------------------------------------------------------
 
-// CREATE COLUMN
-boardController.post("/:id/columns", (req, res) => {
-  db.Board.findByIdAndUpdate(
-    {
-      _id: req.params.id,
-    },
-    {
-      $push: { columns: req.body },
-    }
-  )
-    .then((dbColumn) => res.json(dbColumn))
-    .catch((err) => res.json(err));
-});
-
 // UPDATE COLUMN
 boardController.put("/:id/columns/:column", JWTVerifier, (req, res) => {
   db.Board.findOneAndUpdate(
@@ -97,18 +82,36 @@ boardController.put("/:id/columns/:column", JWTVerifier, (req, res) => {
     .catch((err) => res.json(err));
 });
 
-// DELETE COLUMN
-boardController.delete("/:id/columns/:column", (req, res) => {
-  db.Board.find(
-    {
-      _id: req.params.id
-    }
-  )
-    .then((deletedColumn) => res.json(deletedColumn))
-    .catch((err) => res.json(err));
-});
 
-// UPDATE COLUMN: DELETE CARD
+// UPDATE COLUMN: MOVE CARD
+boardController.put("/:id/columns/:columnIndex/:newColumnIndex/cards/:cardIndex", JWTVerifier, (req, res) => {
+  db.Board.findById(req.params.id)
+  .then(board => {
+    if(!board) {
+      throw new Error("Invalid board ID");
+    }
+
+    const columnIndex = parseInt(req.params.columnIndex);
+    const newColumnIndex = parseInt(req.params.newColumnIndex);
+    const cardIndex = parseInt(req.params.cardIndex);
+
+    let array1 = board.columns[columnIndex].cards;
+    let array2 = board.columns[newColumnIndex].cards;
+    let cardToMove = array1[cardIndex];
+
+    if (!array1.length) {
+      throw new Error("No items to remove. Hmm...");
+    }
+
+    array1.splice(cardIndex, 1);
+    array2.push(cardToMove);
+
+    return board.save();
+    
+  })
+  .then(splicedCard => res.json(splicedCard))
+  .catch(err => console.log(err))
+});
 
 // -------------------------------------------------------------------------
 
