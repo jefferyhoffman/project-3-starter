@@ -4,7 +4,9 @@ import "../Footer/footer.css";
 class footer extends Component {
     render () {
         return (
-            <div>Test</div>
+            <div className="wrapper">
+                 <footer class="page-footer">Sticky footer</footer>
+            </div>        
         )
     }
 }
