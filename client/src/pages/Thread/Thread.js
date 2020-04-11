@@ -6,6 +6,7 @@ import { Input, TextArea, FormBtn } from "../../components/ThreadForm";
 
 function Threads() {
   const [threads, setThreads] = useState({});
+  const [formObject, setFormObject] = useState({});
 
   useEffect(() => {
     loadThreads();
@@ -44,7 +45,24 @@ function Threads() {
       <Jumbotron>
           <h1>Create a new thread:</h1>
       </Jumbotron>
-      
+      <form>
+          <Input
+            onChange={handleInputChange}
+            name="title"
+            placeholder="Thread title (required)"
+          />
+          <TextArea
+            onChange={handleInputChange}
+            name="body"
+            placeholder="Write about music here..."
+          />
+          <FormBtn
+            disabled={!(formObject.title && formObject.body)}
+            onClick={handleFormSubmit}
+          >
+            Create new thread
+          </FormBtn>
+      </form>
     </div>
   );
 }
