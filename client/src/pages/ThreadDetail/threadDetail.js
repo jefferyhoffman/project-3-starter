@@ -4,13 +4,20 @@ import Jumbotron from "../../components/Jumbotron/index";
 import { List, ListItem } from "../../components/List/index";
 import API from "../../lib/API";
 
-function ThreadDetail(props) { 
+function ThreadDetail({ match }) { 
     const [thread, setThread] = useState({});
+    const [reply, setReply] = useState({});
 
     const {id} = useParams()
     useEffect(() => { 
         API.Threads.getThread(id)
-            .then(res => setThread(res.data))
+            .then(res => setThread(res.data[0]))
+            .catch(err => console.log(err))
+    }, [])
+
+    useEffect(() => { 
+        API.Threads.getThread(id)
+            .then(res => setReply(res.data[0].Replies[0]))
             .catch(err => console.log(err))
     }, [])
     
@@ -22,7 +29,9 @@ function ThreadDetail(props) {
                 
                 </List>
                 
-        <h1>Hi {console.log(thread[0].id)}</h1>
+    <h1>{thread.title}{console.log(reply)}</h1>
+    <p>{thread.body}</p>
+    <p>{reply.body}</p>
             </Jumbotron>
           
           {/* <p>{thread.body}</p> */}
