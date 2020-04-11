@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import "./Home.css";
+import "../../components/NewThreadButton/NewThreadButton"
+import NewThreadButton from '../../components/NewThreadButton/NewThreadButton';
 // import logo from './logo.svg';
 
 var { DateTime } = require('luxon');
@@ -8,11 +10,13 @@ const Date = DateTime.local().toLocaleString(DateTime.DATETIME_MED); /* Luxon ca
 class HomePage extends Component {
   render() {
     return (
+    <div>
       <div>
         <p>Welcome to The Cadenza forums! {Date}</p>
       
         
       </div>
+    </div>
     );
   }
 };

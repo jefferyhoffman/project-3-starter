@@ -27,7 +27,7 @@ class Navigation extends Component {
     return (
       <div> 
         <div className="Header">
-        <img src={SiteLogo} alt=""></img>
+        <img src={SiteLogo} alt="The Cadenza logo" id="sitelogo"></img>
         </div>
       <div className='Navigation'>
         <nav className='navbar navbar-expand-lg navbar-dark bg-dark mb-3'>
@@ -37,7 +37,7 @@ class Navigation extends Component {
           </button>
 
           <div className={targetClass} id='navbarSupportedContent'>
-            <ul className='navbar-nav mr-auto'>
+            <ul className='navbar-nav'>
               <li className='nav-item'>
                 <Link className='nav-link' to='/' onClick={this.toggleCollapse}>Home</Link>
               </li>
@@ -49,7 +49,7 @@ class Navigation extends Component {
                   <Link className='nav-link' to='/secret' onClick={this.toggleCollapse}>Secret</Link>
                 </li>}
             </ul>
-            <ul className='navbar-nav mr-auto'>
+            <ul className='navbar-nav mr-auto right'>
               <li className='nav-item'>
                 <Link className='nav-link' to='/profile' onClick={this.toggleCollapse}>Profile</Link>
               </li>
