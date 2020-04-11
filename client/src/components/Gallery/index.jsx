@@ -14,7 +14,12 @@ function Gallery(props) {
     }
 
     useEffect(() => {
-        counter > 0 && setTimeout(() => setCounter(counter - 1), 1000)
+        if(counter > 0) {
+            const t = setTimeout(() => setCounter(counter - 1), 1000)
+            if(show === false) {
+                clearTimeout(t)
+            }
+        }
     }, [counter]);
 
     useEffect(() => {
