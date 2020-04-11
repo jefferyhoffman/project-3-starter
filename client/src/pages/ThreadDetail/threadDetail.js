@@ -9,7 +9,8 @@ function ThreadDetail({ match }) {
     const [reply, setReply] = useState({});
     const [user, setUser] = useState({});
 
-    const {id} = useParams()
+    const {id} = useParams();
+
     useEffect(() => { 
         API.Threads.getThread(id)
             .then(res => setThread(res.data[0]))
