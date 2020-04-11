@@ -7,6 +7,7 @@ import API from "../../lib/API";
 function ThreadDetail({ match }) { 
     const [thread, setThread] = useState({});
     const [reply, setReply] = useState({});
+    const [user, setUser] = useState({});
 
     const {id} = useParams()
     useEffect(() => { 
@@ -20,6 +21,12 @@ function ThreadDetail({ match }) {
             .then(res => setReply(res.data[0].Replies[0]))
             .catch(err => console.log(err))
     }, [])
+
+    useEffect(() => {
+        API.Threads.getThread(id)
+        .then(res => setUser(res.data[0].Replies[0].User))
+        .catch(err => console.log(err))
+    }, [])
     
     return (
         
@@ -32,6 +39,7 @@ function ThreadDetail({ match }) {
     <h1>{thread.title}{console.log(reply)}</h1>
     <p>{thread.body}</p>
     <p>{reply.body}</p>
+    <p>{user.email}</p>
             </Jumbotron>
           
           {/* <p>{thread.body}</p> */}
