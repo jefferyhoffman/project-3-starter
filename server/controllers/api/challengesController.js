@@ -17,7 +17,33 @@ challengesController.get("/:UserId", JWTVerifier, (req, res) => {
     .catch((err) => console.log(err));
 });
 
+// searches for the last five challenges and returns an array of objects (one for each challenge) and each object has the points by catagory
+// NOT WORKING
+// challengesController.get("/multipast", JWTVerifier, (req, res) => {
+//   db.Challenge.findAll({
+//     limit: 5,
+//     order: [['createdAt', 'DESC']],
+//     where: req.user.id
+//   })
+//     .then(challenges => {
+//       if (!challenges.length) {
+//         return res
+//           .status(404)
+//           .send(`Challenge with id ${req.params.id} not found.`);
+//       }
+//       // console.log(challenges);
+//       // console.log(challenges.forEach(val=>{
+//       //   val.getActions();
+//       // }))
+//       // {where: 'category === "food"'}
 
+//       return (challenges.forEach(val=>{
+//         val.getActions();
+//       }))
+//     })
+//     .then(data=> res.json(data))
+//     .catch((err) => console.log(err));
+// });
 
 // get current challenge 
 // working
@@ -42,6 +68,65 @@ challengesController.get("/", JWTVerifier, (req, res) => {
 
 
 
+// get current score of challenge based on actions accomplished
+challengesController.get("/challengeaction/:id", (req, res) => {
+
+  db.ChallengeAction.findAll({
+    where: {
+      ChallengeId: req.params.id,
+      accomplished: 1
+    }
+  })
+  .then((data) => {
+    return (data.map(val => {
+      return val.dataValues.ActionId
+    }));
+  })
+  .then((actionIdArray) => {
+    db.Action.findAll({
+      where: {
+        id: actionIdArray
+      }
+    })
+    .then((actions) => {
+      if (!actions) {
+        return res
+          .status(404)
+          .send(`action could not found.`);
+      }
+
+      let scoredPoints = actions.reduce((total, action) => total + action.points, 0)
+
+      res.json(scoredPoints);
+    })
+    .catch((err) => console.log(err));
+  })
+  .catch((err) => console.log(err));
+})
+
+// get current challenge of any user
+// ????????????smallChange
+// challengesController.get("/other/:id", (req, res) => {
+//   let convenienceId = req.params.id 
+//   console.log(convenienceId + "**************************************");
+//   db.Challenge.findAll({
+//     where: convenienceId,
+//     limit: 1,
+//     order: [['createdAt', 'DESC']]
+//   })
+//     .then(challenges => {
+//       if(!challenges.length){
+//         return res  
+//           .status(404)
+//           .send(`User with id of ${req.params.id} has no current challenge`)
+//       }
+//       // console.log(challenges)
+//       return challenges[0].getActions();
+//     })
+//     .then(actions => res.json(actions))
+//     .catch((err) => console.log(err));
+// });
+
 // post challenge 
 // working
 challengesController.post("/", JWTVerifier, (req, res) => {
@@ -49,6 +134,41 @@ challengesController.post("/", JWTVerifier, (req, res) => {
     .then(challenges => res.json(challenges))
     .catch((err) => console.log(err));
 });
+
+
+
+// update through table "accomplished"
+// actually updates challengeaction
+// Working
+challengesController.put("/challengeaction", JWTVerifier, (req, res)=>{
+  const { ChallengeId, ActionId } = req.body
+  
+  db.ChallengeAction.findAll({
+    where: {
+      ChallengeId: ChallengeId,
+      ActionId: ActionId,
+    },
+  })
+    .then((data) => {
+      if (!data.length) {
+        return res
+          .status(404)
+          .send(`ChallengeAction with ChallengeId ${ChallengeId} and ActionId ${ActionId} not found.`);
+      }
+
+      if(data[0].dataValues.accomplished === false){
+        return data[0].updateAttributes({
+          accomplished: 1
+        })
+      }else {
+        return data[0].updateAttributes({
+          accomplished: 0
+        })
+      }
+    })
+    .then((val) => res.json(val))
+    .catch((err) => console.log(err));
+}) 
 
 
 
