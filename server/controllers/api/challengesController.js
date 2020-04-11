@@ -42,6 +42,43 @@ challengesController.get("/", JWTVerifier, (req, res) => {
 
 
 
+// get current score of challenge based on actions accomplished
+challengesController.get("/challengeaction/:id", (req, res) => {
+
+  db.ChallengeAction.findAll({
+    where: {
+      ChallengeId: req.params.id,
+      accomplished: 1
+    }
+  })
+  .then((data) => {
+    return (data.map(val => {
+      return val.dataValues.ActionId
+    }));
+  })
+  .then((actionIdArray) => {
+    db.Action.findAll({
+      where: {
+        id: actionIdArray
+      }
+    })
+    .then((actions) => {
+      if (!actions) {
+        return res
+          .status(404)
+          .send(`action could not found.`);
+      }
+
+      let scoredPoints = actions.reduce((total, action) => total + action.points, 0)
+
+      res.json(scoredPoints);
+    })
+    .catch((err) => console.log(err));
+  })
+  .catch((err) => console.log(err));
+})
+
+
 // post challenge 
 // working
 challengesController.post("/", JWTVerifier, (req, res) => {
@@ -49,6 +86,40 @@ challengesController.post("/", JWTVerifier, (req, res) => {
     .then(challenges => res.json(challenges))
     .catch((err) => console.log(err));
 });
+
+
+
+// update through table "accomplished"
+// actually updates challengeaction
+challengesController.put("/challengeaction", JWTVerifier, (req, res)=>{
+  const { ChallengeId, ActionId } = req.body
+  
+  db.ChallengeAction.findAll({
+    where: {
+      ChallengeId: ChallengeId,
+      ActionId: ActionId,
+    },
+  })
+    .then((data) => {
+      if (!data.length) {
+        return res
+          .status(404)
+          .send(`ChallengeAction with ChallengeId ${ChallengeId} and ActionId ${ActionId} not found.`);
+      }
+
+      if(data[0].dataValues.accomplished === false){
+        return data[0].updateAttributes({
+          accomplished: 1
+        })
+      }else {
+        return data[0].updateAttributes({
+          accomplished: 0
+        })
+      }
+    })
+    .then((val) => res.json(val))
+    .catch((err) => console.log(err));
+}) 
 
 
 
