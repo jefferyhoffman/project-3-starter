@@ -21,6 +21,18 @@ function Threads() {
       setFormObject({...formObject, [name]: value})
   };
 
+  function handleFormSubmit(event) { 
+      event.preventDefault();
+      if (formObject.title && formObject.body) { 
+          API.Threads.createThread({
+              title: formObject.title,
+              body: formObject.body
+          })
+          .then(res => loadThreads())
+          .catch(err => console.log(err));
+      }
+  }
+
 
   return (
     <div>

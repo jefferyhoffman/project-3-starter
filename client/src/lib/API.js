@@ -40,7 +40,7 @@ export default {
     },
     //Creates a thread
     createThread: function(threadData) { 
-      return axios.create("/api/thread", threadData);
+      return axios.post("/api/thread", threadData);
     }
   }
 }
