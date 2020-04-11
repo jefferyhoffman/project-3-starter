@@ -11,7 +11,8 @@ import Login from '../../pages/Login/Login';
 import Register from '../../pages/Register/Register';
 import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
-import UserPage from '../../pages/User'
+import UserPage from '../../pages/User';
+import Friends from '../../pages/Friends'
 import './App.css';
 import theBackground from './images/trees.jpg'
 import muirWoods from './images/muirwoods.jpg'
@@ -114,6 +115,8 @@ class App extends Component {
                                 component={Secret}/>
                             <PrivateRoute path='/userpage'
                                 component={UserPage}/>
+                            <PrivateRoute path='/friends'
+                                component={Friends}/>
                             <Route component={NotFound}/>
                         </Switch>
                     </div>

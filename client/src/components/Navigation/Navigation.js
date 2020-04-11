@@ -53,12 +53,23 @@ class Navigation extends Component {
                     to="/userpage"
                     onClick={this.toggleCollapse}
                   >
-                    User Page
+                    Me
                   </Link>
                 </li>
               )}
-            </ul>
-            <ul className="navbar-nav">
+              {user && (
+                <li className="nav-item">
+                  <Link
+                    className="nav-link nav_heading_dark"
+                    to="/friends"
+                    onClick={this.toggleCollapse}
+                  >
+                    My Friends
+                  </Link>
+                </li>
+              )}
+            {/* </ul>
+            <ul className="navbar-nav"> */}
               {user ? (
                 <AuthDropdown onClick={this.toggleCollapse} />
               ) : (
