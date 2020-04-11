@@ -9,6 +9,7 @@ function Galleries(props) {
     return (
         <div>
             <UploadForm />
+            <hr className='transparent-hr' />
             <div className='galleries'>
                 {value.user && value.user.galleries.map((image, index)=>(
                     <Gallery
