@@ -104,6 +104,28 @@ challengesController.get("/challengeaction/:id", (req, res) => {
   .catch((err) => console.log(err));
 })
 
+// get current challenge of any user
+// ????????????
+// challengesController.get("/other/:id", (req, res) => {
+//   let convenienceId = req.params.id 
+//   console.log(convenienceId + "**************************************");
+//   db.Challenge.findAll({
+//     where: convenienceId,
+//     limit: 1,
+//     order: [['createdAt', 'DESC']]
+//   })
+//     .then(challenges => {
+//       if(!challenges.length){
+//         return res  
+//           .status(404)
+//           .send(`User with id of ${req.params.id} has no current challenge`)
+//       }
+//       // console.log(challenges)
+//       return challenges[0].getActions();
+//     })
+//     .then(actions => res.json(actions))
+//     .catch((err) => console.log(err));
+// });
 
 // post challenge 
 // working
