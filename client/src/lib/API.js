@@ -28,6 +28,48 @@ export default {
       });
     },
 
+    createBoard: function (title, userId) {
+      return axios.post("/api/boards",
+        {
+          title,
+          userId,
+        }
+      );
+    },
+  },
+
+  Columns: {
+    updateColumnTitle: function (authToken, boardId, colId, title) {
+      return axios.put(
+        `/api/boards/${boardId}/columns/${colId}`,
+        {
+          title,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${authToken}`,
+          },
+        }
+      );
+    },
+
+    updateColumnMoveCard: function (authToken, boardId, colIndex, newColIndex, cardIndex) {
+      return axios.put(`/api/boards/${boardId}/columns/${colIndex}/${newColIndex}/cards/${cardIndex}`,
+        {
+          colIndex,
+          newColIndex,
+          cardIndex,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${authToken}`,
+          },
+        }
+      )
+    },
+  },
+
+  Cards: {
     createCardInColumn: function (authToken, boardId, colIndex, title, body) {
       return axios.post(
         `/api/boards/${boardId}/columns/${colIndex}/cards`,
@@ -42,21 +84,35 @@ export default {
         }
       );
     },
-  },
 
-  Cards: {
-    deleteCardInColumn: function (authToken, boardId, colIndex, cardId) {
-      return axios.delete(`/${boardId}/columns/${colIndex}/cards/${cardId}`,{
-        cardId
-      },
-      {
-        headers: {
-          Authorization: `Bearer ${authToken}`,
+    updateCard: function (authToken, boardId, colIndex, cardIndex, title, body) {
+      return axios.put(`/api/boards/${boardId}/columns/${colIndex}/cards`,
+        {
+          title,
+          body,
         },
-      }
+        {
+          headers: {
+            Authorization: `Bearer ${authToken}`,
+          },
+        }
+      );
+    },
+
+    deleteCardInColumn: function (authToken, boardId, colIndex, cardIndex) {
+      return axios.delete(`/${boardId}/columns/${colIndex}/cards/${cardIndex}`,
+        {
+          cardIndex
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${authToken}`,
+          },
+        }
       );
     },
   },
+  
   Secrets: {
     getAll: function (authToken) {
       return axios.get("/api/secrets", {

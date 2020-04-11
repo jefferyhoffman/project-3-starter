@@ -30,7 +30,7 @@ boardController.post("/", JWTVerifier, (req, res) => {
   db.Board.create(
     {
       ...template,
-      title: req.body.title,
+      title: "title",
       userId: req.user._id,
     }
   )
