@@ -60,11 +60,6 @@ function Gallery(props) {
                             alt='timed slide'
                         />
                 </Modal.Body>
-                <Modal.Footer className='col-12 text-center'>
-                    <Button variant="dark" onClick={handleClose}>
-                        Close
-                    </Button>
-                </Modal.Footer>
             </Modal>
         </div>
     )
