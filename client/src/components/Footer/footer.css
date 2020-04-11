@@ -7,6 +7,10 @@
 .page-header,
 .page-footer {
     flex-shrink: 0;
+    background-color: hotpink;
+
+    height: 50px;
+
 }
 
 .page-body {

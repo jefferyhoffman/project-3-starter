@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import "./Home.css";
 import "../../components/NewThreadButton/NewThreadButton"
 import NewThreadButton from '../../components/NewThreadButton/NewThreadButton';
+import Footer from '../../components/Footer/footer';
 // import logo from './logo.svg';
 
 var { DateTime } = require('luxon');
@@ -12,10 +13,9 @@ class HomePage extends Component {
     return (
     <div>
       <div>
-        <p>Welcome to The Cadenza forums! {Date}</p>
-      
-        
+        <p>Welcome to The Cadenza forums! {Date}</p>  
       </div>
+      {Footer}
     </div>
     );
   }
