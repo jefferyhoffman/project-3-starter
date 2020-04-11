@@ -25,31 +25,6 @@ function Gallery(props) {
 
     return (
         <div>
-            {/* <div className='card gallery h-100'>
-            <img className='card-img-top' src={props.images} alt="gallery"/>  
-                <div className='card-body'>
-                    <p className='card-text'>{props.name}</p>
-                    <button 
-                        className='modern-btn' 
-                        onClick={() => {handleShow(1)}}
-                    >
-                        1 Seconds
-                    </button>
-                    <button 
-                        className='modern-btn' 
-                        onClick={() => {handleShow(5)}}
-                    >
-                        5 Seconds
-                    </button>
-                    <button 
-                        className='modern-btn' 
-                        onClick={() => {handleShow(10)}}
-                    >
-                        10 Seconds
-                    </button>
-                </div>
-            </div> */}
-
             <div className='image-holder'>
                 {<img className='image' src={props.images}/>}
                 <div className='btns'>
