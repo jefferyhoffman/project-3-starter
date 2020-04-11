@@ -25,13 +25,13 @@ const SelectedChallenges = (props) => {
                 
                 {props.selections.map((action, position) => (
                   <p key={action.id+position}>
-                    <span style={{ cursor: "pointer" }} onClick={()=>handleComplete(position)}>X</span>points: {action.points} - {action.name} -{" "}
+                    <span style={{ cursor: "pointer" }} onClick={()=>handleComplete(position)}> X </span>points: {action.points} - {action.name} -{" "}
                     {action.description}
                   </p>
                   
                 ))}
                 {props.selections.length > 0 ? (
-                  <Button variant="success" onClick={props.clickHandler}>
+                  <Button variant="outline-info" onClick={props.clickHandler}>
                     Saved
                   </Button>
                 ) : null}
