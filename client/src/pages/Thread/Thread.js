@@ -2,6 +2,7 @@ import React, { useState, use, useEffect } from "react";
 import API from "../../lib/API";
 import { Link } from "react-router-dom";
 import Jumbotron from "../../components/Jumbotron";
+import { Input, TextArea, FormBtn } from "../../components/ThreadForm";
 
 function Threads() {
   const [threads, setThreads] = useState({});
@@ -40,6 +41,10 @@ function Threads() {
         <Link to={"/thread/" + threads.id + "/" }>{threads.title}</Link>
         <p>{threads.body}</p>
       </Jumbotron>
+      <Jumbotron>
+          <h1>Create a new thread:</h1>
+      </Jumbotron>
+      
     </div>
   );
 }
