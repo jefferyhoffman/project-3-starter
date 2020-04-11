@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const threadController = require("../api/threadController");
-const usersController = require("../api/usersController")
+
 
 
 

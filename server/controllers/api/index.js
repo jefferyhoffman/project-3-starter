@@ -16,7 +16,6 @@ router.use("/reply", replyRoutes);
 // const apiControllers = require("./usersController");
 // const secretsController = require('./secretsController');
 
-
 router.use('/users', require('./usersController'));
 router.use('/secrets', require('./secretsController'));
 
