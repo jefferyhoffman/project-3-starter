@@ -37,6 +37,10 @@ export default {
     //Gets thread with specific id
     getThread: function(id) { 
       return axios.get("/api/thread/" + id);
+    },
+    //Creates a thread
+    createThread: function(threadData) { 
+      return axios.create("/api/thread", threadData);
     }
   }
 }

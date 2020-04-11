@@ -16,6 +16,11 @@ function Threads() {
       .catch((err) => console.log(err));
   };
 
+  function handleInputChange(event) { 
+      const { name, value } = event.target;
+      setFormObject({...formObject, [name]: value})
+  };
+
 
   return (
     <div>
