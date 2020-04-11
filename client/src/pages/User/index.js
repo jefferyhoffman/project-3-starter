@@ -9,10 +9,13 @@ const User = (props) => {
   const userInfo = useContext(AuthContext);
   const [theSelected, setTheSelected] = useState([]);
   const [allActions, setAllActions] = useState([]);
-
+  const [render, setRender] = useState(1);
   useEffect(() => {
     API.Actions.getAll(userInfo.authToken).then(({ data }) =>
       setAllActions(data)
+    );
+    API.Challenges.getCurrentChallenge(userInfo.authToken).then(({ data }) =>
+      console.log(data)
     );
     //setTheSelected(selected);
   }, []);
@@ -35,7 +38,14 @@ const User = (props) => {
       .then(({ data }) => console.log("Challenge saved"))
       .catch((err) => console.log(err));
   };
-
+  const deleteChallenge = (id) => {
+    console.log(theSelected, id, "<===");
+    const newNew = theSelected;
+    newNew.splice(id, 1);
+    console.log(newNew);
+    setTheSelected(() => newNew);
+    setRender((curr) => curr + 1);
+  };
   const makeBody = (cat, eventKey) => {
     const filteredList = allActions.filter((act) => act.category === cat);
 
@@ -60,11 +70,14 @@ const User = (props) => {
   return (
     <>
       <h1>
-        Please choose from the options below to create your first challenge!
-        {userInfo.user.name}!!!
+        Please choose from the actions below to create your first challenge!
       </h1>
       {allActions && (
-        <Selected selections={theSelected} clickHandler={createChallenge} />
+        <Selected
+          selections={theSelected}
+          deleteHandler={deleteChallenge}
+          clickHandler={createChallenge}
+        />
       )}
       <Accordion defaultActiveKey="0">
         <Card>

@@ -3,6 +3,11 @@ import { Tabs, Tab, Row, Col, Nav, Button } from "react-bootstrap";
 
 const SelectedChallenges = (props) => {
   console.log(props);
+
+    const handleComplete=(id)=>{
+        props.deleteHandler(id)
+    }
+
   return (
     <>
       <Tab.Container id="left-tabs-example" defaultActiveKey="first">
@@ -15,8 +20,9 @@ const SelectedChallenges = (props) => {
             >
               <Tab
                 eventKey="Current Challenge"
-                title="Current Challenge/Create a Challenge"
+                title="Current Challenge"
               >
+<<<<<<< HEAD
                 {props.selections.length > 0 ? (
                   <Button variant="success" onClick={props.clickHandler}>
                     Saved
@@ -25,14 +31,28 @@ const SelectedChallenges = (props) => {
                 {props.selections.map((action) => (
                   <p>
                     points: {action.points} - {action.name} -{" "}
+=======
+                
+                {props.selections.map((action, position) => (
+                  <p key={action.id+position}>
+                    <span style={{ cursor: "pointer" }} onClick={()=>handleComplete(position)}> X </span>points: {action.points} - {action.name} -{" "}
+>>>>>>> a727df0680df341f64bf97adc53ea4a80a031578
                     {action.description}
                   </p>
+                  
                 ))}
+                {props.selections.length > 0 ? (
+                  <Button variant="outline-info" onClick={props.clickHandler}>
+                    Saved
+                  </Button>
+                ) : null}
+                
               </Tab>
+              <br></br>
               {/* <Tab eventKey="Update" title="Update">
                 Update a challenge
               </Tab> */}
-              <Tab eventKey="Past Challenge" title="Past Challenges"></Tab>
+              <Tab eventKey="Completed Actions" title="Completed Actions"></Tab>
             </Tabs>
           </Col>
         </Row>
