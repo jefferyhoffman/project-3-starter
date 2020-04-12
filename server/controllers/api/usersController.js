@@ -38,14 +38,17 @@ usersController.post('/login', (req, res) => {
 
 // get searched email
 // working
-usersController.get('/search', (req, res) => {
-  const { email } = req.body;
-  db.User.findOne({ where: { email } })
+usersController.get('/search/:email', (req, res) => {
+  // const { email } = req.body;
+  console.log(req.params.email)
+  db.User.findOne({ where: {
+    email: req.params.email 
+  }})
     .then(user => {
       if(!user){
         return res
           .status(404)
-          .send(`A User with the email of ${email} could not be found.`)
+          .send(`A User with the email of ${user} could not be found.`)
       }
 
       return res.json(user);

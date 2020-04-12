@@ -2,9 +2,11 @@ import React, { useContext, useEffect, useState } from "react";
 import { Accordion, Card, Button } from "react-bootstrap";
 import AuthContext from "../../contexts/AuthContext";
 import Selected from "../../components/SelectedChallenges";
+import { FiPlusSquare } from "react-icons/fi";
 // import CreateChallenge from "../../components/CreateChallenge";
 import API from "../../lib/API";
 import "./style.css";
+
 const User = (props) => {
   const userInfo = useContext(AuthContext);
   const [theSelected, setTheSelected] = useState([]);
@@ -20,7 +22,9 @@ const User = (props) => {
     API.Actions.getAll(userInfo.authToken).then(({ data }) =>
       setAllActions(data)
     );
-    API.Challenges.getCurrentChallenge(userInfo.authToken).then(({data})=>console.log(data))
+    API.Challenges.getCurrentChallenge(userInfo.authToken).then(({ data }) =>
+      console.log(data)
+    );
     //setTheSelected(selected);
   }, []);
   console.log(userInfo);
@@ -84,7 +88,7 @@ const User = (props) => {
               addAction(act.points, act.name, act.description, act.id)
             }
           >
-            +
+            <FiPlusSquare size={28}/>
           </span>{" "}
           points: {act.points} - {act.name} - {act.description}
         </Card.Body>
@@ -95,14 +99,14 @@ const User = (props) => {
   return (
     <>
       <h1>
-        Please choose from the actions below to create your first challenge! 
+        Please choose from the actions below to create your first challenge!
       </h1>
       {allActions && (
         <Selected selections={theSelected} deleteHandler={deleteChallenge} clickHandler={createChallenge} checkboxHandler={handleCheckbox}/>
       )}
       <Accordion defaultActiveKey="0">
         <Card>
-          <Card.Header>
+          <Card.Header className="travel">
             <Accordion.Toggle as={Button} variant="link" eventKey="1">
               Travel
             </Accordion.Toggle>
@@ -111,7 +115,7 @@ const User = (props) => {
           {allActions && makeBody("Travel", "1")}
         </Card>
         <Card>
-          <Card.Header>
+          <Card.Header className="food">
             <Accordion.Toggle as={Button} variant="link" eventKey="2">
               Food
             </Accordion.Toggle>
@@ -130,7 +134,7 @@ const User = (props) => {
           </Accordion.Collapse> */}
         </Card>
         <Card>
-          <Card.Header>
+          <Card.Header className="home">
             <Accordion.Toggle as={Button} variant="link" eventKey="3">
               Home
             </Accordion.Toggle>
@@ -150,7 +154,7 @@ const User = (props) => {
           </Accordion.Collapse> */}
         </Card>
         <Card>
-          <Card.Header>
+          <Card.Header className="consumable">
             <Accordion.Toggle as={Button} variant="link" eventKey="4">
               Consumable Items
             </Accordion.Toggle>
