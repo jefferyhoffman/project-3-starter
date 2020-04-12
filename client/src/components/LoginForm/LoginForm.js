@@ -31,7 +31,7 @@ class LoginForm extends Component {
     return (
       <div className='LoginForm'>
         <div className='card'>
-          <div className='card-body'>
+          <div className='card-body bg-primary'>
             <form className='LoginForm' onSubmit={this.handleSubmit}>
               <div className='input-group mb-3'>
                 <div className="input-group-prepend">
