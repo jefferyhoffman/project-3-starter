@@ -20,6 +20,7 @@ export default {
   },
 
   Boards: {
+    // Jeff
     getMy: function (authToken) {
       return axios.get("/api/boards", {
         headers: {
@@ -28,12 +29,13 @@ export default {
       });
     },
 
-    createBoard: function (title, userId) {
+    createBoard: function (title, userId, columns, authToken) {
       return axios.post("/api/boards",
         {
           title,
           userId,
-        }
+          columns,
+        },
       );
     },
   },
@@ -70,6 +72,7 @@ export default {
   },
 
   Cards: {
+    // Jeff
     createCardInColumn: function (authToken, boardId, colIndex, title, body) {
       return axios.post(
         `/api/boards/${boardId}/columns/${colIndex}/cards`,
@@ -112,7 +115,7 @@ export default {
       );
     },
   },
-  
+
   Secrets: {
     getAll: function (authToken) {
       return axios.get("/api/secrets", {

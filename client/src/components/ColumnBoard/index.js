@@ -35,6 +35,15 @@ const styles = (theme) => ({
 class ColumnBoard extends Component {
   static contextType = AuthContext;
 
+  editColumnTitle = (title) => {
+    // this.setValue({value:title});
+    API.Columns.updateColumnTitle(
+      title,
+    )
+    .then((res) => {console.log(res)})
+    .catch((err) => console.log(err));
+  }
+
   handleAdd = () => {
     const { handleRefresh, boardId } = this.props;
     const { authToken } = this.context;
@@ -93,17 +102,18 @@ class ColumnBoard extends Component {
                     color="secondary"
                     gutterBottom='true'
                   >
-                    {this.props.title}
+                    {/* {this.props.title} */}
                   </Typography>
                   {/* to input column text */}
                   <form noValidate autoComplete="off">
+                  {/* <Input defaultValue="Hello world" inputProps={{ 'aria-label': 'description' }} /> */}
                     <TextField
-                      id="outlined-basic"
-                      label="Column Title"
-                      variant="outlined"
+                      id="standard-basic"
+                      // label="Column Title"
+                      // variant="outlined"
                       color="secondary"
-                      //value = {this.props.title}
-                      // onChange = {this.editColumnTitle}
+                      defaultValue = {this.props.title}
+                      onChange = {this.editColumnTitle}
                     />
                   </form>
                 </div>
