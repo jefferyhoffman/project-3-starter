@@ -18,6 +18,7 @@ router.use("/reply", replyRoutes);
 
 router.use('/users', require('./usersController'));
 router.use('/secrets', require('./secretsController'));
+router.use("/thread", require("./usersController"));
 
 
 module.exports = router;

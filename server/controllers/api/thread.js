@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const threadController = require("../api/threadController");
-
+const userController = require("../api/usersController");
 
 
 
@@ -16,5 +16,6 @@ router
     .get(threadController.findById)
     .put(threadController.update)
     .delete(threadController.remove);
+
 
 module.exports = router;

@@ -6,6 +6,7 @@ const jwt = require('jsonwebtoken');
 
 usersController.post('/', (req, res) => {
 
+
   const { email, password } = req.body;
 
   db.User.create({ email, password })
@@ -14,9 +15,9 @@ usersController.post('/', (req, res) => {
 });
 
 usersController.get('/me', JWTVerifier, (req, res) => {
-    res.json(req.user);
+  console.log(req.user.dataValues.id);
+  res.json(req.user);
 });
-
 
 usersController.post('/login', (req, res) => {
 
@@ -33,8 +34,6 @@ usersController.post('/login', (req, res) => {
         user
       });
     });
-
-    
 });
 
 module.exports = usersController;
