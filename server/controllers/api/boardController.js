@@ -29,9 +29,28 @@ const template = {
 boardController.post("/", JWTVerifier, (req, res) => {
   db.Board.create(
     {
-      ...template,
+      // ...template,
       title: "title",
       userId: req.user._id,
+      columns: [
+        {
+          title: "To Do",
+          cards: [
+            {
+              title: "Learn this app!",
+              body: "How to use Kanban...",
+            },
+          ],
+        },
+        {
+          title: "In Progress",
+          cards: [],
+        },
+        {
+          title: "Done",
+          cards: [],
+        },
+      ],
     }
   )
     .then((dbBoard) => res.json(dbBoard))

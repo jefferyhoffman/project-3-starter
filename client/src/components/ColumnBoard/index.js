@@ -35,14 +35,24 @@ const styles = (theme) => ({
 class ColumnBoard extends Component {
   static contextType = AuthContext;
 
+ // editColumnTitle is icebox.. and also currently broken
+  editColumnTitle = (title) => {
+    // const { title } = this.props;
+    API.Columns.updateColumnTitle(
+      title,
+    )
+    .then((res) => {console.log(res)})
+    .catch((err) => console.log(err));
+  }
+
   handleAdd = () => {
     const { handleRefresh, boardId } = this.props;
     const { authToken } = this.context;
 
-    API.Boards.createCardInColumn(
+    API.Cards.createCardInColumn(
       authToken,
       boardId,
-      0,
+      1,
       "My Name",
       "Lorem ipsum..."
     )
@@ -52,7 +62,7 @@ class ColumnBoard extends Component {
 
   handleSave = (card) => {
     const { authToken } = this.context;
-    API.Boards.createCardInColumn(
+    API.Cards.createCardInColumn(
       authToken,
       this.props.id,
       this.props.index,
@@ -72,7 +82,7 @@ class ColumnBoard extends Component {
       authToken,
       this.props.id,
       this.props.index,
-      card.id
+      card[cardIndex]
     )
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
@@ -93,16 +103,16 @@ class ColumnBoard extends Component {
                     color="secondary"
                     gutterBottom="true"
                   >
-                    {this.props.title}
+                    {/* {this.props.title} */}
                   </Typography>
                   {/* to input column text */}
                   <form noValidate autoComplete="off">
                     <TextField
-                      id="outlined-basic"
-                      label="Column Title"
-                      variant="outlined"
-                      color="secondary"
-                      //value = {this.props.title}
+                       id="standard-basic"
+                       // label="Column Title"
+                       // variant="outlined"
+                       color="secondary"
+                       defaultValue = {title}
                       // onChange = {this.editColumnTitle}
                     />
                   </form>
