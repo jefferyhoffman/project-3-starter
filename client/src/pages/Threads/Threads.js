@@ -1,78 +1,43 @@
-import React, { Component, useState, use, useEffect } from "react";
+import React, { useState, use, useEffect } from "react";
 import API from "../../lib/API";
 import { Link } from "react-router-dom";
 import Jumbotron from "../../components/Jumbotron";
+import { Input, TextArea, FormBtn } from "../../components/ThreadForm"
+
 import "../Threads/Threads.css";
-import TokenStore from "../../lib/TokenStore";
-import AuthContext from '../../contexts/AuthContext';
-
-
-class newThreads extends Component {
-  constructor(props) {
-    super(props);
-
-    this.handleLogin = (user, authToken) => {
-      TokenStore.setToken(authToken);
-      this.setState((prevState) => ({
-        auth: { ...prevState.auth, user, authToken },
-      }));
-    };
-
-    this.handleLogout = () => {
-      TokenStore.clearToken();
-      this.setState((prevState) => ({
-        auth: { ...prevState.auth, user: undefined, authToken: undefined },
-      }));
-    };
-
-    this.state = {
-      auth: {
-        user: undefined,
-        authToken: TokenStore.getToken(),
-        onLogin: this.handleLogin,
-        onLogout: this.handleLogout,
-      },
-    };
-  }
-
-  componentDidMount() {
-    const { authToken } = this.state.auth;
-    if (!authToken) return;
-
-    API.Users.getMe(authToken)
-      .then((response) => response.data)
-      .then((user) =>
-        this.setState((prevState) => ({ auth: { ...prevState.auth, user } }))
-      )
-      .catch((err) => console.log(err))
-      .then((response) => console.log(response.data))
-    API.Users.getMe(authToken).then((response) => {
-      
-      const answer = response.data.id
-    });
-  }
-
-  render() {
-    return(
-    <AuthContext.Provider value={this.state.auth}>
-      {Threads()}
-       </AuthContext.Provider>
-    )
-      }
-    }
 
 function Threads() {
   const [threads, setThreads] = useState([]);
+  const [userInfo, setuserInfo] = useState({});
+  const [formObject, setFormObject] = useState({});
 
-  const { token } = JSON.stringify(localStorage.token);
+  useEffect(() => { 
+    API.Users.getMe(localStorage.getItem("token"))
+      .then((res) => { 
+        console.log(res.data)
+        setuserInfo(res.data);
+      })
+      .catch((err) => console.error(err))
+  }, []);
 
-  API.Users.getMe(token)
-      .then((response) => response)
-      .then((user) =>
-        this.setState((prevState) => ({ auth: { ...prevState.auth, user } }))
-      )
-      .catch((err) => console.log(err))
-      .then((response) => console.log("hi"))
+  function handleInputChange(event) { 
+    const { name, value } = event.target;
+    setFormObject({...formObject, [name]: value})
+  };
+
+  function handleFormSubmit(event) { 
+    event.preventDefault();
+    if (formObject.title && formObject.body) { 
+      API.Threads.createThread({
+        title: formObject.title,
+        body: formObject.body,
+        UserId: userInfo.id
+      })
+      .then(res => API.Threads.getThreads())
+      .catch(err => console.log(err))
+    }
+  };
+
 
 
   useEffect(() => {
@@ -91,7 +56,8 @@ function Threads() {
         Threads
       </div>
       <div className="threads-panel">
-        <div>
+        <div> 
+          {console.log(userInfo.id + "HIIIIIIIIIII")}
           { 
             threads.map((item, index) => (
               // <div className="thread" key={index}>{item.title}</div>
@@ -101,6 +67,26 @@ function Threads() {
               </div>
             ))
           }
+          <div>
+          <form>
+              <Input
+                onChange={handleInputChange}
+                name="title"
+                placeholder="Title (required)"
+              />
+              <Input
+                onChange={handleInputChange}
+                name="body"
+                placeholder="Body (required)"
+              />
+              <FormBtn
+                disabled={!(formObject.title && formObject.body)}
+                onClick={handleFormSubmit}
+              >
+                Submit Thread
+              </FormBtn>
+            </form>
+          </div>
         </div>
       </div>
     </div>
