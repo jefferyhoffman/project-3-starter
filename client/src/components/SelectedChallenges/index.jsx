@@ -1,6 +1,7 @@
 import React from "react";
 import { Tabs, Tab, Row, Col, Nav, Button } from "react-bootstrap";
 import { TiDeleteOutline } from "react-icons/ti";
+import { FiSave } from "react-icons/fi";
 
 const SelectedChallenges = (props) => {
   console.log(props);
@@ -34,8 +35,12 @@ const SelectedChallenges = (props) => {
                   </p>
                 ))}
                 {props.selections.length > 0 ? (
-                  <Button variant="outline-info" onClick={props.clickHandler}>
-                    Saved
+                  <Button
+                    style={{ fontFamily: "roboto" }}
+                    variant="light"
+                    onClick={props.clickHandler}
+                  >
+                    {<FiSave size={28} />} Save this Challenge
                   </Button>
                 ) : null}
               </Tab>
