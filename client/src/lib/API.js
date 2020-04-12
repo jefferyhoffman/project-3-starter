@@ -47,4 +47,11 @@ export default {
       return axios.post("/api/thread", threadData);
     },
   },
+
+  Reply: {
+    //Creates a reply
+    createReply: function (replyData) {
+      return axios.post("/api/reply", replyData);
+    }
+  }
 };

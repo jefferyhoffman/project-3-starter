@@ -27,8 +27,10 @@ module.exports = {
             .catch(err => res.status(422).json(err));
     },
     create: function (req, res) {
+
+        const { body, ThreadId, UserId } = req.body;
         db.Reply
-            .create(req.body)
+            .create({ body, ThreadId, UserId })
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
