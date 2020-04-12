@@ -57,7 +57,7 @@ function Threads() {
       </div>
       <div className="threads-panel">
         <div> 
-          {console.log(userInfo.id + "HIIIIIIIIIII")}
+         
           { 
             threads.map((item, index) => (
               // <div className="thread" key={index}>{item.title}</div>
@@ -96,70 +96,6 @@ function Threads() {
       </div>
     </div>
   )
-
-  // render();
-
-  // function render() {
-  //   return (
-  //     <div className="test"> Hello Jamey</div>
-  //   )
-  // }
-
-  // API.Threads.getThreads()
-  //   .then((res) => {
-  //     console.log('res', res.data);
-  //     return render();
-  //     // return (
-  //     //   <ul>
-  //     //   {
-
-  //     //     // res.data.map((item, i) => (
-  //     //     // <li>{item.title}</li>
-  //     //     // ))
-  //     //   }
-  //     // </ul>
-  //     // )
-  //   })
-
-  //   function render() {
-  //     return (
-  //       <div>Hello</div>
-  //     )
-  //   }
-
-
-
-  // const [threads, setThreads] = useState(() => {
-  //   API.Threads.getThreads()
-  //     .then((res) => setThreads(res.data))
-  //     .catch((err) => console.error(err))
-  // });
-
-
-  //Zack
-  // const [threads, setThreads] = useState({});
-  // useEffect(() => {
-  //   loadThreads();
-  // }, []);
-  // function loadThreads() {
-  //   API.Threads.getThreads()
-  //     .then((res) => setThreads(res.data))
-  //     .catch((err) => console.log(err));
-  // };
-
-
-  // return (
-  //     <div>
-  //       <div className="threadsTitleBox"> 
-  //         <Link to={"/thread/" + threads.id + "/" }>{threads.title}</Link>
-  //       </div>
-  //       <div className="threadsDiv">
-  //           <div className="threadsBody">
-  //             <p>{threads.body}</p>
-  //           </div>
-  //       </div> 
-  //     </div>
-  // );
 }
 
 export default Threads;

@@ -10,7 +10,6 @@ module.exports = {
       .catch((err) => res.status(422).json(err));
   },
   findById: function (req, res) {
-    console.log(Object.keys(db.Thread.rawAttributes));
     db.Thread.findAll({
       where: { id: req.params.id },
       include: [

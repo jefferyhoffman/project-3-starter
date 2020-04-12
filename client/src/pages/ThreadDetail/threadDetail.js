@@ -1,28 +1,63 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch, useParams } from 'react-router-dom';
 import Jumbotron from "../../components/Jumbotron/index";
-import { List, ListItem } from "../../components/List/index";
+import { List, Listitem } from "../../components/List/index";
 import API from "../../lib/API";
 import "../ThreadDetail/threadDetail.css";
+import { Input, TextArea, FormBtn } from "../../components/ThreadForm"
+
 
 function ThreadDetail({ match }) { 
     const [thread, setThread] = useState({});
     const [replies, setReplies] = useState([]);
     const {id} = useParams();
+    const [userInfo, setuserInfo] = useState({});
+    const [formObject, setFormObject] = useState({});
+    const [threadId, setThreadId] = useState([]);
+
+    useEffect(() => { 
+        API.Users.getMe(localStorage.getItem("token"))
+          .then((res) => { 
+            console.log(res.data)
+            setuserInfo(res.data);
+          })
+          .catch((err) => console.error(err))
+      }, []);
+    
+      function handleInputChange(event) { 
+        const { name, value } = event.target;
+        setFormObject({...formObject, [name]: value})
+      };
+
+      function handleFormSubmit(event) { 
+        event.preventDefault();
+        if (formObject.body) { 
+          API.Reply.createReply({
+            body: formObject.body,
+            UserId: userInfo.id,
+            ThreadId: threadId
+          })
+          .then(res => API.Reply.findAll())
+          .catch(err => console.log(err))
+        }
+      };
 
     useEffect(() => {
         API.Threads.getThread(id)
             .then((res) => {
+              for(let i =0; i < res.data.length; i++) { 
                 console.log('res in ThreadDetail', res);
-                setThread(res.data[0]);
-                setReplies(res.data[0].Replies);
-            })
+                console.log(res.data)
+                setThreadId(res.data[i].id)
+                setThread(res.data[i]);
+                setReplies(res.data[i].Replies);
+            }})
             .catch(err => console.error(err))
     }, []);
 
     return (
         <div>
-            <div className="threads-heading">
+            <div className="Reply-heading">
                 Thread
             </div>
             <div className="thread-panel">
@@ -41,6 +76,21 @@ function ThreadDetail({ match }) {
                         </div>
                         ))}
                     </div>
+                    <div>
+          <form>
+              <Input
+                onChange={handleInputChange}
+                name="body"
+                placeholder="Body (required)"
+              />
+              <FormBtn
+                disabled={!(formObject.body)}
+                onClick={handleFormSubmit}
+              >
+                Submit A Reply
+              </FormBtn>
+            </form>
+          </div>
                 </div>
             </div>
         </div>
@@ -53,19 +103,19 @@ function ThreadDetail({ match }) {
     // const {id} = useParams();
 
     // useEffect(() => { 
-    //     API.Threads.getThread(id)
+    //     API.Reply.getThread(id)
     //         .then(res => setThread(res.data[0]))
     //         .catch(err => console.log(err))
     // }, [])
 
     // useEffect(() => { 
-    //     API.Threads.getThread(id)
+    //     API.Reply.getThread(id)
     //         .then(res => setReply(res.data[0].Replies[0]))
     //         .catch(err => console.log(err))
     // }, [])
 
     // useEffect(() => {
-    //     API.Threads.getThread(id)
+    //     API.Reply.getThread(id)
     //     .then(res => setUser(res.data[0].Replies[0].User))
     //     .catch(err => console.log(err))
     // }, [])
