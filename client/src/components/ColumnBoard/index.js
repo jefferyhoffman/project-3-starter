@@ -35,54 +35,80 @@ const styles = (theme) => ({
 class ColumnBoard extends Component {
   static contextType = AuthContext;
 
-  handleAdd = () => {
-    const { handleRefresh, boardId } = this.props;
-    const { authToken } = this.context;
+  state = {
+    card: undefined,
+    column: undefined,
+    isCardLoading: true,
+  };
 
-    API.Boards.createCardInColumn(
-      authToken,
-      boardId,
-      0,
-      "My Name",
-      "Lorem ipsum..."
-    )
+  // componentDidMount() {
+  //   this.refreshColumn();
+  // }
+  // refreshColumn = () => {
+  //   const { authToken } = this.context;
+
+  //   API.Cards.createCardInColumn(authToken)
+  //     .then((res) => {
+  //       console.log(res.data);
+  //       this.setState({ card: res.data, isCardLoading: false });
+  //     })
+  //     .catch((err) => console.log(err));
+  // };
+
+  handleAddCard = () => {
+    const { handleRefresh, boardId, colId, title, body } = this.props;
+    const { authToken } = this.context;
+    console.log("Adding a card");
+
+    API.Cards.createCardInColumn(authToken, boardId, colId, title, body)
       .then(() => handleRefresh())
       .catch((err) => console.log(err));
   };
 
-  handleSave = (card) => {
+  handleSave = (event) => {
+    event.preventDefault();
     const { authToken } = this.context;
-    API.Boards.createCardInColumn(
-      authToken,
-      this.props.id,
-      this.props.index,
-      card.title,
-      card.id,
-      card.body
-    )
+    const { boardId, colId, cardId, title, body } = this.props;
+    console.log("Saving a card");
+    API.Cards.updateCard(authToken, boardId, colId, cardId, title, body)
       .then((res) => {
         console.log(res);
       })
       .catch((err) => console.log(err));
   };
 
-  handleDelete = (card) => {
+
+  handleDelete = (event) => {
+    event.preventDefault();
     const { authToken } = this.context;
-    API.Cards.deleteCardInColumn(
-      authToken,
-      this.props.id,
-      this.props.index,
-      card.id
-    )
+    const { boardId, colId, cardId} = this.props;
+    console.log("Deleting a card");
+    API.Cards.deleteCardInColumn(authToken, boardId, colId, cardId)
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+  };
+
+  handleEdit = (event) => {
+    event.preventDefault();
+    const { authToken } = this.context;
+    const { boardId, colId, cardId, title, body } = this.props;
+    
+    console.log("Editing...");
+
+    API.Cards.updateCard(authToken, boardId, colId, cardId, title, body)
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
   };
 
   render() {
     const { classes, title, cards } = this.props;
+    const { card, column } = this.state;
 
     return (
       <div>
+        {/* {isCardLoading ? (
+          <div> Loading a card...</div>
+        ) : card ? ( */}
         <Grid container item>
           <Grid item className={classes.grid} xs={12}>
             <Paper className={classes.paper}>
@@ -91,39 +117,39 @@ class ColumnBoard extends Component {
                   <Typography
                     style={{ textTransform: "uppercase" }}
                     color="secondary"
-                    gutterBottom='true'
+                    gutterBottom="true"
                   >
-                    {this.props.title}
+                    {/* {this.props.title}  */}
                   </Typography>
                   {/* to input column text */}
                   <form noValidate autoComplete="off">
                     <TextField
-                      id="outlined-basic"
-                      label="Column Title"
-                      variant="outlined"
+                      id="standard-basic"
+                      // label="Column Title"
+                      // variant="outlined"
                       color="secondary"
-                      //value = {this.props.title}
+                      defaultValue={title}
                       // onChange = {this.editColumnTitle}
                     />
                   </form>
                 </div>
                 <div className={classes.alignRight}>
                   {/* Should add a CardBoard onClick*/}
-                  <Button
+                  {/* <Button
                     size="small"
                     color="secondary"
                     variant="contained"
                     className={classes.actionButtom}
-                    //onClick={this.handleEdit}
+                    //onClick={this.handleColEdit}
                   >
                     Edit
-                  </Button>
+                  </Button> */}
                   <Button
                     color="primary"
                     variant="contained"
                     size="small"
                     className={classes.actionButtom}
-                    onClick={this.handleAdd}
+                    onClick={this.handleAddCard}
                   >
                     Add a Task
                   </Button>
@@ -133,13 +159,17 @@ class ColumnBoard extends Component {
               {cards.map((card) => (
                 <CardBoard
                   {...card}
+                  colId={column._id}
+                  cardId={card._id}
                   handleSave={this.handleSave}
+                  handleEdit={this.handleEdit}
                   handleDelete={this.handleDelete}
                 />
               ))}
             </Paper>
           </Grid>
         </Grid>
+        {/* ) : null} */}
       </div>
     );
   }

@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import withStyles from "@material-ui/styles/withStyles";
-import { Grid, Paper, Typography, Button } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
+import HomePageColumn from "../../components/HomePageColumn";
+import defaultData from "./defaultData.json";
 
 const backgroundShape = require("../../images/shape.svg");
 
-
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     flexGrow: 1,
     backgroundColor: theme.palette.grey["100"],
@@ -13,110 +14,41 @@ const styles = theme => ({
     background: `url(${backgroundShape}) no-repeat`,
     backgroundSize: "cover",
     backgroundPosition: "0 200px",
-    paddingBottom: 200,
+    paddingBottom: 150,
   },
   grid: {
-    width: 1200,
-    marginTop: 40,
+    flexGrow: 1,
+    maxWidth: 1000,
+    margin: "30px auto 30px",
     [theme.breakpoints.down("sm")]: {
       width: "calc(100% - 20px)",
+      flexFlow: "column",
     },
-  },
-  paper: {
-    padding: theme.spacing(3),
-    textAlign: "left",
-    color: theme.palette.text.secondary,
-  },
-  box: {
-    marginBottom: 40,
-    height: 65,
-  },
-  actionButtom: {
-    textTransform: "uppercase",
-    margin: theme.spacing(1),
-    width: 152,
-  },
-  alignRight: {
+    [theme.breakpoints.down("md")]: {
+      width: "calc(100% - 20px)",
+      flexFlow: "column",
+    },
+
     display: "flex",
-    justifyContent: "flex-end",
+    flexFlow: "row nowrap",
+    justifyContent: "center",
   },
 });
 
 class HomePage extends Component {
+  state = {
+    defaultData,
+  };
   render() {
     const { classes } = this.props;
 
     return (
       <div className={classes.root}>
-        <Grid container justify="center">
-          <Grid
-            spacing={4}
-            alignItems="center"
-            justify="center"
-            container
-            className={classes.grid}
-          >
-            <Grid item xs={12} md={4}>
-              <Paper className={classes.paper}>
-                <div className={classes.box}>
-                  <Typography
-                    style={{ textTransform: "uppercase" }}
-                    color="secondary"
-                    gutterbottom="True"
-
-                  >
-                    Sample To-Do-List
-                  </Typography>
-                  <Typography variant="body2"             gutterbottom="True"
->
-                    To read a book
-                  </Typography>
-                </div>
-                <div style={{ display: "flex", justifyContent: "flex-end" }}>
-                  <Button
-                    color="primary"
-                    variant="contained"
-                    className={classes.actionButtom}
-                  >
-                    Learn more
-                  </Button>
-                </div>
-              </Paper>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <Paper className={classes.paper}>
-                <div className={classes.box}>
-                  <Typography
-                    style={{ textTransform: "uppercase" }}
-                    color="secondary"
-                    gutterbottom="True"
-
-                  >
-                    second Sample To-Do-List
-                  </Typography>
-                  <Typography variant="body2"             gutterbottom="True"
->
-                    learn coding
-                  </Typography>
-                </div>
-                <div className={classes.alignRight}>
-                  <Button
-                    color="primary"
-                    variant="contained"
-                    className={classes.actionButtom}
-                  >
-                    Edit
-                  </Button>
-                  <Button
-                    //onClick={this.openDialog}
-                    variant="outlined"
-                    className={classes.actionButtom}
-                  >
-                    Delete
-                  </Button>
-                </div>
-              </Paper>
-            </Grid>
+        <Grid container justify="left">
+          <Grid xs={12} spacing={4} container item className={classes.grid}>
+            {this.state.defaultData.map((data) => (
+              <HomePageColumn {...data} key={data.id} />
+            ))}
           </Grid>
         </Grid>
       </div>

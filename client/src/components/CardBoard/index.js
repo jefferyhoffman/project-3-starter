@@ -1,4 +1,4 @@
-import React from "react";
+import React  from "react";
 import withStyles from "@material-ui/styles/withStyles";
 import {
   Button,
@@ -37,11 +37,12 @@ const styles = (theme) => ({
 });
 
 const CardBoard = (props) => {
-  const { classes, title, body, handleSave, handleDelete } = props;
+  
+  const { classes, title, body, handleSave, handleEdit, handleDelete } = props;
 
   return (
     <div>
-      <Card variant="outlined">
+       <Card variant="outlined">
         <div>
           <CardHeaderMenu />
 
@@ -89,6 +90,7 @@ const CardBoard = (props) => {
               variant="contained"
               size="small"
               className={classes.actionButton}
+              onClick={() => handleEdit(props)}
             >
               Edit
             </Button>
@@ -104,7 +106,8 @@ const CardBoard = (props) => {
             </Button>
           </CardActions>
         </div>
-      </Card>
+      </Card> 
+      
     </div>
   );
 };

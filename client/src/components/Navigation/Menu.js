@@ -4,7 +4,6 @@ const Menu = {
       label: "Home",
       pathname: "/",
     },
-
   ],
   privateTabs: [
     // {
@@ -12,9 +11,9 @@ const Menu = {
     //   pathname: "/secret",
     // },
     {
-        label: "Dashboard",
-        pathname: "/dashboard",
-      },
+      label: "Dashboard",
+      pathname: "/dashboard",
+    },
   ],
   loggedIn: [
     {
@@ -24,6 +23,11 @@ const Menu = {
     {
       label: "Register",
       pathname: "/register",
+    },
+    {
+      label: "Github",
+      pathname: "https://github.com/wwshehan/project-3",
+      external: true,
     },
   ],
 };
