@@ -88,10 +88,7 @@ export default {
     // Search for a user by entering their email
     // returns an object
     searchForUser: function (email) {
-      return axios.put("/api/users/search",
-      {
-        email: email
-      });
+      return axios.get("/api/users/search/"+email, {});
     }
   },
 
