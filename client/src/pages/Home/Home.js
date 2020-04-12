@@ -23,7 +23,6 @@ const styles = (theme) => ({
     [theme.breakpoints.down("sm")]: {
       width: "calc(100% - 20px)",
       flexFlow: "column",
-    
     },
     [theme.breakpoints.down("md")]: {
       width: "calc(100% - 20px)",
@@ -37,8 +36,8 @@ const styles = (theme) => ({
 });
 
 class HomePage extends Component {
-  state ={
-    defaultData
+  state = {
+    defaultData,
   };
   render() {
     const { classes } = this.props;
@@ -47,17 +46,9 @@ class HomePage extends Component {
       <div className={classes.root}>
         <Grid container justify="left">
           <Grid xs={12} spacing={4} container item className={classes.grid}>
-
-            {this.state.defaultData.map(data => (<HomePageColumn {...data} key={data.id}/>))}
-
-            {/* <HomePageColumn
-              colTitle={"To Do"}
-              colBody={"Tasks to complete "}
-              taskTitle={"React"}
-              taskBody={"Read on React Hooks"}
-            /> */}
-
-           
+            {this.state.defaultData.map((data) => (
+              <HomePageColumn {...data} key={data.id} />
+            ))}
           </Grid>
         </Grid>
       </div>
