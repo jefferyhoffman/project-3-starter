@@ -73,7 +73,8 @@ export default {
 
   Cards: {
     // Jeff
-    createCardInColumn: function (authToken, boardId, colIndex, title, body) {
+    createCardInColumn: function (authToken, 
+      boardId, colIndex, title, body) {
       return axios.post(
         `/api/boards/${boardId}/columns/${colIndex}/cards`,
         {
@@ -88,7 +89,10 @@ export default {
       );
     },
 
-    updateCard: function (authToken, boardId, colIndex, cardIndex, title, body) {
+    updateCard: function (authToken,
+       boardId, 
+       colIndex, 
+       cardIndex, title, body) {
       return axios.put(`/api/boards/${boardId}/columns/${colIndex}/cards/${cardIndex}`,
         {
           title,
@@ -102,7 +106,8 @@ export default {
       );
     },
 
-    deleteCardInColumn: function (authToken, boardId, colIndex, cardIndex) {
+    deleteCardInColumn: function (authToken,
+       boardId, colIndex, cardIndex) {
       return axios.delete(`/${boardId}/columns/${colIndex}/cards/${cardIndex}`,
         {
           cardIndex
