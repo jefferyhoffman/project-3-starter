@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
-
+import "./login.css";
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
 import LoginForm from '../../components/LoginForm/LoginForm';
@@ -14,9 +14,19 @@ class Login extends Component {
   }
 
   handleSubmit = (email, password) => {
+
+    // console.log('in handleSubmit', email, password);
+    
     API.Users.login(email, password)
+      // .then((response) => {
+      //   console.log('response', response);
+      // });
+      // // .then(x => console.log('x',x))
       .then(response => response.data)
       .then(({ user, token }) => {
+
+        console.log('got', user, token);
+
         this.context.onLogin(user, token);
         this.setState({ redirectToReferrer: true, error: "" });
       })

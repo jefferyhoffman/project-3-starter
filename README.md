@@ -1,6 +1,26 @@
-# Project 3 Starter
+# Music Forum
 
-## Getting Started
+## Table of Contents
+* [Description](#description)  
+* [Installation](#installation)  
+* [Usage](#usage)  
+* [License](#license)  
+* [Link](#link)  
+* [Contributors](#contributors)  
+* [Authors](#authors)  
+* [Visuals](#visuals)  
+
+### User Story
+AS young people yearning to create and converse music notation with other users online,  
+WE want to be able to discuss music theory in detail through a music notation based forum board  
+SO we can communicate with other users online in a music/composition based discussion.  
+
+### Description
+Discussion Board with heavy emphasis on music notation and conversation.  
+Once logged in, user is able to see all posts on the board, user is able to create a post, or reply to an existing one.  
+The user can also create music notation sheets and post them to the board as well.  
+
+### Installation
 
 1. Fork this repo on GitHub:
 
@@ -18,6 +38,35 @@
    ```bash
    $ yarn start:dev
    ```
+
+### Usage
+<ul><li>MySQL</li>  
+<li>Express.js</li>  
+<li>React</li>  
+<li>Node.js</li>  
+<li>Yarn</li>
+<li>GitHub  </li>
+<li>Heroku</li>  
+<li>Vexflow</li></ul>  
+
+### License
+
+### Link
+[Visit this Site](https://music-notation-forum-boards.herokuapp.com/)
+
+### Contributors
+
+### Authors
+Martin Hargett | [GitHub](https://github.com/MHargett23)  
+Alex Stiles | [GitHub](https://github.com/kffl3496)  
+Owen Edwards | [GitHub](https://github.com/Ivyparade)  
+Zachary Meadows | [GitHub](https://github.com/zachmdws)  
+
+### Visuals
+![Screenshot of Site](#)  
+
+# Project 3 Starter
+
 
 ## Organization
 
