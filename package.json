@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.9.9",
-    "@material-ui/icons": "^4.9.1"
+    "@material-ui/icons": "^4.9.1",
+    "mongo": "^0.1.0"
   }
 }
