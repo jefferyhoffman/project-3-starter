@@ -14,8 +14,10 @@ import NotFound from '../../pages/NotFound/NotFound';
 import UserPage from '../../pages/User';
 import Friends from '../../pages/Friends'
 import './App.css';
-import theBackground from './images/trees.jpg'
-import muirWoods from './images/muirwoods.jpg'
+import theBackground from './images/trees.png'
+import mtns from './images/mtns.png'
+import sea from './images/sea.png'
+
 class App extends Component {
     constructor(props) {
         super(props);
@@ -44,7 +46,8 @@ class App extends Component {
         this.changeIt =(url) =>{
           let selected
           if(url === 'maryPoppins') selected = theBackground
-          else if(url === 'login') selected = muirWoods
+          else if(url === 'login') selected = mtns
+          else if(url === 'register') selected = sea
           else selected = ""
           console.log(selected)
           this.setState({backgroundImage:selected})
@@ -87,7 +90,7 @@ class App extends Component {
             })`,
              
             'backgroundPosition': "center",
-            'backgroundRepeat': "no-repeat",
+            'backgroundRepeat': "repeat",
             'backgroundSize': "cover",
             'backgroundAttachment': 'fixed'
         }
@@ -110,7 +113,8 @@ class App extends Component {
                                   props => <Login {...props} {...this.state}/>}/>
                               />
                             <Route path='/register'
-                                component={Register}/>
+                                render={
+                                props => <Register {...props} {...this.state}/>}/>
                             <PrivateRoute path='/secret'
                                 component={Secret}/>
                             <PrivateRoute path='/userpage'
