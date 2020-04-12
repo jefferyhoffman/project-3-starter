@@ -29,6 +29,7 @@ const styles = (theme) => ({
     [theme.breakpoints.up("md")]: {
       paddingTop: "0.8em",
     },
+    color: "indigo",
   },
   flex: {
     display: "flex",
@@ -98,7 +99,9 @@ class Navigation extends Component {
               <Typography variant="h5" color="inherit">
                 <Link to="#" className={classes.link}>
                   <img width={20} src={logo} alt="react" />
-                  <span className={classes.tagline}>Project 3 title</span>
+                  <span className={classes.tagline}>
+                    Task Attack
+                  </span>
                 </Link>
               </Typography>
             </div>

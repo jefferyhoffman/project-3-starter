@@ -16,8 +16,8 @@ const styles = theme => ({
     overflow: "visible",
     background: `url(${backgroundShape}) no-repeat`,
     backgroundSize: "cover",
-    backgroundPosition: "0 200px",
-    paddingBottom: 200
+    backgroundPosition: "0 250px",
+    paddingBottom: 560
   },
   grid: {
     width: 1200,
