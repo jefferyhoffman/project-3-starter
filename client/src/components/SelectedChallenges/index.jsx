@@ -27,8 +27,7 @@ const SelectedChallenges = (props) => {
                       onClick={() => handleComplete(position)}
                     >
                       {" "}
-                      <TiDeleteOutline size={28}/>
-                      {" "}
+                      <TiDeleteOutline size={28} />{" "}
                     </span>
                     points: {action.points} - {action.name} -{" "}
                     {action.description}
