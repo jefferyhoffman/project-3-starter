@@ -1,7 +1,13 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { withStyles } from "@material-ui/styles";
-import { Typography, Tabs, Tab, Grid } from "@material-ui/core";
+import {
+  Typography,
+  Tabs,
+  Tab,
+  Grid,
+  Link as MaterialLink,
+} from "@material-ui/core";
 import Menu from "./Menu";
 import AuthContext from "../../contexts/AuthContext";
 import AuthDropdown from "../../components/AuthDropdown/AuthDropdown";
@@ -99,9 +105,7 @@ class Navigation extends Component {
               <Typography variant="h5" color="inherit">
                 <Link to="#" className={classes.link}>
                   <img width={20} src={logo} alt="react" />
-                  <span className={classes.tagline}>
-                    Task Attack
-                  </span>
+                  <span className={classes.tagline}>Task Attack</span>
                 </Link>
               </Typography>
             </div>
@@ -162,8 +166,9 @@ class Navigation extends Component {
                   Menu.loggedIn.map((item, index) => (
                     <Tab
                       key={index}
-                      component={Link}
-                      to={{ pathname: item.pathname }}
+                      component={item.external ? MaterialLink : Link}
+                      href={item.external ? item.pathname : null}
+                      to={item.external ? null : { pathname: item.pathname }}
                       classes={{ root: classes.tabItem }}
                       label={item.label}
                     />
