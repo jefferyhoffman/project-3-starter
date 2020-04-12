@@ -1,8 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import {Form, Button } from "react-bootstrap";
 import AuthContext from "../../contexts/AuthContext";
-// import Selected from "../../components/SelectedChallenges";
-// import CreateChallenge from "../../components/CreateChallenge";
+import FriendDisplay from "../../components/FriendsDisplay";
 import API from "../../lib/API";
 import "./style.css";
 
@@ -10,29 +9,31 @@ const Friends = (props) => {
   const userInfo = useContext(AuthContext);
     const [friend, setFriend] = useState([]);
     const [email, setEmail] = useState("") //searched email
-    const [foundEmail, setFoundEmail] = useState("") //found email
+    const [foundFriend, setFoundFriend] = useState({
+      name: "",
+      email: ""
+    }) //found email    
     const [error, setError] = useState("") //error message
   
   
   //create a function that takes the input of the user (friend's email)
   const handleInput = event => {
     setEmail(event.target.value);
-    console.log(event.target.value)
+    
   }
   
   const handleSubmit = event => {
     event.preventDefault();
-    console.log(email)   
-    // console.log("clicked")  WORKS
+      
     API.Users.searchForUser(email)
-    console.log(email)   
+    
       .then(res => {
         if (res.data.status === "error") {
       //     // throw setError(res.data.message);
           console.log(res.data.message)
         }
         setError({ results: res.data.message, error: "" });
-        console.log(res.data)
+        setFoundFriend({name: res.data.name, email: res.data.email})
       })
       .catch(err => setError({ error: err.message }));
   };
@@ -63,6 +64,7 @@ const Friends = (props) => {
             >Search</Button>
         </Form>
         {/* INSERT COMPONENT WHERE WE PASS PROPS e.g. API results */}
+        <FriendDisplay/>
       </>
   )
 }

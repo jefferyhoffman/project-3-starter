@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Accordion, Card, Button } from "react-bootstrap";
 import AuthContext from "../../contexts/AuthContext";
 import Selected from "../../components/SelectedChallenges";
+import { FiPlusSquare } from "react-icons/fi";
 // import CreateChallenge from "../../components/CreateChallenge";
 import API from "../../lib/API";
 import "./style.css";
@@ -60,7 +61,7 @@ const User = (props) => {
               addAction(act.points, act.name, act.description, act.id)
             }
           >
-            +
+            <FiPlusSquare size={28}/>
           </span>{" "}
           points: {act.points} - {act.name} - {act.description}
         </Card.Body>

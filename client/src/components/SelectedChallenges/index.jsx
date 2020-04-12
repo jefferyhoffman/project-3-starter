@@ -1,5 +1,6 @@
 import React from "react";
 import { Tabs, Tab, Row, Col, Nav, Button } from "react-bootstrap";
+import { TiDeleteOutline } from "react-icons/ti";
 
 const SelectedChallenges = (props) => {
   console.log(props);
@@ -26,7 +27,8 @@ const SelectedChallenges = (props) => {
                       onClick={() => handleComplete(position)}
                     >
                       {" "}
-                      X{" "}
+                      <TiDeleteOutline size={28}/>
+                      {" "}
                     </span>
                     points: {action.points} - {action.name} -{" "}
                     {action.description}
