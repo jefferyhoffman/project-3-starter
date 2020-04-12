@@ -1,9 +1,8 @@
 .form {
-    display: inline-grid;
-    grid-template-columns: 1;
-    grid-template-rows: 3;
-    margin: auto;
-    grid-row-gap: 10px;
+    column-count: 2;
+    display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .inputfile {
@@ -16,15 +15,18 @@
 }
 
 .inputfile + label {
+    font-size: 1em;
     color: white;
     background-color: black;
     display: inline-block;
     cursor: pointer; 
+    transition: all 0.3s ease;
 }
 
 .inputfile:focus + label, 
 .inputfile + label:hover {
-    background-color: red;
-    outline: 1px dotted #000;
+    background-color: white;
+    color: black;
+    transition: all 0.3s ease;
     outline: -webkit-focus-ring-color auto 5px;
 }
