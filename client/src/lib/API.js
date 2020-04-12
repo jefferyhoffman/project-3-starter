@@ -18,9 +18,9 @@ export default {
       });
     },
 
-    createThread: function (threadData) { 
-      return axios.post("/api/thread", threadData);
-    }
+    // createThread: function (threadData) { 
+    //   return axios.post("/api/thread", threadData);
+    // }
   },
 
   Secrets: {
