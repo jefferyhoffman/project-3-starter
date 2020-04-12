@@ -6,6 +6,7 @@ import TokenStore from '../../lib/TokenStore';
 import AuthContext from '../../contexts/AuthContext';
 import Navigation from '../../components/Navigation/Navigation';
 import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
+import About from '../../pages/About/About';
 import Home from '../../pages/Home/Home';
 import Login from '../../pages/Login/Login';
 import Register from '../../pages/Register/Register';
@@ -75,8 +76,9 @@ class App extends Component {
         </div>
 
         <Footer />
-
-
+        <Switch>
+          <Route path='/About' component={About} />
+        </Switch>
       </AuthContext.Provider>
     );
   }
