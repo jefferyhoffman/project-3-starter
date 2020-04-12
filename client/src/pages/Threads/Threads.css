@@ -90,6 +90,56 @@ Jumbotron {
     border: 1px solid black;
 }
 
+.submit-button {
+    /* display: flex; */
+}
+
+.submit-thread {
+    /* border-radius: 6px; */
+    margin: auto;
+    text-align: center;
+    background-color: silver;
+    border-color: #2aa5c6;
+    color: black;
+}
+
+.new-thread-title {
+    font-size: 20px;
+    margin-top: 20px;
+    overflow-x: hidden; 
+    overflow-x: auto;
+    overflow: scroll; 
+    padding: 15px;
+    border-radius: 6px;
+    height: 5ch;
+    width: 50ch;
+    color: #2aa5c6;
+    border-color: #2aa5c6;
+    background-color: black;
+    /* margin-bottom: -20px; */
+}
+
+.new-thread-body {
+    font-size: 20px;
+    overflow-x: hidden; 
+    overflow-x: auto; 
+    padding: 15px;
+    border-radius: 6px;
+    max-height: 100px; overflow-y: auto;
+    height: 10ch;
+    width: 50ch;
+    color: #2aa5c6;
+    border-color: #2aa5c6;
+    background-color: black;
+}
+
+placeholder {
+    color: brown;
+}
+
+.FormBtn {
+    text-align: center;
+}
 
 @font-face {
     font-family: 'oswaldregular';

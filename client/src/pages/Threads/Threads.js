@@ -68,24 +68,29 @@ function Threads() {
             ))
           }
           <div>
-          <form>
+            <form>
               <Input
+                className="new-thread-title"
                 onChange={handleInputChange}
                 name="title"
                 placeholder="Title (required)"
               />
-              <Input
+              <TextArea
+                className="new-thread-body"
                 onChange={handleInputChange}
                 name="body"
                 placeholder="Body (required)"
               />
+           </form>
+            <div className="submit-button">
               <FormBtn
+                className="submit-thread"
                 disabled={!(formObject.title && formObject.body)}
                 onClick={handleFormSubmit}
               >
-                Submit Thread
+                Submit New Thread
               </FormBtn>
-            </form>
+            </div>
           </div>
         </div>
       </div>
