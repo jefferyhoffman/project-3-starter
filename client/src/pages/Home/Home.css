@@ -3,9 +3,9 @@ body {
 }
 
 p {
-    color: turquoise;
-    text-align: left;
-    font-size: 20px;
+  color: turquoise;
+  text-align: left;
+  font-size: 20px;
 }
 
 /* .container {
@@ -20,6 +20,6 @@ p {
     display: flex;
     align-items: center;
     /* background-color: teal; */
-    /* color: white;
+/* color: white;
     font-size: larger; */
 /* } */

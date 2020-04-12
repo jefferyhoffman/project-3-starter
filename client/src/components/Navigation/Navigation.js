@@ -42,7 +42,7 @@ class Navigation extends Component {
                 <Link className='nav-link' to='/' onClick={this.toggleCollapse}>Home</Link>
               </li>
               <li className='nav-item'>
-                <Link className='nav-link' to='/thread' onClick={this.toggleCollapse}>Thread</Link>
+                <Link className='nav-link' to='/thread' onClick={this.toggleCollapse}>Threads</Link>
               </li>
               {user &&
                 <li className='nav-item'>

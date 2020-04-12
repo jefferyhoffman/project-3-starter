@@ -16,27 +16,30 @@
 }
 
 .nav-item {
-    text-align: right;
+    display:inline-block;
+    text-align: center;
 }
 
 .navbar {
+    display:inline-block;
+    text-align: center;
     border: solid;
     /* border-color: #5EB2E0; */
-    border-top: #5EB2E0;
+    /* border-top: linear-gradient(90deg, rgba(35,121,204,1) 5%, rgba(98,14,124,1) 51%); */
     border-bottom: #5EB2E0;
     border-style: solid;
 }
 
 #navbarSupportedContent {
-    text-align: right;
+    text-align: left;
 }
 
 .targetClass {
-    text-align: right;
+    text-align: left;
 }
 
 .navbar-nav {
-    text-align: right;
+    text-align: left;
 }
 
 /* .togglerclass {
@@ -50,7 +53,7 @@
 } */
 
 .Navigation {
-    /* text-align: left; */
+    text-align: center;
     /* border-width: 5px; */
     /* border-bottom: #5EB2E0;
     border-style: solid; */

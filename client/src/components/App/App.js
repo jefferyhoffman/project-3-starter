@@ -12,7 +12,7 @@ import Register from '../../pages/Register/Register';
 import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
 import Profile from '../../pages/UserProfile/profile';
-import Threads from "../../pages/Thread/Thread";
+import Threads from "../../pages/Threads/Threads";
 import ThreadDetail from "../../pages/ThreadDetail/threadDetail"
 import Footer from '../../components/Footer/footer';
 // import Newlogo from '../../components/NewLogo/newlogo';
@@ -70,8 +70,13 @@ class App extends Component {
               <Route component={NotFound} />
             </Switch>
           </div>
-          {/* <Route path='/footer' component={Footer} /> */}
+
+        
         </div>
+
+        <Footer />
+
+
       </AuthContext.Provider>
     );
   }
