@@ -82,7 +82,7 @@ class ColumnBoard extends Component {
       authToken,
       this.props.id,
       this.props.index,
-      card[cardIndex]
+      //card[cardIndex]
     )
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
