@@ -30,12 +30,12 @@ class LoginForm extends Component {
 
     return (
       <div className='LoginForm'>
-        <div className='card'>
-          <div className='card-body'>
+        <div className='card bg-secondary'>
+          <div className='card-body bg-secondary'>
             <form className='LoginForm' onSubmit={this.handleSubmit}>
               <div className='input-group mb-3'>
                 <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Mail} /></span>
+                  <span className="input-group-text bg-dark text-light"><Octicon icon={Mail} /></span>
                 </div>
                 <input
                   className='form-control'
@@ -50,7 +50,7 @@ class LoginForm extends Component {
 
               <div className='input-group mb-3'>
                 <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Key} /></span>
+                  <span className="input-group-text bg-dark text-light"><Octicon icon={Key} /></span>
                 </div>
                 <input
                   className='form-control'
@@ -63,7 +63,7 @@ class LoginForm extends Component {
                 />
               </div>
 
-              <button className='btn btn-primary' type='submit'>Login</button>
+              <button className='btn btn-dark' type='submit'>Login</button>
             </form>
           </div>
         </div>

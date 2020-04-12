@@ -29,12 +29,12 @@ class RegistrationForm extends Component {
 
     return (
       <div className='LoginForm'>
-        <div className='card'>
-          <div className='card-body'>
+        <div className='card bg-secondary'>
+          <div className='card-body bg-secondary'>
             <form onSubmit={this.handleSubmit}>
               <div className='input-group mb-3'>
-                <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Mail} /></span>
+                <div className="input-group-prepend bg-dark">
+                  <span className="input-group-text bg-dark text-light"><Octicon icon={Mail} /></span>
                 </div>
                 <input
                   className='form-control'
@@ -49,7 +49,7 @@ class RegistrationForm extends Component {
 
               <div className='input-group mb-3'>
                 <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Key} /></span>
+                  <span className="input-group-text bg-dark text-light"><Octicon icon={Key} /></span>
                 </div>
                 <input
                   className='form-control'
@@ -64,7 +64,7 @@ class RegistrationForm extends Component {
 
               <div className='input-group mb-3'>
                 <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Key} /></span>
+                  <span className="input-group-text bg-dark text-light"><Octicon icon={Key} /></span>
                 </div>
                 <input
                   className='form-control'
@@ -77,7 +77,7 @@ class RegistrationForm extends Component {
                 />
               </div>
 
-              <button className='btn btn-primary' type='submit'>Register Now!</button>
+              <button className='btn btn-dark' type='submit'>Register Now!</button>
             </form>
           </div>
         </div>
