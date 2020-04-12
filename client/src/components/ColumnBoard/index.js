@@ -35,6 +35,7 @@ const styles = (theme) => ({
 class ColumnBoard extends Component {
   static contextType = AuthContext;
 
+ // editColumnTitle is icebox.. and also currently broken
   editColumnTitle = (title) => {
     // const { title } = this.props;
     API.Columns.updateColumnTitle(
@@ -51,9 +52,9 @@ class ColumnBoard extends Component {
     API.Cards.createCardInColumn(
       authToken,
       boardId,
-      2,
-      "title",
-      'body',
+      1,
+      "My Name",
+      "Lorem ipsum..."
     )
       .then(() => handleRefresh())
       .catch((err) => console.log(err));
@@ -81,7 +82,7 @@ class ColumnBoard extends Component {
       authToken,
       this.props.id,
       this.props.index,
-      card.id
+      card[cardIndex]
     )
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
@@ -107,12 +108,12 @@ class ColumnBoard extends Component {
                   {/* to input column text */}
                   <form noValidate autoComplete="off">
                     <TextField
-                      id="standard-basic"
-                      // label="Column Title"
-                      // variant="outlined"
-                      color="secondary"
-                      defaultValue = {title}
-                      onChange = {this.editColumnTitle}
+                       id="standard-basic"
+                       // label="Column Title"
+                       // variant="outlined"
+                       color="secondary"
+                       defaultValue = {title}
+                      // onChange = {this.editColumnTitle}
                     />
                   </form>
                 </div>
