@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import withStyles from "@material-ui/styles/withStyles";
 import { Grid } from "@material-ui/core";
 import HomePageColumn from "../../components/HomePageColumn";
+import defaultData from "./defaultData.json";
 
 const backgroundShape = require("../../images/shape.svg");
 
@@ -36,6 +37,9 @@ const styles = (theme) => ({
 });
 
 class HomePage extends Component {
+  state ={
+    defaultData
+  };
   render() {
     const { classes } = this.props;
 
@@ -43,26 +47,17 @@ class HomePage extends Component {
       <div className={classes.root}>
         <Grid container justify="left">
           <Grid xs={12} spacing={4} container item className={classes.grid}>
-            <HomePageColumn
+
+            {this.state.defaultData.map(data => (<HomePageColumn {...data} key={data.id}/>))}
+
+            {/* <HomePageColumn
               colTitle={"To Do"}
               colBody={"Tasks to complete "}
               taskTitle={"React"}
               taskBody={"Read on React Hooks"}
-            />
+            /> */}
 
-            <HomePageColumn
-              colTitle={"In Progress"}
-              colBody={"Tasks in Progress "}
-              taskTitle={"Express Server"}
-              taskBody={"Set up DB connections"}
-            />
-
-            <HomePageColumn
-              colTitle={"Completed"}
-              colBody={"Tasks to be completed "}
-              taskTitle={"Node"}
-              taskBody={"Set Up Development Environment"}
-            />
+           
           </Grid>
         </Grid>
       </div>

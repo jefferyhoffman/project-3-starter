@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "colTitle": "To Do",
+        "colBody": "Tasks to complete ",
+        "taskTitle": "React",
+        "taskBody": "Read on React Hooks"
+    },
+    {
+        "id": 2,
+        "colTitle": "In Progress",
+        "colBody": "Tasks in Progress",
+        "taskTitle": "Express Server",
+        "taskBody": "Set up DB connections"
+    },
+    {
+        "id": 2,
+        "colTitle": "Completed",
+        "colBody": "Tasks to be completed ",
+        "taskTitle":  "Node",
+        "taskBody": "Set Up Development Environment"
+    }
+    
+]
