@@ -1,12 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import "./Home.css";
 import "../../components/NewThreadButton/NewThreadButton"
 import NewThreadButton from '../../components/NewThreadButton/NewThreadButton';
 import Footer from '../../components/Footer/footer';
 // import logo from './logo.svg';
 
-var { DateTime } = require('luxon');
-const Date = DateTime.local().toLocaleString(DateTime.DATETIME_MED); /* Luxon capturing date hour and time.*/
+var { DateTime } = require("luxon");
+const Date = DateTime.local().toLocaleString(
+  DateTime.DATETIME_MED
+); /* Luxon capturing date hour and time.*/
 
 class HomePage extends Component {
   render() {
@@ -19,19 +21,8 @@ class HomePage extends Component {
     </div>
     );
   }
-};
+}
 
-
-
-
-
-
-
-
-
-
-
-      
 //       <div className='Home'>
 //         <div className='row'>
 //           <div className='col'>
