@@ -1,7 +1,7 @@
 import React from "react";
 
-const FriendDisplay = (props) => {
+const FriendsDisplay = (props) => {
 
 }
 
-export default FriendDisplay;
+export default FriendsDisplay;

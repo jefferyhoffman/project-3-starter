@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import {Form, Button } from "react-bootstrap";
 import AuthContext from "../../contexts/AuthContext";
-import FriendDisplay from "../../components/FriendsDisplay";
+import FriendsDisplay from "../../components/FriendsDisplay";
 import API from "../../lib/API";
 import "./style.css";
 
@@ -64,7 +64,7 @@ const Friends = (props) => {
             >Search</Button>
         </Form>
         {/* INSERT COMPONENT WHERE WE PASS PROPS e.g. API results */}
-        <FriendDisplay/>
+        {/* <FriendsDisplay/> */}
       </>
   )
 }

@@ -9,6 +9,13 @@ class Register extends Component {
     error: ""
   }
 
+  componentDidMount(props){
+    this.props.backgroundImageChanger('register')
+  }
+  componentWillUnmount(props){
+   this.props.backgroundImageChanger('')
+  }
+
   handleSubmit = (email, password, confirm) => {
     if (password !== confirm) {
       return this.setState({ error: "Passwords do not match." });
