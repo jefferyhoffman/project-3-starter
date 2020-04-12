@@ -5,7 +5,9 @@ class footer extends Component {
     render () {
         return (
             <div className="wrapper">
-                 <footer className="page-footer">Sticky footer</footer>
+                 <footer className="page-footer">
+                     
+                 </footer>
             </div>        
         )
     }
