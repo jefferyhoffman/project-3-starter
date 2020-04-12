@@ -89,7 +89,7 @@ export default {
     },
 
     updateCard: function (authToken, boardId, colIndex, cardIndex, title, body) {
-      return axios.put(`/api/boards/${boardId}/columns/${colIndex}/cards`,
+      return axios.put(`/api/boards/${boardId}/columns/${colIndex}/cards/${cardIndex}`,
         {
           title,
           body,

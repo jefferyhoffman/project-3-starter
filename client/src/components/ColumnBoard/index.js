@@ -36,7 +36,9 @@ class ColumnBoard extends Component {
   static contextType = AuthContext;
 
   editColumnTitle = (title) => {
-    // this.setValue({value:title});
+    
+    // const { title } = this.props;
+
     API.Columns.updateColumnTitle(
       title,
     )
@@ -45,13 +47,13 @@ class ColumnBoard extends Component {
   }
 
   handleAdd = () => {
-    const { handleRefresh, boardId } = this.props;
+    const { handleRefresh, boardId, colIndex } = this.props;
     const { authToken } = this.context;
 
-    API.Boards.createCardInColumn(
+    API.Cards.createCardInColumn(
       authToken,
       boardId,
-      0,
+      colIndex,
       "My Name",
       "Lorem ipsum..."
     )
@@ -61,7 +63,7 @@ class ColumnBoard extends Component {
 
   handleSave = (card) => {
     const { authToken } = this.context;
-    API.Boards.createCardInColumn(
+    API.Cards.createCardInColumn(
       authToken,
       this.props.id,
       this.props.index,
@@ -106,13 +108,12 @@ class ColumnBoard extends Component {
                   </Typography>
                   {/* to input column text */}
                   <form noValidate autoComplete="off">
-                  {/* <Input defaultValue="Hello world" inputProps={{ 'aria-label': 'description' }} /> */}
                     <TextField
                       id="standard-basic"
                       // label="Column Title"
                       // variant="outlined"
                       color="secondary"
-                      defaultValue = {this.props.title}
+                      defaultValue = {title}
                       onChange = {this.editColumnTitle}
                     />
                   </form>
