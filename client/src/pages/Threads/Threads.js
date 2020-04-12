@@ -57,7 +57,7 @@ function Threads() {
       </div>
       <div className="threads-panel">
         <div> 
-          {console.log(userInfo.id + "HIIIIIIIIIII")}
+         
           { 
             threads.map((item, index) => (
               // <div className="thread" key={index}>{item.title}</div>
