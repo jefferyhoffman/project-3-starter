@@ -36,9 +36,7 @@ class ColumnBoard extends Component {
   static contextType = AuthContext;
 
   editColumnTitle = (title) => {
-    
     // const { title } = this.props;
-
     API.Columns.updateColumnTitle(
       title,
     )
@@ -47,15 +45,15 @@ class ColumnBoard extends Component {
   }
 
   handleAdd = () => {
-    const { handleRefresh, boardId, colIndex } = this.props;
+    const { handleRefresh, boardId } = this.props;
     const { authToken } = this.context;
 
     API.Cards.createCardInColumn(
       authToken,
       boardId,
-      colIndex,
-      "My Name",
-      "Lorem ipsum..."
+      2,
+      "title",
+      'body',
     )
       .then(() => handleRefresh())
       .catch((err) => console.log(err));
