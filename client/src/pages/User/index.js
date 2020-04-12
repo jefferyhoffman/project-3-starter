@@ -9,12 +9,14 @@ const User = (props) => {
   const userInfo = useContext(AuthContext);
   const [theSelected, setTheSelected] = useState([]);
   const [allActions, setAllActions] = useState([]);
-  const [render, setRender]=useState(1)
+  const [render, setRender] = useState(1);
   useEffect(() => {
     API.Actions.getAll(userInfo.authToken).then(({ data }) =>
       setAllActions(data)
     );
-    API.Challenges.getCurrentChallenge(userInfo.authToken).then(({data})=>console.log(data))
+    API.Challenges.getCurrentChallenge(userInfo.authToken).then(({ data }) =>
+      console.log(data)
+    );
     //setTheSelected(selected);
   }, []);
   console.log(userInfo);
@@ -36,15 +38,14 @@ const User = (props) => {
       .then(({ data }) => console.log("Challenge saved"))
       .catch((err) => console.log(err));
   };
-  const deleteChallenge =(id)=>{
-    console.log(theSelected,id,'<===')
-     const newNew = theSelected
-     newNew.splice(id,1)
-     console.log(newNew)
-      setTheSelected(()=>newNew)
-      setRender((curr)=>curr+1)
-      
-  }
+  const deleteChallenge = (id) => {
+    console.log(theSelected, id, "<===");
+    const newNew = theSelected;
+    newNew.splice(id, 1);
+    console.log(newNew);
+    setTheSelected(() => newNew);
+    setRender((curr) => curr + 1);
+  };
   const makeBody = (cat, eventKey) => {
     const filteredList = allActions.filter((act) => act.category === cat);
 
@@ -69,14 +70,18 @@ const User = (props) => {
   return (
     <>
       <h1>
-        Please choose from the actions below to create your first challenge! 
+        Please choose from the actions below to create your first challenge!
       </h1>
       {allActions && (
-        <Selected selections={theSelected} deleteHandler={deleteChallenge} clickHandler={createChallenge} />
+        <Selected
+          selections={theSelected}
+          deleteHandler={deleteChallenge}
+          clickHandler={createChallenge}
+        />
       )}
       <Accordion defaultActiveKey="0">
         <Card>
-          <Card.Header>
+          <Card.Header className="travel">
             <Accordion.Toggle as={Button} variant="link" eventKey="1">
               Travel
             </Accordion.Toggle>
@@ -85,7 +90,7 @@ const User = (props) => {
           {allActions && makeBody("Travel", "1")}
         </Card>
         <Card>
-          <Card.Header>
+          <Card.Header className="food">
             <Accordion.Toggle as={Button} variant="link" eventKey="2">
               Food
             </Accordion.Toggle>
@@ -104,7 +109,7 @@ const User = (props) => {
           </Accordion.Collapse> */}
         </Card>
         <Card>
-          <Card.Header>
+          <Card.Header className="home">
             <Accordion.Toggle as={Button} variant="link" eventKey="3">
               Home
             </Accordion.Toggle>
@@ -124,7 +129,7 @@ const User = (props) => {
           </Accordion.Collapse> */}
         </Card>
         <Card>
-          <Card.Header>
+          <Card.Header className="consumable">
             <Accordion.Toggle as={Button} variant="link" eventKey="4">
               Consumable Items
             </Accordion.Toggle>

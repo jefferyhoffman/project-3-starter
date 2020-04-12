@@ -4,9 +4,9 @@ import { Tabs, Tab, Row, Col, Nav, Button } from "react-bootstrap";
 const SelectedChallenges = (props) => {
   console.log(props);
 
-    const handleComplete=(id)=>{
-        props.deleteHandler(id)
-    }
+  const handleComplete = (id) => {
+    props.deleteHandler(id);
+  };
 
   return (
     <>
@@ -18,24 +18,25 @@ const SelectedChallenges = (props) => {
               transition={false}
               id="noanim-tab-example"
             >
-              <Tab
-                eventKey="Current Challenge"
-                title="Current Challenge"
-              >
-                
+              <Tab eventKey="Current Challenge" title="Current Challenge">
                 {props.selections.map((action, position) => (
-                  <p key={action.id+position}>
-                    <span style={{ cursor: "pointer" }} onClick={()=>handleComplete(position)}> X </span>points: {action.points} - {action.name} -{" "}
+                  <p key={action.id + position}>
+                    <span
+                      style={{ cursor: "pointer" }}
+                      onClick={() => handleComplete(position)}
+                    >
+                      {" "}
+                      X{" "}
+                    </span>
+                    points: {action.points} - {action.name} -{" "}
                     {action.description}
                   </p>
-                  
                 ))}
                 {props.selections.length > 0 ? (
                   <Button variant="outline-info" onClick={props.clickHandler}>
                     Saved
                   </Button>
                 ) : null}
-                
               </Tab>
               <br></br>
               {/* <Tab eventKey="Update" title="Update">
