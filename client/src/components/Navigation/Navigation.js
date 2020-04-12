@@ -26,7 +26,7 @@ class Navigation extends Component {
     const togglerClass = `navbar-toggler ${collapsed && 'collapsed'}`;
 
     return (
-      <div className='Navigation'>
+      <div className='Navigation abel'>
         <nav className='navbar navbar-expand-lg navbar-light mb-3'>
           <Link className='navbar-brand fade-in' to='#'>Baton Pass</Link>
           <button className={togglerClass} onClick={this.toggleCollapse} data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
