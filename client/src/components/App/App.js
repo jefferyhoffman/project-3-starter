@@ -16,6 +16,8 @@ import Friends from '../../pages/Friends'
 import './App.css';
 import theBackground from './images/trees.jpg'
 import muirWoods from './images/muirwoods.jpg'
+
+
 class App extends Component {
     constructor(props) {
         super(props);

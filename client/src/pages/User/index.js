@@ -10,6 +10,12 @@ const User = (props) => {
   const [theSelected, setTheSelected] = useState([]);
   const [allActions, setAllActions] = useState([]);
   const [render, setRender]=useState(1)
+  const [checkboxData, setCheckboxData]=useState({
+    value: false
+    // ChallengeId: 0,
+    // ActionId: 0
+    })
+
   useEffect(() => {
     API.Actions.getAll(userInfo.authToken).then(({ data }) =>
       setAllActions(data)
@@ -35,6 +41,7 @@ const User = (props) => {
       })
       .then(({ data }) => console.log("Challenge saved"))
       .catch((err) => console.log(err));
+    
   };
   const deleteChallenge =(id)=>{
     console.log(theSelected,id,'<===')
@@ -45,6 +52,25 @@ const User = (props) => {
       setRender((curr)=>curr+1)
       
   }
+
+  const handleCheckbox = (event, action) => {
+    // if (value) {
+      setCheckboxData({value: true})
+      console.log("checked!")
+      console.log(event.target.value)
+      // setCheckboxData({
+      //   value: false,
+      //   ChallengeId: ,
+      //   ActionId: action.id  
+      // })
+  }
+
+    // API.Challenges.challengeActionAccomplishedToggle(ChallengeId, ActionId, userInfo.authToken)
+
+  // }
+
+
+
   const makeBody = (cat, eventKey) => {
     const filteredList = allActions.filter((act) => act.category === cat);
 
@@ -72,7 +98,7 @@ const User = (props) => {
         Please choose from the actions below to create your first challenge! 
       </h1>
       {allActions && (
-        <Selected selections={theSelected} deleteHandler={deleteChallenge} clickHandler={createChallenge} />
+        <Selected selections={theSelected} deleteHandler={deleteChallenge} clickHandler={createChallenge} checkboxHandler={handleCheckbox}/>
       )}
       <Accordion defaultActiveKey="0">
         <Card>

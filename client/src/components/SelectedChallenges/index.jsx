@@ -1,5 +1,6 @@
 import React from "react";
-import { Tabs, Tab, Row, Col, Nav, Button } from "react-bootstrap";
+import { Tabs, Tab, Row, Col, Nav, Button} from "react-bootstrap";
+
 
 const SelectedChallenges = (props) => {
   console.log(props);
@@ -24,11 +25,18 @@ const SelectedChallenges = (props) => {
               >
                 
                 {props.selections.map((action, position) => (
+                  <div>
                   <p key={action.id+position}>
                     <span style={{ cursor: "pointer" }} onClick={()=>handleComplete(position)}> X </span>points: {action.points} - {action.name} -{" "}
                     {action.description}
                   </p>
-                  
+                  <input 
+                    type="checkbox"
+                    onChange={props.checkboxHandler}
+                    // id={`default-${type}`}
+                    // label={`default ${type}`}
+                  />
+                  </div>
                 ))}
                 {props.selections.length > 0 ? (
                   <Button variant="outline-info" onClick={props.clickHandler}>
