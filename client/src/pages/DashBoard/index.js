@@ -54,8 +54,8 @@ class DashBoard extends Component {
 
     API.Boards.getMy(authToken)
       .then((res) => {
-        console.log(res.data)
-        this.setState({ board: res.data, isLoading: false })
+        console.log(res.data);
+        this.setState({ board: res.data, isLoading: false });
       })
       .catch((err) => console.log(err));
   };
@@ -85,7 +85,7 @@ class DashBoard extends Component {
              */}
             </Grid>
           </Grid>
-        ): null }
+        ) : null}
       </div>
     );
   }
