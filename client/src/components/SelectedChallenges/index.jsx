@@ -4,9 +4,9 @@ import { Tabs, Tab, Row, Col, Nav, Button } from "react-bootstrap";
 const SelectedChallenges = (props) => {
   console.log(props);
 
-    const handleComplete=(id)=>{
-        props.deleteHandler(id)
-    }
+  const handleComplete = (id) => {
+    props.deleteHandler(id);
+  };
 
   return (
     <>
@@ -18,35 +18,25 @@ const SelectedChallenges = (props) => {
               transition={false}
               id="noanim-tab-example"
             >
-              <Tab
-                eventKey="Current Challenge"
-                title="Current Challenge"
-              >
-<<<<<<< HEAD
-                {props.selections.length > 0 ? (
-                  <Button variant="success" onClick={props.clickHandler}>
-                    Saved
-                  </Button>
-                ) : null}
-                {props.selections.map((action) => (
-                  <p>
-                    points: {action.points} - {action.name} -{" "}
-=======
-                
+              <Tab eventKey="Current Challenge" title="Current Challenge">
                 {props.selections.map((action, position) => (
-                  <p key={action.id+position}>
-                    <span style={{ cursor: "pointer" }} onClick={()=>handleComplete(position)}> X </span>points: {action.points} - {action.name} -{" "}
->>>>>>> a727df0680df341f64bf97adc53ea4a80a031578
+                  <p key={action.id + position}>
+                    <span
+                      style={{ cursor: "pointer" }}
+                      onClick={() => handleComplete(position)}
+                    >
+                      {" "}
+                      X{" "}
+                    </span>
+                    points: {action.points} - {action.name} -{" "}
                     {action.description}
                   </p>
-                  
                 ))}
                 {props.selections.length > 0 ? (
                   <Button variant="outline-info" onClick={props.clickHandler}>
                     Saved
                   </Button>
                 ) : null}
-                
               </Tab>
               <br></br>
               {/* <Tab eventKey="Update" title="Update">
