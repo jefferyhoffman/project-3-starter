@@ -10,7 +10,7 @@ function Galleries(props) {
         <div>
             <UploadForm />
             <hr className='transparent-hr' />
-            <div className='galleries'>
+            <div className='galleries fade-in'>
                 {value.user && value.user.galleries.map((image, index)=>(
                     <Gallery
                         id={index}
