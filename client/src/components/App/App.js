@@ -86,48 +86,8 @@ class App extends Component {
 
       galleries: [
         {
-          name: 'Sketches Vol 01', 
-          images: 'https://raw.githubusercontent.com/parmark/Booru-Poses/master/assets/images/sample3.jpg'
-        }, 
-        {
-          name: 'Sketches Vol 02', 
-          images: 'https://danbooru.donmai.us/data/__laffey_javelin_bremerton_and_bremerton_azur_lane_drawn_by_hori_hori_no_su__eaf1e44a7e52faed1496947405c8b11e.jpg' 
-        }, 
-        {
-          name: 'Sketches Vol 02', 
-          images: 'https://danbooru.donmai.us/data/sample/__hakurei_reimu_touhou_drawn_by_sonson_eleven__sample-cfa0a296f3d280bd52d6359281aff894.jpg' 
-        }, 
-        {
-          name: 'Sketches Vol 02', 
-          images: 'https://danbooru.donmai.us/data/sample/__murasaki_shion_roboco_san_and_kiryuu_coco_hololive_drawn_by_yohane__sample-f4cda1f8d9eba84ab5820cd07a0c3efa.jpg' 
-        }, 
-        {
           name: 'Sketches Vol 02', 
           images: 'https://danbooru.donmai.us/data/sample/__hakurei_reimu_kirisame_marisa_and_remilia_scarlet_touhou_drawn_by_yuki_popopo__sample-f5cd511a4e2d3b2d2969817b6682b8b5.jpg' 
-        },
-        {
-          name: 'Sketches Vol 02', 
-          images: 'https://reader015.dokumen.tips/reader015/html5/0710/5b449913e6460/5b449915edb5f.jpg' 
-        },
-        {
-          name: 'Sketches Vol 02', 
-          images: 'https://coryproulx.files.wordpress.com/2014/09/coryproulx_wk4.jpg' 
-        },
-        {
-          name: 'Sketches Vol 02', 
-          images: 'https://static.wixstatic.com/media/c8e62d_fde4ce1f746849528cf4088340d27f97~mv2_d_3207_4091_s_4_2.jpg/v1/fill/w_697,h_889,al_c,q_90,usm_0.66_1.00_0.01/c8e62d_fde4ce1f746849528cf4088340d27f97~mv2_d_3207_4091_s_4_2.webp' 
-        },
-        {
-          name: 'Sketches Vol 02', 
-          images: 'https://www.anatomytools.com/images/atc/artists/Michael_Hampton/Michael_Hampton_004.jpg' 
-        },
-        {
-          name: 'Sketches Vol 02', 
-          images: 'https://www.anatomytools.com/images/atc/artists/Michael_Hampton/Michael_Hampton_018.jpg' 
-        },
-        {
-          name: 'Sketches Vol 02', 
-          images: 'https://blog.bodiesinmotion.photo/wp-content/uploads/2016/11/sketch-5-1800x1443.jpg' 
         }
       ]
     }
