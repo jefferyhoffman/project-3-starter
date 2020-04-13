@@ -32,7 +32,7 @@ const styles = (theme) => ({
     },
 
     display: "flex",
-    flexFlow: "row wrap",
+    flexFlow: "row nowrap",
     justifyContent: "center",
   },
 });

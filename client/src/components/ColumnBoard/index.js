@@ -159,8 +159,8 @@ class ColumnBoard extends Component {
               {cards.map((card) => (
                 <CardBoard
                   {...card}
-                  colId={column._id}
-                  cardId={card._id}
+                  //colId={column._id}
+                  //cardId={card._id}
                   handleSave={this.handleSave}
                   handleEdit={this.handleEdit}
                   handleDelete={this.handleDelete}
