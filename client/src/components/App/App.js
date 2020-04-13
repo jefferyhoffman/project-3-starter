@@ -14,9 +14,9 @@ import NotFound from '../../pages/NotFound/NotFound';
 import UserPage from '../../pages/User';
 import Friends from '../../pages/Friends'
 import './App.css';
-import theBackground from './images/trees.jpg'
+import theBackground from './images/trees.png'
 import mtns from './images/mtns.png'
-
+import sea from './images/sea.png'
 
 class App extends Component {
     constructor(props) {

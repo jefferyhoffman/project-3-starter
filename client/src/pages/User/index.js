@@ -1,8 +1,16 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Accordion, Card, Button } from "react-bootstrap";
+import {
+  Accordion,
+  Card,
+  Button,
+  ButtonGroup,
+  DropdownButton,
+  Dropdown,
+} from "react-bootstrap";
 import AuthContext from "../../contexts/AuthContext";
 import Selected from "../../components/SelectedChallenges";
 import { FiPlusSquare } from "react-icons/fi";
+import { FiInfo } from "react-icons/fi";
 // import CreateChallenge from "../../components/CreateChallenge";
 import API from "../../lib/API";
 import "./style.css";
@@ -12,6 +20,7 @@ const User = (props) => {
   const [theSelected, setTheSelected] = useState([]);
   const [allActions, setAllActions] = useState([]);
   const [render, setRender]=useState(1)
+  const [challengeID, setChallengeID]=useState()
   const [checkboxData, setCheckboxData]=useState({
     value: false
     // ChallengeId: 0,
@@ -22,13 +31,19 @@ const User = (props) => {
     API.Actions.getAll(userInfo.authToken).then(({ data }) =>
       setAllActions(data)
     );
-    API.Challenges.getCurrentChallenge(userInfo.authToken).then(({ data }) =>
-      console.log(data)
-    );
+    
+    getCurrActions()
     //setTheSelected(selected);
   }, []);
   console.log(userInfo);
-
+  const getCurrActions=()=>{
+    API.Challenges.getCurrentChallenge(userInfo.authToken).then(({ data }) =>{
+      console.log(data)
+      setTheSelected(data.actions)
+      setChallengeID(data.id)
+   }
+   );
+  }
   const addAction = (points, name, description, id) => {
     setTheSelected([...theSelected, { points, name, description, id }]);
   };
@@ -47,33 +62,49 @@ const User = (props) => {
       .catch((err) => console.log(err));
     
   };
-  const deleteChallenge =(id)=>{
-    console.log(theSelected,id,'<===')
-     const newNew = theSelected
-     newNew.splice(id,1)
-     console.log(newNew)
-      setTheSelected(()=>newNew)
-      setRender((curr)=>curr+1)
+
+  const addNewAction=(Actionid)=>{
+    const oldArray = theSelected.map(actionz=>actionz.id)
+    oldArray.push(Actionid)
+    console.log(oldArray)
+    API.Challenges.updateChallenge(challengeID, oldArray, userInfo.authToken).then(
+    (res)=>{
+      console.log(res)
+      if(res.status === 200){
+        console.log('ok')
+        getCurrActions()
+      }
+    }
+    )
+  }
+  const deleteChallenge =(actionId)=>{
+    const newArr = [actionId]
+    console.log(challengeID, newArr, userInfo.authToken)
+    API.Challenges.deleteActionFromChallenge(challengeID, newArr, userInfo.authToken).then(
+      (res)=>{
+        console.log(res)
+        if(res.status === 200){
+          console.log('ok')
+          getCurrActions()
+        }
+      }
+      )
       
   }
 
-  const handleCheckbox = (event, action) => {
-    // if (value) {
-      setCheckboxData({value: true})
-      console.log("checked!")
-      console.log(event.target.value)
-      // setCheckboxData({
-      //   value: false,
-      //   ChallengeId: ,
-      //   ActionId: action.id  
-      // })
+
+
+  const completeTheAction=(ActionId)=>{
+    API.Challenges.challengeActionAccomplishedToggle(challengeID, ActionId, userInfo.authToken).then(
+      (res)=>{
+        console.log(res)
+        if(res.status === 200){
+          console.log('ok')
+          getCurrActions()
+        }
+      }
+      )
   }
-
-    // API.Challenges.challengeActionAccomplishedToggle(ChallengeId, ActionId, userInfo.authToken)
-
-  // }
-
-
 
   const makeBody = (cat, eventKey) => {
     const filteredList = allActions.filter((act) => act.category === cat);
@@ -85,12 +116,27 @@ const User = (props) => {
             style={{ cursor: "pointer" }}
             // onClick={() => alert("added " + act.points)}
             onClick={() =>
-              addAction(act.points, act.name, act.description, act.id)
+              // addAction(
+              //   act.points,
+              //   act.name,
+              //   <ButtonGroup>
+              //     <DropdownButton variant="clear" title={<FiInfo size={28} />}>
+              //       <Dropdown.Item eventKey="">{act.description}</Dropdown.Item>
+              //     </DropdownButton>
+              //   </ButtonGroup>,
+              //   act.id
+              // )
+              addNewAction(act.id)
             }
           >
-            <FiPlusSquare size={28}/>
+            <FiPlusSquare size={28} />
           </span>{" "}
-          points: {act.points} - {act.name} - {act.description}
+          points: {act.points} - {act.name} -{" "}
+          <ButtonGroup>
+            <DropdownButton variant="clear" title={<FiInfo size={28} />}>
+              <Dropdown.Item eventKey="">{act.description}</Dropdown.Item>
+            </DropdownButton>
+          </ButtonGroup>
         </Card.Body>
       </Accordion.Collapse>
     ));
@@ -102,7 +148,7 @@ const User = (props) => {
         Please choose from the actions below to create your first challenge!
       </h1>
       {allActions && (
-        <Selected selections={theSelected} deleteHandler={deleteChallenge} clickHandler={createChallenge} checkboxHandler={handleCheckbox}/>
+        <Selected selections={theSelected} deleteHandler={deleteChallenge} completeHandler={completeTheAction} clickHandler={createChallenge}/>
       )}
       <Accordion defaultActiveKey="0">
         <Card>
@@ -121,17 +167,6 @@ const User = (props) => {
             </Accordion.Toggle>
           </Card.Header>
           {allActions && makeBody("Food", "2")}
-          {/* <Accordion.Collapse eventKey="1">
-            <Card.Body>
-              <span
-                style={{ cursor: "pointer" }}
-                onClick={() => alert("clicked")}
-              >
-                +
-              </span>{" "}
-              Food items
-            </Card.Body>
-          </Accordion.Collapse> */}
         </Card>
         <Card>
           <Card.Header className="home">
@@ -140,18 +175,6 @@ const User = (props) => {
             </Accordion.Toggle>
           </Card.Header>
           {allActions && makeBody("Home", "3")}
-          {/* <Accordion.Collapse eventKey="2">
-            <Card.Body>
-              {" "}
-              <span
-                style={{ cursor: "pointer" }}
-                onClick={() => alert("clicked")}
-              >
-                +
-              </span>{" "}
-              Home items
-            </Card.Body>
-          </Accordion.Collapse> */}
         </Card>
         <Card>
           <Card.Header className="consumable">
@@ -160,18 +183,6 @@ const User = (props) => {
             </Accordion.Toggle>
           </Card.Header>
           {allActions && makeBody("Consumable Items", "4")}
-          {/* <Accordion.Collapse eventKey="3">
-            <Card.Body>
-              {" "}
-              <span
-                style={{ cursor: "pointer" }}
-                onClick={() => alert("clicked")}
-              >
-                +
-              </span>{" "}
-              Consumable items
-            </Card.Body>
-          </Accordion.Collapse> */}
         </Card>
       </Accordion>
     </>
