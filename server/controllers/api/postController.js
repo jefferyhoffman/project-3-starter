@@ -1,23 +1,10 @@
 const db = require("../../models");
 
 module.exports = {
-    findAll: function (req, res) {
-        console.log(req.query)
-        db.Reply
-            .find({
-                where: { id: req.query.id },
-                include: [{
-                    model: db.User,
-                    attributes: ['email']
-                }]
-            })
-            .then(dbModel => res.json(dbModel))
-            .catch(err => res.status(422).json(err));
-    },
     findById: function (req, res) {
         db.Reply
             .findById({
-                where: { id: req.params.id },
+                where: { id: req.id},
                 include: [{
                     model: db.User,
                     attributes: ['email']
@@ -41,6 +28,7 @@ module.exports = {
             .catch(err => res.status(422).json(err));
     },
     remove: function (req, res) {
+        console.log(req.params)
         db.Reply
             .findById({ _id: req.params.id })
             .then(dbModel => dbModel.remove())

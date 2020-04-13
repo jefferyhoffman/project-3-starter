@@ -45,9 +45,19 @@ export default {
   },
 
   Reply: {
+    getReplies: function() {
+      return axios.get("/api/reply");
+    },
+    getReply: function(id) {
+      return axios.get("api/reply/" + id)
+    },
     //Creates a reply
     createReply: function (replyData) {
       return axios.post("/api/reply", replyData);
+    },
+
+    deleteReply: function (id) {
+      return axios.delete("/api/reply/" + id);
     }
   }
 };

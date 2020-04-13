@@ -4,7 +4,11 @@ import Jumbotron from "../../components/Jumbotron/index";
 import { List, Listitem } from "../../components/List/index";
 import API from "../../lib/API";
 import "../ThreadDetail/threadDetail.css";
-import { Input, TextArea, FormBtn } from "../../components/ThreadForm"
+import { Input, TextArea, FormBtn } from "../../components/ThreadForm";
+import DeleteBtn from "../../components/DeleteReplyButton";
+
+
+
 
 
 function ThreadDetail({ match }) { 
@@ -55,6 +59,12 @@ function ThreadDetail({ match }) {
             .catch(err => console.error(err))
     }, []);
 
+    function deleteReply(id) {
+      API.Reply.deleteReply(id)
+        .then(res => console.log(res))
+        .catch(err => console.log(err));
+    }
+
     return (
         <div>
             <div className="Reply-heading">
@@ -73,6 +83,8 @@ function ThreadDetail({ match }) {
                         <div className="reply" key="item.id">
                             User: {item.User.email}<br/>
                             Body: {item.body}
+                            <DeleteBtn onClick={() => deleteReply(item.id)} />
+                            
                         </div>
                         ))}
                     </div>
