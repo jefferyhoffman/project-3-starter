@@ -37,8 +37,8 @@ boardController.post("/", JWTVerifier, (req, res) => {
           title: "To Do",
           cards: [
             {
-              title: "Learn this app!",
-              body: "How to use Kanban...",
+              title: "new task",
+              body: "kanban",
             },
           ],
         },
@@ -147,7 +147,7 @@ boardController.post("/:id/columns/:index/cards", JWTVerifier, (req, res) => {
       throw new Error("Invalid column index");
     }
 
-    board.columns[index].cards.push(req.body);
+    board.columns[index].cards.unshift(req.body);
     return board.save();
   })
     .then((updatedBoard) => res.json(updatedBoard))

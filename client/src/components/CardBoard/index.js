@@ -1,4 +1,4 @@
-import React  from "react";
+import React, {useState} from "react";
 import withStyles from "@material-ui/styles/withStyles";
 import {
   Button,
@@ -37,8 +37,21 @@ const styles = (theme) => ({
 });
 
 const CardBoard = (props) => {
+  const [title, setTitle] = useState(props.title);
+  const [body, setBody] = useState(props.body);
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    if (name === "title") {
+      setTitle(value);
+    } else if (name === "body") {
+      setBody(value);
+    } else {
+      alert("Ruh roh, something bad happened.");
+    }
+  }
   
-  const { classes, title, body, handleSave, handleEdit, handleDelete } = props;
+  const { classes, cardIndex, handleEdit, handleDelete } = props;
 
   return (
     <div>
@@ -57,6 +70,8 @@ const CardBoard = (props) => {
                 className={classes.cardTitle}
                 variant="filled"
                 value={title}
+                name="title"
+                onChange={handleInputChange}
               />
             </form>
 
@@ -67,7 +82,9 @@ const CardBoard = (props) => {
                 multiline
                 rows="4"
                 defaultValue="Default Value"
+                name="body"
                 value={body}
+                onChange={handleInputChange}
               />
             </form>
           </CardContent>
@@ -81,7 +98,7 @@ const CardBoard = (props) => {
               size="small"
               className={classes.actionButtom}
               //value={value}
-              onClick={() => handleSave(props)}
+              onClick={() => props.handleSave(cardIndex, title, body)}
             >
               Save
             </Button>
