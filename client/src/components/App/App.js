@@ -15,7 +15,7 @@ import UserPage from '../../pages/User';
 import Friends from '../../pages/Friends'
 import './App.css';
 import theBackground from './images/trees.jpg'
-import muirWoods from './images/muirwoods.jpg'
+import mtns from './images/mtns.png'
 
 
 class App extends Component {
