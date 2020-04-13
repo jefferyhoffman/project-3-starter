@@ -73,6 +73,7 @@ class DashBoard extends Component {
             <Grid xs={12} spacing={4} container item className={classes.grid}>
               {board.columns.map((column, index) => (
                 <ColumnBoard
+                  key={column._id}
                   boardId={board._id}
                   colIndex={index}
                   {...column}

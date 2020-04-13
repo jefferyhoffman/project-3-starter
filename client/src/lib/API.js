@@ -77,7 +77,6 @@ export default {
   },
 
   Cards: {
-    // Jeff
     createCardInColumn: function (authToken, 
       boardId, colIndex, title, body) {
       return axios.post(
@@ -113,13 +112,10 @@ export default {
 
     deleteCardInColumn: function (authToken,
        boardId, colIndex, cardIndex) {
-      return axios.delete(`/${boardId}/columns/${colIndex}/cards/${cardIndex}`,
-        {
-          cardIndex
-        },
+      return axios.delete(`/api/boards/${boardId}/columns/${colIndex}/cards/${cardIndex}`,
         {
           headers: {
-            Authorization: `Bearer ${authToken}`,
+          Authorization: `Bearer ${authToken}`,
           },
         }
       );
