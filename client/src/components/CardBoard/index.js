@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import withStyles from "@material-ui/styles/withStyles";
 import {
   Button,
@@ -6,19 +6,26 @@ import {
   CardContent,
   CardActions,
   TextField,
+  IconButton,
 } from "@material-ui/core";
+import ArrowLeftIcon from "@material-ui/icons/ArrowLeft";
+import ArrowRightIcon from "@material-ui/icons/ArrowRight";
 
 import CardHeaderMenu from "../CardHeaderMenu";
 
 const styles = (theme) => ({
   root: {
-    nimWidth: 275,
-    nimHeight: 300,
+    marginBottom: 25,
   },
   actionButton: {
     textTransform: "uppercase",
     margin: theme.spacing(1),
     width: 100,
+  },
+  sideButton: {
+    textTransform: "uppercase",
+    margin: theme.spacing(1),
+    width: 10,
   },
   alignRight: {
     display: "flex",
@@ -36,6 +43,7 @@ const styles = (theme) => ({
   },
 });
 
+
 const CardBoard = (props) => {
   const [title, setTitle] = useState(props.title);
   const [body, setBody] = useState(props.body);
@@ -49,13 +57,13 @@ const CardBoard = (props) => {
     } else {
       alert("Ruh roh, something bad happened.");
     }
-  }
-  
-  const { classes, cardIndex, handleEdit, handleDelete } = props;
+  };
+
+  const { classes, cardIndex, handleDelete } = props;
 
   return (
     <div>
-       <Card variant="outlined">
+      <Card variant="outlined" className={classes.root}>
         <div>
           <CardHeaderMenu />
 
@@ -72,6 +80,7 @@ const CardBoard = (props) => {
                 value={title}
                 name="title"
                 onChange={handleInputChange}
+                
               />
             </form>
 
@@ -102,7 +111,7 @@ const CardBoard = (props) => {
             >
               Save
             </Button>
-            
+
             <Button
               //onClick={this.openDialog}
               color="primary"
@@ -113,33 +122,27 @@ const CardBoard = (props) => {
             >
               Delete
             </Button>
-            <Button
+            <IconButton
               //onClick={this.openDialog}
               color="primary"
               variant="outlined"
               size="small"
-              className={classes.actionButton}
-             
+              className={classes.sideButton}
             >
-             left
-            </Button>
-            <Button
+              <ArrowLeftIcon />
+            </IconButton>
+            <IconButton
               //onClick={this.openDialog}
               color="primary"
               variant="outlined"
               size="small"
-              className={classes.actionButton}
-              
+              className={classes.sideButton}
             >
-            right
-              
-              
-            </Button>
-
+              <ArrowRightIcon />
+            </IconButton>
           </CardActions>
         </div>
-      </Card> 
-      
+      </Card>
     </div>
   );
 };

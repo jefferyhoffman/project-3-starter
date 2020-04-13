@@ -3,19 +3,21 @@ import withStyles from "@material-ui/styles/withStyles";
 import {
   Grid,
   Paper,
-  Typography,
   Button,
   Card,
   CardContent,
   CardActions,
   TextField,
+  IconButton,
 } from "@material-ui/core";
+import ArrowLeftIcon from "@material-ui/icons/ArrowLeft";
+import ArrowRightIcon from "@material-ui/icons/ArrowRight";
 import { Draggable } from "react-beautiful-dnd";
 
 const styles = (theme) => ({
   colGrid: {
     flexGrow: 1,
-    justifyContent: "flex-end",
+    justifyContent: "center",
     alignItems: "center",
     minWidth: 400,
     marginLeft: 20,
@@ -55,47 +57,27 @@ class HomePageColumn extends Component {
 
     return (
       <div>
-        <Draggable dragagableId={this.props.id} index={this.props.index}>
-          {(provided) => (
-            <Grid container item>
-              <Grid
-                item
-                className={classes.colGrid}
-                xs={12}
-                md={4}
-                {...provided.draggableProps}
-                {...provided.dragHandleProps}
-                inneRef={provided.innerRef}
-              >
-                <Paper className={classes.paper}>
+        <Grid container item>
+          <Grid item className={classes.colGrid} xs={12} md={4}>
+            <Draggable dragagableId={this.props.id} index={this.props.index}>
+              {(provided) => (
+                <Paper
+                  className={classes.paper}
+                  {...provided.draggableProps}
+                  {...provided.dragHandleProps}
+                  inneRef={provided.innerRef}
+                >
                   <div>
                     <div>
-                      <Typography
-                        style={{ textTransform: "uppercase" }}
-                        color="secondary"
-                        gutterBottom="true"
-                      >
-                        {this.props.colTitle}
-                      </Typography>
-
                       <form noValidate autoComplete="off">
                         <TextField
-                          id="outlined-basic"
-                          variant="outlined"
+                          id="standard-basic"
                           color="secondary"
                           value={this.props.colBody}
                         />
                       </form>
                     </div>
                     <div className={classes.alignRight}>
-                      <Button
-                        size="small"
-                        color="secondary"
-                        variant="contained"
-                        className={classes.actionButtom}
-                      >
-                        Edit
-                      </Button>
                       <Button
                         color="primary"
                         variant="contained"
@@ -153,14 +135,7 @@ class HomePageColumn extends Component {
                         >
                           Save
                         </Button>
-                        <Button
-                          color="primary"
-                          variant="contained"
-                          size="small"
-                          className={classes.actionButton}
-                        >
-                          Edit
-                        </Button>
+
                         <Button
                           color="primary"
                           variant="outlined"
@@ -169,14 +144,32 @@ class HomePageColumn extends Component {
                         >
                           Delete
                         </Button>
+                        <IconButton
+                          //onClick={this.openDialog}
+                          color="primary"
+                          variant="outlined"
+                          size="small"
+                          className={classes.sideButton}
+                        >
+                          <ArrowLeftIcon />
+                        </IconButton>
+                        <IconButton
+                          //onClick={this.openDialog}
+                          color="primary"
+                          variant="outlined"
+                          size="small"
+                          className={classes.sideButton}
+                        >
+                          <ArrowRightIcon />
+                        </IconButton>
                       </CardActions>
                     </div>
                   </Card>
                 </Paper>
-              </Grid>
-            </Grid>
-          )}
-        </Draggable>
+              )}
+            </Draggable>
+          </Grid>
+        </Grid>
       </div>
     );
   }
