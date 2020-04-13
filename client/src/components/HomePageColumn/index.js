@@ -121,10 +121,10 @@ class HomePageColumn extends Component {
                             id="standard-basic"
                             multiline
                             rows="1"
-                            defaultValue="Title"
+                            defaultValue={this.props.taskTitle}
                             className={classes.cardTitle}
                             variant="filled"
-                            value={this.props.taskTitle}
+                            // value={this.props.taskTitle}
                           />
                         </form>
 
@@ -137,8 +137,8 @@ class HomePageColumn extends Component {
                             id="filled-multiline-static"
                             multiline
                             rows="4"
-                            defaultValue="Default Value"
-                            value={this.props.taskBody}
+                            defaultValue={this.props.taskBody}
+                            // value={this.props.taskBody}
                           />
                         </form>
                       </CardContent>
