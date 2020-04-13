@@ -77,6 +77,8 @@ class ColumnBoard extends Component {
       .catch((err) => console.log(err));
   };
 
+  moveCardLeft
+
   handleSave = (cardIndex, title, body) => {
     const { authToken } = this.context;
     const { boardId, colIndex } = this.props;
@@ -180,6 +182,8 @@ class ColumnBoard extends Component {
                   handleSave={this.handleSave}
                   handleEdit={this.handleEdit}
                   handleDelete={this.handleDelete}
+                  moveCardLeft={this.moveCardLeft}
+                  moveCardRight={this.moveCardRight}
                 />
               ))}
             </Paper>
