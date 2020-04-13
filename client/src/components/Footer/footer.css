@@ -23,6 +23,10 @@
     flex-grow: 1;
 }
 
+.about-link {
+    color:darkcyan;
+}
+
 /* .Footer {
     background-color: green;
     color: white;

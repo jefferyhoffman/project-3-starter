@@ -70,6 +70,7 @@ class App extends Component {
               <Route exact path={["/thread"]} component={Threads} />
               <PrivateRoute path='/secret' component={Secret} />
               <Route exact path='/thread/:id' component={ThreadDetail}/>
+              <Route path='/About' component={About} />
               <Route component={NotFound} />
             </Switch>
           </div>
