@@ -39,8 +39,6 @@ usersController.post('/login', (req, res) => {
 // get searched email
 // working
 usersController.get('/search/:email', (req, res) => {
-  // const { email } = req.body;
-  console.log(req.params.email)
   db.User.findOne({ where: {
     email: req.params.email 
   }})
@@ -57,7 +55,8 @@ usersController.get('/search/:email', (req, res) => {
 
 
 
-// get all of the people that the user is following
+// get all of the people that the user is following and their current challenge point total
+// working
 usersController.get("/follows", JWTVerifier, (req, res) => {
   
   db.User.findByPk(req.user.id)
@@ -68,12 +67,62 @@ usersController.get("/follows", JWTVerifier, (req, res) => {
           .send(`User with id ${req.user.id} not found.`);
       }
 
-      console.log(user)
       return user.getFollowers();
     })
-    .then(followers => res.json(followers))
+    .then(followers => {
+      let updatedFollowers = followers;
+
+
+      const allQueries = followers.map(follower => db.Challenge.findAll({
+        where: {
+          UserId: follower.dataValues.id
+        },
+        order: [['createdAt', 'DESC']],
+        limit: 1
+      }));
+      
+      Promise.all(allQueries)
+        .then(allResults => {
+          console.log(`**************allResults: `+ allResults[0]);
+          const queries = allResults.map(result => db.ChallengeAction.findAll({
+            where: {
+              ChallengeId: result[0].id,
+              accomplished: 1
+            }
+          }));
+      
+          return Promise.all(queries);
+        })
+        .then(challengeActions => {
+          return challengeActions.map(actions => actions.map(action => action.dataValues.ActionId))
+        })
+        .then(actionIdArrays => {
+          const actionsArray = actionIdArrays.map(individualArray => {
+            const actionQueri = individualArray.map(val => db.Action.findAll({
+                where: {
+                  id: val
+                }
+              })
+            )
+
+            return Promise.all(actionQueri);
+          })
+
+          return Promise.all(actionsArray);
+        })
+        .then(actions => {
+          
+          const arrayOfTotals = actions.map(actionsForEachChallenge => actionsForEachChallenge.reduce((total, action) => total + action[0].points, 0));
+
+          for (var i=0; i<arrayOfTotals.length; i++){
+            updatedFollowers[i].dataValues.points = arrayOfTotals[i]
+          }
+
+          res.json(updatedFollowers);
+        })
+        .catch(err => console.log(err));
+    })
     .catch(err=> console.log(err));
-    
 });
 
 
