@@ -158,7 +158,7 @@ usersController.post("/follows", JWTVerifier, (req, res)=> {
 
 
 // remove a userFollowie for a user
-usersController.delete("/follows/delete", JWTVerifier, (req, res) => {
+usersController.put("/follows/delete", JWTVerifier, (req, res) => {
   
   db.User.findByPk(req.user.id)
     .then(User => {

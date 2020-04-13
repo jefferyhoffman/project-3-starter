@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import {Form, Button } from "react-bootstrap";
+import {Form, Button, Alert } from "react-bootstrap";
 import AuthContext from "../../contexts/AuthContext";
 import FriendsDisplay from "../../components/FriendsDisplay";
 import API from "../../lib/API";
@@ -17,6 +17,8 @@ const Friends = (props) => {
     const [error, setError] = useState("") //error message
     const [isFriendFound, setIsFriendFound] = useState("No search yet") //tracking what the user has done, if they have searched or not
     const [newFriend, setNewFriend] = useState() //save found friend for further API calls
+    const [serverMessage, setServerMessage] = useState("")
+    const [alertVariant, setAlertVariant] = useState()
     
     const handleInput = event => {
       setEmail(event.target.value);    
@@ -46,10 +48,8 @@ const Friends = (props) => {
         
     };
     
-    //function to follow friend ///
-    const followFriend = () => {
-      // console.log(newFriend.email)
-      // console.log(userInfo.authToken)
+    
+    const followFriend = () => {      
       API.Users.addToThoseIFollow(newFriend.id, userInfo.authToken)
       .then(response => {
         console.log(response)
@@ -57,10 +57,17 @@ const Friends = (props) => {
           throw setError(response.data.message);          
         }
         if (response.data.status === 200) {
-          console.log("Successfully followed this friend!");
-
+          setServerMessage("Successfully followed this friend!");
+          setAlertVariant('success');
         }
       })
+      .catch(err => {
+        // if (err.response.status === 404) {
+          
+        // }
+        // setError({ error: err.message })
+        console.log(err)
+      });
     }
 
     //function to invite friend
@@ -69,8 +76,16 @@ const Friends = (props) => {
       console.log(email)
       API.Users.inviteFriend(email)
       .then(res =>{
-        console.log(res.data) //use this for alert. create alert hook
+        setServerMessage(res.data); //use this for alert. create alert hook
+        setAlertVariant('success');
       })
+      .catch(err => {
+        // if (err.response.status === 404) {
+          
+        // }
+        // setError({ error: err.message })
+        console.log(err)
+      });
     }
 
     return(
@@ -101,6 +116,9 @@ const Friends = (props) => {
                 type='submit'
                 onClick={inviteFriend}
                 >Send invitation</Button>
+                <Alert className="mb-3 mt-3" variant={alertVariant}>
+                  {serverMessage}
+                </Alert>
           </div> : isFriendFound === "Friend found" ?
           <div>          
             <p className="p_text_dark"> We found your friend!</p>
@@ -111,6 +129,9 @@ const Friends = (props) => {
                 type='submit'
                 onClick={followFriend}
                 >Follow friend</Button>
+                <Alert className="mb-3 mt-3" variant={alertVariant}>
+                  {serverMessage}
+                </Alert>
           </div> :  <div></div>          
           }
           </div>             

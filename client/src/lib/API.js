@@ -80,7 +80,7 @@ export default {
     // remove a userFollowie for a user
     // must pass in the id of person they want to unfollow
     removeFromThoseIFollow: function (userFollowie, authToken) {
-      return axios.delete(
+      return axios.put(
         "/api/users/follows/delete",
         {
           userFollowie: userFollowie,
