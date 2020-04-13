@@ -6,7 +6,9 @@ class UploadForm extends React.Component {
     static contextType = AuthContext;
     constructor(props) {
       super(props);
-      this.state = {filename: 'Choose file'}
+      this.state = {
+        filename: 'Choose file'
+      }
     }
     handleInputChange = () => {
       const input = document.getElementById('file');
@@ -17,8 +19,8 @@ class UploadForm extends React.Component {
       event.preventDefault()
       
       const theFile = document.getElementById('file').files[0]
-      API.Users.upload(theFile, this.context.authToken).then(res=>console.log(res))
-
+      API.Users.upload(theFile, this.context.authToken)
+        .then(res=>this.context.onRefresh())
     }
   
     render() {
