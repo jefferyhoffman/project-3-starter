@@ -60,36 +60,40 @@ export default {
     // add to the people a user is following
     // must pass in the id of person they want to follow
     addToThoseIFollow: function (userFollowie, authToken) {
-      return axios.put("/api/users/follows", 
-      {
-        userFollowie: userFollowie
-      }, 
-      {
-        headers: {
-          Authorization: `Bearer ${authToken}`,
-        },
-      });
-    },
-
-    // remove a userFollowie for a user
-    // must pass in the id of person they want to unfollow
-    removeFromThoseIFollow: function (userFollowie, authToken) {
-      return axios.put("/api/users/follows", 
+      return axios.put(
+        "/api/users/follows",
         {
-          userFollowie: userFollowie
+          userFollowie: userFollowie,
         },
         {
           headers: {
             Authorization: `Bearer ${authToken}`,
           },
-        });
+        }
+      );
+    },
+
+    // remove a userFollowie for a user
+    // must pass in the id of person they want to unfollow
+    removeFromThoseIFollow: function (userFollowie, authToken) {
+      return axios.put(
+        "/api/users/follows",
+        {
+          userFollowie: userFollowie,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${authToken}`,
+          },
+        }
+      );
     },
 
     // Search for a user by entering their email
     // returns an object
     searchForUser: function (email) {
-      return axios.get("/api/users/search/"+email, {});
-    }
+      return axios.get("/api/users/search/" + email, {});
+    },
   },
 
   Secrets: {
@@ -141,20 +145,28 @@ export default {
     // deletes and entire challenge
     //
     deleteChallenge: function (id, authToken) {
-      return axios.delete("/api/challenges/deletechallenge/" + id, {}, {
-        headers: {
-          Authorization: `Bearer ${authToken}`,
-        },
-      });
+      return axios.delete(
+        "/api/challenges/deletechallenge/" + id,
+        {},
+        {
+          headers: {
+            Authorization: `Bearer ${authToken}`,
+          },
+        }
+      );
     },
 
     // deletes actions from a challenge
     deleteActionFromChallenge: function (id, authToken) {
-      return axios.delete("/api/challenges/" + id, {}, {
-        headers: {
-          Authorization: `Bearer ${authToken}`,
-        },
-      });
+      return axios.delete(
+        "/api/challenges/" + id,
+        {},
+        {
+          headers: {
+            Authorization: `Bearer ${authToken}`,
+          },
+        }
+      );
     },
 
     // adds actions to a challenge and updates the totalScore of said challenge
@@ -173,33 +185,37 @@ export default {
       );
     },
 
-
     // This function Toggles an actions accomplished actribute both from true to false and false to true
-    // returns an object with ChallengeAction data 
-    challengeActionAccomplishedToggle: function(ChallengeId, ActionId, authToken){
-      return axios.put("/api/challenges/challengeaction", {
-        ChallengeId: ChallengeId,
-        ActionId: ActionId
-      },
-      {
+    // returns an object with ChallengeAction data
+    challengeActionAccomplishedToggle: function (
+      ChallengeId,
+      ActionId,
+      authToken
+    ) {
+      return axios.put(
+        "/api/challenges/challengeaction",
+        {
+          ChallengeId: ChallengeId,
+          ActionId: ActionId,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${authToken}`,
+          },
+        }
+      );
+    },
+
+    // get current score of challenge based on actions accomplished
+    // must pass ChallengeId and authToken
+    // returns a number
+    getCurrentScoreOfChallenge: function (ChallengeId, authToken) {
+      return axios.get("/api/challenges/challengeaction/" + ChallengeId, {
         headers: {
           Authorization: `Bearer ${authToken}`,
         },
       });
     },
-    
-
-    // get current score of challenge based on actions accomplished
-    // must pass ChallengeId and authToken
-    // returns a number
-    getCurrentScoreOfChallenge: function(ChallengeId, authToken){
-      return axios.get("/api/challenges/challengeaction/"+ ChallengeId, {
-        headers: {
-          Authorization: `Bearer ${authToken}`,
-        }
-      } )
-    }
-
 
     // getCurrentChallengeScore
   },

@@ -1,78 +1,94 @@
 .h1_heading_dark {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #000000;
-  font-size: 2rem;  
+  font-size: 2rem;
 }
 
 .h1_heading_dark_bold {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: bolder;
   color: #000000;
   font-size: 2rem;
 }
 
 .h2_heading_dark {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #000000;
   font-size: 1.75rem;
 }
 
 .h2_heading_dark_bold {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: bolder;
   color: #000000;
   font-size: 1.75rem;
 }
 
 .h2_heading_light {
-  font-family: 'Roboto', sans-serif;
-  color: #FFFFFF;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
   font-size: 1.75rem;
 }
 
 .h2_heading_light_bold {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: bolder;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 1.75rem;
 }
 
 .h3_heading_dark {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #000000;
   font-size: 1.375rem;
 }
 
 .h3_heading_dark_bold {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: bolder;
   color: #000000;
   font-size: 1.375rem;
 }
 
 .h3_heading_light {
-  font-family: 'Roboto', sans-serif;
-  color: #FFFFFF;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
   font-size: 1.375rem;
 }
 
 .h3_heading_light_bold {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: bolder;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 1.375rem;
 }
 
 .p_text_light {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: normal;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 1.125rem;
 }
 
 .p_text_dark {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: normal;
   color: #000000;
   font-size: 1.125rem;
+}
+
+.travel {
+  background-color: #2f7c8f;
+}
+
+.food {
+  background-color: #08a68e;
+}
+
+.home {
+  background-color: #4fb06f;
+}
+
+.consumable {
+  background-color: #abd1b3;
 }

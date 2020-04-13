@@ -1,12 +1,14 @@
 import React from "react";
 import { Tabs, Tab, Row, Col, Nav, Button } from "react-bootstrap";
+import { TiDeleteOutline } from "react-icons/ti";
+import { FiSave } from "react-icons/fi";
 
 const SelectedChallenges = (props) => {
   console.log(props);
 
-    const handleComplete=(id)=>{
-        props.deleteHandler(id)
-    }
+  const handleComplete = (id) => {
+    props.deleteHandler(id);
+  };
 
   return (
     <>
@@ -18,24 +20,29 @@ const SelectedChallenges = (props) => {
               transition={false}
               id="noanim-tab-example"
             >
-              <Tab
-                eventKey="Current Challenge"
-                title="Current Challenge"
-              >
-                
+              <Tab eventKey="Current Challenge" title="Current Challenge">
                 {props.selections.map((action, position) => (
-                  <p key={action.id+position}>
-                    <span style={{ cursor: "pointer" }} onClick={()=>handleComplete(position)}> X </span>points: {action.points} - {action.name} -{" "}
+                  <p key={action.id + position}>
+                    <span
+                      style={{ cursor: "pointer" }}
+                      onClick={() => handleComplete(position)}
+                    >
+                      {" "}
+                      <TiDeleteOutline size={28} />{" "}
+                    </span>
+                    points: {action.points} - {action.name} -{" "}
                     {action.description}
                   </p>
-                  
                 ))}
                 {props.selections.length > 0 ? (
-                  <Button variant="outline-info" onClick={props.clickHandler}>
-                    Saved
+                  <Button
+                    style={{ fontFamily: "roboto" }}
+                    variant="light"
+                    onClick={props.clickHandler}
+                  >
+                    {<FiSave size={28} />} Save this Challenge
                   </Button>
                 ) : null}
-                
               </Tab>
               <br></br>
               {/* <Tab eventKey="Update" title="Update">
