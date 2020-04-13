@@ -29,8 +29,8 @@ class Navigation extends Component {
         <div className="Header">
           <img src={SiteLogo} alt="The Cadenza logo" id="sitelogo"></img>
         </div>
-        <div className="Navigation col-md-6 text-center">
-          <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-3 col-md-6 text-center">
+        <div className="Navigation">
+          <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
             {/* <Link className='navbar-brand' to='#'>Project 3</Link> */}
             <button
               className={togglerClass}

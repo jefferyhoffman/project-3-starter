@@ -7,7 +7,7 @@ class footer extends Component {
         return (
             <div className="wrapper">
                  <footer className="page-footer">
-                 <a href="../../pages/About/about">About</a>
+                 <a href="/About">About</a>
                  {/* <Link
                     className="about-link"
                     to="/About"
