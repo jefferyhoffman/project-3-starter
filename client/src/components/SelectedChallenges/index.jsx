@@ -7,8 +7,11 @@ const SelectedChallenges = (props) => {
   console.log(props);
 
   const handleComplete = (id) => {
-    props.deleteHandler(id);
+    props.completeHandler(id);
   };
+  const handleDelete = (id)=>{
+    props.deleteHandler(id)
+  }
 
   return (
     <>
@@ -21,11 +24,18 @@ const SelectedChallenges = (props) => {
               id="noanim-tab-example"
             >
               <Tab eventKey="Current Challenge" title="Current Challenge">
-                {props.selections.map((action, position) => (
-                  <p key={action.id + position}>
+                {props.selections.map((action, position) => {
+                if(!action.ChallengeAction.accomplished){
+
+                return (
+                  <div key={action.id + position}>
+
+                  <p >
+                    <span style={{ cursor: "pointer" }}
+                      onClick={() => handleComplete(action.id)}>✔️</span>
                     <span
                       style={{ cursor: "pointer" }}
-                      onClick={() => handleComplete(position)}
+                      onClick={() => handleDelete(action.id)}
                     >
                       {" "}
                       <TiDeleteOutline size={28} />{" "}
@@ -33,8 +43,9 @@ const SelectedChallenges = (props) => {
                     points: {action.points} - {action.name} -{" "}
                     {action.description}
                   </p>
-                ))}
-                {props.selections.length > 0 ? (
+                  </div>
+                )}})}
+                {/* {props.selections.length > 0 ? (
                   <Button
                     style={{ fontFamily: "roboto" }}
                     variant="light"
@@ -42,13 +53,27 @@ const SelectedChallenges = (props) => {
                   >
                     {<FiSave size={28} />} Save this Challenge
                   </Button>
-                ) : null}
+                ) : null} */}
               </Tab>
               <br></br>
               {/* <Tab eventKey="Update" title="Update">
                 Update a challenge
               </Tab> */}
-              <Tab eventKey="Completed Actions" title="Completed Actions"></Tab>
+              <Tab eventKey="Completed Actions" title="Completed Actions">
+              {props.selections.map((action, position) => {
+                if(action.ChallengeAction.accomplished){
+
+                return (
+                  <div key={action.id + position}>
+
+                  <p >
+
+                    points: {action.points} - {action.name} -{" "}
+                    {action.description}
+                  </p>
+                  </div>
+                )}})}
+              </Tab>
             </Tabs>
           </Col>
         </Row>

@@ -19,18 +19,31 @@ const User = (props) => {
   const userInfo = useContext(AuthContext);
   const [theSelected, setTheSelected] = useState([]);
   const [allActions, setAllActions] = useState([]);
-  const [render, setRender] = useState(1);
+  const [render, setRender]=useState(1)
+  const [challengeID, setChallengeID]=useState()
+  const [checkboxData, setCheckboxData]=useState({
+    value: false
+    // ChallengeId: 0,
+    // ActionId: 0
+    })
+
   useEffect(() => {
     API.Actions.getAll(userInfo.authToken).then(({ data }) =>
       setAllActions(data)
     );
-    API.Challenges.getCurrentChallenge(userInfo.authToken).then(({ data }) =>
-      console.log(data)
-    );
+    
+    getCurrActions()
     //setTheSelected(selected);
   }, []);
   console.log(userInfo);
-
+  const getCurrActions=()=>{
+    API.Challenges.getCurrentChallenge(userInfo.authToken).then(({ data }) =>{
+      console.log(data)
+      setTheSelected(data.actions)
+      setChallengeID(data.id)
+   }
+   );
+  }
   const addAction = (points, name, description, id) => {
     setTheSelected([...theSelected, { points, name, description, id }]);
   };
@@ -47,15 +60,52 @@ const User = (props) => {
       })
       .then(({ data }) => console.log("Challenge saved"))
       .catch((err) => console.log(err));
+    
   };
-  const deleteChallenge = (id) => {
-    console.log(theSelected, id, "<===");
-    const newNew = theSelected;
-    newNew.splice(id, 1);
-    console.log(newNew);
-    setTheSelected(() => newNew);
-    setRender((curr) => curr + 1);
-  };
+
+  const addNewAction=(Actionid)=>{
+    const oldArray = theSelected.map(actionz=>actionz.id)
+    oldArray.push(Actionid)
+    console.log(oldArray)
+    API.Challenges.updateChallenge(challengeID, oldArray, userInfo.authToken).then(
+    (res)=>{
+      console.log(res)
+      if(res.status === 200){
+        console.log('ok')
+        getCurrActions()
+      }
+    }
+    )
+  }
+  const deleteChallenge =(actionId)=>{
+    const newArr = [actionId]
+    console.log(challengeID, newArr, userInfo.authToken)
+    API.Challenges.deleteActionFromChallenge(challengeID, newArr, userInfo.authToken).then(
+      (res)=>{
+        console.log(res)
+        if(res.status === 200){
+          console.log('ok')
+          getCurrActions()
+        }
+      }
+      )
+      
+  }
+
+
+
+  const completeTheAction=(ActionId)=>{
+    API.Challenges.challengeActionAccomplishedToggle(challengeID, ActionId, userInfo.authToken).then(
+      (res)=>{
+        console.log(res)
+        if(res.status === 200){
+          console.log('ok')
+          getCurrActions()
+        }
+      }
+      )
+  }
+
   const makeBody = (cat, eventKey) => {
     const filteredList = allActions.filter((act) => act.category === cat);
 
@@ -66,16 +116,17 @@ const User = (props) => {
             style={{ cursor: "pointer" }}
             // onClick={() => alert("added " + act.points)}
             onClick={() =>
-              addAction(
-                act.points,
-                act.name,
-                <ButtonGroup>
-                  <DropdownButton variant="clear" title={<FiInfo size={28} />}>
-                    <Dropdown.Item eventKey="">{act.description}</Dropdown.Item>
-                  </DropdownButton>
-                </ButtonGroup>,
-                act.id
-              )
+              // addAction(
+              //   act.points,
+              //   act.name,
+              //   <ButtonGroup>
+              //     <DropdownButton variant="clear" title={<FiInfo size={28} />}>
+              //       <Dropdown.Item eventKey="">{act.description}</Dropdown.Item>
+              //     </DropdownButton>
+              //   </ButtonGroup>,
+              //   act.id
+              // )
+              addNewAction(act.id)
             }
           >
             <FiPlusSquare size={28} />
@@ -97,11 +148,7 @@ const User = (props) => {
         Please choose from the actions below to create your first challenge!
       </h1>
       {allActions && (
-        <Selected
-          selections={theSelected}
-          deleteHandler={deleteChallenge}
-          clickHandler={createChallenge}
-        />
+        <Selected selections={theSelected} deleteHandler={deleteChallenge} completeHandler={completeTheAction} clickHandler={createChallenge}/>
       )}
       <Accordion defaultActiveKey="0">
         <Card>

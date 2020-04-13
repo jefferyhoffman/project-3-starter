@@ -44,6 +44,30 @@ challengesController.get("/multipast", JWTVerifier, (req, res) => {
 
 // get current challenge 
 // working
+// challengesController.get("/", JWTVerifier, (req, res) => {
+//   db.Challenge.findAll({
+//     limit: 1,
+//     order: [['createdAt', 'DESC']],
+//     where: req.user.id
+//   })
+//     .then(challenges => {
+//       if (!challenges.length) {
+//         return res
+//           .status(404)
+//           .send(`Challenge with id ${req.params.id} not found.`);
+//       }
+//       // .getActions is not a function
+//       // console.log(challenges[0].getActions());
+//       return challenges[0].getActions();
+//     })
+//     .then(actions => res.json(actions))
+//     .catch((err) => console.log(err));
+// });
+
+
+
+// get current score of challenge based on actions accomplished
+// must pass in ChallengeId
 challengesController.get("/", JWTVerifier, (req, res) => {
   db.Challenge.findAll({
     limit: 1,
@@ -58,50 +82,20 @@ challengesController.get("/", JWTVerifier, (req, res) => {
       }
       // .getActions is not a function
       // console.log(challenges[0].getActions());
-      return challenges[0].getActions();
+      let actions = challenges[0].getActions()
+     // console.log(actions);
+     // Promise.all(actions)
+        .then(data => {
+          const sentData = {
+            id: challenges[0].id,
+            actions: data
+          }
+          console.log(sentData)
+          res.json(sentData);
+        })
     })
-    .then(actions => res.json(actions))
     .catch((err) => console.log(err));
 });
-
-
-
-// get current score of challenge based on actions accomplished
-// must pass in ChallengeId
-challengesController.get("/challengeaction/:id", (req, res) => {
-
-  db.ChallengeAction.findAll({
-    where: {
-      ChallengeId: req.params.id,
-      accomplished: 1
-    }
-  })
-  .then((data) => {
-    return (data.map(val => {
-      return val.dataValues.ActionId
-    }));
-  })
-  .then((actionIdArray) => {
-    db.Action.findAll({
-      where: {
-        id: actionIdArray
-      }
-    })
-    .then((actions) => {
-      if (!actions) {
-        return res
-          .status(404)
-          .send(`action could not found.`);
-      }
-
-      let scoredPoints = actions.reduce((total, action) => total + action.points, 0)
-
-      res.json(scoredPoints);
-    })
-    .catch((err) => console.log(err));
-  })
-  .catch((err) => console.log(err));
-})
 
 // get current challenge score of any user, when given their UserId
 // 
@@ -246,7 +240,9 @@ challengesController.put("/:id", JWTVerifier, (req, res) => {
 
 // delete an action from a challenge JWTVerifier
 // working
-challengesController.delete("/:id", JWTVerifier, (req, res) => {
+challengesController.put("/delete/:id", JWTVerifier, (req, res) => {
+
+  console.log(req.body, "the body")
   db.Challenge.findByPk(req.params.id)
     .then(challenge => {
       if (!challenge) {
