@@ -19,6 +19,8 @@ import Footer from '../../components/Footer/footer';
 // import Newlogo from '../../components/NewLogo/newlogo';
 import '../../components/Navigation/Navigation.css';
 import './App.css';
+import Particles from 'react-particles-js';
+
 
 class App extends Component {
   constructor(props) {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Particles from 'react-particles-js';
+// import Particles from 'react-particles-js';
 import Octicon, { Mail, Key } from '@githubprimer/octicons-react';
 import "../LoginForm/LoginForm.css"
 
@@ -80,7 +80,7 @@ class LoginForm extends Component {
                 />
               </div>
               <button className='btn btn-light' type='submit'>Login</button>
-              <Particles
+              {/* <Particles
               params={{
               polygon: {
               enable: true,
@@ -90,10 +90,10 @@ class LoginForm extends Component {
               type: 'outside',
               move: {
               radius: 10
-            },
-            url: 'path/to/svg.svg'
+            }, */}
+            {/* url: 'path/to/svg.svg'
           }
-        }} />
+        }} /> */}
             </form>
           </div>
         </div>

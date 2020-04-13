@@ -3,7 +3,13 @@ import "./Home.css";
 import "../../components/NewThreadButton/NewThreadButton"
 import NewThreadButton from '../../components/NewThreadButton/NewThreadButton';
 import Footer from '../../components/Footer/footer';
+import Particles from 'react-particles-js';
 // import logo from './logo.svg';
+
+// particlesJS.load(@dom-id, @path-json, @callback (optional));
+// particlesJS.load('particles-js', 'assets/particles.json', function() {
+//   console.log('callback - particles.js config loaded');
+// });
 
 var { DateTime } = require("luxon");
 const Date = DateTime.local().toLocaleString(
@@ -15,11 +21,12 @@ class HomePage extends Component {
     return (
     <div>
       <div>
-        <p>Welcome to The Cadenza forums! {Date}</p>  
+        <p>Welcome to The Cadenza forums! {Date}</p>
+        <Particles />
       </div>
       {Footer}
     </div>
-    );
+    )
   }
 }
 
