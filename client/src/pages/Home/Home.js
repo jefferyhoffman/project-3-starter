@@ -57,8 +57,8 @@ const styles = (theme) => ({
   },
   box: {
     marginBottom: 40,
-    height: 65,
-    textAlign: "left",
+    height: 120,
+    textAlign: "center",
 
   },
 });
@@ -91,11 +91,12 @@ class HomePage extends Component {
                       color="secondary"
                       style={{ textTransform: "uppercase" }}
                       gutterBottom
+                      variant="h4"
                     >
                       Welcome to Task Attack
                     </Typography>
-                    <Typography variant="body1" gutterBottom>
-                      This app was created for busy people like you!<br />
+                    <Typography  variant="h6" gutterBottom>
+                      This app was created for busy people like you!
                       Register and create an account.
                       You will see a dashboard that looks like the one below. Click on "Add a task"
                       to add a task, then edit the title and description to save edit.
