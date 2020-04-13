@@ -29,12 +29,23 @@ class App extends Component {
       this.setState(prevState => ({ auth: { ...prevState.auth, user: undefined, authToken: undefined } }));
     }
 
+    this.handleRefresh = () => {
+      const { authToken } = this.state.auth;
+      if (!authToken) return;
+
+      API.Users.getMe(authToken)
+        .then(response => response.data)
+        .then(user => this.setState(prevState => ({ auth: { ...prevState.auth, user } })))
+        .catch(err => console.log(err));
+    }
+
     this.state = {
       auth: {
         user: undefined,
         authToken: TokenStore.getToken(),
         onLogin: this.handleLogin,
-        onLogout: this.handleLogout
+        onLogout: this.handleLogout, 
+        onRefresh: this.handleRefresh
       }, 
 
       homeGallery:[
@@ -123,18 +134,12 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const { authToken } = this.state.auth;
-    if (!authToken) return;
-
-    API.Users.getMe(authToken)
-      .then(response => response.data)
-      .then(user => this.setState(prevState => ({ auth: { ...prevState.auth, user } })))
-      .catch(err => console.log(err));
+    this.handleRefresh();
   }
 
   render() {
     return (
-      <AuthContext.Provider value={this.state.auth} images={this.state.galleries}>
+      <AuthContext.Provider value={this.state.auth}>
         <div className='App'>
           <Navigation />
           <div>
