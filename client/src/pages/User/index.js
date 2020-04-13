@@ -26,21 +26,32 @@ const User = (props) => {
     // ChallengeId: 0,
     // ActionId: 0
     })
+  const [currScore, setCurrScore]=useState(0)
 
   useEffect(() => {
-    API.Actions.getAll(userInfo.authToken).then(({ data }) =>
-      setAllActions(data)
-    );
+    API.Actions.getAll(userInfo.authToken).then(({ data }) =>{
+      console.log(data)
+    setAllActions(data)
+    //else createChallenge()
+    });
     
     getCurrActions()
     //setTheSelected(selected);
   }, []);
   console.log(userInfo);
+
+
   const getCurrActions=()=>{
-    API.Challenges.getCurrentChallenge(userInfo.authToken).then(({ data }) =>{
-      console.log(data)
-      setTheSelected(data.actions)
-      setChallengeID(data.id)
+    API.Challenges.getCurrentChallenge(userInfo.authToken).then((results) =>{
+      console.log(results)
+      if(results.status === 200){
+        setTheSelected(results.data.actions)
+      setChallengeID(results.data.id)
+      API.Challenges.getCurrentScoreOfChallenge(results.data.id, userInfo.authToken).then(
+        res=> setCurrScore(res.data)
+      )
+    }
+      else createChallenge()
    }
    );
   }
@@ -49,16 +60,14 @@ const User = (props) => {
   };
 
   const createChallenge = () => {
+    console.log('made it here')
     API.Challenges.createChallenge(userInfo.authToken)
       .then(({ data }) => {
-        let idArray = theSelected.map((action) => action.id);
-        return API.Challenges.updateChallenge(
-          data.id,
-          idArray,
-          userInfo.authToken
-        );
+        console.log(data, "created a new challenge")
+        setChallengeID(data.id)
+        //getCurrActions()
       })
-      .then(({ data }) => console.log("Challenge saved"))
+      //.then(({ data }) => console.log("Challenge saved"))
       .catch((err) => console.log(err));
     
   };
@@ -145,10 +154,11 @@ const User = (props) => {
   return (
     <>
       <h1>
+        {currScore ? <p>Your Current Score is {currScore}!</p>: null}
         Please choose from the actions below to create your first challenge!
       </h1>
       {allActions && (
-        <Selected selections={theSelected} deleteHandler={deleteChallenge} completeHandler={completeTheAction} clickHandler={createChallenge}/>
+        <Selected selections={theSelected} deleteHandler={deleteChallenge} completeHandler={completeTheAction} />
       )}
       <Accordion defaultActiveKey="0">
         <Card>
