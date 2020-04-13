@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import {Form, Button } from "react-bootstrap";
 import AuthContext from "../../contexts/AuthContext";
 import FriendsDisplay from "../../components/FriendsDisplay";
@@ -11,86 +11,102 @@ const Friends = (props) => {
     const [email, setEmail] = useState("") //searched email
     const [foundFriend, setFoundFriend] = useState({
       name: "",
-      email: ""
+      email: "",
+      id: undefined
     }) //found email    
     const [error, setError] = useState("") //error message
     const [isFriendFound, setIsFriendFound] = useState("No search yet") //tracking what the user has done, if they have searched or not
-  
-  
-  //create a function that takes the input of the user (friend's email)
-  const handleInput = event => {
-    setEmail(event.target.value);
+    const [newFriend, setNewFriend] = useState() //save found friend for further API calls
     
-  }
-  //sends value to API to search if they are in our users table
-  //then create a function to handle the response from API with either 0 or 1 results
-  //send api response as props to child (CREATE COMPONENT e.g. followed friends) to display the result
-  //if result is a found friend, child component needs to display a button to FOLLOW friend
-  const handleSubmit = event => {
-    event.preventDefault();
+    const handleInput = event => {
+      setEmail(event.target.value);    
+    }
       
-    API.Users.searchForUser(email)    
-      .then(res => {
-        console.log(res)
-        if (res.data.status === "error") {
-          // throw setError(res.data.message);
-          // console.log(res.data.message)
-          // setIsFriendFound("No friends found");
-          console.log(res.data.message)
-        } 
+    const handleSubmit = event => {
+      event.preventDefault();
         
-        setFoundFriend({name: res.data.name, email: res.data.email})
-        setIsFriendFound("Friend found");
-
-        setError({ results: res.data.message, error: "" });        
+      API.Users.searchForUser(email)    
+        .then(res => {
+          console.log(res)
+          if (res.data.status === "error") {
+            throw setError(res.data.message);          
+          } 
+          setIsFriendFound("Friend found");
+          setError({ results: res.data.message, error: "" });
+          setFoundFriend({name: res.data.name, email: res.data.email, id: res.data.id})
+          const newFriend = {name: res.data.name, email: res.data.email, id: res.data.id}
+          return newFriend;
+          // console.log(newFriend)
+        })
+        .catch(err => {
+          if (err.response.status === 404) {
+            setIsFriendFound("No friend found");
+          }
+          setError({ error: err.message })
+        });
+        
+    };
+    
+    //function to follow friend ///getting 404!!!
+    const followFriend = newFriend => {
+      //button works
+      API.Users.addToThoseIFollow({userFollowie: newFriend.id, headers: userInfo.authToken})
+      .then(response => {
+        console.log(response.data.status)
       })
-      .catch(err => {
-        if (err.response.status === 404) {
-          setIsFriendFound("No friend found");
-        }
-        setError({ error: err.message })
-      });
-  };
-  // console.log(foundFriend.name)
-  
-  return(
-      <>
-        <h3 className="h3_heading_dark">Search for a friend's email to follow them</h3>
-        
-        <Form onSubmit={handleSubmit}>
-          <Form.Group controlId="formGroupEmail">            
-            <Form.Control              
-              placeholder="Your friend's email address"
-              type="email"
-              name="email"
-              value={email}
-              onChange={handleInput}
-              required          
-            />
-          </Form.Group>
-          <Button 
-            className='btn btn_orange'
-            type='submit'
-            >Search</Button>
-        </Form>
-        { isFriendFound === "No search yet" ? <div></div> : isFriendFound === "No friend found" ?
-        <div>
-        <p>Sorry, we did not find your friend.</p>
-        </div> : isFriendFound === "Friend found" ?
-        <div>          
-          <p>We found your friend! </p>
-          <p>{foundFriend.name}</p>
-          <p>{foundFriend.email}</p>
-          <Button 
+    }
+
+    //function to invite friend
+
+    const inviteFriend = event => {
+      console.log("inviting friend btn works")
+      // btn works 
+    }
+
+    return(
+        <>
+          <h3 className="h3_heading_dark">Search for a friend's email to follow them</h3>             
+          <Form onSubmit={handleSubmit}>
+            <Form.Group controlId="formGroupEmail">            
+              <Form.Control              
+                placeholder="Your friend's email address"
+                type="email"
+                name="email"
+                value={email}
+                onChange={handleInput}
+                required          
+              />                           
+            </Form.Group>
+            <Button 
               className='btn btn_orange'
               type='submit'
-              >Follow friend</Button>
-        </div> :  <div></div>
-        }   
-        {/* INSERT COMPONENT WHERE WE PASS PROPS e.g. API results */}
-        <FriendsDisplay/>
-      </>
-  )
+              >Go!</Button>             
+          </Form>          
+          <div>
+          { isFriendFound === "No search yet" ? <div></div> : isFriendFound === "No friend found" ?
+          <div>
+          <p className="p_text_dark">Looks like your friend has not joined Smaller Footprint. You can invite them to join and create their own Challenge to lessen their carbon footprint!</p>
+          <Button 
+                className='btn btn_orange'
+                type='submit'
+                onClick={inviteFriend}
+                >Send invitation</Button>
+          </div> : isFriendFound === "Friend found" ?
+          <div>          
+            <p className="p_text_dark"> We found your friend!</p>
+            <p className="p_text_dark">{foundFriend.name}</p>
+            <p className="p_text_dark">{foundFriend.email}</p>
+            <Button 
+                className='btn btn_orange'
+                type='submit'
+                onClick={followFriend}
+                >Follow friend</Button>
+          </div> :  <div></div>          
+          }
+          </div>             
+          <FriendsDisplay/>
+        </>
+    )
 }
   
 export default Friends;
