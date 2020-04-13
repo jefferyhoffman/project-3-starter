@@ -50,7 +50,7 @@ class LoginForm extends Component {
       <div className='LoginForm'>
         <div className='card bg-secondary'>
           <div className='card-body bg-secondary'>
-            <form className='LoginForm' onSubmit={this.handleSubmit}>
+            <form className='LoginForm-secondary' onSubmit={this.handleSubmit}>
               <div className='input-group mb-3'>
                 <div className="input-group-prepend">
                   <span className="input-group-text bg-dark text-light"><Octicon icon={Mail} /></span>
