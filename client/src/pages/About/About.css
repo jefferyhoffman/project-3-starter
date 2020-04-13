@@ -1,4 +1,11 @@
 .Title{
-    background-color: lime;
-    color: linen;
+    background-color: rgb(55, 55, 61);
+    color: #5EB2E0;
+    font-size: 5ch;
+    /* border-radius: 3ch; */
+}
+
+.img-div {
+    height:300px;
+    width:250px;
 }

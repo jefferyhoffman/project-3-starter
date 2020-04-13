@@ -7,14 +7,23 @@ class footer extends Component {
         return (
             <div className="wrapper">
                  <footer className="page-footer">
-                     <a href="https://github.com/MHargett23">Martin Hargett</a> | 
-                     <a href="https://github.com/kffl3496"> Alex Stiles</a> | 
-                     <a href="https://github.com/Ivyparade"> Owen Edwards</a> | 
-                     <a href="https://github.com/zachmdws"> Zachary Meadows</a>
+                 <a href="../../pages/About/about">About</a>
+                 {/* <Link
+                    className="about-link"
+                    to="/About"
+                    onClick={this.toggleCollapse}
+                  >
+                   About
+                  </Link> */}
                  </footer>
             </div>        
         )
     }
 }
+
+                     {/* <a href="https://github.com/MHargett23">Martin Hargett</a> | 
+                     <a href="https://github.com/kffl3496"> Alex Stiles</a> | 
+                     <a href="https://github.com/Ivyparade"> Owen Edwards</a> | 
+                     <a href="https://github.com/zachmdws"> Zachary Meadows</a> */}
 
 export default footer;
