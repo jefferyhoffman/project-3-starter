@@ -21,7 +21,7 @@
   "dependencies": {
     "@material-ui/core": "^4.9.9",
     "@material-ui/icons": "^4.9.1",
-    "react-beautiful-dnd": "^13.0.0",
-    "mongo": "^0.1.0"
+    "mongo": "^0.1.0",
+    "react-beautiful-dnd": "^13.0.0"
   }
 }
