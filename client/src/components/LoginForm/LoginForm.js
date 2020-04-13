@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
-
+import Particles from 'react-particles-js';
 import Octicon, { Mail, Key } from '@githubprimer/octicons-react';
+import "../LoginForm/LoginForm.css"
+
+/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+// particlesJS.load('particles-js', 'assets/particles.json', function() {
+//   console.log('callback - particles.js config loaded');
+// });
 
 class LoginForm extends Component {
   state = {
@@ -19,21 +25,35 @@ class LoginForm extends Component {
   handleSubmit = event => {
     const { email, password } = this.state;
 
+    console.log('email password', email, password);
+
     this.props.onSubmit(email, password);
     event.preventDefault();
   }
 
   render() {
     const { email, password } = this.state;
-
+    
     return (
+    <div>
+      {/* <Particles
+        params={{
+          polygon: {
+            enable: true,
+            type: 'inside',
+            move: {
+              radius: 10
+            },
+            url: 'path/to/svg.svg'
+          }
+        }} /> */}
       <div className='LoginForm'>
-        <div className='card'>
-          <div className='card-body'>
-            <form className='LoginForm' onSubmit={this.handleSubmit}>
+        <div className='card bg-secondary'>
+          <div className='card-body bg-secondary'>
+            <form className='LoginForm-secondary' onSubmit={this.handleSubmit}>
               <div className='input-group mb-3'>
                 <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Mail} /></span>
+                  <span className="input-group-text bg-dark text-light"><Octicon icon={Mail} /></span>
                 </div>
                 <input
                   className='form-control'
@@ -45,10 +65,9 @@ class LoginForm extends Component {
                   onChange={this.handleInputChange}
                 />
               </div>
-
               <div className='input-group mb-3'>
                 <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Key} /></span>
+                  <span className="input-group-text bg-dark text-light"><Octicon icon={Key} /></span>
                 </div>
                 <input
                   className='form-control'
@@ -60,12 +79,26 @@ class LoginForm extends Component {
                   onChange={this.handleInputChange}
                 />
               </div>
+              <button className='btn btn-light' type='submit'>Login</button>
+              <Particles
+              params={{
+              polygon: {
+              enable: true,
 
-              <button className='btn btn-primary' type='submit'>Login</button>
+              width: '100%',
+              height: '200%',
+              type: 'outside',
+              move: {
+              radius: 10
+            },
+            url: 'path/to/svg.svg'
+          }
+        }} />
             </form>
           </div>
         </div>
       </div>
+    </div>
     )
   }
 }
