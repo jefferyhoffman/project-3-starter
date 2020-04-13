@@ -1,5 +1,5 @@
-import React from "react";
-import {Card} from "react-bootstrap";
+import React, {useEffect} from "react";
+
 
 
 //api call for this component

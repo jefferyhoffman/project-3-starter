@@ -60,7 +60,7 @@ export default {
     // add to the people a user is following
     // must pass in the id of person they want to follow
     addToThoseIFollow: function (userFollowie, authToken) {
-      return axios.put(
+      return axios.post(
         "/api/users/follows",
         {
           userFollowie: userFollowie,
@@ -76,8 +76,8 @@ export default {
     // remove a userFollowie for a user
     // must pass in the id of person they want to unfollow
     removeFromThoseIFollow: function (userFollowie, authToken) {
-      return axios.put(
-        "/api/users/follows",
+      return axios.delete(
+        "/api/users/follows/delete",
         {
           userFollowie: userFollowie,
         },

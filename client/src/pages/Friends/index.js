@@ -5,6 +5,7 @@ import FriendsDisplay from "../../components/FriendsDisplay";
 import API from "../../lib/API";
 import "./style.css";
 
+
 const Friends = (props) => {
   const userInfo = useContext(AuthContext);
     const [friend, setFriend] = useState([]); //found friend that i will add to my friend's list
@@ -34,9 +35,10 @@ const Friends = (props) => {
           setIsFriendFound("Friend found");
           setError({ results: res.data.message, error: "" });
           setFoundFriend({name: res.data.name, email: res.data.email, id: res.data.id})
-          const newFriend = {name: res.data.name, email: res.data.email, id: res.data.id}
-          return newFriend;
+          setNewFriend({name: res.data.name, email: res.data.email, id: res.data.id})
           // console.log(newFriend)
+          // return newFriend;
+          
         })
         .catch(err => {
           if (err.response.status === 404) {
@@ -48,11 +50,12 @@ const Friends = (props) => {
     };
     
     //function to follow friend ///getting 404!!!
-    const followFriend = newFriend => {
-      //button works
-      API.Users.addToThoseIFollow({userFollowie: newFriend.id, headers: userInfo.authToken})
+    const followFriend = () => {
+      console.log(newFriend.email)
+      console.log(userInfo.authToken)
+      API.Users.addToThoseIFollow(newFriend.id, userInfo.authToken)
       .then(response => {
-        console.log(response.data.status)
+        console.log(response)
       })
     }
 
