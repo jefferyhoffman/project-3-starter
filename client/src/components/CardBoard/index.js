@@ -15,7 +15,7 @@ const styles = (theme) => ({
     nimWidth: 275,
     nimHeight: 300,
   },
-  actionButtom: {
+  actionButton: {
     textTransform: "uppercase",
     margin: theme.spacing(1),
     width: 100,
@@ -96,7 +96,7 @@ const CardBoard = (props) => {
               variant="contained"
               color="secondary"
               size="small"
-              className={classes.actionButtom}
+              className={classes.actionButton}
               //value={value}
               onClick={() => props.handleSave(cardIndex, title, body)}
             >

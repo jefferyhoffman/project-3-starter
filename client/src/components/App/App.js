@@ -87,7 +87,7 @@ class App extends Component {
                 <Route exact path="/" component={Home} />
                 <Route path="/login" component={Login} />
                 <Route path="/register" component={Register} />
-                {/* <PrivateRoute path="/secret" component={Secret} /> */}
+                <PrivateRoute path="/secret" component={Secret} />
                 <PrivateRoute path="/dashboard" component={DashBoard} />
                 <Route component={NotFound} />
               </Switch>
