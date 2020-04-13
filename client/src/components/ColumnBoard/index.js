@@ -1,6 +1,13 @@
 import React, { Component } from "react";
 import withStyles from "@material-ui/styles/withStyles";
-import { Grid, Paper, Typography, Button, TextField } from "@material-ui/core";
+import {
+  Grid,
+  Paper,
+  Typography,
+  Button,
+  TextField,
+  Input,
+} from "@material-ui/core";
 import CardBoard from "../../components/CardBoard";
 import AuthContext from "../../contexts/AuthContext";
 import API from "../../lib/API";
@@ -56,32 +63,36 @@ class ColumnBoard extends Component {
   // };
 
   handleAddCard = () => {
-    const { handleRefresh, boardId, colId, title, body } = this.props;
+    const { handleRefresh, boardId, colIndex} = this.props;
     const { authToken } = this.context;
     console.log("Adding a card");
 
-    API.Cards.createCardInColumn(authToken, boardId, colId, title, body)
+    API.Cards.createCardInColumn(
+      authToken, 
+      boardId, 
+      colIndex, 
+      "Edit me", 
+      "Edit me")
       .then(() => handleRefresh())
       .catch((err) => console.log(err));
   };
 
-  handleSave = (event) => {
-    event.preventDefault();
+  handleSave = (cardIndex, title, body) => {
     const { authToken } = this.context;
-    const { boardId, colId, cardId, title, body } = this.props;
+    const { boardId, colIndex } = this.props;
     console.log("Saving a card");
-    API.Cards.updateCard(authToken, boardId, colId, cardId, title, body)
+    API.Cards.updateCard(authToken, boardId, 
+      colIndex,cardIndex, title, body)
       .then((res) => {
         console.log(res);
       })
       .catch((err) => console.log(err));
   };
 
-
   handleDelete = (event) => {
     event.preventDefault();
     const { authToken } = this.context;
-    const { boardId, colId, cardId} = this.props;
+    const { boardId, colId, cardId } = this.props;
     console.log("Deleting a card");
     API.Cards.deleteCardInColumn(authToken, boardId, colId, cardId)
       .then((res) => console.log(res))
@@ -92,7 +103,7 @@ class ColumnBoard extends Component {
     event.preventDefault();
     const { authToken } = this.context;
     const { boardId, colId, cardId, title, body } = this.props;
-    
+
     console.log("Editing...");
 
     API.Cards.updateCard(authToken, boardId, colId, cardId, title, body)
@@ -114,23 +125,26 @@ class ColumnBoard extends Component {
             <Paper className={classes.paper}>
               <div>
                 <div>
-                  <Typography
+                  {/* <Typography
                     style={{ textTransform: "uppercase" }}
                     color="secondary"
                     gutterBottom="true"
                   >
-                    {/* {this.props.title}  */}
-                  </Typography>
+                     {this.props.title}  
+                  </Typography> */}
                   {/* to input column text */}
                   <form noValidate autoComplete="off">
                     <TextField
                       id="standard-basic"
                       // label="Column Title"
                       // variant="outlined"
+                      style={{ textTransform: "uppercase" }}
                       color="secondary"
                       defaultValue={title}
+                      value={title}
                       // onChange = {this.editColumnTitle}
                     />
+                    
                   </form>
                 </div>
                 <div className={classes.alignRight}>
@@ -156,11 +170,12 @@ class ColumnBoard extends Component {
                 </div>
               </div>
 
-              {cards.map((card) => (
+              {cards.map((card,index) => (
                 <CardBoard
                   {...card}
-                  colId={column._id}
-                  cardId={card._id}
+                  //colId={column._id}
+                  //cardId={card._id}
+                  cardIndex={index}
                   handleSave={this.handleSave}
                   handleEdit={this.handleEdit}
                   handleDelete={this.handleDelete}

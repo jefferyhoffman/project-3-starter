@@ -32,7 +32,7 @@ const styles = (theme) => ({
     },
 
     display: "flex",
-    flexFlow: "row wrap",
+    flexFlow: "row nowrap",
     justifyContent: "center",
   },
 });
@@ -71,9 +71,10 @@ class DashBoard extends Component {
         ) : board ? (
           <Grid container justify="left">
             <Grid xs={12} spacing={4} container item className={classes.grid}>
-              {board.columns.map((column) => (
+              {board.columns.map((column, index) => (
                 <ColumnBoard
                   boardId={board._id}
+                  colIndex={index}
                   {...column}
                   handleRefresh={this.refreshBoard}
                 />
