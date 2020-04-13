@@ -12,6 +12,7 @@ const FriendsDisplay = (props) => {
     console.log("useEffect works")
     API.Users.getThoseIFollow(userInfo.authToken)
     .then(response => {
+      console.log(response)
       setFriends(response)
     })
     // .catch
