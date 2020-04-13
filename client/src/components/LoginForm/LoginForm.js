@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
-
+import Particles from 'react-particles-js';
 import Octicon, { Mail, Key } from '@githubprimer/octicons-react';
+import "../LoginForm/LoginForm.css"
+
+/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+// particlesJS.load('particles-js', 'assets/particles.json', function() {
+//   console.log('callback - particles.js config loaded');
+// });
 
 class LoginForm extends Component {
   state = {
@@ -27,8 +33,20 @@ class LoginForm extends Component {
 
   render() {
     const { email, password } = this.state;
-
+    
     return (
+    <div>
+      {/* <Particles
+        params={{
+          polygon: {
+            enable: true,
+            type: 'inside',
+            move: {
+              radius: 10
+            },
+            url: 'path/to/svg.svg'
+          }
+        }} /> */}
       <div className='LoginForm'>
         <div className='card bg-secondary'>
           <div className='card-body bg-secondary'>
@@ -47,7 +65,6 @@ class LoginForm extends Component {
                   onChange={this.handleInputChange}
                 />
               </div>
-
               <div className='input-group mb-3'>
                 <div className="input-group-prepend">
                   <span className="input-group-text bg-dark text-light"><Octicon icon={Key} /></span>
@@ -62,12 +79,26 @@ class LoginForm extends Component {
                   onChange={this.handleInputChange}
                 />
               </div>
+              <button className='btn btn-light' type='submit'>Login</button>
+              <Particles
+              params={{
+              polygon: {
+              enable: true,
 
-              <button className='btn btn-dark' type='submit'>Login</button>
+              width: '100%',
+              height: '200%',
+              type: 'outside',
+              move: {
+              radius: 10
+            },
+            url: 'path/to/svg.svg'
+          }
+        }} />
             </form>
           </div>
         </div>
       </div>
+    </div>
     )
   }
 }
