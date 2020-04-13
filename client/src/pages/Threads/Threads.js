@@ -3,7 +3,7 @@ import API from "../../lib/API";
 import { Link } from "react-router-dom";
 import Jumbotron from "../../components/Jumbotron";
 import { Input, TextArea, FormBtn } from "../../components/ThreadForm"
-
+import Particles from 'react-particles-js';
 import "../Threads/Threads.css";
 
 function Threads() {
@@ -51,11 +51,39 @@ function Threads() {
   }, []);
 
   return (
-    <div>
+    <div className="container-div">
+      <div className="particles">
+        <Particles 
+        
+        // params={{
+        //  particles: {
+        //    shape: {
+        //      type: "image",
+        //      image: {
+        //       src: "music-icon-14-16.png",
+        //       height: 20,
+        //       width: 20,
+        //     }
+        //      }
+        //  }
+        // }}
+        
+        
+        />
+      </div>
+    
+
+
+
+
+
+
+      <div>
       <div className="threads-heading">
         Threads
       </div>
       <div className="threads-panel">
+        {/* <Particles /> */}
         <div> 
          
           { 
@@ -95,6 +123,19 @@ function Threads() {
         </div>
       </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
   )
 }
 
