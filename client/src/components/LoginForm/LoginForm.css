@@ -3,6 +3,11 @@
     text-emphasis: none;
     text-decoration-color: white;
 }
+
+.card bg-secondary {
+    height:0px;
+}
+
 .inputgroup {
     background-color: black;
     text-emphasis: none;
@@ -18,3 +23,9 @@
     text-emphasis: none;
     text-decoration-color: white;
 }
+
+/* .Particles-js { */
+    /* position: fixed; */
+    /* height: 500px;
+    width: 400px; */
+/* } */

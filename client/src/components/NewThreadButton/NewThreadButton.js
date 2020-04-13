@@ -5,7 +5,14 @@ class NewThreadButton extends Component {
     render() {
         return(
             <div className="threadButton">
-                Test1
+                <form>
+                <div className="new-thread-title">
+                    Here you put in your title
+                </div>
+                <div className="new-thread-body">
+                    Here you put in your body
+                </div>
+                </form>
             </div>
         )
     }
