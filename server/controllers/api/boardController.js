@@ -102,9 +102,9 @@ boardController.put("/:id/columns/:column", JWTVerifier, (req, res) => {
     .catch((err) => res.json(err));
 });
 
-// UPDATE COLUMN: MOVE CARD
+// UPDATE COLUMN: MOVE CARD TO THE RIGHT
 boardController.put(
-  "/:id/columns/:columnIndex/:newColumnIndex/cards/:cardIndex",
+  "/:id/columns/:columnIndex/colRight/cards/:cardIndex",
   JWTVerifier,
   (req, res) => {
     db.Board.findById(req.params.id)
@@ -112,11 +112,19 @@ boardController.put(
         if (!board) {
           throw new Error("Invalid board ID");
         }
-
+        let newColumnIndex;
         const columnIndex = parseInt(req.params.columnIndex);
-        const newColumnIndex = parseInt(req.params.newColumnIndex);
+        // const newColumnIndex = parseInt(req.params.newColumnIndex);
         const cardIndex = parseInt(req.params.cardIndex);
 
+        if (columnIndex < 0 || columnIndex > 1) {
+          throw new Error("can't move card there!")
+        } else {
+          newColumnIndex =  columnIndex + 1;
+        }
+
+        console.log("NEWCOLUMNINDEX: " + newColumnIndex);
+      
         let array1 = board.columns[columnIndex].cards;
         let array2 = board.columns[newColumnIndex].cards;
         let cardToMove = array1[cardIndex];
@@ -126,7 +134,48 @@ boardController.put(
         }
 
         array1.splice(cardIndex, 1);
-        array2.push(cardToMove);
+        array2.unshift(cardToMove);
+
+        return board.save();
+      })
+      .then((splicedCard) => res.json(splicedCard))
+      .catch((err) => console.log(err));
+  }
+);
+
+// UPDATE COLUMN: MOVE CARD TO THE LEFT
+boardController.put(
+  "/:id/columns/:columnIndex/colLeft/cards/:cardIndex",
+  JWTVerifier,
+  (req, res) => {
+    db.Board.findById(req.params.id)
+      .then((board) => {
+        if (!board) {
+          throw new Error("Invalid board ID");
+        }
+        let newColumnIndex;
+        const columnIndex = parseInt(req.params.columnIndex);
+        // const newColumnIndex = parseInt(req.params.newColumnIndex);
+        const cardIndex = parseInt(req.params.cardIndex);
+
+        if (columnIndex < 1 || columnIndex > 2) {
+          throw new Error("can't move card there!")
+        } else {
+          newColumnIndex =  columnIndex - 1;
+        }
+
+        console.log("NEWCOLUMNINDEX: " + newColumnIndex);
+        
+        let array1 = board.columns[columnIndex].cards;
+        let array2 = board.columns[newColumnIndex].cards;
+        let cardToMove = array1[cardIndex];
+
+        if (!array1.length) {
+          throw new Error("No items to remove. Hmm...");
+        }
+
+        array1.splice(cardIndex, 1);
+        array2.unshift(cardToMove);
 
         return board.save();
       })
@@ -206,7 +255,7 @@ boardController.delete(
 
         console.log(`CARD INDEX: ${cardIndex}`);
         // console.log(JSON.stringify(board, null, 2));
-        
+
         const removed = board.columns[colIndex].cards.splice(cardIndex, 1);
         if (!removed.length) {
           throw new Error("No items removed. Hmn...");

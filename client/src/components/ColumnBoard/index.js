@@ -10,7 +10,7 @@ const styles = (theme) => ({
     flexGrow: 1,
     justifyContent: "center",
     alignItems: "flex-end",
-    width: 500,
+    width: 400,
     marginLeft: 20,
     marginBottom: 30,
   },
@@ -50,11 +50,30 @@ class ColumnBoard extends Component {
       authToken,
       boardId,
       colIndex,
+      //change this hard coded text
       "Edit me",
       "Edit me"
     )
       .then(() => handleRefresh())
       .catch((err) => console.log(err));
+  };
+
+  moveCardLeft = (cardIndex) => {
+    const { authToken } = this.context;
+    const { handleRefresh, boardId, colIndex } = this.props;
+    console.log("Moving card left");
+    API.Columns.updateColumnMoveCardLeft(authToken, boardId, colIndex, cardIndex)
+    .then(() => handleRefresh())
+    .catch((err) => console.log(err));
+  };
+
+  moveCardRight = (cardIndex) => {
+    const { authToken } = this.context;
+    const { handleRefresh, boardId, colIndex } = this.props;
+    console.log("Moving card Right");
+    API.Columns.updateColumnMoveCardRight(authToken, boardId, colIndex, cardIndex)
+    .then(() => handleRefresh())
+    .catch((err) => console.log(err));
   };
 
   handleSave = (cardIndex, title, body) => {
@@ -137,6 +156,8 @@ class ColumnBoard extends Component {
                   handleSave={this.handleSave}
                   handleEdit={this.handleEdit}
                   handleDelete={this.handleDelete}
+                  moveCardLeft={this.moveCardLeft}
+                  moveCardRight={this.moveCardRight}
                 />
               ))}
             </Paper>

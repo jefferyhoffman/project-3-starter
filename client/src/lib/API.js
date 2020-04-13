@@ -20,7 +20,7 @@ export default {
   },
 
   Boards: {
-    // Jeff
+
     getMy: function (authToken) {
       return axios.get("/api/boards", {
         headers: {
@@ -60,11 +60,25 @@ export default {
       );
     },
 
-    updateColumnMoveCard: function (authToken, boardId, colIndex, newColIndex, cardIndex) {
-      return axios.put(`/api/boards/${boardId}/columns/${colIndex}/${newColIndex}/cards/${cardIndex}`,
+    updateColumnMoveCardLeft: function (authToken, boardId, colIndex, cardIndex) {
+      return axios.put(`/api/boards/${boardId}/columns/${colIndex}/colLeft/cards/${cardIndex}`,
         {
           colIndex,
-          newColIndex,
+          cardIndex,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${authToken}`,
+          },
+        }
+      )
+    },
+
+
+    updateColumnMoveCardRight: function (authToken, boardId, colIndex, cardIndex) {
+      return axios.put(`/api/boards/${boardId}/columns/${colIndex}/colRight/cards/${cardIndex}`,
+        {
+          colIndex,
           cardIndex,
         },
         {
@@ -77,7 +91,7 @@ export default {
   },
 
   Cards: {
-    createCardInColumn: function (authToken, 
+    createCardInColumn: function (authToken,
       boardId, colIndex, title, body) {
       return axios.post(
         `/api/boards/${boardId}/columns/${colIndex}/cards`,
@@ -94,9 +108,9 @@ export default {
     },
 
     updateCard: function (authToken,
-       boardId, 
-       colIndex, 
-       cardIndex, title, body) {
+      boardId,
+      colIndex,
+      cardIndex, title, body) {
       return axios.put(`/api/boards/${boardId}/columns/${colIndex}/cards/${cardIndex}`,
         {
           title,
@@ -111,11 +125,11 @@ export default {
     },
 
     deleteCardInColumn: function (authToken,
-       boardId, colIndex, cardIndex) {
+      boardId, colIndex, cardIndex) {
       return axios.delete(`/api/boards/${boardId}/columns/${colIndex}/cards/${cardIndex}`,
         {
           headers: {
-          Authorization: `Bearer ${authToken}`,
+            Authorization: `Bearer ${authToken}`,
           },
         }
       );
