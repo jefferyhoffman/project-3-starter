@@ -47,7 +47,8 @@ The user can also create music notation sheets and post them to the board as wel
 <li>Yarn</li>
 <li>GitHub  </li>
 <li>Heroku</li>  
-<li>Vexflow</li></ul>  
+<li>Vexflow</li>  
+<li>Scribbletune</li></ul>  
 
 ### License
 
@@ -57,10 +58,10 @@ The user can also create music notation sheets and post them to the board as wel
 ### Contributors
 
 ### Authors
-Martin Hargett | [GitHub](https://github.com/MHargett23)  
-Alex Stiles | [GitHub](https://github.com/kffl3496)  
-Owen Edwards | [GitHub](https://github.com/Ivyparade)  
-Zachary Meadows | [GitHub](https://github.com/zachmdws)  
+Martin Hargett | [GitHub](https://github.com/MHargett23) | [LinkedIn](https://www.linkedin.com/in/martin-hargett-28ba2b1a2/) |  
+Alex Stiles | [GitHub](https://github.com/kffl3496) |  
+Owen Edwards | [GitHub](https://github.com/Ivyparade) | [LinkedIn](https://www.linkedin.com/in/martin-hargett-28ba2b1a2/) |   
+Zachary Meadows | [GitHub](https://github.com/zachmdws) | [LinkedIn](https://www.linkedin.com/in/owen-edwards-49663919a/) |   
 
 ### Visuals
 ![Screenshot of Site](#)  
