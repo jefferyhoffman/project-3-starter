@@ -1,11 +1,16 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 import Gallery from '../../components/Gallery';
 import UploadForm from '../../components/UploadForm'
 import './style.css'
 import AuthContext from '../../contexts/AuthContext'
 function Galleries(props) {
-     const value = useContext(AuthContext)
-     console.log('yo', value.user)
+    const value = useContext(AuthContext)
+    console.log('yo', value.user)
+
+    useEffect(() => {
+        
+    }, [value])
+
     return (
         <div>
             <UploadForm />
