@@ -74,7 +74,7 @@ const CardBoard = (props) => {
                 label="Task Title"
                 multiline
                 rows="1"
-                defaultValue="Title"
+                // defaultValue={title}
                 className={classes.cardTitle}
                 variant="filled"
                 value={title}
@@ -90,7 +90,7 @@ const CardBoard = (props) => {
                 label="Description"
                 multiline
                 rows="4"
-                defaultValue="Default Value"
+                // defaultValue={body}
                 name="body"
                 value={body}
                 onChange={handleInputChange}
@@ -118,7 +118,7 @@ const CardBoard = (props) => {
               variant="outlined"
               size="small"
               className={classes.actionButton}
-              onClick={() => handleDelete(props)}
+              onClick={() => props.handleDelete(props.cardIndex)}
             >
               Delete
             </Button>

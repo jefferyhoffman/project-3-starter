@@ -9,7 +9,7 @@ var CardSchema = new Schema({
   },
   body: {
     type: String,
-    minlength: 5,
+    minlength: 1,
     maxlength: 140,
   },
   // priority: {
