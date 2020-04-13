@@ -48,7 +48,7 @@ export default {
       });
     },
 
-    // retrieves an array of objects with all of the people a user follows
+    // retrieves an array of objects with all of the people a user follows and the scores of their current challenge
     getThoseIFollow: function (authToken) {
       return axios.get("/api/users/follows", {
         headers: {
@@ -217,15 +217,6 @@ export default {
       });
     },
 
-    // NOT NEEDED
-    // updates a challenges totalPoints when passed an id and a new points total, would have to calc on front end for now
-    // updatePoints: function(id, totalPoints, authToken){
-    //   return axios.put('/api/challenges/points/'+id, {
-    //     totalPoints: totalPoints,
-    //     headers: {
-    //       'Authorization': `Bearer ${authToken}`
-    //     }
-    //   })
-    // }
+    // getCurrentChallengeScore
   },
 };
