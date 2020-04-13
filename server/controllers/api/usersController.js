@@ -35,6 +35,15 @@ usersController.post('/login', (req, res) => {
 });
 
 
+usersController.post('/invite', (req, res) => {
+  if(!req.body.email){
+    return res
+            .status(404)
+            .send(`No email was given`)
+  }
+  sendGrid("invitefriend", req.body.email)
+  res.send(req.body.email + ` was sent an invitation`)
+})
 
 // get searched email
 // working
@@ -139,7 +148,7 @@ usersController.post("/follows", JWTVerifier, (req, res)=> {
       }
       // is not a function
       console.log(user);
-      return user.setFollowers(req.body.userFollowie);
+      return user.addFollowers(req.body.userFollowie);
     })
     .then(user => res.json(user))
     .catch((err) => console.log(err));
@@ -149,7 +158,7 @@ usersController.post("/follows", JWTVerifier, (req, res)=> {
 
 
 // remove a userFollowie for a user
-usersController.delete("/follows", JWTVerifier, (req, res) => {
+usersController.put("/follows/delete", JWTVerifier, (req, res) => {
   
   db.User.findByPk(req.user.id)
     .then(User => {

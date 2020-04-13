@@ -48,7 +48,11 @@ export default {
       });
     },
 
-    // retrieves an array of objects with all of the people a user follows and the scores of their current challenge
+    inviteFriend: function (email) {
+      return axios.post("/api/users/invite",{ email: email })
+    },
+    
+    // retrieves an array of objects with all of the people a user follows
     getThoseIFollow: function (authToken) {
       return axios.get("/api/users/follows", {
         headers: {
@@ -60,7 +64,7 @@ export default {
     // add to the people a user is following
     // must pass in the id of person they want to follow
     addToThoseIFollow: function (userFollowie, authToken) {
-      return axios.put(
+      return axios.post(
         "/api/users/follows",
         {
           userFollowie: userFollowie,
@@ -77,7 +81,7 @@ export default {
     // must pass in the id of person they want to unfollow
     removeFromThoseIFollow: function (userFollowie, authToken) {
       return axios.put(
-        "/api/users/follows",
+        "/api/users/follows/delete",
         {
           userFollowie: userFollowie,
         },
