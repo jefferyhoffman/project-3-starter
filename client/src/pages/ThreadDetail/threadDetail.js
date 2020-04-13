@@ -88,7 +88,7 @@ function ThreadDetail({ match }) {
                         <div className="reply" key="item.id">
                             User: {item.User.email}<br/>
                             Body: {item.body}
-                            <DeleteBtn onClick={() => deleteReply(item.id)} />
+                            {/* <DeleteBtn onClick={() => deleteReply(item.id)} /> */}
                             
                         </div>
                         ))}
