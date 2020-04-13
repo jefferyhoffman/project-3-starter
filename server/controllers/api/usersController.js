@@ -122,3 +122,65 @@ usersController.put("/follows/delete", JWTVerifier, (req, res) => {
 });
 
 module.exports = usersController;
+
+
+
+// for further use 
+// get all of the people that the user is following and their current challenge point total
+// working
+// usersController.get("/follows", JWTVerifier, (req, res) => {
+//   db.User.findByPk(req.user.id)
+//     .then((user)=> {
+//       if (!user) {
+//         return res
+//           .status(404)
+//           .send(`User with id ${req.user.id} not found.`);
+//       }
+//       return user.getFollowers();
+//     })
+//     .then(followers => {
+//       let updatedFollowers = followers;
+//       const allQueries = followers.map(follower => db.Challenge.findAll({
+//         where: {
+//           UserId: follower.dataValues.id
+//         },
+//         order: [['createdAt', 'DESC']],
+//         limit: 1
+//       }));
+//       Promise.all(allQueries)
+//         .then(allResults => {
+//           console.log(`**************allResults: `+ allResults[0]);
+//           const queries = allResults.map(result => db.ChallengeAction.findAll({
+//             where: {
+//               ChallengeId: result[0].id,
+//               accomplished: 1
+//             }
+//           }));
+//           return Promise.all(queries);
+//         })
+//         .then(challengeActions => {
+//           return challengeActions.map(actions => actions.map(action => action.dataValues.ActionId))
+//         })
+//         .then(actionIdArrays => {
+//           const actionsArray = actionIdArrays.map(individualArray => {
+//             const actionQueri = individualArray.map(val => db.Action.findAll({
+//                 where: {
+//                   id: val
+//                 }
+//               })
+//             )
+//             return Promise.all(actionQueri);
+//           })
+//           return Promise.all(actionsArray);
+//         })
+//         .then(actions => {
+//           const arrayOfTotals = actions.map(actionsForEachChallenge => actionsForEachChallenge.reduce((total, action) => total + action[0].points, 0));
+//           for (var i=0; i<arrayOfTotals.length; i++){
+//             updatedFollowers[i].dataValues.points = arrayOfTotals[i]
+//           }
+//           res.json(updatedFollowers);
+//         })
+//         .catch(err => console.log(err));
+//     })
+//     .catch(err=> console.log(err));
+// });
