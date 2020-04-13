@@ -27,3 +27,27 @@
         opacity: 1;
     }
 }
+
+@media screen and (max-width:768px) {
+    .galleries {
+        column-count: 1
+    }
+}
+
+@media screen and (min-width:769px) {
+    .galleries {
+        column-count: 2
+    }
+}
+
+@media screen and (min-width:1080px) {
+    .galleries {
+        column-count: 3
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .galleries {
+        column-count: 4
+    }
+}
