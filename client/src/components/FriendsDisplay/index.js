@@ -1,25 +1,28 @@
-import React, {useEffect} from "react";
+import React, {useState, useEffect, useContext} from "react";
+import AuthContext from "../../contexts/AuthContext";
+import API from "../../lib/API";
 
-
-
-//api call for this component
-// getThoseIFollow: function (authToken) {
-//   return axios.get("/api/users/follows", {
-//     headers: {
-//       Authorization: `Bearer ${authToken}`,
-//     },
-//   });
-//make a useEffect function that maps and loads all friends for this user
-
-
+//make a useEffect function with API call that sets friends as the result of the api call 
+// maps api result to render
 const FriendsDisplay = (props) => {
-  return (
-    <>
-      <div>
+  const userInfo = useContext(AuthContext);
+  const [friends, setFriends] = useState([]); //friends I follow from db
 
-      </div>
-    </>
-  )
+  useEffect(() => {
+    console.log("useEffect works")
+    API.Users.getThoseIFollow(userInfo.authToken)
+    .then(response => {
+      console.log(response)
+    })
+  }, [])
+
+    return (
+      <>
+        <div>
+
+        </div>
+      </>
+    )
 }
 
 export default FriendsDisplay;

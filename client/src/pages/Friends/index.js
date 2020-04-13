@@ -7,8 +7,7 @@ import "./style.css";
 
 
 const Friends = (props) => {
-  const userInfo = useContext(AuthContext);
-    const [friend, setFriend] = useState([]); //found friend that i will add to my friend's list
+  const userInfo = useContext(AuthContext);    
     const [email, setEmail] = useState("") //searched email
     const [foundFriend, setFoundFriend] = useState({
       name: "",
@@ -28,16 +27,14 @@ const Friends = (props) => {
         
       API.Users.searchForUser(email)    
         .then(res => {
-          console.log(res)
+          // console.log(res)
           if (res.data.status === "error") {
             throw setError(res.data.message);          
           } 
           setIsFriendFound("Friend found");
           setError({ results: res.data.message, error: "" });
           setFoundFriend({name: res.data.name, email: res.data.email, id: res.data.id})
-          setNewFriend({name: res.data.name, email: res.data.email, id: res.data.id})
-          // console.log(newFriend)
-          // return newFriend;
+          setNewFriend({name: res.data.name, email: res.data.email, id: res.data.id})         
           
         })
         .catch(err => {
@@ -49,21 +46,31 @@ const Friends = (props) => {
         
     };
     
-    //function to follow friend ///getting 404!!!
+    //function to follow friend ///
     const followFriend = () => {
-      console.log(newFriend.email)
-      console.log(userInfo.authToken)
+      // console.log(newFriend.email)
+      // console.log(userInfo.authToken)
       API.Users.addToThoseIFollow(newFriend.id, userInfo.authToken)
       .then(response => {
         console.log(response)
+        if (response.data.status === "error") {
+          throw setError(response.data.message);          
+        }
+        if (response.data.status === 200) {
+          console.log("Successfully followed this friend!");
+
+        }
       })
     }
 
     //function to invite friend
 
-    const inviteFriend = event => {
-      console.log("inviting friend btn works")
-      // btn works 
+    const inviteFriend = () => {
+      console.log(email)
+      API.Users.inviteFriend(email)
+      .then(res =>{
+        console.log(res.data) //use this for alert. create alert hook
+      })
     }
 
     return(

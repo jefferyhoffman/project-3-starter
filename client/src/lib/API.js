@@ -48,6 +48,10 @@ export default {
       });
     },
 
+    inviteFriend: function (email) {
+      return axios.post("/api/users/invite",{ email: email })
+    },
+    
     // retrieves an array of objects with all of the people a user follows
     getThoseIFollow: function (authToken) {
       return axios.get("/api/users/follows", {
