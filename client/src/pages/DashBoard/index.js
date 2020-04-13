@@ -17,10 +17,11 @@ const styles = (theme) => ({
     backgroundPosition: "0 400px",
     paddingBottom: 400,
     height: "100%",
+    // width: "90%"
   },
   grid: {
     flexGrow: 1,
-    maxWidth: 1000,
+    maxWidth: 700,
     margin: "30px auto 30px",
     [theme.breakpoints.down("sm")]: {
       width: "calc(100% - 20px)",

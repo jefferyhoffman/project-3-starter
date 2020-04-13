@@ -10,7 +10,7 @@ const styles = (theme) => ({
     flexGrow: 1,
     justifyContent: "center",
     alignItems: "flex-end",
-    width: 500,
+    width: 400,
     marginLeft: 20,
     marginBottom: 30,
   },
@@ -57,7 +57,7 @@ class ColumnBoard extends Component {
       .catch((err) => console.log(err));
   };
 
-  moveCardLeft
+  // moveCardLeft = 
 
   handleSave = (cardIndex, title, body) => {
     const { authToken } = this.context;

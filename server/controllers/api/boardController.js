@@ -206,7 +206,7 @@ boardController.delete(
 
         console.log(`CARD INDEX: ${cardIndex}`);
         // console.log(JSON.stringify(board, null, 2));
-        
+
         const removed = board.columns[colIndex].cards.splice(cardIndex, 1);
         if (!removed.length) {
           throw new Error("No items removed. Hmn...");
