@@ -29,35 +29,35 @@ class Navigation extends Component {
         <div className="Header">
         <img src={SiteLogo} alt="The Cadenza logo" id="sitelogo"></img>
         </div>
-      <div className='Navigation'>
-        <nav className='navbar navbar-expand-lg navbar-dark bg-dark mb-3'>
+      <div className='Navigation col-md-6 text-center'>
+        <nav className='navbar navbar-expand-lg navbar-dark bg-dark mb-3 col-md-6 text-center'>
           {/* <Link className='navbar-brand' to='#'>Project 3</Link> */}
           <button className={togglerClass} onClick={this.toggleCollapse} data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
             <span className='navbar-toggler-icon'></span>
           </button>
 
           <div className={targetClass} id='navbarSupportedContent'>
-            <ul className='navbar-nav'>
-              <li className='nav-item'>
+            <ul className='navbar-nav col-md-6 text-center'>
+              <li className='nav-item col-md-6 text-center'>
                 <Link className='nav-link' to='/' onClick={this.toggleCollapse}>Home</Link>
               </li>
-              <li className='nav-item'>
+              <li className='nav-item col-md-6 text-center'>
                 <Link className='nav-link' to='/thread' onClick={this.toggleCollapse}>Threads</Link>
               </li>
               {user &&
-                <li className='nav-item'>
+                <li className='nav-item col-md-6 text-center'>
                   <Link className='nav-link' to='/secret' onClick={this.toggleCollapse}>Secret</Link>
                 </li>}
             </ul>
-            <ul className='navbar-nav mr-auto right'>
-              <li className='nav-item'>
+            <ul className='navbar-nav mr-auto right col-md-6 text-center'>
+              <li className='nav-item col-md-6 text-center'>
                 <Link className='nav-link' to='/profile' onClick={this.toggleCollapse}>Profile</Link>
               </li>
             </ul>
-            <ul className='navbar-nav'>
+            <ul className='navbar-nav col-md-6 text-center'>
               {user
                 ? <AuthDropdown onClick={this.toggleCollapse} />
-                : <li className='nav-item'><Link className='nav-link' to='/login' onClick={this.toggleCollapse}>Login/Register</Link></li>}
+                : <li className='nav-item col-md-6 text-center'><Link className='nav-link' to='/login' onClick={this.toggleCollapse}>Login/Register</Link></li>}
             </ul>
           </div>
         </nav>
