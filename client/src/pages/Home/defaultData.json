@@ -2,21 +2,21 @@
     {
         "id": 1,
         "colTitle": "To Do",
-        "colBody": "Tasks to complete ",
+        "colBody": "To Do ",
         "taskTitle": "React",
         "taskBody": "Read on React Hooks"
     },
     {
         "id": 2,
         "colTitle": "In Progress",
-        "colBody": "Tasks in Progress",
+        "colBody": "In Progress",
         "taskTitle": "Express Server",
         "taskBody": "Set up DB connections"
     },
     {
         "id": 2,
         "colTitle": "Completed",
-        "colBody": "Tasks to be completed ",
+        "colBody": "Completed ",
         "taskTitle":  "Node",
         "taskBody": "Set Up Development Environment"
     }
