@@ -21,7 +21,7 @@ function HomePage(props) {
     <div className="container">
 
       <div className="row">
-        <div className="col-9 move-right translate-down">
+        <div className="col-9 move-right fade-in">
 
           <Carousel interval="10000">
             {props.homeGallery.map((image) =>
