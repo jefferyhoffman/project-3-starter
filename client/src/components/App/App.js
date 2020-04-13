@@ -147,7 +147,6 @@ class App extends Component {
                 path='/galleries' 
                 render={() => <Galleries galleries={this.state.galleries} />}  
               />
-              <PrivateRoute path='/secret' component={Secret}/>
               <Route component={NotFound} />
             </Switch>
           </div>
