@@ -21,6 +21,8 @@
   "dependencies": {
     "luxon": "^1.23.0",
     "mysql2": "^2.1.0",
+    "particles.js": "^2.0.0",
+    "react-particles-js": "^3.0.3",
     "sequelize": "^5.21.6"
   }
 }
