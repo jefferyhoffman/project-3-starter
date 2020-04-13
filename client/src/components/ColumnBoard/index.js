@@ -50,6 +50,7 @@ class ColumnBoard extends Component {
       authToken,
       boardId,
       colIndex,
+      //change this hard coded text
       "Edit me",
       "Edit me"
     )
@@ -57,7 +58,23 @@ class ColumnBoard extends Component {
       .catch((err) => console.log(err));
   };
 
-  // moveCardLeft = 
+  moveCardLeft = (cardIndex) => {
+    const { authToken } = this.context;
+    const { handleRefresh, boardId, colIndex } = this.props;
+    console.log("Moving card left");
+    API.Columns.updateColumnMoveCardLeft(authToken, boardId, colIndex, cardIndex)
+    .then(() => handleRefresh())
+    .catch((err) => console.log(err));
+  };
+
+  moveCardRight = (cardIndex) => {
+    const { authToken } = this.context;
+    const { handleRefresh, boardId, colIndex } = this.props;
+    console.log("Moving card Right");
+    API.Columns.updateColumnMoveCardRight(authToken, boardId, colIndex, cardIndex)
+    .then(() => handleRefresh())
+    .catch((err) => console.log(err));
+  };
 
   handleSave = (cardIndex, title, body) => {
     const { authToken } = this.context;
