@@ -56,7 +56,7 @@ const Friends = (props) => {
         if (response.data.status === "error") {
           throw setError(response.data.message);          
         }
-        if (response.data.status === 200) {
+        if (response.data.status === 200 || response.data.status === 304) {
           setServerMessage("Successfully followed this friend!");
           setAlertVariant('success');
         }
