@@ -161,10 +161,11 @@ export default {
     },
 
     // deletes actions from a challenge
-    deleteActionFromChallenge: function (id, authToken) {
-      return axios.delete(
-        "/api/challenges/" + id,
-        {},
+    deleteActionFromChallenge: function (id,actions, authToken) {
+      console.log(id, actions)
+      return axios.put(
+        "/api/challenges/delete/" + id,
+        {actions: actions},
         {
           headers: {
             Authorization: `Bearer ${authToken}`,
