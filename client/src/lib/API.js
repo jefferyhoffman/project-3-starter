@@ -36,6 +36,11 @@ export default {
           userId,
           columns,
         },
+        {
+          headers: {
+            Authorization: `Bearer ${authToken}`,
+          },
+        }
       );
     },
   },
