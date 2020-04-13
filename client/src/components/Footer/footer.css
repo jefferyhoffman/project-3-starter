@@ -16,10 +16,15 @@
     border-top: #5EB2E0;
     border-style: solid;
     height: 40px;
+    width: 100%;
 }
 
 .page-body {
     flex-grow: 1;
+}
+
+.about-link {
+    color:darkcyan;
 }
 
 /* .Footer {
