@@ -6,29 +6,15 @@ class UploadForm extends React.Component {
     static contextType = AuthContext;
     constructor(props) {
       super(props);
-      this.state = {
-        title: "",
-        newGallery: null
-      };
+      this.state = {filename: 'Choose file'}
     }
-  
-    handleInputChange= event => {
-      if (event.target.name === 'title') {
-        this.setState({
-            title: event.target.value
-        })
-      } 
-      else {
-        this.setState({
-            newGallery: event.target.files
-        })
-      }
+    handleInputChange = () => {
+      const input = document.getElementById('file');
+      this.setState({filename: input.files[0].name})
     }
 
     handleSubmit = event => {
       event.preventDefault()
-      //fetch()
-      
       
       const theFile = document.getElementById('file').files[0]
       API.Users.upload(theFile, this.context.authToken).then(res=>console.log(res))
@@ -37,11 +23,13 @@ class UploadForm extends React.Component {
   
     render() {
       return (
-        <div className='form' action="/api/img-upload" method="POST" >
-          <input name='title' type='text' onChange={this.handleInputChange} />
-          <input type="file" name="file" id="file" className="inputfile" onChange={this.handleInputChange}/>
-          <label htmlFor="file">Choose a file</label>
-          <button className='modern-btn' onClick={this.handleSubmit}>Create!</button>
+        <div>
+          <h2 className=''>Upload a New Picture!</h2>
+          <div className='form' action="/api/img-upload" method="POST" >
+            <input type="file" name="file" id="file" className="inputfile" onChange={this.handleInputChange}/>
+            <label className='modern-btn'htmlFor="file">{this.state.filename}</label>
+            <button className='modern-btn' onClick={this.handleSubmit}>Create!</button>
+          </div>
         </div>
       );
     }
