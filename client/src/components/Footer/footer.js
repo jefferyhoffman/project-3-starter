@@ -7,12 +7,14 @@ class footer extends Component {
         return (
             <div className="wrapper">
                  <footer className="page-footer">
-                    <a href className='links' to='/pages/About/About.js'>About</a>
+                     <a href="https://github.com/MHargett23">Martin Hargett</a> | 
+                     <a href="https://github.com/kffl3496"> Alex Stiles</a> | 
+                     <a href="https://github.com/Ivyparade"> Owen Edwards</a> | 
+                     <a href="https://github.com/zachmdws"> Zachary Meadows</a>
                  </footer>
             </div>        
         )
     }
 }
-
 
 export default footer;
