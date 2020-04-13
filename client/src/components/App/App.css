@@ -32,6 +32,15 @@
   }
 }
 
+/* Fonts */
+.abel {
+  font-family: 'Abel', sans-serif;
+}
+
+.titilium {
+  font-family: 'Titillium Web', sans-serif;
+}
+
 .modern-btn {
   display: inline-block;
   margin: 10px;

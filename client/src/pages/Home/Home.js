@@ -11,21 +11,17 @@ function HomePage(props) {
   const handleShow = () => setShow(true)
 
 
-  return (<>
-    <div className="row">
-      <div className="col mb-5">
-
-        <div className="jumbotron">
-          <h1 className="display-4">Baton Pass!</h1>
-          <p className="lead">instruction on what to do/or what the site is about</p>
-        </div>
-      </div>
+  return (
+  <div>
+    <div className='title'>
+      <h1 className='abel translate-up'>Baton Pass!</h1>
+      <p className='titilium translate-up'>The pleasure of drawing. One pass at a time.</p>
     </div>
 
     <div className="container">
 
       <div className="row">
-        <div className="col-9 move-right">
+        <div className="col-9 move-right fade-in">
 
           <Carousel interval="10000">
             {props.homeGallery.map((image) =>
@@ -44,12 +40,8 @@ function HomePage(props) {
         </div>
       </div>
     </div>
-    <footer className="home-footer">
-      copyright...
-   </footer>
 
-
-  </>
+  </div>
   );
 }
 

@@ -28,7 +28,7 @@ class RegistrationForm extends Component {
     const { email, password, passwordConfirm } = this.state;
 
     return (
-      <div className='LoginForm'>
+      <div className='LoginForm abel'>
         <div className='card'>
           <div className='card-body'>
             <form onSubmit={this.handleSubmit}>

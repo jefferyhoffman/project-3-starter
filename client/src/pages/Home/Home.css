@@ -1,6 +1,55 @@
-body{
+/* font-family: 'Abel', sans-serif;
+font-family: 'Titillium Web', sans-serif; */
+
+body {
     background-color:#DDE1E4;
 }
+
+/* Title styling (ie Baton Pass! The pleas...) */
+.title {
+    display: inline-block;
+    width: 80vw;
+    margin-top: 1%;
+    overflow: hidden;
+}
+
+/* Title animation */
+.translate-up {
+    animation: transUp ease 2s forwards;
+    animation-delay: 0.5s;
+    opacity: 0
+}
+
+@keyframes transUp {
+    0% {
+        transform: translate(0, 200px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 1
+    }
+}
+
+.container {
+    overflow: hidden;
+}
+
+.fade-in {
+    animation: fadeIn ease 5s forwards;
+    animation-delay: 2s;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 
 .btn{
     background-color: black;
