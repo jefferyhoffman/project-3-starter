@@ -43,42 +43,23 @@ challengesController.get("/multipast", JWTVerifier, (req, res) => {
 });
 
 // get current challenge 
-// working
-// challengesController.get("/", JWTVerifier, (req, res) => {
-//   db.Challenge.findAll({
-//     limit: 1,
-//     order: [['createdAt', 'DESC']],
-//     where: req.user.id
-//   })
-//     .then(challenges => {
-//       if (!challenges.length) {
-//         return res
-//           .status(404)
-//           .send(`Challenge with id ${req.params.id} not found.`);
-//       }
-//       // .getActions is not a function
-//       // console.log(challenges[0].getActions());
-//       return challenges[0].getActions();
-//     })
-//     .then(actions => res.json(actions))
-//     .catch((err) => console.log(err));
-// });
 
 
 
-// get current score of challenge based on actions accomplished
-// must pass in ChallengeId
 challengesController.get("/", JWTVerifier, (req, res) => {
+  console.log(req.user.id, '<==============================')
   db.Challenge.findAll({
     limit: 1,
     order: [['createdAt', 'DESC']],
-    where: req.user.id
+    where: {UserId: req.user.id}
   })
     .then(challenges => {
+      console.log(challenges, "this is challenges")
       if (!challenges.length) {
         return res
-          .status(404)
-          .send(`Challenge with id ${req.params.id} not found.`);
+        .status(204)
+         .send(`Challenge with id ${req.params.id} not found.`);
+         //return res.json()
       }
       // .getActions is not a function
       // console.log(challenges[0].getActions());
@@ -96,6 +77,40 @@ challengesController.get("/", JWTVerifier, (req, res) => {
     })
     .catch((err) => console.log(err));
 });
+// get current score of challenge based on actions accomplished
+// must pass in ChallengeId
+challengesController.get("/challengeaction/:id", (req, res) => {
+  db.ChallengeAction.findAll({
+    where: {
+      ChallengeId: req.params.id,
+      accomplished: 1
+    }
+  })
+  .then((data) => {
+    return (data.map(val => {
+      return val.dataValues.ActionId
+    }));
+  })
+  .then((actionIdArray) => {
+    db.Action.findAll({
+      where: {
+        id: actionIdArray
+      }
+    })
+    .then((actions) => {
+      if (!actions) {
+        return res
+          .status(404)
+          .send(`action could not found.`);
+      }
+      let scoredPoints = actions.reduce((total, action) => total + action.points, 0)
+      res.json(scoredPoints);
+    })
+    .catch((err) => console.log(err));
+  })
+  .catch((err) => console.log(err));
+})
+
 
 // get current challenge score of any user, when given their UserId
 // 
