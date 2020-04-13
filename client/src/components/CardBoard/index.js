@@ -102,15 +102,7 @@ const CardBoard = (props) => {
             >
               Save
             </Button>
-            <Button
-              color="primary"
-              variant="contained"
-              size="small"
-              className={classes.actionButton}
-              onClick={() => handleEdit(props)}
-            >
-              Edit
-            </Button>
+            
             <Button
               //onClick={this.openDialog}
               color="primary"
@@ -121,6 +113,29 @@ const CardBoard = (props) => {
             >
               Delete
             </Button>
+            <Button
+              //onClick={this.openDialog}
+              color="primary"
+              variant="outlined"
+              size="small"
+              className={classes.actionButton}
+             
+            >
+             left
+            </Button>
+            <Button
+              //onClick={this.openDialog}
+              color="primary"
+              variant="outlined"
+              size="small"
+              className={classes.actionButton}
+              
+            >
+            right
+              
+              
+            </Button>
+
           </CardActions>
         </div>
       </Card> 
