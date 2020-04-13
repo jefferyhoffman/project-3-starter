@@ -50,6 +50,10 @@ function Threads() {
       .catch((err) => console.error(err))
   }, []);
 
+  var { DateTime } = require("luxon");
+const Date = DateTime.local(); 
+
+
   return (
     <div className="container-div">
       <div className="particles">
@@ -92,6 +96,7 @@ function Threads() {
               // <Link to={"/thread/" + threads.id + "/" } key={item.id} className="thread">{threads.title}</Link>
               <div className="thread" key={item.id}>
                 <a href={"/thread/"+ item.id}>{item.title}</a>
+            <p>Thread Created: {(item.createdAt).substring(5,10)}-{((item.createdAt).substring(0,4))}</p>
               </div>
             ))
           }

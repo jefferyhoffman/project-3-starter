@@ -4,7 +4,11 @@ import Jumbotron from "../../components/Jumbotron/index";
 import { List, Listitem } from "../../components/List/index";
 import API from "../../lib/API";
 import "../ThreadDetail/threadDetail.css";
-import { Input, TextArea, FormBtn } from "../../components/ThreadForm"
+import { Input, TextArea, FormBtn } from "../../components/ThreadForm";
+import DeleteBtn from "../../components/DeleteReplyButton";
+
+
+
 
 
 function ThreadDetail({ match }) { 
@@ -14,6 +18,7 @@ function ThreadDetail({ match }) {
     const [userInfo, setuserInfo] = useState({});
     const [formObject, setFormObject] = useState({});
     const [threadId, setThreadId] = useState([]);
+    const [threadDate, setThreadDate] = useState([]);
 
     useEffect(() => { 
         API.Users.getMe(localStorage.getItem("token"))
@@ -50,10 +55,17 @@ function ThreadDetail({ match }) {
                 console.log(res.data)
                 setThreadId(res.data[i].id)
                 setThread(res.data[i]);
+                setThreadDate((res.data[i].createdAt).substring(5,10) + "-" + (res.data[i].createdAt).substring(0,4))
                 setReplies(res.data[i].Replies);
             }})
             .catch(err => console.error(err))
     }, []);
+
+    function deleteReply(id) {
+      API.Reply.deleteReply(id)
+        .then(res => console.log(res))
+        .catch(err => console.log(err));
+    }
 
     return (
         <div>
@@ -66,13 +78,18 @@ function ThreadDetail({ match }) {
                     <div className="threadDetails">
                         Title: { thread.title } <br/>
                         Body: {thread.body}
+                        ({threadDate})
+
                     </div>
+                    
                     <div className="replies">Replies:</div>
                     <div>
                         {replies.map((item, index) => (
                         <div className="reply" key="item.id">
                             User: {item.User.email}<br/>
                             Body: {item.body}
+                            {/* <DeleteBtn onClick={() => deleteReply(item.id)} /> */}
+                            
                         </div>
                         ))}
                     </div>
