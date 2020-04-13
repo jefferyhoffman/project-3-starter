@@ -17,7 +17,7 @@ const SelectedChallenges = (props) => {
     <>
       <Tab.Container id="left-tabs-example" defaultActiveKey="first">
         <Row>
-          <Col sm={9}>
+          <Col sm={12}>
             <Tabs
               defaultActiveKey="Current Challenge"
               transition={false}

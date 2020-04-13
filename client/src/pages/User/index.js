@@ -153,10 +153,10 @@ const User = (props) => {
 
   return (
     <>
-      <h1>
-        {currScore ? <p>Your Current Score is {currScore}!</p>: null}
+      <h3 className= "h3_heading_dark">
+        {currScore ? <p style={{color: "#DB6C4B"}}> Current Score: {currScore}</p>: null}
         Please choose from the actions below to create your first challenge!
-      </h1>
+      </h3>
       {allActions && (
         <Selected selections={theSelected} deleteHandler={deleteChallenge} completeHandler={completeTheAction} />
       )}
