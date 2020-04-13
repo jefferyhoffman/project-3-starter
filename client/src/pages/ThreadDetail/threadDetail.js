@@ -18,6 +18,7 @@ function ThreadDetail({ match }) {
     const [userInfo, setuserInfo] = useState({});
     const [formObject, setFormObject] = useState({});
     const [threadId, setThreadId] = useState([]);
+    const [threadDate, setThreadDate] = useState([]);
 
     useEffect(() => { 
         API.Users.getMe(localStorage.getItem("token"))
@@ -54,6 +55,7 @@ function ThreadDetail({ match }) {
                 console.log(res.data)
                 setThreadId(res.data[i].id)
                 setThread(res.data[i]);
+                setThreadDate((res.data[i].createdAt).substring(5,10) + "-" + (res.data[i].createdAt).substring(0,4))
                 setReplies(res.data[i].Replies);
             }})
             .catch(err => console.error(err))
@@ -76,7 +78,10 @@ function ThreadDetail({ match }) {
                     <div className="threadDetails">
                         Title: { thread.title } <br/>
                         Body: {thread.body}
+                        ({threadDate})
+
                     </div>
+                    
                     <div className="replies">Replies:</div>
                     <div>
                         {replies.map((item, index) => (
