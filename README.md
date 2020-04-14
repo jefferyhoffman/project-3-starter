@@ -23,12 +23,9 @@ http://mysmallerfootprint.com/
 
 ![Smaller Footprint Screenshot](./client/src/components/App/images/userpage.png)
 
-![Smaller Footprint Screenshot](./client/src/components/App/images/currentchallenges.png)
 
 ![Smaller Footprint Screenshot](./client/src/components/App/images/completedactions.png)
 
 ![Smaller Footprint Screenshot](./client/src/components/App/images/friends.png)
-
-![Smaller Footprint Screenshot](./client/src/components/App/images/findfriends.png)
 
 ![Smaller Footprint Screenshot](./client/src/components/App/images/invitefriends.png)
