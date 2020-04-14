@@ -42,7 +42,6 @@ function ThreadDetail({ match }) {
           })
           .then(res => {
             // API.Reply.findAll();
-
             window.location.reload(true);
           })
           .catch(err => console.log(err))
