@@ -35,6 +35,7 @@ usersController.post('/login', (req, res) => {
 });
 
 
+// Sends an Email invite
 usersController.post('/invite', (req, res) => {
   if(!req.body.email){
     return res
@@ -44,6 +45,8 @@ usersController.post('/invite', (req, res) => {
   sendGrid("invitefriend", req.body.email)
   res.send(req.body.email + ` was sent an invitation`)
 })
+
+
 
 // get searched email
 // working
@@ -92,8 +95,7 @@ usersController.post("/follows", JWTVerifier, (req, res)=> {
           .status(404)
           .send(`User with id ${req.user.id} not found.`);
       }
-      // is not a function
-      console.log(user);
+
       return user.addFollowers(req.body.userFollowie);
     })
     .then(user => res.json(user))
@@ -124,10 +126,9 @@ usersController.put("/follows/delete", JWTVerifier, (req, res) => {
 module.exports = usersController;
 
 
-
+// PLEASE DO NOT DELETE
 // for further use 
 // get all of the people that the user is following and their current challenge point total
-// working
 // usersController.get("/follows", JWTVerifier, (req, res) => {
 //   db.User.findByPk(req.user.id)
 //     .then((user)=> {
