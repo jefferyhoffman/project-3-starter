@@ -7,12 +7,21 @@ import API from "../../lib/API";
 const FriendsDisplay = (props) => {
   const userInfo = useContext(AuthContext);
   const [friends, setFriends] = useState([]); //friends I follow from db
+  const [hasFriends, setHasFriends] = useState("")
 
   useEffect(() => {
     console.log("useEffect works")
     API.Users.getThoseIFollow(userInfo.authToken)
     .then(response => {
-      setFriends(response)
+      console.log(response.data)
+      if (response.data.length > 0) {
+        console.log("you have friends")
+        setFriends(response.data)
+        setHasFriends("you have friends")
+      } else {        
+        console.log("you have no friends")}
+      
+      // setFriends(response)
     })
     // .catch
   }, [])
@@ -20,7 +29,13 @@ const FriendsDisplay = (props) => {
     return (
       <>
         <div>
+          {hasFriends === "you have friends" ? <p>Your Friends</p> : <></>}
+          <ul>
+          {friends.map(friend => (
+          <li>{friend.email}</li>
 
+        ))}            
+          </ul>
         </div>
       </>
     )
