@@ -16,6 +16,7 @@ function Threads() {
   const [userInfo, setuserInfo] = useState({});
   const [formObject, setFormObject] = useState({});
 
+
   useEffect(() => { 
     API.Users.getMe(localStorage.getItem("token"))
       .then((res) => { 
@@ -38,10 +39,15 @@ function Threads() {
         body: formObject.body,
         UserId: userInfo.id
       })
-      .then(res => API.Threads.getThreads())
+      .then(res => {
+        API.Threads.getThreads(); 
+        window.location.reload(true);
+      })
       .catch(err => console.log(err))
     }
   };
+
+
 
 
 
@@ -120,15 +126,15 @@ const Date = DateTime.local();
                 placeholder="Description (required)"
               />
            </form>
-            <div className="submit-button">
+            {/* <div className="submit-button"> */}
               <FormBtn
                 className="submit-thread"
-                disabled={!(formObject.title && formObject.Description)}
+                disabled={!(formObject.title && formObject.body)}
                 onClick={handleFormSubmit}
               >
                 Submit New Thread
               </FormBtn>
-            </div>
+            {/* </div> */}
           </div>
         </div>
       </div>

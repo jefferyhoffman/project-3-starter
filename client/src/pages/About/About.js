@@ -23,25 +23,25 @@ class About extends Component {
             Alex Stiles
           </div>
           <div className="body-div">
-          [GitHub] <a href="/https://github.com/kffl3496" className="about-color">https://github.com/kffl3496</a>
+          [GitHub] <a href="https://github.com/kffl3496" className="about-color">https://github.com/kffl3496</a>
         </div>
         <div className="name-div">
             Zach Meadows
           </div>
           <div className="body-div">
-          [GitHub] <a href="/https://github.com/zachmdws" className="about-color">https://github.com/zachmdws</a>
+          [GitHub] <a href="https://github.com/zachmdws" className="about-color">https://github.com/zachmdws</a>
         </div>
         <div className="name-div">
             Owen Edwards
           </div>
           <div className="body-div">
-          [GitHub] <a href="/https://github.com/Ivyparade" className="about-color">https://github.com/Ivyparade</a>
+          [GitHub] <a href="https://github.com/Ivyparade" className="about-color">https://github.com/Ivyparade</a>
         </div>
         <div className="name-div">
             Martin Hargett
           </div>
           <div className="body-div">
-          [GitHub] <a href="/https://github.com/MHargett23" className="about-color">https://github.com/MHargett23</a>
+          [GitHub] <a href="https://github.com/MHargett23" className="about-color">https://github.com/MHargett23</a>
         </div>          
       </div>
     

@@ -9,10 +9,6 @@ import Replies from './Replies.png';
 import Particles from 'react-particles-js';
 import DeleteBtn from "../../components/DeleteReplyButton";
 
-
-
-
-
 function ThreadDetail({ match }) { 
     const [thread, setThread] = useState({});
     const [replies, setReplies] = useState([]);
@@ -44,7 +40,11 @@ function ThreadDetail({ match }) {
             UserId: userInfo.id,
             ThreadId: threadId
           })
-          .then(res => API.Reply.findAll())
+          .then(res => {
+            // API.Reply.findAll();
+
+            window.location.reload(true);
+          })
           .catch(err => console.log(err))
         }
       };
