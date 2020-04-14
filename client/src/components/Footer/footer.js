@@ -7,9 +7,9 @@ class footer extends Component {
         return (
             <div className="wrapper">
                  <footer className="page-footer">
-                 <a href="/About">About</a>
+                 <a href="/About" className="about-color">About</a>
                  {/* <Link
-                    className="about-link"
+                    className="nav-link"
                     to="/About"
                     onClick={this.toggleCollapse}
                   >

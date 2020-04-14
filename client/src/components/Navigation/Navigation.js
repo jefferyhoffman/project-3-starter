@@ -94,7 +94,7 @@ class Navigation extends Component {
                 ) : (
                     <li className="nav-item">
                       <Link
-                        className="nav-link"
+                        className="nav-link right"
                         to="/login"
                         onClick={this.toggleCollapse}
                       >

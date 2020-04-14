@@ -74,14 +74,11 @@ class App extends Component {
               <Route component={NotFound} />
             </Switch>
           </div>
-
         
         </div>
 
         <Footer />
-        <Switch>
-          <Route path='/About' component={About} />
-        </Switch>
+        
       </AuthContext.Provider>
     );
   }

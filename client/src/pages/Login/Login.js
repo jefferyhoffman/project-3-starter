@@ -4,6 +4,7 @@ import "./login.css";
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
 import LoginForm from '../../components/LoginForm/LoginForm';
+import Loginlogo from './Login.png';
 
 class Login extends Component {
   static contextType = AuthContext;
@@ -60,7 +61,7 @@ class Login extends Component {
       <div className='Login'>
         <div className='row'>
           <div className='col'>
-            <h1>Login</h1>
+          <img src={Loginlogo} alt='websitelogo' className='img-div'/>
           </div>
         </div>
         {this.state.error &&
@@ -74,7 +75,7 @@ class Login extends Component {
         <div className='row'>
           <div className='col'>
             <LoginForm onSubmit={this.handleSubmit} />
-            <div className='mt-3 text-light'>Don't have an account? <Link to='/register'>Click here to register.</Link></div>
+            <div className='mt-3'>Don't have an account? <Link to='/register'>Click here to register.</Link></div>
           </div>
         </div>
       </div>

@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import RegistrationForm from '../../components/RegistrationForm/RegistrationForm';
 import API from '../../lib/API';
 
+import Registerlogo from './Register.png';
+
 class Register extends Component {
   state = {
     error: ""
@@ -24,7 +26,7 @@ class Register extends Component {
       <div className='Register'>
         <div className='row'>
           <div className='col'>
-            <h1>Register</h1>
+            <img src={Registerlogo} alt='websitelogo' className='img-div'/>
           </div>
         </div>
         {this.state.error &&

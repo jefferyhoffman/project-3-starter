@@ -1,9 +1,12 @@
-.threads-heading {
+.threads-holder {
+    /* height: 40px; */
+    width: 100%;
     border-radius: 6px;
     font-family: 'oswaldregular';
     font-size: 35px;
-    background: rgb(9,1,8);
-    background: linear-gradient(90deg, rgba(9,1,8,1) 34%, #2aa5c6 100%);
+    /* background: rgb(9,1,8); */
+    background: linear-gradient(90deg, rgba(1,0,1,0.8) 29%, rgba(1,13,20,0.8) 55%, rgba(3,34,51,0.8) 100%);
+    /* background: linear-gradient(90deg, rgba(9,1,8,1) 34%, #2aa5c6 100%); */
     margin-bottom: 5px;
     text-align: left;
     color: #2aa5c6;
@@ -19,17 +22,50 @@
     border: 1px solid black;
 }
 
-.thread {
-    background-color: rgba(55, 55, 61, 0.95);
+.thread-threads {
+    background-color: rgba(55, 55, 61, 0.5);
     margin-bottom: 10px;;
     border-radius: 6px;
     padding: 20px;
 }
 
+/* color: #2aa5c6; */
+
 .thread a {
-    color: #2aa5c6;
+    color: lightgray;
     font-size: 1.5em;
     text-decoration: none;
+}
+
+/* #2aa5c6 100%
+(, rgba(9,1,8,1) */
+
+
+/* ////////// */
+
+/* .chevron.left:before {
+	left: 0.25em;
+	transform: rotate(-135deg);
+} */
+
+/* ///////// */
+
+.item-id-title-div {
+    background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(23,0,29,0.8) 100%, rgba(188,0,255,0.8) 100%);
+    border-radius: 6px;
+    text-align: left;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4ch;
+}
+
+/* .href-link {
+    color: #c16adc;
+} */
+
+.img-div {
+    height: auto;
+    width: auto;
 }
 
 /* old formatting */
@@ -45,6 +81,7 @@ Jumbotron {
 .threadsDiv {
     border-radius: 15px;
     /* background-color: black; */
+    width: calc(100vh - 397px);
     height: calc(100vh - 397px);
     background-color: rgba(55, 55, 61, 0.75);
 }
@@ -140,19 +177,6 @@ placeholder {
 .FormBtn {
     text-align: center;
 }
-
-@font-face {
-    font-family: 'oswaldregular';
-    src: url('http://localhost:3000/thread') format('woff2'),
-         url('http://localhost:3000/thread') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* p {
-    background-color: indianred;
-} */
-
 
 .container-div {
     position: relative;

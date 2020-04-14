@@ -1,11 +1,89 @@
-.Title{
-    background-color: rgb(55, 55, 61);
+.about-div{
+    text-align: left;
+    /* margin-top: 30px;
+    background-color: black;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #5EB2E0;
+    box-shadow: #ac31d1 1px 1px 1px;
     color: #5EB2E0;
-    font-size: 5ch;
-    /* border-radius: 3ch; */
+    font-size: 5ch; */
+}
+
+.about-us-container {
+    background-color: rgba(94,178,224,0.4);
+    /* background-color: rgba(55, 55, 61, 0.5); */
+    /* margin-bottom: 10px; */
+    border-radius: 6px;
+    padding: 20px;
+    color: #2aa5c6;
+    /* font-size: 1.8em; */
+}
+
+.about-us-content {
+    /* margin-top: 10px; */
+    background-color: black;
+    /* background-color: rgba(55, 55, 61, 1); */
+    border-radius: 5px;
+    /* border-style: solid; */
+    /* border-color: #5EB2E0; */
+    /* box-shadow: #ac31d1 1px 1px 1px; */
+    padding: 20px;
+    color: #2aa5c6;
+    font-size: 3ch;
 }
 
 .img-div {
     height:300px;
     width:250px;
+}
+
+.contact-div {
+    margin-top: 40px;
+    text-align: left;
+    /* margin-top: 30px;
+    background-color: black;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #ac31d1;
+    box-shadow: #5EB2E0 1px 1px 1px;
+    color: #5EB2E0;
+    font-size: 5ch;    */
+}
+
+.contact-content-div {
+    margin-top: 30px;
+    background-color: rgba(55, 55, 61, 0.5);
+    /* border-radius: 5px; */
+    /* border-style: solid; */
+    padding: 20px;
+    /* border-color: #ac31d1; */
+    /* box-shadow: #5EB2E0 1px 1px 1px; */
+    color: #a8a4a4;
+    font-size: 3ch;   
+}
+
+.name-div {
+    text-align: left;
+    margin-top: 30px;
+    background-color: rgba(55, 55, 61, 0.5);
+    /* border-style: solid; */
+    padding: 15px;
+    /* border-color: #ac31d1; */
+    /* box-shadow: #5EB2E0 1px 1px 1px; */
+    color: #a8a4a4;
+    font-size: 3ch;  
+    border-radius: 5px;
+    border-bottom: #2aa5c6;
+}
+
+.body-div {
+    text-align: left;
+    background-color: rgba(55, 55, 61, 0.5);
+    border-radius: 5px;
+    border-top: #2aa5c6 solid;
+    padding: 20px;
+    color: #a8a4a4;
+    /* border-style: solid; */
+    font-size: 3ch;  
 }

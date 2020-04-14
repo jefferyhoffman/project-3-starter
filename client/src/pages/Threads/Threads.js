@@ -5,6 +5,11 @@ import Jumbotron from "../../components/Jumbotron";
 import { Input, TextArea, FormBtn } from "../../components/ThreadForm"
 import Particles from 'react-particles-js';
 import "../Threads/Threads.css";
+import Threadsimage from './Threads.png';
+import Threadsimage2 from './Threads2.png';
+
+// import { faHome } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Threads() {
   const [threads, setThreads] = useState([]);
@@ -83,19 +88,19 @@ const Date = DateTime.local();
 
 
       <div>
-      <div className="threads-heading">
-        Threads
+      <div className="threads-holder">
+      <img src={Threadsimage2} alt='websitelogo' className='img-div'/>
       </div>
       <div className="threads-panel">
-        {/* <Particles /> */}
         <div> 
-         
           { 
             threads.map((item, index) => (
               // <div className="thread" key={index}>{item.title}</div>
               // <Link to={"/thread/" + threads.id + "/" } key={item.id} className="thread">{threads.title}</Link>
-              <div className="thread" key={item.id}>
-                <a href={"/thread/"+ item.id}>{item.title}</a>
+              <div className="thread-threads" key={item.id}>
+                <div className="item-id-title-div">
+                <a href={"/thread/"+ item.id} className="href-link">{item.title}</a>
+                </div>
             <p>Thread Created: {(item.createdAt).substring(5,10)}-{((item.createdAt).substring(0,4))}</p>
               </div>
             ))
@@ -112,13 +117,13 @@ const Date = DateTime.local();
                 className="new-thread-body"
                 onChange={handleInputChange}
                 name="body"
-                placeholder="Body (required)"
+                placeholder="Description (required)"
               />
            </form>
             <div className="submit-button">
               <FormBtn
                 className="submit-thread"
-                disabled={!(formObject.title && formObject.body)}
+                disabled={!(formObject.title && formObject.Description)}
                 onClick={handleFormSubmit}
               >
                 Submit New Thread

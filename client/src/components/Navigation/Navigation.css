@@ -55,6 +55,10 @@
     /* border-style: solid;
 } */
 
+.nav-link right {
+    text-align: right;
+}
+
 .Navigation {
     text-align: right;
     width: 100%;
