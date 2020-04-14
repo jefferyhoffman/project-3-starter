@@ -1,8 +1,6 @@
 const challengesController = require("express").Router();
-
 const db = require("../../models");
 const { JWTVerifier } = require('../../lib/passport');
-
 
 
 // searches for last five challenges
@@ -17,8 +15,9 @@ challengesController.get("/UserId", JWTVerifier, (req, res) => {
     .catch((err) => console.log(err));
 });
 
+
 // searches for the last five challenges and returns an array of objects (one for each challenge) and each object has the points by catagory
-// NOT WORKING
+// NOT WORKING More Work at bottom of page
 challengesController.get("/multipast", JWTVerifier, (req, res) => {
   db.Challenge.findAll({
     limit: 5,
@@ -42,10 +41,9 @@ challengesController.get("/multipast", JWTVerifier, (req, res) => {
     .catch((err) => console.log(err));
 });
 
+
+
 // get current challenge 
-
-
-
 challengesController.get("/", JWTVerifier, (req, res) => {
   console.log(req.user.id, '<==============================')
   db.Challenge.findAll({
@@ -59,13 +57,8 @@ challengesController.get("/", JWTVerifier, (req, res) => {
         return res
         .status(204)
          .send(`Challenge with id ${req.params.id} not found.`);
-         //return res.json()
       }
-      // .getActions is not a function
-      // console.log(challenges[0].getActions());
       let actions = challenges[0].getActions()
-     // console.log(actions);
-     // Promise.all(actions)
         .then(data => {
           const sentData = {
             id: challenges[0].id,
@@ -77,6 +70,8 @@ challengesController.get("/", JWTVerifier, (req, res) => {
     })
     .catch((err) => console.log(err));
 });
+
+
 // get current score of challenge based on actions accomplished
 // must pass in ChallengeId
 challengesController.get("/challengeaction/:id", (req, res) => {
@@ -231,7 +226,7 @@ challengesController.put("/:id", JWTVerifier, (req, res) => {
 });
 
 
-// NOT NEEDED
+// Not Currently Needed
 // updates a challenge score when given a new total
 // workin
 // challengesController.put("/points/:id", JWTVerifier, (req, res) => {
@@ -289,3 +284,63 @@ challengesController.delete("/deletechallenge/:id", JWTVerifier, (req, res) => {
 
 
 module.exports = challengesController;
+
+// PLEASE DO NOT DELETE
+// Additional work: searching for the last five challenges and returns an array of objects (one for each challenge) and each object has the points by catagory
+
+// challengesController.get("/multipast", JWTVerifier, (req, res) => {
+//   db.Challenge.findAll({
+//     limit: 5,
+//     order: [['createdAt', 'DESC']],
+//     where: {
+//       UserId: req.user.id
+//     }
+//   })
+//     .then(challenges => {
+//       if (!challenges.length) {
+//         return res
+//           .status(404)
+//           .send(`Challenge with id ${req.params.id} not found.`);
+//       }
+
+
+
+
+//       // return Promise.all(challenges.map(val=>{
+//       //   return val.getActions();
+//       // }))
+//     })
+//     .then()
+//     .then(data=> {
+//       const newArray = data.map(eachArray => {
+//         const newObject = {
+//           food: 0,
+//           travel: 0,
+//           home: 0,
+//           consumableItems: 0
+//         }
+//         eachArray.forEach(eachObject =>{
+          
+//           if(eachObject.category === "Food"){
+//             newObject.food += eachObject.points
+//           }else if(eachObject.category === "Travel"){
+//             newObject.travel += eachObject.points
+//           }else if(eachObject.category === "Home"){
+//             newObject.home += eachObject.points
+//           }else if(eachObject.category === "Consumable Items"){
+//             newObject.consumableItems += eachObject.points
+//           }else{
+//             return;
+//           }
+
+//         })
+
+//         return newObject;
+//       })
+
+//       console.log(newArray);
+//       return newArray;
+//     })
+//     .then(newArray => res.json(newArray))
+//     .catch((err) => console.log(err));
+// });
