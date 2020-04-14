@@ -284,3 +284,63 @@ challengesController.delete("/deletechallenge/:id", JWTVerifier, (req, res) => {
 
 
 module.exports = challengesController;
+
+// PLEASE DO NOT DELETE
+// Additional work: searching for the last five challenges and returns an array of objects (one for each challenge) and each object has the points by catagory
+
+// challengesController.get("/multipast", JWTVerifier, (req, res) => {
+//   db.Challenge.findAll({
+//     limit: 5,
+//     order: [['createdAt', 'DESC']],
+//     where: {
+//       UserId: req.user.id
+//     }
+//   })
+//     .then(challenges => {
+//       if (!challenges.length) {
+//         return res
+//           .status(404)
+//           .send(`Challenge with id ${req.params.id} not found.`);
+//       }
+
+
+
+
+//       // return Promise.all(challenges.map(val=>{
+//       //   return val.getActions();
+//       // }))
+//     })
+//     .then()
+//     .then(data=> {
+//       const newArray = data.map(eachArray => {
+//         const newObject = {
+//           food: 0,
+//           travel: 0,
+//           home: 0,
+//           consumableItems: 0
+//         }
+//         eachArray.forEach(eachObject =>{
+          
+//           if(eachObject.category === "Food"){
+//             newObject.food += eachObject.points
+//           }else if(eachObject.category === "Travel"){
+//             newObject.travel += eachObject.points
+//           }else if(eachObject.category === "Home"){
+//             newObject.home += eachObject.points
+//           }else if(eachObject.category === "Consumable Items"){
+//             newObject.consumableItems += eachObject.points
+//           }else{
+//             return;
+//           }
+
+//         })
+
+//         return newObject;
+//       })
+
+//       console.log(newArray);
+//       return newArray;
+//     })
+//     .then(newArray => res.json(newArray))
+//     .catch((err) => console.log(err));
+// });
