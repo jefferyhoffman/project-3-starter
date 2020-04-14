@@ -1,31 +1,63 @@
-import axios from 'axios';
+import axios from "axios";
 
 export default {
   Users: {
-    login: function (email, password) {
-      return axios.post('/api/users/login', { email, password });
+    login: async function (email, password) {
+      return axios.post("/api/users/login", { email, password });
     },
 
     create: function (email, password) {
-      return axios.post('/api/users', { email, password });
+      return axios.post("/api/users", { email, password });
     },
 
     getMe: function (authToken) {
-      return axios.get('/api/users/me', {
+      return axios.get("/api/users/me", {
         headers: {
-          'Authorization': `Bearer ${authToken}`
-        }
+          Authorization: `Bearer ${authToken}`,
+        },
       });
-    }
+    },
   },
 
   Secrets: {
     getAll: function (authToken) {
-      return axios.get('/api/secrets', {
+      return axios.get("/api/secrets", {
         headers: {
-          'Authorization': `Bearer ${authToken}`
-        }
+          Authorization: `Bearer ${authToken}`,
+        },
       });
+    },
+  },
+
+  Threads: {
+    //gets all threads
+    getThreads: function () {
+      return axios.get("/api/thread");
+    },
+    //Gets thread with specific id
+    getThread: function (id) {
+      return axios.get("/api/thread/" + id);
+    },
+    // Creates a thread
+    createThread: function (threadData) {
+      return axios.post("/api/thread", threadData);
+    },
+  },
+
+  Reply: {
+    getReplies: function() {
+      return axios.get("/api/reply");
+    },
+    getReply: function(id) {
+      return axios.get("api/reply/" + id)
+    },
+    //Creates a reply
+    createReply: function (replyData) {
+      return axios.post("/api/reply", replyData);
+    },
+
+    deleteReply: function (id) {
+      return axios.delete("/api/reply/" + id);
     }
   }
-}
+};

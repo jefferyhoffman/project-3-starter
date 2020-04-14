@@ -1,0 +1,193 @@
+.threads-holder {
+    /* height: 40px; */
+    width: 100%;
+    border-radius: 6px;
+    font-family: 'oswaldregular';
+    font-size: 35px;
+    /* background: rgb(9,1,8); */
+    background: linear-gradient(90deg, rgba(1,0,1,0.8) 29%, rgba(1,13,20,0.8) 55%, rgba(3,34,51,0.8) 100%);
+    /* background: linear-gradient(90deg, rgba(9,1,8,1) 34%, #2aa5c6 100%); */
+    margin-bottom: 5px;
+    text-align: left;
+    color: #2aa5c6;
+    text-shadow: 2px 2px 5px #c16adc;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+}
+
+.threads-panel {
+    border-radius: 6px;
+    /* background-color: rgba(55, 55, 61, 0.5); */
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.thread-threads {
+    background-color: rgba(55, 55, 61, 0.5);
+    margin-bottom: 10px;;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+/* color: #2aa5c6; */
+
+.thread a {
+    color: lightgray;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+/* #2aa5c6 100%
+(, rgba(9,1,8,1) */
+
+
+/* ////////// */
+
+/* .chevron.left:before {
+	left: 0.25em;
+	transform: rotate(-135deg);
+} */
+
+/* ///////// */
+
+.item-id-title-div {
+    background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(23,0,29,0.8) 100%, rgba(188,0,255,0.8) 100%);
+    border-radius: 6px;
+    text-align: left;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4ch;
+}
+
+/* .href-link {
+    color: #c16adc;
+} */
+
+.img-div {
+    height: auto;
+    width: auto;
+}
+
+/* old formatting */
+
+.test {
+    color: red;
+}
+
+Jumbotron {
+    background-color: lawngreen;
+}
+
+.threadsDiv {
+    border-radius: 15px;
+    /* background-color: black; */
+    width: calc(100vh - 397px);
+    height: calc(100vh - 397px);
+    background-color: rgba(55, 55, 61, 0.75);
+}
+
+/* .jumbotronDiv {
+    background-color: lightsalmon;
+} */
+
+.threadsTitleBox {
+    border-radius: 6px;
+    font-family: 'oswaldregular';
+    font-size: 35px;
+    /* background-color: rgb(65, 57, 57); */
+    background: rgb(9,1,8);
+    /* background: linear-gradient(90deg, rgba(9,1,8,1) 34%, rgba(95,9,121,1) 100%); */
+    background: linear-gradient(90deg, rgba(9,1,8,1) 34%, #2aa5c6 100%);
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.threadsTitleBox a {
+    /* color: #2aa5c6; */
+    /* color: rgba(95,9,121,1);
+    text-shadow: 2px 2px #2aa5c6 ; */
+    color: #2aa5c6;
+    text-shadow: 2px 2px 5px #c16adc;
+    /* font-weight: bold; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+}
+
+.threadsBody {
+    border-radius: 6px;
+    /* padding-left: 15px;
+    padding-right: 15px; */
+    background-color: rgba(55, 55, 61, 0.5);
+    padding: 10px;
+    /* opacity: 0.5; */
+    /* border: 1px solid #c0c0c0; */
+    /* box-shadow: inset 2px 2px black; */
+    /* box-shadow: 1spx 1px rgba(192,192,192, 1); */
+    /* box-shadow: inset 1px 1px rgba(192,192,192, 1), 1px 1px rgba(192,192,192, 1); */
+    border: 1px solid black;
+}
+
+.submit-button {
+    /* display: flex; */
+}
+
+.submit-thread {
+    /* border-radius: 6px; */
+    margin: auto;
+    text-align: center;
+    background-color: silver;
+    border-color: #2aa5c6;
+    color: black;
+}
+
+.new-thread-title {
+    font-size: 20px;
+    margin-top: 20px;
+    overflow-x: hidden; 
+    overflow-x: auto;
+    overflow: scroll; 
+    padding: 15px;
+    border-radius: 6px;
+    height: 5ch;
+    width: 50ch;
+    color: #2aa5c6;
+    border-color: #2aa5c6;
+    background-color: black;
+    /* margin-bottom: -20px; */
+}
+
+.new-thread-body {
+    font-size: 20px;
+    overflow-x: hidden; 
+    overflow-x: auto; 
+    padding: 15px;
+    border-radius: 6px;
+    max-height: 100px; overflow-y: auto;
+    height: 10ch;
+    width: 50ch;
+    color: #2aa5c6;
+    border-color: #2aa5c6;
+    background-color: black;
+}
+
+placeholder {
+    color: brown;
+}
+
+.FormBtn {
+    text-align: center;
+}
+
+.container-div {
+    position: relative;
+}
+
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+    z-index: -10;
+}

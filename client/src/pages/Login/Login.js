@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
-
+import "./login.css";
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
 import LoginForm from '../../components/LoginForm/LoginForm';
+import Loginlogo from './Login.png';
 
 class Login extends Component {
   static contextType = AuthContext;
@@ -14,9 +15,19 @@ class Login extends Component {
   }
 
   handleSubmit = (email, password) => {
+
+    // console.log('in handleSubmit', email, password);
+    
     API.Users.login(email, password)
+      // .then((response) => {
+      //   console.log('response', response);
+      // });
+      // // .then(x => console.log('x',x))
       .then(response => response.data)
       .then(({ user, token }) => {
+
+        console.log('got', user, token);
+
         this.context.onLogin(user, token);
         this.setState({ redirectToReferrer: true, error: "" });
       })
@@ -50,7 +61,7 @@ class Login extends Component {
       <div className='Login'>
         <div className='row'>
           <div className='col'>
-            <h1>Login</h1>
+          <img src={Loginlogo} alt='websitelogo' className='img-div'/>
           </div>
         </div>
         {this.state.error &&
