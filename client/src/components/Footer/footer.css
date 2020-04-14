@@ -13,10 +13,14 @@
     /* padding-top: 20px; */
     margin-top: 20px;
     border-width: 5px;
+    padding-top: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
     border-top: #5EB2E0;
     border-style: solid;
     height: 40px;
     width: 100%;
+    text-align: right;
 }
 
 .page-body {
@@ -25,6 +29,10 @@
 
 .about-link {
     color:darkcyan;
+}
+
+.about-color {
+    color: #9A9DA0;
 }
 
 /* .Footer {

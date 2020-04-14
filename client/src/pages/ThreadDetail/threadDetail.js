@@ -5,6 +5,8 @@ import { List, Listitem } from "../../components/List/index";
 import API from "../../lib/API";
 import "../ThreadDetail/threadDetail.css";
 import { Input, TextArea, FormBtn } from "../../components/ThreadForm";
+import Replies from './Replies.png';
+import Particles from 'react-particles-js';
 import DeleteBtn from "../../components/DeleteReplyButton";
 
 
@@ -68,39 +70,42 @@ function ThreadDetail({ match }) {
     }
 
     return (
-        <div>
-            <div className="Reply-heading">
-                Thread
+      <div>
+          <div className="Reply-heading">
+        </div>
+          <div className="thread-panel">
+          <div className="thread">
+          
+            <div className="threadDetails">
+              <div className="thread-title">Title: { thread.title } <br/>
+                  </div>
+              <div className="thread-body">Description: {thread.body}
+                </div>
+                  ({threadDate})
+              </div>
+          </div>              
+            <div className="replies">
+              <img src={Replies} alt='websitelogo' className='img-div'/>
             </div>
-            <div className="thread-panel">
-                <div className="thread">
-                    <div className="thread-title">Thread Details:</div>
-                    <div className="threadDetails">
-                        Title: { thread.title } <br/>
-                        Body: {thread.body}
-                        ({threadDate})
-
-                    </div>
-                    
-                    <div className="replies">Replies:</div>
-                    <div>
-                        {replies.map((item, index) => (
-                        <div className="reply" key="item.id">
-                            User: {item.User.email}<br/>
-                            Body: {item.body}
-                            {/* <DeleteBtn onClick={() => deleteReply(item.id)} /> */}
-                            
-                        </div>
-                        ))}
-                    </div>
-                    <div>
+            <div>
+              {replies.map((item, index) => (
+              <div className="reply" key="item.id">
+                  user: {item.User.email}<br/>
+                  Description: {item.body}
+                    {/* <DeleteBtn onClick={() => deleteReply(item.id)} /> */}                            
+              </div>
+              ))}
+            </div>
+          <div>
           <form>
               <Input
+                className="new-thread-body"
                 onChange={handleInputChange}
                 name="body"
-                placeholder="Body (required)"
+                placeholder="Description (required)"
               />
               <FormBtn
+                className="submit-thread"
                 disabled={!(formObject.body)}
                 onClick={handleFormSubmit}
               >
@@ -108,9 +113,8 @@ function ThreadDetail({ match }) {
               </FormBtn>
             </form>
           </div>
-                </div>
-            </div>
         </div>
+      </div>
     )
 
     // const [thread, setThread] = useState({});

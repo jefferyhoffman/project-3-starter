@@ -21,7 +21,8 @@ class HomePage extends Component {
     return (
     <div>
       <div>
-        <p>Welcome to The Cadenza forums! {Date}</p>
+        <p>Welcome to The Cadenza forums! Checkout the threads page to start a discussion or reply to an existing one.</p>
+        <p>{Date}</p>
         <Particles />
       </div>
       {Footer}

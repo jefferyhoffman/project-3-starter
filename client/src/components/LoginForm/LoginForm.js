@@ -49,6 +49,7 @@ class LoginForm extends Component {
         }} /> */}
       <div className='LoginForm'>
         <div className='card bg-secondary'>
+        {/* <div className='card'> */}
           <div className='card-body bg-secondary'>
             <form className='LoginForm-secondary' onSubmit={this.handleSubmit}>
               <div className='input-group mb-3'>
