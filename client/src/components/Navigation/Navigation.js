@@ -1,53 +1,114 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-
-import AuthContext from '../../contexts/AuthContext';
-import AuthDropdown from '../../components/AuthDropdown/AuthDropdown';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import "../Navigation/Navigation.css";
+import SiteLogo from "../Navigation/SiteLogo.png";
+import AuthContext from "../../contexts/AuthContext";
+import AuthDropdown from "../../components/AuthDropdown/AuthDropdown";
 
 class Navigation extends Component {
   static contextType = AuthContext;
 
   state = {
-    collapsed: true
-  }
+    collapsed: true,
+  };
 
   toggleCollapse = () => {
     this.setState({
-      collapsed: !this.state.collapsed
+      collapsed: !this.state.collapsed,
     });
-  }
+  };
 
   render() {
     const { user } = this.context;
     const { collapsed } = this.state;
-    const targetClass = `collapse navbar-collapse ${!collapsed && 'show'}`;
-    const togglerClass = `navbar-toggler ${collapsed && 'collapsed'}`;
+    const targetClass = `collapse navbar-collapse ${!collapsed && "show"}`;
+    const togglerClass = `navbar-toggler ${collapsed && "collapsed"}`;
 
     return (
-      <div className='Navigation'>
-        <nav className='navbar navbar-expand-lg navbar-light bg-light mb-3'>
-          <Link className='navbar-brand' to='#'>Project 3</Link>
-          <button className={togglerClass} onClick={this.toggleCollapse} data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
-            <span className='navbar-toggler-icon'></span>
-          </button>
+      <div>
+        <div className="Header">
+          <img src={SiteLogo} alt="The Cadenza logo" id="sitelogo"></img>
+        </div>
+        <div className="Navigation">
+          <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+            {/* <Link className='navbar-brand' to='#'>Project 3</Link> */}
+            <button
+              className={togglerClass}
+              onClick={this.toggleCollapse}
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
 
-          <div className={targetClass} id='navbarSupportedContent'>
-            <ul className='navbar-nav mr-auto'>
-              <li className='nav-item'>
-                <Link className='nav-link' to='/' onClick={this.toggleCollapse}>Home</Link>
-              </li>
-              {user &&
-                <li className='nav-item'>
-                  <Link className='nav-link' to='/secret' onClick={this.toggleCollapse}>Secret</Link>
-                </li>}
-            </ul>
-            <ul className='navbar-nav'>
-              {user
-                ? <AuthDropdown onClick={this.toggleCollapse} />
-                : <li className='nav-item'><Link className='nav-link' to='/login' onClick={this.toggleCollapse}>Login/Register</Link></li>}
-            </ul>
-          </div>
-        </nav>
+            <div
+              className={targetClass}
+              id="navbarSupportedContent"
+            >
+              <ul className="navbar-nav">
+                <li className="nav-item">
+                  <Link
+                    className="nav-link"
+                    to="/"
+                    onClick={this.toggleCollapse}
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    className="nav-link"
+                    to="/thread"
+                    onClick={this.toggleCollapse}
+                  >
+                    Threads
+                  </Link>
+                </li>
+                {user && (
+                  <li className="nav-item">
+                    <Link
+                      className="nav-link"
+                      to="/secret"
+                      onClick={this.toggleCollapse}
+                    >
+                      Secret
+                    </Link>
+                  </li>
+                )}
+              </ul>
+              <ul className="navbar-nav">
+                <li className="nav-item">
+                  <Link
+                    className="nav-link"
+                    to="/profile"
+                    onClick={this.toggleCollapse}
+                  >
+                    Profile
+                  </Link>
+                </li>
+                {user ? (
+                  <AuthDropdown onClick={this.toggleCollapse} />
+                ) : (
+                    <li className="nav-item">
+                      <Link
+                        className="nav-link right"
+                        to="/login"
+                        onClick={this.toggleCollapse}
+                      >
+                        Login/Register
+                    </Link>
+                    </li>
+                  )}
+              </ul>
+              {/* <ul className='navbar-nav mr-auto right col-md-6 text-center'>
+              
+            </ul> */}
+            </div>
+          </nav>
+        </div>
       </div>
     );
   }

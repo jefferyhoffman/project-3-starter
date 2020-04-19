@@ -1,0 +1,46 @@
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-header,
+.page-footer {
+    flex-shrink: 0;
+    /* background-color:#5EB2E0; */
+    /* color: lightgrey; */
+    background-color: rgb(55, 55, 61);
+    /* padding-top: 20px; */
+    margin-top: 20px;
+    border-width: 5px;
+    padding-top: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-top: #5EB2E0;
+    border-style: solid;
+    height: 40px;
+    width: 100%;
+    text-align: right;
+}
+
+.page-body {
+    flex-grow: 1;
+}
+
+.about-link {
+    color:darkcyan;
+}
+
+.about-color {
+    color: #9A9DA0;
+}
+
+/* .Footer {
+    background-color: green;
+    color: white;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: right;
+    position: relative; 
+    bottom: 0%; 
+} */
