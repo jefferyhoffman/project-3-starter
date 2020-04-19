@@ -7,8 +7,10 @@
     "@githubprimer/octicons-react": "^8.5.0",
     "axios": "^0.18.1",
     "react": "^16.8.3",
+    "react-bootstrap": "^1.0.0",
     "react-dom": "^16.8.3",
     "react-gravatar": "^2.6.3",
+    "react-icons": "^3.9.0",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.1"
