@@ -1,33 +1,79 @@
-.App {
-  text-align: center;
+/* border radius */
+.container_br {
+  border-style: none;
+  border-radius: 8px;  
+}
+html, body{
+  height: 100vh;
+}
+#root, #test{
+  height: 100%;
+}
+/* theme colors */
+.bluegreen_bg {
+  background-color: #2F7C8F;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.greenblue_bg {
+  background-color: #08A68E;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.green_bg {
+  background-color: #4FB06F;
 }
 
-.App-link {
-  color: #61dafb;
+.yellow_bg {
+  background-color:#F2CB1D;  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.orange_bg {
+  background-color: #E68D20;  
+}
+
+.red_bg {
+  background-color: #DB6C4B;  
+}
+
+/* media queries for mobile first  */
+/* device width is greater than or equal to xpx */
+
+
+@media (min-width: 360px) {
+  .container {
+    width: 95%;    
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (min-width: 360px) and (max-width:575) {
+  .container {
+    width: 95%;   
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .container {
+    width: 95%;   
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    width: 60%;    
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    width: 60%;    
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    width: 60%;    
   }
 }

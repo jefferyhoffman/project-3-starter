@@ -1,0 +1,48 @@
+.nav_navbar_bglight {
+  background-color: #ffffff9c; 
+}
+  
+.nav_navbar_br {
+  border-style: none;
+  border-radius: 8px;  
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.nav_heading_dark {
+  font-family: 'Cuprum', sans-serif;
+  color: #000000;
+  font-size: 2rem;  
+}
+
+.nav_heading_dark_bold {
+  font-family: 'Cuprum', sans-serif;
+  font-weight: bolder;
+  color: #000000;
+  font-size: 2rem;
+}
+
+/* overwriting bootstrap */
+.navbar-brand{
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  font-size: 1.25rem;
+  color: #000000;
+  text-align: end;
+}
+
+.navbar-light .navbar-toggler {
+  color: #000000;
+  border-style: none;
+  padding: .25rem 0rem;
+}
+
+/* media q for iPhone5 */
+@media (min-width: 320px) and (max-width:575) {
+  .nav_heading_dark_bold{
+    font-size: 1.5rem;
+  }
+}
