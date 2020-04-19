@@ -1,0 +1,25 @@
+body {
+  background-color: black;
+}
+
+p {
+  color: turquoise;
+  text-align: left;
+  font-size: 20px;
+}
+
+/* .container {
+    padding: 20px 10px 0px 10px;
+    position: relative;
+    border-radius: 3px;
+    border-style: inset;
+    border-color: turquoise;
+} */
+
+/* .infoContainer {
+    display: flex;
+    align-items: center;
+    /* background-color: teal; */
+/* color: white;
+    font-size: larger; */
+/* } */
