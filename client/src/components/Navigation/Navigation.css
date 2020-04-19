@@ -1,0 +1,78 @@
+
+
+/* #sitelogo{
+    width: 100%
+} */
+
+.Header {
+    /* background-color: black; */
+    /* color: purple; */
+    /* font-size: 30px; */
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    text-align: left;
+    /* border-width: 5px; */
+    /* border-bottom: #5EB2E0;
+    border-style: solid; */
+}
+
+.nav-item {
+    text-align: right;
+}
+
+.navbar {
+    border: solid;
+    /* border-color: #5EB2E0; */
+    border-top: #5EB2E0;
+    border-bottom: #5EB2E0;
+    border-style: solid;
+}
+
+#navbarSupportedContent {
+    text-align: right;
+}
+
+.targetClass {
+    text-align: right;
+}
+
+.navbar-nav {
+    text-align: right;
+}
+
+/* .togglerclass {
+    border-bottom: #5EB2E0;
+    border-style: solid;
+} */
+
+/* .navbar navbar-expand-lg navbar-dark bg-dark mb-3 {
+    border-bottom: #5EB2E0;
+    border-style: solid;
+} */
+
+.Navigation {
+    /* text-align: left; */
+    /* border-width: 5px; */
+    /* border-bottom: #5EB2E0;
+    border-style: solid; */
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-header,
+.page-footer {
+    flex-shrink: 0;
+}
+
+.page-body {
+    flex-grow: 1;
+}
+
+@media only screen and (max-width: 650px) {
+    #sitelogo{
+        width: 100%
+    }
+  }

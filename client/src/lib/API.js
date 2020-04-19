@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export default {
   Users: {
-    login: function (email, password) {
+    login: async function (email, password) {
       return axios.post('/api/users/login', { email, password });
     },
 
@@ -26,6 +26,17 @@ export default {
           'Authorization': `Bearer ${authToken}`
         }
       });
+    }
+  },
+
+  Threads: { 
+    //gets all threads
+    getThreads: function() { 
+      return axios.get("/api/thread");
+    },
+    //Gets thread with specific id
+    getThread: function(id) { 
+      return axios.get("/api/thread/" + id);
     }
   }
 }
