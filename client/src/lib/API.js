@@ -27,5 +27,11 @@ export default {
         }
       });
     }
+  },
+
+  Threads: { 
+    getThreads: function () { 
+      return axios.get("/api/thread");
+    }
   }
 }
