@@ -1,44 +1,30 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useContext } from 'react';
 import Gravatar from 'react-gravatar';
-
 import AuthContext from '../../contexts/AuthContext';
 
-class AuthDropdown extends Component {
-  static contextType = AuthContext;
+const AuthDropdown = (props) => {
+  const userContext = useContext(AuthContext);
 
-  state = {
-    isOpen: false
-  }
+  const [isOpen, setIsOpen] = useState(false);
 
-  toggleOpen = () => {
-    this.setState({
-      isOpen: !this.state.isOpen
-    });
-  }
+  const handleLogout = () => {
+    userContext.onLogout();
+    //props.onClick();
+  };
 
-  handleLogout = () => {
-    this.context.onLogout();
-    this.props.onClick();
-  }
+  const dropdownMenuClass = `dropdown-menu dropdown-menu-right ${isOpen && 'show'}`;
 
-  render() {
-    const { user } = this.context;
-    const { isOpen } = this.state;
+  return (
+    <li className="nav-item dropdown">
+      <button className="btn btn-link dropdown-toggle" onClick={() => setIsOpen(prev => !prev)} id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <Gravatar className="rounded-circle" email={userContext.user.email} size={30} /> {userContext.user.email}
+      </button>
+      <div className={dropdownMenuClass} aria-labelledby="navbarDropdown">
+        <div className="dropdown-item" onClick={handleLogout}>Logout</div>
+      </div>
+    </li>
+  );
 
-    const dropdownMenuClass = `dropdown-menu dropdown-menu-right ${isOpen && 'show'}`;
-
-    return (
-      <li className="nav-item dropdown">
-        <button className="btn btn-link dropdown-toggle" onClick={this.toggleOpen} id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <Gravatar className="rounded-circle" email={user.email} size={30} /> {user.email}
-        </button>
-        <div className={dropdownMenuClass} aria-labelledby="navbarDropdown">
-          <div className="dropdown-item" onClick={this.handleLogout}>Logout</div>
-        </div>
-      </li>
-    );
-  }
 }
 
 export default AuthDropdown;

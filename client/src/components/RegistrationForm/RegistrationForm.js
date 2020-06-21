@@ -1,37 +1,18 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
 import Octicon, { Mail, Key } from '@githubprimer/octicons-react';
 
-class RegistrationForm extends Component {
-  state = {
-    email: '',
-    password: '',
-    passwordConfirm: ''
-  };
+const RegistrationForm =props=>{
 
-  handleInputChange = event => {
-    const { name, value } = event.target;
-
-    this.setState({
-      [name]: value
-    });
-  }
-
-  handleSubmit = event => {
-    const { email, password, passwordConfirm } = this.state;
-
-    this.props.onSubmit(email, password, passwordConfirm);
-    event.preventDefault();
-  }
-
-  render() {
-    const { email, password, passwordConfirm } = this.state;
-
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [passwordConfirm, setPasswordConfirm] = useState('')
+ 
     return (
       <div className='LoginForm'>
         <div className='card'>
           <div className='card-body'>
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={e=>{props.onSubmit(email, password, passwordConfirm); e.preventDefault();}}>
               <div className='input-group mb-3'>
                 <div className="input-group-prepend">
                   <span className="input-group-text"><Octicon icon={Mail} /></span>
@@ -43,7 +24,7 @@ class RegistrationForm extends Component {
                   name='email'
                   placeholder='email@provider.com'
                   value={email}
-                  onChange={this.handleInputChange}
+                  onChange={e=>setEmail(e.target.value)}
                 />
               </div>
 
@@ -58,7 +39,7 @@ class RegistrationForm extends Component {
                   name='password'
                   placeholder='password'
                   value={password}
-                  onChange={this.handleInputChange}
+                  onChange={e=>setPassword(e.target.value)}
                 />
               </div>
 
@@ -73,7 +54,7 @@ class RegistrationForm extends Component {
                   name='passwordConfirm'
                   placeholder='password (again)'
                   value={passwordConfirm}
-                  onChange={this.handleInputChange}
+                  onChange={e=>setPasswordConfirm(e.target.value)}
                 />
               </div>
 
@@ -83,7 +64,7 @@ class RegistrationForm extends Component {
         </div>
       </div>
     )
-  }
+  
 }
 
 export default RegistrationForm;

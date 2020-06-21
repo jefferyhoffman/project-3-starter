@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import API from '../../lib/API';
@@ -14,43 +14,32 @@ import NotFound from '../../pages/NotFound/NotFound';
 
 import './App.css';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.handleLogin = (user, authToken) => {
+const App =()=> {
+  const [auth, setAuth]= useState({
+    user : undefined,
+    authToken: TokenStore.getToken(),
+    onLogin: function(user, authToken) {
       TokenStore.setToken(authToken);
-      this.setState(prevState => ({ auth: { ...prevState.auth, user, authToken } }));
-    };
-
-    this.handleLogout = () => {
+      setAuth(prevState=>({ ...prevState, user, authToken }))
+    },
+    onLogout: function(){
       TokenStore.clearToken();
-      this.setState(prevState => ({ auth: { ...prevState.auth, user: undefined, authToken: undefined } }));
+      setAuth(prevState => ({ ...prevState, user: undefined, authToken: undefined } ));
     }
+  });
 
-    this.state = {
-      auth: {
-        user: undefined,
-        authToken: TokenStore.getToken(),
-        onLogin: this.handleLogin,
-        onLogout: this.handleLogout
-      }
-    }
-  }
-
-  componentDidMount() {
-    const { authToken } = this.state.auth;
+  useEffect(()=> {
+    const authToken  = auth.authToken;
     if (!authToken) return;
-
     API.Users.getMe(authToken)
       .then(response => response.data)
-      .then(user => this.setState(prevState => ({ auth: { ...prevState.auth, user } })))
+      .then(user => setAuth(prevState => ({ ...prevState, user } )))
       .catch(err => console.log(err));
-  }
+  },[auth.authToken]);
 
-  render() {
+
     return (
-      <AuthContext.Provider value={this.state.auth}>
+      <AuthContext.Provider value={auth}>
         <div className='App'>
           <Navigation />
           <div className='container'>
@@ -64,8 +53,8 @@ class App extends Component {
           </div>
         </div>
       </AuthContext.Provider>
-    );
-  }
+    )
+  
 }
 
 export default App;

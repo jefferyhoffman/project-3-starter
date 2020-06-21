@@ -1,49 +1,46 @@
-import React, { Component } from 'react';
+import React, {useContext, useState, useEffect} from 'react';
 //import { Redirect } from 'react-router-dom';
 
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
 
-class Secret extends Component {
-  static contextType = AuthContext;
-
-  state = {
-    isLoading: true,
-    error: ""
-  }
-
-  componentDidMount() {
-    API.Secrets.getAll(this.context.authToken)
+const Secret =props=>{
+  const UserContext = useContext(AuthContext);
+  const [isLoading, setIsLoading] = useState(true)
+  const [error, setError] = useState("")
+  const [secrets, setSecrets] = useState("")
+  useEffect(()=>{
+    const authToken = UserContext.authToken
+    API.Secrets.getAll(authToken)
       .then(response => response.data)
-      .then(secrets => this.setState({ secrets }))
+      .then(secrets => setSecrets(secrets))
       .catch(err => {
         if (err.response.status === 401) {
-          return this.setState({ error: "Unauthorized. Please login." });
+          return setError("Unauthorized. Please login.");
         }
 
         console.log(err);
       })
-      .finally(() => this.setState({ isLoading: false }));
-  }
+      .finally(() => setIsLoading(false));
+  },[UserContext.authToken])
 
-  render() {
     return (
       <div className='Secret'>
         <div className='row'>
           <div className='col'>
-            {this.state.isLoading
+            {isLoading
               ? <div className='alert alert-success'>Loading...</div>
-              : this.state.error
-                ? <div className='alert alert-danger'>{this.state.error}</div>
+              : error
+                ? <div className='alert alert-danger'>{error}</div>
                 : <div>
                   <p>Shh, the secret is...</p>
-                  <p><em>{this.state.secrets[0].message}</em></p>
+                  <p><em>{secrets[0].message}</em></p>
                 </div>}
           </div>
         </div>
       </div>
     );
-  }
+  
 }
 
 export default Secret;

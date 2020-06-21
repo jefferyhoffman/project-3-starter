@@ -1,36 +1,16 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
 import Octicon, { Mail, Key } from '@githubprimer/octicons-react';
 
-class LoginForm extends Component {
-  state = {
-    email: '',
-    password: ''
-  };
+const LoginForm =props=>{
 
-  handleInputChange = event => {
-    const { name, value } = event.target;
-
-    this.setState({
-      [name]: value
-    });
-  }
-
-  handleSubmit = event => {
-    const { email, password } = this.state;
-
-    this.props.onSubmit(email, password);
-    event.preventDefault();
-  }
-
-  render() {
-    const { email, password } = this.state;
-
+  const [email, setEmail]= useState('');
+  const [password, setPassword]= useState('');
     return (
       <div className='LoginForm'>
         <div className='card'>
           <div className='card-body'>
-            <form className='LoginForm' onSubmit={this.handleSubmit}>
+            <form className='LoginForm' onSubmit={e=>{props.onSubmit(email, password); e.preventDefault();}}>
               <div className='input-group mb-3'>
                 <div className="input-group-prepend">
                   <span className="input-group-text"><Octicon icon={Mail} /></span>
@@ -42,7 +22,7 @@ class LoginForm extends Component {
                   name='email'
                   placeholder='email@provider.com'
                   value={email}
-                  onChange={this.handleInputChange}
+                  onChange={e=>setEmail(e.target.value)}
                 />
               </div>
 
@@ -57,7 +37,7 @@ class LoginForm extends Component {
                   name='password'
                   placeholder='password'
                   value={password}
-                  onChange={this.handleInputChange}
+                  onChange={e=>setPassword(e.target.value)}
                 />
               </div>
 
@@ -66,9 +46,9 @@ class LoginForm extends Component {
           </div>
         </div>
       </div>
-    )
-  }
-}
+    );
+  
+};
 
 export default LoginForm;
 
