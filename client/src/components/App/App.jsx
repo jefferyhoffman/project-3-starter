@@ -20,7 +20,7 @@ const App =()=> {
     authToken: TokenStore.getToken(),
     onLogin: function(user, authToken) {
       TokenStore.setToken(authToken);
-      setAuth(prevState=>({ ...prevState, user, authToken }))
+      setAuth(prevState=>({ ...prevState, user, authToken }));
     },
     onLogout: function(){
       TokenStore.clearToken();
@@ -29,8 +29,10 @@ const App =()=> {
   });
 
   useEffect(()=> {
-    const authToken  = auth.authToken;
-    if (!authToken) return;
+    const authToken = auth.authToken;
+    if (!authToken) {
+      return;
+    }
     API.Users.getMe(authToken)
       .then(response => response.data)
       .then(user => setAuth(prevState => ({ ...prevState, user } )))
@@ -38,23 +40,23 @@ const App =()=> {
   },[auth.authToken]);
 
 
-    return (
-      <AuthContext.Provider value={auth}>
-        <div className='App'>
-          <Navigation />
-          <div className='container'>
-            <Switch>
-              <Route exact path='/' component={Home} />
-              <Route path='/login' component={Login} />
-              <Route path='/register' component={Register} />
-              <PrivateRoute path='/secret' component={Secret} />
-              <Route component={NotFound} />
-            </Switch>
-          </div>
+  return (
+    <AuthContext.Provider value={auth}>
+      <div className='App'>
+        <Navigation />
+        <div className='container'>
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route path='/login' component={Login} />
+            <Route path='/register' component={Register} />
+            <PrivateRoute path='/secret' component={Secret} />
+            <Route component={NotFound} />
+          </Switch>
         </div>
-      </AuthContext.Provider>
-    )
-  
-}
+      </div>
+    </AuthContext.Provider>
+  );
+
+};
 
 export default App;

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useState, useContext } from 'react';
 import Gravatar from 'react-gravatar';
 import AuthContext from '../../contexts/AuthContext';
@@ -9,7 +10,7 @@ const AuthDropdown = (props) => {
 
   const handleLogout = () => {
     userContext.onLogout();
-    //props.onClick();
+    props.onClick();
   };
 
   const dropdownMenuClass = `dropdown-menu dropdown-menu-right ${isOpen && 'show'}`;
@@ -25,6 +26,6 @@ const AuthDropdown = (props) => {
     </li>
   );
 
-}
+};
 
 export default AuthDropdown;

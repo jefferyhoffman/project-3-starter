@@ -2,7 +2,8 @@
     "env": {
         "browser": true,
         "commonjs": true,
-        "node": true
+        "node": true,
+         "es6": true 
     },
     "extends": [
         "eslint:recommended",
@@ -43,12 +44,14 @@
             "always"
         ]
     },
+    "parser":"babel-eslint",
     "parserOptions": {
         "ecmaVersion": 7,
         "sourceType": "module",
         "ecmaFeatures": {
             "jsx": true
         }
+        
     },
     "plugins": [
         "react"

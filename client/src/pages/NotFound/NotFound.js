@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default () => (
+const NotFound = () => (
   <div className='NotFound'>
     <h1>Oops!</h1>
     <p>
@@ -10,3 +10,4 @@ export default () => (
     </p>
   </div>
 );
+export default NotFound;
