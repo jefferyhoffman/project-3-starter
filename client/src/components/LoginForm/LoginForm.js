@@ -28,7 +28,7 @@ class LoginForm extends Component {
 
     return (
       <div className="container">
-        <div className="columns is-mobile">
+        <div className="columns">
           <div className="column"></div>
           <div className="column">
             <div className="card">
