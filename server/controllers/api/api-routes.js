@@ -10,7 +10,8 @@ module.exports = function (app) {
             res.json(err);
         })
     });
-
+    
+    //when the user interacts with card?
     app.put('/api/characters/:id', (req, res)=> {
         db.Character.updateOne(
             
