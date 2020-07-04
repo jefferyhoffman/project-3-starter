@@ -48,7 +48,7 @@ class LoginForm extends Component {
                     </div>
                   </div>
                   <div className="field">
-                    <div className="field">
+                  <div className="control">
                       <input
                         className="input"
                         id="password"
@@ -60,8 +60,8 @@ class LoginForm extends Component {
                       />
                     </div>
                   </div>
-                  <button className="button" type="submit">
-                    Login
+                  <button className="button" id="loginBtn" type="submit">
+                    <strong>Login</strong>
                   </button>
                 </form>
               </div>
