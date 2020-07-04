@@ -5,6 +5,10 @@ const Schema = mongoose.Schema;
 const CharacterSchema = new Schema({ 
     Character: [
         {
+            picture: {
+                type: String,
+                required: true
+            },
             name: {
                 type: String,
                 trim: true,
@@ -17,12 +21,12 @@ const CharacterSchema = new Schema({
             },
             glasses: {
                 type: Boolean,
-                default: 1,
+                default: true,
                 require: true,
             },
             facialHair: {
                 type: Boolean,
-                default: 1,
+                default: true,
                 require: true,
             },  
             eyeColor: {
@@ -33,7 +37,7 @@ const CharacterSchema = new Schema({
         }
     ], 
 },
-{ toJSON: { virtuals: true } } 
+// { toJSON: { virtuals: true } } 
 );
 // using virtual to work, to update the total duration, once a new workout is added
 // WorkoutSchema.virtual("totalDuration").get(function(){
