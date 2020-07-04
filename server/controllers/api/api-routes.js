@@ -17,7 +17,8 @@ module.exports = function (app) {
         )
     });
 
-    //
+    //leaderboard routes
+    //get leaderboard
     app.get('/api/leaderboard/', (req, res) => {
         db.Leaderboard.find({})
         .then(score => {
@@ -26,7 +27,13 @@ module.exports = function (app) {
         .catch(err => {
             res.json(err);
         })
-    })
+    });
+    //update leaderboard
+    app.put('/api/leaderboard/:id', (req, res) => {
+        db.Leaderboard.updateOne(
+        {_id: req.params.id}
+        );
+    });
 
     
 }
