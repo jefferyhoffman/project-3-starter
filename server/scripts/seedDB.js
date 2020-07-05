@@ -42,6 +42,25 @@ const characterSeed = [
         eyeColor: "blue",
         fact: "Found 10 grand in a couch."
     },
+    {
+        picture:"../client/public/assets/images/johnOliver.png",
+        name: "John Oliver",
+        hairColor:"black",
+        glasses: true,
+        facialHair: false,
+        eyecolor: "brown",
+        fact: "Hosts 'Last Week Tonight'"
+    },
+    {
+        picture:"../client/public/assets/images/trevorNoah.png",
+        name: "Trevor Noah",
+        hairColor:"black",
+        glasses: false,
+        facialHair: true,
+        eyecolor: "brown",
+        fact: "began hosting his own radio show Noah’s Ark on Gauteng’s leading youth radio station, YFM"
+    },
+
 ];
 
 db.Character.remove({})

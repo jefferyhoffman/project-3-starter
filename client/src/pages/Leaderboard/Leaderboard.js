@@ -3,7 +3,7 @@ import React from 'react'
 const Leaderboard = () => {
     return (
         <div>
-        <h1>Leaderboard  🔥 </h1>
+        <h1>Leaderboard  🔥</h1>
         <table className="table is-striped">
             <thead>
                 <tr>
@@ -21,12 +21,10 @@ const Leaderboard = () => {
                 <td>132</td>
                 <td>Bob</td>
             </tr>
-
-
             </tbody>
         </table>
         </div>
     )
 }
 
-export default Leaderboard
+export default Leaderboard;
