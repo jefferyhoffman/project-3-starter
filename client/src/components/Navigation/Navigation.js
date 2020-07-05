@@ -27,13 +27,13 @@ class Navigation extends Component {
     return (
       
       <nav className="navbar is-fixed-top color" role="navigation" aria-label="main navigation">
-      <div className="navbar-brand">
+      <div className='navbar-brand' to='#'>Let's Guess Logo</div>
       <div className = {togglerClass} onClick={this.toggleCollapse} data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </div>
-        </div>
+        
         
           <div className="navbar-menu">
           <div className="navbar-start">
@@ -42,8 +42,8 @@ class Navigation extends Component {
     </Link>
     
     <Link className="navbar-item">
-      
-       💯 <strong> High Scores</strong>
+     
+    🔥  <strong> High Scores</strong>
     </Link>
           </div>
         
