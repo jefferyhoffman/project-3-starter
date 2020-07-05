@@ -1,4 +1,9 @@
-.button{
+.container{
+    margin-top: 2em;
+   
+}
+
+#loginBtn{
     background-color: rgb(255, 74, 255);
     color: white;
 }
