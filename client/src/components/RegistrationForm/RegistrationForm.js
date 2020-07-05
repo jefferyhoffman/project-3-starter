@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
-
-import Octicon, { Mail, Key } from '@githubprimer/octicons-react';
+import React, { Component } from "react";
+import "./RegistrationForm.css";
 
 class RegistrationForm extends Component {
   state = {
-    email: '',
-    password: '',
-    passwordConfirm: ''
+    email: "",
+    password: "",
+    passwordConfirm: ""
   };
 
   handleInputChange = event => {
@@ -15,74 +14,78 @@ class RegistrationForm extends Component {
     this.setState({
       [name]: value
     });
-  }
+  };
 
   handleSubmit = event => {
     const { email, password, passwordConfirm } = this.state;
 
     this.props.onSubmit(email, password, passwordConfirm);
     event.preventDefault();
-  }
+  };
 
   render() {
     const { email, password, passwordConfirm } = this.state;
 
     return (
-      <div className='LoginForm'>
-        <div className='card'>
-          <div className='card-body'>
-            <form onSubmit={this.handleSubmit}>
-              <div className='input-group mb-3'>
-                <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Mail} /></span>
-                </div>
-                <input
-                  className='form-control'
-                  id='email'
-                  type='email'
-                  name='email'
-                  placeholder='email@provider.com'
-                  value={email}
-                  onChange={this.handleInputChange}
-                />
-              </div>
+      <div className="container">
+        <div className="columns">
+          <div className="column"></div>
+          <div className="column">
+            <div className="card">
+              <div className="card-content">
+                <p className="title">Signup</p>
+                <form onSubmit={this.handleSubmit}>
+                  <div className="field">
+                    <div className="control">
+                      <input
+                        className="input"
+                        id="email"
+                        type="email"
+                        name="email"
+                        placeholder="Enter Email 📧"
+                        value={email}
+                        onChange={this.handleInputChange}
+                      />
+                    </div>
+                  </div>
 
-              <div className='input-group mb-3'>
-                <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Key} /></span>
-                </div>
-                <input
-                  className='form-control'
-                  id='password'
-                  type='password'
-                  name='password'
-                  placeholder='password'
-                  value={password}
-                  onChange={this.handleInputChange}
-                />
+                  <div className="field">
+                    <div className="control">
+                      <input
+                        className="input"
+                        id="password"
+                        type="password"
+                        name="password"
+                        placeholder="Enter Password 🔐"
+                        value={password}
+                        onChange={this.handleInputChange}
+                      />
+                    </div>
+                  </div>
+                  <div className="field">
+                    <div className="control">
+                      <input
+                        className="input"
+                        id="password-confirm"
+                        type="password"
+                        name="passwordConfirm"
+                        placeholder="Re-enter Password 🔐"
+                        value={passwordConfirm}
+                        onChange={this.handleInputChange}
+                      />
+                    </div>
+                  </div>
+                  <button className="button" id="signupBtn" type="submit">
+                    <strong>Signup</strong>
+                  </button>
+                </form>
               </div>
-
-              <div className='input-group mb-3'>
-                <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Key} /></span>
-                </div>
-                <input
-                  className='form-control'
-                  id='password-confirm'
-                  type='password'
-                  name='passwordConfirm'
-                  placeholder='password (again)'
-                  value={passwordConfirm}
-                  onChange={this.handleInputChange}
-                />
-              </div>
-
-              <button className='btn btn-primary' type='submit'>Register Now!</button>
-            </form>
+            </div>
           </div>
+          <div className="column"></div>
         </div>
       </div>
-    )
+    );
   }
 }
 

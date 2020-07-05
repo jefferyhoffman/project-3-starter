@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import './Navigation.css'
 
 import AuthContext from '../../contexts/AuthContext';
 import AuthDropdown from '../../components/AuthDropdown/AuthDropdown';
@@ -21,9 +22,48 @@ class Navigation extends Component {
     const { user } = this.context;
     const { collapsed } = this.state;
     const targetClass = `collapse navbar-collapse ${!collapsed && 'show'}`;
-    const togglerClass = `navbar-toggler ${collapsed && 'collapsed'}`;
+    const togglerClass = `navbar-burger burger ${collapsed && 'collapsed'}`;
 
     return (
+      
+      <nav className="navbar is-fixed-top color" role="navigation" aria-label="main navigation">
+      <div className="navbar-brand">
+      <div className = {togglerClass} onClick={this.toggleCollapse} data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </div>
+        </div>
+        
+          <div className="navbar-menu">
+          <div className="navbar-start">
+          <Link to='/' onClick={this.toggleCollapse} className="navbar-item">
+      <strong>Home</strong>
+    </Link>
+    
+    <Link className="navbar-item">
+      
+       💯 <strong> High Scores</strong>
+    </Link>
+          </div>
+        
+          <div className="navbar-end">
+          <div class="buttons">
+      <Link class="button login" to='/login' onClick={this.toggleCollapse}>Login</Link>
+      <Link class="button signUp" to='/register' onClick={this.toggleCollapse}>Signup</Link>
+    </div>
+          </div>
+        </div>
+      </nav>
+        
+      
+    );
+  }
+}
+
+export default Navigation;
+
+{/* </nav>
       <div className='Navigation'>
         <nav className='navbar navbar-expand-lg navbar-light bg-light mb-3'>
           <Link className='navbar-brand' to='#'>Project 3</Link>
@@ -51,9 +91,4 @@ class Navigation extends Component {
             </ul>
           </div>
         </nav>
-      </div>
-    );
-  }
-}
-
-export default Navigation;
+      </div> */}
