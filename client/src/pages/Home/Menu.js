@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Home.css'
 
 
-class HomePage extends Component {
+class Menu extends Component {
   render() {
     return (
       <div className="container">
@@ -86,4 +86,4 @@ class HomePage extends Component {
   }
 }
 
-export default HomePage;
+export default Menu;
