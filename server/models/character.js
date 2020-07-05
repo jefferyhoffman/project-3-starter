@@ -33,6 +33,11 @@ const CharacterSchema = new Schema({
                 type: String,
                 trim: true,
                 require: true
+            },
+            fact: {
+                type: String,
+                trim: true,
+                require: true
             }
         }
     ], 
