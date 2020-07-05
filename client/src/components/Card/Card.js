@@ -3,6 +3,7 @@ import ReactCardFlip from 'react-card-flip';
 
 
 
+
 class Card extends Component {
   constructor() {
     super();
@@ -43,12 +44,20 @@ handleFlip() {
     });
   };
  
+componentDidMount(){
+    const ppl = ["bob","tina","bill","Jimmy","Bart"]
+    const choice = Math.round(Math.random()*5+1)
+    this.setState({who:ppl[choice]}) 
+    console.log(ppl[choice])
+}
+  
   render() {
     return (
+
       <div className="column is-one-quarter">
       <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="vertical">
         <div className="card">
-          <h1 className="is-size-1">Bob Belcher!</h1>
+          <h1 className="is-size-1">Who am I?</h1>
           <img alt="bob"src="https://i.pinimg.com/564x/49/83/2e/49832e1192afcb2562c51320fd74eba4.jpg" style={{width:"200px",height:"200px"}} ></img>
           <input
            type="text" 
