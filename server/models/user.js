@@ -18,6 +18,10 @@ const UserSchema = new Schema({
       'Password should be four characters or longer'
     ]
   },
+  score: {
+    type: Number,
+    required: false
+  }
 })
 
 class newUser {
