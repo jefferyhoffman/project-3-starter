@@ -5,6 +5,7 @@ import API from '../../lib/API';
 import TokenStore from '../../lib/TokenStore';
 import AuthContext from '../../contexts/AuthContext';
 import Navigation from '../../components/Navigation/Navigation';
+import Footer from '../../components/Footer/Footer'
 import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
 import Home from '../../pages/Home/Home';
 import Login from '../../pages/Login/Login';
@@ -62,6 +63,7 @@ class App extends Component {
               <Route component={NotFound} />
             </Switch>
           </div>
+          <Footer/>
         </div>
       </AuthContext.Provider>
     );
