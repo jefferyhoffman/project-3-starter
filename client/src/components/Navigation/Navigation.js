@@ -41,9 +41,9 @@ class Navigation extends Component {
       <strong>Home</strong>
     </Link>
     
-    <Link className="navbar-item">
+    <Link className="navbar-item" to='/leaderboard' onClick={this.toggleCollapse}>
      
-    🔥  <strong> High Scores</strong>
+     <strong>Leaderboard 🔥</strong>
     </Link>
           </div>
         
