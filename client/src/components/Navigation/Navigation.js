@@ -43,7 +43,7 @@ class Navigation extends Component {
     
     <Link className="navbar-item" to='/leaderboard' onClick={this.toggleCollapse}>
      
-    🔥  <strong> High Scores</strong>
+     <strong>Leaderboard 🔥</strong>
     </Link>
           </div>
         

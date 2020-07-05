@@ -3,7 +3,7 @@ import React from 'react'
 const Leaderboard = () => {
     return (
         <div>
-        <h1>Leaderboard</h1>
+        <h1>Leaderboard  🔥 </h1>
         <table className="table is-striped">
             <thead>
                 <tr>
@@ -14,7 +14,15 @@ const Leaderboard = () => {
                 </tr>
             </thead>
             <tbody>
-            
+            {/* Rendering scores dynamically */}
+            <tr>
+                <td>1</td>
+                <td>helloworld</td>
+                <td>132</td>
+                <td>Bob</td>
+            </tr>
+
+
             </tbody>
         </table>
         </div>
