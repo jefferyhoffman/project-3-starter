@@ -35,11 +35,6 @@ class Register extends Component {
 
     return (
       <div className='Login'>
-        <div className='row'>
-          <div className='col'>
-            <h1>Register Account</h1>
-          </div>
-        </div>
         {this.state.error &&
           <div className='row'>
             <div className='col'>
@@ -51,6 +46,7 @@ class Register extends Component {
         <div className='row'>
           <div className='col'>
             <RegistrationForm onSubmit={this.handleSubmit} />
+           
           </div>
         </div>
       </div>

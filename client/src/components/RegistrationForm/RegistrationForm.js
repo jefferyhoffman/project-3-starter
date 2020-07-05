@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import './RegistrationForm.css'
+import React, { Component } from "react";
+import "./RegistrationForm.css";
 
 class RegistrationForm extends Component {
   state = {
-    email: '',
-    password: '',
-    passwordConfirm: ''
+    email: "",
+    password: "",
+    passwordConfirm: ""
   };
 
   handleInputChange = event => {
@@ -14,14 +14,14 @@ class RegistrationForm extends Component {
     this.setState({
       [name]: value
     });
-  }
+  };
 
   handleSubmit = event => {
     const { email, password, passwordConfirm } = this.state;
 
     this.props.onSubmit(email, password, passwordConfirm);
     event.preventDefault();
-  }
+  };
 
   render() {
     const { email, password, passwordConfirm } = this.state;
@@ -33,8 +33,9 @@ class RegistrationForm extends Component {
           <div className="column">
             <div className="card">
               <div className="card-content">
-            <form onSubmit={this.handleSubmit}>
-            <div className="field">
+                <p className="title">Signup</p>
+                <form onSubmit={this.handleSubmit}>
+                  <div className="field">
                     <div className="control">
                       <input
                         className="input"
@@ -48,8 +49,8 @@ class RegistrationForm extends Component {
                     </div>
                   </div>
 
-              <div className="field">
-                  <div className="control">
+                  <div className="field">
+                    <div className="control">
                       <input
                         className="input"
                         id="password"
@@ -62,7 +63,7 @@ class RegistrationForm extends Component {
                     </div>
                   </div>
                   <div className="field">
-                  <div className="control">
+                    <div className="control">
                       <input
                         className="input"
                         id="password-confirm"
@@ -77,17 +78,14 @@ class RegistrationForm extends Component {
                   <button className="button" id="signupBtn" type="submit">
                     <strong>Signup</strong>
                   </button>
-
-              
-            </form>
+                </form>
+              </div>
+            </div>
           </div>
+          <div className="column"></div>
         </div>
       </div>
-      <div className="column"></div>
-      </div>
-      </div>
-
-    )
+    );
   }
 }
 

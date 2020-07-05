@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './LoginForm.css'
+import "./LoginForm.css";
 // import Octicon, { Mail, Key } from "@githubprimer/octicons-react";
 
 class LoginForm extends Component {
@@ -33,6 +33,7 @@ class LoginForm extends Component {
           <div className="column">
             <div className="card">
               <div className="card-content">
+                <p className="title">Login</p>
                 <form className="LoginForm" onSubmit={this.handleSubmit}>
                   <div className="field">
                     <div className="control">
@@ -48,7 +49,7 @@ class LoginForm extends Component {
                     </div>
                   </div>
                   <div className="field">
-                  <div className="control">
+                    <div className="control">
                       <input
                         className="input"
                         id="password"
