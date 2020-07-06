@@ -36,7 +36,7 @@ module.exports = function (app) {
         );
     });
     
-    //user posting score
+    //user posting scores
     app.post('/api/leaderboard/', (req, res) => {
         let {userName, score} = req.body;
 
