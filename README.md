@@ -14,7 +14,7 @@ The application will be deployed on Heroku for the server to run and function pr
 
 
 
-![Let's Guess](client/public/assets/images/LetsGuess.png)
+![Let's Guess](./assets/images/LetsGuess.png)
 
 
 ## Table of Contents
@@ -78,7 +78,7 @@ Cloud Server
 <details>
     <summary markdown="span">Click to expand Screenshot Details</summary>
  
-![Let's Guess](client/public/assets/images/LetsGuess.png)
+![Let's Guess](./assets/images/LetsGuess.png)
 *Screen Shot of Let's Guess*
 
 </details>
