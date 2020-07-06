@@ -1,14 +1,19 @@
+import React from 'react'
+import Card from './Card/Card.js'
 
-import logo from './logo.svg';
-
-class GamePage extends Component {
+class Game extends Component {
   render() {
     return (
       <div className='Game'>
-        <hq>Game page</hq>
+        <div className="columns is -centered">
+        {/* <Questions DropDown here --- note needs to be a column within component or put a column here as well. */}
+        <Card />
+        {/* Score component here---- also needs its own column */}
+        </div>
+        {/* Options to choose from here -------- needs to be a seperate set of columns(equivalent to a row) and a full sized column.  */}
       </div>
     );
   }
 }
 
-export default GamePage;
+export default Game;
