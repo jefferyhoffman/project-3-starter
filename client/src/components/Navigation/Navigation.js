@@ -48,9 +48,9 @@ class Navigation extends Component {
           </div>
         
           <div className="navbar-end">
-          <div class="buttons">
-      <Link class="button login" to='/login' onClick={this.toggleCollapse}>Login</Link>
-      <Link class="button signUp" to='/register' onClick={this.toggleCollapse}>Signup</Link>
+          <div className="buttons">
+      <Link className="button login" to='/login' onClick={this.toggleCollapse}>Login</Link>
+      <Link className="button signUp" to='/register' onClick={this.toggleCollapse}>Signup</Link>
     </div>
           </div>
         </div>
