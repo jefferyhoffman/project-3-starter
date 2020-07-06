@@ -35,7 +35,19 @@ module.exports = function (app) {
         {_id: req.params.id}
         );
     });
+    
+    //user posting score
+    app.post('/api/leaderboard/', (req, res) => {
+        const {userName, score} = req.body;
 
+        db.Leaderboard.create({userName, score})
+        .then(userScore => {
+            res.json(userScore);
+        })
+        .catch(err=> {
+            res.json(err);
+        })
+    });
     
 }
 
