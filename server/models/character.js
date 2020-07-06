@@ -53,5 +53,5 @@ const CharacterSchema = new Schema({
 // }, 0)
 // })
 
-const Character = mongoose.model("Workout", CharacterSchema);
+const Character = mongoose.model("Character", CharacterSchema);
 module.exports = Character;
