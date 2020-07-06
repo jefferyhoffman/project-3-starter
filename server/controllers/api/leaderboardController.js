@@ -3,7 +3,7 @@ const db = require('../../models');
 
 //leaderboard routes
 //get leaderboard
-leaderboardController.get('/api/leaderboard/', (req, res) => {
+leaderboardController.get('/', (req, res) => {
     db.Leaderboard.findAll({})
         .then(score => {
             res.json(score)
@@ -13,7 +13,7 @@ leaderboardController.get('/api/leaderboard/', (req, res) => {
         })
 });
 // //update leaderboard
-leaderboardController.put('/api/leaderboard/:id', (req, res) => {
+leaderboardController.put('/:id', (req, res) => {
     db.Leaderboard.updateOne(
         { _id: req.params.id }
     );
