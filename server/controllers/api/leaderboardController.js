@@ -4,7 +4,7 @@ const db = require('../../models');
 //leaderboard routes
 //get leaderboard
 leaderboardController.get('/', (req, res) => {
-    db.Leaderboard.findAll({})
+    db.Leaderboard.find({})
         .then(score => {
             res.json(score)
         })

@@ -2,7 +2,7 @@ const characterController = require('express').Router();
 const db = require('../../models');
 
 characterController.get('/', (req, res) => {
-    db.Character.findAll({})
+    db.Character.find({})
         .then(allCharacters => {
             res.json(allCharacters);
         })
