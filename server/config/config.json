@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "root",
-    "database": "project3_development",
+    "password": "password123",
+    "database": "recipies_db",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
