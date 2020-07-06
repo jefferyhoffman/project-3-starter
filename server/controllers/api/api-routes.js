@@ -38,10 +38,11 @@ module.exports = function (app) {
     
     //user posting score
     app.post('/api/leaderboard/', (req, res) => {
-        const {userName, score} = req.body;
+        let {userName, score} = req.body;
 
-        db.Leaderboard.create({userName, score})
+        db.Leaderboard.insertOne({userName, score})
         .then(userScore => {
+            console.log("user score regiestered")
             res.json(userScore);
         })
         .catch(err=> {
