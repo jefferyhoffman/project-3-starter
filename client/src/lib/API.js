@@ -27,5 +27,10 @@ export default {
         }
       });
     }
+  },
+  Characters: {
+    getAll: function () {
+      return axios.get('/api/characters');
+    }
   }
 }

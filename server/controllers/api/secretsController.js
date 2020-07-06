@@ -13,5 +13,15 @@ secretsController.get('/', JWTVerifier, (req, res) => {
       if (error) throw error
     })
 })
+secretsController.get('/secret', (req, res)=>{
+  db.Secrets.create({})
+  .then(results => {
+    res.json(results);
+  })
+  .catch(error => {
+    if (error) throw error
+  })
+})
+
 
 module.exports = secretsController;
