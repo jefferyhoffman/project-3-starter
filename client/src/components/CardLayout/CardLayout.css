@@ -1,9 +1,6 @@
 .test {
-    background-image: linear-gradient(to bottom left,#13547a, #80d0c7);
     padding: .7rem;
     border-radius: 10px;
+    background-image: linear-gradient(to bottom right,#13547a, #80d0c7);
 }
 
-.portfolioMargin {
-    padding: 0rem !important;
-}

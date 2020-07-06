@@ -1,0 +1,6 @@
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem !important;
+  }
+
