@@ -28,7 +28,8 @@ module.exports = (sequelize, DataTypes) => {
 			type: DataTypes.STRING,
 			allowNull: false
 		}
-	});
+  }, {});
+  // This empty object was added as it was in the user model of the starter code.
 
 	// Relationships
 	User.associate = function(models) {
