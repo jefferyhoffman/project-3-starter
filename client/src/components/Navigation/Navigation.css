@@ -2,6 +2,11 @@
     background-color: rgb(234, 194, 253);
    
 }
-.navbar-item{
+/* .navbar-item{
+
+} */
+
+.logo{
+    display: flex;
 
 }
