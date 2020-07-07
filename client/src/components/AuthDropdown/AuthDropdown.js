@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Dropdown} from 'semantic-ui-react'
-import { Link } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 
 import Gravatar from 'react-gravatar';
 
@@ -38,13 +38,13 @@ class AuthDropdown extends Component {
     
     return (
       <Button.Group>
-        <Button>
-          <Gravatar className="rounded-circle" email={user.email} size={30} /> {user.email}
+        <Button inverted={true}>
+          <Gravatar className="rounded-circle" email={user.email} size={30} /><div style={{ padding:10, float:"right"}}><span>{user.email}</span></div>
         </Button>
-        <Dropdown className="button icon">
-          <Dropdown.Menu>
-            <Dropdown.Item text="View My Profile" onClick={this.handleProfile} />
-            <Dropdown.Item text="View My Recipes" onClick={this.handleRecipes} />
+        <Dropdown className="button icon" floating>
+          <Dropdown.Menu >
+            <Dropdown.Item as={NavLink} to="/profile" text="View My Profile" />
+            <Dropdown.Item as={NavLink} to="/recipes" text="View My Recipes" />
             <Dropdown.Item text="Logout" onClick={this.handleLogout} />
           </Dropdown.Menu>
         </Dropdown>
