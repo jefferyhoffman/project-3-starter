@@ -7,6 +7,12 @@ import AuthDropdown from "../../components/AuthDropdown/AuthDropdown";
 const Navigation = () => {
   const { user } = useContext(AuthContext);
   const [isActive, setisActive] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
+
+  const toggleCollapse = () => {
+    setIsCollapsed(value => !value);
+  }
+
   return (
     <nav
       className="navbar is-fixed-top color"
@@ -15,7 +21,11 @@ const Navigation = () => {
     >
       <div className="navbar-brand" to="#">
         <a className="navbar-item" href="#">
+<<<<<<< HEAD
           <img src="./assets/images/lgLogo.png " className='logo'/>
+=======
+          <img src="./assets/images/theLumberJack.png " className='image is-rounded'/>
+>>>>>>> 74aaadbc752c3af24faec831af78fff0247c39cd
         </a>
       </div>
       <label
@@ -54,7 +64,7 @@ const Navigation = () => {
         <div className="navbar-end">
           <div className="buttons">
             {user ? (
-              <AuthDropdown />
+              <AuthDropdown onClick={toggleCollapse}/>
             ) : (
               <>
                 <Link className="button login" to="/login">

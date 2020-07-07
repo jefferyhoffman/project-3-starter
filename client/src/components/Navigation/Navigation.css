@@ -4,6 +4,7 @@
     background-color: rgb(215, 129, 255);
    
 }
+<<<<<<< HEAD
 #nav-toggle-state {
     display: none;
   }
@@ -12,3 +13,13 @@
     display: block;
   }
 
+=======
+/* .navbar-item{
+
+} */
+
+.logo{
+    display: flex;
+
+}
+>>>>>>> 74aaadbc752c3af24faec831af78fff0247c39cd
