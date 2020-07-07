@@ -7,18 +7,11 @@ import {
   Segment,
   Responsive,
   Sticky,
+  Button,
 } from "semantic-ui-react";
 import "./LeftRail.css";
 
-const checkbox1 = () => <Checkbox label="Breakfast" />;
 
-const checkbox2 = () => <Checkbox label="Lunch" />;
-
-const checkbox3 = () => <Checkbox label="Dinner" />;
-
-const checkbox4 = () => <Checkbox label="Dessert" />;
-
-const checkbox5 = () => <Checkbox label="Snacks" />;
 
 const LeftRail = () => (
   <Grid centered columns={2}>
@@ -28,16 +21,12 @@ const LeftRail = () => (
           <Responsive as={IngredientDropdown} minWidth={1870}></Responsive>
           <Responsive as={Segment} minWidth={1870} className="flexColumn">
             <strong>What's the occasion?</strong>
-            <br></br>
-            {checkbox1()}
-            <br></br>
-            {checkbox2()}
-            <br></br>
-            {checkbox3()}
-            <br></br>
-            {checkbox4()}
-            <br></br>
-            {checkbox5()}
+            <Checkbox className='checks' label="Breakfast" />
+            <Checkbox className='checks' label="Lunch" />
+            <Checkbox className='checks' label="Dinner" />
+            <Checkbox className='checks' label="Dessert" />
+            <Checkbox className='checks' label="Snacks" />
+            <Button className='checks'>Ok</Button>
           </Responsive>
         </Sticky>
       </Rail>

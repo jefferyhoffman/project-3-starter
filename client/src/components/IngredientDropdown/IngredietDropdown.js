@@ -1,6 +1,6 @@
 import React from "react";
 import { Dropdown } from "semantic-ui-react";
-import './IngredientDropdown.css'
+import "./IngredientDropdown.css";
 
 const foodOptions = [
   { key: "tacos", text: "Tacos", value: "tacos" },
@@ -10,17 +10,24 @@ const foodOptions = [
   { key: "salad", text: "Salad", value: "salad" },
 ];
 
-const IngredientDropdown = () => (
-  <Dropdown
-    minWidth={1870}
-    className="widthSmall"
-    placeholder="Recipe Name"
-    fluid
-    multiple
-    search
-    selection
-    options={foodOptions}
-  />
-);
+//This will console log the items that are selected from the dropdown in an array.
+const IngredientDropdown = () => {
+  const handleChange = (e, data) => {
+    console.log(data.value);
+  };
+  return (
+    <Dropdown
+      onChange={handleChange}
+      minWidth={1870}
+      className="widthSmall"
+      placeholder="Recipe Name"
+      fluid
+      multiple
+      search
+      selection
+      options={foodOptions}
+    />
+  );
+};
 
 export default IngredientDropdown;

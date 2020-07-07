@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import CardLayout from '../../components/CardLayout/CardLayout';
 import LeftRail from '../../components/LeftRail/LeftRail';
-// import IngredientDropdown from '../../components/IngredientDropdown/IngredietDropdown'
 import './Home.css';
 
 class HomePage extends Component {
@@ -9,7 +8,6 @@ class HomePage extends Component {
     return (
       <div className="testing">
         <LeftRail />
-        {/* <IngredientDropdown /> */}
         <CardLayout/>
       </div>
     );
@@ -17,3 +15,8 @@ class HomePage extends Component {
 }
 
 export default HomePage;
+
+
+{/* {(window.innerWidth < 2000) && 
+          <div>hello</div>
+          } */}
