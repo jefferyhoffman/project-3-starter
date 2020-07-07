@@ -3,8 +3,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const CharacterSchema = new Schema({ 
-    Character: [
-        {
+ 
             picture: {
                 type: String,
                 required: true
@@ -39,9 +38,8 @@ const CharacterSchema = new Schema({
                 trim: true,
                 require: true
             }
-        }
-    ], 
-},
+
+}
 // { toJSON: { virtuals: true } } 
 );
 // using virtual to work, to update the total duration, once a new workout is added
