@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Home.css'
-
+import {Link} from 'react-router-dom'
 
 class Menu extends Component {
   render() {
@@ -30,7 +30,7 @@ class Menu extends Component {
             <p className="title">Ready to Play?</p>
               <p className="subtitle">Click Image to Start!</p>
               <figure className=" image is-128x128 is-inline-block">
-                <img className="image is-rounded " id="letsGuess" src="./assets/images/theLumberjack.png" />
+                <Link to='/game'><img className="image is-rounded " id="letsGuess" src="./assets/images/theLumberjack.png" /></Link>
               </figure>
     </article>
               

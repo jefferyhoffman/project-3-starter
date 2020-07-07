@@ -21,7 +21,7 @@ const Navigation = () => {
     >
       <div className="navbar-brand" to="#">
         <a className="navbar-item" href="#">
-          <img src="./assets/images/theLumberJack.png " className='image is-rounded'/>
+          <img src="./assets/images/lgLogo.png " className='logo'/>
         </a>
       </div>
       <label

@@ -39,7 +39,7 @@ app.use(logger(LOG_MODE));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(passport.initialize());
-
+app.use(express.static('images'))
 //-- Static Server (Production) ----------------------------------------------
 if (process.env.NODE_ENV === 'production') {
   const clientBuildPath = path.join(__dirname, '..', 'client', 'build');
@@ -57,7 +57,7 @@ app.get('*', (req, res) => {
 
 //-- Main --------------------------------------------------------------------
 app.listen(PORT, () => {
-  console.log(`🚀 Server listening on port ${PORT}...`);
+  console.log(`🌴  Server listening on port ${PORT}...`);
 });
 
 //-- Export to Tests ---------------------------------------------------------
