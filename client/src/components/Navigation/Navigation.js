@@ -7,6 +7,12 @@ import AuthDropdown from "../../components/AuthDropdown/AuthDropdown";
 const Navigation = () => {
   const { user } = useContext(AuthContext);
   const [isActive, setisActive] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
+
+  const toggleCollapse = () => {
+    setIsCollapsed(value => !value);
+  }
+
   return (
     <nav
       className="navbar is-fixed-top color"
@@ -54,7 +60,7 @@ const Navigation = () => {
         <div className="navbar-end">
           <div className="buttons">
             {user ? (
-              <AuthDropdown />
+              <AuthDropdown onClick={toggleCollapse}/>
             ) : (
               <>
                 <Link className="button login" to="/login">
