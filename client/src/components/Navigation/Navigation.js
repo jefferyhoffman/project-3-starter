@@ -21,11 +21,7 @@ const Navigation = () => {
     >
       <div className="navbar-brand" to="#">
         <a className="navbar-item" href="#">
-<<<<<<< HEAD
           <img src="./assets/images/lgLogo.png " className='logo'/>
-=======
-          <img src="./assets/images/theLumberJack.png " className='image is-rounded'/>
->>>>>>> 74aaadbc752c3af24faec831af78fff0247c39cd
         </a>
       </div>
       <label
