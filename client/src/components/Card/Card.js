@@ -17,7 +17,8 @@ class Card extends Component {
       who:"Bob",
       score:10,
       Chars:[],
-      choice:''
+      choice:'',
+      whoImg:''
       
     };
     // ===this is needed if we want a click event on a button to flip=====
@@ -37,7 +38,8 @@ handleScore =()=>{
     alert("Game Over")
     }
     else{
-      
+      console.log("this is the chosen who"+this.state.Chars[this.state.choice].name)
+      console.log("this is the picture"+ this.state.Chars[this.state.choice].picture)
       this.handleGuess()
     }
   }
@@ -78,6 +80,7 @@ handleScore =()=>{
       this.setState( {choice: Math.round(Math.random()*9)})
       this.setState({Chars: res.data})
       this.setState({who:res.data[this.state.choice].name})
+      this.setState({whoImg:res.data[this.state.choice].picture})
       this.setState({}) 
       console.log(res.data)
       console.log(this.state.Chars)
@@ -96,7 +99,7 @@ handleScore =()=>{
             <article className="tile is-child box">
         <h1 className="is-size-1">Who am I?</h1>
           
-          <img alt="bob"src="https://i.pinimg.com/564x/4f/24/7a/4f247acf992487b5f1d8bdd641f6bd50.jpg" style={{width:"200px",height:"200px"}} ></img>
+          <img alt="bob" src={this.state.whoImg} style={{width:"200px",height:"200px"}} ></img>
           <div class="field">
   <div class="control">
    <DropDown/>
