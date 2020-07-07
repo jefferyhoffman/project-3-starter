@@ -26,7 +26,7 @@ class DropDown extends Component {
                 <div className="dropdown is-hoverable">
                     <div className="dropdown-trigger">
                         <button className="button dropdown-button is-rounded" aria-haspopup="true" aria-controls="dropdown-menu">
-                            <span> Questions! </span>
+                            <span> Choose Your Question! </span>
                         </button>
                     </div>
                     <div className="dropdown-menu" id="dropdown-menu" role="menu">
