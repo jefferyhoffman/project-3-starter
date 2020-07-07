@@ -4,7 +4,7 @@ const db = require('../../models');
 //leaderboard routes
 //get leaderboard
 leaderboardController.get('/', (req, res) => {
-    db.Leaderboard.find({})
+    db.Score.find({})
         .then(score => {
             res.json(score)
         })
@@ -12,18 +12,18 @@ leaderboardController.get('/', (req, res) => {
             res.status(500).json(err);
         })
 });
-// //update leaderboard
-leaderboardController.put('/:id', (req, res) => {
-    db.Leaderboard.updateOne(
-        { _id: req.params.id }
-    );
-});
+// //update leaderboard, may not need
+// leaderboardController.put('/:id', (req, res) => {
+//     db.Score.updateOne(
+//         { _id: req.params.id }
+//     );
+// });
 
-// //user posting scores
+// //user posting scores on leaderboard
 leaderboardController.post('/', (req, res) => {
     let { userName, score } = req.body;
 
-    db.Leaderboard.insertOne({ userName, score })
+    db.Score.insertOne({ userName, score })
         .then(userScore => {
             console.log("user score registered")
             res.json(userScore);
