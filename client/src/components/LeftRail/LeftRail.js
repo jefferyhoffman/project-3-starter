@@ -11,8 +11,6 @@ import {
 } from "semantic-ui-react";
 import "./LeftRail.css";
 
-
-
 const LeftRail = () => (
   <Grid centered columns={2}>
     <Grid.Column>
