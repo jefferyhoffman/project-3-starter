@@ -24,7 +24,7 @@ const Navigation = () => {
           <img src="./assets/images/lgLogo.png " className='logo'/>
         </a>
       </div>
-      <label
+      <a
         onClick={() => {
           setisActive(!isActive);
         }}
@@ -37,7 +37,7 @@ const Navigation = () => {
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
-      </label>
+      </a>
 
       <div className={`navbar-menu ${isActive ? "is-active" : ""}`}>
         <div className="navbar-start">
