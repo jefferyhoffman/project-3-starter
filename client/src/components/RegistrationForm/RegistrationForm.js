@@ -6,7 +6,7 @@ class RegistrationForm extends Component {
   state = {
     firstName: "",
     lastName: "",
-    userName: "",
+    username: "",
     email: "",
     password: "",
     passwordConfirm: ""
@@ -21,14 +21,14 @@ class RegistrationForm extends Component {
   }
 
   handleSubmit = event => {
-    const { firstName, lastName, userName, email, password, passwordConfirm } = this.state;
+    const { firstName, lastName, username, email, password, passwordConfirm } = this.state;
 
-    this.props.onSubmit(firstName, lastName, userName, email, password, passwordConfirm);
+    this.props.onSubmit(firstName, lastName, username, email, password, passwordConfirm);
     event.preventDefault();
   }
 
   render() {
-    const { firstName, lastName, userName, email, password, passwordConfirm } = this.state;
+    const { firstName, lastName, username, email, password, passwordConfirm } = this.state;
 
     return (
       <div className="LoginForm">
@@ -69,11 +69,11 @@ class RegistrationForm extends Component {
                 </div>
                 <input
                   className="form-control"
-                  id="user-name"
+                  id="username"
                   type="text"
-                  name="userName"
-                  placeholder="User Name"
-                  value={userName}
+                  name="username"
+                  placeholder="Username"
+                  value={username}
                   onChange={this.handleInputChange}
                 />
               </div>
