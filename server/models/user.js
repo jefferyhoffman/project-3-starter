@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // Define the User model
 module.exports = (sequelize, DataTypes) => {

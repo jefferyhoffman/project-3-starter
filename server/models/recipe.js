@@ -40,7 +40,7 @@ module.exports = function (sequelize, DataTypes) {
         Recipe.hasMany(models.Review);
 
         // Recipe has many Ingredients
-        Recipe.belongsToMany(models.Ingredient, { through: RecipeIngredients });
+        Recipe.belongsToMany(models.Ingredient, { through: RecipeIngredient });
 
         // Recipe has many Categories
         Recipe.belongsToMany(models.Category, { through: RecipeCategory });
