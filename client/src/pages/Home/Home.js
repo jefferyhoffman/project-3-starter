@@ -8,7 +8,6 @@ class HomePage extends Component {
   render() {
     return (
       <div className="bgStyle">
-        <Image className="logo" src={require("../../assets/images/megabitesLogo.png")}/>
         <LeftRail />
         <CardLayout/>
       </div>
