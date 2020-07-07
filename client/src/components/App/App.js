@@ -13,6 +13,7 @@ import Register from '../../pages/Register/Register';
 import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
 import Leaderboard from '../../pages/Leaderboard/Leaderboard'
+import Game from '../../pages/Game/Game'
 
 import './App.css';
 
@@ -63,6 +64,7 @@ class App extends Component {
               <Route path='/register' component={Register} />
               <PrivateRoute path='/secret' component={Secret} />
               <Route path="/leaderboard" component={Leaderboard}/>
+              <Route path ="/Game" component={Game} />
               <Route component={NotFound} />
             </Switch>
           </div>

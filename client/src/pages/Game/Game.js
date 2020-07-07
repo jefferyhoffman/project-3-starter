@@ -1,5 +1,6 @@
-import React from 'react'
-import Card from './Card/Card.js'
+import React, { Component } from 'react';
+
+import Card from '../../components/Card/Card'
 
 class Game extends Component {
   render() {
