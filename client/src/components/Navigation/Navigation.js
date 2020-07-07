@@ -45,12 +45,24 @@ class Navigation extends Component {
      
      <strong>Leaderboard 🔥</strong>
     </Link>
+    
+    {/*Only if the user is logged in */}
+    {user &&
+      <Link className="navbar-item" to="/menu" onClick={this.toggleCollapse}>
+        <strong>Menu</strong>
+      </Link>}
           </div>
         
           <div className="navbar-end">
           <div className="buttons">
-      <Link className="button login" to='/login' onClick={this.toggleCollapse}>Login</Link>
+        {user 
+        ? <AuthDropdown onClick={this.toggleCollapse} />
+        : <>
+        <Link className="button login" to='/login' onClick={this.toggleCollapse}>Login</Link>
       <Link className="button signUp" to='/register' onClick={this.toggleCollapse}>Signup</Link>
+        </>
+        }
+     
     </div>
           </div>
         </div>
