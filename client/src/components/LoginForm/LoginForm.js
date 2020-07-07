@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Button, Form, Segment } from "semantic-ui-react";
+import { Button, Form, Segment, Container } from "semantic-ui-react";
+import "./LoginForm.css"
 
 class LoginForm extends Component {
     state = {
@@ -26,6 +27,7 @@ class LoginForm extends Component {
         const { email, password } = this.state;
 
         return (
+          <Container>
             <Segment inverted>
                 <Form inverted onSubmit={this.handleSubmit}>
                     <Form.Group widths="equal">
@@ -43,6 +45,7 @@ class LoginForm extends Component {
                     <Button type="submit">Submit</Button>
                 </Form>
             </Segment>
+          </Container>
         );
     }
 }
