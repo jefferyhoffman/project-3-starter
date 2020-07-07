@@ -1,73 +1,89 @@
 import React, { Component } from 'react'
 import ReactCardFlip from 'react-card-flip';
-import DropDown from '../DropDown/DropDown.js'
+import DropDown from '../DropDown/DropDown.js';
+import axios from 'axios'
+
+
+
 
 
 
 class Card extends Component {
   constructor() {
     super();
-      this.state = {
+    this.state = {
       isFlipped: false,
       guess: "",
       who:"Bob",
-      score:10
+      score:10,
+      Chars:[],
+      choice:''
+      
     };
     // ===this is needed if we want a click event on a button to flip=====
     // this.handleClick = this.handleClick.bind(this);
   }
-//  =====this is how the defualt react flip handles flip events
-//   handleClick(e) {
-//     e.preventDefault();
-//     this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
-//   }
-handleFlip() {
+  //  =====this is how the defualt react flip handles flip events
+  //   handleClick(e) {
+    //     e.preventDefault();
+    //     this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
+    //   }
+    handleFlip() {
     this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
     
-}
+  }
 handleScore =()=>{
-    if (this.state.score <=0){
-        alert("Game Over")
+  if (this.state.score <=0){
+    alert("Game Over")
     }
     else{
-        this.handleGuess()
+      
+      this.handleGuess()
     }
-}
-handleGuess=()=>{
+  }
+  handleGuess=()=>{
     if(!this.state.guess){
-        alert("Make a guess")
+      alert("Make a guess")
     }
     if(this.state.guess.toLocaleLowerCase()===this.state.who.toLocaleLowerCase()){
-        this.handleFlip()
-        alert(`you scored ${this.state.score}/10`)
+      this.handleFlip()
+      alert(`you scored ${this.state.score}/10`)
     }
     
     else if(this.state.guess && this.state.guess.toLocaleLowerCase !== this.state.who.toLocaleLowerCase()){
-        alert("wrong guess score -1")
-        let newScore = this.state.score-1
-        console.log(newScore)
-        this.setState({
-            score:newScore
-        })
-        console.log(this.state.score)
+      alert("wrong guess score -1")
+      let newScore = this.state.score-1
+      console.log(newScore)
+      this.setState({
+        score:newScore
+      })
+      console.log(this.state.score)
     }
-    }
+  }
   handleInputChange = event => {
     // Getting the value and name of the input which triggered the change
     const { name, value } = event.target;
-
+    
     // Updating the input's state
     this.setState({
       [name]: value
     });
   };
- 
-componentDidMount(){
-    const ppl = ["bob","tina","bill","Jimmy","Bart"]
-    const choice = Math.round(Math.random()*4)
-    this.setState({who:ppl[choice]}) 
-    console.log(ppl[choice])
-}
+  
+  componentDidMount(){
+    // const ppl = ["bob","tina","bill","Jimmy","Bart"]
+    // console.log(ppl[choice])
+    axios.get('/api/characters')
+    .then((res)=>{
+      this.setState( {choice: Math.round(Math.random()*9)})
+      this.setState({Chars: res.data})
+      this.setState({who:res.data[this.state.choice].name})
+      this.setState({}) 
+      console.log(res.data)
+      console.log(this.state.Chars)
+      console.log(this.state.who)
+    })
+  }
   
   render() {
     return (
@@ -108,7 +124,7 @@ componentDidMount(){
 
 
  
-        <div class="tile is-ancestor">
+        <div className="tile is-ancestor">
                 <div className="tile is-parent">
             <article className="tile is-child box scoreBox">
             <article className="tile is-child box">

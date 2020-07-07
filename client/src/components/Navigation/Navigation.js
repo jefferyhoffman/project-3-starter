@@ -43,7 +43,7 @@ class Navigation extends Component {
     
     <Link className="navbar-item" to='/leaderboard' onClick={this.toggleCollapse}>
      
-     <strong>Leaderboard 🔥</strong>
+     <strong>Leaderboard <span role="img" aria-label="lit" >🔥</span></strong>
     </Link>
     
     {/*Only render if the user is logged in */}
