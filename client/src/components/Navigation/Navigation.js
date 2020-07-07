@@ -41,17 +41,23 @@ const Navigation = () => {
 
       <div className={`navbar-menu ${isActive ? "is-active" : ""}`}>
         <div className="navbar-start">
-          <Link to="/" className="navbar-item">
+          <Link to="/" className="navbar-item"  onClick={() => {
+          setisActive(!isActive);
+        }}>
             <strong>Home</strong>
           </Link>
 
-          <Link className="navbar-item" to="/leaderboard">
+          <Link className="navbar-item" to="/leaderboard"  onClick={() => {
+          setisActive(!isActive);
+        }}>
             <strong>Leaderboard 🔥</strong>
           </Link>
 
           {/*Only render if the user is logged in */}
           {user && (
-            <Link className="navbar-item" to="/menu">
+            <Link className="navbar-item" to="/menu"  onClick={() => {
+          setisActive(!isActive);
+        }}>
               <strong>Menu</strong>
             </Link>
           )}
