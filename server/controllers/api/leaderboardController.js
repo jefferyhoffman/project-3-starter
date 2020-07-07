@@ -21,9 +21,9 @@ leaderboardController.get('/', (req, res) => {
 
 // //user posting scores on leaderboard
 leaderboardController.post('/', (req, res) => {
-    let { userName, score } = req.body;
+    let { username, highScore, lastGuess } = req.body;
 
-    db.Score.insertOne({ userName, score })
+    db.Score.create({ username, highScore, lastGuess })
         .then(userScore => {
             console.log("user score registered")
             res.json(userScore);
