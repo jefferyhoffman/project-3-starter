@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import {Menu, Button, Container, MenuHeader} from 'semantic-ui-react';
+import {Menu, Button, Container, Image, MenuHeader} from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
+import './Navigation.css'
 import AuthContext from '../../contexts/AuthContext';
 import AuthDropdown from '../../components/AuthDropdown/AuthDropdown';
 
@@ -59,6 +60,7 @@ class Navigation extends Component {
                   Home
                 </Menu.Item>
                 <Menu.Item as='a'>Search</Menu.Item>
+                {/* <Menu.Item><Image className="logo" src={require("../../assets/images/megabitesLogo.png")}/></Menu.Item> */}
                 <Menu.Item position='right'>
                 {user
                 ? <AuthDropdown onClick={this.toggleCollapse} />
