@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Menu, Button, Container, MenuHeader} from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 
 import AuthContext from '../../contexts/AuthContext';
 import AuthDropdown from '../../components/AuthDropdown/AuthDropdown';
@@ -51,25 +51,23 @@ class Navigation extends Component {
       //   </nav>
       // </div>
 
-      <Menu
-              fixed="true"
-            >
+      <Menu inverted={true} size="massive">
               <Container>
-                <Menu.Item as='a' active>
+                <Menu.Item as={NavLink} to="/" active>
                   Home
                 </Menu.Item>
-                <Menu.Item as='a'>Search</Menu.Item>
+                <Menu.Item as={NavLink} to="/search">Search</Menu.Item>
                 <Menu.Item position='right'>
                 {user
                 ? <AuthDropdown onClick={this.toggleCollapse} />
                 : (
                   <>
-                  <Button as='a'>
+                  <Button as={NavLink} to="/login" inverted={true} color={"blue"}>
                     Log in
                   </Button>
-                  <Button as='a' inverted="false" primary="true" style={{ marginLeft: '0.5em' }}>
+                  <Button as={NavLink} to="/register" inverted={true} color={"green"} style={{ marginLeft: '0.5em' }}>
                     Sign Up
-                  </Button>
+                  </Button> 
                   </>
                 )
               }
