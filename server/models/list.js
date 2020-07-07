@@ -16,7 +16,7 @@ module.exports = function (sequelize, DataTypes) {
         });
 
         // List can have many Ingredients
-		List.belongsToMany(models.Ingredient);
+		List.belongsToMany(models.Ingredient, { through: ListIngredient });
 
     };
 

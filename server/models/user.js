@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // Define the User model
 module.exports = (sequelize, DataTypes) => {
@@ -34,7 +34,7 @@ module.exports = (sequelize, DataTypes) => {
 	// Relationships
 	User.associate = function(models) {
 		// User can have many recipes
-		User.belongsToMany(models.Recipe);
+		User.belongsToMany(models.Recipe, { through: UserRecipe });
 		// User can have many reviews
 		User.hasMany(models.Review);
 		// User can have many shopping lists

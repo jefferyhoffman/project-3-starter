@@ -1,7 +1,7 @@
-const passport = require('passport');
-const { Strategy: JwtStrategy, ExtractJwt } = require('passport-jwt');
+const passport = require("passport");
+const { Strategy: JwtStrategy, ExtractJwt } = require("passport-jwt");
 
-const db = require('../models');
+const db = require("../models");
 
 var JWT_STRATEGY_OPTS = {
   jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
@@ -16,7 +16,7 @@ passport.use(
   })
 );
 
-const JWTVerifier = passport.authenticate('jwt', { session: false });
+const JWTVerifier = passport.authenticate("jwt", { session: false });
 
 module.exports = {
   passport,

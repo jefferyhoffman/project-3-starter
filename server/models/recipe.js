@@ -34,16 +34,16 @@ module.exports = function (sequelize, DataTypes) {
     // Relationships
     Recipe.associate = models => {
         // Recipe has many Users
-        Recipe.belongsToMany(models.User);
+        Recipe.belongsToMany(models.User, { through: UserRecipe });
 
         // Recipe has many Reviews
         Recipe.hasMany(models.Review);
 
         // Recipe has many Ingredients
-        Recipe.belongsToMany(models.Ingredient);
+        Recipe.belongsToMany(models.Ingredient, { through: RecipeIngredient });
 
         // Recipe has many Categories
-        Recipe.belongsToMany(models.Category);
+        Recipe.belongsToMany(models.Category, { through: RecipeCategory });
     };
 
     // Return the Recipe model as defined to be exported to the app
