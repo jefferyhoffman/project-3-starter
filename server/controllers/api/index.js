@@ -1,6 +1,6 @@
-const apiControllers = require('express').Router();
+const apiControllers = require("express").Router();
 
-apiControllers.use('/users', require('./usersController'));
-apiControllers.use('/secrets', require('./secretsController'));
-
-module.exports = apiControllers;
+module.exports = apiControllers => {
+    apiControllers.use("/users", require("./usersController"));
+    apiControllers.use("/secrets", require("./secretsController"));    
+}
