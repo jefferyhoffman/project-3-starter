@@ -90,18 +90,17 @@ handleScore =()=>{
   
   render() {
     return (
-
       <div className="column is-3">
       <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="vertical">
-      <div class="tile is-ancestor">
+      <div className="tile is-ancestor">
                 <div className="tile is-parent">
             <article className="tile is-child box scoreBox">
             <article className="tile is-child box">
         <h1 className="is-size-1">Who am I?</h1>
           
           <img alt="bob" src={this.state.whoImg} style={{width:"200px",height:"200px"}} ></img>
-          <div class="field">
-  <div class="control">
+          <div className="field">
+  <div className="control">
    <DropDown/>
           <input
           className='input'
@@ -112,21 +111,20 @@ handleScore =()=>{
            placeholder="Guess here"/>
            </div>
            </div>
-           <div class="buttons has-addons is-centered">
+           <div className="buttons has-addons is-centered">
             <button 
             className="button is-centered is-warning" 
             onClick={this.handleScore}>
             <strong>Guess</strong>
             </button>
             </div>
-          {/* <button onClick={this.handleClick}>Click to flip</button> */}
-       </article>
-       </article>
-       </div>
-        </div>
+            </article>
+            </article>
+            </div>
+            </div>
 
+      
 
- 
         <div className="tile is-ancestor">
                 <div className="tile is-parent">
             <article className="tile is-child box scoreBox">

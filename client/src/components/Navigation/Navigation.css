@@ -1,7 +1,25 @@
+
+
 .color{
-    background-color: rgb(234, 194, 253);
+    background-color: rgb(215, 129, 255);
    
 }
-.navbar-item{
+<<<<<<< HEAD
+#nav-toggle-state {
+    display: none;
+  }
+  
+  #nav-toggle-state:checked ~ .navbar-menu {
+    display: block;
+  }
+
+=======
+/* .navbar-item{
+
+} */
+
+.logo{
+    display: flex;
 
 }
+>>>>>>> 74aaadbc752c3af24faec831af78fff0247c39cd
