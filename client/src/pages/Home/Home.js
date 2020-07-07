@@ -1,30 +1,22 @@
 import React, { Component } from 'react';
-
-import logo from './logo.svg';
+import CardLayout from '../../components/CardLayout/CardLayout';
+import LeftRail from '../../components/LeftRail/LeftRail';
+import './Home.css';
 
 class HomePage extends Component {
   render() {
     return (
-      <div className='Home'>
-        <div className='row'>
-          <div className='col'>
-            <img src={logo} className='App-logo' alt='logo' />
-            <p>
-              Edit <code>src/pages/Home.js</code> and save to reload.
-            </p>
-            <a
-              className='App-link'
-              href='https://reactjs.org'
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
-          </div>
-        </div>
+      <div className="testing">
+        <LeftRail />
+        <CardLayout/>
       </div>
     );
   }
 }
 
 export default HomePage;
+
+
+{/* {(window.innerWidth < 2000) && 
+          <div>hello</div>
+          } */}
