@@ -29,7 +29,7 @@ export default {
     }
   },
   Characters: {
-    getAll: function () {
+    getAllCharacters: function () {
       return axios.get('/api/characters');
     }
   },

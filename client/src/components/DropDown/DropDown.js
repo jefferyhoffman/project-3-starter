@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 const questions = [
     {
-    text:"test quesiton"
+    text:"What color is their hair"
     },
     {
     text:"test question 2"
@@ -20,6 +20,10 @@ const questions = [
 
 class DropDown extends Component {
 
+    handleAnswer(){
+
+    }
+
     render() {
         return (
             <div className="column is-one-quarter">
@@ -32,7 +36,7 @@ class DropDown extends Component {
                     <div className="dropdown-menu" id="dropdown-menu" role="menu">
                         <div className="dropdown-content">
                             {questions.map((question) => 
-                             <a className="dropdown-item" href="/">{question.text}</a>
+                             <a className="dropdown-item" href="/" onCLick={this.handleAnswer}>{question.text}</a>
                             )}
 
                         </div>
