@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const db = require("../models");
 
 mongoose.connect(
-    process.env.MONGO_URI || "mongodb://ProjectThree"
+    process.env.MONGO_URI || "mongodb://localhost/ProjectThree"
 )
 
 const characterSeed = [
