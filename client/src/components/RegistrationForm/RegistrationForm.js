@@ -55,6 +55,20 @@ class RegistrationForm extends Component {
                 </div>
                 <input
                   className='form-control'
+                  id='last-name'
+                  type='text'
+                  name='lastName'
+                  placeholder='Last Name'
+                  value={lastName}
+                  onChange={this.handleInputChange}
+                />
+              </div>
+              <div className='input-group mb-3'>
+                <div className="input-group-prepend">
+                  <span className="input-group-text"><Octicon icon={Mail} /></span>
+                </div>
+                <input
+                  className='form-control'
                   id='email'
                   type='email'
                   name='email'
