@@ -66,7 +66,7 @@ const characterSeed = [
         hairColor:"black",
         glasses: true,
         facialHair: false,
-        eyecolor: "brown",
+        eyeColor: "brown",
         fact: "Hosts 'Last Week Tonight'"
     },
     {
@@ -75,7 +75,7 @@ const characterSeed = [
         hairColor:"black",
         glasses: false,
         facialHair: true,
-        eyecolor: "brown",
+        eyeColor: "brown",
         fact: "began hosting his own radio show Noah’s Ark on Gauteng’s leading youth radio station, YFM"
     },
     {
@@ -84,7 +84,7 @@ const characterSeed = [
         hairColor:"black",
         glasses: false,
         facialHair: false,
-        eyecolor: "brown",
+        eyeColor: "brown",
         fact: "Wore a chicken suit for 16 days"
     },
     {
@@ -93,7 +93,7 @@ const characterSeed = [
         hairColor:"brown",
         glasses: false,
         facialHair: true,
-        eyecolor: "brown",
+        eyeColor: "brown",
         fact: "Was kicked out of school for stealing a car as an April Fool's joke"
     },
     
