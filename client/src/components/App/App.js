@@ -58,7 +58,7 @@ class App extends Component {
           <div className='container'>
             <Switch>
               <Route exact path='/' component={Login} />
-              <Route path='/menu' component={Menu}/>
+              <PrivateRoute path='/menu' component={Menu}/>
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />
               <PrivateRoute path='/secret' component={Secret} />
