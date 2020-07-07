@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ReactCardFlip from 'react-card-flip';
-
+import DropDown from '../DropDown/DropDown.js'
 
 
 
@@ -72,30 +72,53 @@ componentDidMount(){
   render() {
     return (
 
-      <div className="column is-one-quarter">
+      <div className="column is-3">
       <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="vertical">
-        <div className="card">
-          <h1 className="is-size-1">Who am I?</h1>
-          <img alt="bob"src="./mysteryWho1.png" style={{width:"200px",height:"200px"}} ></img>
+      <div class="tile is-ancestor">
+                <div className="tile is-parent">
+            <article className="tile is-child box scoreBox">
+            <article className="tile is-child box">
+        <h1 className="is-size-1">Who am I?</h1>
+          
+          <img alt="bob"src="https://i.pinimg.com/564x/4f/24/7a/4f247acf992487b5f1d8bdd641f6bd50.jpg" style={{width:"200px",height:"200px"}} ></img>
+          <div class="field">
+  <div class="control">
+   <DropDown/>
           <input
+          className='input'
            type="text" 
            name="guess"
            value={this.state.guess} 
            onChange={this.handleInputChange} 
            placeholder="Guess here"/>
+           </div>
+           </div>
+           <div class="buttons has-addons is-centered">
             <button 
-            className="button is-warning" 
+            className="button is-centered is-warning" 
             onClick={this.handleScore}>
-            Guess
+            <strong>Guess</strong>
             </button>
+            </div>
           {/* <button onClick={this.handleClick}>Click to flip</button> */}
+       </article>
+       </article>
+       </div>
         </div>
+
+
  
-        <div className="card">
+        <div class="tile is-ancestor">
+                <div className="tile is-parent">
+            <article className="tile is-child box scoreBox">
+            <article className="tile is-child box">
           <h1 className="is-size-1"> You got it!</h1>
           <img alt="bob"src="http://placekitten.com/200/200" style={{width:"200px",height:"200px"}} ></img>
           
           {/* <button onClick={this.handleClick}>Click to flip</button> */}
+        </article>
+        </article>
+        </div>
         </div>
       </ReactCardFlip>
       </div> 
