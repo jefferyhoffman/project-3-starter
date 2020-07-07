@@ -51,9 +51,7 @@ class Navigation extends Component {
       //   </nav>
       // </div>
 
-      <Menu
-              fixed="true"
-            >
+      <Menu inverted={true}>
               <Container>
                 <Menu.Item as='a' active>
                   Home
@@ -64,12 +62,12 @@ class Navigation extends Component {
                 ? <AuthDropdown onClick={this.toggleCollapse} />
                 : (
                   <>
-                  <Button as='a'>
+                  <Button as='a' inverted={true} color={"blue"}>
                     Log in
                   </Button>
-                  <Button as='a' inverted="false" primary="true" style={{ marginLeft: '0.5em' }}>
+                  <Button as='a' inverted={true} color={"green"} style={{ marginLeft: '0.5em' }}>
                     Sign Up
-                  </Button>
+                  </Button> 
                   </>
                 )
               }
