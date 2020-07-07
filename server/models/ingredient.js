@@ -18,10 +18,10 @@ module.exports = function (sequelize, DataTypes) {
     // Relationships
     Ingredient.associate = models => {
         // Ingredient can have many Recipes
-		Ingredient.belongsToMany(models.Recipe);
+		Ingredient.belongsToMany(models.Recipe, { through: RecipeIngredient });
 
         // Ingredient can have many (shopping) Lists
-		Ingredient.belongsToMany(models.Lists);
+		Ingredient.belongsToMany(models.List, { through: ListIngredient });
 
     };
 

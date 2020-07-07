@@ -10,7 +10,7 @@ module.exports = function (sequelize, DataTypes) {
     // Relationships
     Category.associate = models => {
         // Category can have many Recipes
-		Category.belongsToMany(models.Recipe);
+		Category.belongsToMany(models.Recipe, { through: RecipeCategory});
 
     };
 
