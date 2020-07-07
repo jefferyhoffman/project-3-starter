@@ -1,0 +1,12 @@
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem !important;
+  }
+
+.checks {
+  margin: 1rem;
+}
+
+
+
