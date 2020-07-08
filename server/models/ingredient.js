@@ -17,11 +17,19 @@ module.exports = function (sequelize, DataTypes) {
 
     // Relationships
     Ingredient.associate = models => {
-        // Ingredient can have many Recipes
-		Ingredient.belongsToMany(models.Recipe, { through: RecipeIngredient });
+        // Ingredients can have many Recipes & Recipes can have many Ingredients
+		Ingredient.belongsToMany(models.Recipe, {
+            through: "recipe_ingredient",
+            as: "recipes",
+            foreignKey: "ingredient_id"
+        });
 
-        // Ingredient can have many (shopping) Lists
-		Ingredient.belongsToMany(models.List, { through: ListIngredient });
+        // Ingredients can have many (shopping) Lists & Lists can have many Ingredients
+		Ingredient.belongsToMany(models.List, {
+            through: "list_ingredient",
+            as: "lists",
+            foreignKey: "ingredient_id"
+        });
 
     };
 
