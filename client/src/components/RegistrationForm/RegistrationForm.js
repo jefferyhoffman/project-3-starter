@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import { Button, Form, Container } from "semantic-ui-react";
 
-import Octicon, { Mail, Key } from '@githubprimer/octicons-react';
+import "./RegistrationForm.css";
 
 class RegistrationForm extends Component {
   state = {
@@ -9,125 +10,127 @@ class RegistrationForm extends Component {
     username: "",
     email: "",
     password: "",
-    passwordConfirm: ""
+    passwordConfirm: "",
   };
 
-  handleInputChange = event => {
+  handleInputChange = (event) => {
     const { name, value } = event.target;
 
     this.setState({
-      [name]: value
+      [name]: value,
     });
-  }
+  };
 
-  handleSubmit = event => {
-    const { firstName, lastName, username, email, password, passwordConfirm } = this.state;
+  handleSubmit = (event) => {
+    const {
+      firstName,
+      lastName,
+      username,
+      email,
+      password,
+      passwordConfirm,
+    } = this.state;
 
-    this.props.onSubmit(firstName, lastName, username, email, password, passwordConfirm);
+    this.props.onSubmit(
+      firstName,
+      lastName,
+      username,
+      email,
+      password,
+      passwordConfirm
+    );
     event.preventDefault();
-  }
+  };
 
   render() {
-    const { firstName, lastName, username, email, password, passwordConfirm } = this.state;
+    const {
+      firstName,
+      lastName,
+      username,
+      email,
+      password,
+      passwordConfirm,
+    } = this.state;
 
     return (
-      <div className="LoginForm">
-        <div className="card">
-          <div className="card-body">
-            <form onSubmit={this.handleSubmit}>
-            <div className="input-group mb-3">
-                <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Mail} /></span>
-                </div>
-                <input
-                  className="form-control"
-                  id="first-name"
-                  type="text"
-                  name="firstName"
-                  placeholder="First Name"
-                  value={firstName}
-                  onChange={this.handleInputChange}
-                />
-              </div>
-              <div className="input-group mb-3">
-                <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Mail} /></span>
-                </div>
-                <input
-                  className="form-control"
-                  id="last-name"
-                  type="text"
-                  name="lastName"
-                  placeholder="Last Name"
-                  value={lastName}
-                  onChange={this.handleInputChange}
-                />
-              </div>
-              <div className="input-group mb-3">
-                <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Mail} /></span>
-                </div>
-                <input
-                  className="form-control"
-                  id="username"
-                  type="text"
-                  name="username"
-                  placeholder="Username"
-                  value={username}
-                  onChange={this.handleInputChange}
-                />
-              </div>
-              <div className="input-group mb-3">
-                <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Mail} /></span>
-                </div>
-                <input
-                  className="form-control"
-                  id="email"
-                  type="email"
-                  name="email"
-                  placeholder="email@provider.com"
-                  value={email}
-                  onChange={this.handleInputChange}
-                />
-              </div>
-
-              <div className="input-group mb-3">
-                <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Key} /></span>
-                </div>
-                <input
-                  className="form-control"
-                  id="password"
-                  type="password"
-                  name="password"
-                  placeholder="password"
-                  value={password}
-                  onChange={this.handleInputChange}
-                />
-              </div>
-
-              <div className="input-group mb-3">
-                <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Key} /></span>
-                </div>
-                <input
-                  className="form-control"
-                  id="password-confirm"
-                  type="password"
-                  name="passwordConfirm"
-                  placeholder="password (again)"
-                  value={passwordConfirm}
-                  onChange={this.handleInputChange}
-                />
-              </div>
-
-              <button className="btn btn-primary" type="submit">Register Now!</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    )
+      <Container className="bg">
+        <Form onSubmit={this.handleSubmit}>
+          <Form.Field required>
+            <label>First Name</label>
+            <input
+              placeholder="First Name"
+              className="form-control"
+              id="first-name"
+              type="text"
+              name="firstName"
+              value={firstName}
+              onChange={this.handleInputChange}
+            />
+          </Form.Field>
+          <Form.Field required>
+            <label>Last Name</label>
+            <input
+              placeholder="Last Name"
+              className="form-control"
+              id="last-name"
+              type="text"
+              name="lastName"
+              value={lastName}
+              onChange={this.handleInputChange}
+            />
+          </Form.Field>
+          <Form.Field required>
+            <label>Username</label>
+            <input
+              placeholder="Username"
+              className="form-control"
+              id="username"
+              type="text"
+              name="username"
+              value={username}
+              onChange={this.handleInputChange}
+            />
+          </Form.Field>
+          <Form.Field required>
+            <label>E-mail</label>
+            <input
+              placeholder="E-mail"
+              className="form-control"
+              id="email"
+              type="text"
+              name="email"
+              value={email}
+              onChange={this.handleInputChange}
+            />
+          </Form.Field>
+          <Form.Field required>
+            <label>Password</label>
+            <input
+              placeholder="Password"
+              className="form-control"
+              id="password"
+              type="password"
+              name="password"
+              value={password}
+              onChange={this.handleInputChange}
+            />
+          </Form.Field>
+          <Form.Field required>
+            <label>Confirm Password</label>
+            <input
+              placeholder="Confirm Password"
+              className="form-control"
+              id="password-confirm"
+              type="password"
+              name="passwordConfirm"
+              value={passwordConfirm}
+              onChange={this.handleInputChange}
+            />
+          </Form.Field>
+          <Button type="submit">Register!</Button>
+        </Form>
+      </Container>
+    );
   }
 }
 
