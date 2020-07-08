@@ -4,11 +4,14 @@ import axios from 'axios'
 
 const Characters = () => {
     const [character, setCharacter] = useState([]);
+    const [isFlipped, setisFlipped] = useState(false);
 
     //handle card flip
-    const handleFlip = () => {
-        setCharacter(prevState => ({ isFlipped: !prevState.isFlipped }));
+    const handleFlip = (e) => {
+        e.preventDefault()
+        setisFlipped(prevState => ({ isFlipped: !prevState.isFlipped }));
     };
+
     useEffect(() => {
         axios.get('/api/characters')
             .then((res) => {
@@ -23,24 +26,24 @@ const Characters = () => {
             </div>
             <br />
 
-
             <div className="columns is-centered is-multiline">
 
                 {/* Mapping through characters to render api */}
                 {character.map((char) => {
                     return (
                         <div className="column is-one-quarter">
-                            <div className="box" style={{ maxHeight: "400px" }}>
+                        <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
+                        <div className="box" style={{ maxHeight: "400px" }} onClick={handleFlip}>
                                 <h4> {char.name}</h4>
                                 <img alt={char.name} src={char.picture} style={{ width: "200px", height: "200px" }} />
+                        </div>
 
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type 
-                                and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, 
-                                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
-                                more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                                
-                            </div>
+                        <div className="box" style={{ maxHeight: "400px" }}>
+                                <p>{char.fact}</p>
+                            
+                        </div>
+                        </ReactCardFlip>
+                            
                         </div>
                     )
                 })}
