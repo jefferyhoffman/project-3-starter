@@ -20,8 +20,8 @@ const CharacterContainer = (props) => {
                     <img alt={props.name} src={props.image} style={{ width: "200px", height: "200px" }} />
                 </div>
 
-                <div className="box" style={{ maxHeight: "400px" }}>
-                    <p>{props.fact}</p>
+                <div className="box" style={{ maxHeight: "400px" }} onClick={handleFlip}>
+                    <p onClick={handleFlip}>{props.fact}</p>
                 </div>
             </ReactCardFlip>
 
