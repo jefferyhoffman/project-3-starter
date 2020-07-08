@@ -1,7 +1,7 @@
 const controllers = require("express").Router();
 
-module.exports = controllers => {
-    const apiControllers = require("./api");
+const apiControllers = require("./api");
 
-    controllers.use("/api", apiControllers);
-}
+controllers.use("/api", apiControllers);
+
+module.exports = controllers;
