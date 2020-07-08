@@ -21,10 +21,10 @@ const Navigation = () => {
     >
       <div className="navbar-brand" to="#">
         <a className="navbar-item" href="#">
-          <img src="./assets/images/theLumberJack.png " className='image is-rounded'/>
+          <img src="./assets/images/lgLogo.png " className='logo'/>
         </a>
       </div>
-      <label
+      <a
         onClick={() => {
           setisActive(!isActive);
         }}
@@ -37,21 +37,27 @@ const Navigation = () => {
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
-      </label>
+      </a>
 
       <div className={`navbar-menu ${isActive ? "is-active" : ""}`}>
         <div className="navbar-start">
-          <Link to="/" className="navbar-item">
+          <Link to="/" className="navbar-item"  onClick={() => {
+          setisActive(!isActive);
+        }}>
             <strong>Home</strong>
           </Link>
 
-          <Link className="navbar-item" to="/leaderboard">
+          <Link className="navbar-item" to="/leaderboard"  onClick={() => {
+          setisActive(!isActive);
+        }}>
             <strong>Leaderboard 🔥</strong>
           </Link>
 
           {/*Only render if the user is logged in */}
           {user && (
-            <Link className="navbar-item" to="/menu">
+            <Link className="navbar-item" to="/menu"  onClick={() => {
+          setisActive(!isActive);
+        }}>
               <strong>Menu</strong>
             </Link>
           )}

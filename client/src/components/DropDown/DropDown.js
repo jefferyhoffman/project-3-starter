@@ -1,35 +1,99 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 
 
 const questions = [
     {
-    number:1,
-    text:"Eye Color?"
+    text:"Blue Hair?", value: "blue"
     },
     {
-        number:2,
-    text:"Hair Color?"
+    text:"Red Hair?" , value: "red"
     },
     {
-    number:3,
-    text:"Hs Facial Hair?"
+    text:"Brown Hair?", value: "brown"
     },
     {
-    number:4,
-    text:"Wears Glasses?"
+    text:"Gray Hair?", value: "gray"
     },
     {
-    number:5,
-    text:"What's Their interesting tidbit?"
+    text:"Black Hair?", value: "black"
     },
-]
+    {
+    text:"Wear Glasses?", value: true
+    },
+    {
+    text:"No Glasses?", value: false
+    },
+    {
+    text:"Have Facial Hair?", value: true
+    },
+    {
+    text:"No Facial Hair?", value: false
+    },
+    {
+    text:"Blue Eyes?", value: "blue"
+    },
+    {
+    text:"Hazel Eyes?", value: "hazel"
+    },
+    {
+    text:"Brown Eyes?", value: "brown"
+    },
+    {
+    text:"Green Eyes?", value: "green"
+    },
+    {
+    text:"found $10,000 in a couch?", value: "Found 10 grand in a couch."
+    },
+    ]
+
 
 class DropDown extends Component {
-
+    constructor(){
+        super();
+        this.state={
+        hairQ:"",
+        glassesQ: "",
+        facialhairQ: "",
+        eyeQ: "",
+        factQ: "",
+        qChoice: "",
+        }
+    }
     
+    componentDidMount(){
+        axios.get('/api/characters')
+        .then((res)=>{
+            this.setState({qChoice: Math.floor(Math.random()*9)})
+          this.setState({hairQ: res.data[this.state.qChoice].hairColor})
+          this.setState({glassesQ: res.data[this.state.qChoice].glasses})
+          this.setState({facialhairQ:res.data.facialHair})
+          this.setState({eyeQ:res.data.eyeColor})
+          this.setState({factQ: res.data.fact}) 
+          console.log(res.data)
+          console.log(this.state.hairQ)
+          console.log(this.state.glassesQ)
+    
+        })
+    }
 
     handleAnswer(){
-       
+        axios.get('/api/characters')
+        .then((res)=>{
+        if (questions[this.state.qChoice].value && this.state.hairQ !== res.data.hairColor){
+            console.log(questions.value)
+            alert("incorrect")
+        } else if (questions.value && this.state.glassesQ !== res.data.glasses){
+            alert("incorrect")
+        } else if (questions.value && this.state.facialhairQ !== res.data.facialHair){
+            alert("incorrect")
+        }else if (questions.value && this.state.eyeQ !== res.data.eyeColor){
+            alert("incorrect")
+        }else if (questions.value && this.state.factQ !== res.data.fact){
+            alert("incorrect")
+        }
+            
+    })
     }
     
 
@@ -37,6 +101,7 @@ class DropDown extends Component {
 
     render() {
         return (
+            
             <div className="column is-one-quarter">
                 <div className="dropdown is-hoverable">
                     <div className="dropdown-trigger">
@@ -46,8 +111,8 @@ class DropDown extends Component {
                     </div>
                     <div className="dropdown-menu" id="dropdown-menu" role="menu">
                         <div className="dropdown-content">
-                            {questions.map((question) => 
-                             <a className="dropdown-item"  onCLick={this.handleAnswer}>{question.text}</a>
+                            {questions.map((questiontext, value) => 
+                             <button className="dropdown-item" onClick={this.handleAnswer}>{questiontext.text}</button>
                             )}
 
                         </div>

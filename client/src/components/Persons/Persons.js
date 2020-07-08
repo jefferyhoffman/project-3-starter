@@ -37,7 +37,7 @@ class Persons extends Component {
         </div>
         <br/>
           <div className="columns is-centered">
-        <div class="tile is-ancestor">
+        <div className="tile is-ancestor">
             {people.map(person => (
               <div className="tile is-parent">
                 <article className="tile is-child box cardBox">

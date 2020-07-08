@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import ReactCardFlip from 'react-card-flip';
 import DropDown from '../DropDown/DropDown.js';
 import axios from 'axios'
+import Answers from '../Answers/Answers'
+import Score from '../Score/Score.js'
 
 const randomnumber = Math.floor(Math.random() * 10)
 
