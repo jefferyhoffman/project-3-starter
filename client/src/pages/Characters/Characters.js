@@ -6,12 +6,13 @@ import axios from 'axios'
 const Characters = () => {
     const [character, setCharacter] = useState({
         isFlipped: false,
-        guess: "",
-        who: "Bob",
-        score: 10,
-        Chars: [],
-        choice: '',
-        whoImg: ''
+        name: "",
+        hairColor: "",
+        glasses: true,
+        facialHair: true ,
+        eyeColor: "",
+        fact: "",
+        story:""
     })
 
     //handle card flip
@@ -22,15 +23,17 @@ const Characters = () => {
     useEffect(() =>{
        axios.get('/api/characters')
             .then((res) => {
-                setCharacter({ choice: Math.round(Math.random() * 9) })
-                setCharacter({ Chars: res.data })
-                setCharacter({ who: res.data[this.state.choice].name })
-                setCharacter({ whoImg: res.data[this.state.choice].picture })
-                setCharacter({})
+                setCharacter({ name: res.data.name })
+                setCharacter({ hairColor: res.data.hairColor })
+                setCharacter({ glasses: res.data.glasses })
+                setCharacter({ facialHair: res.data.facialHair })
+                setCharacter({ eyeColor: res.data.eyeColor })
+                setCharacter({ fact: res.data.fact})
+                setCharacter({story: res.data.story})
             }) 
     }, []);
         
-    handleInputChange = event => {
+    const handleInputChange = event => {
         const { name, value } = event.target;
         this.setState({
             [name]: value
