@@ -36,7 +36,7 @@ class DropDown extends Component {
                     <div className="dropdown-menu" id="dropdown-menu" role="menu">
                         <div className="dropdown-content">
                             {questions.map((question) => 
-                             <a className="dropdown-item" href="/" onCLick={this.handleAnswer}>{question.text}</a>
+                             <a className="dropdown-item" href="/" onClick={this.handleAnswer}>{question.text}</a>
                             )}
 
                         </div>
