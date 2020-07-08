@@ -2,13 +2,15 @@
     position: relative;
     padding: 0px;
     margin: 80px;
-    width: 20px;
+    width: 50px;
 }
 
 .email {
-    width: 5px;
+    width: 20px;
+    position: relative;
 }
 
 .password {
-    width: 5px;
+    width: 20px;
+    position: relative;
 }

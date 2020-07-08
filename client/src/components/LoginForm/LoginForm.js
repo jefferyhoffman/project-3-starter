@@ -28,13 +28,11 @@ class LoginForm extends Component {
 
         return (
           <Container className="login">
-            <Segment inverted>
+            <Segment className="seg" inverted>
                 <Form inverted onSubmit={this.handleSubmit}>
-                    <Form.Group widths="equal">
                       <Form.Input className="email" type="email" name="email" label="E-mail" placeholder="E-mail" value={email} onChange={this.handleInputChange}/>
-                      <br />
+                      <br/>
                       <Form.Input className="password" label="Password" type="password" name="password" placeholder="Password" value={password} onChange={this.handleInputChange}/>
-                    </Form.Group>
                     <Button type="submit">Submit</Button>
                 </Form>
             </Segment>
