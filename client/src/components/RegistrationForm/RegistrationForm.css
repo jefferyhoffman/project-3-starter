@@ -1,14 +1,15 @@
-.test {
+.bg{
     padding: 1.2rem;
     border-radius: 10px;
     background-image: linear-gradient(to bottom right,#13547a, #80d0c7);
-    margin-top: 10rem;
+    margin-top: 4rem;
 }
 
-.test1 {
-    opacity: 0;
+label {
+    text-align: left;
 }
 
-
-
-
+form {
+    width: 75%;
+    margin: auto;
+}
