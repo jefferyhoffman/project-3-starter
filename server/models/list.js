@@ -15,8 +15,12 @@ module.exports = function (sequelize, DataTypes) {
             targetKey: "id"
         });
 
-        // List can have many Ingredients
-		List.belongsToMany(models.Ingredient, { through: ListIngredient });
+        // Lists can have many Ingredients
+		List.belongsToMany(models.Ingredient, {
+            through: "list_ingredient",
+            as: "ingredients",
+            foreignKey: "list_id"
+        });
 
     };
 
