@@ -26,6 +26,7 @@ const Card = () => {
     else {
       handleGuess()
       console.log(who)
+      console.log(choice)
     }
   }
   const handleGuess = () => {
@@ -63,7 +64,7 @@ const Card = () => {
         <div className="box">
           <h1 className="is-size-1"> ????</h1>
           <img alt="bob" src="../../assets/images/mysteryWho1.png" style={{ width: "200px", height: "200px" }} ></img>
-          <DropDown />
+          <DropDown choice={randomnumber} />
           <input className='input' type="text" name="guess" value={guess} onChange={e => setguess(e.target.value)} placeholder="Guess here" />
           <button className="button is-warning" onClick={handleScore}>Guess</button>
         </div>
