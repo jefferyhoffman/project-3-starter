@@ -1,6 +1,7 @@
 import React, { useEffect, useState, Component } from 'react'
 import ReactCardFlip from 'react-card-flip';
 import axios from 'axios'
+import CharacterContainer from '../../components/CharacterContainer/CharacterContainer';
 
 const Characters = () => {
     const [character, setCharacter] = useState([]);
@@ -31,29 +32,14 @@ const Characters = () => {
                 {/* Mapping through characters to render api */}
                 {character.map((char) => {
                     return (
-                        <div className="column is-one-quarter">
-                        <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
-                        <div className="box" style={{ maxHeight: "400px" }} onClick={handleFlip}>
-                                <h4> {char.name}</h4>
-                                <img alt={char.name} src={char.picture} style={{ width: "200px", height: "200px" }} />
-                        </div>
-
-                        <div className="box" style={{ maxHeight: "400px" }}>
-                                <p>{char.fact}</p>
-                            
-                        </div>
-                        </ReactCardFlip>
-                            
-                        </div>
+                        <CharacterContainer key={char._id} name={char.name} image={char.picture} fact={char.fact}/>
+                        
                     )
                 })}
                 {/* End of map */}
             </div>
-
         </div>
     )
-
-
 }
 
 export default Characters
