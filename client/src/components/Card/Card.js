@@ -96,7 +96,7 @@ handleScore =()=>{
        
      
      
-      <div class="tile is-ancestor">
+      <div className="tile is-ancestor">
       <Answers/>
       <div className="column is-3">
       <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="vertical">

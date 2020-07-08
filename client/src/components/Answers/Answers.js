@@ -7,11 +7,11 @@ class Answers extends Component {
   render() {
     return (
       <div className="column is-4">
-        <div class="tile is-ancestor">
+        <div className="tile is-ancestor">
           <div className="tile is-parent">
             <article className="tile is-child box answerBox">
-              <div class="card">
-                <div class="card-content">
+              <div className="card">
+                <div className="card-content">
                   <p className="title">Character Facts</p>
                   <ul>
                     <li>1. Character Wears Glasses</li>
