@@ -15,7 +15,9 @@ import NotFound from '../../pages/NotFound/NotFound';
 import Leaderboard from '../../pages/Leaderboard/Leaderboard'
 import Game from '../../pages/Game/Game'
 
+
 import './App.css';
+
 
 class App extends Component {
   constructor(props) {
@@ -56,7 +58,7 @@ class App extends Component {
       <AuthContext.Provider value={this.state.auth}>
         <div className='App'>
           <Navigation />
-          <div className='container'>
+                <div className='container'>
             <Switch>
               <Route exact path='/' component={Login} />
               <PrivateRoute path='/menu' component={Menu}/>
@@ -68,7 +70,7 @@ class App extends Component {
               <Route component={NotFound} />
             </Switch>
           </div>
-          <Footer/>
+                <Footer/>
         </div>
       </AuthContext.Provider>
     );
