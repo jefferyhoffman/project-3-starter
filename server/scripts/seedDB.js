@@ -7,11 +7,7 @@ mongoose.connect(
 
 const characterSeed = [
     {
-<<<<<<< HEAD
         picture: "../../../assets/images/mrCoder.png",
-=======
-        picture: "../../public/assets/images/mrCoder.png",
->>>>>>> ce5fbdb676c648a9e72b6d56cd9b896309af9ec6
         name: "Mr. Coder",
         hairColor: "brown",
         glasses: true,
@@ -20,11 +16,7 @@ const characterSeed = [
         fact: "Studied Hypnotism, dont let him snap around you!"
     },
     {
-<<<<<<< HEAD
         picture: "../../../assets/images/theLumberjack.png",
-=======
-        picture: "../../public/assets/images/theLumberjack.png",
->>>>>>> ce5fbdb676c648a9e72b6d56cd9b896309af9ec6
         name: "The Lumberjack",
         hairColor: "blue",
         glasses: false,
@@ -33,11 +25,7 @@ const characterSeed = [
         fact: "has a degree in forestry."
     },
     {
-<<<<<<< HEAD
         picture: "../../../assets/images/karen.png",
-=======
-        picture: "../../public/assets/images/karen.png",
->>>>>>> ce5fbdb676c648a9e72b6d56cd9b896309af9ec6
         name: "Karen",
         hairColor: "red",
         glasses: false,
@@ -46,11 +34,7 @@ const characterSeed = [
         fact: "has an unnecessarily large SUV to take her kids to soccer practice and be a menace on the road."
     },
     {
-<<<<<<< HEAD
         picture: "../../../assets/images/frank.png",
-=======
-        picture: "../../public/assets/images/frank.png",
->>>>>>> ce5fbdb676c648a9e72b6d56cd9b896309af9ec6
         name: "Frank The Tank",
         hairColor: "gray",
         glasses: false,
@@ -59,11 +43,7 @@ const characterSeed = [
         fact: "Found 10 grand in a couch."
     },
     {
-<<<<<<< HEAD
         picture: "../../../assets/images/egirl.png",
-=======
-        picture: "../../public/assets/images/egirl.png",
->>>>>>> ce5fbdb676c648a9e72b6d56cd9b896309af9ec6
         name: "egirl",
         hairColor: "purple",
         glasses: false,
@@ -72,11 +52,7 @@ const characterSeed = [
         fact: "loves playing and streaming video games"
     },
     {
-<<<<<<< HEAD
         picture: "../../../assets/images/instagram-model.png",
-=======
-        picture: "../../public/assets/images/instagram-model.png",
->>>>>>> ce5fbdb676c648a9e72b6d56cd9b896309af9ec6
         name: "instagram-model",
         hairColor: "black",
         glasses: true,
