@@ -1,4 +1,4 @@
-iimport React, { Component } from "react";
+import React, { Component } from "react";
 import "./Answers.css";
 class Answers extends Component {
   state = {

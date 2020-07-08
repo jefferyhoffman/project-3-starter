@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import ReactCardFlip from 'react-card-flip';
 import DropDown from '../DropDown/DropDown.js';
 import axios from 'axios'
+import Answers from '../Answers/Answers'
+import Score from '../Score/Score.js'
 
 
 
@@ -90,6 +92,12 @@ handleScore =()=>{
   
   render() {
     return (
+      <div className='columns'>
+       
+     
+     
+      <div class="tile is-ancestor">
+      <Answers/>
       <div className="column is-3">
       <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="vertical">
       <div className="tile is-ancestor">
@@ -139,6 +147,9 @@ handleScore =()=>{
         </div>
       </ReactCardFlip>
       </div> 
+      <Score/>
+      </div>
+      </div>
     )
   }
 }
