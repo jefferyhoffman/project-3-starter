@@ -2,7 +2,7 @@
 
 // Define the User model
 module.exports = (sequelize, DataTypes) => {
-  const User = sequelize.define("User", {
+	const User = sequelize.define("User", {
 		email: {
 			type: DataTypes.STRING,
 			allowNull: false,
@@ -28,23 +28,29 @@ module.exports = (sequelize, DataTypes) => {
 			type: DataTypes.STRING,
 			allowNull: false
 		}
-  }, {});
-  // This empty object was added as it was in the user model of the starter code.
+	}, {});
+	// This empty object was added as it was in the user model of the starter code.
 
 	// Relationships
-	User.associate = function(models) {
-		// User can have many recipes
-		User.belongsToMany(models.Recipe, { through: UserRecipe });
-		// User can have many reviews
+	User.associate = function (models) {
+		// Users can have many Recipes & Recipes can have many Users
+		User.belongsToMany(models.Recipe, {
+			through: "user_recipe",
+			as: "recipes",
+			foreignKey: "user_id"
+		});
+
+		// Users can have many reviews
 		User.hasMany(models.Review);
-		// User can have many shopping lists
-		User.hasMany(models.ShoppingList)
+
+		// Users can have many (shopping) lists
+		User.hasMany(models.List)
 	};
 
-  User.prototype.comparePassword = function (challenge) {
-    return this.password === challenge;
-  };
+	User.prototype.comparePassword = function (challenge) {
+		return this.password === challenge;
+	};
 
 	// Return the User model as defined to be exported to the app
-  return User;
+	return User;
 };
