@@ -37,6 +37,9 @@ const CharacterSchema = new Schema({
                 type: String,
                 trim: true,
                 require: true
+            },
+            story: {
+                type: String,
             }
 
 }

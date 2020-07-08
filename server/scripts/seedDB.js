@@ -13,7 +13,8 @@ const characterSeed = [
         glasses: true,
         facialHair: true ,
         eyeColor: "brown",
-        fact: "Studied Hypnotism, dont let him snap around you!"
+        fact: "Studied Hypnotism, dont let him snap around you!",
+        story: ""
     },
     {
         picture: "../../../assets/images/theLumberjack.png",
@@ -22,7 +23,8 @@ const characterSeed = [
         glasses: false,
         facialHair: true ,
         eyeColor: "blue",
-        fact: "has a degree in forestry."
+        fact: "has a degree in forestry.",
+        story: ""
     },
     {
         picture: "../../../assets/images/karen.png",
@@ -31,7 +33,8 @@ const characterSeed = [
         glasses: false,
         facialHair: false ,
         eyeColor: "blue",
-        fact: "has an unnecessarily large SUV to take her kids to soccer practice and be a menace on the road."
+        fact: "has an unnecessarily large SUV to take her kids to soccer practice and be a menace on the road.",
+        story: ""
     },
     {
         picture: "../../../assets/images/frank.png",
@@ -40,7 +43,8 @@ const characterSeed = [
         glasses: false,
         facialHair: false ,
         eyeColor: "blue",
-        fact: "Found 10 grand in a couch."
+        fact: "Found 10 grand in a couch.",
+        story: ""
     },
     {
         picture: "../../../assets/images/egirl.png",
@@ -49,7 +53,8 @@ const characterSeed = [
         glasses: false,
         facialHair: false ,
         eyeColor: "green",
-        fact: "loves playing and streaming video games"
+        fact: "loves playing and streaming video games",
+        story: ""
     },
     {
         picture: "../../../assets/images/instagram-model.png",
@@ -58,7 +63,8 @@ const characterSeed = [
         glasses: true,
         facialHair: false ,
         eyeColor: "hazel",
-        fact: "absolutely adores loves the way they look, always on the phone"
+        fact: "absolutely adores loves the way they look, always on the phone",
+        story: ""
     },
     {
         picture:"../../../assets/images/johnOliver.png",
@@ -67,7 +73,8 @@ const characterSeed = [
         glasses: true,
         facialHair: false,
         eyeColor: "brown",
-        fact: "Hosts 'Last Week Tonight'"
+        fact: "Hosts 'Last Week Tonight'",
+        story: ""
     },
     {
         picture:"../../../assets/images/trevorNoah.png",
@@ -76,7 +83,8 @@ const characterSeed = [
         glasses: false,
         facialHair: true,
         eyeColor: "brown",
-        fact: "began hosting his own radio show Noah’s Ark on Gauteng’s leading youth radio station, YFM"
+        fact: "began hosting his own radio show Noah’s Ark on Gauteng’s leading youth radio station, YFM",
+        story: ""
     },
     {
         picture:"../../../assets/images/jameela.png",
@@ -85,7 +93,8 @@ const characterSeed = [
         glasses: false,
         facialHair: false,
         eyeColor: "brown",
-        fact: "Wore a chicken suit for 16 days"
+        fact: "Wore a chicken suit for 16 days",
+        story: ""
     },
     {
         picture:"../../../assets/images/deadpool.png",
@@ -94,7 +103,8 @@ const characterSeed = [
         glasses: false,
         facialHair: true,
         eyeColor: "brown",
-        fact: "Was kicked out of school for stealing a car as an April Fool's joke"
+        fact: "Was kicked out of school for stealing a car as an April Fool's joke",
+        story: ""
     },
     
 
