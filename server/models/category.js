@@ -9,8 +9,12 @@ module.exports = function (sequelize, DataTypes) {
 
     // Relationships
     Category.associate = models => {
-        // Category can have many Recipes
-		Category.belongsToMany(models.Recipe, { through: RecipeCategory});
+        // Categories can have many Recipes & Recipes can have many Categories
+		Category.belongsToMany(models.Recipe, { 
+            through: "recipe_category",
+            as: "recipes",
+            foreignKey: "category_id"
+        });
 
     };
 
