@@ -17,6 +17,7 @@ import Game from '../../pages/Game/Game'
 
 
 import './App.css';
+import Characters from '../../pages/Characters/Characters';
 
 
 class App extends Component {
@@ -67,6 +68,7 @@ class App extends Component {
               <PrivateRoute path='/secret' component={Secret} />
               <Route path="/leaderboard" component={Leaderboard}/>
               <Route path ="/Game" component={Game} />
+              <Route path ="/Characters" component={Characters}/>
               <Route component={NotFound} />
             </Switch>
           </div>
