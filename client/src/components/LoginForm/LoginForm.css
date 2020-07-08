@@ -1,0 +1,14 @@
+.login {
+    position: relative;
+    padding: 0px;
+    margin: 80px;
+    width: 20px;
+}
+
+.email {
+    width: 5px;
+}
+
+.password {
+    width: 5px;
+}
