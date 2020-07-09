@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Menu, Button, Container, Image } from 'semantic-ui-react';
+import {Menu, Button, Container } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
 
 import './Navigation.css'

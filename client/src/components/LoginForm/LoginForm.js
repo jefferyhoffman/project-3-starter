@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, Form, Segment, Image, Container } from "semantic-ui-react";
+import { Button, Form, Container } from "semantic-ui-react";
 import "./LoginForm.css";
 import { NavLink } from "react-router-dom";
 
