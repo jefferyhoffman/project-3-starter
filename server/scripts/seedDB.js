@@ -125,6 +125,16 @@ const characterSeed = [
         eyeColor:"blue",
         fact:"I have been a sponsored extreme sports athlete",
         story:"Andrew has been working on his technology skills most of the time. Hobbies include playing video games, and playing/ writing music."
+    }, 
+    {
+        picture:"../../../assets/images/George.png",
+        name: "George",
+        hairColor:"Black",
+        glasses: true,
+        facialHair: false,
+        eyeColor: "brown",
+        fact: "Worked as a tire technician for about 7 years",
+        story:"Studied in Computer Science for about 5 years and really into gaming."
     }
 
 ];
