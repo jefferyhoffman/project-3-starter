@@ -64,7 +64,6 @@ class Login extends Component {
         <div className='row'>
           <div className='col'>
             <LoginForm onSubmit={this.handleSubmit} />
-            <div className='mt-3'>Don't have an account? <Link to='/register'>Click here to register.</Link></div>
           </div>
         </div>
       </div>
