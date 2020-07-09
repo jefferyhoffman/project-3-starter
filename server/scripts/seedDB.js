@@ -106,7 +106,16 @@ const characterSeed = [
         fact: "Was kicked out of school for stealing a car as an April Fool's joke",
         story: ""
     },
-    
+    {
+        picture:"../../../assets/images/Jake.png",
+        name:"Jake",
+        hairColor:"brown",
+        glasses:false,
+        facialHair:true,
+        eyeColor:"brown",
+        fact:"I've made my own Dragon Ball Z costume armor for a",
+        story:""
+    }
 
 ];
 
