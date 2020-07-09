@@ -4,7 +4,7 @@ import DropDown from '../DropDown/DropDown.js';
 import axios from 'axios'
 import Bulma from '@vizuaalog/bulmajs';
 
-const randomnumber = Math.floor(Math.random() * 10)
+const randomnumber = Math.floor(Math.random() * 11)
 
 const Card = () => {
 
