@@ -26,26 +26,6 @@ const DropDown = (props) => {
             })
     }, [])
 
-<<<<<<< HEAD
-//  function handleEye(){
-//     if (questions[1].text){
-//         console.log(eye)
-//         alert(`Eye color is ${eye}`)
-//     }
-//  }
-=======
-
-    const handleInfo = (state) => {
-        Bulma().alert({
-            type: 'info',
-            title: 'The answer to your question',
-            body: `${hair}`,
-            confirm: 'Confirm it!',
-            cancel: 'Maybe not'
-        });
-    }
-
->>>>>>> 745347d6d7e2c0888b85177acbccc09d4f4af359
 
 
     return (
