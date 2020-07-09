@@ -14,11 +14,7 @@ const characterSeed = [
         facialHair: true ,
         eyeColor: "brown",
         fact: "Studied Hypnotism, dont let him snap around you!",
-<<<<<<< HEAD
-        story: "Mr.Coder Quark or quarg is a type of fresh dairy product made by warming soured milk until the desired amount of curdling is met, and then straining it. It can be classified as fresh acid-set cheese. Traditional quark can be made without rennet, but in modern dairies small quantities of rennet are typically added."
-=======
         story: "It is said that Mr. Coder is the best front end engineer in all of the land, teaching hundreds of people from all walks of life how to code."
->>>>>>> 5787dfc2ea1be5703f4e047e6125f28e5bfaa68e
     },
     {
         picture: "../../../assets/images/theLumberjack.png",
@@ -28,11 +24,7 @@ const characterSeed = [
         facialHair: true ,
         eyeColor: "blue",
         fact: "has a degree in forestry.",
-<<<<<<< HEAD
-        story: "The Lumberjack Quark or quarg is a type of fresh dairy product made by warming soured milk until the desired amount of curdling is met, and then straining it. It can be classified as fresh acid-set cheese. Traditional quark can be made without rennet, but in modern dairies small quantities of rennet are typically added."
-=======
         story: "The Lumberjack is known to be one of the fastest bikers in town, his love for nature, and technology are on par with none."
->>>>>>> 5787dfc2ea1be5703f4e047e6125f28e5bfaa68e
     },
     {
         picture: "../../../assets/images/karen.png",
@@ -42,11 +34,7 @@ const characterSeed = [
         facialHair: false ,
         eyeColor: "blue",
         fact: "has an unnecessarily large SUV to take her kids to soccer practice and be a menace on the road.",
-<<<<<<< HEAD
-        story: "Karen Quark or quarg is a type of fresh dairy product made by warming soured milk until the desired amount of curdling is met, and then straining it. It can be classified as fresh acid-set cheese. Traditional quark can be made without rennet, but in modern dairies small quantities of rennet are typically added."
-=======
         story: "Karen can often be seen asking for your manager in any type of situation that may or may not be out of your hands"
->>>>>>> 5787dfc2ea1be5703f4e047e6125f28e5bfaa68e
     },
     {
         picture: "../../../assets/images/frank.png",
@@ -56,11 +44,7 @@ const characterSeed = [
         facialHair: false ,
         eyeColor: "blue",
         fact: "Found 10 grand in a couch.",
-<<<<<<< HEAD
-        story: "Frank Quark or quarg is a type of fresh dairy product made by warming soured milk until the desired amount of curdling is met, and then straining it. It can be classified as fresh acid-set cheese. Traditional quark can be made without rennet, but in modern dairies small quantities of rennet are typically added."
-=======
         story: "Frank is a beer master, he has brewed some award winning beers locally, and is an absolute machine on the dance floor."
->>>>>>> 5787dfc2ea1be5703f4e047e6125f28e5bfaa68e
     },
     {
         picture: "../../../assets/images/egirl.png",
@@ -70,11 +54,7 @@ const characterSeed = [
         facialHair: false ,
         eyeColor: "green",
         fact: "loves playing and streaming video games",
-<<<<<<< HEAD
-        story: "egirl Quark or quarg is a type of fresh dairy product made by warming soured milk until the desired amount of curdling is met, and then straining it. It can be classified as fresh acid-set cheese. Traditional quark can be made without rennet, but in modern dairies small quantities of rennet are typically added."
-=======
         story: "The e-girl is known for her above average video game playing skills, and looks. She can often be found on her stream"
->>>>>>> 5787dfc2ea1be5703f4e047e6125f28e5bfaa68e
     },
     {
         picture: "../../../assets/images/instagram-model.png",
@@ -84,11 +64,7 @@ const characterSeed = [
         facialHair: false ,
         eyeColor: "hazel",
         fact: "absolutely adores loves the way they look, always on the phone",
-<<<<<<< HEAD
-        story: "instagram Quark or quarg is a type of fresh dairy product made by warming soured milk until the desired amount of curdling is met, and then straining it. It can be classified as fresh acid-set cheese. Traditional quark can be made without rennet, but in modern dairies small quantities of rennet are typically added."
-=======
         story: "The instagram model is always seeking that opportunity to take a picture showing all of her followers her lifestyle"
->>>>>>> 5787dfc2ea1be5703f4e047e6125f28e5bfaa68e
     },
     {
         picture:"../../../assets/images/johnOliver.png",
