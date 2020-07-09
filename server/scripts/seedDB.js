@@ -84,7 +84,7 @@ const characterSeed = [
         facialHair: true,
         eyeColor: "brown",
         fact: "began hosting his own radio show Noah’s Ark on Gauteng’s leading youth radio station, YFM",
-        story: ""
+        story: "You know him, hes witty, funny, and is the know all comedy central guy."
     },
     {
         picture:"../../../assets/images/jameela.png",
@@ -94,7 +94,7 @@ const characterSeed = [
         facialHair: false,
         eyeColor: "brown",
         fact: "Wore a chicken suit for 16 days",
-        story: ""
+        story: "Has accomplished much in her short carrer, and has been featured in several tv shows and movies."
     },
     {
         picture:"../../../assets/images/deadpool.png",
@@ -104,7 +104,7 @@ const characterSeed = [
         facialHair: true,
         eyeColor: "brown",
         fact: "Was kicked out of school for stealing a car as an April Fool's joke",
-        story: ""
+        story: "from Deadpool, to kids movies, Ryan Rynolds is one of the most versitile actors in Hollywood. "
     },
     {
         picture:"../../../assets/images/Jake.png",
