@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
+import { ScoreContext } from '../scoreContext.js';
 import Bulma from '@vizuaalog/bulmajs';
 import axios from 'axios'
 
@@ -13,6 +14,7 @@ const DropDown = (props) => {
     const [face, setFace] = useState("")
     const [factQ, setFactQ] = useState("")
     const [quests, setquests] = useState(3)
+    const {score,decrementScore} = useContext(ScoreContext)
 
     useEffect(() => {
         axios.get('/api/characters')
@@ -43,8 +45,10 @@ const DropDown = (props) => {
                         <button className="dropdown-item" onClick={(e) => Bulma().alert({
                             type: "info",
                             title: "My hair color is...",
-                            body: hair,
-                            confirm: "Okay"
+                            body: `${hair} .... Be aware, each time you ask a question, you will lose a point!`,
+                            confirm: {label: "Okay", onClick:function(){
+                                decrementScore(1)
+                            }}
                         })}
                             value="hair">What is my hair color?</button>
                     </div>
@@ -53,8 +57,10 @@ const DropDown = (props) => {
                             onClick={(e)=> Bulma().alert({
                             type:"info",
                             title:"My eye color is...",
-                            body:eye,
-                            confirm:"Okay"
+                            body:`${eye} .... Be aware, each time you ask a question, you will lose a point!`,
+                            confirm:{label: "Okay", onClick:function(){
+                                decrementScore(1)
+                            }}
                         })}
                             value="eye">What is my eye color?</button>
                     </div>
@@ -63,8 +69,10 @@ const DropDown = (props) => {
                             onClick={(e)=> Bulma().alert({
                             type:"info",
                             title:"I wear glasses...?",
-                            body:glassesQ,
-                            confirm:"Okay"
+                            body:`${glassesQ} .... Be aware, each time you ask a question, you will lose a point!`,
+                            confirm:{label: "Okay", onClick:function(){
+                                decrementScore(1)
+                            }}
                         })}
                             value="glassesQr">True or False do I wear glasses?</button>
                     </div>
@@ -73,8 +81,10 @@ const DropDown = (props) => {
                           onClick={(e)=> Bulma().alert({
                             type:"info",
                             title:"I have facial har...?",
-                            body:face,
-                            confirm:"Okay"
+                            body:`${face} .... Be aware, each time you ask a question, you will lose a point!`,
+                            confirm:{label: "Okay", onClick:function(){
+                                decrementScore(1)
+                            }}
                         })}
                             value="face">True or False do I have faical hair?</button>
                     </div>
@@ -83,8 +93,10 @@ const DropDown = (props) => {
                           onClick={(e)=> Bulma().alert({
                             type:"info",
                             title:"Here's a random fact about me",
-                            body:factQ,
-                            confirm:"Okay"
+                            body:`${factQ} .... Be aware, each time you ask a question, you will lose a point!`,
+                            confirm:{label: "Okay", onClick:function(){
+                                decrementScore(1)
+                            }}
                         })}
                             value="fact">Wanna Know a random fact about me?</button>
                     </div>
