@@ -18,7 +18,7 @@ reviewsController.post("/", JWTVerifier, (req, res) => {
     // Create the entry in review table
     db.Review.create(
         { review, stars }, 
-        { include: [{model: db.User, as: "users"}, {model: db.Ingredient, as: "recipes"}] }
+        { include: [{model: db.User, as: "users"}, {model: db.Recipe, as: "recipes"}] }
     )
         .then(review => res.json(review))
         .catch(err => res.json(err));
