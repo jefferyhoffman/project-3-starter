@@ -17,12 +17,12 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
-        yield: {
+        servings: {
             type: DataTypes.STRING,
             allowNull: true
         },
         directions: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(1500),
             allowNull: false
         },
         createdBy: {
