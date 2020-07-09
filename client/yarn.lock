@@ -9555,7 +9555,11 @@ svgo@^1.0.0, svgo@^1.2.2:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
+<<<<<<< HEAD
 swiper@^6.0.2:
+=======
+swiper@^6.0.1:
+>>>>>>> 8fcbcce160dce2f61a640fa97a114eda2d2426e9
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/swiper/-/swiper-6.0.2.tgz#24da06d7fc24589821ec2fb3c0fc91fc0022fdc8"
   integrity sha512-zHIvTiy5U4nH3L8oP8bN9l2M1TB2sj9MD5id2fjlhBmwytb0A4s/5xeVd/PEYg0ruRLE9fWmA0Cm5k+MrWh6GA==
