@@ -60,7 +60,7 @@ class App extends Component {
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />
               <PrivateRoute path='/secret' component={Secret} />
-              <Route path='/profile' compoment={Profile} />
+              <Route path='/profile' component={Profile} />
               <Route component={NotFound} />
             </Switch>
           </div>
