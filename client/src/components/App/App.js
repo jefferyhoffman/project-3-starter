@@ -61,13 +61,13 @@ class App extends Component {
           <Navigation />
                 <div className='container'>
             <Switch>
-              <PrivateRoute exact path='/' component={Main} />
+              <Route exact path='/' component={Main} />
               <PrivateRoute path='/menu' component={Menu}/>
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />
               <PrivateRoute path='/secret' component={Secret} />
               <Route path="/leaderboard" component={Leaderboard}/>
-              <Route path ="/Game" component={Game} />
+              <PrivateRoute path ="/Game" component={Game} />
               <Route path ="/Characters" component={Characters}/>
               <Route component={NotFound} />
             </Switch>
