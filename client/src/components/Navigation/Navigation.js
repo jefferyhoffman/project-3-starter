@@ -71,7 +71,7 @@ const Navigation = () => {
           >
             <strong>Leaderboard 🔥</strong>
           </Link>   
-
+        {user &&
         <Link
           className="navbar-item"
           to="/characters"
@@ -81,7 +81,8 @@ const Navigation = () => {
         >
         <strong>Characters</strong>
         </Link>
-        
+        }
+        {user &&
         <Link
           className="navbar-item"
           to="/game"
@@ -91,6 +92,8 @@ const Navigation = () => {
         >
         <strong>Practice Game</strong>
         </Link>
+        }
+        
         </div>
 
         <div className="navbar-end">
