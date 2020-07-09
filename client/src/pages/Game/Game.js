@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Persons from '../../components/Persons/Persons'
 import Card from '../../components/Card/Card'
+import Score from '../../components/Score/Score'
 
 const Game = ()=> {
   
@@ -10,6 +11,7 @@ const Game = ()=> {
         <div className="columns is-centered">
         {/* <Questions DropDown here --- note needs to be a column within component or put a column here as well. */}
         <Card />
+        <Score/>
        </div>
        <br></br>
        <Persons/>
