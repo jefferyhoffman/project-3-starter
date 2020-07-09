@@ -17,6 +17,7 @@ const DropDown = (props) => {
     useEffect(() => {
         axios.get('/api/characters')
             .then((res) => {
+                console.log(res)
                 setHair(res.data[choice].hairColor)
                 setEye(res.data[choice].eyeColor)
                 setGlassesQ(res.data[choice].glasses)

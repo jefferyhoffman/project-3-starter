@@ -5,13 +5,11 @@ const Main = ()=>{
 
     return(
       <>
-<section className="hero is-fullheight">
+<section className="hero is-fullheight mt-0">
   <div className="hero-body">
-    <div className="container">
-    <img src='/LetsGuessHomeImg.png'
-    
-   />
-    </div>
+   
+    <img src='/LetsGuessHomeImg.png'/>
+   
   </div>
 </section>
 
@@ -39,14 +37,15 @@ const Main = ()=>{
   <article className="tile is-child box">
       <p className="title">Gif of Game</p>
       <p className="subtitle">Gif Below</p>
+      <img src="/LetsGuessHomeImg.png"/>
     </article>
     </article>
   </div>
   <div className="column is-one-quarter">
   <article className="tile is-child box randomBox">
   <article className="tile is-child box">
-      <p className="title">Random Fact</p>
-      <p className="subtitle">Jameela Jamil (CharacterNameHere)</p>
+      <p className="title">Developers of Let's Guess</p>
+      
       <Carousel/>
       {/* <p>She Was Involved In a Serious Accident At the Age of 17. Her Political Views Are Based On “Who Is Less Evil?”  
       Denies That Modeling Made Her Stylish. Wore Chicken Suit for 16 Days. 

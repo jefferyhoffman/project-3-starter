@@ -63,7 +63,7 @@ class App extends Component {
       <WhoContextProvider> 
         <div className='App'>
           <Navigation />
-                <div className='container'>
+                <div className='main-container'>
             <Switch>
               <Route exact path='/' component={Main} />
               <PrivateRoute path='/menu' component={Menu}/>

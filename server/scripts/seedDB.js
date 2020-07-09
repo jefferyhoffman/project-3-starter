@@ -117,7 +117,26 @@ const characterSeed = [
         story:""
     },
     {
-        picture:"../../../assets/images/andrew.png",
+        picture:"/newYorker.png",
+        name:"Lindsey",
+        hairColor:"blonde",
+        glasses:false,
+        facialHair:true,
+        eyeColor:"blue",
+        fact:"Drove without a valid drivers license from 2015-2019",
+        story:""
+    },
+    {
+        picture:"/theHiker.png",
+        name:"Rescue Hiker",
+        hairColor:"brown",
+        glasses:false,
+        facialHair:true,
+        eyeColor:"brown",
+        fact:"Hiked the Appalachian Trail",
+        story:"Worked as an EMT for 4 years. Hiking is a must especially since I hiked the Appalacian Trail."
+    },
+     {   picture:"../../../assets/images/andrew.png",
         name:"Andrew",
         hairColor:"Brown",
         glasses:false,
@@ -137,6 +156,7 @@ const characterSeed = [
         fact: "Worked as a tire technician for about 7 years",
         story:"Studied in Computer Science for about 5 years and really into gaming."
     }
+    
 
 ];
 

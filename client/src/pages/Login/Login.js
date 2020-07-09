@@ -43,7 +43,7 @@ class Login extends Component {
     const { redirectToReferrer } = this.state;
 
     if (redirectToReferrer) {
-      return <Redirect to={from} />;
+      return <Redirect to={'/menu'} />;
     }
 
     return (
