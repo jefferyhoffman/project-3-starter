@@ -20,11 +20,11 @@ const Navigation = () => {
       aria-label="main navigation"
     >
       <div className="navbar-brand" to="#">
-        <a className="navbar-item" href="#">
+        <div className="navbar-item" >
           <Link to="/"><img src="./assets/images/lgLogo.png " className='logo' /></Link>
-        </a>
+        </div>
       </div>
-      <a
+      <div
         onClick={() => {
           setisActive(!isActive);
         }}
@@ -37,7 +37,7 @@ const Navigation = () => {
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
-      </a>
+      </div>
 
       <div className={`navbar-menu ${isActive ? "is-active" : ""}`}>
         <div className="navbar-start">

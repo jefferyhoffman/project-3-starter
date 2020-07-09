@@ -8,7 +8,7 @@ const Leaderboard = () => {
         API.Scores.getAll()
         .then(scr=>{
             console.log(scr)
-            setScores(scr.data.sort((a,b)=>b.score-a.score))
+            setScores(scr.data.sort((a,b)=>a.score-b.score))
         })
     },[])
     return (

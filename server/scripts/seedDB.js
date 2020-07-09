@@ -115,7 +115,28 @@ const characterSeed = [
         eyeColor:"brown",
         fact:"I've made my own Dragon Ball Z costume armor for a",
         story:""
+    },
+    {
+        picture:"/newYorker.png",
+        name:"Lindsey",
+        hairColor:"blonde",
+        glasses:false,
+        facialHair:true,
+        eyeColor:"blue",
+        fact:"Drove without a valid drivers license from 2015-2019",
+        story:""
+    },
+    {
+        picture:"/theHiker.png",
+        name:"Rescue Hiker",
+        hairColor:"brown",
+        glasses:false,
+        facialHair:true,
+        eyeColor:"brown",
+        fact:"Hiked the Appalachian Trail",
+        story:"Worked as an EMT for 4 years. Hiking is a must especially since I hiked the Appalacian Trail."
     }
+    
 
 ];
 
