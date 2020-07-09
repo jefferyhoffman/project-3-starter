@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
+import { Image } from "semantic-ui-react";
 
 import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
@@ -48,6 +49,7 @@ class Login extends Component {
 
     return (
       <div className='Login'>
+        <Image centered src={require("../../assets/images/megabitesLogo.png")}/>
         {this.state.error &&
           <div className='row'>
             <div className='col'>

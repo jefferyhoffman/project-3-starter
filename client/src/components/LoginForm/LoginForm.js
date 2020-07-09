@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, Form, Segment, Container } from "semantic-ui-react";
+import { Button, Form, Segment, Image, Container } from "semantic-ui-react";
 import "./LoginForm.css";
 import { NavLink } from "react-router-dom";
 
@@ -50,8 +50,8 @@ class LoginForm extends Component {
               value={password}
               onChange={this.handleInputChange}
             />
-            <Button type="submit">Log In</Button>
-            <div><h4 className="marginTop">Or don't have an account?</h4><Button as={NavLink} to="/register" type="submit">Register!</Button></div>
+            <Button type="submit">Log in</Button>
+            <div><h4 className="marginTop">Or don't have an account?</h4><Button as={NavLink} to="/register" type="submit">Sign up!</Button></div>
           </Form>
       </Container>
     );

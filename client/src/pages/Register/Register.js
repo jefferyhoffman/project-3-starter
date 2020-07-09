@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Image} from 'semantic-ui-react';
 
 import RegistrationForm from '../../components/RegistrationForm/RegistrationForm';
 import API from '../../lib/API';
@@ -22,11 +23,7 @@ class Register extends Component {
   render() {
     return (
       <div className='Register'>
-        <div className='row'>
-          <div className='col'>
-            <h1>Sign Up!</h1>
-          </div>
-        </div>
+        <Image centered src={require("../../assets/images/megabitesLogo.png")}/>
         {this.state.error &&
           <div className='row'>
             <div className='col'>

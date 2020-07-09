@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Menu, Button, Container } from 'semantic-ui-react';
+import {Menu, Button, Container, Image } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
 
 import './Navigation.css'
@@ -28,7 +28,6 @@ class Navigation extends Component {
                 <Menu.Item as={NavLink} to="/" active>
                   Home
                 </Menu.Item>
-                <Menu.Item as={NavLink} to="/search">Search</Menu.Item>
                 <Menu.Item position='right'>
                 {user
                 ? <AuthDropdown onClick={this.toggleCollapse} />
