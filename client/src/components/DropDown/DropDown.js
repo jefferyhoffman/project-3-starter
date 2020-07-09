@@ -98,12 +98,12 @@ const DropDown = (props) => {
             
     }
 
- function handleEye(){
-    if (questions[1].text){
-        console.log(eye)
-        alert(`Eye color is ${eye}`)
-    }
- }
+//  function handleEye(){
+//     if (questions[1].text){
+//         console.log(eye)
+//         alert(`Eye color is ${eye}`)
+//     }
+//  }
 
 
     return (
