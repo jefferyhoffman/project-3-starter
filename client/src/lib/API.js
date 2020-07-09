@@ -7,11 +7,11 @@ export default {
     },
 
     create: function (email, password) {
-      return axios.post('/api/users', { email, password });
+      return axios.post('/api/users/', { email, password });
     },
 
     getMe: function (authToken) {
-      return axios.get('/api/users/me', {
+      return axios.get('/api/users/', {
         headers: {
           'Authorization': `Bearer ${authToken}`
         }
