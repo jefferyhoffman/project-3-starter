@@ -16,8 +16,3 @@ class HomePage extends Component {
 }
 
 export default HomePage;
-
-
-{/* {(window.innerWidth < 2000) && 
-          <div>hello</div>
-          } */}
