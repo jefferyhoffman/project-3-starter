@@ -1,3 +1,9 @@
+.navbar {
+    background-image: url("../../assets/images/wood.jpg") !important;
+    background-size: cover !important;
+    border-radius: 0px !important;
+}
+
 /* .logo {
     width: 50%;
     height: auto;
