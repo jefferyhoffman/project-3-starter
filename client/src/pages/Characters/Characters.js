@@ -11,7 +11,7 @@ const Characters = () => {
                 setCharacter(res.data)
             })
     }, []);
-
+    
     return (
         <div className="container">
             <div className="columns is-centered">
