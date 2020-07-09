@@ -4,14 +4,6 @@ module.exports = (sequelize, DataTypes) => {
         ingredient: {
             type: DataTypes.STRING,
             allowNull: false
-        },
-        amount: {
-            type: DataTypes.DECIMAL,
-            allowNull: false
-        },
-        measurement: {
-            type: DataTypes.STRING,
-            allowNull: false
         }
     });
 

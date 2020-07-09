@@ -1,0 +1,23 @@
+{
+    "title": "Garbage Pasta",
+    "description": "This is not your girlfriend's pasta. Let's talk about lots of pasta, meat, and cheese!!",
+    "prepTime": "The time it takes you to open and dump packages into a pot!",
+    "cookTime": "About 20 minutes to heat garbage sauce, but only 7.5 minutes for al-dente pasta!",
+    "servings": "Depends on how much you eat yourself",
+    "directions": "Brown the rolls of sausage and ground beef. Empty all ingredients except pasta and cheese into a large sauce pan and simmer for 10 minutes. Heat water to a boil, then add pasta for 7.5 minutes and drain. Combine pasta and sauce to your desired ratio and top with generous cheese! After all, the girlfriend is not here tonight!",
+    "categories": [
+      { "category": "Italian" },
+      { "category": "Pasta" },
+      { "category": "Non-Chick Food"}
+    ],
+    "ingredients": [
+        { "ingredient": "2 Large jars of favorite tomato sauce"},
+        { "ingredient": "1 roll of ground Italian sausage"},
+        { "ingredient": "1 roll of ground beef"},
+        { "ingredient": "1 package of pepperoni slices"},
+        { "ingredient": "1 jar of black olives (to say it has a veggie!)"},
+        { "ingredient": "1 jar of pepperocinis (for more spice, do not drain! And oh yeah, it counts as a veggie too!)"},
+        { "ingredient": "1 jar of mushrooms, drained (the liquid is yuck! Not sure if a fungus could count as a veggie, but let's count it!"},
+        { "ingredient": "1 huge bag of mozzarella cheese!"}
+    ]
+}

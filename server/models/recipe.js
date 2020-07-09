@@ -11,18 +11,18 @@ module.exports = (sequelize, DataTypes) => {
         },
         prepTime: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
         cookTime: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
-        yield: {
+        servings: {
             type: DataTypes.STRING,
             allowNull: true
         },
         directions: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(1500),
             allowNull: false
         },
         createdBy: {
