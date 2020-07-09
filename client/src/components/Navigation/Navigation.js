@@ -70,10 +70,17 @@ const Navigation = () => {
             }}
           >
             <strong>Leaderboard 🔥</strong>
-          </Link>
+          </Link>   
 
-          
-            
+        <Link
+        className="navbar-item"
+        to="/characters"
+        onClick={() => {
+          setisActive(!isActive);
+        }}
+        >
+        <strong>Characters</strong>
+        </Link>
           
         </div>
 
