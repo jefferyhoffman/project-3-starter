@@ -7,8 +7,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         image: {
             type: DataTypes.BLOB("long"),
-            default: "https://nextcloud.bss.studio/index.php/apps/files_sharing/publicpreview/zkoQs9oQe2X5Ys7?fileId=396761&file=/defaultBurgerImage.jpg&x=1670&y=940&a=true",
-            allowNull: false
+            allowNull: true
         },
         description: {
             type: DataTypes.STRING,

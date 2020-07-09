@@ -1,16 +1,23 @@
 import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
 import { Button, Form, Container } from "semantic-ui-react";
+import AuthContext from '../../contexts/AuthContext';
 
+import API from '../../lib/API';
 import "./RegistrationForm.css";
 
 class RegistrationForm extends Component {
+  static contextType = AuthContext;
+
   state = {
+    redirectToReferrer: false,
     firstName: "",
     lastName: "",
     username: "",
     email: "",
     password: "",
     confirm: "",
+    error: ""
   };
 
   handleInputChange = (event) => {
@@ -31,19 +38,26 @@ class RegistrationForm extends Component {
       confirm,
     } = this.state;
 
-    this.props.onSubmit(
-      firstName,
-      lastName,
-      username,
-      email,
-      password,
-      confirm
-    );
+    if (password !== confirm) {
+      return this.setState({ error: "Passwords do not match." });
+    }
+
+    API.Users.create(firstName, lastName, username, email, password)
+      .then(response => response.data)
+      .then(({ user, token }) => {
+        // function for logging in
+        // this.context.onLogin(user, token);
+        console.log(user)
+        this.setState({ redirectToReferrer: true, error: "" });
+      })
+      .catch(err => this.setState({ error: err.message }));
+
     event.preventDefault();
   };
 
   render() {
     const {
+      redirectToReferrer,
       firstName,
       lastName,
       username,
@@ -51,6 +65,10 @@ class RegistrationForm extends Component {
       password,
       confirm,
     } = this.state;
+
+    if (redirectToReferrer) {
+      return <Redirect to={"/login"} />
+    }
 
     return (
       <Container className="bg">
