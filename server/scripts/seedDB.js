@@ -14,7 +14,7 @@ const characterSeed = [
         facialHair: true ,
         eyeColor: "brown",
         fact: "Studied Hypnotism, dont let him snap around you!",
-        story: ""
+        story: "It is said that Mr. Coder is the best front end engineer in all of the land, teaching hundreds of people from all walks of life how to code."
     },
     {
         picture: "../../../assets/images/theLumberjack.png",
@@ -24,7 +24,7 @@ const characterSeed = [
         facialHair: true ,
         eyeColor: "blue",
         fact: "has a degree in forestry.",
-        story: ""
+        story: "The Lumberjack is known to be one of the fastest bikers in town, his love for nature, and technology are on par with none."
     },
     {
         picture: "../../../assets/images/karen.png",
@@ -34,7 +34,7 @@ const characterSeed = [
         facialHair: false ,
         eyeColor: "blue",
         fact: "has an unnecessarily large SUV to take her kids to soccer practice and be a menace on the road.",
-        story: ""
+        story: "Karen can often be seen asking for your manager in any type of situation that may or may not be out of your hands"
     },
     {
         picture: "../../../assets/images/frank.png",
@@ -44,7 +44,7 @@ const characterSeed = [
         facialHair: false ,
         eyeColor: "blue",
         fact: "Found 10 grand in a couch.",
-        story: ""
+        story: "Frank is a beer master, he has brewed some award winning beers locally, and is an absolute machine on the dance floor."
     },
     {
         picture: "../../../assets/images/egirl.png",
@@ -54,7 +54,7 @@ const characterSeed = [
         facialHair: false ,
         eyeColor: "green",
         fact: "loves playing and streaming video games",
-        story: ""
+        story: "The e-girl is known for her above average video game playing skills, and looks. She can often be found on her stream"
     },
     {
         picture: "../../../assets/images/instagram-model.png",
@@ -64,7 +64,7 @@ const characterSeed = [
         facialHair: false ,
         eyeColor: "hazel",
         fact: "absolutely adores loves the way they look, always on the phone",
-        story: ""
+        story: "The instagram model is always seeking that opportunity to take a picture showing all of her followers her lifestyle"
     },
     {
         picture:"../../../assets/images/johnOliver.png",
@@ -84,7 +84,7 @@ const characterSeed = [
         facialHair: true,
         eyeColor: "brown",
         fact: "began hosting his own radio show Noah’s Ark on Gauteng’s leading youth radio station, YFM",
-        story: ""
+        story: "You know him, hes witty, funny, and is the know all comedy central guy."
     },
     {
         picture:"../../../assets/images/jameela.png",
@@ -94,7 +94,7 @@ const characterSeed = [
         facialHair: false,
         eyeColor: "brown",
         fact: "Wore a chicken suit for 16 days",
-        story: ""
+        story: "Has accomplished much in her short carrer, and has been featured in several tv shows and movies."
     },
     {
         picture:"../../../assets/images/deadpool.png",
@@ -104,7 +104,7 @@ const characterSeed = [
         facialHair: true,
         eyeColor: "brown",
         fact: "Was kicked out of school for stealing a car as an April Fool's joke",
-        story: ""
+        story: "from Deadpool, to kids movies, Ryan Rynolds is one of the most versitile actors in Hollywood. "
     },
     {
         picture:"../../../assets/images/Jake.png",
@@ -115,6 +115,16 @@ const characterSeed = [
         eyeColor:"brown",
         fact:"I've made my own Dragon Ball Z costume armor for a",
         story:""
+    },
+    {
+        picture:"../../../assets/images/andrew.png",
+        name:"Andrew",
+        hairColor:"Brown",
+        glasses:false,
+        facialHair:false,
+        eyeColor:"blue",
+        fact:"I have been a sponsored extreme sports athlete",
+        story:"Andrew has been working on his technology skills most of the time. Hobbies include playing video games, and playing/ writing music."
     }
 
 ];
