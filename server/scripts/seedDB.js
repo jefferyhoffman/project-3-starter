@@ -116,9 +116,6 @@ const characterSeed = [
         fact:"I've made my own Dragon Ball Z costume armor for a",
         story:""
     },
-<<<<<<< HEAD
-  
-=======
     {
         picture:"../../../assets/images/andrew.png",
         name:"Andrew",
@@ -128,9 +125,18 @@ const characterSeed = [
         eyeColor:"blue",
         fact:"I have been a sponsored extreme sports athlete",
         story:"Andrew has been working on his technology skills most of the time. Hobbies include playing video games, and playing/ writing music."
+    }, 
+    {
+        picture:"../../../assets/images/George.png",
+        name: "George",
+        hairColor:"Black",
+        glasses: true,
+        facialHair: false,
+        eyeColor: "brown",
+        fact: "Worked as a tire technician for about 7 years",
+        story:"Studied in Computer Science for about 5 years and really into gaming."
     }
 
->>>>>>> 8fcbcce160dce2f61a640fa97a114eda2d2426e9
 ];
 
 db.Character.remove({})
