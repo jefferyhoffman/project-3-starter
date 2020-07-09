@@ -12,3 +12,7 @@ form {
     width: 75%;
     margin: auto;
 }
+
+.marginTop {
+    margin-top: 1em !important;
+}
