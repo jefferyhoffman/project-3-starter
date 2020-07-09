@@ -1,21 +1,27 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import ReactCardFlip from 'react-card-flip';
 import DropDown from '../DropDown/DropDown.js';
 import axios from 'axios'
 import Bulma from '@vizuaalog/bulmajs';
+import { ScoreContext } from '../scoreContext.js';
+
 
 const randomnumber = Math.floor(Math.random() * 11)
 
 const Card = () => {
 
+  const {score,decrementScore} = useContext(ScoreContext)
   const [isFlipped, setisFlipped] = useState(false);
   const []=useState(true) 
   const [guess, setguess] = useState("");
   const [who, setwho] = useState("");
-  const [score, setscore] = useState(10);
+  // const [score, score.setscore] = useState(10);
   const [choice, setchoice] = useState("");
   const [whoImg, setwhoImg] = useState("");
 
+
+
+  
   const handleFlip = () => {
     setisFlipped(prevState => ({ isFlipped: !prevState.isFlipped }));
   }
@@ -60,7 +66,7 @@ const Card = () => {
         body:"Guessed Wrong you lost a point! take your time you got this",
         confirm:"Keep Guessing"
       })
-      setscore(score - 1)
+      decrementScore(1)
       console.log(score)
     }
   }
@@ -97,7 +103,7 @@ const handlePlayAgain = () => {
           <button id="GObtn" className="button is-primary is-hidden" onClick={handlePlayAgain} >Play Again</button>
          
           {/* Test button for Game Overs sets Score to 0 */}
-          {/* <button onClick={(e)=> setscore(score-10)}>Poop</button> */}
+          {/* <button onClick={(e)=> score.setscore(score-10)}>Poop</button> */}
           
         </div>
 

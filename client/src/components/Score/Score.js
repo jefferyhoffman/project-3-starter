@@ -1,25 +1,15 @@
-import React, { Component } from "react";
+import React, { useContext } from "react";
 import "./Score.css";
+import { ScoreContext } from '../scoreContext.js'
 
-class Score extends Component {
-  state = {
-    score: 10
-  };
-  render() {
-    return (
-      <div className="column is-2 is-offset-2">
-        <div className="tile is-parent">
-          <article className="tile is-child box scoreBox2">
-            <article className="tile is-child box">
-              <h1 className="is-size-5 has-text-centered">
-                {" "}
-                <strong>Score: {this.state.score}</strong>
-              </h1>
-            </article>
-          </article>
-        </div>
-      </div>
-    );
-  }
+const Score = () => {
+  const {score} = useContext(ScoreContext)
+
+   return(
+     <div className="column is-one-quarter">
+       <div className="box"></div>
+         <h1 className="is-size-1">{score}</h1>
+     </div>
+   )
 }
-export default Score;
+export default Score
