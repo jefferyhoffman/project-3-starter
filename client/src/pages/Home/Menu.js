@@ -1,9 +1,13 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import './Home.css'
 import {Link} from 'react-router-dom'
+import axios from 'axios'
 
-class Menu extends Component {
-  render() {
+
+
+const Menu= ()=> {
+  
+  
     return (
       <div className="container">
       <div className="tile is-ancestor">
@@ -65,7 +69,7 @@ class Menu extends Component {
     </div>
    </div>
     );
-  }
+  
 }
 
 export default Menu;
