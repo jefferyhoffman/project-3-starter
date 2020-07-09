@@ -1,3 +1,7 @@
-.bgStyle {
-    background-image: linear-gradient(to bottom left,#13547a, #80d0c7);
+body {
+    background-image: url("../../assets/images/brickBG.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }

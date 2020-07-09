@@ -1,14 +1,19 @@
 .bg{
     padding: 1.2rem;
     border-radius: 10px;
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 label {
     text-align: left;
+    font: 25px;
 }
 
 form {
     width: 75%;
     margin: auto;
+}
+
+.marginTop {
+    margin-top: 1em !important;
 }
