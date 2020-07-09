@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react'
 import ReactCardFlip from 'react-card-flip';
 import DropDown from '../DropDown/DropDown.js';
 import axios from 'axios'
-import Answers from '../Answers/Answers'
-import Score from '../Score/Score.js'
+import Bulma from '@vizuaalog/bulmajs';
 
 const randomnumber = Math.floor(Math.random() * 10)
 
@@ -21,25 +20,44 @@ const Card = () => {
   }
   const handleScore = () => {
     if (score <= 0) {
-      alert("Game Over")
+      Bulma().alert({
+        type:"danger",
+        title:"Game Over",
+        body:"you got a game over why not try again",
+        confirm:"fine"
+      })
     }
     else {
       handleGuess()
       console.log(who)
-      console.log(choice)
     }
   }
   const handleGuess = () => {
     if (!guess) {
-      alert("Make a guess")
+      Bulma().alert({
+        type:"warning",
+        title:"Warning",
+        body:"Type a name to Guess Who!",
+        confirm:"Guess Again"
+      })
     }
     if (guess.toLowerCase() === who.toLowerCase()) {
       handleFlip()
-      alert(`you scored ${score}/10`)
+      Bulma().alert({
+        type:"success",
+        title:"You Won!",
+        body:` you won your score is ${score} out of 10!!! Nice Job!`,
+        confirm:"Hooray!"
+      })
     }
 
     else if (guess && guess.toLowerCase !== who.toLowerCase()) {
-      alert("wrong guess score -1")
+      Bulma().alert({
+        type:"warning",
+        title:"Score Dropped!",
+        body:"Guessed Wrong you lost a point! take your time you got this",
+        confirm:"Keep Guessing"
+      })
       setscore(score - 1)
       console.log(score)
     }
@@ -50,9 +68,6 @@ const Card = () => {
       setwho(res.data[randomnumber].name)
       setwhoImg(res.data[randomnumber].picture)
 
-    }).then(() => {
-      console.log("Choice: " + choice)
-      console.log("who: " + who)
     })
   }, [])
 

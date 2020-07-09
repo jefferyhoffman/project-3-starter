@@ -5,6 +5,7 @@
   "proxy": "http://localhost:3001",
   "dependencies": {
     "@githubprimer/octicons-react": "^8.5.0",
+    "@vizuaalog/bulmajs": "^0.11.0",
     "axios": "^0.18.1",
     "react": "^16.8.3",
     "react-card-flip": "^1.0.10",
