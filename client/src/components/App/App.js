@@ -14,7 +14,7 @@ import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
 import Leaderboard from '../../pages/Leaderboard/Leaderboard'
 import Game from '../../pages/Game/Game'
-
+import Main from '../../pages/Main/Main'
 
 import './App.css';
 import Characters from '../../pages/Characters/Characters';
@@ -61,7 +61,7 @@ class App extends Component {
           <Navigation />
                 <div className='container'>
             <Switch>
-              <Route exact path='/' component={Login} />
+              <PrivateRoute exact path='/' component={Main} />
               <PrivateRoute path='/menu' component={Menu}/>
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />

@@ -104,6 +104,7 @@ const handlePlayAgain = () => {
         <div className="box">
           <h1 className="is-size-1"> You got it!</h1>
           <img alt={who} src={whoImg} style={{ width: "200px", height: "200px" }} ></img>
+          <button className="button is-primary" onClick={handlePlayAgain}>Play Again</button>
         </div>
       </ReactCardFlip>
 
