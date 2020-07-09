@@ -115,8 +115,8 @@ const characterSeed = [
         eyeColor:"brown",
         fact:"I've made my own Dragon Ball Z costume armor for a",
         story:""
-    }
-
+    },
+  
 ];
 
 db.Character.remove({})
