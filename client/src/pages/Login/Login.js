@@ -48,11 +48,6 @@ class Login extends Component {
 
     return (
       <div className='Login'>
-        <div className='row'>
-          <div className='col'>
-            <h1>Login</h1>
-          </div>
-        </div>
         {this.state.error &&
           <div className='row'>
             <div className='col'>

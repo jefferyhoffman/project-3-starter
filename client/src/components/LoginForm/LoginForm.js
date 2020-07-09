@@ -29,6 +29,7 @@ class LoginForm extends Component {
 
     return (
       <Container className="login bg">
+        <h1>Login</h1>
           <Form onSubmit={this.handleSubmit}>
             <Form.Input
               className="email"
