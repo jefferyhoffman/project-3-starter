@@ -10,7 +10,7 @@ class RegistrationForm extends Component {
     username: "",
     email: "",
     password: "",
-    passwordConfirm: "",
+    confirm: "",
   };
 
   handleInputChange = (event) => {
@@ -28,7 +28,7 @@ class RegistrationForm extends Component {
       username,
       email,
       password,
-      passwordConfirm,
+      confirm,
     } = this.state;
 
     this.props.onSubmit(
@@ -37,7 +37,7 @@ class RegistrationForm extends Component {
       username,
       email,
       password,
-      passwordConfirm
+      confirm
     );
     event.preventDefault();
   };
@@ -49,7 +49,7 @@ class RegistrationForm extends Component {
       username,
       email,
       password,
-      passwordConfirm,
+      confirm,
     } = this.state;
 
     return (
@@ -121,10 +121,11 @@ class RegistrationForm extends Component {
             <input
               placeholder="Confirm Password"
               className="form-control"
-              id="password-confirm"
+              id="confirm"
+              // id was previously password-confirm
               type="password"
-              name="passwordConfirm"
-              value={passwordConfirm}
+              name="confirm"
+              value={confirm}
               onChange={this.handleInputChange}
             />
           </Form.Field>
