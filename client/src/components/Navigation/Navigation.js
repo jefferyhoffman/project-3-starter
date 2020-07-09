@@ -21,7 +21,7 @@ const Navigation = () => {
     >
       <div className="navbar-brand" to="#">
         <a className="navbar-item" href="#">
-          <img src="./assets/images/lgLogo.png " className='logo'/>
+          <Link to="/"><img src="./assets/images/lgLogo.png " className='logo' /></Link>
         </a>
       </div>
       <a
