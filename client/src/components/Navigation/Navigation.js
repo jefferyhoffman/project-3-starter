@@ -5,7 +5,6 @@ import { NavLink } from 'react-router-dom';
 import './Navigation.css'
 import AuthContext from '../../contexts/AuthContext';
 import AuthDropdown from '../../components/AuthDropdown/AuthDropdown';
-import "./Navigation.css"
 
 class Navigation extends Component {
   static contextType = AuthContext;
@@ -24,7 +23,7 @@ class Navigation extends Component {
     const { user } = this.context;
 
     return (
-      <Menu inverted={true} size="massive" className="navbar" style={{borderRadius: 0}}>
+      <Menu size="massive" inverted className="navbar">
               <Container>
                 <Menu.Item as={NavLink} to="/" active>
                   Home

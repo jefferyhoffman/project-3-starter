@@ -1,5 +1,7 @@
 .navbar {
-    border-radius: 0px
+    background-image: url("../../assets/images/wood.jpg") !important;
+    background-size: cover !important;
+    border-radius: 0px !important;
 }
 
 /* .logo {
