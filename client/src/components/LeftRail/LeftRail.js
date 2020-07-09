@@ -16,8 +16,8 @@ const LeftRail = () => (
     <Grid.Column>
       <Rail position="left">
         <Sticky>
-          <Responsive as={IngredientDropdown} minWidth={1025}></Responsive>
-          <Responsive as={Segment} minWidth={1025} className="flexColumn">
+          <Responsive as={IngredientDropdown} minWidth={1030}></Responsive>
+          <Responsive as={Segment} minWidth={1030} className="flexColumn">
             <strong>What's the occasion?</strong>
             <Checkbox className='checks' label="Breakfast" />
             <Checkbox className='checks' label="Lunch" />
