@@ -1,5 +1,5 @@
 // Define the Ingredient model
-module.exports = function (sequelize, DataTypes) {
+module.exports = (sequelize, DataTypes) => {
     const Ingredient = sequelize.define("Ingredient", {
         ingredient: {
             type: DataTypes.STRING,
@@ -17,11 +17,19 @@ module.exports = function (sequelize, DataTypes) {
 
     // Relationships
     Ingredient.associate = models => {
-        // Ingredient can have many Recipes
-		Ingredient.belongsToMany(models.Recipe);
+        // Ingredients can have many Recipes & Recipes can have many Ingredients
+		Ingredient.belongsToMany(models.Recipe, {
+            through: "recipe_ingredient",
+            as: "recipes",
+            foreignKey: "ingredient_id"
+        });
 
-        // Ingredient can have many (shopping) Lists
-		Ingredient.belongsToMany(models.Lists);
+        // Ingredients can have many (shopping) Lists & Lists can have many Ingredients
+		Ingredient.belongsToMany(models.List, {
+            through: "list_ingredient",
+            as: "lists",
+            foreignKey: "ingredient_id"
+        });
 
     };
 

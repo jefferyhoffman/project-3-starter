@@ -1,5 +1,5 @@
 // Define the List model
-module.exports = function (sequelize, DataTypes) {
+module.exports = (sequelize, DataTypes) => {
     const List = sequelize.define("List", {
         purchased: {
             type: DataTypes.BOOLEAN,
@@ -15,8 +15,12 @@ module.exports = function (sequelize, DataTypes) {
             targetKey: "id"
         });
 
-        // List can have many Ingredients
-		List.belongsToMany(models.Ingredient);
+        // Lists can have many Ingredients
+		List.belongsToMany(models.Ingredient, {
+            through: "list_ingredient",
+            as: "ingredients",
+            foreignKey: "list_id"
+        });
 
     };
 

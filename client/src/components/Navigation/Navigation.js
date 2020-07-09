@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Menu, Button, Container } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
 
+import './Navigation.css'
 import AuthContext from '../../contexts/AuthContext';
 import AuthDropdown from '../../components/AuthDropdown/AuthDropdown';
 import "./Navigation.css"

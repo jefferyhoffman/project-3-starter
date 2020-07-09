@@ -1,22 +1,25 @@
-const usersController = require('express').Router();
+const usersController = require("express").Router();
 
-const db = require('../../models');
-const { JWTVerifier } = require('../../lib/passport');
-const jwt = require('jsonwebtoken');
+const db = require("../../models");
+const { JWTVerifier } = require("../../lib/passport");
+const jwt = require("jsonwebtoken");
 
-usersController.post('/', (req, res) => {
-  const { email, password } = req.body;
+// Route to create a new user
+usersController.post("/", (req, res) => {
+  const { email, password, firstName, lastName, username } = req.body;
 
-  db.User.create({ email, password })
+  db.User.create({ email, password, firstName, lastName, username })
     .then(user => res.json(user))
     .catch(err => res.json(err));
 });
 
-usersController.get('/me', JWTVerifier, (req, res) => {
+// Route to get the user's information
+usersController.get("/", JWTVerifier, (req, res) => {
   res.json(req.user);
 });
 
-usersController.post('/login', (req, res) => {
+// Route to login the user
+usersController.post("/login", (req, res) => {
   const { email, password } = req.body;
 
   db.User.findOne({ where: { email } })

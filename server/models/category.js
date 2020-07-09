@@ -1,5 +1,5 @@
 // Define the Category model
-module.exports = function (sequelize, DataTypes) {
+module.exports = (sequelize, DataTypes) => {
     const Category = sequelize.define("Category", {
         category: {
             type: DataTypes.STRING,
@@ -9,8 +9,12 @@ module.exports = function (sequelize, DataTypes) {
 
     // Relationships
     Category.associate = models => {
-        // Category can have many Recipes
-		Category.belongsToMany(models.Recipe);
+        // Categories can have many Recipes & Recipes can have many Categories
+		Category.belongsToMany(models.Recipe, { 
+            through: "recipe_category",
+            as: "recipes",
+            foreignKey: "category_id"
+        });
 
     };
 
