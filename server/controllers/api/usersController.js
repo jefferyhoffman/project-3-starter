@@ -15,7 +15,9 @@ usersController.post("/", (req, res) => {
 
 // Route to get the user's information
 usersController.get("/", JWTVerifier, (req, res) => {
-  res.json(req.user);
+  db.User.findOne({ where: { id: req.user.id }}, {include: [db.Recipe, db.Category, db.Ingredient]})
+  .then(user => res.json(user))
+  .catch(err => res.json(err));
 });
 
 // Route to login the user
