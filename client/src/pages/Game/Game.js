@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import Persons from '../../components/Persons/Persons'
 import Card from '../../components/Card/Card'
 
-class Game extends Component {
-  render() {
+const Game = ()=> {
+  
     return (
       <div className='container Game'>
          <h1 className='is-size-1 mt-5 mb-6 has-text-centered'> 😺 Let's Guess That Character!!! 😺</h1>
@@ -15,7 +15,6 @@ class Game extends Component {
        <Persons/>
         </div>
     );
-  }
 }
 
 export default Game;
