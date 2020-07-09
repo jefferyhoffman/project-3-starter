@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "password123",
-    "database": "recipies_db",
+    "password": "rootroot",
+    "database": "recipes_db",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
