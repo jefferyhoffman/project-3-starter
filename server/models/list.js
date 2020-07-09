@@ -1,5 +1,5 @@
 // Define the List model
-module.exports = function (sequelize, DataTypes) {
+module.exports = (sequelize, DataTypes) => {
     const List = sequelize.define("List", {
         purchased: {
             type: DataTypes.BOOLEAN,
