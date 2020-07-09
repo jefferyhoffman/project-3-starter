@@ -1,5 +1,5 @@
 // Define the Category model
-module.exports = function (sequelize, DataTypes) {
+module.exports = (sequelize, DataTypes) => {
     const Category = sequelize.define("Category", {
         category: {
             type: DataTypes.STRING,

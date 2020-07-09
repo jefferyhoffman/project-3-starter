@@ -27,21 +27,12 @@ class LoginForm extends Component {
         const { email, password } = this.state;
 
         return (
-          <Container>
-            <Segment inverted>
+          <Container className="login">
+            <Segment className="seg" inverted>
                 <Form inverted onSubmit={this.handleSubmit}>
-                    <Form.Group widths="equal">
-                      <Form.Input fluid type="email" name="email" label="E-mail" placeholder="E-mail" value={email} onChange={this.handleInputChange}/>
-                        <Form.Input
-                            fluid
-                            label="Password"
-                            type="password"
-                            name="password"
-                            placeholder="password"
-                            value={password}
-                            onChange={this.handleInputChange}
-                        />
-                    </Form.Group>
+                      <Form.Input className="email" type="email" name="email" label="E-mail" placeholder="E-mail" value={email} onChange={this.handleInputChange}/>
+                      <br/>
+                      <Form.Input className="password" label="Password" type="password" name="password" placeholder="Password" value={password} onChange={this.handleInputChange}/>
                     <Button type="submit">Submit</Button>
                 </Form>
             </Segment>

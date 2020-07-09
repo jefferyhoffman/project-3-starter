@@ -1,5 +1,5 @@
 // Define the Recipe model
-module.exports = function (sequelize, DataTypes) {
+module.exports = (sequelize, DataTypes) => {
     const Recipe = sequelize.define("Recipe", {
         title: {
             type: DataTypes.STRING,
