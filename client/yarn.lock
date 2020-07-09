@@ -1240,6 +1240,11 @@
     lodash.unescape "4.0.1"
     semver "5.5.0"
 
+"@vizuaalog/bulmajs@^0.11.0":
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/@vizuaalog/bulmajs/-/bulmajs-0.11.0.tgz#4da8df7e5840e9f069a89f0223c8b8f55d4c1ec8"
+  integrity sha512-Zv7RYZuY3o9OMixtFN3syeKFfDg/aU/4BcyIEl7WBXFZmf55p24la3KDEv9tgpPFtRPhjo3IMbdbvWPFwpnNXg==
+
 "@webassemblyjs/ast@1.8.5":
   version "1.8.5"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.8.5.tgz#51b1c5fe6576a34953bf4b253df9f0d490d9e359"
