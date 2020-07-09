@@ -9,6 +9,7 @@ const randomnumber = Math.floor(Math.random() * 11)
 const Card = () => {
 
   const [isFlipped, setisFlipped] = useState(false);
+  const []=useState(true) 
   const [guess, setguess] = useState("");
   const [who, setwho] = useState("");
   const [score, setscore] = useState(10);
@@ -20,6 +21,7 @@ const Card = () => {
   }
   const handleScore = () => {
     if (score <= 0) {
+      handleGameOver()
       Bulma().alert({
         type:"danger",
         title:"Game Over",
@@ -71,6 +73,16 @@ const Card = () => {
     })
   }, [])
 
+  const handleGameOver = () => {
+    const element = document.getElementById("GObtn");
+     element.classList.remove("is-hidden");
+    
+  }
+  
+const handlePlayAgain = () => {
+  window.location.reload(false);
+}
+
 
   return (
 
@@ -82,6 +94,11 @@ const Card = () => {
           <DropDown choice={randomnumber} />
           <input className='input' type="text" name="guess" value={guess} onChange={e => setguess(e.target.value)} placeholder="Guess here" />
           <button className="button is-warning" onClick={handleScore}>Guess</button>
+          <button id="GObtn" className="button is-primary is-hidden" onClick={handlePlayAgain} >Play Again</button>
+         
+          {/* Test button for Game Overs sets Score to 0 */}
+          {/* <button onClick={(e)=> setscore(score-10)}>Poop</button> */}
+          
         </div>
 
         <div className="box">
