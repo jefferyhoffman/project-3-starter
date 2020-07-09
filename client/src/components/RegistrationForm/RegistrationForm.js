@@ -54,6 +54,7 @@ class RegistrationForm extends Component {
 
     return (
       <Container className="bg">
+        <h1>Join the feast!</h1>
         <Form onSubmit={this.handleSubmit}>
           <Form.Field required>
             <label>First Name</label>
@@ -127,7 +128,7 @@ class RegistrationForm extends Component {
               onChange={this.handleInputChange}
             />
           </Form.Field>
-          <Button type="submit">Register!</Button>
+          <Button type="submit">Sign up!</Button>
         </Form>
       </Container>
     );

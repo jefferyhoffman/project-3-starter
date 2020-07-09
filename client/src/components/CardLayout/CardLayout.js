@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Rating, Container, Image, Responsive, Segment } from "semantic-ui-react";
+import { Card, Rating, Container, Image, Responsive } from "semantic-ui-react";
 import "./CardLayout.css";
 
 const extra = <Rating icon="star" defaultRating={3} maxRating={5} />;
@@ -7,7 +7,7 @@ const extra = <Rating icon="star" defaultRating={3} maxRating={5} />;
 //Below is a group of cards for styling purposes. 3 items per row looks good on desktop, 1 looks best on mobile.
 const CardLayout = () => (
   <Container className="test">
-    <Responsive as={Segment} maxWidth="600">
+    <Responsive maxWidth="600">
     <Card.Group itemsPerRow={1}>
       <Card>
         <Image src={require("../../assets/images/burger1.jpg")} wrapped ui={false} as='a' href="https://www.thewholesomedish.com/the-best-classic-burger/" target="_blank" />
@@ -119,7 +119,7 @@ const CardLayout = () => (
       </Card>
     </Card.Group>
     </Responsive>
-    <Responsive as={Segment} minWidth="601">
+    <Responsive minWidth="601">
     <Card.Group itemsPerRow={3}>
       <Card>
         <Image src={require("../../assets/images/burger1.jpg")} wrapped ui={false} as='a' href="https://www.thewholesomedish.com/the-best-classic-burger/" target="_blank" />

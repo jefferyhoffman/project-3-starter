@@ -28,7 +28,6 @@ class Navigation extends Component {
                 <Menu.Item as={NavLink} to="/" active>
                   Home
                 </Menu.Item>
-                <Menu.Item as={NavLink} to="/search">Search</Menu.Item>
                 <Menu.Item position='right'>
                 {user
                 ? <AuthDropdown onClick={this.toggleCollapse} />

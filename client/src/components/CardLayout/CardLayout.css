@@ -1,13 +1,11 @@
 .test {
     padding: 1.2rem;
     border-radius: 10px;
-    background-image: linear-gradient(to bottom right,#13547a, #80d0c7);
-    margin-top: 10rem;
+    /* background-image: linear-gradient(to bottom right,#13547a, #80d0c7); */
+    margin-top: 2rem;
 }
 
-.test1 {
-    opacity: 0;
-}
+
 
 
 
