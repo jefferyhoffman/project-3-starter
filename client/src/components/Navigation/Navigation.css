@@ -1,0 +1,13 @@
+
+
+.color{
+    background-color: rgb(215, 129, 255);
+   
+}
+#nav-toggle-state {
+    display: none;
+  }
+  
+  #nav-toggle-state:checked ~ .navbar-menu {
+    display: block;
+  }

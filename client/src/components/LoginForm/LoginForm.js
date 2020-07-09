@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-
-import Octicon, { Mail, Key } from '@githubprimer/octicons-react';
+import React, { Component } from "react";
+import "./LoginForm.css";
+// import Octicon, { Mail, Key } from "@githubprimer/octicons-react";
 
 class LoginForm extends Component {
   state = {
-    email: '',
-    password: ''
+    email: "",
+    password: ""
   };
 
   handleInputChange = event => {
@@ -14,61 +14,65 @@ class LoginForm extends Component {
     this.setState({
       [name]: value
     });
-  }
+  };
 
   handleSubmit = event => {
     const { email, password } = this.state;
 
     this.props.onSubmit(email, password);
     event.preventDefault();
-  }
+  };
 
   render() {
     const { email, password } = this.state;
 
     return (
-      <div className='LoginForm'>
-        <div className='card'>
-          <div className='card-body'>
-            <form className='LoginForm' onSubmit={this.handleSubmit}>
-              <div className='input-group mb-3'>
-                <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Mail} /></span>
-                </div>
-                <input
-                  className='form-control'
-                  id='email'
-                  type='email'
-                  name='email'
-                  placeholder='email@provider.com'
-                  value={email}
-                  onChange={this.handleInputChange}
-                />
+      <div className="container">
+        <div className="columns">
+          <div className="column"></div>
+          <div className="column">
+            <div className="card">
+              <div className="card-content">
+                <p className="title">Login</p>
+                <form className="LoginForm" onSubmit={this.handleSubmit}>
+                  <div className="field">
+                    <div className="control">
+                      <input
+                        className="input"
+                        id="email"
+                        type="email"
+                        name="email"
+                        placeholder="Enter Email 📧"
+                        value={email}
+                        onChange={this.handleInputChange}
+                      />
+                    </div>
+                  </div>
+                  <div className="field">
+                    <div className="control">
+                      <input
+                        className="input"
+                        id="password"
+                        type="password"
+                        name="password"
+                        placeholder="Enter Password 🔐"
+                        value={password}
+                        onChange={this.handleInputChange}
+                      />
+                    </div>
+                  </div>
+                  <button className="button" id="loginBtn" type="submit">
+                    <strong>Login</strong>
+                  </button>
+                </form>
               </div>
-
-              <div className='input-group mb-3'>
-                <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Key} /></span>
-                </div>
-                <input
-                  className='form-control'
-                  id='password'
-                  type='password'
-                  name='password'
-                  placeholder='password'
-                  value={password}
-                  onChange={this.handleInputChange}
-                />
-              </div>
-
-              <button className='btn btn-primary' type='submit'>Login</button>
-            </form>
+            </div>
           </div>
+          <div className="column"></div>
         </div>
       </div>
-    )
+    );
   }
 }
 
 export default LoginForm;
-

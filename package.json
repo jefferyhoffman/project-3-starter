@@ -12,10 +12,15 @@
     "start:dev": "concurrently -n client,server \"yarn run client:dev\" \"yarn run server:dev\"",
     "client:dev": "cd client && yarn start",
     "server:dev": "cd server && yarn start:dev",
-    "heroku-postbuild": "yarn build"
+    "heroku-postbuild": "yarn build",
+    "seed": "node scripts/seedDB.js"
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
     "nodemon": "^1.18.10"
+  },
+  "dependencies": {
+    "node-sass": "^4.14.1",
+    "react-card-flip": "^1.0.10"
   }
 }

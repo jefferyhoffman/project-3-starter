@@ -27,5 +27,15 @@ export default {
         }
       });
     }
+  },
+  Characters: {
+    getAllCharacters: function () {
+      return axios.get('/api/characters');
+    }
+  },
+  Scores:{
+    getAll: function (){
+      return axios.get('/api/leaderboard/')
+    }
   }
 }

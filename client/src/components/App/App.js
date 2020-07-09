@@ -5,14 +5,22 @@ import API from '../../lib/API';
 import TokenStore from '../../lib/TokenStore';
 import AuthContext from '../../contexts/AuthContext';
 import Navigation from '../../components/Navigation/Navigation';
+import Footer from '../../components/Footer/Footer'
 import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
-import Home from '../../pages/Home/Home';
+import Menu from '../../pages/Home/Menu';
 import Login from '../../pages/Login/Login';
 import Register from '../../pages/Register/Register';
 import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
+import Leaderboard from '../../pages/Leaderboard/Leaderboard'
+import Game from '../../pages/Game/Game'
+import Main from '../../pages/Main/Main'
 
 import './App.css';
+import Characters from '../../pages/Characters/Characters';
+import ScoreContextProvider from '../scoreContext';
+import WhoContextProvider from '../whoContext'
+
 
 class App extends Component {
   constructor(props) {
@@ -51,18 +59,27 @@ class App extends Component {
   render() {
     return (
       <AuthContext.Provider value={this.state.auth}>
+      <ScoreContextProvider>
+      <WhoContextProvider> 
         <div className='App'>
           <Navigation />
-          <div className='container'>
+                <div className='container'>
             <Switch>
-              <Route exact path='/' component={Home} />
+              <Route exact path='/' component={Main} />
+              <PrivateRoute path='/menu' component={Menu}/>
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />
               <PrivateRoute path='/secret' component={Secret} />
+              <Route path="/leaderboard" component={Leaderboard}/>
+              <PrivateRoute path ="/Game" component={Game} />
+              <Route path ="/Characters" component={Characters}/>
               <Route component={NotFound} />
             </Switch>
           </div>
+                <Footer/>
         </div>
+      </WhoContextProvider>
+      </ScoreContextProvider>
       </AuthContext.Provider>
     );
   }
