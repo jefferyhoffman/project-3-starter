@@ -16,11 +16,11 @@ const Main = ()=>{
 
       <div className='container'> 
   <div className='columns is-multiline'>
-  <div class="column is-one-quarter">
-  <article class="tile is-child box rules">
-  <article class="tile is-child box">
-      <p class="title">How to Play</p>
-      <p class="subtitle">Game Rules</p>
+  <div className="column is-one-quarter">
+  <article className="tile is-child box rules">
+  <article className="tile is-child box">
+      <p className="title">How to Play</p>
+      <p className="subtitle">Game Rules</p>
       <ol>
         <li>Select Question from Dropdown</li>
         <li>Get three questions and three guesses</li>
@@ -33,19 +33,19 @@ const Main = ()=>{
     </article>
     </article>
   </div>
-  <div class="column is-one-half">
-  <article class="tile is-child box gifBox">
-  <article class="tile is-child box">
-      <p class="title">Gif of Game</p>
-      <p class="subtitle">Gif Below</p>
+  <div className="column is-one-half">
+  <article className="tile is-child box gifBox">
+  <article className="tile is-child box">
+      <p className="title">Gif of Game</p>
+      <p className="subtitle">Gif Below</p>
     </article>
     </article>
   </div>
-  <div class="column is-one-quarter">
-  <article class="tile is-child box randomBox">
-  <article class="tile is-child box">
-      <p class="title">Random Fact</p>
-      <p class="subtitle">Jameela Jamil (CharacterNameHere)</p>
+  <div className="column is-one-quarter">
+  <article className="tile is-child box randomBox">
+  <article className="tile is-child box">
+      <p className="title">Random Fact</p>
+      <p className="subtitle">Jameela Jamil (CharacterNameHere)</p>
       <p>She Was Involved In a Serious Accident At the Age of 17. Her Political Views Are Based On “Who Is Less Evil?”  
       Denies That Modeling Made Her Stylish. Wore Chicken Suit for 16 Days. 
       The Good Place Is Her First Time As an Actress.</p>
