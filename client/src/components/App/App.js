@@ -19,6 +19,7 @@ import Main from '../../pages/Main/Main'
 import './App.css';
 import Characters from '../../pages/Characters/Characters';
 import ScoreContextProvider from '../scoreContext';
+import WhoContextProvider from '../whoContext'
 
 
 class App extends Component {
@@ -59,7 +60,7 @@ class App extends Component {
     return (
       <AuthContext.Provider value={this.state.auth}>
       <ScoreContextProvider>
-
+      <WhoContextProvider> 
         <div className='App'>
           <Navigation />
                 <div className='container'>
@@ -77,6 +78,7 @@ class App extends Component {
           </div>
                 <Footer/>
         </div>
+      </WhoContextProvider>
       </ScoreContextProvider>
       </AuthContext.Provider>
     );

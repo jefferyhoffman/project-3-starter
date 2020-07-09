@@ -14,7 +14,7 @@ const characterSeed = [
         facialHair: true ,
         eyeColor: "brown",
         fact: "Studied Hypnotism, dont let him snap around you!",
-        story: ""
+        story: "Mr.Coder Quark or quarg is a type of fresh dairy product made by warming soured milk until the desired amount of curdling is met, and then straining it. It can be classified as fresh acid-set cheese. Traditional quark can be made without rennet, but in modern dairies small quantities of rennet are typically added."
     },
     {
         picture: "../../../assets/images/theLumberjack.png",
@@ -24,7 +24,7 @@ const characterSeed = [
         facialHair: true ,
         eyeColor: "blue",
         fact: "has a degree in forestry.",
-        story: ""
+        story: "The Lumberjack Quark or quarg is a type of fresh dairy product made by warming soured milk until the desired amount of curdling is met, and then straining it. It can be classified as fresh acid-set cheese. Traditional quark can be made without rennet, but in modern dairies small quantities of rennet are typically added."
     },
     {
         picture: "../../../assets/images/karen.png",
@@ -34,7 +34,7 @@ const characterSeed = [
         facialHair: false ,
         eyeColor: "blue",
         fact: "has an unnecessarily large SUV to take her kids to soccer practice and be a menace on the road.",
-        story: ""
+        story: "Karen Quark or quarg is a type of fresh dairy product made by warming soured milk until the desired amount of curdling is met, and then straining it. It can be classified as fresh acid-set cheese. Traditional quark can be made without rennet, but in modern dairies small quantities of rennet are typically added."
     },
     {
         picture: "../../../assets/images/frank.png",
@@ -44,7 +44,7 @@ const characterSeed = [
         facialHair: false ,
         eyeColor: "blue",
         fact: "Found 10 grand in a couch.",
-        story: ""
+        story: "Frank Quark or quarg is a type of fresh dairy product made by warming soured milk until the desired amount of curdling is met, and then straining it. It can be classified as fresh acid-set cheese. Traditional quark can be made without rennet, but in modern dairies small quantities of rennet are typically added."
     },
     {
         picture: "../../../assets/images/egirl.png",
@@ -54,7 +54,7 @@ const characterSeed = [
         facialHair: false ,
         eyeColor: "green",
         fact: "loves playing and streaming video games",
-        story: ""
+        story: "egirl Quark or quarg is a type of fresh dairy product made by warming soured milk until the desired amount of curdling is met, and then straining it. It can be classified as fresh acid-set cheese. Traditional quark can be made without rennet, but in modern dairies small quantities of rennet are typically added."
     },
     {
         picture: "../../../assets/images/instagram-model.png",
@@ -64,7 +64,7 @@ const characterSeed = [
         facialHair: false ,
         eyeColor: "hazel",
         fact: "absolutely adores loves the way they look, always on the phone",
-        story: ""
+        story: "instagram Quark or quarg is a type of fresh dairy product made by warming soured milk until the desired amount of curdling is met, and then straining it. It can be classified as fresh acid-set cheese. Traditional quark can be made without rennet, but in modern dairies small quantities of rennet are typically added."
     },
     {
         picture:"../../../assets/images/johnOliver.png",
@@ -74,7 +74,7 @@ const characterSeed = [
         facialHair: false,
         eyeColor: "brown",
         fact: "Hosts 'Last Week Tonight'",
-        story: ""
+        story: " John Oliver Quark or quarg is a type of fresh dairy product made by warming soured milk until the desired amount of curdling is met, and then straining it. It can be classified as fresh acid-set cheese. Traditional quark can be made without rennet, but in modern dairies small quantities of rennet are typically added."
     },
     {
         picture:"../../../assets/images/trevorNoah.png",
@@ -84,7 +84,7 @@ const characterSeed = [
         facialHair: true,
         eyeColor: "brown",
         fact: "began hosting his own radio show Noah’s Ark on Gauteng’s leading youth radio station, YFM",
-        story: ""
+        story: "Trevor Noah Quark or quarg is a type of fresh dairy product made by warming soured milk until the desired amount of curdling is met, and then straining it. It can be classified as fresh acid-set cheese. Traditional quark can be made without rennet, but in modern dairies small quantities of rennet are typically added."
     },
     {
         picture:"../../../assets/images/jameela.png",
@@ -94,7 +94,7 @@ const characterSeed = [
         facialHair: false,
         eyeColor: "brown",
         fact: "Wore a chicken suit for 16 days",
-        story: ""
+        story: "Jameela Jamil Quark or quarg is a type of fresh dairy product made by warming soured milk until the desired amount of curdling is met, and then straining it. It can be classified as fresh acid-set cheese. Traditional quark can be made without rennet, but in modern dairies small quantities of rennet are typically added."
     },
     {
         picture:"../../../assets/images/deadpool.png",
@@ -104,7 +104,7 @@ const characterSeed = [
         facialHair: true,
         eyeColor: "brown",
         fact: "Was kicked out of school for stealing a car as an April Fool's joke",
-        story: ""
+        story: "Ryan Reynolds Quark or quarg is a type of fresh dairy product made by warming soured milk until the desired amount of curdling is met, and then straining it. It can be classified as fresh acid-set cheese. Traditional quark can be made without rennet, but in modern dairies small quantities of rennet are typically added."
     },
     {
         picture:"../../../assets/images/Jake.png",
@@ -114,7 +114,7 @@ const characterSeed = [
         facialHair:true,
         eyeColor:"brown",
         fact:"I've made my own Dragon Ball Z costume armor for a",
-        story:""
+        story:"Jake Quark or quarg is a type of fresh dairy product made by warming soured milk until the desired amount of curdling is met, and then straining it. It can be classified as fresh acid-set cheese. Traditional quark can be made without rennet, but in modern dairies small quantities of rennet are typically added."
     }
 
 ];

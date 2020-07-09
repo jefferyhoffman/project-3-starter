@@ -4,17 +4,19 @@ import DropDown from '../DropDown/DropDown.js';
 import axios from 'axios'
 import Bulma from '@vizuaalog/bulmajs';
 import { ScoreContext } from '../scoreContext.js';
+import {whoContext} from '../whoContext'
 
 
 const randomnumber = Math.floor(Math.random() * 11)
 
 const Card = () => {
 
+  const {who, updateWho} = useContext(whoContext)
   const {score,decrementScore} = useContext(ScoreContext)
   const [isFlipped, setisFlipped] = useState(false);
   const []=useState(true) 
   const [guess, setguess] = useState("");
-  const [who, setwho] = useState("");
+  // const [who, setwho] = useState("");
   // const [score, score.setscore] = useState(10);
   const [choice, setchoice] = useState("");
   const [whoImg, setwhoImg] = useState("");
@@ -73,7 +75,7 @@ const Card = () => {
   useEffect(() => {
     axios.get("/api/characters").then((res) => {
       setchoice(randomnumber)
-      setwho(res.data[randomnumber].name)
+      updateWho(res.data[randomnumber].name)
       setwhoImg(res.data[randomnumber].picture)
 
     })
