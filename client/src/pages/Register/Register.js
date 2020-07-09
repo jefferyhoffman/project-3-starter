@@ -24,7 +24,7 @@ class Register extends Component {
       <div className='Register'>
         <div className='row'>
           <div className='col'>
-            <h1>Register</h1>
+            <h1>Sign Up!</h1>
           </div>
         </div>
         {this.state.error &&

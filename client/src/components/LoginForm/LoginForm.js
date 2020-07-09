@@ -1,43 +1,57 @@
 import React, { Component } from "react";
 import { Button, Form, Segment, Container } from "semantic-ui-react";
-import "./LoginForm.css"
+import "./LoginForm.css";
 
 class LoginForm extends Component {
-    state = {
-        email: "",
-        password: "",
-    };
+  state = {
+    email: "",
+    password: "",
+  };
 
-    handleInputChange = (event) => {
-        const { name, value } = event.target;
+  handleInputChange = (event) => {
+    const { name, value } = event.target;
 
-        this.setState({
-            [name]: value,
-        });
-    };
+    this.setState({
+      [name]: value,
+    });
+  };
 
-    handleSubmit = (event) => {
-        event.preventDefault();
-        const { email, password } = this.state;
+  handleSubmit = (event) => {
+    event.preventDefault();
+    const { email, password } = this.state;
 
-        this.props.onSubmit(email, password);
-    };
-    
-    render() {
-        const { email, password } = this.state;
+    this.props.onSubmit(email, password);
+  };
 
-        return (
-          <Container className="login">
-            <Segment className="seg" inverted>
-                <Form inverted onSubmit={this.handleSubmit}>
-                      <Form.Input className="email" type="email" name="email" label="E-mail" placeholder="E-mail" value={email} onChange={this.handleInputChange}/>
-                      <br/>
-                      <Form.Input className="password" label="Password" type="password" name="password" placeholder="Password" value={password} onChange={this.handleInputChange}/>
-                    <Button type="submit">Submit</Button>
-                </Form>
-            </Segment>
-          </Container>
-        );
-    }
+  render() {
+    const { email, password } = this.state;
+
+    return (
+      <Container className="login bg">
+          <Form onSubmit={this.handleSubmit}>
+            <Form.Input
+              className="email"
+              type="email"
+              name="email"
+              label="E-mail"
+              placeholder="E-mail"
+              value={email}
+              onChange={this.handleInputChange}
+            />
+            <br />
+            <Form.Input
+              className="password"
+              label="Password"
+              type="password"
+              name="password"
+              placeholder="Password"
+              value={password}
+              onChange={this.handleInputChange}
+            />
+            <Button type="submit">Log In</Button>
+          </Form>
+      </Container>
+    );
+  }
 }
 export default LoginForm;
