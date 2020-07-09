@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react'
 import ReactCardFlip from 'react-card-flip';
 import DropDown from '../DropDown/DropDown.js';
 import axios from 'axios'
-import Answers from '../Answers/Answers'
-import Score from '../Score/Score.js'
+import Bulma from '@vizuaalog/bulmajs';
 
-const randomnumber = Math.floor(Math.random() * 10)
+const randomnumber = Math.floor(Math.random() * 11)
 
 const Card = () => {
 
   const [isFlipped, setisFlipped] = useState(false);
+  const []=useState(true) 
   const [guess, setguess] = useState("");
   const [who, setwho] = useState("");
   const [score, setscore] = useState(10);
@@ -21,25 +21,45 @@ const Card = () => {
   }
   const handleScore = () => {
     if (score <= 0) {
-      alert("Game Over")
+      handleGameOver()
+      Bulma().alert({
+        type:"danger",
+        title:"Game Over",
+        body:"you got a game over why not try again",
+        confirm:"fine"
+      })
     }
     else {
       handleGuess()
       console.log(who)
-      console.log(choice)
     }
   }
   const handleGuess = () => {
     if (!guess) {
-      alert("Make a guess")
+      Bulma().alert({
+        type:"warning",
+        title:"Warning",
+        body:"Type a name to Guess Who!",
+        confirm:"Guess Again"
+      })
     }
     if (guess.toLowerCase() === who.toLowerCase()) {
       handleFlip()
-      alert(`you scored ${score}/10`)
+      Bulma().alert({
+        type:"success",
+        title:"You Won!",
+        body:` you won your score is ${score} out of 10!!! Nice Job!`,
+        confirm:"Hooray!"
+      })
     }
 
     else if (guess && guess.toLowerCase !== who.toLowerCase()) {
-      alert("wrong guess score -1")
+      Bulma().alert({
+        type:"warning",
+        title:"Score Dropped!",
+        body:"Guessed Wrong you lost a point! take your time you got this",
+        confirm:"Keep Guessing"
+      })
       setscore(score - 1)
       console.log(score)
     }
@@ -50,11 +70,18 @@ const Card = () => {
       setwho(res.data[randomnumber].name)
       setwhoImg(res.data[randomnumber].picture)
 
-    }).then(() => {
-      console.log("Choice: " + choice)
-      console.log("who: " + who)
     })
   }, [])
+
+  const handleGameOver = () => {
+    const element = document.getElementById("GObtn");
+     element.classList.remove("is-hidden");
+    
+  }
+  
+const handlePlayAgain = () => {
+  window.location.reload(false);
+}
 
 
   return (
@@ -67,11 +94,17 @@ const Card = () => {
           <DropDown choice={randomnumber} />
           <input className='input' type="text" name="guess" value={guess} onChange={e => setguess(e.target.value)} placeholder="Guess here" />
           <button className="button is-warning" onClick={handleScore}>Guess</button>
+          <button id="GObtn" className="button is-primary is-hidden" onClick={handlePlayAgain} >Play Again</button>
+         
+          {/* Test button for Game Overs sets Score to 0 */}
+          {/* <button onClick={(e)=> setscore(score-10)}>Poop</button> */}
+          
         </div>
 
         <div className="box">
           <h1 className="is-size-1"> You got it!</h1>
           <img alt={who} src={whoImg} style={{ width: "200px", height: "200px" }} ></img>
+          <button className="button is-primary" onClick={handlePlayAgain}>Play Again</button>
         </div>
       </ReactCardFlip>
 
