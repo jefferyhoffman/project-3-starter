@@ -1,5 +1,6 @@
 import React from 'react'
 import './Main.css'
+import Carousel from '../../components/Carousel/Carousel'
 const Main = ()=>{
 
     return(
@@ -46,9 +47,10 @@ const Main = ()=>{
   <article className="tile is-child box">
       <p className="title">Random Fact</p>
       <p className="subtitle">Jameela Jamil (CharacterNameHere)</p>
-      <p>She Was Involved In a Serious Accident At the Age of 17. Her Political Views Are Based On “Who Is Less Evil?”  
+      <Carousel/>
+      {/* <p>She Was Involved In a Serious Accident At the Age of 17. Her Political Views Are Based On “Who Is Less Evil?”  
       Denies That Modeling Made Her Stylish. Wore Chicken Suit for 16 Days. 
-      The Good Place Is Her First Time As an Actress.</p>
+      The Good Place Is Her First Time As an Actress.</p> */}
     </article>
     </article>
   </div>
