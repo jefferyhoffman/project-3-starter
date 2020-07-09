@@ -11,7 +11,7 @@ const Navigation = () => {
 
   const toggleCollapse = () => {
     setIsCollapsed(value => !value);
-  }
+  };
 
   return (
     <nav
@@ -20,8 +20,10 @@ const Navigation = () => {
       aria-label="main navigation"
     >
       <div className="navbar-brand" to="#">
-        <div className="navbar-item" >
-          <Link to="/"><img src="./assets/images/lgLogo.png " className='logo' /></Link>
+        <div className="navbar-item">
+          <Link to="/">
+            <img src="./assets/images/lgLogo.png " className="logo" />
+          </Link>
         </div>
       </div>
       <div
@@ -41,32 +43,44 @@ const Navigation = () => {
 
       <div className={`navbar-menu ${isActive ? "is-active" : ""}`}>
         <div className="navbar-start">
-          <Link to="/" className="navbar-item"  onClick={() => {
-          setisActive(!isActive);
-        }}>
+          {!user?
+          <Link
+            to="/"
+            className="navbar-item"
+            onClick={() => {
+              setisActive(!isActive);
+            }}
+          >
             <strong>Home</strong>
-          </Link>
-
-          <Link className="navbar-item" to="/leaderboard"  onClick={() => {
-          setisActive(!isActive);
-        }}>
+          </Link>:
+          <Link
+          className="navbar-item"
+          to="/menu"
+          onClick={() => {
+            setisActive(!isActive);
+          }}
+        >
+          <strong>Menu</strong>
+        </Link>}
+          <Link
+            className="navbar-item"
+            to="/leaderboard"
+            onClick={() => {
+              setisActive(!isActive);
+            }}
+          >
             <strong>Leaderboard 🔥</strong>
           </Link>
 
-          {/*Only render if the user is logged in */}
-          {user && (
-            <Link className="navbar-item" to="/menu"  onClick={() => {
-          setisActive(!isActive);
-        }}>
-              <strong>Menu</strong>
-            </Link>
-          )}
+          
+            
+          
         </div>
 
         <div className="navbar-end">
           <div className="buttons">
             {user ? (
-              <AuthDropdown onClick={toggleCollapse}/>
+              <AuthDropdown onClick={toggleCollapse} />
             ) : (
               <>
                 <Link className="button login" to="/login">

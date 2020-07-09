@@ -20,6 +20,7 @@
     "nodemon": "^1.18.10"
   },
   "dependencies": {
+    "node-sass": "^4.14.1",
     "react-card-flip": "^1.0.10"
   }
 }

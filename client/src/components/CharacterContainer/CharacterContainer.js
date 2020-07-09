@@ -2,8 +2,6 @@ import React, { useEffect, useState, Component } from 'react'
 import ReactCardFlip from 'react-card-flip';
 
 const CharacterContainer = (props) => {
-
-
     const [isFlipped, setisFlipped] = useState(false);
 
     //handle card flip
@@ -21,7 +19,7 @@ const CharacterContainer = (props) => {
                 </div>
 
                 <div className="box" style={{ maxHeight: "400px" }} onClick={handleFlip}>
-                    <p onClick={handleFlip}>{props.fact}</p>
+                    <p>{props.fact}</p>
                 </div>
             </ReactCardFlip>
 

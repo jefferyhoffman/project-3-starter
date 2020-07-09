@@ -28,17 +28,6 @@ const DropDown = (props) => {
     }, [])
 
 
-    const handleInfo = (state) => {
-        Bulma().alert({
-            type: 'info',
-            title: 'The answer to your question',
-            body: `${hair}`,
-            confirm: 'Confirm it!',
-            cancel: 'Maybe not'
-        });
-    }
-
-
 
     return (
         <div className="column is-one-quarter">

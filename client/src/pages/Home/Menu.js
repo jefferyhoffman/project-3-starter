@@ -2,9 +2,13 @@ import React, { Component } from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
 import Carousel from "../../components/Carousel/Carousel";
+import axios from 'axios'
 
-class Menu extends Component {
-  render() {
+
+
+const Menu= ()=> {
+  
+  
     return (
       <>
         <h1>Welcome --userName Here--</h1>
@@ -54,7 +58,7 @@ class Menu extends Component {
         </div>
       </>
     );
-  }
+  
 }
 
 export default Menu;
