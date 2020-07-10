@@ -270,7 +270,7 @@ export default CardLayout;
 //             </Card.Description>
 //             <Card.Meta>
 //               <span>
-//                 Submitted by: <strong>UserName</strong>
+//                 Submitted by: <strong>{recipe.createdBy}</strong>
 //               </span>
 //             </Card.Meta>
 //           </Card.Content>
