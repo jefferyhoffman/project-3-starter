@@ -36,7 +36,7 @@ const Main = ()=>{
   <div className="box randomBox">
   <div className="box">
       <h3 className="title"><strong>Let's Guess Developers</strong> </h3>
-      <p className="subtitle"><strong>Read more about them on the Character Page </strong></p>
+      <p className="subtitle"><strong>Login and read more about them on the Character Page </strong></p>
       
       <Carousel/>
     
