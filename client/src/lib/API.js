@@ -25,12 +25,11 @@ export default {
     },
 
     create: function(authToken, title, image, description, prepTime, cookTime, servings, directions, categories, ingredients) {
-      return axios.post('api/recipes/', {
+      return axios.post('/api/recipes/', {
+        title, image, description, prepTime, cookTime, servings, directions, categories, ingredients
+      }, {
         headers: {
           'Authorization': `Bearer ${authToken}`
-        },
-        body: {
-          title, image, description, prepTime, cookTime, servings, directions, categories, ingredients
         }
       }).catch(err => console.log(err));
     }

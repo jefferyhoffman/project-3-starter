@@ -11,7 +11,6 @@ class RecipeForm extends Component {
   static contextType = AuthContext;
 
   state = {
-    authToken: TokenStore.getToken(),
     redirectToReferrer: false,
     title: "",
     image: "",
@@ -33,8 +32,9 @@ class RecipeForm extends Component {
   };
 
   handleSubmit = (event) => {
+    const { authToken } = this.context;
+
     const {
-      authToken,
       title,
       image,
       description,
