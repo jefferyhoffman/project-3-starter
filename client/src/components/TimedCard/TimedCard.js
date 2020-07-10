@@ -3,14 +3,14 @@ import ReactCardFlip from 'react-card-flip';
 import DropDown from '../DropDown/DropDown.js';
 import axios from 'axios'
 import Bulma from '@vizuaalog/bulmajs';
-import './Card.css'
+import './TimedCard.css'
 import { ScoreContext } from '../../contexts/scoreContext.js';
 import {whoContext} from '../../contexts/whoContext'
 
 
 const randomnumber = Math.floor(Math.random() * 11)
 
-const Card = () => {
+const TimedCard = () => {
 
   const {who, updateWho} = useContext(whoContext)
   const {score,decrementScore} = useContext(ScoreContext)
@@ -99,6 +99,7 @@ const handlePlayAgain = () => {
       <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
         <div className="box cardBox">
         <div className="box">
+        <button className="button is-primary">Start</button>
           <h1 className="is-size-1"> ????</h1>
           <img alt="bob" src="../../assets/images/mysteryWho1.png" style={{ width: "200px", height: "200px" }} ></img>
           <DropDown choice={randomnumber} />
@@ -123,4 +124,4 @@ const handlePlayAgain = () => {
   )
 
 }
-export default Card
+export default TimedCard

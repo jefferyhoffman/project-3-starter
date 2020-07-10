@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "./Score.css";
-import { ScoreContext } from '../scoreContext.js'
+import { ScoreContext } from '../../contexts/scoreContext.js'
 
 const Score = () => {
   const {score} = useContext(ScoreContext)

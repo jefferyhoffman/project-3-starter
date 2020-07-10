@@ -14,12 +14,12 @@ import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
 import Leaderboard from '../../pages/Leaderboard/Leaderboard'
 import Game from '../../pages/Game/Game'
+import MainGame from '../../pages/MainGame/MainGame'
 import Main from '../../pages/Main/Main'
-
 import './App.css';
 import Characters from '../../pages/Characters/Characters';
-import ScoreContextProvider from '../scoreContext';
-import WhoContextProvider from '../whoContext'
+import ScoreContextProvider from '../../contexts/scoreContext';
+import WhoContextProvider from '../../contexts/whoContext'
 
 
 class App extends Component {
@@ -72,6 +72,7 @@ class App extends Component {
               <PrivateRoute path='/secret' component={Secret} />
               <Route path="/leaderboard" component={Leaderboard}/>
               <PrivateRoute path ="/Game" component={Game} />
+              <PrivateRoute path ="/MainGame" component={MainGame} />
               <Route path ="/Characters" component={Characters}/>
               <Route component={NotFound} />
             </Switch>
