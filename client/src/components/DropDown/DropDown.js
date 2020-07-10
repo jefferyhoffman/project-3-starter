@@ -2,32 +2,35 @@ import React, { useState, useEffect, useContext } from 'react'
 import { ScoreContext } from '../../contexts/scoreContext.js';
 import Bulma from '@vizuaalog/bulmajs';
 import axios from 'axios'
+import { RandomNumberContext } from '../../contexts/RandomNumber';
 
 
 
 const DropDown = (props) => {
 
-    const [choice, setchoice] = useState(props.choice)
     const [hair, setHair] = useState("")
     const [eye, setEye] = useState("")
     const [glassesQ, setGlassesQ] = useState("")
     const [face, setFace] = useState("")
     const [factQ, setFactQ] = useState("")
     const [quests, setquests] = useState(3)
-    const {score,decrementScore} = useContext(ScoreContext)
+    const {score,setscore} = useContext(ScoreContext)
+    const {RandomNumber}=useContext(RandomNumberContext)
 
     useEffect(() => {
+        
         axios.get('/api/characters')
             .then((res) => {
-                console.log(res)
-                setHair(res.data[choice].hairColor)
-                setEye(res.data[choice].eyeColor)
-                setGlassesQ(res.data[choice].glasses)
-                setFace(res.data[choice].facialHair)
-                setFactQ(res.data[choice].fact)
-
+                // setHair(res.data[RandomNumber].hairColor)
+                // setEye(res.data[RandomNumber].eyeColor)
+                // setGlassesQ(res.data[RandomNumber].glasses)
+                // setFace(res.data[RandomNumber].facialHair)
+                // setFactQ(res.data[RandomNumber].fact)
+                
             })
-    }, [])
+            
+           
+        }, [RandomNumber])
 
 
 
@@ -47,7 +50,7 @@ const DropDown = (props) => {
                             title: "My hair color is...",
                             body: `${hair} .... Be aware, each time you ask a question, you will lose a point!`,
                             confirm: {label: "Okay", onClick:function(){
-                                decrementScore(1)
+                                setscore(score -1)
                             }}
                         })}
                             value="hair">What is my hair color?</button>
@@ -59,7 +62,7 @@ const DropDown = (props) => {
                             title:"My eye color is...",
                             body:`${eye} .... Be aware, each time you ask a question, you will lose a point!`,
                             confirm:{label: "Okay", onClick:function(){
-                                decrementScore(1)
+                                setscore(score -1)
                             }}
                         })}
                             value="eye">What is my eye color?</button>
@@ -71,7 +74,7 @@ const DropDown = (props) => {
                             title:"I wear glasses...?",
                             body:`${glassesQ} .... Be aware, each time you ask a question, you will lose a point!`,
                             confirm:{label: "Okay", onClick:function(){
-                                decrementScore(1)
+                                setscore(score -1)
                             }}
                         })}
                             value="glassesQr">True or False do I wear glasses?</button>
@@ -83,7 +86,7 @@ const DropDown = (props) => {
                             title:"I have facial har...?",
                             body:`${face} .... Be aware, each time you ask a question, you will lose a point!`,
                             confirm:{label: "Okay", onClick:function(){
-                                decrementScore(1)
+                                setscore(score -1)
                             }}
                         })}
                             value="face">True or False do I have faical hair?</button>
@@ -95,7 +98,7 @@ const DropDown = (props) => {
                             title:"Here's a random fact about me",
                             body:`${factQ} .... Be aware, each time you ask a question, you will lose a point!`,
                             confirm:{label: "Okay", onClick:function(){
-                                decrementScore(1)
+                                setscore(score -1)
                             }}
                         })}
                             value="fact">Wanna Know a random fact about me?</button>

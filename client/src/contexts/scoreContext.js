@@ -6,12 +6,10 @@ const ScoreContextProvider = (props) => {
     
     const[score, setscore]=useState(10)
 
-    const decrementScore=(value)=>{
-        setscore(score - value)
-    }
+  
 
     return(
-        <ScoreContext.Provider value={{score,decrementScore}}>
+        <ScoreContext.Provider value={{score,setscore}}>
 
         {props.children}
 

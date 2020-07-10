@@ -22,6 +22,7 @@ import ScoreContextProvider from '../../contexts/scoreContext';
 import WhoContextProvider from '../../contexts/whoContext'
 import FinalScoreContextProvider from '../../contexts/FinalScore'
 import TimeContextProvider from '../../contexts/Time';
+import RandomNumberContextProvider from '../../contexts/RandomNumber.js';
 
 class App extends Component {
   constructor(props) {
@@ -75,7 +76,9 @@ class App extends Component {
                   <FinalScoreContextProvider>
                     <Route path="/leaderboard" component={Leaderboard} />
                     <TimeContextProvider>
-                      <PrivateRoute path="/MainGame" component={MainGame} />
+                      <RandomNumberContextProvider>
+                        <PrivateRoute path="/MainGame" component={MainGame} />
+                      </RandomNumberContextProvider>
                     </TimeContextProvider>
                   </FinalScoreContextProvider>
                   <Route path="/Characters" component={Characters} />
