@@ -13,8 +13,8 @@ const Menu= ()=> {
       <>
         <h1>Welcome --userName Here--</h1>
         <div className="container">
-          <div class="columns is-multiline is-mobile">
-          <div class="column is-half">
+          <div className="columns is-multiline is-mobile">
+          <div className="column is-half">
               <article className="tile is-child box" id="demoTile">
                 <article className="tile is-child box">
                   <p className="title">Demo Gif</p>
@@ -22,21 +22,24 @@ const Menu= ()=> {
                 </article>
               </article>
             </div>
-            <div class="column is-half">
+            <div className="column is-half">
               <article
                 className="tile is-child notification"
                 id="characterTile"
               >
                 <article className="tile is-child notification ">
                   <p className="title">Let's Guess Characters</p>
-                  <p className="subtitle">4 Images of Characters here?</p>
+                  <p className="subtitle">Find out more about your favourite Character</p>
                   <Carousel />
+                  <br/>
+                  <br/>
+                  <Link className="button enterBtn" to='/characters'>Enter</Link>
                 </article>
               </article>
             </div>
            
        
-            <div class="column">
+            <div className="column">
               <article className="tile is-child box" id="playTile">
                 <article className="tile is-child box" id="playTile2">
                   <p className="title">Ready to Play?</p>

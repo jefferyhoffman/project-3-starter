@@ -12,7 +12,7 @@ const Leaderboard = () => {
         })
     },[])
     return (
-        <div>
+        <div className="container">
         <h1>Leaderboard  🔥</h1>
         {scores.length ?(
         <table className="table is-striped">

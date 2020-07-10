@@ -6,9 +6,12 @@ const Score = () => {
   const {score} = useContext(ScoreContext)
 
    return(
-     <div className="column is-one-quarter">
-       <div className="box"></div>
-         <h1 className="is-size-1">{score}</h1>
+     <div className="column is-2">
+       <div className="box scoreBox">
+       <div className="box">
+         <h4 className="is-size-4">Score: {score}</h4>
+         </div>
+         </div>
      </div>
    )
 }
