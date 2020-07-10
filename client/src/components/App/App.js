@@ -10,6 +10,7 @@ import Home from '../../pages/Home/Home';
 import Login from '../../pages/Login/Login';
 import Register from '../../pages/Register/Register';
 import Profile from '../../pages/Profile/Profile';
+import AddRecipe from '../../pages/AddRecipe/AddRecipe';
 import NotFound from '../../pages/NotFound/NotFound';
 
 import './App.css';
@@ -59,6 +60,7 @@ class App extends Component {
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />
               <PrivateRoute path='/profile' component={Profile} />
+              <PrivateRoute path='/recipes' component={AddRecipe} />
               <Route component={NotFound} />
             </Switch>
           </div>
