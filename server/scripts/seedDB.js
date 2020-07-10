@@ -120,7 +120,7 @@ const characterSeed = [
         picture:"/newYorker.png",
         name:"Lindsey",
         hairColor:"blonde",
-        glasses:false,
+        glasses:true,
         facialHair:false,
         eyeColor:"blue",
         fact:"Drove without a valid drivers license for a few years",
@@ -151,7 +151,7 @@ const characterSeed = [
         name: "George",
         hairColor:"black",
         glasses: true,
-        facialHair: false,
+        facialHair: true,
         eyeColor: "brown",
         fact: "Worked as a tire technician for about 7 years",
         story:"Studied in Computer Science for about 5 years and really into gaming."
@@ -160,8 +160,8 @@ const characterSeed = [
         picture:"/grayson.png",
         name: "Grayson",
         hairColor:"brown",
-        glasses: true,
-        facialHair: false,
+        glasses: false,
+        facialHair: true,
         eyeColor: "hazel",
         fact: "Half Native American with roots from the Lumbee Tribe in North Carolina",
         story:"I'm half Native American with roots from the Lumbee Tribe in North Carolina. And I have a half brother."
@@ -170,22 +170,92 @@ const characterSeed = [
         picture:"/josh.png",
         name: "Josh",
         hairColor:"black",
-        glasses: true,
+        glasses: false,
         facialHair: true,
         eyeColor: "brown",
         fact: "Was into BMX racing for 10 years",
         story:"I love my Husky and used to do BMX racing for 10 years."
     },
-    // {
-    //     picture:"../../../assets/images/George.png",
-    //     name: "Emily",
-    //     hairColor:"blonde",
-    //     glasses: true,
-    //     facialHair: false,
-    //     eyeColor: "blue",
-    //     fact: "Was in the Colorguard during High School",
-    //     story:"Looking forward to travelling to Peru to hike Machu Picchu to check it off my bucket list. I was in the colorguard during High School."
-    // }
+    {
+        picture:"/travis.png",
+        name: "Travis",
+        hairColor:"black",
+        glasses: false,
+        facialHair: true,
+        eyeColor: "blue",
+        fact: "Have a cousin who won 7 NBA titles with the Celtics in the 60s and 70s",
+        story:"I'm an explorer. I backpacked through New Zealand. Not to brag (sorry not sorry) but I have a cousin who won 7 NBA titles for the Celtics in the 60s & 70s."
+    },
+    {
+        picture:"/patrick.png",
+        name: "Mr. Kitty",
+        hairColor:"brown",
+        glasses: false,
+        facialHair: false,
+        eyeColor: "brown",
+        fact: "Rescued 46 Cats",
+        story:"I believe in helping people and animals. I saved a woman's life at a food lion. I also rescued 46 cats & placed them into loving homes."
+    },
+    {
+        picture:"/bart.png",
+        name: "Bart",
+        hairColor:"brown",
+        glasses: true,
+        facialHair: false,
+        eyeColor: "brown",
+        fact: "Filmed an episode of Broad City",
+        story:"I've climbed trees in the amazon for work. Took photos of Christina Aguilar in her younger years and a few years ago filmed an episode of Broad City."
+    },
+    {
+        picture:"/Stephanie.png",
+        name: "Stephanie",
+        hairColor:"brown",
+        glasses: false,
+        facialHair: false,
+        eyeColor: "brown",
+        fact: "Clown Hater",
+        story:"Clowns are the worse. If you are into clowns stay far from me. I like living in different cities- I'm on city #7 currently."
+    },
+    {
+        picture:"/lola.png",
+        name: "Lola",
+        hairColor:"brown",
+        glasses: false,
+        facialHair: false,
+        eyeColor: "brown",
+        fact: "Published a poetry book",
+        story:"I attended a math and science boarding school. I've also published a poetry book. Poetry Rules!"
+    },
+    {
+        picture:"/knives.png",
+        name: "Ms Knives🗡",
+        hairColor:"brown",
+        glasses: false,
+        facialHair: false,
+        eyeColor: "brown",
+        fact: "Had a professional troupe act out how awkardly I eat ice cream",
+        story:"My name Ms Knives comes from college. I'm an icecream lover who had a professional comedy troupe act out how I awkardly eat icecream. My cat is a one-eyed pirate with colourful nails!"
+    },
+    {
+        picture:"/seth.png",
+        name: "Seth",
+        hairColor:"brown",
+        glasses: false,
+        facialHair: false,
+        eyeColor: "green",
+        fact: "Was neighbors with Michael J. Fox in Vermont",
+        story:"My neighbor Michael J. Fox was pretty chill and never complained when I played death metal with my guitar."
+    },
+    {
+        picture:"/emily.png",
+        name: "Emily",
+        hairColor:"blonde",
+        glasses: true,
+        facialHair: false,
+        eyeColor: "blue",
+        fact: "Was in the Colorguard during High School",
+        story:"Looking forward to travelling to Peru to hike Machu Picchu to check it off my bucket list. I was in the colorguard during High School."
+    }
     
 
 ];

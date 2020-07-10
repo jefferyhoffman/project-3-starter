@@ -1,0 +1,44 @@
+.color {
+  background-color: rgb(223, 156, 253);
+}
+#nav-toggle-state {
+  display: none;
+}
+
+#nav-toggle-state:checked ~ .navbar-menu {
+  display: block;
+}
+.navbar-menu {
+  background-color: rgb(223, 156, 253);
+}
+.navbar-start {
+  background-color: rgb(223, 156, 253);
+}
+.navbar-end {
+  background-color: rgb(223, 156, 253);
+}
+
+.navbar-start:hover {
+  background-color: rgb(227, 166, 255);
+}
+strong:hover {
+  background-color: rgb(227, 166, 255);
+  padding: 0 auto;
+  margin: 0px;
+}
+a.navbar-item {
+  text-decoration: none;
+  color: black;
+}
+a.navbar-item:visited {
+  background-color: rgb(227, 166, 255);
+  color: white;
+  text-decoration: none;
+}
+
+a.navbar-item:active {
+  text-decoration: none;
+}
+a.navbar-item:link {
+  text-decoration: none;
+}

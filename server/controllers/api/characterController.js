@@ -11,14 +11,5 @@ characterController.get('/', (req, res) => {
         })
 });
 
-//when the user interacts with card?
-characterController.put('/:id', (req, res) => {
-    db.Character.updateOne(
-
-    )
-});
-
-
-
 module.exports = characterController;
 
