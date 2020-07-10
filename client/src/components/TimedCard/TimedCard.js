@@ -5,10 +5,10 @@ import axios from 'axios'
 import Bulma from '@vizuaalog/bulmajs';
 import './TimedCard.css'
 import { ScoreContext } from '../../contexts/scoreContext.js';
-import {whoContext} from '../../contexts/whoContext'
-import {TimeContext} from '../../contexts/Time'
-import {FinalScoreContext} from '../../contexts/FinalScore'
-import {RandomNumberContext} from '../../contexts/RandomNumber'
+import { whoContext } from '../../contexts/whoContext'
+import { TimeContext } from '../../contexts/Time'
+import { FinalScoreContext } from '../../contexts/FinalScore'
+import { RandomNumberContext } from '../../contexts/RandomNumber'
 
 
 
@@ -16,21 +16,26 @@ import {RandomNumberContext} from '../../contexts/RandomNumber'
 // const randomnumber = Math.floor(Math.random() * 11)
 const TimedCard = () => {
 
-  const {RandomNumber, setRandomNumber} = useContext(RandomNumberContext)
-  const {finalScore, incrementFinalScore} = useContext(FinalScoreContext)
-  const {Time, setTime} = useContext(TimeContext)
-  const {who, updateWho} = useContext(whoContext)
-  const {score,setscore} = useContext(ScoreContext)
+  const { RandomNumber, setRandomNumber } = useContext(RandomNumberContext)
+  const { finalScore, incrementFinalScore } = useContext(FinalScoreContext)
+  const { Time, setTime } = useContext(TimeContext)
+  const { who, updateWho } = useContext(whoContext)
+  const { score, setscore } = useContext(ScoreContext)
   const [isFlipped, setisFlipped] = useState(false);
-  const []=useState(true) 
+  const [] = useState(true)
   const [guess, setguess] = useState("");
-    const [choice, setchoice] = useState("");
   const [whoImg, setwhoImg] = useState("");
-  const [Chars,setChars] = useState([])
+  const [hair, setHair] = useState("")
+  const [face, setFace] = useState("")
+  const [glassesQ, setGlassesQ] = useState("")
+  const [eye, setEye] = useState("")
+  const [factQ, setFactQ] = useState("")
+
+  const [Chars, setChars] = useState([])
 
 
 
-  
+
   const handleFlip = () => {
     setisFlipped(prevState => ({ isFlipped: !prevState.isFlipped }));
   }
@@ -38,10 +43,10 @@ const TimedCard = () => {
     if (score <= 0) {
       handleGameOver()
       Bulma().alert({
-        type:"danger",
-        title:"Oh no!",
-        body:"You couldn't guess right this time try guessing again before time runs out!",
-        confirm:"fine"
+        type: "danger",
+        title: "Oh no!",
+        body: "You couldn't guess right this time try guessing again before time runs out!",
+        confirm: "fine"
       })
     }
     else {
@@ -52,30 +57,30 @@ const TimedCard = () => {
   const handleGuess = () => {
     if (!guess) {
       Bulma().alert({
-        type:"warning",
-        title:"Warning",
-        body:"Type a name to Guess Who!",
-        confirm:"Guess Again"
+        type: "warning",
+        title: "Warning",
+        body: "Type a name to Guess Who!",
+        confirm: "Guess Again"
       })
     }
     if (guess.toLowerCase() === who.toLowerCase()) {
       handleFlip()
       incrementFinalScore(score)
       Bulma().alert({
-        type:"success",
-        title:"You Guessed Right! ",
-        body:` you scored  ${score} out of 10!!! Nice Job! Keep Guessing to get more points before time runs out!`,
-        confirm:"Hooray!"
+        type: "success",
+        title: "You Guessed Right! ",
+        body: ` you scored  ${score} out of 10!!! Nice Job! Keep Guessing to get more points before time runs out!`,
+        confirm: "Hooray!"
       })
     }
     else if (guess && guess.toLowerCase !== who.toLowerCase()) {
       Bulma().alert({
-        type:"warning",
-        title:"Score Dropped!",
-        body:"Guessed Wrong you lost a point! take your time you got this",
-        confirm:"Keep Guessing"
+        type: "warning",
+        title: "Score Dropped!",
+        body: "Guessed Wrong you lost a point! take your time you got this",
+        confirm: "Keep Guessing"
       })
-      setscore(score -1)
+      setscore(score - 1)
       console.log(score)
     }
   }
@@ -85,21 +90,26 @@ const TimedCard = () => {
       setChars(res.data)
       updateWho(res.data[RandomNumber].name)
       setwhoImg(res.data[RandomNumber].picture)
-      console.log("res: "+ res.data[RandomNumber])
+      setHair(res.data[RandomNumber].hairColor)
+      setEye(res.data[RandomNumber].eyeColor)
+      setGlassesQ(res.data[RandomNumber].glasses)
+      setFace(res.data[RandomNumber].facialHair)
+      setFactQ(res.data[RandomNumber].fact)
+      console.log("res: " + res.data[RandomNumber])
       console.log(res.data)
     })
     console.log(who)
   }, [])
-  
-  
-  
+
+
+
 
   const handleGameOver = () => {
     const element = document.getElementById("GObtn");
     element.classList.remove("is-hidden");
-    
+
   }
-  
+
   const handlePlayAgain = () => {
     setisFlipped(false)
     const start = document.getElementById("start")
@@ -112,7 +122,7 @@ const TimedCard = () => {
 
   }
 
-  const handleStart=()=>{
+  const handleStart = () => {
     console.log(who)
     console.log(Chars)
     setscore(10)
@@ -121,21 +131,21 @@ const TimedCard = () => {
     let seconds = 300
 
     let gameInterval = setInterval(function () {
-        seconds--;
+      seconds--;
       setTime(seconds)
-        if (seconds === 0){
-                   handleEOG();
+      if (seconds === 0) {
+        handleEOG();
         clearInterval(gameInterval)
-    }
-}, 1000)
-    
-    }
-const handleEOG = () => {
-  console.log("end of game")
-  const element = document.getElementById("GObtn");
+      }
+    }, 1000)
+
+  }
+  const handleEOG = () => {
+    console.log("end of game")
+    const element = document.getElementById("GObtn");
     element.classList.remove("is-hidden");
-    
-}
+
+  }
 
 
   return (
@@ -143,24 +153,24 @@ const handleEOG = () => {
     <div className="column is-4">
       <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
         <div className="box cardBox">
-        <div className="box">
-        <button className="button is-primary" id="start" onClick={handleStart}>Start</button>
-          <h1 className="is-size-1"> ????</h1>
-          <img alt="bob" src="../../assets/images/mysteryWho1.png" style={{ width: "200px", height: "200px" }} ></img>
-          <DropDown />
-          <input className='input' type="text" name="guess" value={guess} onChange={e => setguess(e.target.value)} placeholder="Guess here" />
-          <button className="button is-warning" onClick={handleScore}>Guess</button>
-          <button id="GObtn" className="button is-primary is-hidden" onClick={handlePlayAgain} >Guess Again</button>
+          <div className="box">
+            <button className="button is-primary" id="start" onClick={handleStart}>Start</button>
+            <h1 className="is-size-1"> ????</h1>
+            <img alt="bob" src="../../assets/images/mysteryWho1.png" style={{ width: "200px", height: "200px" }} ></img>
+            <DropDown eye={eye} hair={hair} glassesQ={glassesQ} face={face} factQ={factQ}  />
+            <input className='input' type="text" name="guess" value={guess} onChange={e => setguess(e.target.value)} placeholder="Guess here" />
+            <button className="button is-warning" onClick={handleScore}>Guess</button>
+            <button id="GObtn" className="button is-primary is-hidden" onClick={handlePlayAgain} >Guess Again</button>
           </div>
         </div>
 
         <div className="box cardBox2">
-        <div className="box">
-          <h1 className="is-size-1"> You got it!</h1>
-          <img alt={who} src={whoImg} style={{ width: "200px", height: "200px" }} ></img>
-          <button className="button is-primary" onClick={handlePlayAgain}>Play Again</button>
+          <div className="box">
+            <h1 className="is-size-1"> You got it!</h1>
+            <img alt={who} src={whoImg} style={{ width: "200px", height: "200px" }} ></img>
+            <button className="button is-primary" onClick={handlePlayAgain}>Play Again</button>
+          </div>
         </div>
-  </div>
       </ReactCardFlip>
     </div>
   )

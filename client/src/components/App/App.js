@@ -66,6 +66,9 @@ class App extends Component {
             <div className='App'>
               <Navigation />
               <div className='main-container'>
+                  <FinalScoreContextProvider>
+                    <TimeContextProvider>
+                      <RandomNumberContextProvider>
                 <Switch>
                   <Route exact path='/' component={Main} />
                   <PrivateRoute path='/menu' component={Menu} />
@@ -73,17 +76,14 @@ class App extends Component {
                   <Route path='/register' component={Register} />
                   <PrivateRoute path='/secret' component={Secret} />
                   <PrivateRoute path="/Game" component={Game} />
-                  <FinalScoreContextProvider>
                     <Route path="/leaderboard" component={Leaderboard} />
-                    <TimeContextProvider>
-                      <RandomNumberContextProvider>
                         <PrivateRoute path="/MainGame" component={MainGame} />
-                      </RandomNumberContextProvider>
-                    </TimeContextProvider>
-                  </FinalScoreContextProvider>
                   <Route path="/Characters" component={Characters} />
                   <Route component={NotFound} />
                 </Switch>
+                      </RandomNumberContextProvider>
+                    </TimeContextProvider>
+                  </FinalScoreContextProvider>
               </div>
               <Footer />
             </div>

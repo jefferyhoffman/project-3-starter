@@ -8,29 +8,21 @@ import { RandomNumberContext } from '../../contexts/RandomNumber';
 
 const DropDown = (props) => {
 
-    const [hair, setHair] = useState("")
-    const [eye, setEye] = useState("")
-    const [glassesQ, setGlassesQ] = useState("")
-    const [face, setFace] = useState("")
-    const [factQ, setFactQ] = useState("")
-    const [quests, setquests] = useState(3)
+    const [hair, setHair] = useState(props.hair)
+    const [eye, setEye] = useState(props.eye)
+    const [glassesQ, setGlassesQ] = useState(props.glassesQ)
+    const [face, setFace] = useState(props.face)
+    const [factQ, setFactQ] = useState(props.factQ)
     const {score,setscore} = useContext(ScoreContext)
     const {RandomNumber}=useContext(RandomNumberContext)
 
-    useEffect(() => {
-        
-        axios.get('/api/characters')
-            .then((res) => {
-                // setHair(res.data[RandomNumber].hairColor)
-                // setEye(res.data[RandomNumber].eyeColor)
-                // setGlassesQ(res.data[RandomNumber].glasses)
-                // setFace(res.data[RandomNumber].facialHair)
-                // setFactQ(res.data[RandomNumber].fact)
-                
-            })
-            
-           
-        }, [RandomNumber])
+    useEffect(() => {            
+                setHair(props.hair)
+                setEye(props.eye)
+                setGlassesQ(props.glassesQ)
+                setFace(props.face)
+                setFactQ(props.factQ)                 
+                   }, [RandomNumber])
 
 
 
@@ -51,6 +43,9 @@ const DropDown = (props) => {
                             body: `${hair} .... Be aware, each time you ask a question, you will lose a point!`,
                             confirm: {label: "Okay", onClick:function(){
                                 setscore(score -1)
+                            }},
+                            cancel: {label: "ugh", onClick:function(){
+                                setscore(score -1)
                             }}
                         })}
                             value="hair">What is my hair color?</button>
@@ -60,7 +55,7 @@ const DropDown = (props) => {
                             onClick={(e)=> Bulma().alert({
                             type:"info",
                             title:"My eye color is...",
-                            body:`${eye} .... Be aware, each time you ask a question, you will lose a point!`,
+                            body:eye+' .... Be aware, each time you ask a question, you will lose a point!',
                             confirm:{label: "Okay", onClick:function(){
                                 setscore(score -1)
                             }}
