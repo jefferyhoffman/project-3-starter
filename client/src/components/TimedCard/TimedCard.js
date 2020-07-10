@@ -8,6 +8,7 @@ import { ScoreContext } from '../../contexts/scoreContext.js';
 import {whoContext} from '../../contexts/whoContext'
 import {TimeContext} from '../../contexts/Time'
 import {FinalScoreContext} from '../../contexts/FinalScore'
+import useInterval from './useInterval'
 
 
 const randomnumber = Math.floor(Math.random() * 11)
@@ -15,7 +16,7 @@ const randomnumber = Math.floor(Math.random() * 11)
 const TimedCard = () => {
 
   const {finalScore, incrementFinalScore} = useContext(FinalScoreContext)
-  const {Time, decrementTime} = useContext(TimeContext)
+  const {Time, setTime} = useContext(TimeContext)
   const {who, updateWho} = useContext(whoContext)
   const {score,decrementScore} = useContext(ScoreContext)
   const [isFlipped, setisFlipped] = useState(false);
@@ -82,25 +83,39 @@ const TimedCard = () => {
       setchoice(randomnumber)
       updateWho(res.data[randomnumber].name)
       setwhoImg(res.data[randomnumber].picture)
-
     })
   }, [])
-
+  
   const handleGameOver = () => {
     const element = document.getElementById("GObtn");
-     element.classList.remove("is-hidden");
+    element.classList.remove("is-hidden");
     
   }
   
-const handlePlayAgain = () => {
-  window.location.reload(false);
-}
+  const handlePlayAgain = () => {
+    window.location.reload(false);
+  }
 
-const handleStart=()=>{
-  const start = document.getElementById("start")
-  start.remove()
+  const handleStart=()=>{
+    const start = document.getElementById("start")
+    start.remove()
+    let seconds = 300
 
+    let gameInterval = setInterval(function () {
+        seconds--;
 
+        console.log(seconds)
+      setTime(seconds)
+        if (seconds === 0){
+            console.log(seconds)
+        handleEOG();
+        clearInterval(gameInterval)
+    }
+}, 1000)
+    
+    }
+const handleEOG = () => {
+  console.log("end of game")
 }
 
 
