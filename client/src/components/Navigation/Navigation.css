@@ -1,7 +1,12 @@
 .navbar {
-    background-image: url("../../assets/images/wood.jpg") !important;
+    /* background-image: url("../../assets/images/wood.jpg") !important; */
+    background-color:  #ebb364 !important;
     background-size: cover !important;
     border-radius: 0px !important;
+}
+
+.home {
+    color: black !important;
 }
 
 /* .logo {
