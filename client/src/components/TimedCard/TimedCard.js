@@ -3,22 +3,30 @@ import ReactCardFlip from 'react-card-flip';
 import DropDown from '../DropDown/DropDown.js';
 import axios from 'axios'
 import Bulma from '@vizuaalog/bulmajs';
-import './Card.css'
+import './TimedCard.css'
 import { ScoreContext } from '../../contexts/scoreContext.js';
 import {whoContext} from '../../contexts/whoContext'
+import {TimeContext} from '../../contexts/Time'
+import {FinalScoreContext} from '../../contexts/FinalScore'
+import {RandomNumberContext} from '../../contexts/RandomNumber'
 
 
-const randomnumber = Math.floor(Math.random() * 11)
 
-const Card = () => {
 
+// const randomnumber = Math.floor(Math.random() * 11)
+const TimedCard = () => {
+
+  const {RandomNumber, setRandomNumber} = useContext(RandomNumberContext)
+  const {finalScore, incrementFinalScore} = useContext(FinalScoreContext)
+  const {Time, setTime} = useContext(TimeContext)
   const {who, updateWho} = useContext(whoContext)
   const {score,setscore} = useContext(ScoreContext)
   const [isFlipped, setisFlipped] = useState(false);
   const []=useState(true) 
   const [guess, setguess] = useState("");
-   const [choice, setchoice] = useState("");
+    const [choice, setchoice] = useState("");
   const [whoImg, setwhoImg] = useState("");
+  const [Chars,setChars] = useState([])
 
 
 
@@ -31,8 +39,8 @@ const Card = () => {
       handleGameOver()
       Bulma().alert({
         type:"danger",
-        title:"Game Over",
-        body:"you got a game over why not try again",
+        title:"Oh no!",
+        body:"You couldn't guess right this time try guessing again before time runs out!",
         confirm:"fine"
       })
     }
@@ -52,14 +60,14 @@ const Card = () => {
     }
     if (guess.toLowerCase() === who.toLowerCase()) {
       handleFlip()
+      incrementFinalScore(score)
       Bulma().alert({
         type:"success",
-        title:"You Won!",
-        body:` you won your score is ${score} out of 10!!! Nice Job!`,
+        title:"You Guessed Right! ",
+        body:` you scored  ${score} out of 10!!! Nice Job! Keep Guessing to get more points before time runs out!`,
         confirm:"Hooray!"
       })
     }
-
     else if (guess && guess.toLowerCase !== who.toLowerCase()) {
       Bulma().alert({
         type:"warning",
@@ -73,21 +81,60 @@ const Card = () => {
   }
   useEffect(() => {
     axios.get("/api/characters").then((res) => {
-      
-      updateWho(res.data[randomnumber].name)
-      setwhoImg(res.data[randomnumber].picture)
-
+      setChars(res.data)
+      setChars(res.data)
+      updateWho(res.data[RandomNumber].name)
+      setwhoImg(res.data[RandomNumber].picture)
+      console.log("res: "+ res.data[RandomNumber])
+      console.log(res.data)
     })
+    console.log(who)
   }, [])
+  
+  
+  
 
   const handleGameOver = () => {
     const element = document.getElementById("GObtn");
-     element.classList.remove("is-hidden");
+    element.classList.remove("is-hidden");
     
   }
   
-const handlePlayAgain = () => {
-  window.location.reload(false);
+  const handlePlayAgain = () => {
+    setisFlipped(false)
+    const start = document.getElementById("start")
+    const element = document.getElementById("GObtn");
+    element.classList.add("is-hidden");
+    setscore(10)
+    setRandomNumber(Math.floor(Math.random() * 11))
+    updateWho(Chars[RandomNumber].name)
+    setwhoImg(Chars[RandomNumber].picture)
+
+  }
+
+  const handleStart=()=>{
+    console.log(who)
+    console.log(Chars)
+    setscore(10)
+    const start = document.getElementById("start")
+    start.classList.add("is-hidden");
+    let seconds = 300
+
+    let gameInterval = setInterval(function () {
+        seconds--;
+      setTime(seconds)
+        if (seconds === 0){
+                   handleEOG();
+        clearInterval(gameInterval)
+    }
+}, 1000)
+    
+    }
+const handleEOG = () => {
+  console.log("end of game")
+  const element = document.getElementById("GObtn");
+    element.classList.remove("is-hidden");
+    
 }
 
 
@@ -97,12 +144,13 @@ const handlePlayAgain = () => {
       <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
         <div className="box cardBox">
         <div className="box">
+        <button className="button is-primary" id="start" onClick={handleStart}>Start</button>
           <h1 className="is-size-1"> ????</h1>
           <img alt="bob" src="../../assets/images/mysteryWho1.png" style={{ width: "200px", height: "200px" }} ></img>
-          <DropDown choice={randomnumber} />
+          <DropDown />
           <input className='input' type="text" name="guess" value={guess} onChange={e => setguess(e.target.value)} placeholder="Guess here" />
           <button className="button is-warning" onClick={handleScore}>Guess</button>
-          <button id="GObtn" className="button is-primary is-hidden" onClick={handlePlayAgain} >Play Again</button>
+          <button id="GObtn" className="button is-primary is-hidden" onClick={handlePlayAgain} >Guess Again</button>
           </div>
         </div>
 
@@ -118,4 +166,4 @@ const handlePlayAgain = () => {
   )
 
 }
-export default Card
+export default TimedCard

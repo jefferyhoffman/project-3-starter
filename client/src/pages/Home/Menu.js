@@ -45,7 +45,7 @@ const Menu= ()=> {
                   <p className="title">Ready to Play?</p>
                   <p className="subtitle">Click Image to Start!</p>
                   <figure className=" image is-128x128 is-inline-block">
-                    <Link to="/game">
+                    <Link to="/MainGame">
                       <img
                         className="image is-rounded "
                         id="letsGuess"
