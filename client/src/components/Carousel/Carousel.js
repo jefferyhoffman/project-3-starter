@@ -12,8 +12,8 @@ const Carousel = () => {
       onSwiper={(swiper) => console.log(swiper)}>
       <SwiperSlide><img src='/newYorker.png' style={{ width: "200px" }}/></SwiperSlide>
       <SwiperSlide><img src='/Jake.png' style={{ width: "200px" }}/></SwiperSlide>
-      <SwiperSlide><img src='/frank.png' style={{ width: "200px" }}/></SwiperSlide>
-      <SwiperSlide><img src='mrCoder.png' style={{ width: "200px"}}/></SwiperSlide>
+      <SwiperSlide><img src='/George.png' style={{ width: "200px" }}/></SwiperSlide>
+      <SwiperSlide><img src='andrew.png' style={{ width: "200px"}}/></SwiperSlide>
     </Swiper>
   );
 };

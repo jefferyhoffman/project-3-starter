@@ -29,8 +29,8 @@ class LoginForm extends Component {
     return (
       <div className="container">
         <div className="columns">
-          <div className="column"></div>
-          <div className="column">
+          
+          <div className="column is-4 is-offset-4">
             <div className="card">
               <div className="card-content">
                 <p className="title">Login</p>
@@ -68,7 +68,7 @@ class LoginForm extends Component {
               </div>
             </div>
           </div>
-          <div className="column"></div>
+          
         </div>
       </div>
     );

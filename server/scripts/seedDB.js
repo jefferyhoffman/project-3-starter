@@ -58,7 +58,7 @@ const characterSeed = [
     },
     {
         picture: "../../../assets/images/instagram-model.png",
-        name: "instagram-model",
+        name: "IG Model",
         hairColor: "black",
         glasses: true,
         facialHair: false ,
@@ -121,10 +121,10 @@ const characterSeed = [
         name:"Lindsey",
         hairColor:"blonde",
         glasses:false,
-        facialHair:true,
+        facialHair:false,
         eyeColor:"blue",
-        fact:"Drove without a valid drivers license from 2015-2019",
-        story:""
+        fact:"Drove without a valid drivers license for a few years",
+        story:"I didn't want a drivers license but loved to drive. I use google during trivia and always find a way to bend the rules. "
     },
     {
         picture:"/theHiker.png",
@@ -138,7 +138,7 @@ const characterSeed = [
     },
      {   picture:"../../../assets/images/andrew.png",
         name:"Andrew",
-        hairColor:"Brown",
+        hairColor:"brown",
         glasses:false,
         facialHair:false,
         eyeColor:"blue",
@@ -149,13 +149,43 @@ const characterSeed = [
     {
         picture:"../../../assets/images/George.png",
         name: "George",
-        hairColor:"Black",
+        hairColor:"black",
         glasses: true,
         facialHair: false,
         eyeColor: "brown",
         fact: "Worked as a tire technician for about 7 years",
         story:"Studied in Computer Science for about 5 years and really into gaming."
-    }
+    },
+    {
+        picture:"/grayson.png",
+        name: "Grayson",
+        hairColor:"brown",
+        glasses: true,
+        facialHair: false,
+        eyeColor: "hazel",
+        fact: "Half Native American with roots from the Lumbee Tribe in North Carolina",
+        story:"I'm half Native American with roots from the Lumbee Tribe in North Carolina. And I have a half brother."
+    },
+    {
+        picture:"/josh.png",
+        name: "Josh",
+        hairColor:"black",
+        glasses: true,
+        facialHair: true,
+        eyeColor: "brown",
+        fact: "Was into BMX racing for 10 years",
+        story:"I love my Husky and used to do BMX racing for 10 years."
+    },
+    // {
+    //     picture:"../../../assets/images/George.png",
+    //     name: "Emily",
+    //     hairColor:"blonde",
+    //     glasses: true,
+    //     facialHair: false,
+    //     eyeColor: "blue",
+    //     fact: "Was in the Colorguard during High School",
+    //     story:"Looking forward to travelling to Peru to hike Machu Picchu to check it off my bucket list. I was in the colorguard during High School."
+    // }
     
 
 ];
