@@ -94,7 +94,6 @@ const Navigation = () => {
         <strong>Practice Game</strong>
         </NavLink>
         }
-        
         </div>
 
         <div className="navbar-end">
