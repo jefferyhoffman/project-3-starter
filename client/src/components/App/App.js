@@ -20,7 +20,8 @@ import './App.css';
 import Characters from '../../pages/Characters/Characters';
 import ScoreContextProvider from '../../contexts/scoreContext';
 import WhoContextProvider from '../../contexts/whoContext'
-
+import FinalScoreContextProvider from '../../contexts/FinalScore'
+import TimeContextProvider from '../../contexts/Time';
 
 class App extends Component {
   constructor(props) {
@@ -59,28 +60,32 @@ class App extends Component {
   render() {
     return (
       <AuthContext.Provider value={this.state.auth}>
-      <ScoreContextProvider>
-      <WhoContextProvider> 
-        <div className='App'>
-          <Navigation />
-                <div className='main-container'>
-            <Switch>
-              <Route exact path='/' component={Main} />
-              <PrivateRoute path='/menu' component={Menu}/>
-              <Route path='/login' component={Login} />
-              <Route path='/register' component={Register} />
-              <PrivateRoute path='/secret' component={Secret} />
-              <Route path="/leaderboard" component={Leaderboard}/>
-              <PrivateRoute path ="/Game" component={Game} />
-              <PrivateRoute path ="/MainGame" component={MainGame} />
-              <Route path ="/Characters" component={Characters}/>
-              <Route component={NotFound} />
-            </Switch>
-          </div>
-                <Footer/>
-        </div>
-      </WhoContextProvider>
-      </ScoreContextProvider>
+        <ScoreContextProvider>
+          <WhoContextProvider>
+            <div className='App'>
+              <Navigation />
+              <div className='main-container'>
+                <Switch>
+                  <Route exact path='/' component={Main} />
+                  <PrivateRoute path='/menu' component={Menu} />
+                  <Route path='/login' component={Login} />
+                  <Route path='/register' component={Register} />
+                  <PrivateRoute path='/secret' component={Secret} />
+                  <PrivateRoute path="/Game" component={Game} />
+                  <FinalScoreContextProvider>
+                    <Route path="/leaderboard" component={Leaderboard} />
+                    <TimeContextProvider>
+                      <PrivateRoute path="/MainGame" component={MainGame} />
+                    </TimeContextProvider>
+                  </FinalScoreContextProvider>
+                  <Route path="/Characters" component={Characters} />
+                  <Route component={NotFound} />
+                </Switch>
+              </div>
+              <Footer />
+            </div>
+          </WhoContextProvider>
+        </ScoreContextProvider>
       </AuthContext.Provider>
     );
   }
