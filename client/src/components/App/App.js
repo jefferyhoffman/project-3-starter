@@ -63,30 +63,30 @@ class App extends Component {
       <AuthContext.Provider value={this.state.auth}>
         <ScoreContextProvider>
           <WhoContextProvider>
-            <div className='App'>
-              <Navigation />
-              <div className='main-container'>
-                <Switch>
-                  <Route exact path='/' component={Main} />
-                  <PrivateRoute path='/menu' component={Menu} />
-                  <Route path='/login' component={Login} />
-                  <Route path='/register' component={Register} />
-                  <PrivateRoute path='/secret' component={Secret} />
-                  <PrivateRoute path="/Game" component={Game} />
-                  <FinalScoreContextProvider>
-                    <Route path="/leaderboard" component={Leaderboard} />
-                    <TimeContextProvider>
-                      <RandomNumberContextProvider>
-                        <PrivateRoute path="/MainGame" component={MainGame} />
-                      </RandomNumberContextProvider>
-                    </TimeContextProvider>
-                  </FinalScoreContextProvider>
-                  <Route path="/Characters" component={Characters} />
-                  <Route component={NotFound} />
-                </Switch>
-              </div>
-              <Footer />
-            </div>
+            <FinalScoreContextProvider>
+              <TimeContextProvider>
+                <RandomNumberContextProvider>
+                  <div className='App'>
+                    <Navigation />
+                    <div className='main-container'>
+                      <Switch>
+                        <Route exact path='/' component={Main} />
+                        <PrivateRoute path='/menu' component={Menu} />
+                        <Route path='/login' component={Login} />
+                        <Route path='/register' component={Register} />
+                        <PrivateRoute path='/secret' component={Secret} />
+                        <PrivateRoute path="/Game" component={Game} />
+                          <Route path="/leaderboard" component={Leaderboard} />
+                              <PrivateRoute path="/MainGame" component={MainGame} />
+                        <Route path="/characters" component={Characters} />
+                        <Route component={NotFound} />
+                      </Switch>
+                    </div>
+                    <Footer />
+                  </div>
+                </RandomNumberContextProvider>
+              </TimeContextProvider>
+            </FinalScoreContextProvider>
           </WhoContextProvider>
         </ScoreContextProvider>
       </AuthContext.Provider>
