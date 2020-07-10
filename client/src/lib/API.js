@@ -32,7 +32,7 @@ export default {
         body: {
           title, image, description, prepTime, cookTime, servings, directions, categories, ingredients
         }
-      })
+      }).catch(err => console.log(err));
     }
   }
 }
