@@ -13,12 +13,12 @@ reviewsController.get("/all", (req, res) => {
 
 // Route to create a new review
 reviewsController.post("/", JWTVerifier, (req, res) => {
-    const { review, stars } = req.body;
+    const { review, stars, RecipeId } = req.body;
+    const UserId = req.user.dataValues.id;
 
     // Create the entry in review table
     db.Review.create(
-        { review, stars }, 
-        { include: [{model: db.User, as: "users"}, {model: db.Recipe, as: "recipes"}] }
+        { review, stars, RecipeId, UserId }
     )
         .then(review => res.json(review))
         .catch(err => res.json(err));

@@ -15,16 +15,15 @@ module.exports = (sequelize, DataTypes) => {
     Review.associate = models => {
         // Review belongs to a single User
         Review.belongsTo(models.User, {
-            foreignKey: "assignedUser",
+            foreignKey: "UserId",
             targetKey: "id"
         });
 
         // Review belongs to a single Recipe
         Review.belongsTo(models.Recipe, {
-            foreignKey: "assignedRecipe",
+            foreignKey: "RecipeId",
             targetKey: "id"
         });
-
     };
 
     // Return the Review model as defined to be exported to the app
