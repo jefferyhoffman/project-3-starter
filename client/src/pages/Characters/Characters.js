@@ -24,7 +24,7 @@ const Characters = () => {
                 {/* Mapping through characters to render api */}
                 {character.map((char) => {
                     return (
-                        <CharacterContainer key={char._id} name={char.name} image={char.picture} fact={char.fact}/>   
+                        <CharacterContainer key={char._id} name={char.name} image={char.picture} story={char.story}/>   
                     )
                 })}
                 {/* End of map */}

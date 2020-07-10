@@ -3,6 +3,8 @@ import "./Footer.css";
 import { Share } from 'react-twitter-widgets'
 import ShareLink from 'react-facebook-share-link'
 const Footer = () => {
+   
+
    return (
       <section className="hero-foot has-text-centered">
          <div className='columns'>
@@ -11,6 +13,7 @@ const Footer = () => {
             <div className='column'>
                <p><strong>Let's Guess</strong></p>
                <p>&copy; Copyright 2020</p>
+               
                
                <Share url="https://andrewsuzuki.com" options={{ size: "large" }} />
                <ShareLink link='https://your-site.com/some-page'>
