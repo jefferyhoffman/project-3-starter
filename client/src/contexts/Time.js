@@ -1,17 +1,26 @@
-import React,{createContext,useState} from 'react';
+import React,{createContext,useState, useEffect} from 'react';
 
 export const  TimeContext = createContext();
 
 const TimeContextProvider = (props) => {
     
-    const[Time, setTime]=useState(300)
+    const[Time, setTime]=useState(0)
 
-    const decrementTime=(value)=>{
-        setTime(Time - value)
-    }
+    useEffect(()=>{
+        setInterval(() => {
+        switch(Time){
+            case Time>0:
+                setTime(Time -1)
+            break
+            case Time<0:
+                setTime(0)
+            break
+        }
+        }, 1000);
+       },[Time])
 
     return(
-        <TimeContext.Provider value={{Time,decrementTime}}>
+        <TimeContext.Provider value={{Time,setTime}}>
 
         {props.children}
 
