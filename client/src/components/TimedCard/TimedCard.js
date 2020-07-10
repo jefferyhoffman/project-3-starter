@@ -3,15 +3,19 @@ import ReactCardFlip from 'react-card-flip';
 import DropDown from '../DropDown/DropDown.js';
 import axios from 'axios'
 import Bulma from '@vizuaalog/bulmajs';
-import './Card.css'
+import './TimedCard.css'
 import { ScoreContext } from '../../contexts/scoreContext.js';
 import {whoContext} from '../../contexts/whoContext'
+import {TimeContext} from '../../contexts/Time'
+import {FinalScoreContext} from '../../contexts/FinalScore'
 
 
 const randomnumber = Math.floor(Math.random() * 11)
 
-const Card = () => {
+const TimedCard = () => {
 
+  const {finalScore, incrementFinalScore} = useContext(FinalScoreContext)
+  const {Time, decrementTime} = useContext(TimeContext)
   const {who, updateWho} = useContext(whoContext)
   const {score,decrementScore} = useContext(ScoreContext)
   const [isFlipped, setisFlipped] = useState(false);
@@ -92,6 +96,13 @@ const handlePlayAgain = () => {
   window.location.reload(false);
 }
 
+const handleStart=()=>{
+  const start = document.getElementById("start")
+  start.remove()
+
+
+}
+
 
   return (
 
@@ -99,6 +110,7 @@ const handlePlayAgain = () => {
       <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
         <div className="box cardBox">
         <div className="box">
+        <button className="button is-primary" id="start" onClick={handleStart}>Start</button>
           <h1 className="is-size-1"> ????</h1>
           <img alt="bob" src="../../assets/images/mysteryWho1.png" style={{ width: "200px", height: "200px" }} ></img>
           <DropDown choice={randomnumber} />
@@ -123,4 +135,4 @@ const handlePlayAgain = () => {
   )
 
 }
-export default Card
+export default TimedCard
