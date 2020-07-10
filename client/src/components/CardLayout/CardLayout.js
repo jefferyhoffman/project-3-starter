@@ -1,238 +1,55 @@
-import React from "react";
+import React, { Component } from "react";
 import { Card, Rating, Container, Image, Responsive } from "semantic-ui-react";
+import RecipeCard from "../RecipeCard/RecipeCard";
+
+import API from '../../lib/API'
 import "./CardLayout.css";
 
 const extra = <Rating icon="star" defaultRating={3} maxRating={5} />;
 
 //Below is a group of cards for styling purposes. 3 items per row looks good on desktop, 1 looks best on mobile.
-const CardLayout = () => (
-  <Container className="test">
-    <Responsive maxWidth="780">
-    <Card.Group itemsPerRow={1}>
-      <Card>
-        <Image src={require("../../assets/images/burger1.jpg")} wrapped ui={false} as='a' href="https://www.thewholesomedish.com/the-best-classic-burger/" target="_blank" />
-        <Card.Content>
-          <Card.Header>Tasty Burger!</Card.Header>
-          <Card.Meta>
-            <span>Entree</span>
-          </Card.Meta>
-          <Card.Description>
-          This is one tasty burger. It is a heart attack in a bun! Easy to make with a relatively small list of ingredients. This is guaranteed to be a crowd pleaser!
-          </Card.Description>
-          <Card.Meta>
-            <span>Submitted by: UserName</span>
-          </Card.Meta>
-        </Card.Content>
-        <Card.Content>
-          {extra}
-        </Card.Content>
-      </Card>
-      <Card>
-        <Image src={require("../../assets/images/burger1.jpg")} wrapped ui={false} as='a' href="https://www.thewholesomedish.com/the-best-classic-burger/" target="_blank" />
-        <Card.Content>
-          <Card.Header>Tasty Burger!</Card.Header>
-          <Card.Meta>
-            <span>Entree</span>
-          </Card.Meta>
-          <Card.Description>
-          This is one tasty burger. It is a heart attack in a bun! Easy to make with a relatively small list of ingredients. This is guaranteed to be a crowd pleaser!
-          </Card.Description>
-          <Card.Meta>
-            <span>Submitted by: UserName</span>
-          </Card.Meta>
-        </Card.Content>
-        <Card.Content>
-          {extra}
-        </Card.Content>
-      </Card>
-      <Card>
-        <Image src={require("../../assets/images/burger1.jpg")} wrapped ui={false} as='a' href="https://www.thewholesomedish.com/the-best-classic-burger/" target="_blank" />
-        <Card.Content>
-          <Card.Header>Tasty Burger!</Card.Header>
-          <Card.Meta>
-            <span>Entree</span>
-          </Card.Meta>
-          <Card.Description>
-          This is one tasty burger. It is a heart attack in a bun! Easy to make with a relatively small list of ingredients. This is guaranteed to be a crowd pleaser!
-          </Card.Description>
-          <Card.Meta>
-            <span>Submitted by: UserName</span>
-          </Card.Meta>
-        </Card.Content>
-        <Card.Content>
-          {extra}
-        </Card.Content>
-      </Card>
-      <Card>
-        <Image src={require("../../assets/images/burger1.jpg")} wrapped ui={false} as='a' href="https://www.thewholesomedish.com/the-best-classic-burger/" target="_blank" />
-        <Card.Content>
-          <Card.Header>Tasty Burger!</Card.Header>
-          <Card.Meta>
-            <span>Entree</span>
-          </Card.Meta>
-          <Card.Description>
-          This is one tasty burger. It is a heart attack in a bun! Easy to make with a relatively small list of ingredients. This is guaranteed to be a crowd pleaser!
-          </Card.Description>
-          <Card.Meta>
-            <span>Submitted by: UserName</span>
-          </Card.Meta>
-        </Card.Content>
-        <Card.Content>
-          {extra}
-        </Card.Content>
-      </Card>
-      <Card>
-        <Image src={require("../../assets/images/burger1.jpg")} wrapped ui={false} as='a' href="https://www.thewholesomedish.com/the-best-classic-burger/" target="_blank" />
-        <Card.Content>
-          <Card.Header>Tasty Burger!</Card.Header>
-          <Card.Meta>
-            <span>Entree</span>
-          </Card.Meta>
-          <Card.Description>
-          This is one tasty burger. It is a heart attack in a bun! Easy to make with a relatively small list of ingredients. This is guaranteed to be a crowd pleaser!
-          </Card.Description>
-          <Card.Meta>
-            <span>Submitted by: UserName</span>
-          </Card.Meta>
-        </Card.Content>
-        <Card.Content>
-          {extra}
-        </Card.Content>
-      </Card>
-      <Card>
-        <Image src={require("../../assets/images/burger1.jpg")} wrapped ui={false} as='a' href="https://www.thewholesomedish.com/the-best-classic-burger/" target="_blank" />
-        <Card.Content>
-          <Card.Header>Tasty Burger!</Card.Header>
-          <Card.Meta>
-            <span>Entree</span>
-          </Card.Meta>
-          <Card.Description>
-          This is one tasty burger. It is a heart attack in a bun! Easy to make with a relatively small list of ingredients. This is guaranteed to be a crowd pleaser!
-          </Card.Description>
-          <Card.Meta>
-            <span>Submitted by: UserName</span>
-          </Card.Meta>
-        </Card.Content>
-        <Card.Content>
-          {extra}
-        </Card.Content>
-      </Card>
-    </Card.Group>
-    </Responsive>
-    <Responsive minWidth="601">
-    <Card.Group itemsPerRow={3}>
-      <Card>
-        <Image src={require("../../assets/images/burger1.jpg")} wrapped ui={false} as='a' href="https://www.thewholesomedish.com/the-best-classic-burger/" target="_blank" />
-        <Card.Content>
-          <Card.Header>Tasty Burger!</Card.Header>
-          <Card.Meta>
-            <span>Entree</span>
-          </Card.Meta>
-          <Card.Description>
-          This is one tasty burger. It is a heart attack in a bun! Easy to make with a relatively small list of ingredients. This is guaranteed to be a crowd pleaser!
-          </Card.Description>
-          <Card.Meta>
-            <span>Submitted by: UserName</span>
-          </Card.Meta>
-        </Card.Content>
-        <Card.Content>
-          {extra}
-        </Card.Content>
-      </Card>
-      <Card>
-        <Image src={require("../../assets/images/burger1.jpg")} wrapped ui={false} as='a' href="https://www.thewholesomedish.com/the-best-classic-burger/" target="_blank" />
-        <Card.Content>
-          <Card.Header>Tasty Burger!</Card.Header>
-          <Card.Meta>
-            <span>Entree</span>
-          </Card.Meta>
-          <Card.Description>
-          This is one tasty burger. It is a heart attack in a bun! Easy to make with a relatively small list of ingredients. This is guaranteed to be a crowd pleaser!
-          </Card.Description>
-          <Card.Meta>
-            <span>Submitted by: UserName</span>
-          </Card.Meta>
-        </Card.Content>
-        <Card.Content>
-          {extra}
-        </Card.Content>
-      </Card>
-      <Card>
-        <Image src={require("../../assets/images/burger1.jpg")} wrapped ui={false} as='a' href="https://www.thewholesomedish.com/the-best-classic-burger/" target="_blank" />
-        <Card.Content>
-          <Card.Header>Tasty Burger!</Card.Header>
-          <Card.Meta>
-            <span>Entree</span>
-          </Card.Meta>
-          <Card.Description>
-          This is one tasty burger. It is a heart attack in a bun! Easy to make with a relatively small list of ingredients. This is guaranteed to be a crowd pleaser!
-          </Card.Description>
-          <Card.Meta>
-            <span>Submitted by: UserName</span>
-          </Card.Meta>
-        </Card.Content>
-        <Card.Content>
-          {extra}
-        </Card.Content>
-      </Card>
-      <Card>
-        <Image src={require("../../assets/images/burger1.jpg")} wrapped ui={false} as='a' href="https://www.thewholesomedish.com/the-best-classic-burger/" target="_blank" />
-        <Card.Content>
-          <Card.Header>Tasty Burger!</Card.Header>
-          <Card.Meta>
-            <span>Entree</span>
-          </Card.Meta>
-          <Card.Description>
-          This is one tasty burger. It is a heart attack in a bun! Easy to make with a relatively small list of ingredients. This is guaranteed to be a crowd pleaser!
-          </Card.Description>
-          <Card.Meta>
-            <span>Submitted by: UserName</span>
-          </Card.Meta>
-        </Card.Content>
-        <Card.Content>
-          {extra}
-        </Card.Content>
-      </Card>
-      <Card>
-        <Image src={require("../../assets/images/burger1.jpg")} wrapped ui={false} as='a' href="https://www.thewholesomedish.com/the-best-classic-burger/" target="_blank" />
-        <Card.Content>
-          <Card.Header>Tasty Burger!</Card.Header>
-          <Card.Meta>
-            <span>Entree</span>
-          </Card.Meta>
-          <Card.Description>
-          This is one tasty burger. It is a heart attack in a bun! Easy to make with a relatively small list of ingredients. This is guaranteed to be a crowd pleaser!
-          </Card.Description>
-          <Card.Meta>
-            <span>Submitted by: UserName</span>
-          </Card.Meta>
-        </Card.Content>
-        <Card.Content>
-          {extra}
-        </Card.Content>
-      </Card>
-      <Card>
-        <Image src={require("../../assets/images/burger1.jpg")} wrapped ui={false} as='a' href="https://www.thewholesomedish.com/the-best-classic-burger/" target="_blank" />
-        <Card.Content>
-          <Card.Header>Tasty Burger!</Card.Header>
-          <Card.Meta>
-            <span>Entree</span>
-          </Card.Meta>
-          <Card.Description>
-          This is one tasty burger. It is a heart attack in a bun! Easy to make with a relatively small list of ingredients. This is guaranteed to be a crowd pleaser!
-          </Card.Description>
-          <Card.Meta>
-            <span>Submitted by: UserName</span>
-          </Card.Meta>
-        </Card.Content>
-        <Card.Content>
-          {extra}
-        </Card.Content>
-      </Card>
-    </Card.Group>
-    </Responsive>
-  </Container>
-);
+class CardLayout extends Component{
+  
+  state = {
+    recipes: [],
+    err: ""
+  }
+  
+  componentDidMount() {
+    API.Recipes.all()
+    .then(response => console.log(response))
+    .catch(err => this.setState({ err: err.message }))
+  }
+
+
+  render() {
+
+    return (
+    <Container className="test">
+      <Responsive maxWidth="780">
+      <Card.Group itemsPerRow={1}>
+        <RecipeCard />
+        <RecipeCard />
+        <RecipeCard />
+        <RecipeCard />
+        <RecipeCard />
+        <RecipeCard />
+      </Card.Group>
+      </Responsive>
+      <Responsive minWidth="601">
+      <Card.Group itemsPerRow={3}>
+        <RecipeCard />
+        <RecipeCard />
+        <RecipeCard />
+        <RecipeCard />
+        <RecipeCard />
+        <RecipeCard />
+      </Card.Group>
+      </Responsive>
+    </Container>
+  )
+  }
+};
 
 export default CardLayout;
 
