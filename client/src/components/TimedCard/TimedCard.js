@@ -25,13 +25,7 @@ const TimedCard = () => {
   const [] = useState(true)
   const [guess, setguess] = useState("");
   const [whoImg, setwhoImg] = useState("");
-  const [hair, setHair] = useState("")
-  const [face, setFace] = useState("")
-  const [glassesQ, setGlassesQ] = useState("")
-  const [eye, setEye] = useState("")
-  const [factQ, setFactQ] = useState("")
-
-  const [Chars, setChars] = useState([])
+    const [Chars, setChars] = useState([])
 
 
 
@@ -65,6 +59,7 @@ const TimedCard = () => {
     }
     if (guess.toLowerCase() === who.toLowerCase()) {
       handleFlip()
+      setRandomNumber(Math.floor(Math.random() * 25))
       incrementFinalScore(score)
       Bulma().alert({
         type: "success",
@@ -85,16 +80,12 @@ const TimedCard = () => {
     }
   }
   useEffect(() => {
+  
     axios.get("/api/characters").then((res) => {
       setChars(res.data)
       setChars(res.data)
       updateWho(res.data[RandomNumber].name)
       setwhoImg(res.data[RandomNumber].picture)
-      setHair(res.data[RandomNumber].hairColor)
-      setEye(res.data[RandomNumber].eyeColor)
-      setGlassesQ(res.data[RandomNumber].glasses)
-      setFace(res.data[RandomNumber].facialHair)
-      setFactQ(res.data[RandomNumber].fact)
       console.log("res: " + res.data[RandomNumber])
       console.log(res.data)
     })
@@ -116,12 +107,12 @@ const TimedCard = () => {
     const element = document.getElementById("GObtn");
     element.classList.add("is-hidden");
     setscore(10)
-    setRandomNumber(Math.floor(Math.random() * 11))
+    newWho()
+  }
+  const newWho=()=>{
     updateWho(Chars[RandomNumber].name)
     setwhoImg(Chars[RandomNumber].picture)
-
   }
-
   const handleStart = () => {
     console.log(who)
     console.log(Chars)
@@ -157,7 +148,7 @@ const TimedCard = () => {
             <button className="button is-primary" id="start" onClick={handleStart}>Start</button>
             <h1 className="is-size-1"> ????</h1>
             <img alt="bob" src="../../assets/images/mysteryWho1.png" style={{ width: "200px", height: "200px" }} ></img>
-            <DropDown eye={eye} hair={hair} glassesQ={glassesQ} face={face} factQ={factQ}  />
+            <DropDown/>
             <input className='input' type="text" name="guess" value={guess} onChange={e => setguess(e.target.value)} placeholder="Guess here" />
             <button className="button is-warning" onClick={handleScore}>Guess</button>
             <button id="GObtn" className="button is-primary is-hidden" onClick={handlePlayAgain} >Guess Again</button>

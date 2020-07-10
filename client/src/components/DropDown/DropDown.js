@@ -6,22 +6,24 @@ import { RandomNumberContext } from '../../contexts/RandomNumber';
 
 
 
-const DropDown = (props) => {
+const DropDown = () => {
 
-    const [hair, setHair] = useState(props.hair)
-    const [eye, setEye] = useState(props.eye)
-    const [glassesQ, setGlassesQ] = useState(props.glassesQ)
-    const [face, setFace] = useState(props.face)
-    const [factQ, setFactQ] = useState(props.factQ)
+    const [hair, setHair] = useState("")
+    const [eye, setEye] = useState("")
+    const [glassesQ, setGlassesQ] = useState("")
+    const [face, setFace] = useState("")
+    const [factQ, setFactQ] = useState("")
     const {score,setscore} = useContext(ScoreContext)
     const {RandomNumber}=useContext(RandomNumberContext)
 
     useEffect(() => {            
-                setHair(props.hair)
-                setEye(props.eye)
-                setGlassesQ(props.glassesQ)
-                setFace(props.face)
-                setFactQ(props.factQ)                 
+                               axios.get('api/characters').then((res)=>{
+                                   setHair(res.data[RandomNumber].hairColor)
+                                   setEye(res.data[RandomNumber].eyeColor)
+                                   setGlassesQ(res.data[RandomNumber].glasses)
+                                   setFactQ(res.data[RandomNumber].fact)
+                                   setFace(res.data[RandomNumber].facialHair)
+                               })
                    }, [RandomNumber])
 
 
