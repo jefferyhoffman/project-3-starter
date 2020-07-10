@@ -7,7 +7,7 @@ const extra = <Rating icon="star" defaultRating={3} maxRating={5} />;
 //Below is a group of cards for styling purposes. 3 items per row looks good on desktop, 1 looks best on mobile.
 const CardLayout = () => (
   <Container className="test">
-    <Responsive maxWidth="600">
+    <Responsive maxWidth="780">
     <Card.Group itemsPerRow={1}>
       <Card>
         <Image src={require("../../assets/images/burger1.jpg")} wrapped ui={false} as='a' href="https://www.thewholesomedish.com/the-best-classic-burger/" target="_blank" />
@@ -261,18 +261,16 @@ export default CardLayout;
 //             target="_blank"
 //           />
 //           <Card.Content>
-//             <Card.Header>Tasty Burger!</Card.Header>
+//             <Card.Header>{recipe.name}</Card.Header>
 //             <Card.Meta>
-//               <span>Lunch, Dinner</span>
+//               <span>{recipe.category}</span>
 //             </Card.Meta>
 //             <Card.Description>
-//               This is one tasty burger. It is a heart attack in a bun! Easy to
-//               make with a relatively small list of ingredients. This is
-//               guaranteed to be a crowd pleaser!
+//               {recipe.description}
 //             </Card.Description>
 //             <Card.Meta>
 //               <span>
-//                 Submitted by: <strong>UserName</strong>
+//                 Submitted by: <strong>{recipe.createdBy}</strong>
 //               </span>
 //             </Card.Meta>
 //           </Card.Content>

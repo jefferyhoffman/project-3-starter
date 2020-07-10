@@ -23,20 +23,20 @@ class Navigation extends Component {
     const { user } = this.context;
 
     return (
-      <Menu size="massive" inverted className="navbar">
+      <Menu size="massive" className="navbar">
               <Container>
                 <Menu.Item as={NavLink} to="/" active>
-                  Home
+                  <strong>Home</strong>
                 </Menu.Item>
                 <Menu.Item position='right'>
                 {user
                 ? <AuthDropdown onClick={this.toggleCollapse} />
                 : (
                   <>
-                  <Button as={NavLink} to="/login" inverted={true} color={"blue"}>
+                  <Button as={NavLink} to="/login" inverted={false} color={"blue"}>
                     Log in
                   </Button>
-                  <Button as={NavLink} to="/register" inverted={true} color={"green"} style={{ marginLeft: '0.5em' }}>
+                  <Button as={NavLink} to="/register" inverted={false} color={"green"} style={{ marginLeft: '0.5em' }}>
                     Sign Up
                   </Button> 
                   </>
