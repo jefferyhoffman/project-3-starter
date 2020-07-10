@@ -21,7 +21,7 @@ const CharacterContainer = (props) => {
             </div>
 
                 <div className="box" style={{ maxHeight: "400px" }} onClick={handleFlip}>
-                    <p>{props.fact}</p>
+                    <p>{props.story}</p>
                 </div>
             </ReactCardFlip>
     </div>
