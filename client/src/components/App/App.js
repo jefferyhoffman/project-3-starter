@@ -72,6 +72,7 @@ class App extends Component {
                   <Route path='/login' component={Login} />
                   <Route path='/register' component={Register} />
                   <PrivateRoute path='/secret' component={Secret} />
+                  <Route path="/characters" component={Characters} />
                   <PrivateRoute path="/Game" component={Game} />
                   <FinalScoreContextProvider>
                     <Route path="/leaderboard" component={Leaderboard} />
@@ -81,7 +82,7 @@ class App extends Component {
                       </RandomNumberContextProvider>
                     </TimeContextProvider>
                   </FinalScoreContextProvider>
-                  <Route path="/Characters" component={Characters} />
+                  
                   <Route component={NotFound} />
                 </Switch>
               </div>

@@ -12,12 +12,6 @@ leaderboardController.get('/', (req, res) => {
             res.status(500).json(err);
         })
 });
-// //update leaderboard, may not need
-// leaderboardController.put('/:id', (req, res) => {
-//     db.Score.updateOne(
-//         { _id: req.params.id }
-//     );
-// });
 
 // //user posting scores on leaderboard
 leaderboardController.post('/', (req, res) => {
