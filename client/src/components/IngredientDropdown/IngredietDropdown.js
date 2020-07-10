@@ -18,7 +18,6 @@ const IngredientDropdown = () => {
   return (
     <Dropdown
       onChange={handleChange}
-      minWidth={1870}
       className="widthSmall"
       placeholder="Recipe Name"
       fluid
