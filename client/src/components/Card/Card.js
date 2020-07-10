@@ -13,13 +13,11 @@ const randomnumber = Math.floor(Math.random() * 11)
 const Card = () => {
 
   const {who, updateWho} = useContext(whoContext)
-  const {score,decrementScore} = useContext(ScoreContext)
+  const {score,setscore} = useContext(ScoreContext)
   const [isFlipped, setisFlipped] = useState(false);
   const []=useState(true) 
   const [guess, setguess] = useState("");
-  // const [who, setwho] = useState("");
-  // const [score, score.setscore] = useState(10);
-  const [choice, setchoice] = useState("");
+   const [choice, setchoice] = useState("");
   const [whoImg, setwhoImg] = useState("");
 
 
@@ -69,13 +67,13 @@ const Card = () => {
         body:"Guessed Wrong you lost a point! take your time you got this",
         confirm:"Keep Guessing"
       })
-      decrementScore(1)
+      setscore(score -1)
       console.log(score)
     }
   }
   useEffect(() => {
     axios.get("/api/characters").then((res) => {
-      setchoice(randomnumber)
+      
       updateWho(res.data[randomnumber].name)
       setwhoImg(res.data[randomnumber].picture)
 
@@ -105,9 +103,6 @@ const handlePlayAgain = () => {
           <input className='input' type="text" name="guess" value={guess} onChange={e => setguess(e.target.value)} placeholder="Guess here" />
           <button className="button is-warning" onClick={handleScore}>Guess</button>
           <button id="GObtn" className="button is-primary is-hidden" onClick={handlePlayAgain} >Play Again</button>
-         
-          {/* Test button for Game Overs sets Score to 0 */}
-          {/* <button onClick={(e)=> score.setscore(score-10)}>Poop</button> */}
           </div>
         </div>
 
