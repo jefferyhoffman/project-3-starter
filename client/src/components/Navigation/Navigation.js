@@ -1,8 +1,9 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
-import "./Navigation.css";
+import { NavLink } from "react-router-dom";
+import "./Navigation.scss";
 import AuthContext from "../../contexts/AuthContext";
 import AuthDropdown from "../../components/AuthDropdown/AuthDropdown";
+
 
 const Navigation = () => {
   const { user } = useContext(AuthContext);
@@ -19,11 +20,11 @@ const Navigation = () => {
       role="navigation"
       aria-label="main navigation"
     >
-      <div className="navbar-brand" to="#">
+      <div className="navbar-brand">
         <div className="navbar-item">
-          <Link to="/">
+          <NavLink to="/">
             <img src="./assets/images/lgLogo.png " className="logo" />
-          </Link>
+          </NavLink>
         </div>
       </div>
       <div
@@ -41,10 +42,10 @@ const Navigation = () => {
         <span aria-hidden="true"></span>
       </div>
 
-      <div className={`navbar-menu ${isActive ? "is-active" : ""}`}>
+      <div className={`navbar-menu ${isActive ? "is-active" : ""}`} id="navbarBasicExample">
         <div className="navbar-start">
           {!user?
-          <Link
+          <NavLink 
             to="/"
             className="navbar-item"
             onClick={() => {
@@ -52,8 +53,8 @@ const Navigation = () => {
             }}
           >
             <strong>Home</strong>
-          </Link>:
-          <Link
+          </NavLink>:
+          <NavLink
           className="navbar-item"
           to="/menu"
           onClick={() => {
@@ -61,8 +62,8 @@ const Navigation = () => {
           }}
         >
           <strong>Menu</strong>
-        </Link>}
-          <Link
+        </NavLink>}
+          <NavLink
             className="navbar-item"
             to="/leaderboard"
             onClick={() => {
@@ -70,9 +71,9 @@ const Navigation = () => {
             }}
           >
             <strong>Leaderboard 🔥</strong>
-          </Link>   
+          </NavLink>   
         {user &&
-        <Link
+        <NavLink
           className="navbar-item"
           to="/characters"
           onClick={() => {
@@ -80,10 +81,10 @@ const Navigation = () => {
           }}
         >
         <strong>Characters</strong>
-        </Link>
+        </NavLink>
         }
         {user &&
-        <Link
+        <NavLink
           className="navbar-item"
           to="/game"
           onClick={()=>{
@@ -91,25 +92,27 @@ const Navigation = () => {
           }}  
         >
         <strong>Practice Game</strong>
-        </Link>
+        </NavLink>
         }
         
         </div>
 
         <div className="navbar-end">
+          <div className="navbar-item">
           <div className="buttons">
             {user ? (
               <AuthDropdown onClick={toggleCollapse} />
             ) : (
               <>
-                <Link className="button login" to="/login">
+                <NavLink className="button login" to="/login">
                   Login
-                </Link>
-                <Link className="button signUp" to="/register">
+                </NavLink>
+                <NavLink className="button signUp" to="/register">
                   Signup
-                </Link>
+                </NavLink>
               </>
             )}
+          </div>
           </div>
         </div>
       </div>
