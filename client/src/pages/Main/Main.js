@@ -16,8 +16,8 @@ const Main = ()=>{
       <div className='container'> 
   <div className='columns is-multiline'>
   <div className="column is-one-quarter">
-  <article className="tile is-child box rules">
-  <article className="tile is-child box">
+  <article className="box rules">
+  <article className="box">
       <p className="title">How to Play</p>
       <p className="subtitle">Game Rules</p>
       <ol>
@@ -33,8 +33,8 @@ const Main = ()=>{
     </article>
   </div>
   <div className="column is-one-half">
-  <article className="tile is-child box gifBox">
-  <article className="tile is-child box">
+  <article className="box gifBox">
+  <article className="box">
       <p className="title">Gif of Game</p>
       <p className="subtitle">Gif Below</p>
       <img src="/LetsGuessHomeImg.png"/>
@@ -42,8 +42,8 @@ const Main = ()=>{
     </article>
   </div>
   <div className="column is-one-quarter">
-  <article className="tile is-child box randomBox">
-  <article className="tile is-child box">
+  <article className="box randomBox">
+  <article className="box">
       <p className="title">Developers of Let's Guess</p>
       
       <Carousel/>

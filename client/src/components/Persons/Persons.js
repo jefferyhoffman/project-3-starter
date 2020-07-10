@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios'
-import "./Persons.css";
+
 
 axios.get('/api/characters')
 
@@ -19,21 +19,23 @@ const Persons= ()=> {
           <h1 className="is-size-1">😻Character Selection😻</h1>
         </div>
         <br/>
-          <div className="columns is-centered is-multiline">
        
+        <div className="columns is-centered is-multiline">
             {people.map(person => (
-              
-                <article key={person._id} className="box">
-                   <h1 className="is-size-3 has-text-centered">{person.name}</h1>
+              <div className="column is-one-quarter">
+                <div className="box charBox">
+                <div key={person._id} className="box" style={{ maxHeight: "400px" }}>
+                   <h4 className=" has-text-centered">{person.name}</h4>
                     <img
                       src={person.picture}
                       alt={person.name}
                       style={{ width: "200px", height: "200px" }}
                     />
-                </article>
-              
+                </div>
+                </div>
+                </div>
             ))}
-          </div>
+            </div>
         
       </div>
     )

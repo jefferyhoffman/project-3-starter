@@ -3,6 +3,7 @@ import ReactCardFlip from 'react-card-flip';
 import DropDown from '../DropDown/DropDown.js';
 import axios from 'axios'
 import Bulma from '@vizuaalog/bulmajs';
+import './Card.css'
 import { ScoreContext } from '../scoreContext.js';
 import {whoContext} from '../whoContext'
 
@@ -94,8 +95,9 @@ const handlePlayAgain = () => {
 
   return (
 
-    <div className="column is-3">
+    <div className="column is-4">
       <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
+        <div className="box cardBox">
         <div className="box">
           <h1 className="is-size-1"> ????</h1>
           <img alt="bob" src="../../assets/images/mysteryWho1.png" style={{ width: "200px", height: "200px" }} ></img>
@@ -106,16 +108,17 @@ const handlePlayAgain = () => {
          
           {/* Test button for Game Overs sets Score to 0 */}
           {/* <button onClick={(e)=> score.setscore(score-10)}>Poop</button> */}
-          
+          </div>
         </div>
 
+        <div className="box cardBox2">
         <div className="box">
           <h1 className="is-size-1"> You got it!</h1>
           <img alt={who} src={whoImg} style={{ width: "200px", height: "200px" }} ></img>
           <button className="button is-primary" onClick={handlePlayAgain}>Play Again</button>
         </div>
+  </div>
       </ReactCardFlip>
-
     </div>
   )
 

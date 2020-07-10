@@ -30,9 +30,31 @@ To install, run following command in terminal:
   
 ```
 npx create-react-app
+```
+Install following Packages on Client Side
 
+```
+yarn add react-card-flip
+
+yarn add --save-dev @vizuaalog/bulmajs
+
+yarn add swiper
+
+yarn add node-sass
+
+yarn add react-twitter-widgets
+```
+
+Run seeds on Server Side
+
+```
+yarn run seed
+```
+
+Start React & Local Host
+
+```
 yarn start:dev
-
 ```
 
   ## Usage
@@ -61,6 +83,11 @@ Libraries
 - [Node.js](nodejs.org)
 - [Redux.js](https://redux.js.org/)
 - [ReactCardFlip](https://www.npmjs.com/package/react-card-flip)
+- [Swiper](https://swiperjs.com/)
+- [BulmaJS](https://bulmajs.tomerbe.co.uk/)
+- [Node-Sass](https://www.npmjs.com/package/node-sass)
+- [React-Twitter-Widgets](https://www.npmjs.com/package/react-twitter-widgets)
+- [React-Facebook-Share-Link](https://www.npmjs.com/package/react-facebook-share-link)
 
 Yarn Packages
 - [Yarn](https://classic.yarnpkg.com/en/)
