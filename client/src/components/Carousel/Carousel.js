@@ -7,13 +7,13 @@ import 'swiper/swiper.scss';
 
 const Carousel = () => {
   return (
-    <Swiper spaceBetween={50} slidesPerView={3}
+    <Swiper spaceBetween={10} slidesPerView={3}
       onSlideChange={() => console.log('slide change')} 
       onSwiper={(swiper) => console.log(swiper)}>
-      <SwiperSlide>Slide 1</SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
+      <SwiperSlide><img src='/newYorker.png' style={{ width: "200px" }}/></SwiperSlide>
+      <SwiperSlide><img src='/Jake.png' style={{ width: "200px" }}/></SwiperSlide>
+      <SwiperSlide><img src='/frank.png' style={{ width: "200px" }}/></SwiperSlide>
+      <SwiperSlide><img src='mrCoder.png' style={{ width: "200px"}}/></SwiperSlide>
     </Swiper>
   );
 };

@@ -8,9 +8,12 @@
 
 }
 #playTile{
-    background-color: rgb(125, 235, 250);
+    background-color: rgb(250, 125, 239);
     color: black;
     
+}
+#playTile2{
+    background-image: linear-gradient(to top, pink,rgb(0, 238, 255))
 }
 #googleTile{
     background-color: rgb(252, 136, 140);

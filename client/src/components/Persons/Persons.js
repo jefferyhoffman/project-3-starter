@@ -23,7 +23,7 @@ const Persons= ()=> {
        
             {people.map(person => (
               
-                <article className="box">
+                <article key={person._id} className="box">
                    <h1 className="is-size-3 has-text-centered">{person.name}</h1>
                     <img
                       src={person.picture}
