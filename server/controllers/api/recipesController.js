@@ -6,7 +6,7 @@ const jwt = require("jsonwebtoken");
 
 // Route to retrieve all recipes in db
 recipesController.get("/all", (req, res) => {
-    db.Recipe.findAll({}, {include: [{model: db.Category, as: "categories"}, {model: db.Ingredient, as: "ingredients"}, {model: db.Review, as: "reviews"}]})
+    db.Recipe.findAll({}, {include: [{model: db.Category, as: "categories"}, {model: db.Ingredient, as: "ingredients"}]})
     .then(recipe => res.json(recipe))
     .catch(err => res.json(err));
 });
