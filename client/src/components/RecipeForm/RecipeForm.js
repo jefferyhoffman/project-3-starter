@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
-import { Button, Form, Container, TextArea } from "semantic-ui-react";
+import { Button, Form, Container } from "semantic-ui-react";
+import TokenStore from '../../lib/TokenStore';
 import AuthContext from "../../contexts/AuthContext";
 
 import API from "../../lib/API";
@@ -10,6 +11,7 @@ class RecipeForm extends Component {
   static contextType = AuthContext;
 
   state = {
+    authToken: TokenStore.getToken(),
     redirectToReferrer: false,
     title: "",
     image: "",
@@ -30,9 +32,9 @@ class RecipeForm extends Component {
     });
   };
 
-  //not sure about createdBy here in handleSumbit or in the create route.
   handleSubmit = (event) => {
     const {
+      authToken,
       title,
       image,
       description,
@@ -45,6 +47,7 @@ class RecipeForm extends Component {
     } = this.state;
 
     API.Recipes.create(
+      authToken,
       title,
       image,
       description,
@@ -56,10 +59,7 @@ class RecipeForm extends Component {
       ingredients
     )
       .then((response) => response.data)
-      .then(({ user, token }) => {
-        // function for logging in
-        // this.context.onLogin(user, token);
-        console.log(user);
+      .then(() => {
         this.setState({ redirectToReferrer: true, error: "" });
       })
       .catch((err) => this.setState({ error: err.message }));
