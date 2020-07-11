@@ -4,19 +4,19 @@ import {Card, Rating, Image} from "semantic-ui-react"
 
 const extra = <Rating icon="star" defaultRating={3} maxRating={5} />
 
-const RecipeCard = () => (
+const RecipeCard = (props) => (
     <Card>
-        <Image src={require("../../assets/images/burger1.jpg")} wrapped ui={false} as='a' href="https://www.thewholesomedish.com/the-best-classic-burger/" target="_blank" />
+        <Image src={props.image} wrapped ui={false} as='a' href={props.image} target="_blank" />
         <Card.Content>
-          <Card.Header>Tasty Burger!</Card.Header>
+          <Card.Header>{props.title}</Card.Header>
           <Card.Meta>
-            <span>Entree</span>
+            <span>{props.category}</span>
           </Card.Meta>
           <Card.Description>
-          This is one tasty burger. It is a heart attack in a bun! Easy to make with a relatively small list of ingredients. This is guaranteed to be a crowd pleaser!
+          {props.description}
           </Card.Description>
           <Card.Meta>
-            <span>Submitted by: UserName</span>
+            <span>Submitted by: {props.user}</span>
           </Card.Meta>
         </Card.Content>
         <Card.Content>
