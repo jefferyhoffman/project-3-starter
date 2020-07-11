@@ -4,7 +4,7 @@ const db = require("../../models");
 const { JWTVerifier } = require("../../lib/passport");
 
 // Route to retrieve all ingredients
-ingredientsController.get("/all/", (req, res) => {
+ingredientsController.get("/all", (req, res) => {
     db.Ingredient.findAll({}, {})
     .then(ingredients => res.json(ingredients))
     .catch(err => res.json(err));
