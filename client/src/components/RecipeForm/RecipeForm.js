@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import { Button, Form, Container } from "semantic-ui-react";
-import TokenStore from "../../lib/TokenStore";
+// import TokenStore from "../../lib/TokenStore";
 import AuthContext from "../../contexts/AuthContext";
 
 import API from "../../lib/API";

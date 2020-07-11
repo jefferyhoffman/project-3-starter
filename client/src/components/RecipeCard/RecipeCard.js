@@ -6,6 +6,7 @@ const extra = <Rating icon="star" defaultRating={3} maxRating={5} />
 
 const RecipeCard = () => (
     <Card>
+      {/* This cards <a> link needs to be routing the user to the appropriate recipe which will be displayed on the FullRecipe page */}
         <Image src={require("../../assets/images/burger1.jpg")} wrapped ui={false} as='a' href="https://www.thewholesomedish.com/the-best-classic-burger/" target="_blank" />
         <Card.Content>
           <Card.Header>Tasty Burger!</Card.Header>
