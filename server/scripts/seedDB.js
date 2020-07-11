@@ -81,7 +81,7 @@ const characterSeed = [
         name: "Trevor Noah",
         hairColor:"black",
         glasses: false,
-        facialHair: true,
+        facialHair: false,
         eyeColor: "brown",
         fact: "began hosting his own radio show Noah’s Ark on Gauteng’s leading youth radio station, YFM",
         story: "I am witty, funny, and am the comedy central guy.I began hosting his own radio show Noah’s Ark on Gauteng’s leading youth radio station, YFM."
@@ -113,8 +113,8 @@ const characterSeed = [
         glasses:false,
         facialHair:true,
         eyeColor:"brown",
-        fact:"I've made my own Dragon Ball Z costume armor for a",
-        story:""
+        fact:"I own a heavy grade sparring stunt light saber.. no it doesn't make noice",
+        story:"Love all things nerdy Star wars especially I got into stunt light saber fighting to get into shape one new year, and I've made my own saiyan armor for a convention."
     },
     {
         picture:"/newYorker.png",
@@ -130,7 +130,7 @@ const characterSeed = [
         picture:"/theHiker.png",
         name:"Rescue Hiker",
         hairColor:"brown",
-        glasses:false,
+        glasses:true,
         facialHair:true,
         eyeColor:"brown",
         fact:"Hiked the Appalachian Trail",
