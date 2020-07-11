@@ -8,7 +8,7 @@ import "./FullRecipe.css";
 const FullRecipe = () => (
     <div>
       <Image centered src={require("../../assets/images/megabitesLogo.png")} />
-      <Responsive maxWidth="780">
+      <Responsive maxWidth="1035">
         <Grid>
           <Grid.Row>
             <Grid.Column width={1}></Grid.Column>
@@ -44,7 +44,7 @@ const FullRecipe = () => (
           </Grid.Row>
         </Grid>
       </Responsive>
-      <Responsive minWidth="779">
+      <Responsive minWidth="1034">
         <Grid>
           <Grid.Row>
             <Grid.Column width={3}></Grid.Column>
