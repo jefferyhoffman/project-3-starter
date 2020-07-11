@@ -31,5 +31,27 @@ GET "/all"
 Route to create a new review
 POST "/"
 
-Route to retrieve all reviews for a specific recipe
+Route to retrieve all reviews for a specific RecipeId
+GET "/all/:id"
+
+//////////////////////////////////////////////////////
+ INGREDIENTS Routes
+ /api/ingredients
+//////////////////////////////////////////////////////
+
+Route to retrieve all ingredients in db
 GET "/all"
+
+Route to create a new ingredient
+POST "/"
+
+//////////////////////////////////////////////////////
+ CATEGORIES Routes
+ /api/categories
+//////////////////////////////////////////////////////
+
+Route to retrieve all categories in db
+GET "/all"
+
+Route to create a new category
+POST "/"

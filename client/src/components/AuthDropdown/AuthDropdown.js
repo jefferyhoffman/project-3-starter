@@ -44,7 +44,7 @@ class AuthDropdown extends Component {
         <Dropdown className="button icon" floating>
           <Dropdown.Menu >
             <Dropdown.Item as={NavLink} to="/profile" text="View My Profile" />
-            <Dropdown.Item as={NavLink} to="/recipes" text="View My Recipes" />
+            <Dropdown.Item as={NavLink} to="/recipes" text="Add a Recipe" />
             <Dropdown.Item text="Logout" onClick={this.handleLogout} />
           </Dropdown.Menu>
         </Dropdown>
