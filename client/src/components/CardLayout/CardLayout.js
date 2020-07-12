@@ -17,7 +17,10 @@ class CardLayout extends Component{
   
   componentDidMount() {
     API.Recipes.all()
-    .then(response => console.log(response))
+    .then(response => {
+      console.log(response)
+      this.setState({recipes: response, err: ""})
+    })
     .catch(err => this.setState({ err: err.message }))
   }
 
