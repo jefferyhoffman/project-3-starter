@@ -114,7 +114,7 @@ class RecipeForm extends Component {
             />
           </Form.Field>
           <Form.Field required>
-            <label>Descrition</label>
+            <label>Description</label>
             <input
               placeholder="Description"
               className="form-control"
