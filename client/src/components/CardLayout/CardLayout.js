@@ -18,8 +18,9 @@ class CardLayout extends Component{
   componentDidMount() {
     API.Recipes.all()
     .then(response => {
-      console.log(response)
-      this.setState({recipes: response, err: ""})
+      // console.log(response.data)
+      this.setState({recipes: response.data, err: ""})
+      console.log(this.state.recipes)
     })
     .catch(err => this.setState({ err: err.message }))
   }
@@ -41,7 +42,7 @@ class CardLayout extends Component{
       </Responsive>
       <Responsive minWidth="601">
       <Card.Group itemsPerRow={3}>
-        <RecipeCard />
+        <RecipeCard title={this.state.recipes.title} />
         <RecipeCard />
         <RecipeCard />
         <RecipeCard />
@@ -55,6 +56,8 @@ class CardLayout extends Component{
 };
 
 export default CardLayout;
+
+// title={this.state.recipes[0].title}
 
 
 
