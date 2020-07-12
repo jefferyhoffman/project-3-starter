@@ -39,7 +39,7 @@ module.exports = (sequelize, DataTypes) => {
     Recipe.associate = models => {
         // Recipes can have many Users & Users can have many Recipes
         Recipe.belongsToMany(models.User, { 
-            through: "user_recipe" ,
+            through: "recipe_user" ,
             as: "users",
             foreignKey: "recipe_id"
         });

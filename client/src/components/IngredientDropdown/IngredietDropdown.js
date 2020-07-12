@@ -10,7 +10,8 @@ const foodOptions = [
   { key: "salad", text: "Salad", value: "salad" },
 ];
 
-//This will console log the items that are selected from the dropdown in an array.
+//This was being used in the leftRail and topRail initially but has been replaced. This component is no longer being used but will remain here incase we need something similar.
+
 const IngredientDropdown = () => {
   const handleChange = (e, data) => {
     console.log(data.value);
@@ -21,8 +22,6 @@ const IngredientDropdown = () => {
       className="widthSmall"
       placeholder="Recipe Name"
       fluid
-      multiple
-      search
       selection
       options={foodOptions}
     />

@@ -395,5 +395,79 @@
           }
         ],
         "createdBy": "K-Man"
+      },
+      {
+        "title": "Chicken Bacon BBQ Pizza",
+        "description": "A dish for all the BBQ sauce lovers out there.",
+        "prepTime": "45 minutes",
+        "cookTime": "One hour",
+        "servings": "4-5 servings",
+        "directions": "Shred chicken and bacon before, spread your bbq sauce over your pizza crust. Dump bacon, chicken and cheese on crust and then place in oven for 40 minutes(oven should pre-heat to 400 F).",
+        "categories": [
+          {
+            "category": "Pizza"
+          },
+          {
+            "category": "Chicken"
+          },
+          {
+            "category": "BBQ sauce"
+          },
+          {
+            "category": "Comfort Food"
+          }
+        ],
+        "ingredients": [
+          {
+            "ingredient": "BBQ sauce"
+          },
+          {
+            "ingredient": "Chicken"
+          },
+          {
+            "ingredient": "Bacon"
+          },
+          {
+            "ingredient": "Cheese"
+          },
+          {
+            "ingredient": "Pizza Crust or fresh dough"
+          }
+        ],
+        "createdBy": "K-Man"
+      },
+      {
+        "title": "Grilled PB&J Sandwich",
+        "description": "A southern twist to an original.",
+        "prepTime": "5 minutes",
+        "cookTime": "None",
+        "servings": "One servings",
+        "directions": "Spread pb&j over bread, then grill.",
+        "categories": [
+          {
+            "category": "Sandwich"
+          },
+          {
+            "category": "Snack"
+          },
+          {
+            "category": "Lunch"
+          },
+          {
+            "category": "Comfort Food"
+          }
+        ],
+        "ingredients": [
+          {
+            "ingredient": "Bread"
+          },
+          {
+            "ingredient": "Peanut Butter"
+          },
+          {
+            "ingredient": "Jelly"
+          }
+        ],
+        "createdBy": "K-Man"
       }
 ]

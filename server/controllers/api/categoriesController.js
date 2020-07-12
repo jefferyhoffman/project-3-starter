@@ -4,7 +4,7 @@ const db = require("../../models");
 const { JWTVerifier } = require("../../lib/passport");
 
 // Route to retrieve all categories
-categoriesController.get("/all/", (req, res) => {
+categoriesController.get("/all", (req, res) => {
     db.Category.findAll({}, {})
     .then(categories => res.json(categories))
     .catch(err => res.json(err));
