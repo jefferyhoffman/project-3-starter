@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         image: {
-            type: DataTypes.BLOB("long"),
+            type: DataTypes.STRING(500),
             allowNull: true
         },
         description: {
