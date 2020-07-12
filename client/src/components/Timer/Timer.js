@@ -5,9 +5,9 @@ import axios from 'axios';
 const Time = () => {
   const {Time} = useContext(TimeContext)
 
-  const handleTimeout = () =>{
-    leaderboardController.post( )
-  }
+  
+
+
    return(
     
        <div className="box TimeBox">
