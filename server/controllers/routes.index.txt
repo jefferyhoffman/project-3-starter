@@ -20,11 +20,14 @@ POST "/login"
 Route to create a new recipe
 POST "/"
 
-Route to retrive all recipes in a db based on the user logged in
-GET /user
+Route to retrieve all recipes for the logged in user
+GET "/user"
 
-Route to retrieve all recipes in db
+Route to retrieve all recipes (including categories/ingredients) in db
 GET "/all"
+
+Route to retrieve all recipes for a specific category
+GET "/category"
 
 //////////////////////////////////////////////////////
  REVIEW Routes
