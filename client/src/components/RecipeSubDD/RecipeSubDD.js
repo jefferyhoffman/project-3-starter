@@ -1,5 +1,5 @@
 import React from 'react'
-import { Dropdown } from 'semantic-ui-react'
+import { Form,Dropdown } from 'semantic-ui-react'
 
 const options = [
   { key: 1, text: 'Casual Dining', value: 1 },
@@ -23,7 +23,7 @@ const options = [
 ]
 
 const RecipeSubDD = () => (
-  <Dropdown clearable options={options} selection />
+  <Form.Dropdown label="Choose a Food Category" clearable fluid  required options={options} selection />
 )
 
 export default RecipeSubDD

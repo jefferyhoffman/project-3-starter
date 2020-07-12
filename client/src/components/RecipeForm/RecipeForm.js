@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import { Button, Form, Container } from "semantic-ui-react";
-// import TokenStore from "../../lib/TokenStore";
+import RecipeSubDD from "../RecipeSubDD/RecipeSubDD";
 import AuthContext from "../../contexts/AuthContext";
-
 import API from "../../lib/API";
 import "./RecipeForm.css";
 
@@ -172,18 +171,7 @@ class RecipeForm extends Component {
             value={directions}
             onChange={this.handleInputChange}
           />
-          <Form.Field>
-            <label>Food Category</label>
-            <input
-              placeholder="Category"
-              className="form-control"
-              id="categories"
-              type="text"
-              name="categories"
-              value={categories}
-              onChange={this.handleInputChange}
-            />
-          </Form.Field>
+          <RecipeSubDD />
           <Form.Field required>
             <label>Ingredients</label>
             <input
