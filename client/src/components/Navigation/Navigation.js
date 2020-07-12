@@ -83,7 +83,7 @@ const Navigation = () => {
         <strong>Characters</strong>
         </NavLink>
         }
-        {user &&
+        {/* {user &&
         <NavLink
           className="navbar-item"
           to="/game"
@@ -93,7 +93,7 @@ const Navigation = () => {
         >
         <strong>Practice Game</strong>
         </NavLink>
-        }
+        } */}
         </div>
 
         <div className="navbar-end">

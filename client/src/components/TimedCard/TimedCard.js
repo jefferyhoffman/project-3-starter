@@ -27,7 +27,13 @@ const TimedCard = () => {
   const [whoImg, setwhoImg] = useState("");
     const [Chars, setChars] = useState([])
 
-
+    const [leaderboard, setLeaderboard] = useState([])
+    useEffect(() => {
+      axios.post('/api/leaderboard')
+      .then ((res)=> {
+        setLeaderboard(res.data)	
+      })
+      })
 
 
   const handleFlip = () => {
