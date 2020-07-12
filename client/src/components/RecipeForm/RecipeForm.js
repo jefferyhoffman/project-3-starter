@@ -171,7 +171,11 @@ class RecipeForm extends Component {
             value={directions}
             onChange={this.handleInputChange}
           />
-          <RecipeSubDD />
+          <RecipeSubDD 
+             id="categories"
+             value={categories}
+             onChange={this.handleInputChange}
+          />
           <Form.Field required>
             <label>Ingredients</label>
             <input
