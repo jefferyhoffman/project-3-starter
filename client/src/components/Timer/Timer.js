@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import {TimeContext} from '../../contexts/Time'
-import axios from 'axios';
+
 
 const Time = () => {
   const {Time} = useContext(TimeContext)
@@ -12,7 +12,7 @@ const Time = () => {
     
        <div className="box TimeBox">
        <div className="box">
-         <h4 className="is-size-4">Time: {Time}</h4>
+         <h4 className="is-size-4" >Time: {Time}</h4>
          </div>
          </div>
     

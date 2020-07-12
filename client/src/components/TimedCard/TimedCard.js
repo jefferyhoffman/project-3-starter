@@ -134,16 +134,25 @@ const TimedCard = () => {
         handleEOG();
         clearInterval(gameInterval)
       }
-    }, 1000)
+    }, 10)
 
   }
   const handleEOG = () => {
+    
     console.log("end of game")
-    const element = document.getElementById("GObtn");
+    
+    const element1 = document.getElementById("MarryPoppins");
+        const element = document.getElementById("GObtn");
     element.classList.remove("is-hidden");
+    element1.classList.remove("is-hidden");
+    
 
   }
-
+ const SaveUserName = () => {
+  const UserName = document.getElementById("user").value
+   console.log(UserName)
+ }
+ 
 
   return (
 
@@ -158,6 +167,13 @@ const TimedCard = () => {
             <input className='input' type="text" name="guess" value={guess} onChange={e => setguess(e.target.value)} placeholder="Guess here" />
             <button className="button is-warning" onClick={handleScore}>Guess</button>
             <button id="GObtn" className="button is-primary is-hidden" onClick={handlePlayAgain} >Guess Again</button>
+            <div id="MarryPoppins" className="is-hidden"> 
+            <input type="text" placeholder="UserName" id="user"></input>
+            <button id="UserNameBtn" className="button is-warning" onClick={SaveUserName} >Submit UserName</button>
+            </div>
+            
+            
+
           </div>
         </div>
 
