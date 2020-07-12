@@ -2,66 +2,35 @@ import React, { Component } from "react";
 import { Card, Rating, Container, Image, Responsive } from "semantic-ui-react";
 import RecipeCard from "../RecipeCard/RecipeCard";
 
-import API from '../../lib/API'
+import API from "../../lib/API";
 import "./CardLayout.css";
 
 const extra = <Rating icon="star" defaultRating={3} maxRating={5} />;
 
 //Below is a group of cards for styling purposes. 3 items per row looks good on desktop, 1 looks best on mobile.
-class CardLayout extends Component{
-  
+class CardLayout extends Component {
   state = {
     recipes: [],
-    err: ""
-  }
-  
+    err: "",
+  };
+
   componentDidMount() {
     API.Recipes.all()
-    .then(response => {
-      console.log(response.data)
-      this.setState({recipes: response.data, err: ""})
-      console.log(this.state.recipes[0].title)
-    })
-    .catch(err => this.setState({ err: err.message }))
+      .then((response) => {
+        this.setState({ recipes: response.data, err: "" });
+      })
+      .catch((err) => this.setState({ err: err.message }));
   }
-
-
   render() {
-
     return (
-    <Container className="test">
-      <Responsive maxWidth="780">
-      <Card.Group itemsPerRow={1}>
-        <RecipeCard />
-        <RecipeCard />
-        <RecipeCard />
-        <RecipeCard />
-        <RecipeCard />
-        <RecipeCard />
-      </Card.Group>
-      </Responsive>
-      <Responsive minWidth="601">
-      <Card.Group itemsPerRow={3}>
-        {this.state.recipes.map(recipe => (
-          <RecipeCard 
-          key={recipe.id}
-          title={recipe.title}
-          categories={recipe.categories}
-          createdBy={recipe.createdBy}
-          description={recipe.description}
-          image={recipe.image}
-          />
-        ))}
-      </Card.Group>
-      </Responsive>
-    </Container>
-  )
+      <RecipeCard recipes={this.state.recipes} />
+    );
   }
-};
+}
 
 export default CardLayout;
 
-
+// title={this.state.recipes[0].title}
 
 //Below is a single card rendered within the grid based on how many recipes are being mapped over.
 // import React from "react";
@@ -70,7 +39,6 @@ export default CardLayout;
 
 // const extra = <Rating icon="star" defaultRating={3} maxRating={5} />;
 // // console.log(window.innerWidth);
-
 
 // //When backend database is connected, will fill in each section with information for each recipe object.
 // const CardLayout = (props) => {
@@ -114,7 +82,5 @@ export default CardLayout;
 // };
 
 // export default CardLayout;
-
-
 
 // itemsPerRow={3}

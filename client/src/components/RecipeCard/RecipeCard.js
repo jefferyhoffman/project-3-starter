@@ -1,29 +1,46 @@
 import React from "react";
-import {Card, Rating, Image} from "semantic-ui-react"
+import { Card, Rating, Image, Responsive, Container } from "semantic-ui-react";
 
+// const extra = <Rating icon="star" defaultRating={3} maxRating={5} />;
 
-const extra = <Rating icon="star" defaultRating={3} maxRating={5} />
-
-
-const RecipeCard = (props) => (
-    <Card>
-        <Image src={props.image} wrapped ui={false} as='a' href={props.image} target="_blank" />
+const RecipeCard = (props) => {
+  console.log(props);
+  const recipes = props.recipes.map((recipe) => {
+    return (
+      <Card>
+        <Image
+          src={recipe.image}
+          wrapped
+          ui={false}
+          as="a"
+          href={recipe.image}
+          target="_blank"
+        />
         <Card.Content>
-          <Card.Header>{props.title}</Card.Header>
+          <Card.Header>{recipe.title}</Card.Header>
           <Card.Meta>
-            <span>{props.categories}</span>
+            <span>
+              {recipe.categories.map((category) => category.category)}
+            </span>
           </Card.Meta>
-          <Card.Description>
-          {props.description}
-          </Card.Description>
+          <Card.Description>{recipe.description}</Card.Description>
           <Card.Meta>
-            <span>Submitted by: {props.createdBy}</span>
+            <span>Submitted by: {recipe.createdBy}</span>
           </Card.Meta>
         </Card.Content>
-        <Card.Content>
-          {extra}
-        </Card.Content>
+        {/* <Card.Content>{extra}</Card.Content> */}
       </Card>
-)
-
+    );
+  });
+  return (
+    <Container>
+      <Responsive maxWidth="780">
+        <Card.Group itemsPerRow={1}>{recipes}</Card.Group>
+      </Responsive>
+      <Responsive minWidth="601">
+        <Card.Group itemsPerRow={3}>{recipes}</Card.Group>
+      </Responsive>
+    </Container>
+  );
+};
 export default RecipeCard;
