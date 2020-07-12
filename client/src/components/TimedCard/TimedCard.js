@@ -28,12 +28,12 @@ const TimedCard = () => {
     const [Chars, setChars] = useState([])
 
     const [leaderboard, setLeaderboard] = useState([])
-    useEffect(() => {
-      axios.post('/api/leaderboard')
-      .then ((res)=> {
-        setLeaderboard(res.data)	
-      })
-      })
+    
+      // axios.post('/api/leaderboard')
+      // .then ((res)=> {
+      //   setLeaderboard(res.data)	
+      // })
+      
 
 
   const handleFlip = () => {
@@ -151,6 +151,11 @@ const TimedCard = () => {
  const SaveUserName = () => {
   const UserName = document.getElementById("user").value
    console.log(UserName)
+   
+   axios.post('/api/leaderboard')
+   .then ((res)=> {
+     setLeaderboard(res.data.username)	
+   })  
  }
  
 
