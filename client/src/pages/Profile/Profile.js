@@ -6,10 +6,10 @@ import {
 //   Image,
   Container,
   Grid,
-  Sticky,
+  Responsive
 } from "semantic-ui-react";
 import API from "../../lib/API"
-import RecipeCard from "../../components/RecipeCard/RecipeCard"
+import ProfileRecipe from "../../components/ProfileRecipes/ProfileRecipes"
 import UserCard from "../../components/UserCard/UserCard"
 
 // import Gravatar from "react-gravatar";
@@ -40,6 +40,13 @@ class Profile extends Component {
 
     return (
       <Container>
+          <Responsive maxWidth="780">
+          <UserCard />
+          <ProfileRecipe recipes={this.state.recipes} />
+          </Responsive>
+
+          <Responsive minWidth="781">
+              
         <Grid columns={2}>
           <Grid.Row>
             <Grid.Column width={8}>
@@ -47,21 +54,11 @@ class Profile extends Component {
             </Grid.Column>
 
             <Grid.Column width={8}>
-              <Card.Group itemsPerRow={2}>
-                {this.state.recipes.map((recipe) => (
-                  <RecipeCard
-                    key={recipe.id}
-                    title={recipe.title}
-                    categories={recipe.categories}
-                    createdBy={recipe.createdBy}
-                    description={recipe.description}
-                    image={recipe.image}
-                  />
-                ))}
-              </Card.Group>
+                <ProfileRecipe recipes={this.state.recipes} />
             </Grid.Column>
           </Grid.Row>
         </Grid>
+          </Responsive>
       </Container>
     );
   }
