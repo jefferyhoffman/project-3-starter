@@ -32,23 +32,23 @@ class UserCard extends Component {
     const { user } = this.context;
     const { isOpen } = this.state;
 
-
+    console.log(user)
 
     
     return (
         <Card fluid>
         <Gravatar
           className="ui medium centered image"
-          email={user.email}
+          email={user ? user.email : null}
           size={200}
         />
         <Card.Content>
-          <Card.Header>GARBAGE DATA</Card.Header>
+          <Card.Header>{user ? user.firstName : null} {user? user.lastName : "Loading"}</Card.Header>
           <Card.Meta>
-            User number ###
+            User Number: {user ? user.id: "###"}
           </Card.Meta>
           <Card.Description>
-            Matthew is a musician living in Nashville.
+            Username: {user ? user.username : "User"}
           </Card.Description>
         </Card.Content>
       </Card>
