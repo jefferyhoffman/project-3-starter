@@ -13,7 +13,7 @@ const RecipeCard = (props) => {
           wrapped
           ui={false}
           as="a"
-          href={recipe.image}
+          href={"/recipe/" + recipe.id}
           target="_blank"
         />
         <Card.Content>

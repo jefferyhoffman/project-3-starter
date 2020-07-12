@@ -32,6 +32,10 @@ export default {
           'Authorization': `Bearer ${authToken}`
         }
       }).catch(err => console.log(err));
+    },
+
+    byId: function(id) {
+      return axios.get('api/recipes/:' + id, {})
     }
   }
 }
