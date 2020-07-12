@@ -23,7 +23,7 @@ const options = [
 ]
 
 const RecipeSubDD = () => (
-  <Form.Dropdown label="Choose a Food Category" clearable fluid  required options={options} selection />
+  <Form.Dropdown label="Choose a Food Category" clearable fluid multiple required options={options} selection />
 )
 
 export default RecipeSubDD

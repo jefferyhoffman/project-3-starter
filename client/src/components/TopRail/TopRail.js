@@ -41,7 +41,7 @@ const TopRail = () => {
       maxWidth={1799}
       onChange={handleChange}
       className="width"
-      placeholder="Recipe Name"
+      placeholder="Food Category"
       fluid
       selection
       options={foodOptions}
