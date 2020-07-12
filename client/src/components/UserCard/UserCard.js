@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Dropdown, Card} from 'semantic-ui-react'
-import { NavLink, withRouter } from 'react-router-dom';
+import { Card } from 'semantic-ui-react'
 
 import Gravatar from 'react-gravatar';
 
@@ -9,30 +8,8 @@ import AuthContext from '../../contexts/AuthContext';
 class UserCard extends Component {
   static contextType = AuthContext;
 
-  state = {
-    isOpen: false
-  }
-
-  toggleOpen = () => {
-    this.setState({
-      isOpen: !this.state.isOpen
-    });
-  }
-
-  handleLogout = () => {
-    this.context.onLogout();
-    this.props.onClick();
-  }
-
-  dropdownEvent = event => {
-    console.log(event.target.value)
-  }
-
   render() {
     const { user } = this.context;
-    const { isOpen } = this.state;
-
-    console.log(user)
 
     
     return (
