@@ -127,7 +127,7 @@ const TimedCard = () => {
         handleEOG();
         clearInterval(gameInterval)
       }
-    }, 10)
+    }, 1000)
 
   }
   const handleEOG = () => {
