@@ -18,7 +18,7 @@ const RecipeCard = (props) => {
           <Card.Header>{recipe.title}</Card.Header>
           <Card.Meta>
             <span>
-              {recipe.categories.map((category) => category.category)}
+              {recipe.categories.map((category) => category.category + " ")}
             </span>
           </Card.Meta>
           <Card.Description>{recipe.description}</Card.Description>
