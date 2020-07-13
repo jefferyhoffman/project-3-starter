@@ -7,8 +7,9 @@ const CharacterContainer = (props) => {
     //handle card flip
     const handleFlip = (e) => {
         e.preventDefault();
-        setisFlipped(prevState => ({ isFlipped: !prevState.isFlipped }));
+        setisFlipped(!isFlipped);
     };
+    
     return (
         
         <div className="column is-one-quarter">
