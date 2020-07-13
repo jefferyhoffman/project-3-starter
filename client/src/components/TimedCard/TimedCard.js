@@ -71,7 +71,7 @@ const TimedCard = () => {
     }
     if (guess.toLowerCase() === who.toLowerCase()) {
       handleFlip()
-      setRandomNumber(Math.floor(Math.random() * 25))
+      setRandomNumber(Math.floor(Math.random() * 27))
       incrementFinalScore(score)
       setLastGuess(whoImg);
       Bulma().alert({

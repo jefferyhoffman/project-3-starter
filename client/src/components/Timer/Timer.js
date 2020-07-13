@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import {TimeContext} from '../../contexts/Time'
-
+import './Timer.css'
 
 const Time = () => {
   const {Time} = useContext(TimeContext)
