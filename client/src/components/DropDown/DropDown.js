@@ -31,7 +31,7 @@ const DropDown = () => {
     return (
         <div className="column is-one-quarter">
 
-            <div className="dropdown is-hoverable">
+            <div className="dropdown is-up is-hoverable">
                 <div className="dropdown-trigger">
                     <button className="button dropdown-button is-rounded" aria-haspopup="true" aria-controls="dropdown-menu">
                         <span> Choose Your Question! </span>
