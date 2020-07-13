@@ -20,6 +20,7 @@ export default {
   },
 
   Recipes: {
+
     all: function() {
       return axios.get('/api/recipes/all', {})
     },
@@ -36,6 +37,14 @@ export default {
 
     byId: function(id) {
       return axios.get('/api/recipes/' + id, {})
+    },
+
+    byUser: function(authToken) {
+      return axios.get('/api/recipes/user', {
+        headers: {
+          'Authorization': `Bearer ${authToken}`
+        }
+      })
     }
   }
 }
