@@ -59,7 +59,7 @@ class FullRecipe extends Component {
                     {this.state.recipe.title}
                   </Header>
                   <p style={{ fontSize: "1.33em" }}>
-                    {this.state.recipe.direcitons}
+                    {this.state.recipe.directions}
                   </p>
                 </div>
               </Grid.Column>
