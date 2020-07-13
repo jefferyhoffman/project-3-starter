@@ -16,7 +16,16 @@ import { RandomNumberContext } from '../../contexts/RandomNumber'
 
 // const randomnumber = Math.floor(Math.random() * 11)
 const TimedCard = () => {
+  const[alertText,setAlertText] = useState(`Let's guess! 
+  You have five minutes to guess as many Characters as possible,
 
+  each person is worth up to 10 points, 
+
+  each question you ask reduces the points the character is worth,
+
+  each incorrect guess will also reduce the character's worth,
+
+  good luck guess away!`)
   const { RandomNumber, setRandomNumber } = useContext(RandomNumberContext)
   const { finalScore, incrementFinalScore } = useContext(FinalScoreContext)
   const { Time, setTime } = useContext(TimeContext)
@@ -29,17 +38,14 @@ const TimedCard = () => {
   const [Chars, setChars] = useState([])
   const [leaderboard, setLeaderboard] = useState([])
   const [lastGuess, setLastGuess] = useState("")      
+  const [isActive,setisActive] = useState(false)
   const handleFlip = () => {
     setisFlipped(prevState => ({ isFlipped: !prevState.isFlipped }));
   }
   const handleTime = () => {
     if(Time<=0){
-      Bulma().alert({
-        type: "danger",
-        title: "Umm",
-        body: "Click start to begin earning points",
-        confirm: "fine"
-      })
+      setAlertText("Click start to begin the game")
+      handleActive()
     }
     else{
       handleScore()
@@ -49,50 +55,39 @@ const TimedCard = () => {
   const handleScore = () => {
     if (score <= 0) {
       handleGameOver()
-      Bulma().alert({
-        type: "danger",
-        title: "Oh no!",
-        body: "You couldn't guess right this time try guessing again before time runs out!",
-        confirm: "fine"
-      })
+      setAlertText("This Character isn't worth anything lets try another one")
+      handleActive()
+      updateWho(Math.floor(Math.random() * 27))
     }
     else {
       handleGuess()
-      console.log(who)
+
     }
   }
   const handleGuess = () => {
     if (!guess) {
-      Bulma().alert({
-        type: "warning",
-        body: "Type a name to Guess Who!",
-        confirm: "Guess Again"
-      })
+      setAlertText("Please type a name to guess!")
+      handleActive()
     }
     if (guess.toLowerCase() === who.toLowerCase()) {
       handleFlip()
       setRandomNumber(Math.floor(Math.random() * 27))
       incrementFinalScore(score)
       setLastGuess(whoImg);
-      Bulma().alert({
-        type: "success",
-        title: "You Guessed Right! ",
-        body: ` you scored  ${score} out of 10!!! Nice Job! Keep Guessing to get more points before time runs out!`,
-        confirm: "Hooray!"
-      })
+      setAlertText("You Guessed correctly!!! Keep going!")
+      setscore(score-1)
+      handleActive()
     }
     else if (guess && guess.toLowerCase !== who.toLowerCase()) {
-      Bulma().alert({
-        type: "warning",
-        title: "Score Dropped!",
-        body: "Guessed Wrong you lost a point! take your time you got this",
-        confirm: "Keep Guessing"
-      })
+     
+      setAlertText("you guessed wrong you lose a point!")
+      setscore(score-1)
+      handleActive()
       
-      setscore(score - 1)
-      console.log(score)
+      
     }
   }
+  
   useEffect(() => {
 
     axios.get("/api/characters").then((res) => {
@@ -100,10 +95,9 @@ const TimedCard = () => {
       setChars(res.data)
       updateWho(res.data[RandomNumber].name)
       setwhoImg(res.data[RandomNumber].picture)
-      console.log("res: " + res.data[RandomNumber])
-      console.log(res.data)
+      
     })
-    console.log(who)
+    
   }, [])
 
 
@@ -128,8 +122,7 @@ const TimedCard = () => {
     setwhoImg(Chars[RandomNumber].picture)
   }
   const handleStart = () => {
-    console.log(who)
-    console.log(Chars)
+  
     setscore(10)
     const start = document.getElementById("start")
     start.classList.add("is-hidden");
@@ -146,14 +139,13 @@ const TimedCard = () => {
 
   }
   const handleEOG = () => {
-    console.log("end of game")
     const element = document.getElementById("MaryPoppins");
     element.classList.remove("is-hidden");
 
   }
  const handleUserSub = () => {
   const username = document.getElementById("user").value
-   console.log(username)
+  
    let highScore = finalScore;
    axios.post('/api/leaderboard', {username, highScore, lastGuess})
    .then ((res)=> {
@@ -161,12 +153,36 @@ const TimedCard = () => {
      setLeaderboard(res.data)	
    })  
  }
- 
+
+const handleActive = ()=>{
+    const element = document.getElementById("alert")
+
+    if(isActive === false){
+    element.classList.remove("is-active")
+    setisActive(true)
+    }
+    if(isActive === true){
+        element.classList.add("is-active")
+        setisActive(false)
+    }
+}
+
  
 
   return (
 
     <div className="column is-4">
+   <div className="column is-4">
+        <div className="modal is-clipped is-active" id="alert">
+        <div class="modal-background"></div>
+            <div className="modal-card">
+            <section className="modal-card-body">
+                <p>{alertText}</p>
+                <button className="button is-primary" onClick={handleActive}>Continue</button>
+            </section>
+            </div>
+        </div>
+    </div>
       <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
         <div className="box cardBox">
           <div className="box">
@@ -174,12 +190,12 @@ const TimedCard = () => {
             <h1 className="is-size-1">Let's Guess! </h1>
             <input className='input' type="text" name="guess" value={guess} onChange={e => setguess(e.target.value)} placeholder="Guess here" />
             <button className="button is-warning" onClick={handleTime}>Guess</button>
-            <img alt="bob" src="../../assets/images/mysteryWho1.png" style={{ width: "200px", height: "200px" }} ></img>
+            <img alt="Who" src="../../assets/images/mysteryWho1.png" style={{ width: "200px", height: "200px" }} ></img>
+            <button id="GObtn" className="button is-primary is-hidden" onClick={handlePlayAgain} >Guess Again</button>
             <DropDown />
             <div id="MaryPoppins" className="is-hidden">
-
               <label>Guess Again to play without submitting score</label>
-              <button id="GObtn" className="button is-primary" onClick={handlePlayAgain} >Guess Again</button>
+              <button  className="button is-primary" onClick={handlePlayAgain} >Play Again</button>
               <label>To send score to leaderboard submit your user name below</label>
               <div className="columns">
                 <div className="column">

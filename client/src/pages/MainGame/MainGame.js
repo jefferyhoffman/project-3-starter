@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Persons from '../../components/Persons/Persons'
 import TimedCard from '../../components/TimedCard/TimedCard'
 import Score from '../../components/Score/Score'
-import AboutMe from '../../components/AboutMe/AboutMe'
 import FinalScore from '../../components/FinalScore/FinalScore'
 import Timer from '../../components/Timer/Timer'
 
