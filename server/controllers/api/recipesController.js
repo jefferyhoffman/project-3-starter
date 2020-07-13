@@ -35,6 +35,20 @@ recipesController.get("/category", JWTVerifier, (req, res) => {
         .catch(err => res.json(err));
 });
 
+// Route to retrieve a specific recipe with all categories, ingredients and reviews.
+recipesController.get("/:id", JWTVerifier, async (req, res) => {
+    await db.Recipe.findAll({
+        where: { id: req.params.id },
+        include: [
+            { model: db.Category, as: "categories" },
+            { model: db.Ingredient, as: "ingredients" },
+            { model: db.Review }
+        ]
+    }, {})
+        .then(recipe => res.json(recipe))
+        .catch(err => res.json(err));
+});
+
 // Route to create a recipe and make associations to all the join tables
 recipesController.post("/", JWTVerifier, async (req, res) => {
     const { title, image, description, prepTime, cookTime, servings, directions, categories, ingredients } = req.body;
