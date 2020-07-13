@@ -37,9 +37,9 @@ const Navigation = () => {
         aria-expanded="false"
         data-target="navbarBasicExample"
       >
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
+        <span aria-hidden="true" className="is-centered"></span>
+        <span aria-hidden="true" className="is-centered"></span>
+        <span aria-hidden="true" className="is-centered"></span>
       </div>
 
       <div className={`navbar-menu ${isActive ? "is-active" : ""}`} id="navbarBasicExample">
