@@ -23,22 +23,37 @@ class TopRail extends Component {
   }
   
   handleChange = (e, data) => {
-    console.log(data.value);
+    console.log(data);
   };
   
   render() {
 
+    let options = this.state.categories.map((category) => {
+      return (
+        {
+          key: category.id,
+          text: category.category,
+          value: category.category
+        }
+      )
+    })
+
     return (
       <Responsive maxWidth={1799}>
-        <Dropdown className="width" text="What's the occasion?">
-          <Dropdown.Menu>
-          {this.state.categories.map((category) => {
-            return(<Dropdown.Item key={category.id} id={category.id} text={category.category} />)
-          })}
-          </Dropdown.Menu>
-        </Dropdown>
+        <Dropdown className="width" fluid placeholder="Food Category" multiple selection search options={options} />
       </Responsive>
     );
+
+    // <Responsive
+    //   as={Dropdown}
+    //   maxWidth={1799}
+    //   onChange={handleChange}
+    //   className="width"
+    //   placeholder="Food Category"
+    //   fluid
+    //   selection
+    //   options={foodOptions}
+    // />
   }
 };
 
