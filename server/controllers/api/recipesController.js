@@ -45,7 +45,7 @@ recipesController.get("/category", JWTVerifier, (req, res) => {
 });
 
 // Route to retrieve a specific recipe with all categories, ingredients and reviews.
-recipesController.get("/:id", JWTVerifier, async (req, res) => {
+recipesController.get("/:id", async (req, res) => {
     await db.Recipe.findAll({
         where: { id: req.params.id },
         include: [
