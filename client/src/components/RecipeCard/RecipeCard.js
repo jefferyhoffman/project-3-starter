@@ -4,18 +4,14 @@ import { Card, Rating, Image, Responsive, Container } from "semantic-ui-react";
 // const extra = <Rating icon="star" defaultRating={3} maxRating={5} />;
 
 const RecipeCard = (props) => {
-  console.log(props);
   const recipes = props.recipes.map((recipe) => {
+    let link = "/recipe/" + recipe.id
     return (
-      <Card>
-        {/* <img src={recipe.image} href={recipe.image} target="_blank" height={400}/> */}
+      <Card key={recipe.id} as="a" href={link}>
         <Image
           src={recipe.image}
           wrapped
           ui={false}
-          as="a"
-          // This needs to link to the full recipe associated with this specific recipe.
-          href={recipe.image}
           target="_blank"
         />
         <Card.Content>
