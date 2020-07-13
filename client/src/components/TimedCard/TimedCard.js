@@ -149,12 +149,13 @@ const TimedCard = () => {
 
   }
  const SaveUserName = () => {
-  const UserName = document.getElementById("user").value
-   console.log(UserName)
+  const username = document.getElementById("user").value
+   console.log(username)
    
-   axios.post('/api/leaderboard')
+   axios.post('/api/leaderboard', {username})
    .then ((res)=> {
-     setLeaderboard(res.data.username)	
+     console.log(`${username} has been added to leaderboard` )
+     setLeaderboard(res.data)	
    })  
  }
  
