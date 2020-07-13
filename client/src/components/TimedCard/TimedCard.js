@@ -32,6 +32,20 @@ const TimedCard = () => {
   const handleFlip = () => {
     setisFlipped(prevState => ({ isFlipped: !prevState.isFlipped }));
   }
+  const handleTime = () => {
+    if(Time<=0){
+      Bulma().alert({
+        type: "danger",
+        title: "Umm",
+        body: "Click start to begin earning points",
+        confirm: "fine"
+      })
+    }
+    else{
+      handleScore()
+    }
+  }
+  
   const handleScore = () => {
     if (score <= 0) {
       handleGameOver()
@@ -51,7 +65,6 @@ const TimedCard = () => {
     if (!guess) {
       Bulma().alert({
         type: "warning",
-        title: "Warning",
         body: "Type a name to Guess Who!",
         confirm: "Guess Again"
       })
@@ -74,6 +87,7 @@ const TimedCard = () => {
         body: "Guessed Wrong you lost a point! take your time you got this",
         confirm: "Keep Guessing"
       })
+      
       setscore(score - 1)
       console.log(score)
     }
@@ -146,6 +160,7 @@ const TimedCard = () => {
    })  
  }
  
+ 
 
   return (
 
@@ -156,7 +171,7 @@ const TimedCard = () => {
             <button className="button is-primary" id="start" onClick={handleStart}>Start</button>
             <h1 className="is-size-1">Let's Guess! </h1>
             <input className='input' type="text" name="guess" value={guess} onChange={e => setguess(e.target.value)} placeholder="Guess here" />
-            <button className="button is-warning" onClick={handleScore}>Guess</button>
+            <button className="button is-warning" onClick={handleTime}>Guess</button>
             <img alt="bob" src="../../assets/images/mysteryWho1.png" style={{ width: "200px", height: "200px" }} ></img>
             <DropDown />
             <div id="MaryPoppins" className="is-hidden">
