@@ -8,6 +8,7 @@ const RecipeCard = (props) => {
   const recipes = props.recipes.map((recipe) => {
     return (
       <Card>
+        {/* <img src={recipe.image} href={recipe.image} target="_blank" height={400}/> */}
         <Image
           src={recipe.image}
           wrapped
