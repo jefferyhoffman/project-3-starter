@@ -39,7 +39,7 @@ app.use(logger(LOG_MODE));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(passport.initialize());
-app.use(express.static('images'))
+app.use(express.static(path.join(__dirname, 'images')))
 //-- Static Server (Production) ----------------------------------------------
 if (process.env.NODE_ENV === 'production') {
   const clientBuildPath = path.join(__dirname, '..', 'client', 'build');
