@@ -13,7 +13,8 @@ const RecipeCard = (props) => {
           wrapped
           ui={false}
           as="a"
-          href={"/recipe/" + recipe.id}
+          // This needs to link to the full recipe associated with this specific recipe.
+          href={recipe.image}
           target="_blank"
         />
         <Card.Content>
