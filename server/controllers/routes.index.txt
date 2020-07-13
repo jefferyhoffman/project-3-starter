@@ -23,6 +23,9 @@ POST "/"
 Route to save the recipe to user's profile
 POST "/:id"
 
+Route to delete the recipe from user's profile
+DELETE "/:id"
+
 Route to retrieve a specific recipe with categories, ingredients, and reviews
 GET "/:id"
 

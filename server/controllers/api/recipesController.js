@@ -114,4 +114,19 @@ recipesController.post("/:id", JWTVerifier, async (req, res) => {
         .catch(err => res.json(err));
 });
 
+// Route to remove existing recipe from the user's profile
+recipesController.delete("/:id", JWTVerifier, async (req, res) => {
+    const UserId = req.user.id;
+    const RecipeId = req.params.id;
+
+    // Set the association between the recipe and the user
+    var userQuery = "DELETE FROM `recipe_user` WHERE `recipe_id`=(?) AND `user_id`=(?);";
+    db.sequelize.query(userQuery, {
+        type: sequelize.QueryTypes.INSERT,
+        replacements: [RecipeId, UserId]
+    })
+        .then(recipe => res.json(recipe))
+        .catch(err => res.json(err));
+});
+
 module.exports = recipesController;
