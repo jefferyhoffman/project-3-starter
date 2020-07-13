@@ -30,9 +30,9 @@ class AuthDropdown extends Component {
 
   render() {
     const { user } = this.context;
-    const { isOpen } = this.state;
+    //const { isOpen } = this.state;
 
-    const dropdownMenuClass = `dropdown-menu dropdown-menu-right ${isOpen && 'show'}`;
+    //const dropdownMenuClass = `dropdown-menu dropdown-menu-right ${isOpen && 'show'}`;
 
 
     
