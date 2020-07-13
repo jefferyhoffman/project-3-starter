@@ -1,5 +1,4 @@
 .navbar {
-    /* background-image: url("../../assets/images/wood.jpg") !important; */
     background-color:  #ebb364 !important;
     background-size: cover !important;
     border-radius: 0px !important;
@@ -8,11 +7,3 @@
 .home {
     color: black !important;
 }
-
-/* .logo {
-    width: 50%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-} */
