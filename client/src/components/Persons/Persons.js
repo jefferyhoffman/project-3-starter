@@ -7,6 +7,12 @@ axios.get('/api/characters')
 const Persons= ()=> {
   const [people,setpeople]=useState([])
 
+  const handleClick = () => {
+   const name = document.getElementsByClassName("button").value
+   console.log(name)
+  }
+  
+
   useEffect(() => {
     axios.get("/api/characters").then((res) => {
       setpeople(res.data)
@@ -30,7 +36,9 @@ const Persons= ()=> {
                       src={person.picture}
                       alt={person.name}
                       style={{ width: "200px", height: "200px" }}
+                      onclick={handleClick}
                     />
+                    <button className="button is-warning" onClick={handleClick} value={person.name} >Guess Me</button>
                 </div>
                 </div>
                 </div>
