@@ -156,11 +156,11 @@ const TimedCard = () => {
         <div className="box cardBox">
           <div className="box">
             <button className="button is-primary" id="start" onClick={handleStart}>Start</button>
-            <h1 className="is-size-1"> ????</h1>
-            <img alt="bob" src="../../assets/images/mysteryWho1.png" style={{ width: "200px", height: "200px" }} ></img>
-            <DropDown />
+            <h1 className="is-size-1">Let's Guess! </h1>
             <input className='input' type="text" name="guess" value={guess} onChange={e => setguess(e.target.value)} placeholder="Guess here" />
             <button className="button is-warning" onClick={handleScore}>Guess</button>
+            <img alt="bob" src="../../assets/images/mysteryWho1.png" style={{ width: "200px", height: "200px" }} ></img>
+            <DropDown />
             <div id="MaryPoppins" className="is-hidden">
 
               <label>Guess Again to play without submitting score</label>
