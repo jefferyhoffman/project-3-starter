@@ -15,8 +15,8 @@ const Footer = () => {
                <p>&copy; Copyright 2020</p>
                
                
-               <Share url="https://andrewsuzuki.com" options={{ size: "large" }} />
-               <ShareLink link='https://your-site.com/some-page'>
+               <Share url="https://letsguess.herokuapp.com/" options={{ size: "large" }} />
+               <ShareLink link='https://letsguess.herokuapp.com/'>
                   {link => (
                      <a href={link} target='_blank'></a>
                   )}
