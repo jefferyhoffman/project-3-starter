@@ -17,7 +17,7 @@ import { RandomNumberContext } from '../../contexts/RandomNumber'
 // const randomnumber = Math.floor(Math.random() * 11)
 const TimedCard = () => {
   const[alertText,setAlertText] = useState(`Let's guess! 
-  You have five minutes to guess as many Characters as possible,
+  You have two & half minutes to guess as many Characters as possible,
 
   each person is worth up to 10 points, 
 
@@ -126,7 +126,7 @@ const TimedCard = () => {
     setscore(10)
     const start = document.getElementById("start")
     start.classList.add("is-hidden");
-    let seconds = 300
+    let seconds = 150
 
     let gameInterval = setInterval(function () {
       seconds--;
