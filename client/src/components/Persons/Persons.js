@@ -17,7 +17,7 @@ const Persons= ()=> {
     return (
       <div className="container">
         <div className="columns is-centered">
-          <h1 className="is-size-1">😻Character Selection😻</h1>
+          <h1 className="is-size-1" >😻Character Selection😻</h1>
         </div>
         <br/>
        

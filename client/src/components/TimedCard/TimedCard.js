@@ -28,10 +28,24 @@ const TimedCard = () => {
   const [whoImg, setwhoImg] = useState("");
   const [Chars, setChars] = useState([])
   const [leaderboard, setLeaderboard] = useState([])
-          
+  const [lastGuess, setLastGuess] = useState("")      
   const handleFlip = () => {
     setisFlipped(prevState => ({ isFlipped: !prevState.isFlipped }));
   }
+  const handleTime = () => {
+    if(Time<=0){
+      Bulma().alert({
+        type: "danger",
+        title: "Umm",
+        body: "Click start to begin earning points",
+        confirm: "fine"
+      })
+    }
+    else{
+      handleScore()
+    }
+  }
+  
   const handleScore = () => {
     if (score <= 0) {
       handleGameOver()
@@ -51,15 +65,15 @@ const TimedCard = () => {
     if (!guess) {
       Bulma().alert({
         type: "warning",
-        title: "Warning",
         body: "Type a name to Guess Who!",
         confirm: "Guess Again"
       })
     }
     if (guess.toLowerCase() === who.toLowerCase()) {
       handleFlip()
-      setRandomNumber(Math.floor(Math.random() * 25))
+      setRandomNumber(Math.floor(Math.random() * 27))
       incrementFinalScore(score)
+      setLastGuess(whoImg);
       Bulma().alert({
         type: "success",
         title: "You Guessed Right! ",
@@ -74,6 +88,7 @@ const TimedCard = () => {
         body: "Guessed Wrong you lost a point! take your time you got this",
         confirm: "Keep Guessing"
       })
+      
       setscore(score - 1)
       console.log(score)
     }
@@ -137,14 +152,16 @@ const TimedCard = () => {
 
   }
  const handleUserSub = () => {
-  const UserName = document.getElementById("user").value
-   console.log(UserName)
-   
-   axios.post('/api/leaderboard')
+  const username = document.getElementById("user").value
+   console.log(username)
+   let highScore = finalScore;
+   axios.post('/api/leaderboard', {username, highScore, lastGuess})
    .then ((res)=> {
-     setLeaderboard(res.data.username)	
+     console.log(`${username} has been added to leaderboard` )
+     setLeaderboard(res.data)	
    })  
  }
+ 
  
 
   return (
@@ -156,7 +173,7 @@ const TimedCard = () => {
             <button className="button is-primary" id="start" onClick={handleStart}>Start</button>
             <h1 className="is-size-1">Let's Guess! </h1>
             <input className='input' type="text" name="guess" value={guess} onChange={e => setguess(e.target.value)} placeholder="Guess here" />
-            <button className="button is-warning" onClick={handleScore}>Guess</button>
+            <button className="button is-warning" onClick={handleTime}>Guess</button>
             <img alt="bob" src="../../assets/images/mysteryWho1.png" style={{ width: "200px", height: "200px" }} ></img>
             <DropDown />
             <div id="MaryPoppins" className="is-hidden">

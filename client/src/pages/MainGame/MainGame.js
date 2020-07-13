@@ -20,7 +20,9 @@ const MainGame = ()=> {
         <Score/>
        </div>
        <br></br>
+       <div >
        <Persons/>
+       </div>
         </div>
     );
 }
