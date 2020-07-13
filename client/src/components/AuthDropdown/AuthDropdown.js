@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Dropdown} from 'semantic-ui-react'
-import { NavLink, withRouter } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import Gravatar from 'react-gravatar';
 
@@ -49,13 +49,6 @@ class AuthDropdown extends Component {
           </Dropdown.Menu>
         </Dropdown>
       </Button.Group>
-      // <li className="nav-item dropdown">
-      //   <button className="btn btn-link dropdown-toggle" onClick={this.toggleOpen} id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      //   </button>
-      //   <div className={dropdownMenuClass} aria-labelledby="navbarDropdown">
-      //     <div className="dropdown-item" onClick={this.handleLogout}>Logout</div>
-      //   </div>
-      // </li>
     );
   }
 }
