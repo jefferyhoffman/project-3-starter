@@ -46,5 +46,11 @@ export default {
         }
       })
     }
+  },
+
+  Categories : {
+    all: function() {
+      return axios.get('/api/categories/all', {})
+    }
   }
 }
