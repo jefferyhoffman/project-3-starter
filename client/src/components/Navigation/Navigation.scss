@@ -28,6 +28,7 @@ strong:hover {
 }
 a.navbar-item {
   text-decoration: none;
+
   color: black;
 }
 a.navbar-item:visited {
@@ -41,4 +42,8 @@ a.navbar-item:active {
 }
 a.navbar-item:link {
   text-decoration: none;
+}
+
+.navbar-menu{
+  width: 1000px;
 }
