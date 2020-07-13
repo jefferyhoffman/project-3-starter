@@ -63,7 +63,7 @@ recipesController.post("/", JWTVerifier, async (req, res) => {
     const { title, image, description, prepTime, cookTime, servings, directions, categories, ingredients } = req.body;
     const users = req.user.id;
     let RecipeId;
-
+    console.log(req.body, req.user.id)
     // Create the entry in Recipe table
     await db.Recipe.create(
         { title, image, description, prepTime, cookTime, servings, directions, ingredients, createdBy: req.user.username },
