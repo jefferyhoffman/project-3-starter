@@ -35,7 +35,7 @@ export default {
     },
 
     byId: function(id) {
-      return axios.get('api/recipes/:' + id, {})
+      return axios.get('/api/recipes/' + id, {})
     }
   }
 }

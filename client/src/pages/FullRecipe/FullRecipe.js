@@ -9,7 +9,7 @@ import API from "../../lib/API";
 class FullRecipe extends Component {
     
   state = {
-    recipe: {},
+    recipe: [],
     err: ""
   }
 
@@ -17,8 +17,8 @@ class FullRecipe extends Component {
     console.log(this.props.match.params.id)
     API.Recipes.byId(this.props.match.params.id)
     .then((response) => {
-      this.setState({ recipes: response.data, err: "" })
-      console.log(response.data)
+      this.setState({ recipe: response.data[0], err: "" })
+      console.log(response.data[0])
     })
     .catch((err) => this.setState({ err: err.message }))
   }
@@ -26,6 +26,7 @@ class FullRecipe extends Component {
   
     
   render(){
+    console.log(this.state.recipe.ingredients)
     return(
 
       <div>
@@ -35,30 +36,30 @@ class FullRecipe extends Component {
             <Grid.Row>
               <Grid.Column width={1}></Grid.Column>
               <Grid.Column width={14}>
-                {/* <FullRecipeCard /> */}
+                <FullRecipeCard 
+                image={this.state.recipe.image}
+                cookTime={this.state.recipe.cookTime}
+                prepTime={this.state.recipe.prepTime}
+                servings={this.state.recipe.servings}
+                />
                 <div className="bg2">
                   <Header as="h3" className="bg2" style={{ fontSize: "2em" }}>
-                    This will house the list of ingredients
+                    Ingredients
                   </Header>
-                  <p style={{ fontSize: "1.33em" }}>
+                  <div style={{ fontSize: "1.33em" }}>
                     <ul>
-                      <li>Ingredient</li>
-                      <li>Ingredient</li>
-                      <li>Ingredient</li>
-                      <li>Ingredient</li>
-                      <li>Ingredient</li>
+                    {this.state.recipe.ingredients ? this.state.recipe.ingredients.map((ingredient) => {
+                        return <li>{ingredient}</li>
+                      }) : "Loading"}
                     </ul>
-                  </p>
+                  </div>
                 </div>
                 <div className="bg">
                   <Header as="h3" style={{ fontSize: "2em" }}>
-                    This will house the actual recipe
+                    {this.state.recipe.title}
                   </Header>
                   <p style={{ fontSize: "1.33em" }}>
-                    This will be the cooking directions. We can give your company
-                    superpowers to do things that they never thought possible. Let
-                    us delight your customers and empower your needs... through pure
-                    data analytics.
+                    {this.state.recipe.direcitons}
                   </p>
                 </div>
               </Grid.Column>
@@ -71,32 +72,32 @@ class FullRecipe extends Component {
             <Grid.Row>
               <Grid.Column width={3}></Grid.Column>
               <Grid.Column width={5}>
-                {/* <FullRecipeCard /> */}
+                <FullRecipeCard 
+                image={this.state.recipe.image}
+                cookTime={this.state.recipe.cookTime}
+                prepTime={this.state.recipe.prepTime}
+                servings={this.state.recipe.servings}
+                />
               </Grid.Column>
               <Grid.Column width={5}>
                 <div className="bg">
                   <Header as="h3" style={{ fontSize: "2em" }}>
-                    This will house the list of ingredients
+                    Ingredients
                   </Header>
-                  <p style={{ fontSize: "1.33em" }}>
+                  <div style={{ fontSize: "1.33em" }}>
                     <ul>
-                      <li>Ingredient</li>
-                      <li>Ingredient</li>
-                      <li>Ingredient</li>
-                      <li>Ingredient</li>
-                      <li>Ingredient</li>
+                      {this.state.recipe.ingredients ? this.state.recipe.ingredients.map((ingredient) => {
+                        return <li>{ingredient}</li>
+                      }) : "Loading"}
                     </ul>
-                  </p>
+                  </div>
                 </div>
                 <div className="bg">
                   <Header as="h3" style={{ fontSize: "2em" }}>
-                    This will house the actual recipe
+                    {this.state.recipe.title}
                   </Header>
                   <p style={{ fontSize: "1.33em" }}>
-                    This will be the cooking directions. We can give your company
-                    superpowers to do things that they never thought possible. Let
-                    us delight your customers and empower your needs... through pure
-                    data analytics.
+                    {this.state.recipe.directions}
                   </p>
                 </div>
               </Grid.Column>
