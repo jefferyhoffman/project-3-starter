@@ -10,6 +10,7 @@ import Home from '../../pages/Home/Home';
 import Login from '../../pages/Login/Login';
 import Register from '../../pages/Register/Register';
 import Profile from '../../pages/Profile/Profile';
+import FullRecipe from '../../pages/FullRecipe/FullRecipe';
 import AddRecipe from '../../pages/AddRecipe/AddRecipe';
 import NotFound from '../../pages/NotFound/NotFound';
 
@@ -59,6 +60,7 @@ class App extends Component {
               <Route exact path='/' component={Home} />
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />
+              <Route exact path='/recipe/:id' component={FullRecipe} />
               <PrivateRoute path='/profile' component={Profile} />
               <PrivateRoute path='/recipes' component={AddRecipe} />
               <Route component={NotFound} />
