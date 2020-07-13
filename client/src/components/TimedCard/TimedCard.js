@@ -133,7 +133,7 @@ const TimedCard = () => {
     setscore(10)
     const start = document.getElementById("start")
     start.classList.add("is-hidden");
-    let seconds = 30
+    let seconds = 300
 
     let gameInterval = setInterval(function () {
       seconds--;
