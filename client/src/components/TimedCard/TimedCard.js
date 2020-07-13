@@ -136,7 +136,7 @@ const TimedCard = () => {
     element.classList.remove("is-hidden");
 
   }
- const SaveUserName = () => {
+ const handleUserSub = () => {
   const username = document.getElementById("user").value
    console.log(username)
    
