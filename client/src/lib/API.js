@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Leaderboard from '../pages/Leaderboard/Leaderboard';
 
 export default {
   Users: {
@@ -26,6 +27,21 @@ export default {
           'Authorization': `Bearer ${authToken}`
         }
       });
+    }
+  },
+  Characters: {
+    getAllCharacters: function () {
+      return axios.get('/api/characters');
+    }
+  },
+  Scores:{
+    getAll: function (){
+      return axios.get('/api/leaderboard/')
+    }
+  },
+  Leaderboard: {
+    create: function ( username, highScore, lastGuess) {
+      return axios.post('/api/leaderboard', {username, highScore, lastGuess});
     }
   }
 }
