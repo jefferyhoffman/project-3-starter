@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react'
+import { Link } from "react-router-dom";
 import ReactCardFlip from 'react-card-flip';
 import DropDown from '../DropDown/DropDown.js';
 import axios from 'axios'
@@ -25,17 +26,9 @@ const TimedCard = () => {
   const [] = useState(true)
   const [guess, setguess] = useState("");
   const [whoImg, setwhoImg] = useState("");
-    const [Chars, setChars] = useState([])
-
-    const [leaderboard, setLeaderboard] = useState([])
-    
-      // axios.post('/api/leaderboard')
-      // .then ((res)=> {
-      //   setLeaderboard(res.data)	
-      // })
-      
-
-
+  const [Chars, setChars] = useState([])
+  const [leaderboard, setLeaderboard] = useState([])
+          
   const handleFlip = () => {
     setisFlipped(prevState => ({ isFlipped: !prevState.isFlipped }));
   }
@@ -86,7 +79,7 @@ const TimedCard = () => {
     }
   }
   useEffect(() => {
-  
+
     axios.get("/api/characters").then((res) => {
       setChars(res.data)
       setChars(res.data)
@@ -115,7 +108,7 @@ const TimedCard = () => {
     setscore(10)
     newWho()
   }
-  const newWho=()=>{
+  const newWho = () => {
     updateWho(Chars[RandomNumber].name)
     setwhoImg(Chars[RandomNumber].picture)
   }
@@ -138,14 +131,9 @@ const TimedCard = () => {
 
   }
   const handleEOG = () => {
-    
     console.log("end of game")
-    
-    const element1 = document.getElementById("MarryPoppins");
-        const element = document.getElementById("GObtn");
+    const element = document.getElementById("MaryPoppins");
     element.classList.remove("is-hidden");
-    element1.classList.remove("is-hidden");
-    
 
   }
  const SaveUserName = () => {
@@ -168,17 +156,22 @@ const TimedCard = () => {
             <button className="button is-primary" id="start" onClick={handleStart}>Start</button>
             <h1 className="is-size-1"> ????</h1>
             <img alt="bob" src="../../assets/images/mysteryWho1.png" style={{ width: "200px", height: "200px" }} ></img>
-            <DropDown/>
+            <DropDown />
             <input className='input' type="text" name="guess" value={guess} onChange={e => setguess(e.target.value)} placeholder="Guess here" />
             <button className="button is-warning" onClick={handleScore}>Guess</button>
-            <button id="GObtn" className="button is-primary is-hidden" onClick={handlePlayAgain} >Guess Again</button>
-            <div id="MarryPoppins" className="is-hidden"> 
-            <input type="text" placeholder="UserName" id="user"></input>
-            <button id="UserNameBtn" className="button is-warning" onClick={SaveUserName} >Submit UserName</button>
-            </div>
-            
-            
+            <div id="MaryPoppins" className="is-hidden">
 
+              <label>Guess Again to play without submitting score</label>
+              <button id="GObtn" className="button is-primary" onClick={handlePlayAgain} >Guess Again</button>
+              <label>To send score to leaderboard submit your user name below</label>
+              <div className="columns">
+                <div className="column">
+                  <input type="text" id="user" placeholder="Groovy username here"></input>
+                  <button className="button is-primary" onClick={handleUserSub}>Submit User</button>
+                </div>
+              </div>
+              <Link className="button is-danger" to="/menu">Return to Menu</Link>
+            </div>
           </div>
         </div>
 
