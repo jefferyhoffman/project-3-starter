@@ -15,7 +15,7 @@ const Characters = () => {
     return (
         <div className="container">
             <div className="columns is-centered">
-                <h1 className="is-size-1">😻Characters😻</h1>
+                <h1 className="is-size-1">Meet the Characters</h1>
             </div>
             <br />
 

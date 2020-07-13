@@ -3,7 +3,7 @@
 
 ## Project Description
 
-Let's Guess is a full stack application which allows users to login to play and log their High Scores. 
+Let's Guess is a full stack application which allows users to login to play and and guess from a selection of different characters. Questions can be chosen based on the character's hair color, eye color, facial hair, wearing of glasses, and an interesting fact which is nested in each character's description. Players will start with score of 10 per each character they are trying to guess, and will lose a point every time they choose a question or guess incorrectly. Players must race against the clock to see how many characters they can guess correctly within the alloted time. Scores will be displayd on a leaderboard, so players can comptete for top positioning.
 
 The application will be deployed on Heroku for the server to run and function properly.   
 
