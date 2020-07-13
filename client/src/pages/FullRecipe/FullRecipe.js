@@ -49,7 +49,7 @@ class FullRecipe extends Component {
                   <div style={{ fontSize: "1.33em" }}>
                     <ul>
                     {this.state.recipe.ingredients ? this.state.recipe.ingredients.map((ingredient) => {
-                        return <li>{ingredient}</li>
+                        return <li key={ingredient.id}>{ingredient.ingredient}</li>
                       }) : "Loading"}
                     </ul>
                   </div>
@@ -87,7 +87,7 @@ class FullRecipe extends Component {
                   <div style={{ fontSize: "1.33em" }}>
                     <ul>
                       {this.state.recipe.ingredients ? this.state.recipe.ingredients.map((ingredient) => {
-                        return <li>{ingredient}</li>
+                        return <li key={ingredient.id}>{ingredient.ingredient}</li>
                       }) : "Loading"}
                     </ul>
                   </div>
