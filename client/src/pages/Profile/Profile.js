@@ -1,9 +1,5 @@
 import React, { Component } from "react";
 import {
-  Card,
-//   Rating,
-//   Icon,
-//   Image,
   Container,
   Grid,
   Responsive
@@ -12,7 +8,7 @@ import API from "../../lib/API"
 import ProfileRecipe from "../../components/ProfileRecipes/ProfileRecipes"
 import UserCard from "../../components/UserCard/UserCard"
 
-// import Gravatar from "react-gravatar";
+
 import AuthContext from "../../contexts/AuthContext";
 
 
