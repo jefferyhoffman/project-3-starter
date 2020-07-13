@@ -2,7 +2,7 @@
     {
         "title": "Reese's Pieces Soft Peanut Butter Cookies",
         "description": "The cookies are soft, moist, with tender centers, a bit of chewiness  to the edges and loaded with Reese's Pieces  and chocolate chips. Packed with peanut butter flavor.",
-        "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fsallysbakingaddiction.com%2Fsoft-baked-reeses-pieces-butterscotch-cookies%2F&psig=AOvVaw2dfY-B-Ttkgxh7EtDRgZVr&ust=1594739624637000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKiTkJ3CyuoCFQAAAAAdAAAAABAL",
+        "image": "https://www.lovetobeinthekitchen.com/wp-content/uploads/2013/10/Reeses-Pieces-Soft-Peanut-Butter-Cookies-3.jpg",
         "prepTime": "10 minutes",
         "cookTime": "8 minutes",
         "servings": "About 26-28 cookies",
@@ -80,8 +80,7 @@
             },
             {
                 "ingredient": "2 cups fresh blueberries"
-            },
-            {}
+            }
         ],
         "createdBy": "serverBoss"
     },
