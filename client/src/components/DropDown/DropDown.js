@@ -7,7 +7,7 @@ import { RandomNumberContext } from '../../contexts/RandomNumber';
 
 
 const DropDown = () => {
-
+    const [dropActive, setDropActive] =useState(false)
     const [hair, setHair] = useState("")
     const [eye, setEye] = useState("")
     const [glassesQ, setGlassesQ] = useState("")
@@ -15,6 +15,19 @@ const DropDown = () => {
     const [factQ, setFactQ] = useState("")
     const {score,setscore} = useContext(ScoreContext)
     const {RandomNumber}=useContext(RandomNumberContext)
+
+    const handleDropActive = ()=>{
+        const element = document.getElementById("drop")
+    
+        if(dropActive === false){
+        element.classList.remove("is-active")
+        setDropActive(true)
+        }
+        if(dropActive === true){
+            element.classList.add("is-active")
+            setDropActive(false)
+        }
+    }
 
     useEffect(() => {            
                                axios.get('api/characters').then((res)=>{
@@ -31,7 +44,7 @@ const DropDown = () => {
     return (
         <div className="column is-one-quarter">
 
-            <div className="dropdown is-up is-hoverable">
+            <div className="dropdown is-up" id="drop">
                 <div className="dropdown-trigger">
                     <button className="button dropdown-button is-rounded" aria-haspopup="true" aria-controls="dropdown-menu">
                         <span> Choose Your Question! </span>
@@ -45,6 +58,7 @@ const DropDown = () => {
                             body: `${hair} .... Be aware, each time you ask a question, you will lose a point!`,
                             confirm: {label: "Okay", onClick:function(){
                                 setscore(score -1)
+                                handleDropActive()
                             }},
                             cancel: {label: "ugh", onClick:function(){
                                 setscore(score -1)
