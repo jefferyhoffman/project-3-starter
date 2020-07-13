@@ -28,7 +28,7 @@ const TimedCard = () => {
   const [whoImg, setwhoImg] = useState("");
   const [Chars, setChars] = useState([])
   const [leaderboard, setLeaderboard] = useState([])
-          
+  const [lastGuess, setLastGuess] = useState("")      
   const handleFlip = () => {
     setisFlipped(prevState => ({ isFlipped: !prevState.isFlipped }));
   }
@@ -60,6 +60,7 @@ const TimedCard = () => {
       handleFlip()
       setRandomNumber(Math.floor(Math.random() * 25))
       incrementFinalScore(score)
+      setLastGuess(whoImg);
       Bulma().alert({
         type: "success",
         title: "You Guessed Right! ",
@@ -118,7 +119,7 @@ const TimedCard = () => {
     setscore(10)
     const start = document.getElementById("start")
     start.classList.add("is-hidden");
-    let seconds = 300
+    let seconds = 30
 
     let gameInterval = setInterval(function () {
       seconds--;
@@ -139,8 +140,8 @@ const TimedCard = () => {
  const handleUserSub = () => {
   const username = document.getElementById("user").value
    console.log(username)
-   
-   axios.post('/api/leaderboard', {username})
+   let highScore = finalScore;
+   axios.post('/api/leaderboard', {username, highScore, lastGuess})
    .then ((res)=> {
      console.log(`${username} has been added to leaderboard` )
      setLeaderboard(res.data)	
