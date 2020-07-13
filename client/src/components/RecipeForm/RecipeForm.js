@@ -173,7 +173,7 @@ class RecipeForm extends Component {
           />
           <RecipeSubDD 
              id="categories"
-             value={[{categories}]}
+             value={categories}
              onChange={this.handleInputChange}
           />
           <Form.Field required>
