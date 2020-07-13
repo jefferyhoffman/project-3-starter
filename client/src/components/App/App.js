@@ -75,7 +75,7 @@ class App extends Component {
                         <Route path='/login' component={Login} />
                         <Route path='/register' component={Register} />
                         <PrivateRoute path='/secret' component={Secret} />
-                        <PrivateRoute path="/Game" component={Game} />
+                        {/* <PrivateRoute path="/game" component={Game} /> */}
                           <Route path="/leaderboard" component={Leaderboard} />
                               <PrivateRoute path="/MainGame" component={MainGame} />
                         <Route path="/characters" component={Characters} />
