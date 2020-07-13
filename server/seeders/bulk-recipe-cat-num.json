@@ -2,6 +2,7 @@
     {
         "title": "Reese's Pieces Soft Peanut Butter Cookies",
         "description": "The cookies are soft, moist, with tender centers, a bit of chewiness  to the edges and loaded with Reese's Pieces  and chocolate chips. Packed with peanut butter flavor.",
+        "image": "https://www.lovetobeinthekitchen.com/wp-content/uploads/2013/10/Reeses-Pieces-Soft-Peanut-Butter-Cookies-3.jpg",
         "prepTime": "10 minutes",
         "cookTime": "8 minutes",
         "servings": "About 26-28 cookies",
@@ -51,6 +52,7 @@
     {
         "title": "Luscious Blueberry Syrup",
         "description": "Yummy fruit syrup filled with ripe blueberries. Top your favorite pancakes with it",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR5J1lgebXxkpy2W_9EzdfGoaqxGR6UdHjI4w&usqp=CAU",
         "prepTime": "5 minutes",
         "cookTime": "10 minutes",
         "servings": "Makes 2  ½ cups",
@@ -78,14 +80,14 @@
             },
             {
                 "ingredient": "2 cups fresh blueberries"
-            },
-            {}
+            }
         ],
         "createdBy": "serverBoss"
     },
     {
         "title": "Garbage Pasta",
         "description": "This is not your girlfriend's pasta. Let's talk about lots of pasta, meat, and cheese!!",
+        "image": "https://i.pinimg.com/474x/77/b5/ef/77b5ef1e4486f6d9da97a783ce78192c.jpg",
         "prepTime": "The time it takes you to open and dump packages into a pot!",
         "cookTime": "About 20 minutes to heat garbage sauce, but only 7.5 minutes for al-dente pasta!",
         "servings": "Depends on how much you eat yourself",
@@ -135,6 +137,7 @@
     {
         "title": "Potato Slop",
         "description": "It's practically all butter.",
+        "image": "https://foodwithfeeling.com/wp-content/uploads/2019/03/instant-pot-mashed-potatoes-1-300x300.jpg",
         "prepTime": "5 minutes if you know how to peel potatoes like a pro.",
         "cookTime": "About 30 minutes.",
         "servings": "1? 2? How hungry are you? How much space do you have left in your arteries?",
@@ -175,6 +178,7 @@
     {
         "title": "Brussels n' Bacon",
         "description": "Brussels sprouts anyone would eat!",
+        "image": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2014/11/Balsamic-Bacon-Brussels-Sprouts-11-300x300.jpg",
         "prepTime": "10 minutes",
         "cookTime": "Roughly 15 minutes",
         "servings": "5 American sized servings",
@@ -209,6 +213,7 @@
     {
         "title": "Crock Pot Chili",
         "description": "This hearty chili has a mild flavor, perfect for families with kids. It's easy to customize and add your favorite toppings.",
+        "image": "https://diethood.com/wp-content/uploads/2013/02/Slow-Cooker-Chili-3-300x300.jpg",
         "prepTime": "",
         "cookTime": "",
         "servings": "12 or more servings",
@@ -270,6 +275,7 @@
     {
         "title": "Monster Burger",
         "description": "It's delicious to eat but be careful not to dislocate your jaw!",
+        "image": "https://www.foodchallenges.com/wp-content/uploads/2019/04/Sharps-Monster-Burger-300x300.jpg",
         "prepTime": "20 minutes",
         "cookTime": "10 minutes",
         "servings": "2",
@@ -310,6 +316,7 @@
     {
         "title": "Slow Cooker Potato Soup",
         "description": "Warm and comfy soup for the soul",
+        "image": "https://www.the-girl-who-ate-everything.com/wp-content/uploads/2015/02/creamy-potato-soup-5-300x300.jpg",
         "prepTime": "15 minutes",
         "cookTime": "Low for 6 hours",
         "servings": "one bowl worth of soup",
@@ -356,6 +363,7 @@
     {
         "title": "Trap Chicken",
         "description": "Crispy chicken",
+        "image": "https://lilluna.com/wp-content/uploads/2019/12/fried-chicken-resize-8-300x300.jpg",
         "prepTime": "20 minutes",
         "cookTime": "25-30 minutes",
         "servings": "2-3",
@@ -396,6 +404,7 @@
       {
         "title": "Chicken Bacon BBQ Pizza",
         "description": "A dish for all the BBQ sauce lovers out there.",
+        "image": "https://i.pinimg.com/474x/47/62/d3/4762d33ac97ac694de4600f864606559--barbeque-chicken-pizza-chicken-pizza-recipes.jpg",
         "prepTime": "45 minutes",
         "cookTime": "One hour",
         "servings": "4-5 servings",
@@ -436,6 +445,7 @@
       {
         "title": "Grilled PB&J Sandwich",
         "description": "A southern twist to an original.",
+        "image": "https://lh3.googleusercontent.com/proxy/UcFfoDl8PCe6Oqe1-tgc3YzSHL1ZJbQU7kD1p-XBUPND0ZrdVZz5MUjftmUPYnUVQZWz2T3TIr56o8_CdUgaVng4EBEASeL9eUO6iUMiqz7OH4a4ioB3l0aCb4bNEyZSOrEjPQ",
         "prepTime": "5 minutes",
         "cookTime": "None",
         "servings": "One servings",
