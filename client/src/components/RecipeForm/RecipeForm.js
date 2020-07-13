@@ -55,7 +55,7 @@ class RecipeForm extends Component {
       servings,
       directions,
       categories,
-      ingredients
+      [{ingredient: ingredients}]
     )
       .then((response) => response.data)
       .then(() => {
