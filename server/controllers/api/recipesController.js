@@ -77,26 +77,26 @@ recipesController.post("/", JWTVerifier, async (req, res) => {
             // Set the variable to use in join table relationships
             RecipeId = recipe.dataValues.id;
             console.log(recipe.dataValues.id);
+
+            // Set the association between the recipe and the user
+            var userQuery = "INSERT INTO `recipe_user` (createdAt, updatedAt, recipe_id, user_id) VALUES (?, ?, ?, ?);";
+            db.sequelize.query(userQuery, {
+                type: sequelize.QueryTypes.INSERT,
+                replacements: [newDate, newDate, RecipeId, users]
+            });
+
+            // Set the association between the recipe and the category
+            var categoryQuery = "INSERT INTO `recipe_category` (createdAt, updatedAt, recipe_id, category_id) VALUES (?, ?, ?, ?);";
+            // Loop through array of Category Ids to relationship for each category
+            categories.forEach(category => {
+                console.log(category.category);
+                db.sequelize.query(categoryQuery, {
+                    type: sequelize.QueryTypes.INSERT,
+                    replacements: [newDate, newDate, RecipeId, category.category]
+                });
+            });
         })
         .catch(err => res.json(err));
-
-    // Set the association between the recipe and the user
-    var userQuery = "INSERT INTO `recipe_user` (createdAt, updatedAt, recipe_id, user_id) VALUES (?, ?, ?, ?);";
-    db.sequelize.query(userQuery, {
-        type: sequelize.QueryTypes.INSERT,
-        replacements: [newDate, newDate, RecipeId, users]
-    });
-
-    // Set the association between the recipe and the category
-    var categoryQuery = "INSERT INTO `recipe_category` (createdAt, updatedAt, recipe_id, category_id) VALUES (?, ?, ?, ?);";
-    // Loop through array of Category Ids to relationship for each category
-    categories.forEach(category => {
-        console.log(category.category);
-        db.sequelize.query(categoryQuery, {
-            type: sequelize.QueryTypes.INSERT,
-            replacements: [newDate, newDate, RecipeId, category.category]
-        });
-    });
 });
 
 // Route to add existing recipe to the user's profile
