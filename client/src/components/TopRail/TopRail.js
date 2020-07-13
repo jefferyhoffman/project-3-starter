@@ -1,47 +1,45 @@
-import React from "react";
+import React, { Component } from "react";
 import {
   Dropdown,
   Responsive,
 } from "semantic-ui-react";
 import "./TopRail.css";
+import API from "../../lib/API";
 
-const foodOptions = [
-  { key: 1, text: 'Casual Dining', value: 1 },
-  { key: 2, text: 'Entree', value: 2 },
-  { key: 3, text: 'Breakfast', value: 3 },
-  { key: 4, text: 'Lunch', value: 4 },
-  { key: 5, text: 'Dinner', value: 5 },
-  { key: 6, text: 'Crock-Pot', value: 6 },
-  { key: 7, text: 'Dessert', value: 7 },
-  { key: 8, text: 'Cookies', value: 8 },
-  { key: 9, text: 'Syrup', value: 9 },
-  { key: 10, text: 'Non-Chick Food', value: 10 },
-  { key: 11, text: 'Italian', value: 11 },
-  { key: 12, text: 'Mexican', value: 12 },
-  { key: 13, text: 'Pasta', value: 13 },
-  { key: 14, text: 'Side Dish', value: 14 },
-  { key: 15, text: 'Vegetable Dish', value: 15 },
-  { key: 16, text: 'Chili', value: 16 },
-  { key: 17, text: 'Easy Recipes', value: 17 },
-  { key: 18, text: 'Fancy Fixins', value: 18 },
-];
-
-const TopRail = () => {
-  const handleChange = (e, data) => {
+class TopRail extends Component {
+  
+  state = {
+    categories: [],
+    err: ""
+  }
+  
+  componentDidMount() {
+    API.Categories.all()
+    .then((response) => {
+      this.setState({ categories: response.data, err: "" });
+      console.log(this.state.categories)
+    })
+    .catch((err) => this.setState({ err: err.message }))
+  }
+  
+  handleChange = (e, data) => {
     console.log(data.value);
   };
-  return (
-    <Responsive
-      as={Dropdown}
-      maxWidth={1799}
-      onChange={handleChange}
-      className="width"
-      placeholder="Food Category"
-      fluid
-      selection
-      options={foodOptions}
-    />
-  );
+  
+  render() {
+
+    return (
+      <Responsive maxWidth={1799}>
+        <Dropdown className="width" text="What's the occasion?">
+          <Dropdown.Menu>
+          {this.state.categories.map((category) => {
+            return(<Dropdown.Item key={category.id} id={category.id} text={category.category} />)
+          })}
+          </Dropdown.Menu>
+        </Dropdown>
+      </Responsive>
+    );
+  }
 };
 
 export default TopRail;
