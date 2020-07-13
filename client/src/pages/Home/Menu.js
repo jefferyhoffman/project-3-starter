@@ -2,16 +2,15 @@ import React, { Component } from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
 import Carousel from "../../components/Carousel/Carousel";
-import axios from 'axios'
+
 
 
 
 const Menu= ()=> {
   
-  
     return (
       <>
-        <h1>Welcome --userName Here--</h1>
+        <h1>Welcome! Let's Guess!</h1>
         <div className="container">
           <div className="columns is-multiline is-mobile">
           <div className="column is-half">
