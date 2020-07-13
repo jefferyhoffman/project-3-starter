@@ -46,9 +46,9 @@ const Main = ()=>{
   <div className="column">
   <div className="box gifBox">
   <div className="box">
-      <p className="title">Gif of Game</p>
-      <p className="subtitle">Gif Below</p>
-      <img src="/LetsGuessHomeImg.png"/>
+      <p className="title">Demo of Let's Guess</p>
+      
+      <img src="https://media.giphy.com/media/lr7Vf26ewmT76gKwu7/giphy.gif"/>
     </div>
     </div>
   </div>

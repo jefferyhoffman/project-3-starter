@@ -10,14 +10,15 @@ const Menu= ()=> {
   
     return (
       <>
-        <h1>Welcome! Let's Guess!</h1>
+        <h1>Welcome to Let's Guess!</h1>
+       
         <div className="container">
           <div className="columns is-multiline is-mobile">
           <div className="column is-half">
               <article className="tile is-child box" id="demoTile">
                 <article className="tile is-child box">
-                  <p className="title">Demo Gif</p>
-                  <img src="/LetsGuessHomeImg.png" />
+                  <p className="title">Demo</p>
+                  <img src="https://media.giphy.com/media/lr7Vf26ewmT76gKwu7/giphy.gif" />
                 </article>
               </article>
             </div>

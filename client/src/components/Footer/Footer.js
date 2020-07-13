@@ -22,11 +22,11 @@ const Footer = () => {
                   )}
                </ShareLink>
                
-               <ShareLink link='https://your-site.com/some-page'>
+               {/* <ShareLink link='https://your-site.com/some-page'>
                   {link => (
                      <button className="button is-small is-info" href={link} target='_blank'><strong>FB</strong></button>
                   )}
-               </ShareLink>
+               </ShareLink> */}
 
             </div>
          </div>

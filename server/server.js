@@ -28,7 +28,7 @@ const app = express();
 //-- Mongoose Setup ----------------------------------------------------------
 mongoose.connect(
   process.env.MONGODB_URI ||
-  'mongodb://localhost/ProjectThree'
+  'mongodb://localhost/ProjectThree', { useNewUrlParser: true }
 )
 mongoose.connection.on('error', err => {
   console.log(`Mongoose connection err:\n${err}`)
@@ -39,7 +39,7 @@ app.use(logger(LOG_MODE));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(passport.initialize());
-app.use(express.static('images'))
+app.use(express.static(path.join(__dirname, 'images')))
 //-- Static Server (Production) ----------------------------------------------
 if (process.env.NODE_ENV === 'production') {
   const clientBuildPath = path.join(__dirname, '..', 'client', 'build');

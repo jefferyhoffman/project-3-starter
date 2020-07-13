@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const db = require("../models");
 
 mongoose.connect(
-    process.env.MONGO_URI || "mongodb://localhost/ProjectThree"
+    process.env.MONGODB_URI  || "mongodb://localhost/ProjectThree"
 )
 
 const characterSeed = [
@@ -146,7 +146,7 @@ const characterSeed = [
         fact:"Hiked the Appalachian Trail",
         story:"Worked as an EMT for 4 years. Hiking is a must especially since I hiked the Appalacian Trail."
     },
-     {   picture:"../../../assets/images/andrew.png",
+     {   picture:"/andrew.png",
         name:"Andrew",
         hairColor:"brown",
         glasses:false,
@@ -157,7 +157,7 @@ const characterSeed = [
         
     }, 
     {
-        picture:"../../../assets/images/George.png",
+        picture:"/George.png",
         name: "George",
         hairColor:"black",
         glasses: true,
