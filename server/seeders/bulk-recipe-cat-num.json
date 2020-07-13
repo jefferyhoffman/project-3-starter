@@ -1,0 +1,470 @@
+[
+    {
+        "title": "Reese's Pieces Soft Peanut Butter Cookies",
+        "description": "The cookies are soft, moist, with tender centers, a bit of chewiness  to the edges and loaded with Reese's Pieces  and chocolate chips. Packed with peanut butter flavor.",
+        "prepTime": "10 minutes",
+        "cookTime": "8 minutes",
+        "servings": "About 26-28 cookies",
+        "directions": "In a stand mixer with paddle attachment, cream together first 5 ingredients on medium  high speed until light and fluffy. About 5 minutes. Scrape down sides and add the flour and baking soda. Mix on low speed until just incorporated. About 1 minute. Add Reese's pieces, chocolate chips ,and blend until just incorporated. Using a 2 inch cookie scoop, form mounds. Place on large plate and flatten mounds with palm of your hand. Cover with plastic wrap and refrigerate for at least 2 hours. Preheat oven to 350F. Spray cookie sheet with cooking spray. Place cookies on sheet at least 2 inches apart. Cook in oven for 8 to 9 minutes",
+        "categories": [
+            {
+                "category": 4
+            },
+            {
+                "category": 25
+            },
+            {
+                "category": 14
+            }
+        ],
+        "ingredients": [
+            {
+                "ingredient": "1 large egg"
+            },
+            {
+                "ingredient": "1 cup light brown sugar, packed"
+            },
+            {
+                "ingredient": "3/4 cup peanut butter"
+            },
+            {
+                "ingredient": "1/2 cup unsalted butter, softened"
+            },
+            {
+                "ingredient": "1 tablespoon vanilla extract"
+            },
+            {
+                "ingredient": "1 ¾ cup all purpose flour"
+            },
+            {
+                "ingredient": "¾ teaspoon baking soda"
+            },
+            {
+                "ingredient": "1 cup Reese's Pieces"
+            },
+            {
+                "ingredient": "1 cup semi sweet chocolate chips"
+            }
+        ],
+        "createdBy": "serverBoss"
+    },
+    {
+        "title": "Luscious Blueberry Syrup",
+        "description": "Yummy fruit syrup filled with ripe blueberries. Top your favorite pancakes with it",
+        "prepTime": "5 minutes",
+        "cookTime": "10 minutes",
+        "servings": "Makes 2  ½ cups",
+        "directions": "In a saucepan over medium heat, combine sugar and cornstarch. Stir in water gradually. Add berries; bring to a boil. Boil, stirring constantly, for one minute, or until mixture thickens. Serve warm, or pour into covered jar and keep in fridge for several days",
+        "categories": [
+            {
+                "category": 1
+            },
+            {
+                "category": 26
+            },
+            {
+                "category": 14
+            }
+        ],
+        "ingredients": [
+            {
+                "ingredient": "½ cup sugar"
+            },
+            {
+                "ingredient": "1 Tablespoon cornstarch"
+            },
+            {
+                "ingredient": "⅓ cup water"
+            },
+            {
+                "ingredient": "2 cups fresh blueberries"
+            },
+            {}
+        ],
+        "createdBy": "serverBoss"
+    },
+    {
+        "title": "Garbage Pasta",
+        "description": "This is not your girlfriend's pasta. Let's talk about lots of pasta, meat, and cheese!!",
+        "prepTime": "The time it takes you to open and dump packages into a pot!",
+        "cookTime": "About 20 minutes to heat garbage sauce, but only 7.5 minutes for al-dente pasta!",
+        "servings": "Depends on how much you eat yourself",
+        "directions": "Brown the rolls of sausage and ground beef. Empty all ingredients except pasta and cheese into a large sauce pan and simmer for 10 minutes. Heat water to a boil, then add pasta for 7.5 minutes and drain. Combine pasta and sauce to your desired ratio and top with generous cheese! After all, the girlfriend is not here tonight!",
+        "categories": [
+            {
+                "category": 18
+            },
+            {
+                "category": 20
+            },
+            {
+                "category": 14
+            },
+            {
+                "category": 5
+            }
+        ],
+        "ingredients": [
+            {
+                "ingredient": "2 Large jars of favorite tomato sauce"
+            },
+            {
+                "ingredient": "1 roll of ground Italian sausage"
+            },
+            {
+                "ingredient": "1 roll of ground beef"
+            },
+            {
+                "ingredient": "1 package of pepperoni slices"
+            },
+            {
+                "ingredient": "1 jar of black olives (to say it has a veggie!)"
+            },
+            {
+                "ingredient": "1 jar of pepperocinis (for more spice, do not drain! And oh yeah, it counts as a veggie too!)"
+            },
+            {
+                "ingredient": "1 jar of mushrooms, drained (the liquid is yuck! Not sure if a fungus could count as a veggie, but let's count it!"
+            },
+            {
+                "ingredient": "1 huge bag of mozzarella cheese!"
+            }
+        ],
+        "createdBy": "lone-girl"
+    },
+    {
+        "title": "Potato Slop",
+        "description": "It's practically all butter.",
+        "prepTime": "5 minutes if you know how to peel potatoes like a pro.",
+        "cookTime": "About 30 minutes.",
+        "servings": "1? 2? How hungry are you? How much space do you have left in your arteries?",
+        "directions": "Peel potatoes. Cut potatoes into 1 inch chunks. Add potatoes to pot of cold water and bring to a boil and then reduce heat and let simmer for 12 minutes. Add salt til it tastes like the ocean water you inadvertently drank as a kid. In a saucepan, bring cream and milk to a simmer. Drain potatoes and rinse. Return them to the same pot and let the mashing commence. If  your arm or hand is cramping, you are doing it right. Add all that butter and mix it in. Add milk and cream slowly! Add salt and pepper to taste.",
+        "categories": [
+            {
+                "category": 6
+            },
+            {
+                "category": 14
+            }
+        ],
+        "ingredients": [
+            {
+                "ingredient": "2 lbs yukon gold potatoes"
+            },
+            {
+                "ingredient": "1/2 cup whole milk"
+            },
+            {
+                "ingredient": "1/2 cup heavy cream"
+            },
+            {
+                "ingredient": "1/2 cup unsalted butter, cubed"
+            },
+            {
+                "ingredient": "2 teaspoons kosher salt"
+            },
+            {
+                "ingredient": "Ground black pepper to taste"
+            },
+            {
+                "ingredient": "Chives to make it look healthy?"
+            }
+        ],
+        "createdBy": "kamakazi-Ben"
+    },
+    {
+        "title": "Brussels n' Bacon",
+        "description": "Brussels sprouts anyone would eat!",
+        "prepTime": "10 minutes",
+        "cookTime": "Roughly 15 minutes",
+        "servings": "5 American sized servings",
+        "directions": "Cook that fatty bacon in a large skillet over medium-high heat until it's crispy. Remove bacon to drain, then rip it apart into little chunks like the animal that you are. In that same pan with all of that glorious bacon grease, melt butter over high heat. Add chopped onions and halved Brussels Sprouts and cook. It should take about 10 minutes for those suckers to be golden brown and tasty. Add salt and pepper to taste. Throw all of those bacon pieces back in, stir, and serve it up!",
+        "categories": [
+            {
+                "category": 6
+            },
+            {
+                "category": 7
+            }
+        ],
+        "ingredients": [
+            {
+                "ingredient": "1 lb Brussels sprouts, halved"
+            },
+            {
+                "ingredient": "2 tablespoons butter"
+            },
+            {
+                "ingredient": "5 strips of thick-cut bacon"
+            },
+            {
+                "ingredient": "1/2 yellow or vidalia onion, chopped"
+            },
+            {
+                "ingredient": "salt and pepper"
+            }
+        ],
+        "createdBy": "kamakazi-Ben"
+    },
+    {
+        "title": "Crock Pot Chili",
+        "description": "This hearty chili has a mild flavor, perfect for families with kids. It's easy to customize and add your favorite toppings.",
+        "prepTime": "",
+        "cookTime": "",
+        "servings": "12 or more servings",
+        "directions": "Soak Pinto beans overnight in water, drain and rinse the next morning. Next add diced onions and tomatoes. Add chili meat and seasoning packet along with onion powder and garlic powder, stir to mix. Then pour in beef broth. Two cups is plenty – you won’t completely cover your beans and meat, but during cooking the meat will release quite a bit of juice and fat, adding to the liquid content. We want to make chili, not soup. Cook on high for two hours in the Crock Pot. Add ketchup and Worcestershire sauce, stir to mix well. Reduce heat to low and continue to cook for 6-8 hours, stirring every couple of hours. Taste an hour or so before serving time and add salt and pepper if needed.",
+        "categories": [
+            {
+                "category": 21
+            },
+            {
+                "category": 9
+            },
+            {
+                "category": 16
+            },
+            {
+                "category": 5
+            }
+        ],
+        "ingredients": [
+            {
+                "ingredient": "1 pound pinto beans, soaked overnight in water, drained and rinsed"
+            },
+            {
+                "ingredient": "2 pounds chili meat – or you can use stew meat in a pinch"
+            },
+            {
+                "ingredient": "2 cups beef broth"
+            },
+            {
+                "ingredient": "1 14-ounce can diced tomatoes"
+            },
+            {
+                "ingredient": "1/2 cup diced onions"
+            },
+            {
+                "ingredient": "1 package chili seasoning"
+            },
+            {
+                "ingredient": "1/4 cup ketchup"
+            },
+            {
+                "ingredient": "2 tablespoons onion powder"
+            },
+            {
+                "ingredient": "2 tablespoons Worcestershire sauce"
+            },
+            {
+                "ingredient": "1 tablespoon garlic powder"
+            },
+            {
+                "ingredient": "Additional salt and pepper as needed"
+            },
+            {
+                "ingredient": "To Serve: shredded cheese, sour cream, Fritos chips, cornbread, crackers, or tortillas"
+            }
+        ],
+        "createdBy": "lone-girl"
+    },
+    {
+        "title": "Monster Burger",
+        "description": "It's delicious to eat but be careful not to dislocate your jaw!",
+        "prepTime": "20 minutes",
+        "cookTime": "10 minutes",
+        "servings": "2",
+        "directions": "Split beef into two portions and turn them into big ole patties. Make a depression in the center of the patty. Go ahead and start heating up the grill! Fry an egg in a pan to your desired consitency. I prefer over-medium. Cook 4 strips of bacon in the same pan to reduce dishes! Slice up an avocado into manageable pieces that will fit niceley on your burger. Toss those burgers on the grill, add salt and pepper to both sides. Should need roughly 6 minutes per side. Towards the end of the grilling process, butter the buns and place them on the grill for a nice crunchy bun. Remove burgers and buns from the grill. Assemble the burger and enjoy!",
+        "categories": [
+            {
+                "category": 5
+            },
+            {
+                "category": 14
+            }
+        ],
+        "ingredients": [
+            {
+                "ingredient": "1 lb ground beef"
+            },
+            {
+                "ingredient": "2 eggs"
+            },
+            {
+                "ingredient": "4 strips of thick-cut bacon"
+            },
+            {
+                "ingredient": "1 avocado"
+            },
+            {
+                "ingredient": "salt and pepper"
+            },
+            {
+                "ingredient": "lettuce"
+            },
+            {
+                "ingredient": "2 hamburger buns"
+            }
+        ],
+        "createdBy": "kamakazi-Ben"
+    },
+    {
+        "title": "Slow Cooker Potato Soup",
+        "description": "Warm and comfy soup for the soul",
+        "prepTime": "15 minutes",
+        "cookTime": "Low for 6 hours",
+        "servings": "one bowl worth of soup",
+        "directions": "Peel potatoes. Cut into small cubes and put into slow cooker.Chop onions and mince garlic. Add to the slow cooker. Sprinkle salt and pepper. Add chicken broth. Cover and cook for 6hours on low. Half hour before done, take 1’3 of the potatoes from the pot into a blender. Blend with heavy cream and pour back into the pot. Mix well and cook for half hour. Top with bacon and cheese",
+        "categories": [
+            {
+                "category": 3
+            },
+            {
+                "category": 22
+            },
+            {
+                "category": 15
+            }
+        ],
+        "ingredients": [
+            {
+                "ingredient": "7 cups potatoes"
+            },
+            {
+                "Ingredient": "1 cup onion"
+            },
+            {
+                "ingredient": "3 cloves garlic"
+            },
+            {
+                "ingredient": "3 cups chicken broth"
+            },
+            {
+                "ingredient": "1 1’2 teaspoon salt"
+            },
+            {
+                "ingredient": "1 teaspoon ground pepper"
+            },
+            {
+                "ingredient": "1 cup heavy cream"
+            },
+            {
+                "Ingredient": "Bacon and cheese for topping"
+            }
+        ],
+        "createdBy": "serverBoss"
+    },
+    {
+        "title": "Trap Chicken",
+        "description": "Crispy chicken",
+        "prepTime": "20 minutes",
+        "cookTime": "25-30 minutes",
+        "servings": "2-3",
+        "directions": "Rinse and season chicken, add mustard then season once more. Refrigerate for 10 minutes. Once the chicken has cooled, drop chicken into breader of your choice then deep fry it for about 15 minutes.",
+        "categories": [
+          {
+            "category": 9
+          },
+          {
+            "category": 13
+          },
+          {
+            "category": 1
+          },
+          {
+            "category": 17
+          }
+        ],
+        "ingredients": [
+          {
+            "ingredient": "Chicken"
+          },
+          {
+            "ingredient": "Seasoning"
+          },
+          {
+            "ingredient": "Flour(chicken breader)"
+          },
+          {
+            "ingredient": "Mustard"
+          },
+          {
+            "ingredient": "Vegetable Oil"
+          }
+        ],
+        "createdBy": "K-Man"
+      },
+      {
+        "title": "Chicken Bacon BBQ Pizza",
+        "description": "A dish for all the BBQ sauce lovers out there.",
+        "prepTime": "45 minutes",
+        "cookTime": "One hour",
+        "servings": "4-5 servings",
+        "directions": "Shred chicken and bacon before, spread your bbq sauce over your pizza crust. Dump bacon, chicken and cheese on crust and then place in oven for 40 minutes(oven should pre-heat to 400 F).",
+        "categories": [
+          {
+            "category": 24
+          },
+          {
+            "category": 28
+          },
+          {
+            "category": 27
+          },
+          {
+            "category": 12
+          }
+        ],
+        "ingredients": [
+          {
+            "ingredient": "BBQ sauce"
+          },
+          {
+            "ingredient": "Chicken"
+          },
+          {
+            "ingredient": "Bacon"
+          },
+          {
+            "ingredient": "Cheese"
+          },
+          {
+            "ingredient": "Pizza Crust or fresh dough"
+          }
+        ],
+        "createdBy": "K-Man"
+      },
+      {
+        "title": "Grilled PB&J Sandwich",
+        "description": "A southern twist to an original.",
+        "prepTime": "5 minutes",
+        "cookTime": "None",
+        "servings": "One servings",
+        "directions": "Spread pb&j over bread, then grill.",
+        "categories": [
+          {
+            "category": 23
+          },
+          {
+            "category": 8
+          },
+          {
+            "category": 2
+          },
+          {
+            "category": 12
+          }
+        ],
+        "ingredients": [
+          {
+            "ingredient": "Bread"
+          },
+          {
+            "ingredient": "Peanut Butter"
+          },
+          {
+            "ingredient": "Jelly"
+          }
+        ],
+        "createdBy": "K-Man"
+      }
+]
