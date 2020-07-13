@@ -3,9 +3,18 @@ const db = require("../../models");
 const { JWTVerifier } = require("../../lib/passport");
 const { sequelize } = require("../../models");
 
+// Date variable to use for current date set to MySQL DATETIME format
+var newDate = new Date().toISOString().slice(0, 19).replace('T', ' ');
+console.log(newDate);
+
 // Route to retrieve all recipes (including categories/ingredients) in db
 recipesController.get("/all", (req, res) => {
-    db.Recipe.findAll({ include: [{ model: db.Category, as: "categories" }, { model: db.Ingredient, as: "ingredients" }] }, {})
+    db.Recipe.findAll({
+        include: [
+            { model: db.Category, as: "categories" },
+            { model: db.Ingredient, as: "ingredients" }
+        ]
+    }, {})
         .then(recipe => res.json(recipe))
         .catch(err => res.json(err));
 });
@@ -35,6 +44,20 @@ recipesController.get("/category", JWTVerifier, (req, res) => {
         .catch(err => res.json(err));
 });
 
+// Route to retrieve a specific recipe with all categories, ingredients and reviews.
+recipesController.get("/:id", JWTVerifier, async (req, res) => {
+    await db.Recipe.findAll({
+        where: { id: req.params.id },
+        include: [
+            { model: db.Category, as: "categories" },
+            { model: db.Ingredient, as: "ingredients" },
+            { model: db.Review }
+        ]
+    }, {})
+        .then(recipe => res.json(recipe))
+        .catch(err => res.json(err));
+});
+
 // Route to create a recipe and make associations to all the join tables
 recipesController.post("/", JWTVerifier, async (req, res) => {
     const { title, image, description, prepTime, cookTime, servings, directions, categories, ingredients } = req.body;
@@ -44,8 +67,11 @@ recipesController.post("/", JWTVerifier, async (req, res) => {
     // Create the entry in Recipe table
     await db.Recipe.create(
         { title, image, description, prepTime, cookTime, servings, directions, ingredients, createdBy: req.user.username },
-        { include: [{ model: db.Ingredient, as: "ingredients" }] }
-    )
+        {
+            include: [
+                { model: db.Ingredient, as: "ingredients" }
+            ]
+        })
         .then(recipe => {
             res.json(recipe);
             // Set the variable to use in join table relationships
@@ -53,10 +79,6 @@ recipesController.post("/", JWTVerifier, async (req, res) => {
             console.log(recipe.dataValues.id);
         })
         .catch(err => res.json(err));
-
-    // Date variable to use for current date set to MySQL DATETIME format
-    var newDate = new Date().toISOString().slice(0, 19).replace('T', ' ');
-    console.log(newDate);
 
     // Set the association between the recipe and the user
     var userQuery = "INSERT INTO `recipe_user` (createdAt, updatedAt, recipe_id, user_id) VALUES (?, ?, ?, ?);";
@@ -75,6 +97,36 @@ recipesController.post("/", JWTVerifier, async (req, res) => {
             replacements: [newDate, newDate, RecipeId, category.category]
         });
     });
+});
+
+// Route to add existing recipe to the user's profile
+recipesController.post("/:id", JWTVerifier, async (req, res) => {
+    const UserId = req.user.id;
+    const RecipeId = req.params.id;
+
+    // Set the association between the recipe and the user
+    var userQuery = "INSERT INTO `recipe_user` (createdAt, updatedAt, recipe_id, user_id) VALUES (?, ?, ?, ?);";
+    db.sequelize.query(userQuery, {
+        type: sequelize.QueryTypes.INSERT,
+        replacements: [newDate, newDate, RecipeId, UserId]
+    })
+        .then(recipe => res.json(recipe))
+        .catch(err => res.json(err));
+});
+
+// Route to remove existing recipe from the user's profile
+recipesController.delete("/:id", JWTVerifier, async (req, res) => {
+    const UserId = req.user.id;
+    const RecipeId = req.params.id;
+
+    // Set the association between the recipe and the user
+    var userQuery = "DELETE FROM `recipe_user` WHERE `recipe_id`=(?) AND `user_id`=(?);";
+    db.sequelize.query(userQuery, {
+        type: sequelize.QueryTypes.INSERT,
+        replacements: [RecipeId, UserId]
+    })
+        .then(recipe => res.json(recipe))
+        .catch(err => res.json(err));
 });
 
 module.exports = recipesController;
