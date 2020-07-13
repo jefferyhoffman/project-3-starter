@@ -27,16 +27,8 @@ const TimedCard = () => {
   const [guess, setguess] = useState("");
   const [whoImg, setwhoImg] = useState("");
   const [Chars, setChars] = useState([])
-
   const [leaderboard, setLeaderboard] = useState([])
-  // useEffect(() => {
-  //   axios.post('/api/leaderboard')
-  //   .then ((res)=> {
-  //     setLeaderboard(res.data)	
-  //   })
-  //   },[])
-
-
+          
   const handleFlip = () => {
     setisFlipped(prevState => ({ isFlipped: !prevState.isFlipped }));
   }
@@ -144,13 +136,16 @@ const TimedCard = () => {
     element.classList.remove("is-hidden");
 
   }
-  const handleUserSub = () => {
-    const user = document.getElementById("User").value;
-    alert(user)
-  }
-
-
-
+ const SaveUserName = () => {
+  const UserName = document.getElementById("user").value
+   console.log(UserName)
+   
+   axios.post('/api/leaderboard')
+   .then ((res)=> {
+     setLeaderboard(res.data.username)	
+   })  
+ }
+ 
 
   return (
 
@@ -171,7 +166,7 @@ const TimedCard = () => {
               <label>To send score to leaderboard submit your user name below</label>
               <div className="columns">
                 <div className="column">
-                  <input type="text" id="User" placeholder="Groovy username here"></input>
+                  <input type="text" id="user" placeholder="Groovy username here"></input>
                   <button className="button is-primary" onClick={handleUserSub}>Submit User</button>
                 </div>
               </div>
