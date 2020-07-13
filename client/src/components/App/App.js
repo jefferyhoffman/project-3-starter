@@ -13,7 +13,6 @@ import Register from '../../pages/Register/Register';
 import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
 import Leaderboard from '../../pages/Leaderboard/Leaderboard'
-import Game from '../../pages/Game/Game'
 import MainGame from '../../pages/MainGame/MainGame'
 import Main from '../../pages/Main/Main'
 import './App.css';
@@ -75,7 +74,6 @@ class App extends Component {
                         <Route path='/login' component={Login} />
                         <Route path='/register' component={Register} />
                         <PrivateRoute path='/secret' component={Secret} />
-                        {/* <PrivateRoute path="/game" component={Game} /> */}
                           <Route path="/leaderboard" component={Leaderboard} />
                               <PrivateRoute path="/MainGame" component={MainGame} />
                         <Route path="/characters" component={Characters} />
