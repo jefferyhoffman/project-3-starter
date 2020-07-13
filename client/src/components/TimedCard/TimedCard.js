@@ -127,7 +127,7 @@ const TimedCard = () => {
         handleEOG();
         clearInterval(gameInterval)
       }
-    }, 10)
+    }, 1000)
 
   }
   const handleEOG = () => {
@@ -136,7 +136,7 @@ const TimedCard = () => {
     element.classList.remove("is-hidden");
 
   }
- const SaveUserName = () => {
+ const handleUserSub = () => {
   const UserName = document.getElementById("user").value
    console.log(UserName)
    
