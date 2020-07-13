@@ -6,14 +6,13 @@ import { Card, Rating, Image, Responsive, Container } from "semantic-ui-react";
 const ProfileRecipes = (props) => {
   console.log(props);
   const recipes = props.recipes.map((recipe) => {
+    let link = "/recipe/" + recipe.id
     return (
-      <Card>
+      <Card key={recipe.id} as="a" href={link}>
         <Image
           src={recipe.image}
           wrapped
           ui={false}
-          as="a"
-          href={recipe.image}
           target="_blank"
         />
         <Card.Content>

@@ -14,8 +14,12 @@ class Profile extends Component {
     err: "",
   };
 
+
+
   componentDidMount() {
-    API.Recipes.all()
+    const { authToken } = this.context;
+
+    API.Recipes.byUser(authToken)
       .then((response) => {
         this.setState({ recipes: response.data, err: "" });
       })
