@@ -10,7 +10,7 @@ const Menu= ()=> {
   
     return (
       <>
-        <h1>Welcome to Let's Guess!</h1>
+        <h1>😻 Welcome to Let's Guess! 😻</h1>
        
         <div className="container">
           <div className="columns is-multiline is-mobile">
