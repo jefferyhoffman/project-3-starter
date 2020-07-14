@@ -59,7 +59,7 @@ const TimedCard = () => {
       
       
     }
-    if (guess.toLowerCase() === who.toLowerCase()) {
+    if (guess.toLowerCase().trim() === who.toLowerCase()) {
       handleFlip()
       setRandomNumber(Math.floor(Math.random() * 27))
       incrementFinalScore(score)
@@ -68,7 +68,7 @@ const TimedCard = () => {
     
       
     }
-     if (guess && guess.toLowerCase !== who.toLowerCase()) {
+     if (guess && guess.toLowerCase().trim() !== who.toLowerCase()) {
       
       setAlertText(`You guessed wrong you lose a point!`)
       setscore(score-1)
