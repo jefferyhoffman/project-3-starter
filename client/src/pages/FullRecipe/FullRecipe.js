@@ -14,11 +14,11 @@ class FullRecipe extends Component {
   }
 
   componentDidMount() {
-    console.log(this.props.match.params.id)
+    //console.log(this.props.match.params.id)
     API.Recipes.byId(this.props.match.params.id)
     .then((response) => {
       this.setState({ recipe: response.data[0], err: "" })
-      console.log(response.data[0])
+      //console.log(response.data[0])
     })
     .catch((err) => this.setState({ err: err.message }))
   }
@@ -26,7 +26,7 @@ class FullRecipe extends Component {
   
     
   render(){
-    console.log(this.state.recipe.ingredients)
+    //console.log(this.state.recipe.ingredients)
     return(
 
       <div>
