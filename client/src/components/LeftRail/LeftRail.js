@@ -49,6 +49,7 @@ class LeftRail extends Component {
         }
       })
       console.log(checkedArr)
+      this.props.filteredList(checkedArr)
       this.setState({checked: []});
     })
   }

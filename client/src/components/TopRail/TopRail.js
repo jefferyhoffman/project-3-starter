@@ -5,11 +5,13 @@ import {
 } from "semantic-ui-react";
 import "./TopRail.css";
 import API from "../../lib/API";
+import { Redirect } from "react-router";
 
 class TopRail extends Component {
   
   state = {
     categories: [],
+    checked: [],
     err: ""
   }
   
@@ -23,7 +25,31 @@ class TopRail extends Component {
   }
   
   handleChange = (e, data) => {
-    console.log(data);
+    console.log(data.value);
+    this.setState({ checked: data.value })
+
+    API.Recipes.all()
+    .then((response) => {
+      // console.log(response)
+      const checkedArr = [];
+      let allData = response.data
+      console.log(allData)
+      response.data.forEach((recipe) => {
+        for (let i = 0; i < recipe.categories.length; i++) {
+          if (this.state.checked.includes(recipe.categories[i].id)) {
+            checkedArr.push(recipe);
+          }
+        }
+      })
+      console.log(checkedArr)
+
+      if (checkedArr === []) {
+        this.props.filteredList(allData)
+      } else {
+        this.props.filteredList(checkedArr)
+      }
+      this.setState({checked: []});
+    })
   };
   
   render() {
@@ -33,14 +59,14 @@ class TopRail extends Component {
         {
           key: category.id,
           text: category.category,
-          value: category.category
+          value: category.id
         }
       )
     })
 
     return (
       <Responsive maxWidth={1799}>
-        <Dropdown className="width" fluid placeholder="Food Category" multiple selection search options={options} />
+        <Dropdown className="width" closeOnChange fluid placeholder="Food Category" multiple selection search options={options} onChange={this.handleChange}/>
       </Responsive>
     );
 
