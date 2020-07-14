@@ -60,27 +60,32 @@ useEffect(()=>{
                 </div>
                 <div className="dropdown-menu" id="dropdown-menu" role="menu">
                     <div className="dropdown-content">
-                        <button className="dropdown-item" onClick={(e)=> setQuestText("my hair color is "+hair)}
+                        <button className="dropdown-item" onClick={function(e){ setQuestText("my hair color is "+hair);
+                        setscore(score -1)}}
                             value="hair">What is my hair color?</button>
                     </div>
                     <div className="dropdown-content">
                         <button className="dropdown-item"
-                            onClick={(e)=>setQuestText("my eye color is  "+eye)}
+                            onClick={function(e){setQuestText("my eye color is  "+eye);
+                            setscore(score -1)}}
                             value="eye">What is my eye color?</button>
                     </div>
                     <div className="dropdown-content">
                         <button className="dropdown-item"
-                            onClick={(e)=>setQuestText("Do I wear glasses? ..."+glassesQ)}
+                            onClick={function(e){setQuestText("Do I wear glasses? ..."+glassesQ);
+                            setscore(score-1)}}
                             value="glasses">True or False do I wear glasses?</button>
                     </div>
                     <div className="dropdown-content">
                         <button className="dropdown-item"
-                          onClick={(e)=> setQuestText(" Do I have facial hair? .... "+face)}
+                          onClick={function (e) {setQuestText(" Do I have facial hair? .... "+face);
+                          setscore(score -1)}}
                             value="face">True or False do I have faical hair?</button>
                     </div>
                     <div className="dropdown-content">
                         <button className="dropdown-item"
-                          onClick={(e)=>setQuestText(factQ)}
+                          onClick={function(e){setQuestText(factQ);
+                          setscore(score-1)}}
                             value="fact">Wanna Know a random fact about me?</button>
                     </div>
                 </div>
