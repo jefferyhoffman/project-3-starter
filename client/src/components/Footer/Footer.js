@@ -15,13 +15,13 @@ const Footer = () => {
                <p>&copy; Copyright 2020</p>
                
                
-               <Share url="https://andrewsuzuki.com" options={{ size: "large" }} />
-               <ShareLink link='https://your-site.com/some-page'>
+               <Share url="https://letsguess.herokuapp.com/" options={{ size: "large" }} />
+               <ShareLink link='https://letsguess.herokuapp.com/'>
                   {link => (
                      <a href={link} target='_blank'></a>
                   )}
                </ShareLink>
-               
+               <p><strong>Avatars created at<a href="https://www.cartoonify.de/" target="blank"> Cartoonify</a></strong></p>
                {/* <ShareLink link='https://your-site.com/some-page'>
                   {link => (
                      <button className="button is-small is-info" href={link} target='_blank'><strong>FB</strong></button>

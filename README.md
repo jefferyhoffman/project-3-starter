@@ -10,7 +10,7 @@ The application will be deployed on Heroku for the server to run and function pr
 
 ## Deployment
 
-[Let's Guess](#)
+[Let's Guess](https://letsguess.herokuapp.com/)
 
 
 
@@ -60,9 +60,9 @@ yarn start:dev
   ## Usage
 
     ```
-    AS AN 
-    I WANT 
-    SO THAT I 
+    AS AN Avid Guess Who Fan
+    I WANT to play Let's Guess 
+    SO THAT I can learn random facts about friends
     ```
 
 
@@ -113,12 +113,12 @@ Cloud Server
 
 
 ## Contributing Authors
-[Andrew Greer](https://github.com/andrewpaulgreer)
+ Andrew Greer - [Github](https://github.com/andrewpaulgreer)
 
-[George Flores](https://github.com/lu-gflores)
+George Flores - [Github](https://github.com/lu-gflores)
 
-[Jacob T LaMarre](https://github.com/JTLaMarre)
+Jacob T LaMarre - [Github](https://github.com/JTLaMarre)
 
-[Lindsey Lawson](https://github.com/lynseahoss)
+Lindsey Lawson - [Github](https://github.com/lynseahoss)
 
 
