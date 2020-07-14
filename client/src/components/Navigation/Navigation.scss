@@ -19,15 +19,15 @@
 }
 
 .navbar-start:hover {
-  background-color: rgb(227, 166, 255);
+  background-color: rgb(223, 156, 253);
 }
-strong:hover {
+#nav-titles:hover {
   background-color: rgb(227, 166, 255);
   padding: 0 auto;
   margin: 0px;
 }
-strong{
-  background-color: rgb(227, 166, 255);
+#nav-titles{
+  background-color: rgb(223, 156, 253);
 }
 a.navbar-item {
   text-decoration: none;
@@ -44,6 +44,9 @@ a.navbar-item:active {
   text-decoration: none;
 }
 a.navbar-item:link {
+  text-decoration: none;
+}
+a.navbar-item:hover {
   text-decoration: none;
 }
 
