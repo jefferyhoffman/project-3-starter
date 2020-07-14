@@ -55,13 +55,13 @@ export default {
       })
     },
 
-    // delete: function(id, authToken) {
-    //   return axios.delete('/api/recipes/' + id, {}, {
-    //     headers: {
-    //       'Authorization': `Bearer ${authToken}`
-    //     }
-    //   })
-    // }
+    delete: function(id, authToken) {
+      return axios.delete('/api/recipes/' + id, {
+        headers: {
+          'Authorization': `Bearer ${authToken}`
+        }
+      })
+    }
   },
 
   Categories : {
