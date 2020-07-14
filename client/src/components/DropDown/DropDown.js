@@ -18,18 +18,7 @@ const DropDown = () => {
     const [modalVis, setModalVis]= useState(true)
     const [questText, setQuestText]=useState("Need input")
 
-    const handleDropActive = ()=>{
-        const element = document.getElementById("drop")
-    
-        if(dropActive === false){
-        element.classList.remove("is-active")
-        setDropActive(true)
-        }
-        if(dropActive === true){
-            element.classList.add("is-active")
-            setDropActive(false)
-        }
-    }
+   
 
     useEffect(() => {            
                                axios.get('api/characters').then((res)=>{
@@ -61,10 +50,11 @@ useEffect(()=>{
   </div>
   <button className="button is-info" aria-label="close" onClick={toggleModalVis}>Continue</button>
 </div>
-            <div className="dropdown is-up" id="drop">
+            <div className={dropActive ? "dropdown is-up is-active" : "dropdown is-up"} id="drop">
             
                 <div className="dropdown-trigger">
-                    <button className="button dropdown-button is-rounded" aria-haspopup="true" aria-controls="dropdown-menu">
+                    <button className="button dropdown-button is-rounded" aria-haspopup="true" aria-controls="dropdown-menu" 
+                    onClick={(e)=>setDropActive(!dropActive)}>
                         <span> Choose Your Question! </span>
                     </button>
                 </div>

@@ -74,7 +74,7 @@ const characterSeed = [
         facialHair: false,
         eyeColor: "brown",
         fact: "Hosts 'Last Week Tonight'",
-        story: " John Oliver Quark or quarg is a type of fresh dairy product made by warming soured milk until the desired amount of curdling is met, and then straining it. It can be classified as fresh acid-set cheese. Traditional quark can be made without rennet, but in modern dairies small quantities of rennet are typically added."
+        story: "I am a comedian from the UK and the host of Last Week Tonight, "
     },
     {
         picture:"/trevorNoah.png",
