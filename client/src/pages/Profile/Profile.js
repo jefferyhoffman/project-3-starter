@@ -17,6 +17,10 @@ class Profile extends Component {
 
 
   componentDidMount() {
+    this.loadByUser();
+  }
+
+  loadByUser() {
     const { authToken } = this.context;
 
     API.Recipes.byUser(authToken)
@@ -26,6 +30,14 @@ class Profile extends Component {
       .catch((err) => this.setState({ err: err.message }));
   }
 
+  handleDelete = (id) => {
+    const { authToken } = this.context;
+
+    API.Recipes.delete(id, authToken)
+      .then(() => this.loadByUser())
+      .catch((err) => console.log(err));
+  }
+
   render() {
     //const { user } = this.context;
 
@@ -33,7 +45,7 @@ class Profile extends Component {
       <Container>
         <Responsive maxWidth="780">
           <UserCard />
-          <ProfileRecipe recipes={this.state.recipes} />
+          <ProfileRecipe recipes={this.state.recipes} handleDelete={this.handleDelete} />
         </Responsive>
         <Responsive minWidth="781">
           <Grid columns={2}>
@@ -42,7 +54,7 @@ class Profile extends Component {
                 <UserCard />
               </Grid.Column>
               <Grid.Column width={8}>
-                <ProfileRecipe recipes={this.state.recipes} />
+                <ProfileRecipe recipes={this.state.recipes} handleDelete={this.handleDelete} />
               </Grid.Column>
             </Grid.Row>
           </Grid>
