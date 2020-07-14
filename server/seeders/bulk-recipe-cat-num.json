@@ -445,7 +445,7 @@
       {
         "title": "Grilled PB&J Sandwich",
         "description": "A southern twist to an original.",
-        "image": "https://lh3.googleusercontent.com/proxy/UcFfoDl8PCe6Oqe1-tgc3YzSHL1ZJbQU7kD1p-XBUPND0ZrdVZz5MUjftmUPYnUVQZWz2T3TIr56o8_CdUgaVng4EBEASeL9eUO6iUMiqz7OH4a4ioB3l0aCb4bNEyZSOrEjPQ",
+        "image": "https://neighborfoodblog.com/wp-content/uploads/2013/01/grilled-pb-and-j.jpg",
         "prepTime": "5 minutes",
         "cookTime": "None",
         "servings": "One servings",
@@ -476,5 +476,214 @@
           }
         ],
         "createdBy": "K-Man"
+      },
+      {
+        "title": "Easy Quesadilla",
+        "description": "This is a simple recipe to make quick and easy quesadillas.",
+        "image": "https://natashaskitchen.com/wp-content/uploads/2020/01/Philly-Cheesesteak-Quesedilla-5.jpg",
+        "prepTime": "10",
+        "cookTime": "5",
+        "servings": "1",
+        "directions": "Heat a skillet over medium heat. Meanwhile, sprinkle half of the tortilla with cheese. Cover the cheese with beans, peppers, onions, and jalapeno. Sprinkle the rest of the cheese over these ingredients and fold the quesadilla closed. Let the quesadilla cook until golden brown on both sides (2 minutes per side). Let cool and cut into desired slices.",
+        "categories": [
+          {
+            "category": 2
+          },
+          {
+            "category": 3
+          },
+          {
+            "category": 9
+          },
+          {
+            "category": 11
+          },
+          {
+            "category": 12
+          },
+          {
+            "category": 19
+          }
+        ],
+        "ingredients": [
+          {
+            "ingredient": "1 8 inch tortilla"
+          },
+          {
+            "ingredient": "1/2 cup freshly grated cheddar cheese"
+          },
+          {
+            "ingredient": "1/4 cup cooked black beans or pinto beans, rinsed and drained"
+          },
+          {
+            "ingredient": "1 tablespoon chopped red bell pepper or jarred roasted bell pepper or a few thinly sliced cherry tomatoes"
+          },
+          {
+            "ingredient": "1 tablespoon chopped red onion or green onion"
+          },
+          {
+            "ingredient": "1 tablespoon chopped pickled jalapeño (if you like heat)"
+          },
+          {
+            "ingredient": "Any toppings or sauces desired"
+          }
+        ],
+        "createdBy": "Kamikaze-Ben"
+      },
+      {
+        "title": "Cheese Grits",
+        "description": "Very tasty, very easy, very comfy, very cheesy grits.",
+        "image": "https://www.spendwithpennies.com/wp-content/uploads/2018/10/SpendWithPennies-SpendWithPennies-Cheese-Grits-23.jpg",
+        "prepTime": "10",
+        "cookTime": "15",
+        "servings": "4",
+        "directions": "In a medium saucepan, bring chicken broth and water to a boil and season generously with salt. Reduce heat so mixture is at a simmer, then whisk in grits. Simmer, stirring often, until grits have absorbed liquid and are very tender, 10 minutes. Then simply stir in butter and cheeses. Salt and pepper to taste.",
+        "categories": [
+          {
+            "category": 1
+          },
+          {
+            "category": 6
+          },
+          {
+            "category": 3
+          },
+          {
+            "category": 9
+          },
+          {
+            "category": 10
+          },
+          {
+            "category": 12
+          },
+          {
+            "category": 15
+          },
+          {
+            "category": 11
+          }
+        ],
+        "ingredients": [
+          {
+            "ingredient": "2 cups chicken broth"
+          },
+          {
+            "ingredient": "2 cups water"
+          },
+          {
+            "ingredient": "Salt"
+          },
+          {
+            "ingredient": "1 cup corn grits"
+          },
+          {
+            "ingredient": "4 tablespoon butter"
+          },
+          {
+            "ingredient": "1 cup shredded cheddar"
+          },
+          {
+            "ingredient": "1/4 cup grated Parmesan"
+          },
+          {
+            "ingredient": "Freshly ground black pepper"
+          }
+        ],
+            "createdBy": "Kamikaze-Ben"
+      },
+      {
+        "title": "Beef Enchiladas",
+        "description": "Simple ingredients and simple instructions make a delicious enchilada.",
+        "image": "https://www.tasteofhome.com/wp-content/uploads/2018/01/Cheddar-Beef-Enchiladas_exps21076_GB2919407B01_10_3bC_RMS.jpg",
+        "prepTime": "10",
+        "cookTime": "25",
+        "servings": "4",
+        "directions": "Heat oven to 375 degrees and grease a 13x9 baking dish. Cook beef in nonstick skillet over medium-high heat. Drain and then stir in 1/2 cup of enchilada sauce and chilis. Spread the remaining half of the enchilada sauce into baking dish. Put a quarter of the beef down the center of each tortilla then sprinkle cheese on top. Wrap the tortillas tightly around the filling and place seam side down. Top with remaining sauce. Bake 20 to 25 minutes and serve!",
+        "categories": [
+          {
+            "category": 2
+          },
+          {
+            "category": 9
+          },
+          {
+            "category": 3
+          },
+          {
+            "category": 11
+          },
+          {
+            "category": 15
+          },
+          {
+            "category": 19
+          }
+        ],
+        "ingredients": [
+          {
+            "ingredient": "1 lb of ground beef"
+          },
+          {
+            "ingredient": "2 cans (10oz) of enchilada sauce"
+          },
+          {
+            "ingredient": "1 cup chooped green chiles"
+          },
+          {
+            "ingredient": "1 package of flour tortillas (6 inch)"
+          },
+          {
+            "ingredient": "1 1/2 cups shredded cheddar cheese"
+          }
+        ],
+        "createdBy": "Kamikaze-Ben"
+      },
+      {
+        "title": "Beef Enchiladas",
+        "description": "Simple ingredients and simple instructions make a delicious enchilada.",
+        "image": "https://www.tasteofhome.com/wp-content/uploads/2018/01/Cheddar-Beef-Enchiladas_exps21076_GB2919407B01_10_3bC_RMS.jpg",
+        "prepTime": "10",
+        "cookTime": "25",
+        "servings": "4",
+        "directions": "Heat oven to 375 degrees and grease a 13x9 baking dish. Cook beef in nonstick skillet over medium-high heat. Drain and then stir in 1/2 cup of enchilada sauce and chilis. Spread the remaining half of the enchilada sauce into baking dish. Put a quarter of the beef down the center of each tortilla then sprinkle cheese on top. Wrap the tortillas tightly around the filling and place seam side down. Top with remaining sauce. Bake 20 to 25 minutes and serve!",
+        "categories": [
+          {
+            "category": 2
+          },
+          {
+            "category": 9
+          },
+          {
+            "category": 3
+          },
+          {
+            "category": 11
+          },
+          {
+            "category": 15
+          },
+          {
+            "category": 19
+          }
+        ],
+        "ingredients": [
+          {
+            "ingredient": "1 lb of ground beef"
+          },
+          {
+            "ingredient": "2 cans (10oz) of enchilada sauce"
+          },
+          {
+            "ingredient": "1 cup chooped green chiles"
+          },
+          {
+            "ingredient": "1 package of flour tortillas (6 inch)"
+          },
+          {
+            "ingredient": "1 1/2 cups shredded cheddar cheese"
+          }
+        ],
+            "createdBy": "Kamikaze-Ben"
       }
 ]
