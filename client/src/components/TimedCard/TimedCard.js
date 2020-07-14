@@ -16,16 +16,7 @@ import { RandomNumberContext } from '../../contexts/RandomNumber'
 
 // const randomnumber = Math.floor(Math.random() * 11)
 const TimedCard = () => {
-  const[alertText,setAlertText] = useState(`Let's guess! 
-  You have five minutes to guess as many Characters as possible,
-
-  each person is worth up to 10 points, 
-
-  each question you ask reduces the points the character is worth,
-
-  each incorrect guess will also reduce the character's worth,
-
-  good luck guess away!`)
+  const[alertText,setAlertText] = useState(``)
   const { RandomNumber, setRandomNumber } = useContext(RandomNumberContext)
   const { finalScore, incrementFinalScore } = useContext(FinalScoreContext)
   const { Time, setTime } = useContext(TimeContext)
@@ -38,14 +29,14 @@ const TimedCard = () => {
   const [Chars, setChars] = useState([])
   const [leaderboard, setLeaderboard] = useState([])
   const [lastGuess, setLastGuess] = useState("")      
-  const [isActive,setisActive] = useState(false)
+  const [isActive,setisActive] = useState(true)
   const handleFlip = () => {
     setisFlipped(prevState => ({ isFlipped: !prevState.isFlipped }));
   }
   const handleTime = () => {
     if(Time<=0){
       setAlertText("Click start to begin the game")
-      handleActive()
+      
     }
     else{
       handleScore()
@@ -56,7 +47,7 @@ const TimedCard = () => {
     if (score <= 0) {
       handleGameOver()
       setAlertText("This Character isn't worth anything lets try another one")
-      handleActive()
+      
       updateWho(Math.floor(Math.random() * 27))
     }
     else {
@@ -67,7 +58,8 @@ const TimedCard = () => {
   const handleGuess = () => {
     if (!guess) {
       setAlertText("Please type a name to guess!")
-      handleActive()
+      
+      
     }
     if (guess.toLowerCase() === who.toLowerCase()) {
       handleFlip()
@@ -75,17 +67,19 @@ const TimedCard = () => {
       incrementFinalScore(score)
       setLastGuess(whoImg);
       setAlertText("You Guessed correctly!!! Keep going!")
-      setscore(score-1)
-      handleActive()
+    
+      
     }
     else if (guess && guess.toLowerCase !== who.toLowerCase()) {
-     
+      
       setAlertText("you guessed wrong you lose a point!")
       setscore(score-1)
-      handleActive()
+      setguess('')
+      document.getElementById("guess").value =""
       
       
     }
+    
   }
   
   useEffect(() => {
@@ -126,7 +120,7 @@ const TimedCard = () => {
     setscore(10)
     const start = document.getElementById("start")
     start.classList.add("is-hidden");
-    let seconds = 300
+    let seconds = 150
 
     let gameInterval = setInterval(function () {
       seconds--;
@@ -155,25 +149,18 @@ const TimedCard = () => {
  }
 
 const handleActive = ()=>{
-    const element = document.getElementById("alert")
-
-    if(isActive === false){
-    element.classList.remove("is-active")
-    setisActive(true)
-    }
-    if(isActive === true){
-        element.classList.add("is-active")
-        setisActive(false)
-    }
+    setisActive(!isActive)
 }
-
+useEffect(()=>{
+  handleActive()
+},[alertText])
  
 
   return (
 
     <div className="column is-4">
    <div className="column is-4">
-        <div className="modal is-clipped is-active" id="alert">
+        <div className={isActive ? "modal is-clipped is-active" : "modal is-clipped"} id="alert">
         <div class="modal-background"></div>
             <div className="modal-card">
             <section className="modal-card-body">
@@ -188,7 +175,7 @@ const handleActive = ()=>{
           <div className="box">
             <button className="button is-primary" id="start" onClick={handleStart}>Start</button>
             <h1 className="is-size-1">Let's Guess! </h1>
-            <input className='input' type="text" name="guess" value={guess} onChange={e => setguess(e.target.value)} placeholder="Guess here" />
+            <input className='input' id="guess" type="text" name="guess" value={guess} onChange={e => setguess(e.target.value)} placeholder="Guess here" />
             <button className="button is-warning" onClick={handleTime}>Guess</button>
             <img alt="Who" src="../../assets/images/mysteryWho1.png" style={{ width: "200px", height: "200px" }} ></img>
             <button id="GObtn" className="button is-primary is-hidden" onClick={handlePlayAgain} >Guess Again</button>

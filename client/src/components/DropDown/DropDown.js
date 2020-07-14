@@ -15,6 +15,8 @@ const DropDown = () => {
     const [factQ, setFactQ] = useState("")
     const {score,setscore} = useContext(ScoreContext)
     const {RandomNumber}=useContext(RandomNumberContext)
+    const [modalVis, setModalVis]= useState(true)
+    const [questText, setQuestText]=useState("Need input")
 
     const handleDropActive = ()=>{
         const element = document.getElementById("drop")
@@ -38,13 +40,29 @@ const DropDown = () => {
                                    setFace(res.data[RandomNumber].facialHair)
                                })
                    }, [RandomNumber])
+// sets up toggle
+const toggleModalVis = () => {
+    setModalVis(!modalVis)
+    console.log(modalVis)
+}
+// sets up event listener
+useEffect(()=>{
+    toggleModalVis()
+},[questText])
 
 
 
     return (
         <div className="column is-one-quarter">
-
+<div className={modalVis ? 'modal is-active' : 'modal'}>
+  <div className="modal-background"></div>
+  <div className="modal-content">
+    <p>{questText}</p>
+  </div>
+  <button className="button is-info" aria-label="close" onClick={toggleModalVis}>Continue</button>
+</div>
             <div className="dropdown is-up" id="drop">
+            
                 <div className="dropdown-trigger">
                     <button className="button dropdown-button is-rounded" aria-haspopup="true" aria-controls="dropdown-menu">
                         <span> Choose Your Question! </span>
@@ -52,66 +70,27 @@ const DropDown = () => {
                 </div>
                 <div className="dropdown-menu" id="dropdown-menu" role="menu">
                     <div className="dropdown-content">
-                        <button className="dropdown-item" onClick={(e) => Bulma().alert({
-                            type: "info",
-                            title: "My hair color is...",
-                            body: `${hair} .... Be aware, each time you ask a question, you will lose a point!`,
-                            confirm: {label: "Okay", onClick:function(){
-                                setscore(score -1)
-                                handleDropActive()
-                            }},
-                            cancel: {label: "ugh", onClick:function(){
-                                setscore(score -1)
-                            }}
-                        })}
+                        <button className="dropdown-item" onClick={(e)=> setQuestText("my hair color is "+hair)}
                             value="hair">What is my hair color?</button>
                     </div>
                     <div className="dropdown-content">
                         <button className="dropdown-item"
-                            onClick={(e)=> Bulma().alert({
-                            type:"info",
-                            title:"My eye color is...",
-                            body:eye+' .... Be aware, each time you ask a question, you will lose a point!',
-                            confirm:{label: "Okay", onClick:function(){
-                                setscore(score -1)
-                            }}
-                        })}
+                            onClick={(e)=>setQuestText("my eye color is  "+eye)}
                             value="eye">What is my eye color?</button>
                     </div>
                     <div className="dropdown-content">
                         <button className="dropdown-item"
-                            onClick={(e)=> Bulma().alert({
-                            type:"info",
-                            title:"I wear glasses...?",
-                            body:`${glassesQ} .... Be aware, each time you ask a question, you will lose a point!`,
-                            confirm:{label: "Okay", onClick:function(){
-                                setscore(score -1)
-                            }}
-                        })}
-                            value="glassesQr">True or False do I wear glasses?</button>
+                            onClick={(e)=>setQuestText("Do I wear glasses? ..."+glassesQ)}
+                            value="glasses">True or False do I wear glasses?</button>
                     </div>
                     <div className="dropdown-content">
                         <button className="dropdown-item"
-                          onClick={(e)=> Bulma().alert({
-                            type:"info",
-                            title:"I have facial har...?",
-                            body:`${face} .... Be aware, each time you ask a question, you will lose a point!`,
-                            confirm:{label: "Okay", onClick:function(){
-                                setscore(score -1)
-                            }}
-                        })}
+                          onClick={(e)=> setQuestText(" Do I have facial hair? .... "+face)}
                             value="face">True or False do I have faical hair?</button>
                     </div>
                     <div className="dropdown-content">
                         <button className="dropdown-item"
-                          onClick={(e)=> Bulma().alert({
-                            type:"info",
-                            title:"Here's a random fact about me",
-                            body:`${factQ} .... Be aware, each time you ask a question, you will lose a point!`,
-                            confirm:{label: "Okay", onClick:function(){
-                                setscore(score -1)
-                            }}
-                        })}
+                          onClick={(e)=>setQuestText(factQ)}
                             value="fact">Wanna Know a random fact about me?</button>
                     </div>
                 </div>
