@@ -48,7 +48,7 @@ const Main = ()=>{
   <div className="box">
       <p className="title">Demo of Let's Guess</p>
       
-      <img src="https://media.giphy.com/media/lr7Vf26ewmT76gKwu7/giphy.gif"/>
+      <img src="https://media.giphy.com/media/VDeIViUUouCivqPutt/giphy.gif"/>
     </div>
     </div>
   </div>

@@ -22,7 +22,6 @@ const TimedCard = () => {
   const { who, updateWho } = useContext(whoContext)
   const { score, setscore } = useContext(ScoreContext)
   const [isFlipped, setisFlipped] = useState(false);
-  const [] = useState(true)
   const [guess, setguess] = useState("");
   const [whoImg, setwhoImg] = useState("");
   const [Chars, setChars] = useState([])
@@ -60,7 +59,7 @@ const TimedCard = () => {
       
       
     }
-    if (guess.toLowerCase() === who.toLowerCase()) {
+    if (guess.toLowerCase().trim() === who.toLowerCase()) {
       handleFlip()
       setRandomNumber(Math.floor(Math.random() * 27))
       incrementFinalScore(score)
@@ -69,16 +68,15 @@ const TimedCard = () => {
     
       
     }
-    else if (guess && guess.toLowerCase !== who.toLowerCase()) {
+     if (guess && guess.toLowerCase().trim() !== who.toLowerCase()) {
       
-      setAlertText("you guessed wrong you lose a point!")
+      setAlertText(`You guessed wrong you lose a point!`)
       setscore(score-1)
       setguess('')
       document.getElementById("guess").value =""
       
       
     }
-    
   }
   
   useEffect(() => {
@@ -144,7 +142,9 @@ const TimedCard = () => {
    .then ((res)=> {
      console.log(`${username} has been added to leaderboard` )
      setLeaderboard(res.data)	
-   })  
+   })  .then(()=>{
+window.location.reload(false)
+   })
  }
 
 const handleActive = ()=>{
