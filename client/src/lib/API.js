@@ -45,7 +45,23 @@ export default {
           'Authorization': `Bearer ${authToken}`
         }
       })
-    }
+    },
+
+    save: function(id, authToken) {
+      return axios.post('/api/recipes/' + id, {}, {
+        headers: {
+          'Authorization': `Bearer ${authToken}`
+        }
+      })
+    },
+
+    // delete: function(id, authToken) {
+    //   return axios.delete('/api/recipes/' + id, {}, {
+    //     headers: {
+    //       'Authorization': `Bearer ${authToken}`
+    //     }
+    //   })
+    // }
   },
 
   Categories : {
