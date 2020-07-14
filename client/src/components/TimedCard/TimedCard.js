@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import ReactCardFlip from 'react-card-flip';
 import DropDown from '../DropDown/DropDown.js';
 import axios from 'axios'
-import Bulma from '@vizuaalog/bulmajs';
 import './TimedCard.css'
 import { ScoreContext } from '../../contexts/scoreContext.js';
 import { whoContext } from '../../contexts/whoContext'

@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { ScoreContext } from '../../contexts/scoreContext.js';
-import Bulma from '@vizuaalog/bulmajs';
 import axios from 'axios'
 import { RandomNumberContext } from '../../contexts/RandomNumber';
 
