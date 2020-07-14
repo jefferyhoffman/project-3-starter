@@ -18,7 +18,7 @@ const Menu= ()=> {
               <article className="tile is-child box" id="demoTile">
                 <article className="tile is-child box">
                   <p className="title">Demo</p>
-                  <img src="https://media.giphy.com/media/lr7Vf26ewmT76gKwu7/giphy.gif" />
+                  <img src="https://media.giphy.com/media/VDeIViUUouCivqPutt/giphy.gif" />
                 </article>
               </article>
             </div>

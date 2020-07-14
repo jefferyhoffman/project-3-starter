@@ -52,7 +52,7 @@ const Navigation = () => {
               setisActive(!isActive);
             }}
           >
-            <strong>Home</strong>
+            <strong id="nav-titles">Home</strong>
           </NavLink>:
           <NavLink
           className="navbar-item"
@@ -61,7 +61,7 @@ const Navigation = () => {
             setisActive(!isActive);
           }}
         >
-          <strong>Menu</strong>
+          <strong id="nav-titles">Menu</strong>
         </NavLink>}
           <NavLink
             className="navbar-item"
@@ -70,7 +70,7 @@ const Navigation = () => {
               setisActive(!isActive);
             }}
           >
-            <strong>Leaderboard 🔥</strong>
+            <strong id="nav-titles">Leaderboard 🔥</strong>
           </NavLink>   
         {user &&
         <NavLink
@@ -80,7 +80,7 @@ const Navigation = () => {
             setisActive(!isActive);
           }}
         >
-        <strong>Characters</strong>
+        <strong id="nav-titles">Characters</strong>
         </NavLink>
         }
         {/* {user &&
