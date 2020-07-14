@@ -7,7 +7,7 @@ import API from "../../lib/API";
 
 
 class FullRecipe extends Component {
-    
+
   state = {
     recipe: [],
     err: ""
@@ -16,18 +16,18 @@ class FullRecipe extends Component {
   componentDidMount() {
     //console.log(this.props.match.params.id)
     API.Recipes.byId(this.props.match.params.id)
-    .then((response) => {
-      this.setState({ recipe: response.data[0], err: "" })
-      //console.log(response.data[0])
-    })
-    .catch((err) => this.setState({ err: err.message }))
+      .then((response) => {
+        this.setState({ recipe: response.data[0], err: "" })
+        //console.log(response.data[0])
+      })
+      .catch((err) => this.setState({ err: err.message }))
   }
-  
-  
-    
-  render(){
-    //console.log(this.state.recipe.ingredients)
-    return(
+
+
+
+  render() {
+    // console.log(this.state.recipe.id)
+    return (
 
       <div>
         <Image centered src={require("../../assets/images/megabitesLogo.png")} />
@@ -36,11 +36,12 @@ class FullRecipe extends Component {
             <Grid.Row>
               <Grid.Column width={1}></Grid.Column>
               <Grid.Column width={14}>
-                <FullRecipeCard 
-                image={this.state.recipe.image}
-                cookTime={this.state.recipe.cookTime}
-                prepTime={this.state.recipe.prepTime}
-                servings={this.state.recipe.servings}
+                <FullRecipeCard
+                  recipeNum={this.state.recipe.id}
+                  image={this.state.recipe.image}
+                  cookTime={this.state.recipe.cookTime}
+                  prepTime={this.state.recipe.prepTime}
+                  servings={this.state.recipe.servings}
                 />
                 <div className="bg2">
                   <Header as="h3" className="bg2" style={{ fontSize: "2em" }}>
@@ -48,7 +49,7 @@ class FullRecipe extends Component {
                   </Header>
                   <div style={{ fontSize: "1.33em" }}>
                     <ul>
-                    {this.state.recipe.ingredients ? this.state.recipe.ingredients.map((ingredient) => {
+                      {this.state.recipe.ingredients ? this.state.recipe.ingredients.map((ingredient) => {
                         return <li key={ingredient.id}>{ingredient.ingredient}</li>
                       }) : "Loading"}
                     </ul>
@@ -72,11 +73,12 @@ class FullRecipe extends Component {
             <Grid.Row>
               <Grid.Column width={3}></Grid.Column>
               <Grid.Column width={5}>
-                <FullRecipeCard 
-                image={this.state.recipe.image}
-                cookTime={this.state.recipe.cookTime}
-                prepTime={this.state.recipe.prepTime}
-                servings={this.state.recipe.servings}
+                <FullRecipeCard
+                  recipeNum={this.state.recipe.id}
+                  image={this.state.recipe.image}
+                  cookTime={this.state.recipe.cookTime}
+                  prepTime={this.state.recipe.prepTime}
+                  servings={this.state.recipe.servings}
                 />
               </Grid.Column>
               <Grid.Column width={5}>
@@ -106,10 +108,9 @@ class FullRecipe extends Component {
           </Grid>
         </Responsive>
       </div>
-    
+
     )
-    }    
-  
+  }
+
 }
-  export default FullRecipe;
-  
+export default FullRecipe;
