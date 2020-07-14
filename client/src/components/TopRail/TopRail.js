@@ -1,72 +1,69 @@
 import React, { Component } from "react";
-import {
-  Dropdown,
-  Responsive,
-} from "semantic-ui-react";
+import { Dropdown, Responsive } from "semantic-ui-react";
 import "./TopRail.css";
 import API from "../../lib/API";
 import { Redirect } from "react-router";
 
 class TopRail extends Component {
-  
   state = {
     categories: [],
     checked: [],
-    err: ""
-  }
-  
+    err: "",
+  };
+
   componentDidMount() {
     API.Categories.all()
-    .then((response) => {
-      this.setState({ categories: response.data, err: "" });
-      console.log(this.state.categories)
-    })
-    .catch((err) => this.setState({ err: err.message }))
-  }
-  
-  handleChange = (e, data) => {
-    console.log(data.value);
-    this.setState({ checked: data.value })
-
-    API.Recipes.all()
-    .then((response) => {
-      // console.log(response)
-      const checkedArr = [];
-      let allData = response.data
-      console.log(allData)
-      response.data.forEach((recipe) => {
-        for (let i = 0; i < recipe.categories.length; i++) {
-          if (this.state.checked.includes(recipe.categories[i].id)) {
-            checkedArr.push(recipe);
-          }
-        }
+      .then((response) => {
+        this.setState({ categories: response.data, err: "" });
       })
-      console.log(checkedArr)
+      .catch((err) => this.setState({ err: err.message }));
+  }
 
-      if (checkedArr === []) {
-        this.props.filteredList(allData)
-      } else {
-        this.props.filteredList(checkedArr)
-      }
-      this.setState({checked: []});
-    })
+  handleChange = (e, data) => {
+    this.setState({ checked: data.value });
+
+    if (data.value.length === 0) {
+      API.Recipes.all().then((response) => {
+        this.props.filteredList(response.data);
+      });
+    } else {
+      API.Recipes.all().then((response) => {
+        const checkedArr = [];
+
+        response.data.forEach((recipe) => {
+          for (let i = 0; i < recipe.categories.length; i++) {
+            if (this.state.checked.includes(recipe.categories[i].id)) {
+              checkedArr.push(recipe);
+            }
+          }
+        });
+        this.props.filteredList(checkedArr);
+      });
+    }
   };
-  
-  render() {
 
+  render() {
     let options = this.state.categories.map((category) => {
-      return (
-        {
-          key: category.id,
-          text: category.category,
-          value: category.id
-        }
-      )
-    })
+      return {
+        key: category.id,
+        text: category.category,
+        value: category.id,
+      };
+    });
 
     return (
       <Responsive maxWidth={1799}>
-        <Dropdown className="width" closeOnChange fluid placeholder="Food Category" multiple selection search options={options} onChange={this.handleChange}/>
+        <Dropdown
+          className="width"
+          closeOnChange
+          fluid
+          placeholder="Food Category"
+          multiple
+          selection
+          search
+          options={options}
+          onChange={this.handleChange}
+        />
       </Responsive>
     );
 
@@ -81,6 +78,6 @@ class TopRail extends Component {
     //   options={foodOptions}
     // />
   }
-};
+}
 
 export default TopRail;

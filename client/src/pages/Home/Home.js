@@ -23,7 +23,8 @@ class HomePage extends Component {
 
     filteredList = newList => {
     console.log(newList)
-    this.setState({recipes: newList})
+      this.setState({recipes: newList})
+    
   }
 
   //Define function then pass the function into leftRail and then within leftRail do the callback. Parameter that represents array
