@@ -21,11 +21,12 @@ const Main = ()=>{
       <p className="title">How to Play</p>
       <p className="subtitle">Game Rules</p>
       <ol>
-        <li>Select Question from Dropdown</li>
-        <li>Read Fact about character</li>
-        <li>Choose who it is from character list</li>
-        <li>Type in name of character and click submit</li>
-        <li>See if your answer is correct</li>
+        <li>Each Round is 2 and a half minutes</li>
+        <li>Each character is worth up to 10 points!</li>
+        <li>Each incorrect guess lowers the worth of your guess</li>
+        <li>You can ask preset questions about the character</li>
+        <li>Each question asked will lower the character's worth</li>
+        <li>Good luck try to reach the top of the Leaderboard! </li>
       </ol>
    
     </div>
@@ -48,7 +49,7 @@ const Main = ()=>{
   <div className="box">
       <p className="title">Demo of Let's Guess</p>
       
-      <img src="https://media.giphy.com/media/lr7Vf26ewmT76gKwu7/giphy.gif"/>
+      <img src="https://media.giphy.com/media/VDeIViUUouCivqPutt/giphy.gif"/>
     </div>
     </div>
   </div>

@@ -181,7 +181,7 @@ useEffect(()=>{
             <DropDown />
             <div id="MaryPoppins" className="is-hidden">
               <label>Guess Again to play without submitting score</label>
-              <button  className="button is-primary" onClick={handlePlayAgain} >Play Again</button>
+              <button  className="button is-primary" onClick={handlePlayAgain} >Keep Guessing!</button>
               <label>To send score to leaderboard submit your user name below</label>
               <div className="columns">
                 <div className="column">
