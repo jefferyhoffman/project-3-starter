@@ -14,7 +14,7 @@ The application will be deployed on Heroku for the server to run and function pr
 
 
 
-![Let's Guess](https://media.giphy.com/media/lr7Vf26ewmT76gKwu7/giphy.gif)
+![Let's Guess](https://media.giphy.com/media/VDeIViUUouCivqPutt/giphy.gif)
 
 
 ## Table of Contents
