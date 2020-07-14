@@ -13,7 +13,7 @@ const Menu= ()=> {
         <h1>😻 Welcome to Let's Guess! 😻</h1>
        
         <div className="container">
-          <div className="columns is-multiline is-mobile">
+          <div className="columns is-multiline">
           <div className="column is-half">
               <article className="tile is-child box" id="demoTile">
                 <article className="tile is-child box">
