@@ -14,7 +14,7 @@ import { RandomNumberContext } from '../../contexts/RandomNumber'
 
 
 
-// const randomnumber = Math.floor(Math.random() * 11)
+
 const TimedCard = () => {
   const[alertText,setAlertText] = useState(``)
   const { RandomNumber, setRandomNumber } = useContext(RandomNumberContext)
