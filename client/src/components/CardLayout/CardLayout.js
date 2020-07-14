@@ -19,6 +19,7 @@ class CardLayout extends Component {
   }
   render() {
     return (
+      //may need a ternary here or if/else.... to overwrite the componentDidMount with the new array items.
       <RecipeCard recipes={this.state.recipes} />
     );
   }
