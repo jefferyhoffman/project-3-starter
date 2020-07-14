@@ -16,6 +16,7 @@ class LeftRail extends Component {
 
   state = {
     categories: [],
+    checked: [],
     err: ""
   }
   
@@ -28,9 +29,30 @@ class LeftRail extends Component {
     .catch((err) => this.setState({ err: err.message }))
   }
 
+  //This works but does allow duplicates from checking/unchecking.
   handleChange = (e, data) => {
     console.log(data.id);
+    this.setState({checked: [...this.state.checked, data.id]})
   };
+
+  handleClick = () => {
+    console.log(this.state.checked)
+    API.Recipes.all()
+    .then((response) => {
+      console.log(response)
+      const checkedArr = [];
+      response.data.forEach((recipe) => {
+        for (let i = 0; i < recipe.categories.length; i++) {
+          if (this.state.checked.includes(recipe.categories[i].id)) {
+            checkedArr.push(recipe);
+          }
+        }
+      })
+      console.log(checkedArr)
+      this.setState({checked: []});
+    })
+    
+  }
   
   render() {
   return (
@@ -44,7 +66,7 @@ class LeftRail extends Component {
               return(
               <Checkbox key={category.id} id={category.id} className='checks' label={category.category} onChange={this.handleChange} />
               )})}
-            <Button className='checks'>Ok</Button>
+            <Button onClick={this.handleClick}className='checks'>Ok</Button>
           </Responsive>
       </Rail>
     </Grid.Column>

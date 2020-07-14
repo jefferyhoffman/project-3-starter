@@ -6,6 +6,8 @@ import { Image } from "semantic-ui-react";
 import "./Home.css";
 
 class HomePage extends Component {
+  //Define function then pass the function into leftRail and then within leftRail do the callback. Parameter that represents array
+  //console.log the array parameter to see if its passed in properly. Then can pass it into the state of the homepage (will have to make a state in homepage). Then pass new array into cardLayout.
   render() {
     return (
       <div>
