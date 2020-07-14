@@ -67,7 +67,6 @@ class RecipeForm extends Component {
   };
 
   populateCategories = categories => {
-    console.log(categories)
     let catObjArr = []
     categories.map(category => {
       let catObj = { category: category }
