@@ -9,17 +9,6 @@ import API from '../../lib/API';
 class ProfileRecipes extends Component {
   static contextType = AuthContext;
 
-  handleDelete(id) {
-    console.log(id);
-    const { authToken } = this.context;
-    API.Recipes.delete(id, authToken)
-      .then((response) => {
-        console.log(response)
-      })
-      .catch((err) => console.log(err));
-        
-  }
-
   render() {
     console.log(this.props);
     const recipes = this.props.recipes.map((recipe) => {
@@ -46,7 +35,7 @@ class ProfileRecipes extends Component {
               <span>Submitted by: {recipe.createdBy}</span>
             </Card.Meta>
           </Card.Content>
-          <Button onClick={() => this.handleDelete(recipe.id)} className="delete">Delete</Button>          
+          <Button onClick={() => this.props.handleDelete(recipe.id)} className="delete">Delete</Button>          
           {/* <Card.Content>{extra}</Card.Content> */}
         </Card>
       );
