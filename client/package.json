@@ -16,9 +16,8 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.1",
     "react-twitter-widgets": "^1.9.5",
-    "swiper": "^6.0.2",
-    "@vizuaalog/bulmajs": "^0.11.0"
-
+    "swiper": "^6.0.2"
+    
   },
   "scripts": {
     "start": "react-scripts start",

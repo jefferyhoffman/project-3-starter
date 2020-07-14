@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import ReactCardFlip from 'react-card-flip';
 import DropDown from '../DropDown/DropDown.js';
 import axios from 'axios'
-import Bulma from '@vizuaalog/bulmajs';
 import './TimedCard.css'
 import { ScoreContext } from '../../contexts/scoreContext.js';
 import { whoContext } from '../../contexts/whoContext'
@@ -23,7 +22,6 @@ const TimedCard = () => {
   const { who, updateWho } = useContext(whoContext)
   const { score, setscore } = useContext(ScoreContext)
   const [isFlipped, setisFlipped] = useState(false);
-  const [] = useState(true)
   const [guess, setguess] = useState("");
   const [whoImg, setwhoImg] = useState("");
   const [Chars, setChars] = useState([])
