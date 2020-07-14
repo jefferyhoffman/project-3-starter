@@ -1,5 +1,4 @@
 import axios from 'axios';
-import Leaderboard from '../pages/Leaderboard/Leaderboard';
 
 export default {
   Users: {
