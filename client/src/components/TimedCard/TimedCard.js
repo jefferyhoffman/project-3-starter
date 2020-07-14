@@ -68,16 +68,15 @@ const TimedCard = () => {
     
       
     }
-    else if (guess && guess.toLowerCase !== who.toLowerCase()) {
+     if (guess && guess.toLowerCase !== who.toLowerCase()) {
       
-      setAlertText("you guessed wrong you lose a point!")
+      setAlertText(`You guessed wrong you lose a point!`)
       setscore(score-1)
       setguess('')
       document.getElementById("guess").value =""
       
       
     }
-    
   }
   
   useEffect(() => {
@@ -143,7 +142,9 @@ const TimedCard = () => {
    .then ((res)=> {
      console.log(`${username} has been added to leaderboard` )
      setLeaderboard(res.data)	
-   })  
+   })  .then(()=>{
+window.location.reload(false)
+   })
  }
 
 const handleActive = ()=>{
