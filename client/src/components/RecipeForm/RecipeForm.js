@@ -66,6 +66,15 @@ class RecipeForm extends Component {
     event.preventDefault();
   };
 
+  populateCategories = categories => {
+    let catObjArr = []
+    categories.map(category => {
+      let catObj = { category: category }
+      catObjArr.push(catObj)
+    })
+    this.setState({ categories: catObjArr})
+  }
+
   render() {
     const {
       redirectToReferrer,
@@ -172,6 +181,7 @@ class RecipeForm extends Component {
             onChange={this.handleInputChange}
           />
           <RecipeSubDD 
+             populateCategories = {this.populateCategories}
              id="categories"
              value={categories}
              onChange={this.handleInputChange}
