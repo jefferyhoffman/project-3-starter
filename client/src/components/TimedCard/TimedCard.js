@@ -46,7 +46,7 @@ const TimedCard = () => {
       handleGameOver()
       setAlertText("This Character isn't worth anything lets try another one")
       
-      updateWho(Math.floor(Math.random() * 30))
+      updateWho(Math.floor(Math.random() * 31))
     }
     else {
       handleGuess()
@@ -61,7 +61,7 @@ const TimedCard = () => {
     }
     if (guess.toLowerCase().trim() === who.toLowerCase()) {
       handleFlip()
-      setRandomNumber(Math.floor(Math.random() * 30))
+      setRandomNumber(Math.floor(Math.random() * 31))
       incrementFinalScore(score)
       setLastGuess(whoImg);
       setAlertText("You Guessed correctly!!! Keep going!")
