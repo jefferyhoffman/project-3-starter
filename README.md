@@ -1,166 +1,194 @@
-# Project 3 Starter
+# Megabites Recipe App
 
-## Getting Started
+## Description
+Megabites provides users with a place to find, create and share recipes. Users are free to create recipes, browse recipes posted by others, and save recipes to their profiles. Recipes are easy to find and use and are not buried beneath 1500 lines of the creator’s story about how they found this recipe in the first place.
 
-1. Fork this repo on GitHub:
-
-2. Rename your fork:
-
-3. Clone your fork to your computer:
-
-4. Copy `.env.sample` to `.env` and modify it:
-   ```bash
-   $ cp .env.sample .env
-   $ code .env
-   ```
-
-5. Launch the client and server in development mode:
-   ```bash
-   $ yarn start:dev
-   ```
-
-## Organization
-
-First, let's look at how things are organized.
-
-```
-.
-├── client
-└── server
-```
-
-At the top level, everything is divided into two folders. The `client` folder contains the React client, while the `server` folder contains the Express server.
-
-In the root folder, you'll also notice `.gitignore` and `package.json`. The former ignores `node_modules` folders project-wide, while the latter contains scripts for development and deployment.
-
-### client
-
-The `client` folder is organized as follows:
-
-```
-client
-├── public
-└── src
-    ├── components
-    │   ├── App
-    │   ├── AuthDropdown
-    │   ├── LoginForm
-    │   ├── Navigation
-    │   └── PrivateRoute
-    ├── contexts
-    ├── lib
-    └── pages
-        ├── Home
-        ├── Login
-        ├── NotFound
-        └── Secret
-```
-
-#### client/public
-
-The `public` folder contains the one-and-only HTML file used on the client: `index.html`. The only modification I made from the default is to add a link to the Bootstrap CDN.
-
-#### client/src
-
-The `src` folder contains all the JavaScript code, organized into `components`, `contexts`, `lib`, and `pages`.
-
-#### client/src/components
-
-Inside the `components` folder you'll find most of the React components used on the client:
-
-The `App` component is the "root" of the component tree. All other components (including those in the `pages` folder, see below) are children of `App`. This component also manages user authentication state, and provides the `AuthContext` context allowing child components to easily access authentication state.
-
-Used in the navigation bar, `AuthDropdown` displays the currently logged in user (or a link to login/register) and allows them to logout. It consumes the `AuthContext` provided by `App` to access authentication state.
-
-The `LoginForm` component is used on the `Login` page. It has no state, and is used to collect the user's email/password for authentication.
-
-Then we have the `Navigation` component, which is used at the top of the page to provide--you guessed it--navigation. As discussed above, it delegates to the `AuthDropdown` component to manage authentication.
-
-Lastly, we have the `PrivateRoute` component. Never seen by the user, this is a high-order component that protects private routes from being accessed by logged-out users. It's used in `App` to designate any routes that should not be publicly accessible, and consumes `AuthContext` to know whether or not it should redirect.
-
-#### client/src/contexts
-
-`AuthContext` provides authentication state and functions to modify that state. This is used by the `App` component to pass authentication data to its children without prop-drilling. Any child component may consume this data as follows:
-
-```javascript
-import AuthContext from '../../contexts/AuthContext';
-
-const MyStatelessChildWithAuth = props => (
-  <AuthContext.Consumer>
-    {({ authToken, user, onLogin, onLogout }) => (
-      <div>{user.email}</div>
-    )}
-  </AuthContext.Consumer>
-);
-
-class MyStatefulChildWithAuth extends React.Component {
-  static contextType = AuthContext;
-
-  componentDidMount() {
-    API.someCall(this.context.authToken)
-      .then(res => console.log(res))
-      .catch(err => console.log(err));
-  }
-
-  render() {
-    return (
-      <div>{this.context.user.email}</div>
-    );
-  }
-}
-```
-
-#### client/src/lib
-
-The `API` module wraps all axios calls to the express server, providing one convenient place to look for anything API-related. 
-
-As you build out your app's features and add more API routes to your server, you will add corresponding client-side code in `client/src/lib/API.js`. For every API route on your server, there should be a function in this module that hits the route and returns the result.
-
-#### client/src/pages
-
-This is a personal preference, but I like to organize my "page" components into their own folder. These are the top-level components rendered by React Router when the user goes to a specific URL. Doing this separates "components" (which are intended to be reused) from pages (which generally aren't.)
-
-### Server
-
-The `server` folder is organized as follows:
-
-```
-server
-├── controllers
-│   └── api
-├── lib
-└── models
-```
-
-#### server/controllers/api
-
-Since React Router is handling all of our client-side routing, the only server routes we need to worry about are for our API. In this folder, you'll find those routes.
-
-Divided into controllers, one for each model, they are all loaded into Express via `server/controllers/api/index.js`. If you add a controller, make sure to import and register its URL-stub there.
-
-Inside each controller, you'll see the routes to get, create, update and delete one kind of model:
-
-- `usersController` has routes to register, login, and get the currently authenticated user.
-- `secretsController` has one route to get an array of Secrets (a dummy model I created to demonstrate protected data.)
-
-Each time you create a new model, remember to create a new controller for its API routes. And remember to import and use it in `index.js`.
-
-#### server/lib
-
-This folder holds modules that don't belong anywhere else in the MVC structure. Currently, that's only one file: `passport.js`.
-
-Passport is used for user authentication, and for protecting API routes against unauthorized access. In `server/lib/passport.js`, you'll find the primary Passport configuration for the server.
-
-Importantly, the logic that verifies each user's authentication token resides here. Depending on which database you end up storing your users in, you'll want to customize this logic to query the correct user data.
-
-#### server/models
-
-In the `master` branch, these models are just simple JS mocks that return hard-coded data. They are there to act as placeholders for a real database. See the `sequelize` or `mongoose` branches for Sequelize and Mongoose implementations, respectively.
-
-## Scripts
-
-### client
-
-### server
 
 ## Deployment
+
+[Megabites](https://https://megabytes.herokuapp.com/)
+
+![](assets/images/.gif)
+
+## Table of Contents
+
+* [Technology Used](#technology-used)
+* [Usage](#usage)
+* [Screenshots](#screenshots)
+* [MVP - Minimum Viable Product](#mvp-minimum-viable-product)
+  * [User Story](#user-story)
+  * [Acceptance Criteria](#acceptance-criteria)
+* [Questions](#questions)
+* [Contributing](#contributing)
+* [Badges](#badges)
+* [Authors](#author)
+
+## Technology Used
+<details>
+    <summary markdown="span">Click to expand Project Technology Details</summary>
+
+Languages
+- HTML
+- CSS
+- Javascript
+
+Libraries
+- React
+- React-Router
+- Semantic-UI-React
+- Axios
+- Express
+- Node
+- MySQL2
+- Sequelize
+
+CSS Framework
+- [Semantic UI](semantic-ui.com)
+
+</details>
+
+## Usage
+
+To begin using Megabites, any user may browse the homepage which provides a brief description of the recipe, its categories, and the creator's username. The homepage recipes are an assortment of recipes from the community that can be filtered by selecting a category from the drop-down menu. Any user can click on the recipe to be taken to a recipe page that displays the full details of the recipe including cooking instructions and ingredients.
+
+By completing the signup, users become members with the priviledges to create recipes and save recipes from the community. To create a login, click on the signup button to be taken to the signup form. The only information that will be made public is the username of the member. This lets other users know who posted the recipe for the community to enjoy. Once the signup form has been submitted, users are free to login and begin building their personalized list of recipes.
+
+Member users can create a recipe by clicking on the down arrow next to their member name and selecting "Add a recipe" from the dropdown menu. This will take the member to the form to complete to submit a recipe to the community. Recipes will be saved to both the community home page and the member's page.
+
+Members also have the added feature of saving a community recipe to their page. Once a user is logged in, a save button appears at the bottom of each recipe card. Users can click on this button while browsing to add recipes to their personal page. The save button will not redirect the user to their homepage, but remain on the community page to allow the user to continue browsing without losing their place. Users will also find this save button located on the full recipe page to make saving new and interesting recipes very easy.
+
+An additional feature for members is the delete button on their personal page. When users save a recipe to their personal page, they have the ability to delete the recipes they are no longer interested in keeping. While the recipe is removed from the member's personal page, it remains available to other users through the community home page.
+
+
+## Screenshots
+
+![Home Page](assets/images/homepage.PNG)
+
+*Home Page of Recipe App*
+
+![Full Recipe Page](assets/images/fullrecipe.PNG)
+
+*Full Recipe Page*
+
+![Member Page](assets/images/memberPage.PNG)
+
+*Member Portfolio Page*
+
+
+## MVP - Minimum Viable Product
+
+<details>
+    <summary markdown="span">Click to expand Assignment Instruction Details</summary>
+
+  ### User Story
+
+    ```
+    AS A user with no creativity in the kitchen
+    I WANT to have quick access to recipes
+    SO THAT I can prepare delicious new foods by following simple instructions
+    ```
+
+  ### Acceptance Criteria
+
+    ```
+    GIVEN I would like to browse for interesting recipes
+    WHEN I am on the home page of the app
+    THEN I can browse recipes that I and other community members have created on the app
+
+    GIVEN I would like to find recipes in specific categories
+    WHEN I select specific categories in the filter box
+    THEN I am provided only the recipes within those categories
+
+    GIVEN I am interested in making a recipe
+    WHEN I click on the recipe card
+    THEN I am taken to a detailed recipe page
+
+    GIVEN I would like to save recipes that interest me
+    WHEN I create a user profile
+    THEN I am provided a space to save recipes for easy access
+
+    GIVEN I would like to save recipes to my personal profile
+    WHEN I click on the save button of the recipe card
+    THEN I can find that recipe saved to my personal profile page
+
+    GIVEN I would like to remove a recipe from my personal portfolio page
+    WHEN I click on the delete button on the recipe card
+    THEN I find the recipe is removed from my personal portfolio page
+
+    GIVEN I would like to create and share a recipe
+    WHEN I complete the Add Recipe Form
+    THEN I find the recipe is available to all users on the home page and also on my personal page
+    ```
+</details>
+----
+
+## Future Development
+<details>
+    <summary markdown="span">Click to expand Assignment Instruction Details</summary>
+
+There are many future development plans for this recipe app. The developers would like to increase the functionality and improve the user experience and interface in the following ways.
+
+### User Experience
+Allow users to search recipes by title or ingredients
+Allow users to create reviews and post star ratings for each recipe
+Allow users to modify or delete their own reviews
+Allow users to create shopping lists of ingredients based on recipe selections
+Allow users to edit previous recipe submissions
+Allow users to upload images for their user profile and recipes
+Allow users to create their own categories
+
+### Improved functionality
+Use React Toastify npm library to notify users save requests have been completed
+Star ratings will be averaged across the community for each recipe
+Connection of the app to a recipe API for improved recipe bank
+Implement form auto-completion to enhance searches
+Provide a better interface for adding ingredients to recipe
+Make individual ingredients unique and searchable
+
+
+### Technical Improvements
+Implement multer to provide file upload capabilities
+Implement better installation protocols
+Implement better ES Linting
+Minify code with Travis CI for deployment
+
+</details>
+
+
+## Questions
+If you have any questions about the repo, open an issue or contact one of the developers directly. See [Authors](#authors).
+
+
+## Contributing
+Go to GitHub repo and create a pull request or contact the developers directly. See [Authors](#authors).
+
+
+## Badges
+
+**Languages**
+
+![html5](https://img.shields.io/badge/language-HTML5-blue)
+![css3](https://img.shields.io/badge/language-CSS3-blue)
+![javascript](https://img.shields.io/badge/language-javascript-blue)
+![sql](https://img.shields.io/badge/language-SQL-blue)
+
+**Node Libraries**
+
+![npm](https://img.shields.io/npm/v/inquirer?style=flat)
+![npm react](https://img.shields.io/badge/npm-react-blue)
+![npm axios](https://img.shields.io/badge/npm-axios-blue)
+![npm express](https://img.shields.io/badge/npm-express-blue)
+![npm mysql2](https://img.shields.io/badge/npm-mysql2-blue)
+![npm sequelize](https://img.shields.io/badge/npm-sequelize-blue)
+
+
+## Authors
+[Ben Cart](https://github.com/Bmcart3)
+
+[Thomas Rider](https://github.com/thomasjrideriii)
+
+[Heather Sorrells](https://github.com/Hlsorrells)
+
+[Khamari Thompson](https://github.com/Khamari13)
+
+[Jesse VanSlyke](https://github.com/jessevanslyke)
