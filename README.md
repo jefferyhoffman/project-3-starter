@@ -105,8 +105,8 @@ Cloud Server
 <details>
     <summary markdown="span">Click to expand Screenshot Details</summary>
  
-![Let's Guess](./assets/images/LetsGuess.png)
-*Screen Shot of Let's Guess*
+![Let's Guess](https://media.giphy.com/media/VDeIViUUouCivqPutt/giphy.gif)
+*Gif of Let's Guess*
 
 </details>
 
