@@ -127,6 +127,16 @@ const characterSeed = [
         story:"Obsessed with NY Pizza and would eat it three times a day. Mini coopers > Mini Vans.  "
     },
     {
+        picture:"/ryanD.png",
+        name:"Ryan",
+        hairColor:"black",
+        glasses:false,
+        facialHair:false,
+        eyeColor:"blue",
+        fact:"Could be the next NBA player with the height of 6'7 but prefers coding!",
+        story:"I am 6'7 and was born with one kidney. Prefers coding to basketball any day!"
+    },
+    {
         picture:"/newYorker.png",
         name:"Lindsey",
         hairColor:"blonde",
