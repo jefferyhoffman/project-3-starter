@@ -4,6 +4,7 @@ import './FullRecipeCard.css';
 import '../CardLayout/CardLayout';
 import AuthContext from '../../contexts/AuthContext';
 import API from '../../lib/API';
+import Emoji from '../Emoji/Emoji';
 
 class FullRecipeCard extends Component {
   static contextType = AuthContext;
@@ -18,13 +19,27 @@ class FullRecipeCard extends Component {
       .catch((err) => this.setState({ err: err.message }));
   }
 
+  handleReview(id) {
+    console.log(id);
+    const { authToken } = this.context;
+    API.Reviews.save(id, authToken)
+      .then((response) => {
+        console.log(response)
+      })
+      .catch((err) => this.setState({ err: err.message }));
+  }
+
   render() {
     const { authToken } = this.context;
-    let button;
+    let saveBtn;
+    let reviewBtn;
     console.log(this.props)
     if (authToken) {
-      button = <Button onClick={() => this.handleSave(this.props.recipeNum)} className="save">Save</Button>
-    }
+      saveBtn = <Button size="big" onClick={() => this.handleSave(this.props.recipeNum)} className="red save">
+        <Emoji label="heart" symbol="❤" /> Save</Button>
+      reviewBtn = <Button size="big" onClick={() => this.handleReview(this.props.recipeNum)} className="blue review">
+        <Emoji label="comment" symbol="💬" /> Leave a Review</Button>
+      }
 
     return (
       <Card fluid>
@@ -34,7 +49,7 @@ class FullRecipeCard extends Component {
           <h3>Prep Time: {this.props.prepTime}</h3>
           <h3>Servings: {this.props.servings}</h3>
         </Card.Content>
-        {button}
+        {saveBtn} {reviewBtn}
       </Card>
     );
   }
