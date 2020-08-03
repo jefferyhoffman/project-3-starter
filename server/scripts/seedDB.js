@@ -127,6 +127,16 @@ const characterSeed = [
         story:"Obsessed with NY Pizza and would eat it three times a day. Mini coopers > Mini Vans.  "
     },
     {
+        picture:"/ryanD.png",
+        name:"Ryan",
+        hairColor:"black",
+        glasses:false,
+        facialHair:false,
+        eyeColor:"blue",
+        fact:"Could be the next NBA player with the height of 6'7 but prefers coding!",
+        story:"I am 6'7 and was born with one kidney. Prefers coding to basketball any day!"
+    },
+    {
         picture:"/newYorker.png",
         name:"Lindsey",
         hairColor:"blonde",
@@ -275,7 +285,37 @@ const characterSeed = [
         eyeColor: "blue",
         fact: "Was in the Colorguard during High School",
         story:"Looking forward to travelling to Peru to hike Machu Picchu to check it off my bucket list. I was in the colorguard during High School."
-    }
+    },
+    {
+        picture:"/athena.png",
+        name: "Athena",
+        hairColor:"brown",
+        glasses: false,
+        facialHair: false,
+        eyeColor: "brown",
+        fact: "I have over a hundred followers on my art instagram art page",
+        story:"Some of my favorite cartoons are owl house, steven universe, and she-ra. I'm an aspring young artist with over 100 followers on my insta art page! "
+    },
+    {
+        picture:"/kit.png",
+        name: "Kit",
+        hairColor:"Purple",
+        glasses: false,
+        facialHair: false,
+        eyeColor: "brown",
+        fact: "I have a cat with a moustache named poe",
+        story:"I love pizza and cats , especially my moustached boy Poe "
+    },
+    {
+        picture:"/jona.png",
+        name: "J Jonah Jameson",
+        hairColor:"gray",
+        glasses: false,
+        facialHair: true,
+        eyeColor: "blue",
+        fact: "I Want Pictures of Spider-man on my desk NOW!",
+        story:"I am a much beloved character from marvel comics, a pruveyor of truth! The world must know Spider-man is a menace to society!"
+    },
     
 
 ];

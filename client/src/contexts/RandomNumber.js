@@ -4,7 +4,7 @@ export const  RandomNumberContext = createContext();
 
 const RandomNumberContextProvider = (props) => {
     
-    const[RandomNumber, setRandomNumber]=useState(Math.floor(Math.random() * 27))
+    const[RandomNumber, setRandomNumber]=useState(Math.floor(Math.random() * 31))
 
   
 

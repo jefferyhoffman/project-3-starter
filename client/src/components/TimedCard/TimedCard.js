@@ -46,7 +46,7 @@ const TimedCard = () => {
       handleGameOver()
       setAlertText("This Character isn't worth anything lets try another one")
       
-      updateWho(Math.floor(Math.random() * 27))
+      updateWho(Math.floor(Math.random() * 31))
     }
     else {
       handleGuess()
@@ -61,7 +61,7 @@ const TimedCard = () => {
     }
     if (guess.toLowerCase().trim() === who.toLowerCase()) {
       handleFlip()
-      setRandomNumber(Math.floor(Math.random() * 27))
+      setRandomNumber(Math.floor(Math.random() * 31))
       incrementFinalScore(score)
       setLastGuess(whoImg);
       setAlertText("You Guessed correctly!!! Keep going!")
@@ -181,7 +181,7 @@ useEffect(()=>{
             <DropDown />
             <div id="MaryPoppins" className="is-hidden">
               <label>Guess Again to play without submitting score</label>
-              <button  className="button is-primary" onClick={handlePlayAgain} >Play Again</button>
+              <button  className="button is-primary" onClick={handlePlayAgain} >Guess Again</button>
               <label>To send score to leaderboard submit your user name below</label>
               <div className="columns">
                 <div className="column">
@@ -198,7 +198,7 @@ useEffect(()=>{
           <div className="box">
             <h1 className="is-size-1"> You got it!</h1>
             <img alt={who} src={whoImg} style={{ width: "200px", height: "200px" }} ></img>
-            <button className="button is-primary" onClick={handlePlayAgain}>Play Again</button>
+            <button className="button is-primary" onClick={handlePlayAgain}>Keep Guessing!</button>
           </div>
         </div>
       </ReactCardFlip>
