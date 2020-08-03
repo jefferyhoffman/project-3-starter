@@ -15,6 +15,7 @@ import NotFound from '../../pages/NotFound/NotFound';
 import Leaderboard from '../../pages/Leaderboard/Leaderboard'
 import MainGame from '../../pages/MainGame/MainGame'
 import Main from '../../pages/Main/Main'
+import CustomGame from '../../pages/CustomGame/CustomGame'
 import './App.css';
 import Characters from '../../pages/Characters/Characters';
 import ScoreContextProvider from '../../contexts/scoreContext';
@@ -22,6 +23,8 @@ import WhoContextProvider from '../../contexts/whoContext'
 import FinalScoreContextProvider from '../../contexts/FinalScore'
 import TimeContextProvider from '../../contexts/Time';
 import RandomNumberContextProvider from '../../contexts/RandomNumber.js';
+import CustomContextProvider from '../../contexts/customContext';
+import Add from '../../pages/Adding/Add'
 
 class App extends Component {
   constructor(props) {
@@ -60,6 +63,7 @@ class App extends Component {
   render() {
     return (
       <AuthContext.Provider value={this.state.auth}>
+      <CustomContextProvider>
         <ScoreContextProvider>
           <WhoContextProvider>
             <FinalScoreContextProvider>
@@ -77,6 +81,8 @@ class App extends Component {
                           <Route path="/leaderboard" component={Leaderboard} />
                               <PrivateRoute path="/MainGame" component={MainGame} />
                         <Route path="/characters" component={Characters} />
+                        <Route path='/customGame' component={CustomGame} />
+                        <Route path='/add' component={Add}/>
                         <Route component={NotFound} />
                       </Switch>
                     </div>
@@ -87,6 +93,7 @@ class App extends Component {
             </FinalScoreContextProvider>
           </WhoContextProvider>
         </ScoreContextProvider>
+      </CustomContextProvider>
       </AuthContext.Provider>
     );
   }
