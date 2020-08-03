@@ -12,7 +12,12 @@ recipesController.get("/all", (req, res) => {
     db.Recipe.findAll({
         include: [
             { model: db.Category, as: "categories" },
-            { model: db.Ingredient, as: "ingredients" }
+            { model: db.Ingredient, as: "ingredients" },
+            {
+                model: db.Review, include: [
+                    { model: db.User, attributes: ["username"] }
+                ]
+            }
         ]
     }, {})
         .then(recipe => res.json(recipe))
