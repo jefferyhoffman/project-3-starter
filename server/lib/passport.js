@@ -5,12 +5,12 @@ const db = require('../models');
 
 var JWT_STRATEGY_OPTS = {
   jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-  secretOrKey: process.env.JWT_SECRET,
+  secretOrKey: process.env.JWT_SECRET || 'secret',
 };
 
 passport.use(
   new JwtStrategy(JWT_STRATEGY_OPTS, function (jwtPayload, done) {
-    db.Users.findOne({ where: { id: jwtPayload.sub } })
+    db.Users.findOne({ _id: jwtPayload.sub })
       .then(user => done(null, user || false))
       .catch(err => done(err, false));
   })

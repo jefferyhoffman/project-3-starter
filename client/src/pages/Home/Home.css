@@ -1,0 +1,27 @@
+
+#letsGuess{
+    padding:2px;
+ 
+}
+#demoTile{
+    background-color: rgb(90, 253, 245);
+
+}
+#playTile{
+    background-color: rgb(250, 125, 239);
+    color: black;
+    
+}
+#playTile2{
+    background-image: linear-gradient(to top, pink,rgb(0, 238, 255))
+}
+
+
+#characterTile{
+    background-color: rgb(158, 253, 131);
+ 
+}
+.enterBtn{
+    background-color:rgb(246, 92, 252);
+    color:white;
+}

@@ -39,20 +39,15 @@ class Login extends Component {
   }
 
   render() {
-    const { from } = this.props.location.state || { from: { pathname: "/secret" } };
+    const { from } = this.props.location.state || { from: { pathname: "/" } };
     const { redirectToReferrer } = this.state;
 
     if (redirectToReferrer) {
-      return <Redirect to={from} />;
+      return <Redirect to={'/menu'} />;
     }
 
     return (
       <div className='Login'>
-        <div className='row'>
-          <div className='col'>
-            <h1>Login</h1>
-          </div>
-        </div>
         {this.state.error &&
           <div className='row'>
             <div className='col'>
@@ -64,7 +59,7 @@ class Login extends Component {
         <div className='row'>
           <div className='col'>
             <LoginForm onSubmit={this.handleSubmit} />
-            <div className='mt-3'>Don't have an account? <Link to='/register'>Click here to register.</Link></div>
+            <div className='mt-3'>Don't have an account? <Link to='/register'>Click here to signup.</Link></div>
           </div>
         </div>
       </div>
