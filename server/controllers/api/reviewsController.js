@@ -9,7 +9,7 @@ reviewsController.get("/all", (req, res) => {
 
     db.Review.findAll({
         attributes: ["RecipeId", [db.sequelize.fn('AVG', db.sequelize.col("stars")), "stars" ]],
-        group: "stars",
+        group: "RecipeId",
         order: [[db.sequelize.fn('AVG', db.sequelize.col("stars")), "DESC" ]]
     })
     .then(review => res.json(review))
