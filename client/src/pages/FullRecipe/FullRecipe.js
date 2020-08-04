@@ -24,22 +24,22 @@ class FullRecipe extends Component {
     API.Recipes.byId(this.props.match.params.id)
       .then((recipe) => {
         this.setState({ recipe: recipe.data[0], err: "" })
+        console.log(this.state)
       })
-      .then(API.Reviews.all()
-      .then((reviews) => {
-        console.log(reviews)
-        recipe = this.state.recipe
-        this.setState({ recipe: recipe, reviews: reviews.data, err: "" })
-      } ))
+      // .then(API.Reviews.all()
+      // .then((reviews) => {
+      //   console.log(reviews)
+      //   recipe = this.state.recipe
+      //   this.setState({ recipe: recipe, reviews: reviews.data, err: "" })
+      // } ))
       .catch((err) => this.setState({ err: err.message }))
   }
 
 
 
   render() {
-    // console.log(this.state.recipe.id)
+    console.log(this.state.recipe.Reviews)
     return (
-
       <div>
         <Image centered src={require("../../assets/images/megabitesLogo.png")} />
         <Responsive maxWidth="1035">
@@ -75,7 +75,7 @@ class FullRecipe extends Component {
                     {this.state.recipe.directions}
                   </p>
                 </div>
-                <ReviewCard reviews={this.state.reviews} />
+                <ReviewCard reviews={this.state.recipe.Reviews ? this.state.recipe.Reviews : []} />
                 <ReviewForm RecipeId={this.state.recipe.id}/>
               </Grid.Column>
               <Grid.Column width={1}></Grid.Column>
@@ -94,7 +94,7 @@ class FullRecipe extends Component {
                   prepTime={this.state.recipe.prepTime}
                   servings={this.state.recipe.servings}
                 />
-                <ReviewCard reviews={this.state.reviews} />
+                <ReviewCard reviews={this.state.recipe.Reviews ? this.state.recipe.Reviews : []} />
                 <ReviewForm RecipeId={this.state.recipe.id}/>
               </Grid.Column>
               <Grid.Column width={5}>

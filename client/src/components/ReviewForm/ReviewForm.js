@@ -25,7 +25,7 @@ class ReviewForm extends Component {
     handleSubmit = (event) => {
         const { authToken } = this.context;
 
-        const { RecipeId } = this.props.RecipeId
+        const RecipeId = this.props.RecipeId
         
         const {
             stars,

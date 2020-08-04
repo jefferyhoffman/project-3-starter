@@ -71,7 +71,7 @@ export default {
   },
 
   Reviews : {
-    all: function(id) {
+    all: function() {
       return axios.get('/api/reviews/all/')
     },
 

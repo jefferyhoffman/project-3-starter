@@ -10,23 +10,25 @@ import {
 class ReviewCard extends Component {
   render() {
     let reviews = this.props.reviews
+    console.log(reviews)
 
     return (
       <Card fluid>
-          <Card.Content header="Reviews:"></Card.Content>
+          <Card.Content header="Reviews:">
+
         <Feed>
           {reviews.map((review) => (
-            <Feed.Event>
+            <Feed.Event key={review ? review.User.username : null}>
               <Feed.Content>
                 <Feed.Summary>
-                  <Feed.User>{review.user}</Feed.User> posted a review!
+                  <Feed.User>{review ? review.User.username : null}</Feed.User> posted a review!
                 </Feed.Summary>
-                <Feed.Extra text>{review.review}</Feed.Extra>
+                <Feed.Extra text>{review? review.review : "Review Not Found"}</Feed.Extra>
                 <Feed.Meta>
                   <Feed.Like>
                     <Rating
                       icon="star"
-                      defaultRating={review.stars}
+                      defaultRating={review ? review.stars : 0}
                       maxRating={5}
                     ></Rating>
                   </Feed.Like>
@@ -35,6 +37,7 @@ class ReviewCard extends Component {
             </Feed.Event>
           ))}
         </Feed>
+          </Card.Content>
       </Card>
     );
   }
