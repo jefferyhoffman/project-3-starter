@@ -73,6 +73,17 @@ export default {
   Reviews : {
     byId: function(id) {
       return axios.get('/api/reviews/all/' + id)
+    },
+
+    create: function(authToken, review, stars, RecipeId) {
+      return axios.post('/api/reviews/', {
+        review, stars, RecipeId
+      }, {
+        headers: {
+          'Authorization': `Bearer ${authToken}`
+        }
+      })
+      .catch((err) => console.log(err))
     }
   }
 }

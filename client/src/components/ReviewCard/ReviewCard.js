@@ -9,13 +9,11 @@ import {
 
 class ReviewCard extends Component {
   render() {
-      console.log(this.props)
-
     let reviews = this.props.reviews
 
     return (
       <Card fluid>
-          <Card.Header>Reviews</Card.Header>
+          <Card.Content header="Reviews:"></Card.Content>
         <Feed>
           {reviews.map((review) => (
             <Feed.Event>
