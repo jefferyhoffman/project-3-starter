@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Card, Image, Responsive, Container, Button } from "semantic-ui-react";
 import AuthContext from '../../contexts/AuthContext';
 import API from '../../lib/API';
+import Emoji from '../Emoji/Emoji';
 
 // const extra = <Rating icon="star" defaultRating={3} maxRating={5} />;
 
@@ -25,7 +26,7 @@ class RecipeCard extends Component {
       let link = "/recipe/" + recipe.id
       let button;
       if (authToken) {
-        button = <Button onClick={() => this.handleSave(recipe.id)} className="save">Save</Button>
+        button = <Button color="red" onClick={() => this.handleSave(recipe.id)} className="save"><Emoji label="heart" symbol="❤" /> Save</Button>
       }
 
       return (
