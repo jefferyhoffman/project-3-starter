@@ -34,7 +34,7 @@ class ProfileRecipes extends Component {
               <span>Submitted by: {recipe.createdBy}</span>
             </Card.Meta>
           </Card.Content>
-          <Button onClick={() => this.props.handleDelete(recipe.id)} className="delete">Delete</Button>          
+          <Button color="red" onClick={() => this.props.handleDelete(recipe.id)} className="delete">Delete</Button>          
           {/* <Card.Content>{extra}</Card.Content> */}
         </Card>
       );
