@@ -7,7 +7,7 @@ const { sequelize } = require("../../models");
 var newDate = new Date().toISOString().slice(0, 19).replace('T', ' ');
 console.log(newDate);
 
-// Route to retrieve all recipes (including categories/ingredients) in db
+// Route to retrieve all recipes with all categories, ingredients and reviews.
 recipesController.get("/all", (req, res) => {
     db.Recipe.findAll({
         include: [
@@ -24,7 +24,7 @@ recipesController.get("/all", (req, res) => {
         .catch(err => res.json(err));
 });
 
-// Route to retrieve all recipes for the logged in user
+// Route to retrieve all recipes for the logged in user with all categories, ingredients and reviews.
 recipesController.get("/user", JWTVerifier, (req, res) => {
     db.Recipe.findAll({
         include: [
@@ -42,7 +42,7 @@ recipesController.get("/user", JWTVerifier, (req, res) => {
         .catch(err => res.json(err));
 });
 
-// Route to retrieve all recipes for a specific category
+// Route to retrieve all recipes for a specific category with all ingredients and reviews.
 recipesController.get("/category", JWTVerifier, (req, res) => {
     db.Recipe.findAll({
         include: [
