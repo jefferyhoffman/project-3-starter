@@ -1,13 +1,16 @@
 import React, { Component } from "react";
 import { Grid, Header, Responsive, Image } from "semantic-ui-react";
 import FullRecipeCard from "../../components/FullRecipeCard/FullRecipeCard";
-import ReviewCard from "../../components/ReviewCard/ReviewCard"
+import ReviewCard from "../../components/ReviewCard/ReviewCard";
+import ReviewForm from "../../components/ReviewForm/ReviewForm";
 import "./FullRecipe.css";
 import API from "../../lib/API";
+import AuthContext from "../../contexts/AuthContext";
 
 
 
 class FullRecipe extends Component {
+  static contextType = AuthContext;
 
   state = {
     recipe: [],
@@ -22,8 +25,9 @@ class FullRecipe extends Component {
       .then((recipe) => {
         this.setState({ recipe: recipe.data[0], err: "" })
       })
-      .then(API.Reviews.byId(this.props.match.params.id)
+      .then(API.Reviews.all()
       .then((reviews) => {
+        console.log(reviews)
         recipe = this.state.recipe
         this.setState({ recipe: recipe, reviews: reviews.data, err: "" })
       } ))
@@ -50,7 +54,7 @@ class FullRecipe extends Component {
                   prepTime={this.state.recipe.prepTime}
                   servings={this.state.recipe.servings}
                 />
-                <ReviewCard reviews={this.state.reviews} />
+                
                 <div className="bg2">
                   <Header as="h3" className="bg2" style={{ fontSize: "2em" }}>
                     Ingredients
@@ -71,6 +75,8 @@ class FullRecipe extends Component {
                     {this.state.recipe.directions}
                   </p>
                 </div>
+                <ReviewCard reviews={this.state.reviews} />
+                <ReviewForm RecipeId={this.state.recipe.id}/>
               </Grid.Column>
               <Grid.Column width={1}></Grid.Column>
             </Grid.Row>
@@ -89,6 +95,7 @@ class FullRecipe extends Component {
                   servings={this.state.recipe.servings}
                 />
                 <ReviewCard reviews={this.state.reviews} />
+                <ReviewForm RecipeId={this.state.recipe.id}/>
               </Grid.Column>
               <Grid.Column width={5}>
                 <div className="bg">

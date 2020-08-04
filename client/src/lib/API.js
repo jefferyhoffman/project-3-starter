@@ -71,8 +71,8 @@ export default {
   },
 
   Reviews : {
-    byId: function(id) {
-      return axios.get('/api/reviews/all/' + id)
+    all: function(id) {
+      return axios.get('/api/reviews/all/')
     },
 
     create: function(authToken, review, stars, RecipeId) {

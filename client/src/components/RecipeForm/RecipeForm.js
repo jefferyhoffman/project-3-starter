@@ -71,6 +71,7 @@ class RecipeForm extends Component {
     categories.map(category => {
       let catObj = { category: category }
       catObjArr.push(catObj)
+      return catObj
     })
     this.setState({ categories: catObjArr})
   }
