@@ -4,11 +4,14 @@ const db = require("../../models");
 const { JWTVerifier } = require("../../lib/passport");
 const jwt = require("jsonwebtoken");
 
-// Route to retrieve all reviews in db, based on a RecipeId
-reviewsController.get("/all/:id", (req, res) => {
-    const RecipeId = req.params.id;
+// Route to retrieve star ratings for all recipes
+reviewsController.get("/all", (req, res) => {
 
-    db.Review.findAll({where: { RecipeId }}, {include: [{model: db.User, as: "users"}, {model: db.Recipe, as: "recipes"}]})
+    db.Review.findAll({
+        attributes: ["RecipeId", [db.sequelize.fn('AVG', db.sequelize.col("stars")), "stars" ]],
+        group: "stars",
+        order: [[db.sequelize.fn('AVG', db.sequelize.col("stars")), "DESC" ]]
+    })
     .then(review => res.json(review))
     .catch(err => res.json(err));
 });

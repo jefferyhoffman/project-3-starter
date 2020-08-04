@@ -15,7 +15,6 @@ module.exports = (sequelize, DataTypes) => {
             as: "recipes",
             foreignKey: "category_id"
         });
-
     };
 
     // Return the Category model as defined to be exported to the app

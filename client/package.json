@@ -5,6 +5,7 @@
   "proxy": "http://localhost:3001",
   "dependencies": {
     "@githubprimer/octicons-react": "^8.5.0",
+    "a11y-react-emoji": "^1.1.2",
     "axios": "^0.18.1",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",

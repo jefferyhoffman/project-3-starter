@@ -21,7 +21,6 @@ module.exports = (sequelize, DataTypes) => {
             as: "ingredients",
             foreignKey: "list_id"
         });
-
     };
 
     // Return the List model as defined to be exported to the app
