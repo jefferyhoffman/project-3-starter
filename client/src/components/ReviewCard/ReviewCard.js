@@ -14,8 +14,8 @@ class ReviewCard extends Component {
 
     return (
       <Card fluid>
-          <Card.Content header="Reviews:">
-
+          <Card.Content>
+            <Card.Header>Reviews:</Card.Header>
         <Feed>
           {reviews.map((review) => (
             <Feed.Event key={review ? review.User.username : null}>

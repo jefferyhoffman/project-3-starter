@@ -19,7 +19,6 @@ class FullRecipe extends Component {
   }
 
   componentDidMount() {
-    let recipe
     //console.log(this.props.match.params.id)
     API.Recipes.byId(this.props.match.params.id)
       .then((recipe) => {
