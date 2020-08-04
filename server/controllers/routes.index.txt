@@ -47,7 +47,7 @@ Route to create a new review
 POST "/"
 
 Route to retrieve all reviews for a specific RecipeId
-GET "/all/:id"
+GET "/all"
 
 //////////////////////////////////////////////////////
  INGREDIENTS Routes

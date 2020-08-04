@@ -4,7 +4,7 @@ const db = require("../../models");
 const { JWTVerifier } = require("../../lib/passport");
 const jwt = require("jsonwebtoken");
 
-// Route to retrieve all recipe ratings
+// Route to retrieve star ratings for all recipes
 reviewsController.get("/all", (req, res) => {
 
     db.Review.findAll({
