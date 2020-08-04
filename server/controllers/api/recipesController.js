@@ -12,7 +12,12 @@ recipesController.get("/all", (req, res) => {
     db.Recipe.findAll({
         include: [
             { model: db.Category, as: "categories" },
-            { model: db.Ingredient, as: "ingredients" }
+            { model: db.Ingredient, as: "ingredients" },
+            {
+                model: db.Review, include: [
+                    { model: db.User, attributes: ["username"] }
+                ]
+            }
         ]
     }, {})
         .then(recipe => res.json(recipe))
@@ -25,6 +30,11 @@ recipesController.get("/user", JWTVerifier, (req, res) => {
         include: [
             { model: db.Category, as: "categories" },
             { model: db.Ingredient, as: "ingredients" },
+            {
+                model: db.Review, include: [
+                    { model: db.User, attributes: ["username"] }
+                ]
+            },
             { model: db.User, as: "users", where: { id: req.user.id } }
         ]
     }, {})
@@ -37,7 +47,12 @@ recipesController.get("/category", JWTVerifier, (req, res) => {
     db.Recipe.findAll({
         include: [
             { model: db.Category, as: "categories", where: { id: req.body.id } },
-            { model: db.Ingredient, as: "ingredients" }
+            { model: db.Ingredient, as: "ingredients" },
+            {
+                model: db.Review, include: [
+                    { model: db.User, attributes: ["username"] }
+                ]
+            }
         ]
     }, {})
         .then(recipe => res.json(recipe))
@@ -51,8 +66,11 @@ recipesController.get("/:id", async (req, res) => {
         include: [
             { model: db.Category, as: "categories" },
             { model: db.Ingredient, as: "ingredients" },
-            { model: db.Review }
-        ]
+            {
+                model: db.Review, include: [
+                    { model: db.User, attributes: ["username"] }
+                ]
+            }        ]
     }, {})
         .then(recipe => res.json(recipe))
         .catch(err => res.json(err));
