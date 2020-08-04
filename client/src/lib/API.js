@@ -68,5 +68,11 @@ export default {
     all: function() {
       return axios.get('/api/categories/all', {})
     }
+  },
+
+  Reviews : {
+    byId: function(id) {
+      return axios.get('/api/reviews/all/' + id)
+    }
   }
 }

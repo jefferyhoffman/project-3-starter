@@ -60,7 +60,7 @@ class RecipeCard extends Component {
         <Responsive maxWidth="780">
           <Card.Group itemsPerRow={1}>{recipes}</Card.Group>
         </Responsive>
-        <Responsive minWidth="601">
+        <Responsive minWidth="781">
           <Card.Group itemsPerRow={3}>{recipes}</Card.Group>
         </Responsive>
       </Container>

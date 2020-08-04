@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Grid, Header, Responsive, Image } from "semantic-ui-react";
 import FullRecipeCard from "../../components/FullRecipeCard/FullRecipeCard";
+import ReviewCard from "../../components/ReviewCard/ReviewCard"
 import "./FullRecipe.css";
 import API from "../../lib/API";
 
@@ -10,16 +11,22 @@ class FullRecipe extends Component {
 
   state = {
     recipe: [],
+    reviews: [],
     err: ""
   }
 
   componentDidMount() {
+    let recipe
     //console.log(this.props.match.params.id)
     API.Recipes.byId(this.props.match.params.id)
-      .then((response) => {
-        this.setState({ recipe: response.data[0], err: "" })
-        //console.log(response.data[0])
+      .then((recipe) => {
+        this.setState({ recipe: recipe.data[0], err: "" })
       })
+      .then(API.Reviews.byId(this.props.match.params.id)
+      .then((reviews) => {
+        recipe = this.state.recipe
+        this.setState({ recipe: recipe, reviews: reviews.data, err: "" })
+      } ))
       .catch((err) => this.setState({ err: err.message }))
   }
 
@@ -43,6 +50,7 @@ class FullRecipe extends Component {
                   prepTime={this.state.recipe.prepTime}
                   servings={this.state.recipe.servings}
                 />
+                <ReviewCard reviews={this.state.reviews} />
                 <div className="bg2">
                   <Header as="h3" className="bg2" style={{ fontSize: "2em" }}>
                     Ingredients
@@ -80,6 +88,7 @@ class FullRecipe extends Component {
                   prepTime={this.state.recipe.prepTime}
                   servings={this.state.recipe.servings}
                 />
+                <ReviewCard reviews={this.state.reviews} />
               </Grid.Column>
               <Grid.Column width={5}>
                 <div className="bg">
