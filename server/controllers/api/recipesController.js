@@ -1,4 +1,5 @@
 const recipesController = require("express").Router();
+
 const db = require("../../models");
 const { JWTVerifier } = require("../../lib/passport");
 const { sequelize } = require("../../models");
