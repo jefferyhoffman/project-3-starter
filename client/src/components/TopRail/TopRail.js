@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Dropdown, Responsive } from "semantic-ui-react";
 import "./TopRail.css";
 import API from "../../lib/API";
-import { Redirect } from "react-router";
 
 class TopRail extends Component {
   state = {

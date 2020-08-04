@@ -68,5 +68,22 @@ export default {
     all: function() {
       return axios.get('/api/categories/all', {})
     }
+  },
+
+  Reviews : {
+    all: function() {
+      return axios.get('/api/reviews/all/')
+    },
+
+    create: function(authToken, review, stars, RecipeId) {
+      return axios.post('/api/reviews/', {
+        review, stars, RecipeId
+      }, {
+        headers: {
+          'Authorization': `Bearer ${authToken}`
+        }
+      })
+      .catch((err) => console.log(err))
+    }
   }
 }

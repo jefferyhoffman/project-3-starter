@@ -14,7 +14,7 @@ class FullRecipeCard extends Component {
     const { authToken } = this.context;
     API.Recipes.save(id, authToken)
       .then((response) => {
-        console.log(response)
+        // console.log(response)
       })
       .catch((err) => this.setState({ err: err.message }));
   }
@@ -24,7 +24,7 @@ class FullRecipeCard extends Component {
     const { authToken } = this.context;
     API.Reviews.save(id, authToken)
       .then((response) => {
-        console.log(response)
+        // console.log(response)
       })
       .catch((err) => this.setState({ err: err.message }));
   }
@@ -33,7 +33,7 @@ class FullRecipeCard extends Component {
     const { authToken } = this.context;
     let saveBtn;
     let reviewBtn;
-    console.log(this.props)
+    // console.log(this.props)
     if (authToken) {
       saveBtn = <Button size="big" onClick={() => this.handleSave(this.props.recipeNum)} className="red save">
         <Emoji label="heart" symbol="❤" /> Save</Button>

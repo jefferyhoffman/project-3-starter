@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import RecipeCard from "../RecipeCard/RecipeCard";
 
-import API from "../../lib/API";
 import "./CardLayout.css";
 
 class CardLayout extends Component {
