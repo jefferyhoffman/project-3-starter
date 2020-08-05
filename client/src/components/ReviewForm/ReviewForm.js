@@ -14,12 +14,18 @@ class ReviewForm extends Component {
         error: ""
     }
 
+    handleRatingChange = (e, rating) => {
+        let ratingNum = rating.rating
+        this.setState({
+            stars: ratingNum
+        })
+    }
+
     handleInputChange = (event) => {
         const { name, value } = event.target;
         this.setState({
             [name]: value,
         })
-        console.log(this.state)
     }
 
     handleSubmit = (event) => {
@@ -38,6 +44,7 @@ class ReviewForm extends Component {
             stars,
             RecipeId
         ).then(response => console.log(response))
+        .then(window.location.reload(false))
         .catch((err) => this.setState({ error: err.message }))
     }
 
@@ -62,7 +69,7 @@ class ReviewForm extends Component {
                         icon="star" 
                         defaultRating={stars} 
                         maxRating={5} 
-                        onChange={this.handleInputChange}
+                        onRate={this.handleRatingChange}
                         />
                     </Form.Field>
                     <Form.TextArea

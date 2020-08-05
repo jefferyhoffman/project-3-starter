@@ -18,7 +18,7 @@ class ReviewCard extends Component {
             <Card.Header>Reviews:</Card.Header>
         <Feed>
           {reviews.map((review) => (
-            <Feed.Event key={review ? review.User.username : null}>
+            <Feed.Event key={review ? review.id : null}>
               <Feed.Content>
                 <Feed.Summary>
                   <Feed.User>{review ? review.User.username : null}</Feed.User> posted a review!
