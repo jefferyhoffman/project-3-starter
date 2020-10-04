@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
 
   Secret.associate = function (models) {
-    // associations can be defined here
+    // aproductid.belongsto(product.productId)
   };
 
   return Secret;

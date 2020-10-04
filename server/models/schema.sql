@@ -3,6 +3,7 @@
 CREATE DATABASE ecommerce_db;
 USE ecommerce_db;
 
+
 CREATE TABLE customer (
 customer_id INT NOT NULL AUTO_INCREMENT,
 customer_email VARCHAR(50),
