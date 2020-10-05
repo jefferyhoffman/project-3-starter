@@ -9,6 +9,7 @@ const SECRETS = [
   }
 ];
 
+// Accessed at /api/secrets
 secretsController.get('/', JWTVerifier, (req, res) => res.json(SECRETS));
 
 module.exports = secretsController;
