@@ -1,7 +1,14 @@
 -- this page is just for refrence to how well set up the tables for sequelize
 
-CREATE DATABASE ecommerce_db;
+CREATE DATABASE ecommerce_db2;
 USE ecommerce_db;
+
+DROP TABLE customer;
+DROP TABLE category;
+DROP TABLE order_details;
+DROP TABLE order_table;
+DROP TABLE product;
+
 
 CREATE TABLE customer (
 customer_id INT NOT NULL AUTO_INCREMENT,
@@ -38,9 +45,11 @@ PRIMARY KEY(product_id),
 FOREIGN KEY(category_id) REFERENCES category(category_id)
 );
 
+DROP TABLE IF EXISTS order_table; 
+
 CREATE TABLE order_table (
 order_id VARCHAR(50) NOT NULL,
-order_number INT NOT NULL,
+order_number INT NOT NULL AUTO_INCREMENT,
 order_date DATETIME,
 order_total INT,
 customer_id INT,
@@ -61,3 +70,92 @@ PRIMARY KEY(order_details_id),
 FOREIGN KEY(product_id) REFERENCES product(product_id),
 FOREIGN KEY(order_id) REFERENCES order_table(order_id)
 );
+
+
+INSERT INTO customer(customer_email, first, last, password, address, zip, city, phone)
+VALUES ("test2@test.com", "adam", "grossman", "test", "124 main st", "28210", "charlotte", "704-111-1112"),
+		("test3@test.com", "nick", "ryder", "test", "125 main st", "28210", "charlotte", "704-111-1113"),
+        ("test4@test.com", "ryan", "brooks", "test", "126 main st", "28210", "charlotte", "704-111-1114"),
+        ("test5@test.com", "jeff", "hoffman", "test", "127 main st", "28210", "charlotte", "704-111-1115");
+        
+SHOW TABLES;
+SELECT * FROM customer;
+
+INSERT INTO category(category_name, category_description)
+VALUES ("tops", "t-shirts, sweatshirts, longsleeves and more"),
+		("bottoms", "shorts, sweatpants, leggings and more"),
+        ("outerwear", "jackets, and snowsuits"),
+        ("misc", "coffe mugs, flags, office supplies and more"),
+        ("footwear", "sneakers, boots and sandels");
+
+SELECT * FROM category;
+
+INSERT INTO product(product_name, product_description, price, stock, category_id)
+VALUES ("tshirt", "100% cotton teeshirt", 10.99, 25, 1),
+		("sweatshirt", "fleece sweatshirt", 24.99, 20, 1),
+		("longsleeve", "100% cotton longsleeve shirt", 14.99, 22, 1),
+        ("shorts", "mesh shorts", 17.99, 10, 2),
+        ("leggings", "nylon leggings", 24.99, 30, 2),
+        ("sweatpants", "100% cotton sweatpants", 19.99, 13, 2),
+        ("jacket", "northface jacket", 70.00, 5, 3),
+        ("flag", "american flag", 16.99, 5, 4),
+        ("sneakers", "nike", 65.00, 10, 5),
+        ("boots", "red wing", 100.00, 10, 5);
+        
+SELECT * FROM product;
+
+INSERT INTO order_table(order_id, order_number, customer_id)
+VALUES ("matt-1", 1, 1),
+		("adam-1", 2, 2),
+		("nick-1", 3, 3),
+        ("ryan-1", 4, 4),
+        ("jeff-1", 5, 5),
+        ("matt-2", 6, 1);
+
+SELECT * FROM order_table;
+
+INSERT INTO order_details(product_id, product_qty, order_id)
+VALUES (1, 2, "matt-1"),
+		(4, 1, "adam-1"),
+		(2, 3, "nick-1"),
+        (7, 1, "ryan-1"),
+        (8, 1, "jeff-1"),
+        (9, 1, "matt-2");
+        
+SELECT * FROM order_details;
+
+-- this is to display all orders
+SELECT customer.customer_id, customer.first, customer.last, order_table.order_id, order_table.order_number, order_table.order_total, order_table.order_date, order_table.shipping_date, order_table.is_delivered
+FROM order_table
+INNER JOIN customer ON order_table.customer_id=customer.customer_id;
+
+
+-- same join method but with where clause to find specific users order info 
+SELECT customer.customer_id, customer.first, customer.last, order_table.order_id, order_table.order_number, order_table.order_total, order_table.order_date, order_table.shipping_date, order_table.is_delivered
+FROM order_table
+INNER JOIN customer ON order_table.customer_id = customer.customer_id
+WHERE customer.customer_id = 1;
+
+-- this works at getting all of the products along with their category and category description price is being rounded up though may  need to change DataType
+SELECT product.product_id, product.product_name, product.product_img_one, product.product_img_two, product.product_img_three, product.price, category.category_name, category.category_description
+FROM category
+INNER JOIN product ON product.category_id = category.category_id;
+
+-- this is the same join as above again I added a where clause to specify the product we wnat to see
+SELECT product.product_id, product.product_name, product.product_img_one, product.product_img_two, product.product_img_three, product.price, category.category_name, category.category_description
+FROM category
+INNER JOIN product ON product.category_id = category.category_id
+WHERE product_id = 1;
+
+-- allows us to see specific order details by searching by order_id again we may need to make order_id a int instead of string
+SELECT * FROM order_details
+WHERE order_id = "matt-1";
+
+-- allows us to view a specific product by product_id
+SELECT * FROM product
+WHERE product_id = 1;
+
+-- allows us to view a specific customers info
+SELECT * FROM customer
+WHERE customer_id = 2;
+
