@@ -13,12 +13,7 @@ class HomePage extends Component {
 
   render() {
     return (
-      
-
-      <Jumbotron>
-        <Image src={clapping} fluid/>
-        </Jumbotron>
-
+    
       <div>
       <Hero/>
         <HeroButton/>
