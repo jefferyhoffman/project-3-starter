@@ -1,30 +1,19 @@
 import React, { Component } from 'react';
-
-import logo from './logo.svg';
-
+// import Hero from '../../components/Hero/Hero'
+import { Row, Col, Container, Image, Jumbotron } from 'react-bootstrap'
+import clapping from '../../pages/Images/clapping.jpg'
+import "../Home/home.css"
 class HomePage extends Component {
+
   render() {
     return (
-      <div className='Home'>
-        <div className='row'>
-          <div className='col'>
-            <img src={logo} className='App-logo' alt='logo' />
-            <p>
-              Edit <code>src/pages/Home.js</code> and save to reload.
-            </p>
-            <a
-              className='App-link'
-              href='https://reactjs.org'
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
-          </div>
-        </div>
-      </div>
+      
+      <Jumbotron>
+        <Image src={clapping} fluid/>
+        </Jumbotron>
+     
+    
     );
   }
 }
-
 export default HomePage;

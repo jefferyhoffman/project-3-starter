@@ -1,0 +1,12 @@
+/* .dropdown:not(.open) ul.dropdown-menu{
+  display:block !important;
+  opacity:0;
+  pointer-events:none;  
+  background-color: black;
+}  */
+
+
+
+.dropdown-menu {
+  text-align: center;
+}
