@@ -26,24 +26,24 @@ const UserSchema = new Schema({
         default: uniqid()
       },
       status: {},
-      total: {},
+      // total: {},
 
       products: [
         {
           type: Schema.Types.ObjectId,
-          ref: 'Products'
+          ref: 'Product'
         }
       ]
     }
   ],
   cart: {
-    total: {
-      type: Number
-    },
+    // total: {
+    //   type: Number
+    // },
     products: [
       {
         type: Schema.Types.ObjectId,
-        ref: 'Products'
+        ref: 'Product'
       }
     ]
   },
