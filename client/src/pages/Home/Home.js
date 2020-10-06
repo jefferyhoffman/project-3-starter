@@ -11,18 +11,12 @@ import Card from '../../components/Cards/Cards'
 class HomePage extends Component {
   render() {
     return (
-      
-<>
-      <Jumbotron>
-        <Image src={clapping} fluid/>
-        </Jumbotron>
-
+    
       <div>
         <Hero />
         <hr className="solid"></hr>
         <Card/>
       </div>
-</>
 
 
     );
