@@ -13,7 +13,7 @@ class HomePage extends Component {
   render() {
     return (
       
-
+<>
       <Jumbotron>
         <Image src={clapping} fluid/>
         </Jumbotron>
@@ -22,9 +22,9 @@ class HomePage extends Component {
       <Hero/>
     
       </div>
+</>
 
-     
-    
+
     );
   }
 }

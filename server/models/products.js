@@ -6,35 +6,40 @@ const ProductSchema = new Schema({
         type: String,
         trim: true,
         required: true,
-        maxlength: 32,
+        maxlength: 32
       },
       description: {
         type: String,
         trim: true,
         required: true,
-        maxlength: 2000,
+        maxlength: 2000
       },
       price: {
         type: Number,
         required: true,
         maxlength: 26,
-        trim: true,
+        trim: true
       },
       category: [
         {
           type: String,
-          ref: "Category",
-          required: true,
+          required: true
         },
       ],
-      quantity: {
+      inventory: [{
+        quantity: {
         type: Number,
-      },
+        required: true
+        }
+      
+      }],
       sold: {
         type: Number,
-        default: 0,
+        default: 0
       },
-      photo: String,
+      photo: {
+        type: String,
+        required: true
     }
   );
 const Product = mongoose.model("Product", ProductSchema);
