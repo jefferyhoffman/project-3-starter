@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const uniqid = require('uniqid');
 const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({
@@ -18,46 +19,65 @@ const UserSchema = new Schema({
       'Password should be four characters or longer'
     ]
   },
-    orders: [{
+  orders: [
+    {
+      order_id: {
+        type: String,
+        default: uniqid()
+      },
+      status: {},
+      total: {},
 
-    }],
+      products: [
+        {
+          type: Schema.Types.ObjectId,
+          ref: 'Products'
+        }
+      ]
+    }
+  ],
   cart: {
-    _id:{},
-   status:{},
-   quantity: {},
-   total: {},
+    total: {
+      type: Number,
+      
+    },
 
-   products: []
+    products: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Products'
+      }
+    ]
 
   },
-  shippingAddress: [ 
-    {  
-        name: {
-        type: String,
-        trim: true,
-        required: true  
-        }  ,
-     street:   {
+  shippingAddress: [
+    {
+      name: {
         type: String,
         trim: true,
         required: true
-    },
-    city: {
+      },
+      street: {
         type: String,
         trim: true,
         required: true
-    },
-    state: {
+      },
+      city: {
         type: String,
         trim: true,
         required: true
-    },
-    zipCode: {
+      },
+      state: {
         type: String,
         trim: true,
         required: true
+      },
+      zipCode: {
+        type: String,
+        trim: true,
+        required: true
+      }
     }
-  }
   ]
 })
 
