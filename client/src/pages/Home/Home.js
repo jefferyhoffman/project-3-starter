@@ -3,7 +3,6 @@ import logo from './logo.svg';
 import Hero from '../../components/Jumbotron/Jumbotron'
 import '../../styles/jumbotron.css'
 import jumping from "../../images/jumping.jpeg";
-import logo from './logo.svg';
 import menu from "../Menu/Menu";
 
 
