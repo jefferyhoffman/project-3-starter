@@ -5,6 +5,7 @@ import API from '../../lib/API';
 import TokenStore from '../../lib/TokenStore';
 import AuthContext from '../../contexts/AuthContext';
 import Navigation from '../../components/Navigation/Navigation';
+import Footer from '../Footer/footer'
 import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
 import Home from '../../pages/Home/Home';
 import Login from '../../pages/Login/Login';
@@ -61,10 +62,11 @@ class App extends Component {
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />
               <Route path = '/layout' component = {Layout}/>
-              <PrivateRoute path='/secret' component={Secret} />
+              {/* <PrivateRoute path='/secret' component={Secret} /> */}
               <Route component={NotFound} />
             </Switch>
           </div>
+          <Footer />
         </div>
       </AuthContext.Provider>
     );
