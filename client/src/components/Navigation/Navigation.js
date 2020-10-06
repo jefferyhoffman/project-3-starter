@@ -55,8 +55,12 @@ class Navigation extends Component {
       <a className="navbar-item">
         Documentation
       </a>
+     
+      {user && 
+       <div className='nav-item'>
+           <Link className='nav-link' to='/menu' onClick={this.toggleCollapse}>Menu</Link>
+      </div>}
     </div>
-
     <div className="navbar-end">
       <div className="navbar-item">
         <div className="buttons">
