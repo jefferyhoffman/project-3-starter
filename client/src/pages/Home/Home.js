@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import jumping from "../../images/jumping.jpeg";
 import logo from './logo.svg';
+import menu from "../Menu/Menu";
 
 
 

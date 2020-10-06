@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import AuthContext from '../../contexts/AuthContext';
 import AuthDropdown from '../../components/AuthDropdown/AuthDropdown';
 
+
 class Navigation extends Component {
   static contextType = AuthContext;
 
@@ -47,8 +48,12 @@ class Navigation extends Component {
       <a className="navbar-item">
         Documentation
       </a>
+     
+      {user && 
+       <div className='nav-item'>
+           <Link className='nav-link' to='/menu' onClick={this.toggleCollapse}>Menu</Link>
+      </div>}
     </div>
-
     <div className="navbar-end">
       <div className="navbar-item">
         <div className="buttons">
