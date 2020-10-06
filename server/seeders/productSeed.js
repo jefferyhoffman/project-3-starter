@@ -8,8 +8,8 @@ mongoose.connect("mongodb://localhost/saint-george", {
 
 const products = [
     {
-        name: "Product Name",
-        description: "Product Description",
+        name: "Flow Y Longline Bra",
+        description: "Low Support. Made for activities such as walking",
         price: 19.99,
         category: "Product Category",
         inventory: [
@@ -17,7 +17,7 @@ const products = [
                 quantity: 25,
                 size: "S",
                 color: "Red",
-                gender: "Unisex"
+                gender: "Womens"
             }
         ],
         sold: 4,
