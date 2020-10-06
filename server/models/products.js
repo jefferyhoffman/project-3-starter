@@ -38,6 +38,10 @@ const ProductSchema = new Schema({
     color: {
       type: String,
       required: true
+    },
+    gender: {
+      type: String,
+      required: true
     }
   }],
   sold: {
