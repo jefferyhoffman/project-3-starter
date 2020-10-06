@@ -28,7 +28,7 @@ const app = express();
 //-- Mongoose Setup ----------------------------------------------------------
 mongoose.connect(
   process.env.MONGODB_URI || 
-  'mongodb://localhost/immense-plains-92614'
+  'mongodb://localhost/immense-plains-92614',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
