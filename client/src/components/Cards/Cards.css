@@ -2,4 +2,12 @@
     height:220px;
     width:160px;
     border:white;
+    left:50px;
+    margin-bottom: 25px;
+    /* margin-left:50px; */
+    
+}
+.cardtext{
+font-size:14px;
+/* justify-content: center; */
 }

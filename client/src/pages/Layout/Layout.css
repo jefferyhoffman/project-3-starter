@@ -1,0 +1,13 @@
+.v1{
+    border-left:1px solid lightgray;
+    height:500px;
+    position: absolute;
+    margin-right: auto;
+}
+
+.title{
+    position: relative;
+    right:35%;
+    margin-top:20px;
+    font-size:20px;
+}

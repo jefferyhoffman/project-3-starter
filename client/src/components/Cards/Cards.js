@@ -10,7 +10,7 @@ function Cards (){
         <Col>
   <Card className = "card">
     <Card.Img variant="top" src={lulu}  style = {{width: 170, height:200}}/>
-      <Card.Text>
+      <Card.Text className = "cardtext">
         Flow Y Longline Bra
         <br>
         </br>
@@ -21,7 +21,7 @@ function Cards (){
   <Col>
   <Card className = "card">
     <Card.Img variant="top" src={lulu}  style = {{width: 170, height:200}}/>
-      <Card.Text>
+      <Card.Text className = "cardtext">
         Flow Y Longline Bra
         <br>
         </br>
@@ -32,7 +32,7 @@ function Cards (){
   <Col>
   <Card className = "card">
     <Card.Img variant="top" src={lulu}  style = {{width: 170, height:200}}/>
-      <Card.Text>
+      <Card.Text className = "cardtext">
         Flow Y Longline Bra
         <br>
         </br>
@@ -43,7 +43,7 @@ function Cards (){
   <Col>
   <Card className = "card">
     <Card.Img variant="top" src={lulu}  style = {{width: 170, height:200}}/>
-      <Card.Text>
+      <Card.Text className = "cardtext">
         Flow Y Longline Bra
         <br>
         </br>
