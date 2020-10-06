@@ -1,104 +1,52 @@
 import React from 'react';
 import clapping1 from '../Carousel/clapping1.jpg'
 import gk from '../../pages/Images/george3.jpg'
-import { Carousel, Col, Container, Image, Row } from 'react-bootstrap';
-import '../Carousel/caro.css'
+import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBContainer } from
+"mdbreact";
 
-
-function Athletes() {
-
+const Carousel = () => {
   return (
-    <Container className="mike" fluid>
-      <Row>
-        <Col xs={10} md={10} lg={10}>
-          <Carousel className= "turd">
-            <Carousel.Item>
-              <Image className= "turd"
-
+    <MDBContainer>
+      <MDBCarousel
+        activeItem={1}
+        length={3}
+        showControls={true}
+        showIndicators={false}
+        className="z-depth-1"
+        slide
+      >
+        <MDBCarouselInner>
+          <MDBCarouselItem itemId="1">
+            <MDBView>
+              <img
+                className="d-block w-100"
                 src={clapping1}
                 alt="First slide"
-                fluid
               />
-
-            </Carousel.Item>
-            <Carousel.Item>
-              <Image className = "turd"
-
+            </MDBView>
+          </MDBCarouselItem>
+          <MDBCarouselItem itemId="2">
+            <MDBView>
+              <img
+                className="d-block w-100"
                 src={gk}
-                alt="Third slide"
-                fluid
+                alt="Second slide"
               />
-
-              <Carousel.Caption>
-                <h3>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </Carousel.Caption>
-            </Carousel.Item>
-          </Carousel>
-         
-        </Col>
-      </Row>
-      
-    </ Container>
-
-  )
+            </MDBView>
+          </MDBCarouselItem>
+          <MDBCarouselItem itemId="3">
+            <MDBView>
+              <img
+                className="d-block w-100"
+                src="https://mdbootstrap.com/img/Photos/Slides/img%20(47).jpg"
+                alt="Third slide"
+              />
+            </MDBView>
+          </MDBCarouselItem>
+        </MDBCarouselInner>
+      </MDBCarousel>
+    </MDBContainer>
+  );
 }
-export default Athletes;
 
-// function ControlledCarousel() {
-//   const [index, setIndex] = useState(0);
-
-//   // state = {
-//   //   index: 0,
-//   //   setIndex: 0
-//   // }
-
-//   const handleSelect = (selectedIndex, e) => {
-//     setIndex(selectedIndex);
-//   };
-
-//   return (
-//     <Carousel activeIndex={index} onSelect={handleSelect}>
-//       <Carousel.Item>
-//         <img
-//           className="d-block w-100"
-//           src="holder.js/800x400?text=First slide&bg=373940"
-//           alt="First slide"
-//         />
-//         <Carousel.Caption>
-//           <h3>First slide label</h3>
-//           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-//         </Carousel.Caption>
-//       </Carousel.Item>
-//       <Carousel.Item>
-//         <img
-//           className="d-block w-100"
-//           src="holder.js/800x400?text=Second slide&bg=282c34"
-//           alt="Second slide"
-//         />
-
-//         <Carousel.Caption>
-//           <h3>Second slide label</h3>
-//           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-//         </Carousel.Caption>
-//       </Carousel.Item>
-//       <Carousel.Item>
-//         <img
-//           className="d-block w-100"
-//           src="holder.js/800x400?text=Third slide&bg=20232a"
-//           alt="Third slide"
-//         />
-
-//         <Carousel.Caption>
-//           <h3>Third slide label</h3>
-//           <p>
-//             Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-//           </p>
-//         </Carousel.Caption>
-//       </Carousel.Item>
-//     </Carousel>
-//   );
-// }
-
-// // render(<ControlledCarousel />);
-
+export default Carousel;
