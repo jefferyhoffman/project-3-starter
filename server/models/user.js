@@ -18,6 +18,47 @@ const UserSchema = new Schema({
       'Password should be four characters or longer'
     ]
   },
+    orders: [{
+
+    }],
+  cart: {
+    _id:{},
+   status:{},
+   quantity: {},
+   total: {},
+
+   products: []
+
+  },
+  shippingAddress: [ 
+    {  
+        name: {
+        type: String,
+        trim: true,
+        required: true  
+        }  ,
+     street:   {
+        type: String,
+        trim: true,
+        required: true
+    },
+    city: {
+        type: String,
+        trim: true,
+        required: true
+    },
+    state: {
+        type: String,
+        trim: true,
+        required: true
+    },
+    zipCode: {
+        type: String,
+        trim: true,
+        required: true
+    }
+  }
+  ]
 })
 
 class newUser {
