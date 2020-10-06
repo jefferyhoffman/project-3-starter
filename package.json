@@ -19,7 +19,11 @@
     "nodemon": "^1.18.10"
   },
   "dependencies": {
+<<<<<<< HEAD
     "bootstrap": "^4.5.2",
     "react-bootstrap": "^1.3.0"
+=======
+    "bootstrap": "^4.5.2"
+>>>>>>> b34bc7179cb4d48457ca16a355bcc7326bec0bdf
   }
 }

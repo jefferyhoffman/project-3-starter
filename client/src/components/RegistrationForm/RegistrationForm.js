@@ -28,56 +28,60 @@ class RegistrationForm extends Component {
     const { email, password, passwordConfirm } = this.state;
 
     return (
-      <div className='LoginForm'>
-        <div className='card'>
-          <div className='card-body'>
+      <div classNameName='LoginForm'>
+        <div classNameName='card'>
+          <div classNameName='card-body'>
             <form onSubmit={this.handleSubmit}>
-              <div className='input-group mb-3'>
-                <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Mail} /></span>
-                </div>
-                <input
-                  className='form-control'
-                  id='email'
-                  type='email'
-                  name='email'
+
+              <div className="field">
+                <p className="control has-icons-left has-icons-right">
+                <Octicon icon={Mail} />
+                  <input 
+                  className="input" 
+                  type="email" 
+                  name="email" 
                   placeholder='email@provider.com'
                   value={email}
-                  onChange={this.handleInputChange}
-                />
+                  onChange={this.handleInputChange} />
+                  <span className="icon is-small is-left">
+                    <i className="fas fa-envelope"></i>
+                  </span>
+                  <span className="icon is-small is-right">
+                    <i className="fas fa-check"></i>
+                  </span>
+                </p>
               </div>
-
-              <div className='input-group mb-3'>
-                <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Key} /></span>
-                </div>
-                <input
-                  className='form-control'
-                  id='password'
-                  type='password'
-                  name='password'
+              <div className="field">
+                <p className="control has-icons-left">
+                <Octicon icon={Key} />
+                  <input 
+                  className="input" 
+                  type="password" 
+                  name="password"
                   placeholder='password'
                   value={password}
-                  onChange={this.handleInputChange}
-                />
+                  onChange={this.handleInputChange} />
+                  <span className="icon is-small is-left">
+                    <i className="fas fa-lock"></i>
+                  </span>
+                </p>
               </div>
-
-              <div className='input-group mb-3'>
-                <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Key} /></span>
-                </div>
-                <input
-                  className='form-control'
-                  id='password-confirm'
-                  type='password'
+              <div className="field">
+                <p className="control has-icons-left">
+                <Octicon icon={Key} />
+                  <input 
+                  className="input" 
+                  type="password" 
                   name='passwordConfirm'
                   placeholder='password (again)'
                   value={passwordConfirm}
-                  onChange={this.handleInputChange}
-                />
+                  onChange={this.handleInputChange} />
+                  <span className="icon is-small is-left">
+                    <i className="fas fa-lock"></i>
+                  </span>
+                </p>
               </div>
-
-              <button className='btn btn-primary' type='submit'>Register Now!</button>
+              <button classNameName='button is-primary' type='submit'>Register Now!</button>
             </form>
           </div>
         </div>
@@ -87,3 +91,48 @@ class RegistrationForm extends Component {
 }
 
 export default RegistrationForm;
+
+{/* <div classNameName='input-group mb-3'>
+                <div classNameName="input-group-prepend">
+                  <span classNameName="input-group-text"><Octicon icon={Mail} /></span>
+                </div>
+                <input
+                  classNameName='form-control'
+                  id='email'
+                  type='email'
+                  name='email'
+                  placeholder='email@provider.com'
+                  value={email}
+                  onChange={this.handleInputChange}
+                />
+              </div>
+
+              <div classNameName='input-group mb-3'>
+                <div classNameName="input-group-prepend">
+                  <span classNameName="input-group-text"><Octicon icon={Key} /></span>
+                </div>
+                <input
+                  classNameName='form-control'
+                  id='password'
+                  type='password'
+                  name='password'
+                  placeholder='password'
+                  value={password}
+                  onChange={this.handleInputChange}
+                />
+              </div>
+
+              <div classNameName='input-group mb-3'>
+                <div classNameName="input-group-prepend">
+                  <span classNameName="input-group-text"><Octicon icon={Key} /></span>
+                </div>
+                <input
+                  classNameName='form-control'
+                  id='password-confirm'
+                  type='password'
+                  name='passwordConfirm'
+                  placeholder='password (again)'
+                  value={passwordConfirm}
+                  onChange={this.handleInputChange}
+                />
+              </div> */}

@@ -48,23 +48,23 @@ class Login extends Component {
 
     return (
       <div className='Login'>
-        <div className='row'>
-          <div className='col'>
+        <div className='columns'>
+          <div className='column'>
             <h1>Login</h1>
           </div>
         </div>
         {this.state.error &&
-          <div className='row'>
-            <div className='col'>
-              <div className='alert alert-danger mb-3' role='alert'>
+          <div className='columns'>
+            <div className='column'>
+              <div className='message message-danger' role='alert'>
                 {this.state.error}
               </div>
             </div>
           </div>}
-        <div className='row'>
-          <div className='col'>
+        <div className='columns'>
+          <div className='column'>
             <LoginForm onSubmit={this.handleSubmit} />
-            <div className='mt-3'>Don't have an account? <Link to='/register'>Click here to register.</Link></div>
+            <div>Don't have an account? <Link to='/register'>Click here to register.</Link></div>
           </div>
         </div>
       </div>
