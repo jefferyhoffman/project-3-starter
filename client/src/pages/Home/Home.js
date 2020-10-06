@@ -7,6 +7,7 @@ import "../Home/home.css";
 import Hero from "../../components/Hero/Hero";
 import Card from '../../components/Cards/Cards'
 // import HeroButton from '../../components/Button/Button'
+import Carousel from '../../components/Carousel/Carousel'
 
 class HomePage extends Component {
   render() {
@@ -15,6 +16,7 @@ class HomePage extends Component {
         <Hero />
         <hr className="solid"></hr>
         <Card/>
+        <Carousel />
       </div>
     );
   }
