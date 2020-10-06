@@ -3,7 +3,10 @@ import MyCalendar from "../../components/MyCalendar";
 
 function Member() {
     return (
-        <MyCalendar/>
+        <div>
+            <button type="button" class="btn btn-primary">Add New Bill</button>
+            <MyCalendar />
+        </div>
     )
 }
 
