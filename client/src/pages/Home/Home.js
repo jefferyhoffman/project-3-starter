@@ -6,8 +6,8 @@ class HomePage extends Component {
   render() {
     return (
       <div className='Home'>
-        <div className='row'>
-          <div className='col'>
+        <div className='columns'>
+          <div className='column'>
             <img src={logo} className='App-logo' alt='logo' />
             <p>
               Edit <code>src/pages/Home.js</code> and save to reload.
