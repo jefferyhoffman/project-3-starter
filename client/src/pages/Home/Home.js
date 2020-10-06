@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 // import Hero from '../../components/Hero/Hero'
-import { Row, Col, Container, Image, Jumbotron } from 'react-bootstrap'
-import clapping from '../../pages/Images/clapping.jpg'
-import "../Home/home.css"
-import Hero from '../../components/Hero/Hero'
-
-
+import { Row, Col } from "react-bootstrap";
+// import clapping from '../../pages/Images/clapping.jpg'
+import "../Home/home.css";
+import Hero from "../../components/Hero/Hero";
+import Card from '../../components/Cards/Cards'
+// import HeroButton from '../../components/Button/Button'
 
 class HomePage extends Component {
-
   render() {
     return (
       
@@ -19,8 +18,9 @@ class HomePage extends Component {
         </Jumbotron>
 
       <div>
-      <Hero/>
-    
+        <Hero />
+        <hr className="solid"></hr>
+        <Card/>
       </div>
 </>
 

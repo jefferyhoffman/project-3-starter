@@ -1,5 +1,60 @@
-.hero{
-    height:100%;
-    width: 100%!important;
+/* .hero{
+    width: 100%;
+    height: auto;
+} */
+
+.img-container {
+  position: relative;
+  /* width:50%; */
 }
-  
+
+.img-container image {
+  width: 100%;
+  height: auto;
+}
+
+.img-container .btn {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  /* transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%); */
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 5px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.img-container .btn2 {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  /* transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%); */
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 5px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.img-container .btn:hover {
+  background-color: black;
+}
+.btn2:hover {
+  background-color: black;
+}
+
+.overlayText {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:white;
+  font-size: 40px;
+}

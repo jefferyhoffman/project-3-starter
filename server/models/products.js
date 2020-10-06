@@ -30,7 +30,7 @@ const ProductSchema = new Schema({
         quantity: {
         type: Number,
         required: true
-        }
+        },
       
       }],
       sold: {
