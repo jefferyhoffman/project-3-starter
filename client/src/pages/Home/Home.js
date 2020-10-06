@@ -1,28 +1,21 @@
 import React, { Component } from 'react';
-
-import logo from './logo.svg';
+import ProductView from './../../components/ProductView/productview'
+import ProductCard from './../../components/ProductView/productview'
 
 class HomePage extends Component {
+
   render() {
     return (
-      <div className='Home'>
-        <div className='row'>
-          <div className='col'>
-            <img src={logo} className='App-logo' alt='logo' />
-            <p>
-              Edit <code>src/pages/Home.js</code> and save to reload.
-            </p>
-            <a
-              className='App-link'
-              href='https://reactjs.org'
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
-          </div>
+      <div>
+        <div className="jumbotron">
+          <h1 className="display-4">Welcome to git.PPE</h1>
+          <p className="lead">A website to order all your PPE needs during the pandemic</p>
+          <hr className="my-4"/>
+            <p>Take a look at our inventory below.</p>
+            {/* <a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a> */}
         </div>
-      </div>
+        <ProductView />
+        </div>
     );
   }
 }
