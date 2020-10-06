@@ -11,3 +11,15 @@
     margin-top:20px;
     font-size:20px;
 }
+
+.vdivide{
+    /* display: flex; */
+    border-left:1px solid lightgray;
+    height:450px;
+    /* position: absolute; */
+    /* left: 10%; */
+    margin-left:-3px;
+    margin-right: 10px;
+    bottom:300px;
+ 
+}

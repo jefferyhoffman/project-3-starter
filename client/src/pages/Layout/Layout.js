@@ -1,23 +1,23 @@
 import React from "react";
-import {Container} from 'react-bootstrap';
-import '../Layout/Layout.css'
-import Cards from '../../components/Cards/Cards'
-
+// import {Container} from 'react-bootstrap';
+import { MDBContainer, MDBCol, MDBRow } from "mdbreact";
+import "../Layout/Layout.css";
+import Cards from "../../components/Cards/Cards";
 
 function Layout() {
   return (
-    <>
-      <h2 className = "title">Shirts</h2>
-      <Container fluid>
-      <hr className="solid"></hr>
-      </Container>
-      <Cards/>
-      <Container>
-      <div className = 'v1'></div>
-
-      </Container>
-
-    </>
+    <div>
+      <h2 className="title">Shirts</h2>
+      <MDBContainer>
+        <hr className="solid"></hr>
+        <MDBRow style={{ borderLeft: "1px solid lightGray" }}>
+          <MDBCol>
+            <Cards />
+            {/* <div className="vdivide"></div> */}
+          </MDBCol>
+        </MDBRow>
+      </MDBContainer>
+    </div>
   );
 }
 export default Layout;

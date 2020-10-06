@@ -1,13 +1,10 @@
-.card{
-    height:220px;
-    width:160px;
-    border:white;
-    left:50px;
-    margin-bottom: 25px;
-    /* margin-left:50px; */
-    
+
+.cardImg{
+position:fixed;
+width:230px; 
+height: 284px;
+
 }
 .cardtext{
 font-size:14px;
-/* justify-content: center; */
 }
