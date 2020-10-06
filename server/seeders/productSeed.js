@@ -6,21 +6,32 @@ mongoose.connect("mongodb://localhost/saint-george", {
     useFindAndModify: false
 });
 
-const products = [
+const productSeed = [
     {
         name: "Flow Y Longline Bra",
-        description: "Low Support. Made for activities such as walking",
+        description: "Feels like nothing at all. Powered by buttery-soft fabric, this long-line yoga bra has minimal seams to help keep your mind on the moment.",
         price: 19.99,
-        category: "Product Category",
+        category: "Bra's",
         inventory: [
             {
                 quantity: 25,
                 size: "S",
-                color: "Red",
+                color: "White",
                 gender: "Womens"
             }
         ],
-        sold: 4,
-        photo: " "
+        sold: 0,
+        photo: "lulu.jpeg"
     }
 ]
+
+// db.Product.deleteMany({})
+//   .then(() => db.Product.collection.insertMany(productSeed))
+//   .then(data => {
+//     console.log(data.result.n + " products inserted!");
+//     process.exit(0);
+//   })
+//   .catch(err => {
+//     console.error(err);
+//     process.exit(1);
+//   });
