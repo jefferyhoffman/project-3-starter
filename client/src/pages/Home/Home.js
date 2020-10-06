@@ -11,6 +11,12 @@ import Carousel from '../../components/Carousel/Carousel'
 class HomePage extends Component {
   render() {
     return (
+      
+<>
+      <Jumbotron>
+        <Image src={clapping} fluid/>
+        </Jumbotron>
+
       <div>
         <Hero />
         <hr className="solid"></hr>
@@ -18,6 +24,9 @@ class HomePage extends Component {
         <hr className="solid"></hr>
         <Carousel />
       </div>
+</>
+
+
     );
   }
 }
