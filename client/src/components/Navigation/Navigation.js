@@ -1,8 +1,16 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../../styles/logo.png'
 
 import AuthContext from '../../contexts/AuthContext';
 import AuthDropdown from '../../components/AuthDropdown/AuthDropdown';
+
+const styles= {
+  navbar: {
+    height: "100px",
+    opacity: "75%"
+  }
+}
 
 class Navigation extends Component {
   static contextType = AuthContext;
@@ -26,10 +34,10 @@ class Navigation extends Component {
     return (
       <div classNameName='Navigation'>
       
-      <nav className="navbar" role="navigation" aria-label="main navigation">
+      <nav className="navbar is-white" role="navigation" aria-label="main navigation" style={styles.navbar}>
   <div className="navbar-brand">
     <a className="navbar-item" to="#">
-      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
+      <img src={logo} width="100" height="200"/>
     </a>
 
     <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -52,7 +60,7 @@ class Navigation extends Component {
     <div className="navbar-end">
       <div className="navbar-item">
         <div className="buttons">
-          <a className="button is-primary">
+          <a className="button">
             {user
             ? <AuthDropdown onClick={this.toggleCollapse} />
            : <Link to='/login' onClick={this.toggleCollapse}><strong>Sign up/Login</strong></Link>}
