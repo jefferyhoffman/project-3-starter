@@ -11,13 +11,13 @@ const productSeed = [
         name: "Flow Y Longline Bra",
         description: "Feels like nothing at all. Powered by buttery-soft fabric, this long-line yoga bra has minimal seams to help keep your mind on the moment.",
         price: 19.99,
-        category: "Bra's",
+        category: ["Bra's"],
         inventory: [
             {
                 quantity: 25,
                 size: "S",
                 color: "White",
-                gender: "Womens"
+                gender: "Women's"
             }
         ],
         sold: 0,
@@ -25,13 +25,13 @@ const productSeed = [
     }
 ]
 
-// db.Product.deleteMany({})
-//   .then(() => db.Product.collection.insertMany(productSeed))
-//   .then(data => {
-//     console.log(data.result.n + " products inserted!");
-//     process.exit(0);
-//   })
-//   .catch(err => {
-//     console.error(err);
-//     process.exit(1);
-//   });
+db.Products.deleteMany({})
+  .then(() => db.Products.collection.insertMany(productSeed))
+  .then(data => {
+    console.log(data.result.n + " products inserted!");
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
