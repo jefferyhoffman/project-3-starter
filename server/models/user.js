@@ -18,9 +18,13 @@ const UserSchema = new Schema({
       'Password should be four characters or longer'
     ]
   },
-    orders: [{
-
-    }],
+    orders: [
+      {
+      order_id: {
+        type: Number
+      }
+    }
+  ],
   cart: {
     _id:{},
    status:{},

@@ -31,7 +31,14 @@ const ProductSchema = new Schema({
         type: Number,
         required: true
         },
-      
+        size: {
+          type: String,
+          required: true
+        }, 
+        color: {
+          type: String,
+          required: true
+        }
       }],
       sold: {
         type: Number,
@@ -41,7 +48,7 @@ const ProductSchema = new Schema({
         type: String,
         required: true
     }
-  );
+});
 const Product = mongoose.model("Product", ProductSchema);
 
 module.exports = Product;
