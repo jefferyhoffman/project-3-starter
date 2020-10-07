@@ -1147,10 +1147,66 @@ const productSeed = [
         ],
         photo: "OntheFlyShort.jpeg"
     },
-
-    
-
-
+    {
+        name: "City Adventurer Backpack",
+        description: "This backpack features a built-in pocket for sweaty gear so you can go from workout-to-work without having those worlds collide.",
+        price: 50.00,
+        category: ["Bags"],
+        inventory: [
+            {
+                quantity: 25,
+                size: "One Size",
+                color: "Black",
+                gender: "Womens"
+            }
+        ],
+        sold: [
+            {
+                quantity: 0,
+            }
+        ],
+        photo: "CityAdventurerBackpack.jpeg"
+    },
+    {
+        name: "Out Of Range Backpack",
+        description: "It's go time. From sweat to whatever's next, this backpack has plenty of quick-access storage—there's even a protective-shell pocket for your shades.",
+        price: 50.00,
+        category: ["Bags"],
+        inventory: [
+            {
+                quantity: 25,
+                size: "One Size",
+                color: "Red",
+                gender: "Unisex"
+            }
+        ],
+        sold: [
+            {
+                quantity: 0,
+            }
+        ],
+        photo: "OutOfRangeBackpack.jpeg"
+    },
+    {
+        name: "Command The Day Duffel",
+        description: "A super-functional duffle with plenty of divided space because your shoes and workout gear don't need to get to know your laptop.",
+        price: 50.00,
+        category: ["Bags"],
+        inventory: [
+            {
+                quantity: 25,
+                size: "One Size",
+                color: "Grey",
+                gender: "Unisex"
+            }
+        ],
+        sold: [
+            {
+                quantity: 0,
+            }
+        ],
+        photo: "CommandTheDayDuffel.jpeg"
+    }
 ]
 
 db.Products.deleteMany({})
