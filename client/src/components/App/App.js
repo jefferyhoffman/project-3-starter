@@ -15,15 +15,15 @@ import Menu from '../../pages/Menu/Menu';
 import AffirmAPI from "../../Utils/AffirmAPI";
 import Mantras from "../../pages/Mantras/Mantras"
 import Affirmations from "../../pages/Affirmations/Affirmations";
-// // import Bob from "../Bob";
-// // import Breathing from "../Breathing";
-// import Clinic from "../../pages/Clinic/Clinic";
-// // import Comedy from "../Comedy";
-// import Community from "../../pages/Community/Community";
-// import Hotline from "../../pages/Hotline/Hotline";
-// // import Jokes from "../Jokes";
-// // import Odd from "../Odd";
-// import Profile from "../../pages/Profile/Profile";
+import Bob from "../../pages/Bob/Bob";
+import Breathing from "../../pages/Breathing/Breathing";
+import Clinic from "../../pages/Clinic/Clinic";
+import Comedy from "../../pages/Comedy/Comedy";
+import Community from "../../pages/Community/Community";
+import Hotline from "../../pages/Hotline/Hotline";
+import Jokes from "../../pages/Jokes/Jokes";
+import Odd from "../../pages/Odd/Odd";
+import Profile from "../../pages/Profile/Profile";
 
 
 import './App.css';
