@@ -1,13 +1,8 @@
-.hero { 
-    background-position: center center;
-    background-repeat: no-repeat no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    padding-top: 15%;
-  }
-
+.hero {
+    
+}
   body {
-    background-image: url("../styles//plants.jpg");
+    background-image: url("./plants.jpg");
     background-repeat: no-repeat, no-repeat;
     width: 100%;
     height: 100%;
@@ -17,7 +12,8 @@
 
   .wrapper {
     position: relative;
-    height:110vh;
+    height:135h;
     overflow:hidden;
-    margin-top: -49px;
-  }
+    margin-top: -79px;
+ 
+  } 

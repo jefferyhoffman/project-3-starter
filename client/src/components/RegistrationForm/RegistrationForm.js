@@ -29,8 +29,8 @@ class RegistrationForm extends Component {
 
     return (
       <div classNameName='LoginForm'>
-        <div classNameName='card'>
-          <div classNameName='card-body'>
+        {/* <div classNameName='card'>
+          <div classNameName='card-body'> */}
             <form onSubmit={this.handleSubmit}>
 
               <div className="field">
@@ -83,8 +83,8 @@ class RegistrationForm extends Component {
               </div>
               <button classNameName='button is-primary' type='submit'>Register Now!</button>
             </form>
-          </div>
-        </div>
+          {/* </div>
+        </div> */}
       </div>
     )
   }
