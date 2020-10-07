@@ -40,17 +40,61 @@
 
 .jumbotron{
   margin-bottom: 0;
+  background-image: 
+  linear-gradient(to bottom, rgba(245, 246, 252, 0), rgb(255, 255, 255)),
+    url("https://sales.ciamedical.com/wp-content/uploads/2015/10/CIA-Medical-Job-Description.jpg");
+    background-size: cover;
+    height: 600px;
 }
 
 .navbar {
   margin-bottom: 0 !important;
+  background-color: #011586;
+  color: white;
 }
+
+.nav-link {
+  color: white;
+  font-size: 25px;
+}
+
+.nav-link:hover {
+  color: #ec8430;
+}
+
+.navbar-brand {
+  color: #ec8430;
+  font-size: 35px;
+}
+
+.navbar-brand:hover {
+  color: #ec8430;
+  transform: scale(1.1);
+}
+
 .productview {
   height: 100vh;
   width: 100vw;
-  background-color: rgb(142, 142, 146);
+  background-color: rgb(255, 255, 255);
 }
 
+.hello {
+  color: purple;
+  size: 50px;
+  padding-top: 200px;
+  font-family: "Arial";
+}
+
+.paragraph {
+  font-size: 25px;
+  margin: 30px;
+  color: #011586;
+}
+
+
+.jumbotronImg {
+  margin-top: 300px;
+}
 
 /* Card Styles */
 
@@ -62,46 +106,47 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #131313;
+
+.col-12 {
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.no_margin {
-    position: relative;
-    margin: 0;
-
-}
-
-.container .card {
+.card {
     position: relative;
     width: 320px;
     height: 450px;
-    background: #232323;
+    background: #011586;
     border-radius: 20px;
     overflow: hidden;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 100px;
+    padding: 0;
+    opacity: 0.5;
+}
+.card:hover {
+  opacity: 1.0;
+  transform: scale(1.3);
 }
 
-.container .card:before {
+.card:before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: #ecda30;
+    background: #ec8430;
     clip-path: circle(150px at 80% 20%);
     transition: 0.5s ease-in-out;
 }
 
-.container .card:hover:before {
+.card:hover:before {
     clip-path: circle(300px at 80% -20%);
 }
 
-.container .card:after {
+.card:after {
     content: "PPE";
     position: absolute;
     top: 30%;
@@ -113,7 +158,7 @@ body {
 
 }
 
-.container .card .imgBx {
+.card .imgBx {
     position: absolute;
     top: 50%;
     transform: translateY(-60%);
@@ -123,13 +168,13 @@ body {
     transition: .5s;
 }
 
-.container .card:hover .imgBx {
+.card:hover .imgBx {
     top: 0%;
     transform: translateY(-25%);
     /* bug  */
 }
 
-.container .card .imgBx img {
+.card .imgBx img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -137,7 +182,7 @@ body {
     width: 270px;
 }
 
-.container .card .contentBx {
+.card .contentBx {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -147,19 +192,19 @@ body {
     z-index: 90;
 }
 
-.container .card:hover .contentBx {
+.card:hover .contentBx {
     height: 210px;
 }
 
-.container .card .contentBx h2 {
+.card .contentBx h2 {
     position: relative;
     font-weight: 600;
     letter-spacing: 1px;
     color: #fff;
 }
 
-.container .card .contentBx .size,
-.container .card .contentBx .color {
+.card .contentBx .size,
+.card .contentBx .color {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -169,20 +214,20 @@ body {
     visibility: hidden;
 }
 
-.container .card:hover .contentBx .size {
+.card:hover .contentBx .size {
     opacity: 1;
     visibility: visible;
     transition-delay: .5s;
 }
 
-.container .card:hover .contentBx .color {
+.card:hover .contentBx .color {
     opacity: 1;
     visibility: visible;
     transition-delay: .6s;
 }
 
-.container .card .contentBx .size h3,
-.container .card .contentBx .color h3 {
+.card .contentBx .size h3,
+.card .contentBx .color h3 {
     color: white;
     font-weight: 300;
     font-size: 14px;
@@ -191,48 +236,8 @@ body {
     margin-right: 10px;
 }
 
-.container .card .contentBx .size span {
-    width: 26px;
-    height: 26px;
-    text-align: center;
-    line-height: 26px;
-    font-size: 14px;
-    display: inline-block;
-    color: #111;
-    background: #fff;
-    margin: 0 5px;
-    transition: .5s;
-    color: #111;
-    border-radius: 4px;
-    cursor: pointer;
-}
 
-.container .card .contentBx .size span:hover {  /* other bug */
-    background: #B90000;
-}
-
-.container .card .contentBx .color span {
-    width: 20px;
-    height: 20px;
-    background: #ff0;
-    border-radius: 50%;
-    margin: 0 5px;
-    cursor: pointer;
-}
-
-.container .card .contentBx .color span:nth-child(2) {
-     background: #1BBFE9;
-}
-
-.container .card .contentBx .color span:nth-child(3) {
-     background: #1B2FE9;
-}
-
-.container .card .contentBx .color span:nth-child(4) {
-     background: #080481;
-}
-
-.container .card .contentBx a {
+.card .contentBx a {
     display: inline-block;
     padding: 10px 20px;
     background: #fff;
@@ -246,15 +251,19 @@ body {
     transition: .5s;
 }
 
-.container .card:hover .contentBx a {
+.card:hover .contentBx a {
     opacity: 1;
     transform: translateY(0px);
-    transition-delay: .7s;
+    transition-delay: .2s;
 } 
 
-.container .card:hover .contentBx p {
+.card:hover .contentBx p {
   opacity: 1;
   color: white;
   transform: translateY(0px);
-  transition-delay: .7s;
+  transition-delay: .2s;
 } 
+
+.contentBx p {
+  color: white;
+}

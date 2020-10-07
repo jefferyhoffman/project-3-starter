@@ -9,12 +9,12 @@ class ProductCard extends Component {
 
         <div className="card">
             <div className="imgBx">
-                <img src="https://i.pinimg.com/originals/27/97/07/27970736454a5ceacafb35218f195aaf.png" alt="n-95"/>
+                <img src="https://pngimg.com/uploads/medical_gloves/medical_gloves_PNG128.png" alt="n-95"/>
             </div>
 
             <div className="contentBx">
 
-                <h2>N-95 Mask</h2>
+                <h2>Surgical Gloves</h2>
                 <p>item description</p>
                 <a href="#">Add to Cart</a>
             </div>
