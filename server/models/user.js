@@ -4,13 +4,13 @@ const Schema = mongoose.Schema;
 const UserSchema = new Schema({
   first_name: { 
     type: String, 
-    required: 'first name is required',
+    // required: 'first name is required',
     trim: true
   },
   
   last_name: { 
     type: String,
-    required: 'last name is required',
+    // required: 'last name is required',
     trim: true
   },
   
@@ -36,7 +36,14 @@ const UserSchema = new Schema({
   userCreatedDate: {
     type: Date,
     default: () => new Date()
+  },
+
+  forumPost: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Forum'
   }
+  ]
 
 });
 

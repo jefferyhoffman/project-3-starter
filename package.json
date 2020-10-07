@@ -17,18 +17,6 @@
   "devDependencies": {
     "concurrently": "^4.1.0",
     "nodemon": "^1.18.10"
-  },
-  "dependencies": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "bootstrap": "^4.5.2",
-    "react-bootstrap": "^1.3.0"
-=======
-    "bootstrap": "^4.5.2"
->>>>>>> b34bc7179cb4d48457ca16a355bcc7326bec0bdf
-=======
-    "bootstrap": "^4.5.2",
-    "mongoose": "^5.10.8"
->>>>>>> 831a0daee6977af6c20ddd8abb27223eabf57259
   }
+  
 }
