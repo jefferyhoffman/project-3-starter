@@ -38,6 +38,9 @@ class Menu extends Component {
             <ul className="menu-list">
               <li>
                 <a className="is-active">Daily Dose</a>
+
+                <a className="menu-label" style={styles.font}>Daily Inspo</a>
+
                 <ul>
                   <li><a style={styles.font}> Affirmations</a></li>
                   <li><a style={styles.font}>Mantras</a></li>
