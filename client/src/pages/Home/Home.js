@@ -7,11 +7,11 @@ class HomePage extends Component {
   render() {
     return (
       <div>
-        <div className="jumbotron">
-          <h1 className="display-4">Welcome to git.PPE</h1>
-          <p className="lead">A website to order all your PPE needs during the pandemic</p>
-          <hr className="my-4"/>
-            <p>Take a look at our inventory below.</p>
+        <div className="jumbotron text-left">
+          {/* <h1 className="display-4">Welcome to git.PPE</h1> */}
+          {/* <img className="jumbotronImg" src="https://fontmeme.com/permalink/201007/197bd622ace3df16555e2fc9b07a4ceb.png"/> */}
+          {/* <hr className="my-4"/>
+            <p>Take a look at our inventory below.</p> */}
             {/* <a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a> */}
         </div>
         <ProductView />
