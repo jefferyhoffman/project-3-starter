@@ -15,49 +15,49 @@ const productSeed = [
         inventory: [
             {
                 quantity: 25,
-                size: "S",
+                size: "2",
                 color: "White",
                 gender: "Womens"
             },
             {
                 quantity: 25,
-                size: "M",
+                size: "4",
                 color: "White",
                 gender: "Womens"
             },
             {
                 quantity: 25,
-                size: "L",
+                size: "6",
                 color: "White",
                 gender: "Womens"
             },
             {
                 quantity: 25,
-                size: "XL",
+                size: "8",
                 color: "White",
                 gender: "Womens"
             },
             {
                 quantity: 25,
-                size: "S",
+                size: "2",
                 color: "Black",
                 gender: "Womens"
             },
             {
                 quantity: 25,
-                size: "M",
+                size: "4",
                 color: "Black",
                 gender: "Womens"
             },
             {
                 quantity: 25,
-                size: "L",
+                size: "6",
                 color: "Black",
                 gender: "Womens"
             },
             {
                 quantity: 25,
-                size: "XL",
+                size: "8",
                 color: "Black",
                 gender: "Womens"
             }
@@ -68,6 +68,44 @@ const productSeed = [
             }
         ],
         photo: "lulu.jpeg"
+    },
+    {
+        name: "Like a Cloud Bra Light Support",
+        description: "This yoga bra’s made with marshmallowy-soft foam cups and supple fabric to keep you comfortable during your practice—but we won’t be surprised if you wear it all day.",
+        price: 19.99,
+        category: ["Sports-Bras"],
+        inventory: [
+            {
+                quantity: 25,
+                size: "2",
+                color: "Red",
+                gender: "Womens"
+            },
+            {
+                quantity: 25,
+                size: "4",
+                color: "Red",
+                gender: "Womens"
+            },
+            {
+                quantity: 25,
+                size: "6",
+                color: "Red",
+                gender: "Womens"
+            },
+            {
+                quantity: 25,
+                size: "8",
+                color: "Red",
+                gender: "Womens"
+            }
+        ],
+        sold: [
+            {
+                quantity: 0,
+            }
+        ],
+        photo: "LikeaCloudBraLightSupport.jpeg"
     },
     {
         name: "License to Train Short Sleeve",
@@ -1045,6 +1083,71 @@ const productSeed = [
         ],
         photo: "PaceBreakerShort9Liner.jpeg"
     },
+    {
+        name: "Femme Force Super High Rise Short 8",
+        description: "Bring that edge to your workout. Mesh fabric with faux boning details around the waist help keep you ventilated during tough training sessions.",
+        price: 50.00,
+        category: ["Shorts"],
+        inventory: [
+            {
+                quantity: 25,
+                size: "S",
+                color: "Red",
+                gender: "Womens"
+            },
+            {
+                quantity: 25,
+                size: "M",
+                color: "Red",
+                gender: "Womens"
+            },
+            {
+                quantity: 25,
+                size: "L",
+                color: "Red",
+                gender: "Womens"
+            }
+        ],
+        sold: [
+            {
+                quantity: 0,
+            }
+        ],
+        photo: "FemmeForceSuperHighRiseShort8.jpeg"
+    },
+    {
+        name: "On the Fly Short",
+        description: "Work or play, this is the one you'll want to reach for. The On the Fly collection pairs business casual vibes with all-day comfort fabrics.",
+        price: 50.00,
+        category: ["Shorts"],
+        inventory: [
+            {
+                quantity: 25,
+                size: "S",
+                color: "Green",
+                gender: "Womens"
+            },
+            {
+                quantity: 25,
+                size: "M",
+                color: "Green",
+                gender: "Womens"
+            },
+            {
+                quantity: 25,
+                size: "L",
+                color: "Green",
+                gender: "Womens"
+            }
+        ],
+        sold: [
+            {
+                quantity: 0,
+            }
+        ],
+        photo: "OntheFlyShort.jpeg"
+    },
+
     
 
 
