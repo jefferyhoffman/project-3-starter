@@ -1,0 +1,13 @@
+.is-sidebar-menu {
+  padding: 2.5rem;
+  background-color: grey-dark
+
+}
+.columns .is-fullheight {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch
+  }
+    .column {
+      overflow-y: auto;
+    }

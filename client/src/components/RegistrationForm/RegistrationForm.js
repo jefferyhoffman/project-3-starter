@@ -28,16 +28,76 @@ class RegistrationForm extends Component {
     const { email, password, passwordConfirm } = this.state;
 
     return (
-      <div className='LoginForm'>
-        <div className='card'>
-          <div className='card-body'>
+      <div classNameName='LoginForm'>
+        {/* <div classNameName='card'>
+          <div classNameName='card-body'> */}
             <form onSubmit={this.handleSubmit}>
-              <div className='input-group mb-3'>
-                <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Mail} /></span>
+
+              <div className="field">
+                <p className="control has-icons-left has-icons-right">
+                <Octicon icon={Mail} />
+                  <input 
+                  className="input" 
+                  type="email" 
+                  name="email" 
+                  placeholder='email@provider.com'
+                  value={email}
+                  onChange={this.handleInputChange} />
+                  <span className="icon is-small is-left">
+                    <i className="fas fa-envelope"></i>
+                  </span>
+                  <span className="icon is-small is-right">
+                    <i className="fas fa-check"></i>
+                  </span>
+                </p>
+              </div>
+              <div className="field">
+                <p className="control has-icons-left">
+                <Octicon icon={Key} />
+                  <input 
+                  className="input" 
+                  type="password" 
+                  name="password"
+                  placeholder='password'
+                  value={password}
+                  onChange={this.handleInputChange} />
+                  <span className="icon is-small is-left">
+                    <i className="fas fa-lock"></i>
+                  </span>
+                </p>
+              </div>
+              <div className="field">
+                <p className="control has-icons-left">
+                <Octicon icon={Key} />
+                  <input 
+                  className="input" 
+                  type="password" 
+                  name='passwordConfirm'
+                  placeholder='password (again)'
+                  value={passwordConfirm}
+                  onChange={this.handleInputChange} />
+                  <span className="icon is-small is-left">
+                    <i className="fas fa-lock"></i>
+                  </span>
+                </p>
+              </div>
+              <button classNameName='button is-primary' type='submit'>Register Now!</button>
+            </form>
+          {/* </div>
+        </div> */}
+      </div>
+    )
+  }
+}
+
+export default RegistrationForm;
+
+{/* <div classNameName='input-group mb-3'>
+                <div classNameName="input-group-prepend">
+                  <span classNameName="input-group-text"><Octicon icon={Mail} /></span>
                 </div>
                 <input
-                  className='form-control'
+                  classNameName='form-control'
                   id='email'
                   type='email'
                   name='email'
@@ -47,12 +107,12 @@ class RegistrationForm extends Component {
                 />
               </div>
 
-              <div className='input-group mb-3'>
-                <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Key} /></span>
+              <div classNameName='input-group mb-3'>
+                <div classNameName="input-group-prepend">
+                  <span classNameName="input-group-text"><Octicon icon={Key} /></span>
                 </div>
                 <input
-                  className='form-control'
+                  classNameName='form-control'
                   id='password'
                   type='password'
                   name='password'
@@ -62,12 +122,12 @@ class RegistrationForm extends Component {
                 />
               </div>
 
-              <div className='input-group mb-3'>
-                <div className="input-group-prepend">
-                  <span className="input-group-text"><Octicon icon={Key} /></span>
+              <div classNameName='input-group mb-3'>
+                <div classNameName="input-group-prepend">
+                  <span classNameName="input-group-text"><Octicon icon={Key} /></span>
                 </div>
                 <input
-                  className='form-control'
+                  classNameName='form-control'
                   id='password-confirm'
                   type='password'
                   name='passwordConfirm'
@@ -75,15 +135,4 @@ class RegistrationForm extends Component {
                   value={passwordConfirm}
                   onChange={this.handleInputChange}
                 />
-              </div>
-
-              <button className='btn btn-primary' type='submit'>Register Now!</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    )
-  }
-}
-
-export default RegistrationForm;
+              </div> */}

@@ -1,0 +1,19 @@
+.hero {
+    
+}
+  body {
+    background-image: url("./plants.jpg");
+    background-repeat: no-repeat, no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .wrapper {
+    position: relative;
+    height:135h;
+    overflow:hidden;
+    margin-top: -79px;
+ 
+  } 
