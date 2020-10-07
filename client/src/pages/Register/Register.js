@@ -22,21 +22,21 @@ class Register extends Component {
   render() {
     return (
       <div className='Register'>
-        <div className='row'>
-          <div className='col'>
+        <div className='columns'>
+          <div className='column'>
             <h1>Register</h1>
           </div>
         </div>
         {this.state.error &&
-          <div className='row'>
-            <div className='col'>
-              <div className='alert alert-danger mb-3' role='alert'>
+          <div className='columns'>
+            <div className='column'>
+              <div className='message message-danger mb-3' role='alert'>
                 {this.state.error}
               </div>
             </div>
           </div>}
-        <div className='row'>
-          <div className='col'>
+        <div className='columns'>
+          <div className='column'>
             <RegistrationForm onSubmit={this.handleSubmit} />
           </div>
         </div>
