@@ -20,10 +20,10 @@ class ProductView extends Component {
                 <ProductCard />
                 </div>
                 <div className="col-3 text-center">
-                <ProductCard2 />
+                <ProductCard />
                 </div>
                 <div className="col-3 text-center">
-                <ProductCard3 />
+                <ProductCard />
                 </div>
                 <div className="col-3 text-center">
                 <ProductCard4 />
