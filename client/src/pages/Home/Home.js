@@ -47,7 +47,7 @@ class HomePage extends Component {
             </MDBCol>
           </MDBRow>
         </MDBContainer>
-      </div >
+      </div>
 
 
 

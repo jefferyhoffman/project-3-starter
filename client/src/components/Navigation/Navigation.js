@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../Navigation/nav.css'
-import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBFormInline } from "mdbreact";
+import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBLink, MDBNavbarToggler, MDBCollapse, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBFormInline } from "mdbreact";
 import { BrowserRouter as Router } from 'react-router-dom';
 import AuthContext from '../../contexts/AuthContext';
 // import AuthDropdown from '../../components/AuthDropdown/AuthDropdown';
@@ -26,7 +26,7 @@ class NavbarPage extends Component {
           <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
             <MDBNavbarNav left>
               <MDBNavItem>
-                <MDBNavLink to="#!">Home</MDBNavLink>
+                <MDBLink  to="/">Home</MDBLink>
               </MDBNavItem>
         {/* MENS */}
               <MDBNavItem>
@@ -85,7 +85,7 @@ class NavbarPage extends Component {
                 </MDBDropdown>
               </MDBNavItem>
               <MDBNavItem>
-                <MDBNavLink to="/contact">Contact Us</MDBNavLink>
+                <MDBLink to="/contact">Contact Us</MDBLink>
               </MDBNavItem>
             </MDBNavbarNav>
         {/* SEARCH BAR */}

@@ -26,7 +26,7 @@ function Cards() {
           >
             <MDBView hover>
               <MDBCardImage className="cardImg" src={lulu} />
-              <MDBMask overlay="black-light">
+              <MDBMask overlay="black-light" className="blackLight">
                 <MDBBtn className="hoverBtn" outline color="white">
                   View
                 </MDBBtn>
@@ -45,12 +45,13 @@ function Cards() {
           >
             <MDBView hover>
               <MDBCardImage className="cardImg" src={lulu} />
-              <MDBMask overlay="black-light">
+              <MDBMask overlay="black-light" className="blackLight">
                 <MDBBtn className="hoverBtn" outline color="white">
                   View
                 </MDBBtn>
               </MDBMask>
             </MDBView>
+
             <MDBCardText style={{ fontSize: "12px" }}>
               Flow Y Longline Bra
             </MDBCardText>
@@ -63,12 +64,13 @@ function Cards() {
           >
             <MDBView hover>
               <MDBCardImage className="cardImg" src={lulu} />
-              <MDBMask overlay="black-light">
+              <MDBMask overlay="black-light" className="blackLight">
                 <MDBBtn className="hoverBtn" outline color="white">
                   View
                 </MDBBtn>
               </MDBMask>
             </MDBView>
+
             <MDBCardText style={{ fontSize: "12px" }}>
               Flow Y Longline Bra
             </MDBCardText>
@@ -81,12 +83,13 @@ function Cards() {
           >
             <MDBView hover>
               <MDBCardImage className="cardImg" src={lulu} />
-              <MDBMask overlay="black-light">
+              <MDBMask overlay="black-light" className="blackLight">
                 <MDBBtn className="hoverBtn" outline color="white">
                   View
                 </MDBBtn>
               </MDBMask>
             </MDBView>
+
             <MDBCardText style={{ fontSize: "12px" }}>
               Flow Y Longline Bra
             </MDBCardText>

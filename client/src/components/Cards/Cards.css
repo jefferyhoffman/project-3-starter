@@ -9,7 +9,12 @@ height: 284px;
 font-size:14px;
 }
 
-.hoverBtn{
+/* .hoverBtn{
 position: relative;
 top: 110px;
+} */
+.blackLight{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
