@@ -27,17 +27,17 @@ import React, { Component, useState } from 'react';
   }
   return (
     <>
-    <header><button>Go to Cart {cart.length}</button> 
+    <header><button>Go to Cart ({cart.length})</button> 
       </header>
-      <div className="card">
+      <div className="">
       
      
-      <div className="contentBx" >
+      <div className="" >
     {products.map((product) => (
       <div key={product.id}>
       <h3>{product.name}</h3>
       <h4>{product.price}</h4>
-      <div className="imgBx">
+      <div className="">
       <img  src={product.img} alt={product.name} /></div>
       <button onClick={() => addToCart(product)}>Add to Cart</button>
       </div>
