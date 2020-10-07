@@ -1,13 +1,31 @@
-import React, { Component } from "react";
+import React from "react";
+import API from "../../Utils/AffirmAPI";
 
 
 
-class Affirmations extends Component {
-    render() {
-      return (
-       <div></div>
-      );
+class Affirmations extends React.Component {
+    state = {
+        result: []
+
+    };
+    componentDidMount() {
+        this.affirmationResults("")
     }
-  }
-  
-  export default Affirmations;
+    affirmationResults = query => {
+        API.search(query)
+            .then(res => this.setState({ result: res.data }))
+            .catch(err => console.log(err))
+    }
+
+    render() {
+        return (
+            <div>
+                {this.state.result.map(result => {
+                    return <p>{result.affirmation}</p>
+                })}
+            </div>
+        );
+    }
+}
+
+export default Affirmations;
