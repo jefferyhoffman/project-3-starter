@@ -1,13 +1,13 @@
-import React from "react";
+import React, { Component } from "react";
 
 
 
-// class Affirmations extends Component {
-//     render() {
-//       return (
-       
-//       );
-//     }
-//   }
+class Affirmations extends Component {
+    render() {
+      return (
+       <div></div>
+      );
+    }
+  }
   
-//   export default Affirmations;
+  export default Affirmations;

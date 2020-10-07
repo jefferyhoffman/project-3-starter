@@ -74,6 +74,7 @@ class App extends Component {
               <Route path='/register' component={Register} />
               <PrivateRoute path='/menu' component={Menu} />
               <PrivateRoute path='/mantras' component={Mantras} />
+              <PrivateRoute path='/affirmations' component={Affirmations} />
               <PrivateRoute path='/secret' component={Secret} />
               <Route component={NotFound} />
             </Switch>
