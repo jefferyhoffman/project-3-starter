@@ -1,0 +1,12 @@
+
+h2 {
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#about {
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: URL('../../assets/images/ppe.jpg');
+    
+}

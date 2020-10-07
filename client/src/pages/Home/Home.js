@@ -9,7 +9,7 @@ class HomePage extends Component {
       <div>
         <div className="jumbotron">
           <h1 className="display-4">Welcome to git.PPE</h1>
-          <p className="lead">A website to order all your PPE needs during the pandemic</p>
+          <p className="lead">A website to order all your PPE needs during the pandemic.</p>
           <hr className="my-4"/>
             <p>Take a look at our inventory below.</p>
             {/* <a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a> */}
