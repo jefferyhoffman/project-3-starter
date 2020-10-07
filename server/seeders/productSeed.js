@@ -1306,6 +1306,46 @@ const productSeed = [
             }
         ],
         photo: "ColdTerrainRunBeanie.jpeg"
+    },
+    {
+        name: "Stay Hot Keep Cold Bottle",
+        description: "Water how you want it. This double-walled stainless steel bottle keeps water cold for 24 hours and hot for 9 hours.",
+        price: 40.00,
+        category: ["Hats"],
+        inventory: [
+            {
+                quantity: 25,
+                size: "One Size",
+                color: "Black",
+                gender: "Unisex"
+            }
+        ],
+        sold: [
+            {
+                quantity: 0,
+            }
+        ],
+        photo: "StayHotKeepColdBottle.jpeg"
+    },
+    {
+        name: "Stay Hot Keep Cold Bottle",
+        description: "Water how you want it. This double-walled stainless steel bottle keeps water cold for 24 hours and hot for 9 hours.",
+        price: 40.00,
+        category: ["Hats"],
+        inventory: [
+            {
+                quantity: 25,
+                size: "One Size",
+                color: "White",
+                gender: "Unisex"
+            }
+        ],
+        sold: [
+            {
+                quantity: 0,
+            }
+        ],
+        photo: "StayHotKeepColdBottle_white.jpeg"
     }
 ]
 
