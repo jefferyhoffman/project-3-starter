@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const UserSchema = new Schema({
   email: {
     type: String,
-    match: ['/.+@.+\..+/' , "Please enter a valid e-mail"],
+    match: [/.+@.+\..+/, "Please enter a valid e-mail"],
     trim: true
   },
 
