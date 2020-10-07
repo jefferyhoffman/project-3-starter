@@ -823,6 +823,229 @@ const productSeed = [
         ],
         photo: "ReadytoRollCrew.jpeg"
     },
+    {
+        name: "ABC Jogger 30",
+        description: "These sleek joggers feature our ABC™ Technology and four-way stretch Warpstreme™ fabric, making them an obvious choice for recreation or travel.",
+        price: 110.00,
+        category: ["Pants"],
+        inventory: [
+            {
+                quantity: 25,
+                size: "S",
+                color: "Blue",
+                gender: "Mens"
+            },
+            {
+                quantity: 25,
+                size: "M",
+                color: "Blue",
+                gender: "Mens"
+            },
+            {
+                quantity: 25,
+                size: "L",
+                color: "Blue",
+                gender: "Mens"
+            },
+            {
+                quantity: 25,
+                size: "S",
+                color: "Olive",
+                gender: "Mens"
+            },
+            {
+                quantity: 25,
+                size: "M",
+                color: "Olive",
+                gender: "Mens"
+            },
+            {
+                quantity: 25,
+                size: "L",
+                color: "Olive",
+                gender: "Mens"
+            }
+        ],
+        sold: [
+            {
+                quantity: 0,
+            }
+        ],
+        photo: "ABCJogger30.jpeg"
+    },
+    {
+        name: "ABC Pant Slim Warpstreme 37",
+        description: "The five-pocket jean, reinvented. These slim-fit pants are engineered with ABC™ Technology to give you freedom of movement and all-day comfort.",
+        price: 110.00,
+        category: ["Pants"],
+        inventory: [
+            {
+                quantity: 25,
+                size: "S",
+                color: "Olive",
+                gender: "Mens"
+            },
+            {
+                quantity: 25,
+                size: "M",
+                color: "Olive",
+                gender: "Mens"
+            },
+            {
+                quantity: 25,
+                size: "L",
+                color: "Olive",
+                gender: "Mens"
+            }
+        ],
+        sold: [
+            {
+                quantity: 0,
+            }
+        ],
+        photo: "ABCPantSlimWarpstreme37.jpeg"
+    },
+    {
+        name: "Keep Moving Pant 7/8 High-Rise",
+        description: "When life gets busy, your pants should be relaxed. These ones will keep you comfortable from morning till night.",
+        price: 80.00,
+        category: ["Pants"],
+        inventory: [
+            {
+                quantity: 25,
+                size: "2",
+                color: "Grey",
+                gender: "Womens"
+            },
+            {
+                quantity: 25,
+                size: "4",
+                color: "Grey",
+                gender: "Womens"
+            },
+            {
+                quantity: 25,
+                size: "6",
+                color: "Grey",
+                gender: "Womens"
+            },
+            {
+                quantity: 25,
+                size: "8",
+                color: "Grey",
+                gender: "Womens"
+            }
+        ],
+        sold: [
+            {
+                quantity: 0,
+            }
+        ],
+        photo: "KeepMovingPant7/8High-Rise.jpeg"
+    },
+    {
+        name: "Align Jogger 28",
+        description: "When feeling nothing is everything. The Align collection, powered by Nulu™ fabric, is so weightless and buttery soft, all you feel is your practice.",
+        price: 70.00,
+        category: ["Pants"],
+        inventory: [
+            {
+                quantity: 25,
+                size: "2",
+                color: "Grey",
+                gender: "Womens"
+            },
+            {
+                quantity: 25,
+                size: "4",
+                color: "Grey",
+                gender: "Womens"
+            },
+            {
+                quantity: 25,
+                size: "6",
+                color: "Grey",
+                gender: "Womens"
+            },
+            {
+                quantity: 25,
+                size: "8",
+                color: "Grey",
+                gender: "Womens"
+            }
+        ],
+        sold: [
+            {
+                quantity: 0,
+            }
+        ],
+        photo: "AlignJogger28.jpeg"
+    },
+    {
+        name: "At Ease Short 7",
+        description: "Restoration starts now. These soft shorts feature textured fabric that relaxes over time to keep you comfortable after a workout.",
+        price: 50.00,
+        category: ["Shorts"],
+        inventory: [
+            {
+                quantity: 25,
+                size: "S",
+                color: "Black",
+                gender: "Mens"
+            },
+            {
+                quantity: 25,
+                size: "M",
+                color: "Black",
+                gender: "Mens"
+            },
+            {
+                quantity: 25,
+                size: "L",
+                color: "Black",
+                gender: "Mens"
+            }
+        ],
+        sold: [
+            {
+                quantity: 0,
+            }
+        ],
+        photo: "AtEaseShort7.jpeg"
+    },
+    {
+        name: "Pace Breaker Short 9 Liner",
+        description: "Run, train or stretch. Wear this lightweight, multi-sport short for pretty much everything. A built-in liner adds some support.",
+        price: 50.00,
+        category: ["Shorts"],
+        inventory: [
+            {
+                quantity: 25,
+                size: "S",
+                color: "Blue",
+                gender: "Mens"
+            },
+            {
+                quantity: 25,
+                size: "M",
+                color: "Blue",
+                gender: "Mens"
+            },
+            {
+                quantity: 25,
+                size: "L",
+                color: "Blue",
+                gender: "Mens"
+            }
+        ],
+        sold: [
+            {
+                quantity: 0,
+            }
+        ],
+        photo: "PaceBreakerShort9Liner.jpeg"
+    },
+    
 
 
 ]
