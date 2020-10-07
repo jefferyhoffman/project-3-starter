@@ -10,20 +10,29 @@ import {
   MDBCardTitle,
   MDBCardText,
   MDBCol,
-  MDBRow
+  MDBRow,
+  MDBView,
+  MDBMask,
 } from "mdbreact";
 
 function Cards() {
   return (
     <Container>
-    
       <MDBRow>
         <MDBCol>
           <MDBCard
             className="z-depth-0"
             style={{ height: "384px", width: "220px" }}
           >
-            <MDBCardImage className="cardImg" src={lulu} />
+            <MDBView hover>
+              <MDBCardImage className="cardImg" src={lulu} />
+              <MDBMask overlay="black-light">
+                <MDBBtn className="hoverBtn" outline color="white">
+                  View
+                </MDBBtn>
+              </MDBMask>
+            </MDBView>
+
             <MDBCardText style={{ fontSize: "12px" }}>
               Flow Y Longline Bra
             </MDBCardText>
@@ -34,7 +43,14 @@ function Cards() {
             className="z-depth-0"
             style={{ height: "384px", width: "220px" }}
           >
-            <MDBCardImage className="cardImg" src={lulu} />
+            <MDBView hover>
+              <MDBCardImage className="cardImg" src={lulu} />
+              <MDBMask overlay="black-light">
+                <MDBBtn className="hoverBtn" outline color="white">
+                  View
+                </MDBBtn>
+              </MDBMask>
+            </MDBView>
             <MDBCardText style={{ fontSize: "12px" }}>
               Flow Y Longline Bra
             </MDBCardText>
@@ -45,7 +61,14 @@ function Cards() {
             className="z-depth-0"
             style={{ height: "384px", width: "220px" }}
           >
-            <MDBCardImage className="cardImg" src={lulu} />
+            <MDBView hover>
+              <MDBCardImage className="cardImg" src={lulu} />
+              <MDBMask overlay="black-light">
+                <MDBBtn className="hoverBtn" outline color="white">
+                  View
+                </MDBBtn>
+              </MDBMask>
+            </MDBView>
             <MDBCardText style={{ fontSize: "12px" }}>
               Flow Y Longline Bra
             </MDBCardText>
@@ -56,60 +79,20 @@ function Cards() {
             className="z-depth-0"
             style={{ height: "384px", width: "220px" }}
           >
-            <MDBCardImage className="cardImg" src={lulu} />
+            <MDBView hover>
+              <MDBCardImage className="cardImg" src={lulu} />
+              <MDBMask overlay="black-light">
+                <MDBBtn className="hoverBtn" outline color="white">
+                  View
+                </MDBBtn>
+              </MDBMask>
+            </MDBView>
             <MDBCardText style={{ fontSize: "12px" }}>
               Flow Y Longline Bra
             </MDBCardText>
           </MDBCard>
         </MDBCol>
       </MDBRow>
-
-      {/* <Row>
-        <Col>
-  <Card className = "card">
-    <Card.Img variant="top" src={lulu}  style = {{width: 170, height:200}}/>
-      <Card.Text className = "cardtext">
-        Flow Y Longline Bra
-        <br>
-        </br>
-        $35
-      </Card.Text>
-  </Card>
-  </Col>
-  <Col>
-  <Card className = "card">
-    <Card.Img variant="top" src={lulu}  style = {{width: 170, height:200}}/>
-      <Card.Text className = "cardtext">
-        Flow Y Longline Bra
-        <br>
-        </br>
-        $35
-      </Card.Text>
-  </Card>
-  </Col>
-  <Col>
-  <Card className = "card">
-    <Card.Img variant="top" src={lulu}  style = {{width: 170, height:200}}/>
-      <Card.Text className = "cardtext">
-        Flow Y Longline Bra
-        <br>
-        </br>
-        $35
-      </Card.Text>
-  </Card>
-  </Col>
-  <Col>
-  <Card className = "card">
-    <Card.Img variant="top" src={lulu}  style = {{width: 170, height:200}}/>
-      <Card.Text className = "cardtext">
-        Flow Y Longline Bra
-        <br>
-        </br>
-        $35
-      </Card.Text>
-  </Card>
-  </Col>
-  </Row> */}
     </Container>
   );
 }

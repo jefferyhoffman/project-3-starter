@@ -13,7 +13,7 @@ function Layout() {
         <MDBRow style={{ borderLeft: "1px solid lightGray" }}>
           <MDBCol>
             <Cards />
-            {/* <div className="vdivide"></div> */}
+           
           </MDBCol>
         </MDBRow>
       </MDBContainer>
