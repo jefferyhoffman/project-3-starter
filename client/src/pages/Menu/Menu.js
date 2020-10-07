@@ -4,9 +4,12 @@ import '../../styles/menu.css';
 
 const styles= {
   menu: {
-    backgroundColor: "white",   
-    backgroundOpacity: "15%", 
-    marginTop: "10px"
+    backgroundColor: "",   
+    background: "", 
+    marginTop: "10px",
+    float: "left",
+    left: "0"
+    
   }
 }
 
@@ -22,25 +25,27 @@ class Menu extends Component {
             </p>
             <ul className="menu-list">
               <li><a>Profile</a></li>
-              <li><a>Saved Items</a></li>
+              <li><a>Community</a></li>
             </ul>
             <p className="menu-label">
               FYE
             </p>
             <ul className="menu-list">
               <li>
-                <a className="is-active">Daily Inspo</a>
+                <a className="is-active">Daily Dose</a>
                 <ul>
                   <li><a>Affirmations</a></li>
                   <li><a>Mantras</a></li>
                   <li><a>Jokes</a></li>
                 </ul>
               </li>
-              <li><a>Videos</a></li>
+              <a className="is-active">Videos</a>
+              <ul>
               <li><a>Comedian Corner</a></li>
               <li><a>Bob Ross Channel</a></li>
               <li><a>Breathing Exercises</a></li>
               <li><a>Oddly Satisfying</a></li>
+              </ul>
             </ul>
             <p className="menu-label">
               Resources
@@ -52,7 +57,6 @@ class Menu extends Component {
           </aside>
         </div>
         <div className="column is-main-content">
-
         </div>
       </div>
     );
