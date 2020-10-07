@@ -1170,7 +1170,7 @@ const productSeed = [
     {
         name: "Out Of Range Backpack",
         description: "It's go time. From sweat to whatever's next, this backpack has plenty of quick-access storage—there's even a protective-shell pocket for your shades.",
-        price: 50.00,
+        price: 80.00,
         category: ["Bags"],
         inventory: [
             {
@@ -1190,7 +1190,7 @@ const productSeed = [
     {
         name: "Command The Day Duffel",
         description: "A super-functional duffle with plenty of divided space because your shoes and workout gear don't need to get to know your laptop.",
-        price: 50.00,
+        price: 90.00,
         category: ["Bags"],
         inventory: [
             {
@@ -1206,6 +1206,106 @@ const productSeed = [
             }
         ],
         photo: "CommandTheDayDuffel.jpeg"
+    },
+    {
+        name: "Cruiser Backpack",
+        description: "That relaxed feeling of knowing the exact location of your phone, shades, and everything else as you cruise from work to workout.",
+        price: 110.00,
+        category: ["Bags"],
+        inventory: [
+            {
+                quantity: 25,
+                size: "One Size",
+                color: "Black",
+                gender: "Unisex"
+            }
+        ],
+        sold: [
+            {
+                quantity: 0,
+            }
+        ],
+        photo: "CruiserBackpack.jpeg"
+    },
+    {
+        name: "Days Shade Ball Cap",
+        description: "Rain or shine, you're ready. This lightweight ball cap is made with water-repellent fabric.",
+        price: 20.00,
+        category: ["Hats"],
+        inventory: [
+            {
+                quantity: 25,
+                size: "One Size",
+                color: "Red",
+                gender: "Unisex"
+            }
+        ],
+        sold: [
+            {
+                quantity: 0,
+            }
+        ],
+        photo: "DaysShadeBallCap.jpeg"
+    },
+    {
+        name: "Fast and Free Men's Run Hat",
+        description: "Keep sun and sweat out of your eyes with this lightweight, quick-drying run hat.",
+        price: 20.00,
+        category: ["Hats"],
+        inventory: [
+            {
+                quantity: 25,
+                size: "One Size",
+                color: "Navy",
+                gender: "Unisex"
+            }
+        ],
+        sold: [
+            {
+                quantity: 0,
+            }
+        ],
+        photo: "FastandFreeMensRunHat.jpeg"
+    },
+    {
+        name: "Run for It All Beanie",
+        description: "Keep on running—this water-repellent beanie is soft and cozy on chilly days.",
+        price: 20.00,
+        category: ["Hats"],
+        inventory: [
+            {
+                quantity: 25,
+                size: "One Size",
+                color: "Black",
+                gender: "Women"
+            }
+        ],
+        sold: [
+            {
+                quantity: 0,
+            }
+        ],
+        photo: "RunforItAllBeanie.jpeg"
+    },
+    {
+        name: "Cold Terrain Run Beanie",
+        description: "Hear that? The trails are calling. Keep your head and ears warm on cold-weather runs in this soft, fitted beanie.",
+        price: 20.00,
+        category: ["Hats"],
+        inventory: [
+            {
+                quantity: 25,
+                size: "One Size",
+                color: "Olive",
+                gender: "Men"
+            }
+        ],
+        sold: [
+            {
+                quantity: 0,
+            }
+        ],
+        photo: "ColdTerrainRunBeanie.jpeg"
     }
 ]
 
