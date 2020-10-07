@@ -2,15 +2,21 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({
+  email: {
+    type: String,
+    match: [/.+@.+\..+/, "Please enter a valid e-mail"],
+    trim: true
+  },
+
   first_name: { 
     type: String, 
-    required: 'first name is required',
+    //required: 'first name is required',
     trim: true
   },
   
   last_name: { 
     type: String,
-    required: 'last name is required',
+    //required: 'last name is required',
     trim: true
   },
   
@@ -25,8 +31,8 @@ const UserSchema = new Schema({
   
   password: {
     type: String,
-    unique: false,
-    required: 'password is required',
+    trim: true,
+    required: 'A password is required',
     validate: [
       function (input) {
         return input.length >= 4
@@ -36,39 +42,20 @@ const UserSchema = new Schema({
     trim: true
   },
 
-
   userCreatedDate: {
     type: Date,
     default: () => new Date()
   }
-
 });
 
 UserSchema.methods.setFullName = function() {
   this.fullName = `${this.first_name} ${this.last_name}`;
-
-  return this.fullName;
 };
 
-
-
-
-class newUser {
-  constructor({ id, first_name, last_name, password, email, userCreatedDate }) {
-    this.id = id;
-    this.first_name = first_name;
-    this.last_name = last_name;
-    this.password = password;
-    this.email = email;
-    this.userCreatedDate = userCreatedDate
-  }
-
-  comparePassword(challenge) {
-    return this.password === challenge;
-  }
+UserSchema.methods.comparePassword = function(challenge) {
+  return this.password === challenge;
 }
 
-UserSchema.loadClass(newUser);
 let User = mongoose.model('User', UserSchema);
 
 module.exports = User;

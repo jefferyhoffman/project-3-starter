@@ -19,7 +19,6 @@
     "nodemon": "^1.18.10"
   },
   "dependencies": {
-    "bootstrap": "^4.5.2",
-    "mongoose": "^5.10.8"
+    "bootstrap": "^4.5.2"
   }
 }
