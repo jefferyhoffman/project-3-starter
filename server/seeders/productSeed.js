@@ -677,6 +677,153 @@ const productSeed = [
         ],
         photo: "WunderTrainCroppedLongSleeve.jpeg"
     },
+    {
+        name: "Cascade Coast Crew",
+        description: "Meet your daily crew. This merino wool-blend sweater with anti-stink technology gets top marks for comfort and versatility.",
+        price: 100.00,
+        category: ["Sweatshirts"],
+        inventory: [
+            {
+                quantity: 25,
+                size: "S",
+                color: "Brown",
+                gender: "Mens"
+            },
+            {
+                quantity: 25,
+                size: "M",
+                color: "Brown",
+                gender: "Mens"
+            },
+            {
+                quantity: 25,
+                size: "L",
+                color: "Brown",
+                gender: "Mens"
+            }
+        ],
+        sold: [
+            {
+                quantity: 0,
+            }
+        ],
+        photo: "CascadeCoastCrew.jpeg"
+    },
+    {
+        name: "Alpine Air Crew",
+        description: "Put your temperature on cruise control. This versatile merino wool sweater is naturally thermoregulating.",
+        price: 90.00,
+        category: ["Sweatshirts"],
+        inventory: [
+            {
+                quantity: 25,
+                size: "S",
+                color: "Navy",
+                gender: "Mens"
+            },
+            {
+                quantity: 25,
+                size: "M",
+                color: "Navy",
+                gender: "Mens"
+            },
+            {
+                quantity: 25,
+                size: "L",
+                color: "Navy",
+                gender: "Mens"
+            },
+            {
+                quantity: 25,
+                size: "S",
+                color: "Grey",
+                gender: "Mens"
+            },
+            {
+                quantity: 25,
+                size: "M",
+                color: "Grey",
+                gender: "Mens"
+            },
+            {
+                quantity: 25,
+                size: "L",
+                color: "Grey",
+                gender: "Mens"
+            }
+        ],
+        sold: [
+            {
+                quantity: 0,
+            }
+        ],
+        photo: "AlpineAirCrew.jpeg"
+    },
+    {
+        name: "All Yours Crew Terry",
+        description: "Your post-practice glow feels even better in this incredibly comfortable crew.",
+        price: 90.00,
+        category: ["Sweatshirts"],
+        inventory: [
+            {
+                quantity: 25,
+                size: "S",
+                color: "White",
+                gender: "Womens"
+            },
+            {
+                quantity: 25,
+                size: "M",
+                color: "White",
+                gender: "Womens"
+            },
+            {
+                quantity: 25,
+                size: "L",
+                color: "White",
+                gender: "Womens"
+            }
+        ],
+        sold: [
+            {
+                quantity: 0,
+            }
+        ],
+        photo: "AllYoursCrewTerry.jpeg"
+    },
+    {
+        name: "Ready to Roll Crew",
+        description: "Feel cozy in this soft crew-neck sweater that's perfect for lightweight warmth after class.",
+        price: 60.00,
+        category: ["Sweatshirts"],
+        inventory: [
+            {
+                quantity: 25,
+                size: "S",
+                color: "Pink",
+                gender: "Womens"
+            },
+            {
+                quantity: 25,
+                size: "M",
+                color: "Pink",
+                gender: "Womens"
+            },
+            {
+                quantity: 25,
+                size: "L",
+                color: "Pink",
+                gender: "Womens"
+            }
+        ],
+        sold: [
+            {
+                quantity: 0,
+            }
+        ],
+        photo: "ReadytoRollCrew.jpeg"
+    },
+
 
 ]
 
