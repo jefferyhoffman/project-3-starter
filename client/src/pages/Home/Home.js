@@ -1,39 +1,24 @@
 import React, { Component } from 'react';
-import logo from './logo.svg'
-import Jumping from '../../images/jumping.jpg'
+import Hero from '../../components/Jumbotron/Jumbotron'
+import '../../styles/jumbotron.css'
+import jumping from "../../images/jumping.jpeg";
+import Menu from "../Menu/Menu";
+import Cards from "../../components/Cards/Cards";
 
-const style = {
-  Jumbotron: {
-    backgroundSize: 'cover',
-    height: '50vH',
-    backgroundRepeat: 'no-repeat, center',
-    backgroundImage: `url(${ Jumping })`,
-    width: '100%'
-  }
-}
+
+
 
 
 class HomePage extends Component {
   render() {
     return (
-      <div className='Home'>
-        <div className='columns'>
-          <div className='column'>
-            <img src={logo} className='App-logo' alt='logo' />
-            <p>
-              Edit <code>src/pages/Home.js</code> and save to reload.
-            </p>
-            <a
-              className='App-link'
-              href='https://reactjs.org'
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
-          </div>
-        </div>
+      <body className="wrapper">
+      <div classNameName='Home'>
+      <Hero />
+      <Cards/>
+     
       </div>
+      </body>
     );
   }
 }
