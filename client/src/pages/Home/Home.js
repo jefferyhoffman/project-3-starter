@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
+import logo from './mylogo.png';
 
-import logo from './logo.svg';
+const styles = {
+  Logo:{
+    marginTop:"30px",
+    height:"60vh"
+  },
+}
+
 
 class HomePage extends Component {
   render() {
@@ -8,18 +15,14 @@ class HomePage extends Component {
       <div className='Home'>
         <div className='row'>
           <div className='col'>
-            <img src={logo} className='App-logo' alt='logo' />
-            <p>
-              Edit <code>src/pages/Home.js</code> and save to reload.
-            </p>
-            <a
-              className='App-link'
-              href='https://reactjs.org'
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
+          
+  <div className="container">
+    <h1>Welcome to</h1>
+  <img style={styles.Logo} src={logo} alt='logo' />
+    <h1 className="lead">Nest Egg</h1>
+  </div>
+
+          
           </div>
         </div>
       </div>
