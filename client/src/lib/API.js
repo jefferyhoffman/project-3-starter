@@ -21,13 +21,15 @@ export default {
 
   Products: {
     getAll: function () {
-      return axios.get('/api/products', {
-       
-      });
+      return axios.get('/api/products');
     },
 
-    getCategories: function () {
-      
+    getCategories: function (category) {
+      return axios.get('/api/products/'+ category);
+    },
+
+    getPopular: function (popular) {
+      return axios.get('/api/products/'+ popular);
     }
   }
 }

@@ -24,9 +24,10 @@ productsController.get("/api/products/:id", (req, res) => {
     });
 })
 
-// Find Category/Style
-productsController.get("/api/products/:category", (req, res) => {
-    db.Products.find({category: req.params.category})
+// Most popular
+productsController.get("/api/products/popular", (req, res) => {
+    db.Products.find({})
+    .sort({sold: -1})
     .then(data => {
         res.json(data);
     })
@@ -34,11 +35,9 @@ productsController.get("/api/products/:category", (req, res) => {
         res.status(400).json(err)
     });
 })
-
-// Most popular
-productsController.get("/api/products/popular", (req, res) => {
-    db.Products.find({})
-    .sort({sold: -1})
+// Find Category/Style
+productsController.get("/api/products/:category", (req, res) => {
+    db.Products.find({category: req.params.category})
     .then(data => {
         res.json(data);
     })
