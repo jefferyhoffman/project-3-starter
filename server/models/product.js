@@ -9,10 +9,10 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: true
     },
     product_name: DataTypes.STRING,
-    category_description: DataTypes.STRING,
-    category_img_one: DataTypes.STRING,
-    category_img_two: DataTypes.STRING,
-    category_img_three: DataTypes.STRING,
+    product_description: DataTypes.STRING,
+    product_img_one: DataTypes.STRING,
+    product_img_two: DataTypes.STRING,
+    product_img_three: DataTypes.STRING,
     price: DataTypes.INTEGER,
     stock: DataTypes.INTEGER,
     category_id: DataTypes.INTEGER //not sure if this needs to be made into a foreign key or if i just need to use assiciations to pair it
