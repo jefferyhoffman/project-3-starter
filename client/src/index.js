@@ -1,11 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-<<<<<<< HEAD
-import 'bootstrap/dist/css/bootstrap.min.css';
-=======
 import 'react-bulma-components/dist/react-bulma-components.min.css';
->>>>>>> b34bc7179cb4d48457ca16a355bcc7326bec0bdf
 import './index.css';
 import App from './components/App/App';
 import * as serviceWorker from './serviceWorker';

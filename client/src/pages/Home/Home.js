@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Jumbotron, Container } from 'react-bootstrap'
+import logo from './logo.svg'
 import Jumping from '../../images/jumping.jpg'
 
 const style = {
@@ -16,17 +16,6 @@ const style = {
 class HomePage extends Component {
   render() {
     return (
-<<<<<<< HEAD
-      <Jumbotron Jumbotron-fluid style={style.Jumbotron}>
-  <Container>
-    <h1 style={{ color: 'white' }}>Fluid jumbotron</h1>
-    <p style={{ color: 'white' }}>
-      This is a modified jumbotron that occupies the entire horizontal space of
-      its parent.
-    </p>
-  </Container>
-</Jumbotron>
-=======
       <div className='Home'>
         <div className='columns'>
           <div className='column'>
@@ -45,7 +34,6 @@ class HomePage extends Component {
           </div>
         </div>
       </div>
->>>>>>> b34bc7179cb4d48457ca16a355bcc7326bec0bdf
     );
   }
 }
