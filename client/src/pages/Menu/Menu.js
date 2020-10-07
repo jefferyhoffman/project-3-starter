@@ -28,22 +28,32 @@ class Menu extends Component {
             <p className="menu-label" style={styles.font}>
               General
             </p>
-            <ul className="menu-list" >
-              <li><a style={styles.font}>Profile</a></li>
-              <li><a style={styles.font}>Saved Items</a></li>
+            <ul className="menu-list">
+              <li><a>Profile</a></li>
+              <li><a>Community</a></li>
             </ul>
             <p className="menu-label" style={styles.font}>
               FYE
             </p>
             <ul className="menu-list">
               <li>
+                <a className="is-active">Daily Dose</a>
+
                 <a className="menu-label" style={styles.font}>Daily Inspo</a>
+
                 <ul>
                   <li><a style={styles.font}> Affirmations</a></li>
                   <li><a style={styles.font}>Mantras</a></li>
                   <li><a style={styles.font}>Jokes</a></li>
                 </ul>
               </li>
+              <a className="is-active">Videos</a>
+              <ul>
+              <li><a>Comedian Corner</a></li>
+              <li><a>Bob Ross Channel</a></li>
+              <li><a>Breathing Exercises</a></li>
+              <li><a>Oddly Satisfying</a></li>
+              </ul>
             </ul>
             <ul className="menu-list">
               <li>
@@ -65,14 +75,7 @@ class Menu extends Component {
             </ul>
           </aside>
         </div>
-        <div className="column" style={styles.main}>
-        <div class="container">
-      <h1 class="title">Section</h1>
-      <h2 class="subtitle">
-        A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
-        <p>Suspendisse varius ligula in molestie lacinia. Maecenas varius eget ligula a sagittis. Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et sollicitudin felis neque sit amet erat. Maecenas imperdiet felis nisi, fringilla luctus felis hendrerit sit amet. Aenean vitae gravida diam, finibus dignissim turpis. Sed eget varius ligula, at volutpat tortor.</p>
-      </h2>
-    </div>
+        <div className="column is-main-content">
         </div>
       </div>
     );

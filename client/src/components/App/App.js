@@ -12,6 +12,18 @@ import Register from '../../pages/Register/Register';
 import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
 import Menu from '../../pages/Menu/Menu';
+// import Affirmations from "../Affirmations";
+// import Bob from "../Bob";
+// import Breathing from "../Breathing";
+// import Clinic from "../Clinic";
+// import Comedy from "../Comedy";
+// import Community from "../Community";
+// import Hotline from "../Hotline";
+// import Jokes from "../Jokes";
+// import Mantras from "../Mantras";
+// import Odd from "../Odd";
+// import Profile from "../Profile"
+
 
 import './App.css';
 
