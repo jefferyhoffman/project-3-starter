@@ -14,6 +14,15 @@ const UserSchema = new Schema({
     trim: true
   },
   
+  
+  email: {
+    type: String,
+    match: ['/.+@.+\..+/' , "Please enter a valid e-mail"],
+    trim: true
+  },
+  
+  
+  
   password: {
     type: String,
     unique: false,
@@ -27,11 +36,6 @@ const UserSchema = new Schema({
     trim: true
   },
 
-  email: {
-    type: String,
-    match: ['/.+@.+\..+/' , "Please enter a valid e-mail"],
-    trim: true
-  },
 
   userCreatedDate: {
     type: Date,
