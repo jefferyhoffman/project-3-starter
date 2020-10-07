@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import '../../styles/menu.css';
+import { Link } from 'react-router-dom';
+import AuthContext from '../../contexts/AuthContext';
 
 
 const styles = {
@@ -19,6 +21,17 @@ const styles = {
 }
 
 class Menu extends Component {
+  static contextType = AuthContext;
+
+  state = {
+    collapsed: true
+  }
+
+  toggleCollapse = () => {
+    this.setState({
+      collapsed: !this.state.collapsed
+    });
+  }
   render() {
     return (
       <div className="columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd">
@@ -38,12 +51,9 @@ class Menu extends Component {
             <ul className="menu-list">
               <li>
                 <a className="is-active">Daily Dose</a>
-
-                <a className="menu-label" style={styles.font}>Daily Inspo</a>
-
                 <ul>
                   <li><a style={styles.font}> Affirmations</a></li>
-                  <li><a style={styles.font}>Mantras</a></li>
+                  <li><Link to="/mantras" onClick={this.toggleCollapse} style={styles.font}>Mantras</Link></li>
                   <li><a style={styles.font}>Jokes</a></li>
                 </ul>
               </li>
