@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
 import '../Navigation/nav.css'
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBFormInline } from "mdbreact";
+import { BrowserRouter as Router } from 'react-router-dom';
 import AuthContext from '../../contexts/AuthContext';
 // import AuthDropdown from '../../components/AuthDropdown/AuthDropdown';
 
@@ -84,7 +85,7 @@ class NavbarPage extends Component {
                 </MDBDropdown>
               </MDBNavItem>
               <MDBNavItem>
-                <MDBNavLink to="#!">Contact Us</MDBNavLink>
+                <MDBNavLink to="/contact">Contact Us</MDBNavLink>
               </MDBNavItem>
             </MDBNavbarNav>
         {/* SEARCH BAR */}
