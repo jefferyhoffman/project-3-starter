@@ -1311,7 +1311,7 @@ const productSeed = [
         name: "Stay Hot Keep Cold Bottle",
         description: "Water how you want it. This double-walled stainless steel bottle keeps water cold for 24 hours and hot for 9 hours.",
         price: 40.00,
-        category: ["Hats"],
+        category: ["Water Bottles"],
         inventory: [
             {
                 quantity: 25,
@@ -1331,7 +1331,7 @@ const productSeed = [
         name: "Stay Hot Keep Cold Bottle",
         description: "Water how you want it. This double-walled stainless steel bottle keeps water cold for 24 hours and hot for 9 hours.",
         price: 40.00,
-        category: ["Hats"],
+        category: ["Water Bottles"],
         inventory: [
             {
                 quantity: 25,
@@ -1346,6 +1346,26 @@ const productSeed = [
             }
         ],
         photo: "StayHotKeepColdBottle_white.jpeg"
+    },
+    {
+        name: "Organic Superfood Protein Mix",
+        description: "Boost your workout & get lean. Contains all essential amino acids. 2 vegan proteins & 3 energizing superfoods, no sweeteners. 60% highly absorbable protein. Formulated by holistic nutritionists",
+        price: 40.00,
+        category: ["Wellness"],
+        inventory: [
+            {
+                quantity: 25,
+                size: "N/A",
+                color: "N/A",
+                gender: "N/A"
+            }
+        ],
+        sold: [
+            {
+                quantity: 0,
+            }
+        ],
+        photo: "your-superfoods-superfood-mix-muscle-power-mix-15044125065291_1024x1024.jpeg"
     }
 ]
 
