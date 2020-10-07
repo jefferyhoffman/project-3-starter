@@ -52,7 +52,7 @@ class Menu extends Component {
               <li>
                 <a className="is-active">Daily Dose</a>
                 <ul>
-                  <li><a style={styles.font}> Affirmations</a></li>
+                  <li><Link to='/affirmations' onClick={this.toggleCollapse} style={styles.font}> Affirmations</Link></li>
                   <li><Link to="/mantras" onClick={this.toggleCollapse} style={styles.font}>Mantras</Link></li>
                   <li><a style={styles.font}>Jokes</a></li>
                 </ul>
