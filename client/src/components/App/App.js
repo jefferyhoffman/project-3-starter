@@ -12,17 +12,18 @@ import Register from '../../pages/Register/Register';
 import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
 import Menu from '../../pages/Menu/Menu';
-// import Affirmations from "../Affirmations";
-// import Bob from "../Bob";
-// import Breathing from "../Breathing";
-// import Clinic from "../Clinic";
-// import Comedy from "../Comedy";
-// import Community from "../Community";
-// import Hotline from "../Hotline";
-// import Jokes from "../Jokes";
-// import Mantras from "../Mantras";
-// import Odd from "../Odd";
-// import Profile from "../Profile"
+import AffirmAPI from "../../Utils/AffirmAPI";
+import Mantras from "../../pages/Mantras/Mantras"
+import Affirmations from "../../pages/Affirmations/Affirmations";
+// // import Bob from "../Bob";
+// // import Breathing from "../Breathing";
+// import Clinic from "../../pages/Clinic/Clinic";
+// // import Comedy from "../Comedy";
+// import Community from "../../pages/Community/Community";
+// import Hotline from "../../pages/Hotline/Hotline";
+// // import Jokes from "../Jokes";
+// // import Odd from "../Odd";
+// import Profile from "../../pages/Profile/Profile";
 
 
 import './App.css';
@@ -72,6 +73,7 @@ class App extends Component {
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />
               <PrivateRoute path='/menu' component={Menu} />
+              <PrivateRoute path='/mantras' component={Mantras} />
               <PrivateRoute path='/secret' component={Secret} />
               <Route component={NotFound} />
             </Switch>
