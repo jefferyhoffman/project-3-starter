@@ -12,7 +12,7 @@ import Login from '../../pages/Login/Login';
 import Register from '../../pages/Register/Register';
 import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
-
+import Contact from '../../pages/Contact/Contact';
 import Layout from '../../pages/Layout/Layout'
 import Product from '../../pages/ProductPage/Product'
 
@@ -60,6 +60,7 @@ class App extends Component {
           <div>
             <Switch>
               <Route exact path='/' component={Home} />
+              <Route path='/contact' component={Contact} />
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />
               <Route path = '/layout' component = {Layout}/>
