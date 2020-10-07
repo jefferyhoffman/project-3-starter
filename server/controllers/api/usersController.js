@@ -32,4 +32,14 @@ usersController.post('/login', (req, res) => {
     });
 });
 
+usersController.put('/me/cart', JWTVerifier, (req, res) => {
+  db.Users.update({_id: req.params.id}, {$push:{cart: req.params.body}})
+  .then(data => {
+    res.json(data);
+})
+.catch(err => {
+    res.status(400).json(err)
+});
+});
+
 module.exports = usersController;
