@@ -1,15 +1,16 @@
 import React from "react";
-import MyCalendar from "../../components/MyCalendar";
+import Form from "../../components/Form/Form";
 
 
-function Member() {
+function Bill() {
     return (
         <div>
             <button type="button" className="btn btn-primary">Add New Bill</button>
-        
-            <MyCalendar />
+            <Form />
+           
         </div>
     )
 }
 
-export default Member;
+
+export default Bill;
