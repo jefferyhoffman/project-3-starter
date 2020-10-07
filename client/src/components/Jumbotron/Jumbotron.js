@@ -11,7 +11,7 @@ import '../../styles/jumbotron.css'
 
 function Hero() {
     return (
-       <section className="hero">
+       <section className="hero is-large has-bg-im">
   <div className="hero-body content">
     <div className="container">
       <h1 className="title">
