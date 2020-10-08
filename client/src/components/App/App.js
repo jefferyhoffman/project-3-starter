@@ -14,6 +14,7 @@ import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
 import Contact from '../../pages/Contact/Contact';
 import Layout from '../../pages/Layout/Layout'
+import Product from '../../pages/ProductPage/Product'
 
 import './App.css';
 
@@ -63,6 +64,7 @@ class App extends Component {
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />
               <Route path = '/layout' component = {Layout}/>
+              <Route path = '/product' component = {Product}/>
               {/* <PrivateRoute path='/secret' component={Secret} /> */}
               <Route component={NotFound} />
             </Switch>

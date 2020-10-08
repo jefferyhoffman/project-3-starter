@@ -8,3 +8,13 @@ height: 284px;
 .cardtext{
 font-size:14px;
 }
+
+/* .hoverBtn{
+position: relative;
+top: 110px;
+} */
+.blackLight{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
