@@ -11,9 +11,13 @@ import Carousel from '../../components/Carousel/Carousel'
 class HomePage extends Component {
   render() {
     return (
+<<<<<<< HEAD
 
 <>
         <div>
+=======
+      <div>
+>>>>>>> d7ba62e398146f44b894b2af0b93fd13bdc5f005
         {/* HERO IMAGE */}
         <Hero />
         <hr className="solid"></hr>
@@ -54,10 +58,14 @@ class HomePage extends Component {
             </MDBCol>
           </MDBRow>
         </MDBContainer>
+<<<<<<< HEAD
         </MDBContainer>
       </div >
 </>
+=======
+>>>>>>> d7ba62e398146f44b894b2af0b93fd13bdc5f005
 
+      </div>
 
     );
   }

@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../Navigation/nav.css'
+<<<<<<< HEAD
 import { 
   MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBLink, MDBNavbarToggler, MDBCollapse, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBFormInline
  } from "mdbreact";
+=======
+import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBLink, MDBNavbarToggler, MDBCollapse, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBFormInline } from "mdbreact";
+>>>>>>> d7ba62e398146f44b894b2af0b93fd13bdc5f005
 import { BrowserRouter as Router } from 'react-router-dom';
 import AuthContext from '../../contexts/AuthContext';
 // import AuthDropdown from '../../components/AuthDropdown/AuthDropdown';
@@ -28,7 +32,11 @@ class NavbarPage extends Component {
           <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
             <MDBNavbarNav left>
               <MDBNavItem>
+<<<<<<< HEAD
                 <MDBLink to="/">Home</MDBLink>
+=======
+                <MDBLink  to="/">Home</MDBLink>
+>>>>>>> d7ba62e398146f44b894b2af0b93fd13bdc5f005
               </MDBNavItem>
         {/* MENS */}
               <MDBNavItem>

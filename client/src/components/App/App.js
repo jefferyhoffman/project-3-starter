@@ -13,8 +13,14 @@ import Register from '../../pages/Register/Register';
 import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
 import Contact from '../../pages/Contact/Contact';
+<<<<<<< HEAD
 import Layout from '../../pages/Layout/Layout';
 import Checkout from '../../pages/Checkout/checkout'
+=======
+import Layout from '../../pages/Layout/Layout'
+import Product from '../../pages/ProductPage/Product'
+
+>>>>>>> d7ba62e398146f44b894b2af0b93fd13bdc5f005
 import './App.css';
 
 class App extends Component {
@@ -64,6 +70,7 @@ class App extends Component {
               <Route path='/register' component={Register} />
               <Route path='/checkout' component={Checkout} />
               <Route path = '/layout' component = {Layout}/>
+              <Route path = '/product' component = {Product}/>
               {/* <PrivateRoute path='/secret' component={Secret} /> */}
               <Route component={NotFound} />
             </Switch>
