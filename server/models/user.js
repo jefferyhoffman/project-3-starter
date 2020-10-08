@@ -49,7 +49,12 @@ const UserSchema = new Schema({
   },
   shippingAddress: [
     {
-      name: {
+      firstName: {
+        type: String,
+        trim: true,
+        required: true
+      },
+      lastName: {
         type: String,
         trim: true,
         required: true
