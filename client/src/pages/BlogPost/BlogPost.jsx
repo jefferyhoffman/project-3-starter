@@ -5,7 +5,7 @@ const BlogPost = () => {
     const handleSub=e=>{
         e.preventDefault()
         const newBlog ={
-            streetAddres: street
+            streetAddress: street
         }
         console.log(newBlog)
     }
@@ -14,6 +14,33 @@ const BlogPost = () => {
       <form>
         <div className="form-group">
           <label htmlFor="exampleInputEmail1">Street Address</label>
+          <input
+            type="email"
+            className="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            value= {street}
+            onChange={e=> setStreet(e.target.value)}
+          />
+          
+        </div>
+
+
+        <div className="form-group">
+          <label htmlFor="exampleInputEmail1">IMG URL</label>
+          <input
+            type="email"
+            className="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            value= {street}
+            onChange={e=> setStreet(e.target.value)}
+          />
+          
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="exampleInputEmail1">Blog Text</label>
           <input
             type="email"
             className="form-control"
