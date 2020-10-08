@@ -13,7 +13,6 @@ function Layout() {
         <MDBRow style={{ borderLeft: "1px solid lightGray" }}>
           <MDBCol>
             <Cards />
-           
           </MDBCol>
         </MDBRow>
       </MDBContainer>
