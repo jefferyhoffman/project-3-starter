@@ -16,6 +16,8 @@ import Contact from '../../pages/Contact/Contact';
 import Layout from '../../pages/Layout/Layout'
 import Product from '../../pages/ProductPage/Product'
 
+import MShirts from '../../pages/MShirts/MShirts';
+
 import './App.css';
 
 class App extends Component {
@@ -65,6 +67,7 @@ class App extends Component {
               <Route path='/register' component={Register} />
               <Route path = '/layout' component = {Layout}/>
               <Route path = '/product' component = {Product}/>
+              <Route Path = '/mens-shirts' component = {MShirts}/>
               {/* <PrivateRoute path='/secret' component={Secret} /> */}
               <Route component={NotFound} />
             </Switch>
