@@ -57,8 +57,8 @@ export const Tshirt = (props) => {
             </div>
             <div className="contentBx">
                 <h2 key={props.id}>{props.name}</h2>
-                <p>{"$" + props.price.toFixed(2)}</p>
-                <p>{props.description}</p>
+                <p className="rise">{"$" + props.price.toFixed(2)}</p>
+                <p className="rise">{props.description}</p>
                 <button onClick={addToCart}>Add to Cart</button>
             </div>
         </div>
