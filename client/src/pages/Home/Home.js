@@ -34,7 +34,7 @@ class HomePage extends Component {
         <row>
           <CartProvider>
             <div>
-              {/* <Cart /> */}
+              <Cart />
               <TshirtList />
             </div>
           </CartProvider>

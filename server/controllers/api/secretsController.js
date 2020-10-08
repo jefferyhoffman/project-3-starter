@@ -9,4 +9,7 @@ secretsController.get('/', JWTVerifier, (req, res) => {
     .catch(err => console.log(err));
 });
 
+
+
+
 module.exports = secretsController;
