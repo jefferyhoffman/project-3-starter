@@ -5,8 +5,9 @@ import Form from "../../components/Form/Form";
 function Bill() {
     return (
         <div>
-            <button type="button" className="btn btn-primary">Add New Bill</button>
+            
             <Form />
+            <button type="button" className="btn btn-primary animate__animated animate__fadeIn animate__delay-2s">Add New Bill</button>
            
         </div>
     )
