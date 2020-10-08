@@ -4,28 +4,33 @@ import '../../styles/cards.css';
 const styles = {
     cardOne: {
         backgroundColor: "#718D7B"
+
     },
     cardTwo: {
         backgroundColor: "#71758D"
     },
     cardThree: {
         backgroundColor: "#8D7183"
+    },
+    pTag: {
+        fontFamily:"'Great Vibes', cursive",
+        fontSize: "60px",
+        color: "white"
+    },
+    title: {
+        fontSize: "20px"
     }
 }
 
 function Cards() {
     return (
         <section className="section">
-            
                 <div className="columns">
                     <div className="card column" style={styles.cardOne}>
-                        <h5 className="card-title"><strong>Did you know that...</strong></h5>
-                        <img src="" className="card-img-top" alt="" />
-                        <div className="card-body"> "Depression affects over 18 million adults in any given year."" <br />
-              "Depression is the leading cause of disability for ages 15-44"<br />
-              "Depression is the primary reason why someone dies of suicide about every 12 minutes." <br />
-              YOU ARE NOT ALONE!
+                        <div style={styles.title}>Get on track with your</div>
+                        <div className="card-body" style={styles.pTag}>Emotions
             </div>
+            
                     </div>
                     <div className="card column">
                      {/*    <h5 className="card-title"></h5> */}
