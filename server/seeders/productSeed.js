@@ -1366,6 +1366,66 @@ const productSeed = [
             }
         ],
         photo: "your-superfoods-superfood-mix-muscle-power-mix-15044125065291_1024x1024.jpeg"
+    },
+    {
+        name: "Organic Super Green Mix",
+        description: "Easy way to increase your intake of nutritious greens. Naturally high in fiber and a healthy prebiotic. Contains all essential vitamins and minerals. Only 6 green superfood ingredients - nothing else. 1 spoonful = a handful of greens",
+        price: 40.00,
+        category: ["Wellness"],
+        inventory: [
+            {
+                quantity: 25,
+                size: "N/A",
+                color: "N/A",
+                gender: "N/A"
+            }
+        ],
+        sold: [
+            {
+                quantity: 0,
+            }
+        ],
+        photo: "your-superfoods-superfood-mix-super-green-mix-15259937964107_1024x1024.jpeg"
+    },
+    {
+        name: "Plant Collagen Support",
+        description: "Protect your natural collagen. Can support your skin health and hydration. Add as a creamer to lattes, smoothies & oatmeal. Formulated by holistic nutritionists",
+        price: 40.00,
+        category: ["Wellness"],
+        inventory: [
+            {
+                quantity: 25,
+                size: "N/A",
+                color: "N/A",
+                gender: "N/A"
+            }
+        ],
+        sold: [
+            {
+                quantity: 0,
+            }
+        ],
+        photo: "your-superfoods-superfood-mix-plant-collagen-support-15967619252299_1024x1024.jpeg"
+    },
+    {
+        name: "Energy Bomb Mix",
+        description: "Boost your energy levels for up to 8 hours. A great healthy alternative to coffee.5 energizing superfoods in 1 mix - no additives! 1 spoonful = 1 cup of coffee",
+        price: 40.00,
+        category: ["Wellness"],
+        inventory: [
+            {
+                quantity: 25,
+                size: "N/A",
+                color: "N/A",
+                gender: "N/A"
+            }
+        ],
+        sold: [
+            {
+                quantity: 0,
+            }
+        ],
+        photo: "your-superfoods-superfood-mix-energy-bomb-mix-15044004937803_1024x1024.jpeg"
     }
 ]
 
