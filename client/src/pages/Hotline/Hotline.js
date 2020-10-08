@@ -1,11 +1,11 @@
-import React from "react";
+import React, { Component } from "react";
 
-// class Hotline extends Component {
-//     render() {
-//       return (
-       
-//       );
-//     }
-//   }
+class Hotline extends Component {
+    render() {
+      return (
+       <div></div>
+      );
+    }
+  }
   
-//   export default Hotline;
+  export default Hotline;

@@ -1,5 +1,6 @@
 import React from "react";
 import API from "../../Utils/AffirmAPI";
+import Menu from '../Menu/Menu';
 
 
 
@@ -20,6 +21,7 @@ class Affirmations extends React.Component {
     render() {
         return (
             <div>
+                <Menu />
                 {this.state.result.map(result => {
                     return <p>{result.affirmation}</p>
                 })}

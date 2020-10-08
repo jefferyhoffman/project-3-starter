@@ -1,11 +1,11 @@
 import React from "react";
 
-// class Breathing extends Component {
-//     render() {
-//       return (
-       
-//       );
-//     }
-//   }
+class Breathing extends React.Component {
+    render() {
+      return (
+       <div></div>
+      );
+    }
+  }
   
-//   export default Breathing;
+  export default Breathing;
