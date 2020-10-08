@@ -6,6 +6,7 @@
     height: 100%;
     background-size: cover;
     background-attachment: fixed;
+    font-family: 'Raleway', sans-serif;;
   }
 
   .wrapper {
@@ -14,4 +15,15 @@
     overflow:hidden;
     margin-top: -79px;
  
-  } 
+  }
+
+  h1 {
+    font-family: 'Great Vibes', cursive; ;
+  }
+  p {
+    font-family: 'Raleway', sans-serif;;
+    font-size: 45px;
+    margin-left: 220px;
+    
+
+  }
