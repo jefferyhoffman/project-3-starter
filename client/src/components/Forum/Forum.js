@@ -19,6 +19,9 @@ class Forum extends React.Component{
         })
         .catch(() => {
             console.log("error posting");
-        })
+        });
     }
+    handleChange = ({ target }) => {
+
+    };
 }
