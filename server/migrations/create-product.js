@@ -17,6 +17,12 @@ module.exports = {
       product_img_one: {
         type: Sequelize.STRING
       },
+      product_img_two: {
+        type: Sequelize.STRING
+      },
+      product_img_three: {
+        type: Sequelize.STRING
+      },
       price: {
         type: Sequelize.INTEGER
       },
