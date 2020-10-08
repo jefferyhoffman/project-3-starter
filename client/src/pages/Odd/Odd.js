@@ -1,11 +1,11 @@
-import React from "react";
+import React, {Component} from "react";
 
-// class Odd extends Component {
-//     render() {
-//       return (
-       
-//       );
-//     }
-//   }
+class Odd extends Component {
+    render() {
+      return (
+       <div></div>
+      );
+    }
+  }
   
-//   export default Odd;
+  export default Odd;
