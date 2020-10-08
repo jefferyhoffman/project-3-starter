@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import BlogCard from '../../components/BlogCard/BlogCard'
 import logo from './logo.svg';
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import Container from "react-bootstrap/Container"
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
 
 const testData = [
   {
@@ -51,11 +56,26 @@ function HomePage() {
 
 
   return (
-    <div className="d-flex flex-wrap justify-content-around">
-      {testData.map(val => {
-        return <BlogCard author={val.author} city={val.city} state={val.state} text={val.text} img={val.img} ></BlogCard>
-      })}
-    </div>
+    <Container>
+      <Row>
+        <Col>
+          <Form>
+            <Form.Label>Search By City</Form.Label>
+            <Form.Control type="text" placeholder="enter City"></Form.Control>
+            <Button className="m-2"  variant="primary" type="submit">Submit</Button>
+          </Form>
+        </Col>        
+      </Row>
+      <Row>
+        <Col>
+          <div className="d-flex flex-wrap justify-content-around">
+            {testData.map(val => {
+              return <BlogCard author={val.author} city={val.city} state={val.state} text={val.text} img={val.img} ></BlogCard>
+            })}
+          </div>
+        </Col>
+      </Row>
+    </Container>
   );
 
 }
