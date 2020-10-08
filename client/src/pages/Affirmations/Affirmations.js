@@ -1,5 +1,4 @@
 import React from "react";
-import API from "../../Utils/AffirmAPI";
 import Menu from '../Menu/Menu';
 
 
@@ -9,14 +8,14 @@ class Affirmations extends React.Component {
         result: []
 
     };
-    componentDidMount() {
-        this.affirmationResults("")
-    }
-    affirmationResults = query => {
-        API.search(query)
-            .then(res => this.setState({ result: res.data }))
-            .catch(err => console.log(err))
-    }
+    // componentDidMount() {
+    //     this.affirmationResults("")
+    // }
+    // affirmationResults = query => {
+    //     API.search(query)
+    //         .then(res => this.setState({ result: res.data }))
+    //         .catch(err => console.log(err))
+    // }
 
     render() {
         return (
@@ -30,4 +29,4 @@ class Affirmations extends React.Component {
     }
 }
 
-// export default Affirmations;
+export default Affirmations;
