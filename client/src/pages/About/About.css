@@ -1,12 +1,12 @@
 
 h2 {
-    color: black;
+    color:  #011586;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #about {
-    color: black;
+    color:  #011586;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-image: URL('../../assets/images/ppe.jpg');
+    background-color: white;
     
 }

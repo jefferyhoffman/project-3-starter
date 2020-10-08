@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ProductView from './../../components/ProductView/productview'
 import ProductCard from './../../components/ProductView/productview'
+import About from '../About/About'
 
 class HomePage extends Component {
 
@@ -15,7 +16,10 @@ class HomePage extends Component {
             {/* <a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a> */}
         </div>
         <ProductView />
+
+        
         </div>
+       
     );
   }
 }
