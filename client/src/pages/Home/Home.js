@@ -1,38 +1,63 @@
 import React, { Component } from 'react';
-
+import BlogCard from '../../components/BlogCard/BlogCard'
 import logo from './logo.svg';
 
-class HomePage extends Component {
-  render() {
-    return (
-      <div className='Home'>
-        <div className='row'>
-          <div className='col'>
-            <img src={logo} className='App-logo' alt='logo' />
-            <p>
-              Edit <code>src/pages/Home.js</code> and save to reload.
-            </p>
-            {/* <a
-              className='App-link'
-              href='https://reactjs.org'
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a> */}
-            <div class="card" style="width: 18rem;">
-              <img src="..." class="card-img-top" alt="..."/>
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-</div>
-            </div>
-          </div>
-        </div>
-    );
+const testData = [
+  {
+    author: "Caleb",
+    city: "Huntersville",
+    state: "North Carolina",
+    text: "I like Huntersville",
+    img: "https://www.lakenormanmike.com/wp-content/uploads/2019/12/Huntersville-NC-birkdale-village-lake-norman-real-estate-agent.jpg"
+  },
+  {
+    author: "Caleb",
+    city: "Huntersville",
+    state: "North Carolina",
+    text: "I like Huntersville",
+    img: "https://www.lakenormanmike.com/wp-content/uploads/2019/12/Huntersville-NC-birkdale-village-lake-norman-real-estate-agent.jpg"
+  },
+  {
+    author: "Caleb",
+    city: "Huntersville",
+    state: "North Carolina",
+    text: "I like Huntersville",
+    img: "https://www.lakenormanmike.com/wp-content/uploads/2019/12/Huntersville-NC-birkdale-village-lake-norman-real-estate-agent.jpg"
+  },  {
+    author: "Caleb",
+    city: "Huntersville",
+    state: "North Carolina",
+    text: "I like Huntersville",
+    img: "https://www.lakenormanmike.com/wp-content/uploads/2019/12/Huntersville-NC-birkdale-village-lake-norman-real-estate-agent.jpg"
+  },  {
+    author: "Caleb",
+    city: "Huntersville",
+    state: "North Carolina",
+    text: "I like Huntersville",
+    img: "https://www.lakenormanmike.com/wp-content/uploads/2019/12/Huntersville-NC-birkdale-village-lake-norman-real-estate-agent.jpg"
+  },
+  {
+    author: "Caleb",
+    city: "Huntersville",
+    state: "North Carolina",
+    text: "I like Huntersville",
+    img: "https://www.lakenormanmike.com/wp-content/uploads/2019/12/Huntersville-NC-birkdale-village-lake-norman-real-estate-agent.jpg"
   }
+]
+
+
+function HomePage() {
+  
+
+  
+    return (
+      <div className="d-flex flex-wrap justify-content-around">
+        {testData.map(val => {
+          return <BlogCard author={val.author} city={val.city} state={val.state} text={val.text} img={val.img} ></BlogCard>
+        })}
+      </div>
+    );
+
 }
 
 export default HomePage;

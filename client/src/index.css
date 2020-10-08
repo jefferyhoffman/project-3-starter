@@ -1,9 +1,12 @@
 body {
-  background-color: rgb(212, 209, 209);
+  background-image: url("./assets/images/wonders/pyramids.jpg");
+  background-size: cover;
+  background-attachment: fixed;
   animation-name: example;
   animation-duration: 20s;
   animation-iteration-count: infinite;
-  animation-direction: reverse}
+  animation-direction: reverse
+}
 
 @keyframes example {
   0%   {background-color: rgb(212, 209, 209);}
