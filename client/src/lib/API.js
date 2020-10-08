@@ -23,6 +23,9 @@ export default {
     getAll: function () {
       return axios.get('/api/products');
     },
+    getById: function (id){
+      return axios.get('/api/products/' + id);
+    },
 
     getCategories: function (category) {
       return axios.get('/api/products/'+ category);
@@ -33,7 +36,7 @@ export default {
     },
 
     getGender: function (category, gender){
-      return axios.get('/api/' + category + '/' + gender)
+      return axios.get('/api/products/category/' + category + '/' + gender)
     }
   }
 }

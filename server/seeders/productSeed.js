@@ -241,7 +241,7 @@ const productSeed = [
                 quantity: 0,
             }
         ],
-        photo: "MetalVentTechShortSleeve2.0.jpeg"
+        photo: "MetalVentTechShortSleeve.jpeg"
     },
     {
         name: "Fast and Free Short Sleeve",
