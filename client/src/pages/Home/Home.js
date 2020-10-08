@@ -25,8 +25,7 @@ class HomePage extends Component {
         <MDBContainer >
         <MDBContainer  >
           <MDBRow>
-            
-
+          
             <MDBCol md={12}>
               <h3 variant="display-3">The Womens Best Sellers</h3>
               <Card />

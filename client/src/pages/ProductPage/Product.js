@@ -2,6 +2,10 @@ import React from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBBtn } from "mdbreact";
 import lulu2 from "../../pages/ProductPage/lulu2.jpeg";
 import AddCart from '../../components/AddCart/AddCart'
+import Chatbot from 'react-chatbot-kit';
+import ActionProvider from '../../components/Chatbot/ActionProvider';
+import MessageParser from '../../components/Chatbot/MessageParser';
+import config from '../../components/Chatbot/Config';
 
 function Product() {
   return (
@@ -29,7 +33,7 @@ function Product() {
           <p>a short description about the product and other unecessary information about the product. a short description about the product and other unecessary information about the product</p>
           {/* <AddCart/> */}
           <i class="far fa-comments" style={{textDecoration: "underline",fontSize: 20}}>live chat</i>
-
+          {/* <Chatbot config={config} actionProvider={ActionProvider} messageParser={MessageParser} /> */}
         </MDBCol>
       </MDBRow>
     </MDBContainer>
