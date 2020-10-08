@@ -28,6 +28,7 @@ function Product() {
           <h6 style = {{fontWeight:"bold"}}>Product Details</h6>
           <p>a short description about the product and other unecessary information about the product. a short description about the product and other unecessary information about the product</p>
           {/* <AddCart/> */}
+          <i class="far fa-comments" style={{textDecoration: "underline",fontSize: 20}}>live chat</i>
 
         </MDBCol>
       </MDBRow>
