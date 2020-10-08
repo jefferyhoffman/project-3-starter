@@ -8,42 +8,41 @@ import Hero from "../../components/Hero/Hero";
 import Card from '../../components/Cards/Cards'
 // import HeroButton from '../../components/Button/Button'
 import Carousel from '../../components/Carousel/Carousel'
+
 class HomePage extends Component {
   render() {
     return (
 
 <>
-        <div>
+        <div id="apppage" className="view">
         {/* HERO IMAGE */}
         <Hero />
         <hr className="solid"></hr>
         </div>
+       
         
-        <div className="fear">
         {/* BEST SELLER CARDS */}
         <MDBContainer >
-        <MDBContainer >
+        <MDBContainer  >
           <MDBRow>
-            {/* <MDBCol md={1} >
-              
-            </MDBCol> */}
+            
 
             <MDBCol md={12}>
               <h3 variant="display-3">The Womens Best Sellers</h3>
               <Card />
             </MDBCol>
-            {/* <MDBCol md={1}></MDBCol> */}
+            
           </MDBRow>
         </MDBContainer>
         <hr className="solid"></hr>
         <MDBContainer >
           <MDBRow>
-            {/* <MDBCol md={1}></MDBCol> */}
+            
             <MDBCol md={12}>
               <h3 variant="display-3">The Mens Best Sellers</h3>
               <Card />
             </MDBCol>
-            {/* <MDBCol md={1}></MDBCol> */}
+           
           </MDBRow>
         </MDBContainer>
         <hr className="solid"></hr>
@@ -56,7 +55,7 @@ class HomePage extends Component {
           </MDBRow>
         </MDBContainer>
         </MDBContainer>
-      </div >
+        
 </>
 
 
