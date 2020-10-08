@@ -7,6 +7,30 @@ module.exports = {
       password: 'test',
       createdAt: Sequelize.fn('NOW'),
       updatedAt: Sequelize.fn('NOW'),
+    },  
+    {
+      email: 'adam@test.com',
+      password: 'test',
+      createdAt: Sequelize.fn('NOW'),
+      updatedAt: Sequelize.fn('NOW'),
+    },
+    {
+      email: 'ryan@test.com',
+      password: 'test',
+      createdAt: Sequelize.fn('NOW'),
+      updatedAt: Sequelize.fn('NOW'),
+    },
+    {
+      email: 'nick@test.com',
+      password: 'test',
+      createdAt: Sequelize.fn('NOW'),
+      updatedAt: Sequelize.fn('NOW'),
+    },
+    {
+      email: 'matt@test.com',
+      password: 'test',
+      createdAt: Sequelize.fn('NOW'),
+      updatedAt: Sequelize.fn('NOW'),
     }], {});
   },
 
