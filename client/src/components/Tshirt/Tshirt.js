@@ -6,19 +6,19 @@ import { CartContext } from "../../contexts/CartContext";
 export const Tshirt = (props) => {
     const [cart, setCart] = useContext(CartContext);
     const addToCart = () => {
-
+        
         const filterCartByID = cart.filter(val => {
             return props.id === val.id
         })
-        console.log("filterCartByID", filterCartByID)
+        // console.log("filterCartByID", filterCartByID)
 
         if (filterCartByID.length > 0) {
 
             const mapOfCart = cart.map(val => {
-                console.log(val.id, props.id)
-                console.log(cart)
+                // console.log(val.id, props.id)
+                // console.log(cart)
                 if (val.id === props.id) {
-                    console.log("hit")
+                    // console.log("hit")
                     const tshirt = {
                         name: val.name,
                         description: val.description,
@@ -33,7 +33,7 @@ export const Tshirt = (props) => {
 
                 return val
             })
-            console.log("mapOfCart", mapOfCart)
+            // console.log("mapOfCart", mapOfCart)
             setCart(() => mapOfCart)
         } else {
             const tshirt = {
@@ -44,11 +44,43 @@ export const Tshirt = (props) => {
                 id: props.id,
                 quantity: 1
             };
-            console.log("first");
+            // console.log("first");
             setCart(currentState => [...currentState, tshirt]);
         }
 
     }
+
+    // const removeFromCart = () => {
+
+    //     const filterCartByID = cart.filter(val => {
+    //         return props.id === val.id
+    //     })
+    //     // console.log("filterCartByID", filterCartByID)
+
+    //     if (filterCartByID.length > 0) {
+
+    //         const mapOfCart = cart.map(val => {
+    //             // console.log(val.id, props.id)
+    //             // console.log(cart)
+    //             if (val.id === props.id) {
+    //                 // console.log("hit")
+    //                 const tshirt = {
+    //                     name: val.name,
+    //                     description: val.description,
+    //                     image: val.image,
+    //                     price: val.price,
+    //                     id: val.id,
+    //                     quantity: val.quantity -1
+    //                 };
+
+    //                 return tshirt
+    //             }
+
+    //             return val
+    //         })
+    //         // console.log("mapOfCart", mapOfCart)
+    //         setCart(() => mapOfCart)
+    //     }}
 
     return (
         <div className="card">
@@ -60,6 +92,7 @@ export const Tshirt = (props) => {
                 <p>{"$" + props.price.toFixed(2)}</p>
                 <p>{props.description}</p>
                 <button onClick={addToCart}>Add to Cart</button>
+                {/* <button onClick={removeFromCart}>Remove from Cart</button> */}
             </div>
         </div>
     )

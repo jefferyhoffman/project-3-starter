@@ -34,7 +34,7 @@ export const TshirtList = () => {
                         <Tshirt id={item.id} name={item.name} description={item.description} image={item.image} price={item.price} key={item.id} />
                     ))
                 }
-                <Cart />
+                {/* <Cart /> */}
             </div>
         </div>
     )
