@@ -3,9 +3,6 @@ const db = require('../../models')
 
 const { JWTVerifier } = require('../../lib/passport');
 
-// Accessed at /api/secrets
-// secretsController.get('/', JWTVerifier, (req, res) => res.json(SECRETS));
-
 secretsController.get('/', JWTVerifier, (req, res) => {
 
   db.Secrets.find({})
