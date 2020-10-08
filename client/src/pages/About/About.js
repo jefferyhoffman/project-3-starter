@@ -23,7 +23,7 @@ function About() {
         <h2>Meet the Team:</h2><br></br><br></br>
         <div>
         <Container>
-        <p id="about-us" >We are a team of UNC-Charlotte full stack developer students that have collaborated to create a fully functional eCommerce site with a working shopping cart. We hope you enjoy this application and please feel free to connect with us via our individual profiles below.</p>
+        <p id="about-us" >We are a team of UNC-Charlotte full stack developer students with a passion for cleanliness and safety (next to coding). We have collaborated to create a fully functional eCommerce site with a working shopping cart that will fulfill all your PPE needs. Please let us know you stopped by and feel free to connect with us via our individual profiles below.</p>
         </Container>
         </div>
         </div>
