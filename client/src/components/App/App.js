@@ -69,3 +69,27 @@ class App extends Component {
 }
 
 export default App;
+
+// import React from 'react';
+// // import {TshirtList } from "./TshirtList";
+
+
+// import './App.css';
+// // import { CartProvider } from './CartContext';
+// import { Cart } from '../Cart/Cart';
+// import { CartProvider } from '../../contexts/CartContext';
+// import { TshirtList } from '../Tshirt/TshirtList';
+
+
+// const App = () => {
+//   return (
+//     <CartProvider>
+//     <div>
+//     <Cart />
+//     <TshirtList/>
+//     </div>
+//     </CartProvider>
+//   );
+// }
+
+// export default App;
