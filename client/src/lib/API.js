@@ -36,7 +36,7 @@ export default {
     },
 
     getGender: function (category, gender){
-      return axios.get('/api/' + category + '/' + gender)
+      return axios.get('/api/products/category/' + category + '/' + gender)
     }
   }
 }

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 // import {Container} from 'react-bootstrap';
 import { MDBContainer, MDBCol, MDBRow } from "mdbreact";
-import "../MShirts/MShirts.css";
+import "../MShorts/MShorts.css";
 import Cards from "../../components/Cards/Cards";
 import API from '../../lib/API'
-const MShirts = ()=> {
+const MShorts = ()=> {
     const [items, setItems] = useState([])
   
     useEffect(() => {
@@ -19,7 +19,7 @@ const MShirts = ()=> {
       }, [])
 
       function loadItems() {
-        API.Products.getGender("Shirts","Mens")
+        API.Products.getGender("Shorts","Mens")
           .then(res => {
             console.log(res.data)
             setItems(res.data)
@@ -29,7 +29,7 @@ const MShirts = ()=> {
 
   return (
     <div>
-      <h2 className="title">Men's Shirts</h2>
+      <h2 className="title">Men's Shorts</h2>
       <MDBContainer>
         <hr className="solid"></hr>
         <MDBRow style={{ borderLeft: "1px solid lightGray" }}>
@@ -43,4 +43,4 @@ const MShirts = ()=> {
     </div>
   );
 }
-export default MShirts;
+export default MShorts;

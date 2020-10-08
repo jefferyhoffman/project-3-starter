@@ -17,6 +17,7 @@ import Layout from '../../pages/Layout/Layout'
 import Product from '../../pages/ProductPage/Product'
 
 import MShirts from '../../pages/MShirts/MShirts';
+import MShorts from '../../pages/MShorts/MShorts';
 
 import './App.css';
 
@@ -67,7 +68,12 @@ class App extends Component {
               <Route path='/register' component={Register} />
               <Route path = '/layout' component = {Layout}/>
               <Route path = '/product' component = {Product}/>
-              <Route Path = '/mens-shirts' component = {MShirts}/>
+              <Route exact path = '/mens/shirts' component = {MShirts}/>
+              <Route exact path = '/mens/shorts' component = {MShorts}/>
+
+              {/* <Route Path = '/category/*' component = {MShirts}/>
+              <Route Path = '/category/*' component = {MShorts}/> */}
+
               {/* <PrivateRoute path='/secret' component={Secret} /> */}
               <Route component={NotFound} />
             </Switch>
