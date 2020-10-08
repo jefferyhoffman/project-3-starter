@@ -27,19 +27,6 @@ class Navigation extends Component {
       <div className='Navigation'>
         <nav className='navbar navbar-expand-lg navbar-light bg-light mb-3'>
           <Link className='navbar-brand' to='#'>Project 3</Link>
-          <button className={togglerClass} onClick={this.toggleCollapse} data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
-            <span className='navbar-toggler-icon'></span>
-          </button>
-          <div className={targetClass} id='navbarSupportedContent'>
-            <ul className='navbar-nav mr-auto'>
-              <li className='nav-item'>
-                <Link className='nav-link' to='/' onClick={this.toggleCollapse}>Home</Link>
-              </li>
-              {user &&
-                <li className='nav-item'>
-                  <Link className='nav-link' to='/blog' onClick={this.toggleCollapse}>Blog</Link>
-                </li>}
-            </ul>
           <div class="travelContent">
             <div class="slider-wrapper">
               Travel to
@@ -49,10 +36,22 @@ class Navigation extends Component {
                 <div class="slider-text3">Asia</div>
                 <div class="slider-text4">Africa</div>
                 <div class="slider-text5">Australia</div>
-
               </div>
             </div>
           </div>
+          <button className={togglerClass} onClick={this.toggleCollapse} data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
+            <span className='navbar-toggler-icon'></span>
+          </button>
+          <div className={targetClass} id='navbarSupportedContent'>
+            <ul className='navbar-nav ml-auto'>
+              <li className='nav-item'>
+                <Link className='nav-link' to='/' onClick={this.toggleCollapse}>Home</Link>
+              </li>
+              {user &&
+                <li className='nav-item'>
+                  <Link className='nav-link' to='/blog' onClick={this.toggleCollapse}>Blog</Link>
+                </li>}
+            </ul>
             <ul className='navbar-nav'>
               {user
                 ? <AuthDropdown onClick={this.toggleCollapse} />
