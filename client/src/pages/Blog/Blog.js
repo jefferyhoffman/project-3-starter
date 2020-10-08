@@ -46,13 +46,8 @@ const testData = [
 ]
 
 function HomePage() {
-  // title 
-  // Date
-  // text
-  // authorid
-  
 
-  
+
     return (
       <div className="d-flex flex-wrap justify-content-around">
         {testData.map(val => {
