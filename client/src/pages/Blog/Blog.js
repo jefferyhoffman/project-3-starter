@@ -15,6 +15,8 @@ import ListGroup from "react-bootstrap/ListGroup";
 import Card from "react-bootstrap/Card";
 import Image from "react-bootstrap/Image";
 
+// import "./blog.css";
+
 
 
 export default function Blog() {
@@ -22,15 +24,21 @@ export default function Blog() {
     <>
       <Navbar className="bg-transparent justify-content-between">
         <Form inline>
-          <InputGroup>
+          <InputGroup class="bounce">
+            <div class="w3-container">
+
+            {/* <marquee behavior="scrolling"> */}
             <InputGroup.Prepend>
               <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
-            </InputGroup.Prepend>
+            
             <FormControl
               placeholder="Username"
               aria-label="Username"
               aria-describedby="basic-addon1"
-            />
+              />
+            </InputGroup.Prepend>
+            {/* </marquee> */}
+            </div>
           </InputGroup>
         </Form>
         <Form inline>
@@ -40,8 +48,8 @@ export default function Blog() {
       </Navbar>
       <Container>
         <Row>
-          <Col>
-            <Card style={{ width: "30rem" }}>
+          <Col >
+            <Card style={{ width: "30rem" }} class="slide-right">
               <Card.Img
                 variant="top"
                 src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_960_720.jpg"
@@ -65,7 +73,7 @@ export default function Blog() {
             </Card>
           </Col>
           <Col>
-          <Image
+            <Image
               src="https://geospatialmedia.s3.amazonaws.com/wp-content/uploads/2019/07/Apple-maps-app.png"
               fluid
             />
@@ -74,13 +82,13 @@ export default function Blog() {
         {/* <Row>
           <Col></Col>
           {/* <Col>2 of 3</Col> */}
-          {/* <Col>
+        {/* <Col>
             <Image
               src="https://cdn.pixabay.com/photo/2016/08/11/23/48/italy-1587287_960_720.jpg"
               fluid
             />
           </Col>
-        </Row> */} 
+        </Row> */}
         <Card>
           <Card.Header>(Footer)</Card.Header>
         </Card>

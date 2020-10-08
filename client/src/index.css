@@ -1,4 +1,16 @@
 body {
+  background-color: rgb(212, 209, 209);
+  animation-name: example;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse}
+
+@keyframes example {
+  0%   {background-color: rgb(212, 209, 209);}
+  25%  {background-color: white;}
+  50%  {background-color: white;}
+  100% {background-color: rgb(212, 209, 209);}}
+body {
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
