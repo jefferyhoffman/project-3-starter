@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // import Hero from '../../components/Hero/Hero'
 // import { Row, Col, MDBContainer } from "react-bootstrap";
-import { MDBContainer, MDBRow, MDBCol } from
+import { MDBContainer, MDBRow, MDBCol, MDBTypography } from
   "mdbreact";
 import "../Home/home.css";
 import Hero from "../../components/Hero/Hero";
@@ -12,30 +12,37 @@ class HomePage extends Component {
   render() {
     return (
 
-
-      <div>
+<>
+        <div>
         {/* HERO IMAGE */}
         <Hero />
         <hr className="solid"></hr>
-
+        </div>
+        <div className="fear">
         {/* BEST SELLER CARDS */}
         <MDBContainer >
+        <MDBContainer >
           <MDBRow>
-            <MDBCol md={1}></MDBCol>
-            <MDBCol md={10}>
+            {/* <MDBCol md={1} >
+              
+            </MDBCol> */}
+
+            <MDBCol md={12}>
+              <h3 variant="display-3">The Womens Best Sellers</h3>
               <Card />
             </MDBCol>
-            <MDBCol md={1}></MDBCol>
+            {/* <MDBCol md={1}></MDBCol> */}
           </MDBRow>
         </MDBContainer>
         <hr className="solid"></hr>
         <MDBContainer >
           <MDBRow>
-            <MDBCol md={1}></MDBCol>
-            <MDBCol md={10}>
+            {/* <MDBCol md={1}></MDBCol> */}
+            <MDBCol md={12}>
+              <h3 variant="display-3">The Mens Best Sellers</h3>
               <Card />
             </MDBCol>
-            <MDBCol md={1}></MDBCol>
+            {/* <MDBCol md={1}></MDBCol> */}
           </MDBRow>
         </MDBContainer>
         <hr className="solid"></hr>
@@ -47,8 +54,9 @@ class HomePage extends Component {
             </MDBCol>
           </MDBRow>
         </MDBContainer>
+        </MDBContainer>
       </div >
-
+</>
 
 
     );

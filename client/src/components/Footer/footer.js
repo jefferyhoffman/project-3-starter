@@ -5,14 +5,14 @@ const FooterPage = () => {
     <MDBFooter color="grey" className="font-small pt-4 mt-4">
       <MDBContainer fluid className="text-center text-md-left">
         <MDBRow>
-          <MDBCol md="2">
+          <MDBCol lg="2">
             <h5  className="title elegant-color-dark">Slay Your Dragon</h5>
             <p className="black-text">
               Free yourself, stand for what  
               you believe in and never settle. 
             </p>
           </ MDBCol>
-          <MDBCol md="2">
+          <MDBCol lg="2">
             <h5 className="title">Links</h5>
             <ul>
               <li className="list-unstyled">
@@ -29,9 +29,9 @@ const FooterPage = () => {
               </li>
             </ul>
           </ MDBCol>
-          <MDBCol md="2">
-            <h5 className="title">Mens</h5>
+          <MDBCol lg="2">
             <ul>
+            <li className="list-unstyled"><h6 className="title">Mens</h6></li>
               <li className="list-unstyled">
                 <a href="#!">Shirts</a>
               </li>
@@ -46,7 +46,7 @@ const FooterPage = () => {
               </li>
             </ul>
           </MDBCol>
-          <MDBCol md="2">
+          <MDBCol lg="2">
             <h5 className="title">Womens</h5>
             <ul>
               <li className="list-unstyled">
@@ -66,7 +66,7 @@ const FooterPage = () => {
               </li>
             </ul>
           </MDBCol>
-          <MDBCol md="2">
+          <MDBCol lg="2">
             <h5 className="title">Accessories</h5>
             <ul>
               <li className="list-unstyled">
@@ -83,7 +83,7 @@ const FooterPage = () => {
               </li>
             </ul>
           </MDBCol>
-          <MDBCol md="1">
+          <MDBCol lg="1">
             <h5 className="title">Supplements</h5>
             <ul>
               <li className="list-unstyled">

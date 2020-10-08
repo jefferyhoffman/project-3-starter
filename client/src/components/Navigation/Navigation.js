@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../Navigation/nav.css'
-import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBFormInline } from "mdbreact";
+import { 
+  MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBLink, MDBNavbarToggler, MDBCollapse, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBFormInline
+ } from "mdbreact";
 import { BrowserRouter as Router } from 'react-router-dom';
 import AuthContext from '../../contexts/AuthContext';
 // import AuthDropdown from '../../components/AuthDropdown/AuthDropdown';
@@ -20,13 +22,13 @@ class NavbarPage extends Component {
       
         <MDBNavbar color="elegant-color" dark expand="md">
           <MDBNavbarBrand>
-            <strong className="white-text">Saint George Apparel</strong>
+            <strong className="white-text">Saint George Athleisure</strong>
           </MDBNavbarBrand>
           <MDBNavbarToggler onClick={this.toggleCollapse} />
           <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
             <MDBNavbarNav left>
               <MDBNavItem>
-                <MDBNavLink to="#!">Home</MDBNavLink>
+                <MDBLink to="/">Home</MDBLink>
               </MDBNavItem>
         {/* MENS */}
               <MDBNavItem>
@@ -35,7 +37,7 @@ class NavbarPage extends Component {
                   <span className="mr-2">Mens</span>
                   </MDBDropdownToggle>
                   <MDBDropdownMenu className="dropdown-default">
-                    <MDBDropdownItem href="#!">Shirts</MDBDropdownItem>
+                    <MDBDropdownItem href="/">Shirts</MDBDropdownItem>
                     <MDBDropdownItem href="#!">Pants</MDBDropdownItem>
                     <MDBDropdownItem href="#!">Shorts</MDBDropdownItem>
                     <MDBDropdownItem href="#!">Sweat Shirts</MDBDropdownItem>
@@ -85,11 +87,21 @@ class NavbarPage extends Component {
                 </MDBDropdown>
               </MDBNavItem>
               <MDBNavItem>
-                <MDBNavLink to="/contact">Contact Us</MDBNavLink>
+                <MDBLink to="/contact">Contact Us</MDBLink>
               </MDBNavItem>
+
             </MDBNavbarNav>
         {/* SEARCH BAR */}
             <MDBNavbarNav right>
+            <MDBNavItem>
+                <MDBLink to="/register">Register</MDBLink>
+              </MDBNavItem>
+            <MDBNavItem>
+                <MDBLink to="/login">Login</MDBLink>
+              </MDBNavItem>
+              <MDBNavItem>
+                <MDBLink to="/checkout"><i class="fa fa-shopping-cart"></i></MDBLink>
+              </MDBNavItem>
             <MDBNavItem>
               <MDBFormInline waves>
                 <div className="md-form my-0">
@@ -100,7 +112,7 @@ class NavbarPage extends Component {
             </MDBNavbarNav>
           </MDBCollapse>
         </MDBNavbar>
-    
+        
       );
     }
   }
