@@ -38,7 +38,7 @@ code {
 }
 
 .slider-wrapper {
-  font-size: 12px;
+  font-size: 20px;
   color:rgb(0, 0, 0);
   font-weight: bold;
   text-transform: uppercase;
@@ -50,9 +50,11 @@ code {
 .slider {
   height: 50px;
   padding-left: 5px;
+  overflow: hidden;
 }
 
 .slider div {
+  font-size: 24px;
   color: antiquewhite;
   height: 50px;
   margin-bottom: 50px;
@@ -62,7 +64,7 @@ code {
 
 .slider-text1 {
   background: cornflowerblue;
-  animation: slide 5s linear infinite;
+  animation: slide 15s linear infinite;
 }
 .slider-text2 {
   background: lightcoral;
@@ -76,16 +78,17 @@ code {
 .slider-text5 {
   background: orange;
 }
-.slider-text6 {
-  background: red;
-}
 
 @keyframes slide {
-  0% {margin-top: -600px;}
-  18% {margin-top: -500px;}
-  36% {margin-top: -400px;}
-  54% {margin-top: -300px;}
-  72% {margin-top: -200px;}
-  90% {margin-top: -100px;}
+  0% {margin-top: -500px;}
+  10% {margin-top: -400px;}
+  20% {margin-top: -400px;}
+  30% {margin-top: -300px;}
+  40% {margin-top: -300px;}
+  50% {margin-top: -200px;}
+  60% {margin-top: -200px;}
+  70% {margin-top: -100px;}
+  80% {margin-top: -100px;}
+  90% {margin-top: 0px;}
   100% {margin-top: 0px;}
 }
