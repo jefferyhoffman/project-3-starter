@@ -5,7 +5,7 @@ import { Tshirt } from "./Tshirt";
 export const TshirtList = () => {
     const database = [
         {
-            name: "Face Masks",
+            name: "FM",
             description: "Cloth surgical masks - 50 count",
             price: 9.95,
             image: "https://i.pinimg.com/originals/27/97/07/27970736454a5ceacafb35218f195aaf.png",
@@ -19,19 +19,19 @@ export const TshirtList = () => {
             id: 2
         },
         {
-            name: "Disinfecting wipes",
+            name: "DW",
             description: "Ethyl alcohol wipes - 100 count",
             price: 7.95,
             image: "https://i.pinimg.com/originals/27/97/07/27970736454a5ceacafb35218f195aaf.png",
             id: 3
         },
-        {
-            name: "Disinfecting wipes",
-            description: "Ethyl alcohol wipes - 100 count",
-            price: 7.95,
-            image: "https://i.pinimg.com/originals/27/97/07/27970736454a5ceacafb35218f195aaf.png",
-            id: 3
-        }
+        // {
+        //     name: "Disinfecting wipes",
+        //     description: "Ethyl alcohol wipes - 100 count",
+        //     price: 7.95,
+        //     image: "https://i.pinimg.com/originals/27/97/07/27970736454a5ceacafb35218f195aaf.png",
+        //     id: 3
+        // }
     ]
     return (
         <div>
