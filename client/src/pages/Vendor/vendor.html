@@ -28,14 +28,20 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/css/mdb.min.css"
       rel="stylesheet"
     />
-
-    <title>TEMPLATE</title>
+    <link
+    rel="stylesheet"
+    href="vendor.css"
+  />
+    <title>Vendor Page</title>
   </head>
-  <body>
-    <h1>TEMPLATE</h1>
+
+  <body class="body animated slideInLeft">
+    <img src="farmFreshMarketLogo2.png" class="img-fluid" alt="Responsive image" id="farmFreshMarketLogo2">
 
     <!--Navbar-->
-    <nav class="navbar navbar-light #388e3c green darken-2 text-white animated slideInLeft">
+    <nav
+      class="navbar navbar-light #388e3c green darken-2 text-white"
+    >
       <!-- Navbar brand -->
       <a class="navbar-brand text-white" href="#">Farm Fresh Market</a>
 
@@ -76,10 +82,72 @@
       <!-- Collapsible content -->
     </nav>
     <!--/.Navbar-->
-    <br />
-    <br />
+
+    <!-- Default form contact -->
+    <form class="text-center border border-light p-5" action="#!">
+      <p class="h4 mb-4">Vendor Registration</p>
+
+      <!-- Name -->
+      <input
+        type="text"
+        id="defaultContactFormName"
+        class="form-control mb-4"
+        placeholder="Name"
+      />
+
+      <!-- Email -->
+      <input
+        type="email"
+        id="defaultContactFormEmail"
+        class="form-control mb-4"
+        placeholder="E-mail"
+      />
+
+      <!-- Subject -->
+      <label>Subject</label>
+      <select class="browser-default custom-select mb-4">
+        <option value="" disabled>Choose option</option>
+        <option value="1" selected>Market Offering</option>
+        <option value="2">Feature Offering</option>
+        <option value="3">Report a bug</option>
+      </select>
+
+      <!-- Message -->
+      <div class="form-group">
+        <label>What's in my Market'</label>
+        <textarea
+          class="form-control rounded-0"
+          id="exampleFormControlTextarea2"
+          rows="3"
+          placeholder="My Market"
+        ></textarea>
+      </div>
+
+      <!-- Copy -->
+      <div class="custom-control custom-checkbox mb-4">
+        <input
+          type="checkbox"
+          class="custom-control-input"
+          id="defaultContactFormCopy"
+        />
+        <label class="custom-control-label" for="defaultContactFormCopy"
+          >Send me a copy of this message</label
+        >
+      </div>
+
+      <!-- Send button -->
+      <button
+        class="btn btn-info btn-block #6d4c41 brown darken-1"
+        type="submit"
+      >
+        Send
+      </button>
+    </form>
+    <!-- Default form contact -->
     <!-- Footer -->
-    <footer class="page-footer font-small #388e3c green darken-2 animated slideInLeft">
+    <footer
+      class="page-footer font-small #388e3c green darken-2 animated slideInLeft"
+    >
       <!-- Copyright -->
       <div class="footer-copyright text-center py-4 font-weight-bold">
         © 2020 Copyright:
@@ -91,10 +159,9 @@
       <!-- Copyright -->
     </footer>
     <!-- Footer -->
-<br />
-<br />
+    <br />
+    <br />
 
- 
     <!-- Footer -->
     <!-- Optional JavaScript -->
     <!-- JQuery -->

@@ -15,7 +15,8 @@ secretsController.get('/', JWTVerifier, (req, res) => {
 })
 
 secretsController.post('/',((req, res)=>{
-  db.Secrets.create({}).then(()=>res.sendStatus(200))
+  db.Secrets.create({}).then(()=>res.sendStatus(200)).catch(err => res.status(500).json(err))
 }))
+
 
 module.exports = secretsController;

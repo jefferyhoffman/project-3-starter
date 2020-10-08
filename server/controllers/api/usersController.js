@@ -4,6 +4,7 @@ const db = require('../../models');
 const { JWTVerifier } = require('../../lib/passport');
 const jwt = require('jsonwebtoken');
 
+// Accessed at /api/users
 usersController.post('/', (req, res) => {
   const { email, password } = req.body;
 
@@ -12,10 +13,12 @@ usersController.post('/', (req, res) => {
     .catch(err => res.json(err));
 });
 
+// Accessed at /api/users/me
 usersController.get('/me', JWTVerifier, (req, res) => {
   res.json(req.user);
 });
 
+// Accessed at /api/users/login
 usersController.post('/login', (req, res) => {
   const { email, password } = req.body;
 
