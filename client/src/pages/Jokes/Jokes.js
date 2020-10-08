@@ -5,14 +5,7 @@ import API from '../../lib/API'
 
 const Jokes =props=>{
     const[result, setResult] = useState([])
-    // componentDidMount() {
-    //     this.jokesResults("")
-    // }
-    // jokeResults = query => {
-    //     API.search(query)
-    //         .then(res => this.setState({ result: res.data }))
-    //         .catch(err => console.log(err))
-    // }
+   
   useEffect(()=>{
       API.Jokes.getJokes()
       .then(({data})=>setResult(data))
