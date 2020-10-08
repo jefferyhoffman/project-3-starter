@@ -4,13 +4,21 @@ import Card from 'react-bootstrap/Card';
 
 export default function BlogCard(props) {
     return (
-        <Card className="m-2">
-            <Card.Img variant="top" src={props.img} />
-            <Card.Body>
-                <Card.Title>{props.city}, {props.state}</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">{props.author}</Card.Subtitle>
-                <Card.Text>{props.text}</Card.Text>
-            </Card.Body>
-        </Card>
+        <div
+            data-aos="zoom-in-up"
+            data-aos-easing="ease-in-out"
+            data-aos-once="false"
+            class="mt-5"
+        >
+            <Card className="m-2">
+                <Card.Img variant="top" src={props.img} />
+                <Card.Body>
+                    <Card.Title>{props.city}, {props.state}</Card.Title>
+                    <Card.Subtitle className="mb-2 text-muted">{props.author}</Card.Subtitle>
+                    <Card.Text>{props.text}</Card.Text>
+                </Card.Body>
+            </Card>
+
+        </div>        
     )
 }
