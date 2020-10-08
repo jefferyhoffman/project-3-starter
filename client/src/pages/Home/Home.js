@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ProductView from './../../components/ProductView/productview'
 import ProductCard from './../../components/ProductView/productview'
+import About from '../About/About'
 
 // import React from 'react';
 // import {TshirtList } from "./TshirtList";
