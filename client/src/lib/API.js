@@ -27,5 +27,23 @@ export default {
         }
       });
     }
+  },
+
+  Affirmation: {
+    getAffirmation: function (authToken) {
+      return axios.get('/api/affirmation', {});
+    }
+  },
+
+  Jokes: {
+    getJokes: function (authToken) {
+      return axios.get('/api/jokes', {});
+    }
   }
+
 }
+
+
+
+
+
