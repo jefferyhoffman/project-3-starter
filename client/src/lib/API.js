@@ -30,6 +30,10 @@ export default {
 
     getPopular: function (popular) {
       return axios.get('/api/products/'+ popular);
+    },
+
+    getGender: function (category, gender){
+      return axios.get('/api/' + category + '/' + gender)
     }
   }
 }
