@@ -33,9 +33,12 @@ class Navigation extends Component {
 
           <div className={targetClass} id='navbarSupportedContent'>
             <ul className='navbar-nav mr-auto'>
-              {/* <li className='nav-item'>
+              <li className='nav-item'>
                 <Link className='nav-link' to='/' onClick={this.toggleCollapse}>Home</Link>
-              </li> */}
+              </li>
+              <li className='nav-item'>
+                <Link className='nav-link' to='/about' onClick={this.toggleCollapse}>Meet the Team</Link>
+              </li>
               {user &&
                 <li className='nav-item'>
                   <Link className='nav-link' to='/secret' onClick={this.toggleCollapse}>Secret</Link>

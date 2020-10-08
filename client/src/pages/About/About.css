@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,600,700,800, 800i, 900&display=swap');
+
+h2 {
+    color:  #011586;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+    font-size: 75px;
+    font-style: oblique;
+    text-shadow: 2px 2px 5px #ec8430
+}
+
+#about {
+    color:  #011586;
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    
+
+}
+
+#about-us {
+    text-align: left;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 100px;
+}
+
+a {
+    font-family: 'Poppins', sans-serif;
+    color: 011586;
+}
+
+a:hover {
+    color: #ec8430;
+  }
+
+  p {
+      color: #011586
+  }
