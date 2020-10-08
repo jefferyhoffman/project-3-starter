@@ -5,6 +5,8 @@ import { CartContext } from "../../contexts/CartContext";
 
 export const Tshirt = (props) => {
     const [cart, setCart] = useContext(CartContext);
+
+    
     const addToCart = () => {
 
         const filterCartByID = cart.filter(val => {
