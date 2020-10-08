@@ -11,13 +11,13 @@ const productSeed = [
         name: "Flow Y Longline Bra",
         description: "Feels like nothing at all. Powered by buttery-soft fabric, this long-line yoga bra has minimal seams to help keep your mind on the moment.",
         price: 19.99,
-        category: ["Bra's"],
+        category: ["Bras"],
         inventory: [
             {
                 quantity: 25,
                 size: "S",
                 color: "White",
-                gender: "Women's"
+                gender: "Womens"
             }
         ],
         sold: 0,

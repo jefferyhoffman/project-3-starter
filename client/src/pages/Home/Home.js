@@ -11,8 +11,6 @@ import Carousel from '../../components/Carousel/Carousel'
 class HomePage extends Component {
   render() {
     return (
-
-
       <div>
         {/* HERO IMAGE */}
         <Hero />
@@ -47,9 +45,8 @@ class HomePage extends Component {
             </MDBCol>
           </MDBRow>
         </MDBContainer>
+
       </div>
-
-
 
     );
   }

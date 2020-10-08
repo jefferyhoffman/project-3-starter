@@ -1,6 +1,7 @@
 import React from "react";
-import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
+import { MDBContainer, MDBRow, MDBCol, MDBBtn } from "mdbreact";
 import lulu2 from "../../pages/ProductPage/lulu2.jpeg";
+import AddCart from '../../components/AddCart/AddCart'
 
 function Product() {
   return (
@@ -14,8 +15,20 @@ function Product() {
         </MDBCol>
         <MDBCol>
           <h4 style = {{fontWeight:"bold"}}>Swiftly Breathe Short Sleeve</h4>
+          <h6>Iron Blue</h6>
           <h6>$30 USD</h6>
           <hr className="solid"></hr>
+          <h6>Select Size</h6>
+          <MDBBtn outline color = "black" size = "sm">xs</MDBBtn>
+          <MDBBtn outline color = "black" size = "sm">s</MDBBtn>
+          <MDBBtn outline color = "black" size = "sm">m</MDBBtn>
+          <MDBBtn outline color = "black" size = "sm">l</MDBBtn>
+          <MDBBtn outline color = "black" size = "sm">xl</MDBBtn>
+          <MDBBtn color = "black" size = "lg" style = {{marginTop:"20px", marginBottom: "20px"}}>Add to Cart</MDBBtn>
+          <h6 style = {{fontWeight:"bold"}}>Product Details</h6>
+          <p>a short description about the product and other unecessary information about the product. a short description about the product and other unecessary information about the product</p>
+          {/* <AddCart/> */}
+
         </MDBCol>
       </MDBRow>
     </MDBContainer>
