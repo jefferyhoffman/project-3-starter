@@ -24,4 +24,20 @@ class Forum extends React.Component{
     handleChange = ({ target }) => {
 
     };
+
+    Submit = (event) => {
+
+    };
+
+    resetUserInputs = () => {
+
+    };
+
+    displayForumPost = (posts) => {
+
+    };
+
+    render() {
+        console.log("state", this.state);
+    }
 }
