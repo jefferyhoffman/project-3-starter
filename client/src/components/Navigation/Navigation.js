@@ -30,7 +30,20 @@ class Navigation extends Component {
           <button className={togglerClass} onClick={this.toggleCollapse} data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
             <span className='navbar-toggler-icon'></span>
           </button>
+        {/* <div class="travelContent">
+          <div class="slider-wrapper">
+            Travel to 
+            <div class="slider">
+              <div class="slider-text1">Europe</div>
+              <div class="slider-text2">North America</div>
+              <div class="slider-text3">South America</div>
+              <div class="slider-text4">Asia</div>
+              <div class="slider-text5">Africa</div>
+              <div class="slider-text6">Australia</div>
 
+            </div>
+          </div>
+        </div> */}
           <div className={targetClass} id='navbarSupportedContent'>
             <ul className='navbar-nav mr-auto'>
               <li className='nav-item'>

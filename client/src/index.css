@@ -3,16 +3,11 @@ body {
   background-size: cover;
   background-attachment: fixed;
   animation-name: example;
-  animation-duration: 20s;
+  animation-duration: 120s;
   animation-iteration-count: infinite;
-  animation-direction: reverse
+
 }
 
-@keyframes example {
-  0%   {background-color: rgb(212, 209, 209);}
-  25%  {background-color: white;}
-  50%  {background-color: white;}
-  100% {background-color: rgb(212, 209, 209);}}
 body {
   margin: 0;
   padding: 0;
@@ -21,9 +16,76 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
 
+}
+@keyframes example {
+  0%   {background-image: url("./assets/images/wonders/pyramids.jpg");}
+  20%   {background-image: url("./assets/images/wonders/colloseum.jpg");}
+  40%   {background-image: url("./assets/images/wonders/GreatWall2.jpg");}
+  60%   {background-image: url("./assets/images/wonders/itza.jpg");}
+  80%   {background-image: url("./assets/images/wonders/redeemer.jpg");}
+  100%   {background-image: url("./assets/images/wonders/pyramids.jpg");}
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.travelContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-wrapper {
+  font-size: 12px;
+  color:rgb(0, 0, 0);
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider {
+  height: 50px;
+  padding-left: 5px;
+}
+
+.slider div {
+  color: antiquewhite;
+  height: 50px;
+  margin-bottom: 50px;
+  padding: 2px 15px;
+  text-align: center;
+}
+
+.slider-text1 {
+  background: cornflowerblue;
+  animation: slide 5s linear infinite;
+}
+.slider-text2 {
+  background: lightcoral;
+}
+.slider-text3 {
+  background: greenyellow;
+}
+.slider-text4 {
+  background: purple;
+}
+.slider-text5 {
+  background: orange;
+}
+.slider-text6 {
+  background: red;
+}
+
+@keyframes slide {
+  0% {margin-top: -600px;}
+  18% {margin-top: -500px;}
+  36% {margin-top: -400px;}
+  54% {margin-top: -300px;}
+  72% {margin-top: -200px;}
+  90% {margin-top: -100px;}
+  100% {margin-top: 0px;}
 }
