@@ -12,7 +12,6 @@ import Register from '../../pages/Register/Register';
 import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
 import Menu from '../../pages/Menu/Menu';
-import AffirmAPI from "../../Utils/AffirmAPI";
 import Mantras from "../../pages/Mantras/Mantras"
 import Affirmations from "../../pages/Affirmations/Affirmations";
 import Bob from "../../pages/Bob/Bob";
@@ -74,6 +73,7 @@ class App extends Component {
               <Route path='/register' component={Register} />
               <PrivateRoute path='/menu' component={Menu} />
               <PrivateRoute path='/mantras' component={Mantras} />
+              <PrivateRoute path='/affirmations' component={Affirmations} />
               <PrivateRoute path='/secret' component={Secret} />
               <Route component={NotFound} />
             </Switch>

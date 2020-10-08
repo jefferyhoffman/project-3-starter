@@ -26,11 +26,11 @@ class AuthDropdown extends Component {
     const { user } = this.context;
     const { isOpen } = this.state;
 
-    const dropdownMenuClass = `dropdown-menu dropdown-menu-right ${isOpen && 'show'}`;
+    const dropdownMenuClass = `dropdown-menu is-right ${isOpen && 'show'}`;
 
     return (
-      <li className="nav-item has-dropdown is-hoverable">
-        <button className="btn btn-link dropdown-toggle" onClick={this.toggleOpen} 
+      <li className="navbar-item has-dropdown is-hoverable">
+        <button className="button button-link dropdown-toggle" onClick={this.toggleOpen} 
         id="navbarDropdown" 
         data-toggle="dropdown" 
         aria-haspopup="true" 
