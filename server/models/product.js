@@ -44,10 +44,12 @@ const ProductSchema = new Schema({
       required: true
     }
   }],
-  sold: {
-    type: Number,
-    default: 0
-  },
+  sold: [{
+    quantity: {
+      type: Number,
+      default: 0
+    }
+  }],
   photo: {
     type: String,
     required: true
