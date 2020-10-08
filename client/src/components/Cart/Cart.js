@@ -2,9 +2,6 @@ import React, { useContext } from "react";
 import { CartContext } from "../../contexts/CartContext";
 import { Tshirt } from "../Tshirt/Tshirt";
 import { TshirtList } from "../Tshirt/TshirtList";
-// import { removeFromCart } from "../Tshirt/Tshirt"
-// import { CartContext } from './CartContext';
-// import { TshirtList } from "./TshirtList";
 
 export const Cart = () => {
 
@@ -56,7 +53,6 @@ export const Cart = () => {
                         ))}
                     </div>
                 )}
-
             <br />
             <span>Total price : {"$"}{cart.reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2)} </span>     
         </div>  
