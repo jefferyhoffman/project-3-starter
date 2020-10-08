@@ -9,11 +9,15 @@ const styles = {
     position: "sticky",
     maxHeight: "100vw",
     marginTop: "10px"
-  
-},
+
+  },
   font: {
     color: "black"
   },
+  active: {
+    backgroundColor: "grey"
+  },
+
   main: {
     width: "100%",
     height: "150vh"
@@ -37,51 +41,47 @@ class Menu extends Component {
       <div className="columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd">
         <div className="column is-narrow" >
           <aside className="menu sticky" style={styles.menu}>
+            <ul className='menu-list'>
+              <li>
+                <a className="menu-label is-active" style={styles.active}>
+                  General
+            </a>
 
-            <p className="menu-label" style={styles.font}>
-              General
-            </p>
-            <ul className="menu-list">
-              <li><a>Profile</a></li>
-              <li><a>Community</a></li>
+                <ul className="menu-list">
+                  <li><a>Profile</a></li>
+                  <li><a>Community</a></li>
+                </ul>
+              </li>
             </ul>
-            <p className="menu-label" style={styles.font}>
-              FYE
-            </p>
             <ul className="menu-list">
               <li>
-                <a className="is-active">Daily Dose</a>
+                <a className="menu-label is-active" style={styles.active}>Daily Dose</a>
                 <ul>
                   <li><Link to='/affirmations' onClick={this.toggleCollapse} style={styles.font}> Affirmations</Link></li>
                   <li><Link to="/mantras" onClick={this.toggleCollapse} style={styles.font}>Mantras</Link></li>
-                  <li><a style={styles.font}>Jokes</a></li>
+                  <li><Link to="/jokes" onClick={this.toggleCollapse} style={styles.font}>Jokes</Link></li>
                 </ul>
               </li>
-              <a className="is-active">Videos</a>
-              <ul>
-              <li><a>Comedian Corner</a></li>
-              <li><a>Bob Ross Channel</a></li>
-              <li><a>Breathing Exercises</a></li>
-              <li><a>Oddly Satisfying</a></li>
-              </ul>
             </ul>
-            <ul className="menu-list">
+            <ul className='menu-list'>
               <li>
-                <a className="menu-label" style={styles.font}>Videos</a>
+                <a className="menu-label is-active" style={styles.active}>Videos</a>
                 <ul>
-                  <li><a style={styles.font}>Comedian Corner</a></li>
-                  <li><a style={styles.font}>Bob Ross Channel</a></li>
-                  <li><a style={styles.font}>Breathing Exercises</a></li>
-                  <li><a style={styles.font}>Oddly Satisfying</a></li>
+                  <li><Link to='/comedy' onClick={this.toggleCollapse} style={styles.font}>Comedian Corner</ Link></li>
+                  <li><Link to='/bob' onClick={this.toggleCollapse} style={styles.font}>Bob Ross Channel</ Link></li>
+                  <li><Link to='/breathing' onClick={this.toggleCollapse} style={styles.font}>Breathing Exercises</ Link></li>
+                  <li><Link to='/odd' onClick={this.toggleCollapse} style={styles.font}>Oddly Satisfying</ Link></li>
                 </ul>
               </li>
             </ul>
-            <p className="menu-label" style={styles.font}>
-              Resources
-            </p>
-            <ul className="menu-list">
-              <li><a style={styles.font}>Suicide Hotline</a></li>
-              <li><a style={styles.font}>Clinics</a></li>
+            <ul className='menu-list'>
+              <li>
+                <a className="menu-label is-active" style={styles.active}>Resources</a>
+                <ul className="menu-list">
+                  <li><Link to='/hotline' onClick={this.toggleCollapse} style={styles.font}>Suicide Hotline</ Link></li>
+                  <li><Link to='/clinics' onClick={this.toggleCollapse} style={styles.font}>Clinics</ Link></li>
+                </ul>
+              </li>
             </ul>
           </aside>
         </div>
