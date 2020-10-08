@@ -9,7 +9,7 @@ export const Cart = () => {
     const totalPrice = cart.reduce((acc, curr) => acc + curr.price, 0);
  
     const removeFromCart = (event) => {
-        
+
         var targetId = parseInt(event.target.id)
 
         const filterCartByID2 = cart.filter(val => {

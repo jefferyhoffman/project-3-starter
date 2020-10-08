@@ -83,6 +83,7 @@ export const Tshirt = (props) => {
     //         // console.log("mapOfCart", mapOfCart)
     //         setCart(() => mapOfCart)
     //     }}
+    console.log(props)
 
     return (
         <div className="card">
@@ -90,7 +91,7 @@ export const Tshirt = (props) => {
                 <img src={props.image} alt={props.name} />
             </div>
             <div className="contentBx">
-                <h2 key={props.id}>{props.name}</h2>
+                <h4 key={props.id}>{props.name}</h4>
                 <p className="rise">{"$" + props.price.toFixed(2)}</p>
                 <p className="rise">{props.description}</p>
                 <button onClick={addToCart}>Add to Cart</button>
