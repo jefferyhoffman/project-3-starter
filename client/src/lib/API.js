@@ -28,7 +28,7 @@ export default {
     },
 
     getCategories: function (category) {
-      return axios.get('/api/products/category'+ category);
+      return axios.get('/api/products/category/'+ category);
     },
 
     getPopular: function (popular) {

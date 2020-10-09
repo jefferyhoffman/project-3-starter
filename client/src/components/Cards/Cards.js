@@ -17,7 +17,7 @@ import {
 } from "mdbreact";
 
 const Cards=(props)=> {
-  // const [items, setItems]= useState([{image:"lulu.jpeg", text: "Flow Y Longline Bra"},{image:"lulu.jpeg", text: "Flow Y Longline Bra"},{image:"lulu.jpeg", text: "Flow Y Longline Bra"}])
+  
   return (
     <Container>
       <MDBRow>
