@@ -10,7 +10,7 @@ const styles = {
 
 function Hero() {
   return (
-    <section className="hero">
+    <section className="hero is-fullheight bgimage-1">
       <div className="hero-body content">
         <div className="container">
           <div className="columns">

@@ -20,7 +20,6 @@ const styles = {
 class HomePage extends Component {
   render() {
     return (
-    <div style={styles.background}>
       <div className="wrapper">
         <div className='Home'>
           <Hero />
@@ -28,7 +27,7 @@ class HomePage extends Component {
           <Cards/>
         </div>
       </div>      
-  </div>
+  
     );
   }
   }

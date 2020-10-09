@@ -49,7 +49,7 @@ class Menu extends Component {
 
                 <ul className="menu-list">
                   <li ><a style={styles.font}>Profile</a></li>
-                  <li><a style={styles.font}>Community</a></li>
+                  <li><Link to='/community' onCick={this.toggleCollapse} style={styles.font}>Community</Link></li>
                 </ul>
               </li>
             </ul>

@@ -26,6 +26,10 @@ function Cards() {
         const url = "https://screening.mhanational.org/screening-tools";
         window.open(url, '_blank');
     }
+    function buttonClick2() {
+        const url = "/login";
+        window.open(url);
+    }
 
         return (
             <section className="section">
@@ -51,8 +55,7 @@ function Cards() {
               </div>
                         <br />
                         <br />
-                        <button class="button is-medium is-success is-light">Log In</button>
-
+                        <button class="button is-medium is-success is-light" onClick={buttonClick2}>Log In</button>
                     </div>
                 </div>
                 <div className="columns">
