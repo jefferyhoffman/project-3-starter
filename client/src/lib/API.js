@@ -19,6 +19,7 @@ export default {
     }
   },
 
+  // first call we implemented to show all products on page
   Products: {
     getAllProducts: function () {
       return axios.get('/api/products')
