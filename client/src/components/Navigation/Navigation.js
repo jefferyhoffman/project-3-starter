@@ -62,9 +62,9 @@ class Navigation extends Component {
                   Resources</a>
 
                 <div class="navbar-dropdown">
-                  <a class="navbar-item">
+                  <a class="navbar-item" to='/hotline' onClick={this.toggleCollapse}>
                     Hotlines</a>
-                  <a class="navbar-item">
+                  <a class="navbar-item" to='/clinic' onClick={this.toggleCollapse}>
                     Clinics</a>
                 </div>
                 </div>
