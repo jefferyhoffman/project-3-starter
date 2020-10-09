@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {useState } from "react";
 // import Hero from '../../components/Hero/Hero'
 // import { Row, Col, MDBContainer } from "react-bootstrap";
 import {
@@ -21,18 +21,16 @@ import {
   "mdbreact";
 import "../Home/home.css";
 import Hero from "../../components/Hero/Hero";
-import Card from '../../components/Cards/Cards';
-// import HeroButton from '../../components/Button/Button';
-import Carousel from '../../components/Carousel/Carousel';
-import bestSellers from '../../components/bestSellers/bestSellers';
+import Cards from '../../components/Cards/Cards'
 import men from '../Home/guy.jpg';
 import women from '../Home/women.jpg'
 import bag from '../Home/bag.jpg'
 import steve from '../Home/notstevecook.jpg'
 import lulu from '../Home/lulu.jpeg'
-
-class HomePage extends Component {
-  render() {
+// import HeroButton from '../../components/Button/Button'
+import Carousel from '../../components/Carousel/Carousel'
+const HomePage = () =>{
+  const [items, setItems]= useState([{photo:"lulu.jpeg", text: "Flow Y Longline Bra"},{photo:"lulu.jpeg", text: "Flow Y Longline Bra"},{photo:"lulu.jpeg", text: "Flow Y Longline Bra"}])
     return (
 
       <>
@@ -51,6 +49,11 @@ class HomePage extends Component {
           </h2>
           <MDBBox mb={3} ><cite title="Source Title">Ascalon</cite> is a spear or a sword used by Saint George to slay Dragons.</MDBBox>
           <MDBRow>
+            {/* <MDBCol md={1}></MDBCol>
+            <MDBCol md={10}>
+              <Cards
+              items = {items}
+               /> */}
             <br></br>
             <MDBCol lg="3" md="6" className="mb-lg-0 mb-4">
               <div className="view zoom">
@@ -114,143 +117,26 @@ class HomePage extends Component {
         <hr className="solid"></hr>
         <MDBContainer className="fear">
           <MDBRow>
-            <MDBTypography tag="h4" variant="display-4">Mens Best Sellers</MDBTypography>
-              <MDBCardGroup>
-                <MDBCol md="3">
-                  {/* Individual Card */}
-                  <MDBCard
-                    className="z-depth-0"
-                    style={{ height: "384px", width: "220px" }}>
-                    <MDBView hover>
-                      <MDBCardImage className="cardImg z-depth-3" src={lulu} />
-                      <MDBMask overlay="black-light" className="blackLight">
-                        <MDBBtn className="hoverBtn" outline color="white">
-                          View
-                        </MDBBtn>
-                      </MDBMask>
-                    </MDBView>
-
-                  </MDBCard>
-                </MDBCol>
-                <MDBCol md="3">
-                  <MDBCard
-                    className="z-depth-0"
-                    style={{ height: "384px", width: "220px" }}>
-                    <MDBView hover>
-                      <MDBCardImage className="cardImg" src={lulu} />
-                      <MDBMask overlay="black-light" className="blackLight">
-                        <MDBBtn className="hoverBtn" outline color="white">
-                          View
-                        </MDBBtn>
-                      </MDBMask>
-                    </MDBView>
-                  </MDBCard>
-                </MDBCol>
-                {/* Individual Card */}
-                <MDBCol md="3">
-                  <MDBCard
-                    className="z-depth-0"
-                    style={{ height: "384px", width: "220px" }}
-                  >
-                    <MDBView hover>
-                      <MDBCardImage className="cardImg" src={lulu} />
-                      <MDBMask overlay="black-light" className="blackLight">
-                        <MDBBtn className="hoverBtn" outline color="white">
-                          View
-                        </MDBBtn>
-                      </MDBMask>
-                    </MDBView>
-                  </MDBCard>
-                </MDBCol>
-                {/* Individual Card */}
-                <MDBCol md="3">
-                  <MDBCard
-                    className="z-depth-0"
-                    style={{ height: "384px", width: "220px" }}
-                  >
-                    <MDBView hover>
-                      <MDBCardImage className="cardImg" src={lulu} />
-                      <MDBMask overlay="black-light" className="blackLight">
-                        <MDBBtn className="hoverBtn" outline color="white">
-                          View
-                        </MDBBtn>
-                      </MDBMask>
-                    </MDBView>
-                  </MDBCard>
-                </MDBCol>
-              </MDBCardGroup>
+          <MDBTypography tag="h4" className="text-right" variant="display-4">Men's Best Sellers</MDBTypography>
+            <MDBCol md={1}></MDBCol>
+            <MDBCol md={10}>
+            <Cards
+              items = {items}
+               />
+            </MDBCol>
           </MDBRow>
         </MDBContainer>
         {/* MENS BEST SELLERS*/}
         <MDBContainer className="fear">
         <hr className="solid"></hr>
           <MDBRow>
-            <MDBTypography tag="h4" className="text-right" variant="display-4">Women Best Sellers</MDBTypography>
-              <MDBCardGroup>
-                <MDBCol md="3">
-                  {/* Individual Card */}
-                  <MDBCard
-                    className="z-depth-0"
-                    style={{ height: "384px", width: "220px" }}
-                  >
-                    <MDBView hover>
-                      <MDBCardImage className="cardImg" src={lulu} />
-                      <MDBMask overlay="black-light" className="blackLight">
-                        <MDBBtn className="hoverBtn" outline color="white">
-                          View
-                        </MDBBtn>
-                      </MDBMask>
-                    </MDBView>
-                  </MDBCard>
-                </MDBCol>
-                <MDBCol md="3">
-                  <MDBCard
-                    className="z-depth-0"
-                    style={{ height: "384px", width: "220px" }}
-                  >
-                    <MDBView hover>
-                      <MDBCardImage className="cardImg" src={lulu} />
-                      <MDBMask overlay="black-light" className="blackLight">
-                        <MDBBtn className="hoverBtn" outline color="white">
-                          View
-                        </MDBBtn>
-                      </MDBMask>
-                    </MDBView>
-                  </MDBCard>
-                </MDBCol>
-                {/* Individual Card */}
-                <MDBCol md="3">
-                  <MDBCard
-                    className="z-depth-0"
-                    style={{ height: "384px", width: "220px" }}
-                  >
-                    <MDBView hover>
-                      <MDBCardImage className="cardImg" src={lulu} />
-                      <MDBMask overlay="black-light" className="blackLight">
-                        <MDBBtn className="hoverBtn" outline color="white">
-                          View
-                      </MDBBtn>
-                      </MDBMask>
-                    </MDBView>
-                  </MDBCard>
-                </MDBCol>
-                {/* Individual Card */}
-                <MDBCol md="3">
-                  <MDBCard
-                    className="z-depth-0"
-                    style={{ height: "384px", width: "220px" }}
-                  >
-                    <MDBView hover>
-                      <MDBCardImage className="cardImg" src={lulu} />
-                      <MDBMask overlay="black-light" className="blackLight">
-                        <MDBBtn className="hoverBtn" outline color="white">
-                          View
-                       </MDBBtn>
-                      </MDBMask>
-                    </MDBView>
-                  </MDBCard>
-                </MDBCol>
-              </MDBCardGroup>
+            <MDBTypography tag="h4" className="text-right" variant="display-4">Women's Best Sellers</MDBTypography>
+            <MDBCol md={1}></MDBCol>
+            <MDBCol md={10}>
+              <Cards
+              items = {items}
+               />
+               </MDBCol>
           </MDBRow>
         </MDBContainer>
         {/*  ATHLETE CAROUSEL */}
@@ -268,28 +154,5 @@ class HomePage extends Component {
 
     );
   }
-}
+
 export default HomePage;
-// MDBContainer >
-//         <MDBContainer  >
-//           <MDBRow>
-
-//             <MDBCol md={12}>
-//               <h3 variant="display-3">The Womens Best Sellers</h3>
-//               <Card />
-//             </MDBCol>
-
-//           </MDBRow>
-//         </MDBContainer>
-//         <hr className="solid"></hr>
-//         <MDBContainer >
-//           <MDBRow>
-
-//             <MDBCol md={12}>
-//               <h3 variant="display-3">The Mens Best Sellers</h3>
-//               <Card />
-//             </MDBCol>
-
-//           </MDBRow>
-//         </MDBContainer>
-//         <hr className="solid"></hr>
