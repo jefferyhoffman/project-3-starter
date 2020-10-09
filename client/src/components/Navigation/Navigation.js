@@ -63,9 +63,9 @@ class Navigation extends Component {
 
                 <div class="navbar-dropdown">
                   <a class="navbar-item">
-                    About</a>
+                    Hotlines</a>
                   <a class="navbar-item">
-                    Jobs</a>
+                    Clinics</a>
                 </div>
                 </div>
               </div>
