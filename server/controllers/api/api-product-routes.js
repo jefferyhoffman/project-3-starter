@@ -4,11 +4,6 @@ const db = require('../../models');
 // product routes
 // to get all products to display from the database
 
-// apiProductRoutes.get("/api/products", async (req, res) => {
-//     const products = await db.Product.findAll();
-//     res.send(products);
-// });
-
 apiProductRoutes.get("/", function (req, res) {
     db.Product.findAll().then(function(results) {
         res.json(results)

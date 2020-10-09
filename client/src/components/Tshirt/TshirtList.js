@@ -4,37 +4,7 @@ import { Tshirt } from "./Tshirt";
 import API from "../../lib/API";
 
 export const TshirtList = () => {
-    // const database = [
-    //     {
-    //         name: "FM",
-    //         description: "Cloth surgical masks - 50 count",
-    //         price: 9.95,
-    //         image: "https://i.pinimg.com/originals/27/97/07/27970736454a5ceacafb35218f195aaf.png",
-    //         id: 1
-    //     },
-    //     {
-    //         name: "Gloves",
-    //         description: "Disposable latex gloves - 100 count",
-    //         price: 24.95,
-    //         image: "https://i.pinimg.com/originals/27/97/07/27970736454a5ceacafb35218f195aaf.png",
-    //         id: 2
-    //     },
-    //     {
-    //         name: "DW",
-    //         description: "Ethyl alcohol wipes - 100 count",
-    //         price: 7.95,
-    //         image: "https://i.pinimg.com/originals/27/97/07/27970736454a5ceacafb35218f195aaf.png",
-    //         id: 3
-    //     },
-    //     // {
-    //     //     name: "Disinfecting wipes",
-    //     //     description: "Ethyl alcohol wipes - 100 count",
-    //     //     price: 7.95,
-    //     //     image: "https://i.pinimg.com/originals/27/97/07/27970736454a5ceacafb35218f195aaf.png",
-    //     //     id: 3
-    //     // }
-    // ]
-
+    
     const [products, setProducts] = useState([])
 
     useEffect(() => {
@@ -44,7 +14,6 @@ export const TshirtList = () => {
         });
 
     },[])
-
 
     return (
         <div>
