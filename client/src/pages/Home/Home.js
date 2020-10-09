@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import BlogCard from '../../components/BlogCard/BlogCard'
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container"
@@ -64,13 +64,6 @@ function HomePage() {
 
             <Form.Control type="text" placeholder="Enter City"></Form.Control>
 
-            <input
-            value={this.state.city}
-            name="city"
-            onChange={this.handleInputChange}
-            type="text"
-            placeholder="City"
-          />
             <Button className="m-2"  variant="primary" type="submit">Submit</Button>
           </Form>
         </Col>        
@@ -90,3 +83,5 @@ function HomePage() {
 }
 
 export default HomePage;
+
+
