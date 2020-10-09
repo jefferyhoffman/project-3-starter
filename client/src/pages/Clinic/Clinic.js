@@ -1,35 +1,44 @@
-import React, { Component } from "react";
-import { GoogleComponent } from 'react-google-location';
-const API_KEY = AIzaSyBp256kwgYBBr80qnJYzumRPq1rGJOV0ek  //need keys//
+// import React, { Component } from "react";
+// import { GoogleComponent } from 'react-google-location';
+// import "./clinic.css";
 
-class HomeComponent extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      place: null,
-    };
-  }
+
+
+
+
+// const API_KEY = "AIzaSyBp256kwgYBBr80qnJYzumRPq1rGJOV0ek";  //need keys//
+// const URL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + API_KEY;
+
+
+// class Clinic extends Component {
+//   constructor(props) {
+//     super(props)
+//     this.state = {
+//       place: null,
+//     };
+//   }
  
-  render() {
-    return (
-      <div >
-         <GoogleComponent
+//   render() {
+//     return (
+//       <div >
+//          <GoogleComponent
          
-          apiKey={API_KEY}
-          language={'en'}
-          country={'country:in|country:us'}
-          coordinates={true}
-          locationBoxStyle={'custom-style'}
-          locationListStyle={'custom-style-list'}
-          onChange={(e) => { this.setState({ place: e }) }} />
-      </div>
+//           apiKey={URL}
+//           language={'en'}
+//           country={'country:us'}
+//           coordinates={true}
+//           locationBoxStyle={'custom-style'}
+//           locationListStyle={'custom-style-list'}
+//           onChange={(e) => { this.setState({ place: e }) }} />
+//       </div>
  
-    )
-  } 
-}
+  
+//     )
+//   } 
+// }
  
  
-export default HomeComponent;
+// export default Clinic;
 
 
 

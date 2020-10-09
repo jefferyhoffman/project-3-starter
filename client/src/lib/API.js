@@ -39,7 +39,8 @@ export default {
     getJokes: function (authToken) {
       return axios.get('/api/jokes', {});
     }
-  }
+  },
+  
 
 }
 
