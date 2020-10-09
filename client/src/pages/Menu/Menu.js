@@ -79,7 +79,7 @@ class Menu extends Component {
                 <a className="menu-label is-active" style={styles.active}>Resources</a>
                 <ul className="menu-list">
                   <li><Link to='/hotline' onClick={this.toggleCollapse} style={styles.font}>Suicide Hotline</ Link></li>
-                  <li><Link to='/clinics' onClick={this.toggleCollapse} style={styles.font}>Clinics</ Link></li>
+                  <li><Link to='/clinic' onClick={this.toggleCollapse} style={styles.font}>Clinics</ Link></li>
                 </ul>
               </li>
             </ul>
