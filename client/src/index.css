@@ -48,7 +48,7 @@ code {
   font-size: 20px;
   color:rgb(0, 0, 0);
   font-weight: bold;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   display: flex;
   align-items: center;
   justify-content: center;
