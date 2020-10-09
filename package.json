@@ -17,5 +17,11 @@
   "devDependencies": {
     "concurrently": "^4.1.0",
     "nodemon": "^1.18.10"
+  },
+  "dependencies": {
+    "@react-native-community/geolocation": "^2.0.2",
+    "react-chat-window": "^1.2.1",
+    "react-google-maps": "^9.4.5",
+    "react-native-geolocation-service": "^5.0.0"
   }
 }
