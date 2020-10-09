@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-function Form(){
+function SEND(){
     
 }
-export default Form;
+export default SEND;
