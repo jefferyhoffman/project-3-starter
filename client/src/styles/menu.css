@@ -11,3 +11,7 @@
     .column {
       overflow-y: auto;
     }
+
+    body, html {
+      background-color: white;
+    }

@@ -10,7 +10,7 @@ const styles = {
 
 function Hero() {
   return (
-    <section className="hero is-medium">
+    <section className="hero">
       <div className="hero-body content">
         <div className="container">
           <div className="columns">
