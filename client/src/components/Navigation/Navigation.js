@@ -24,19 +24,19 @@ class Navigation extends Component {
     const togglerClass = `navbar-toggler ${collapsed && 'collapsed'}`;
 
     return (
-      <div className='Navigation'>
+      <div className='Navigation sticky'>
         <nav className='navbar navbar-expand-lg navbar-light bg-light mb-3'>
           <Link className='navbar-brand' to='#'>Project 3</Link>
           <div class="travelContent">
             <div class="slider-wrapper">
               Travel to
             <div class="slider">
-                <div class="slider-text1">Australia</div>
-                <div class="slider-text2">Europe</div>
-                <div class="slider-text3">America</div>
-                <div class="slider-text4">Asia</div>
-                <div class="slider-text5">Africa</div>
-                <div class="slider-text6">Australia</div>
+                <div class="slider-text1 rounded-sm rounded-lg">Australia</div>
+                <div class="slider-text2 rounded-sm rounded-lg">Europe</div>
+                <div class="slider-text3 rounded-sm rounded-lg">America</div>
+                <div class="slider-text4 rounded-sm rounded-lg">Asia</div>
+                <div class="slider-text5 rounded-sm rounded-lg">Africa</div>
+                <div class="slider-text6 rounded-sm rounded-lg">Australia</div>
 
               </div>
             </div>
@@ -65,6 +65,7 @@ class Navigation extends Component {
           </div>
         </nav>
       </div>
+    
     );
   }
 }

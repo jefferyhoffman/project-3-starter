@@ -71,8 +71,8 @@ function HomePage() {
   }
 
   return (
-    <Container>
-      <Row>
+    <Container >
+      <Row style={{marginTop: "100px"}}>
         <Col>
           <Form onSubmit={e => handleOnSubmit(e)}>
             <Form.Label>Search By City</Form.Label>
