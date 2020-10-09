@@ -18,7 +18,6 @@ import Checkout from '../../pages/Checkout/checkout'
 import Product from '../../pages/ProductPage/Product'
 import MShirts from '../../pages/MShirts/MShirts';
 import MShorts from '../../pages/MShorts/MShorts';
-
 import './App.css';
 
 class App extends Component {
@@ -71,6 +70,7 @@ class App extends Component {
               <Route path = '/product' component = {Product}/>
               <Route exact path = '/mens/shirts' component = {MShirts}/>
               <Route exact path = '/mens/shorts' component = {MShorts}/>
+              
 
               {/* <Route Path = '/category/*' component = {MShirts}/>
               <Route Path = '/category/*' component = {MShorts}/> */}

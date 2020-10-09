@@ -45,7 +45,7 @@ class HomePage extends Component {
 
         {/* CHOOSE YOUR LEISURE*/}
         {/* <section className="fear"> */}
-        <MDBContainer className="text-center my-5">
+        <MDBContainer className="text-center my-5  img-fluid">
           <h2 className="h1-responsive font-weight-bold text-center my-5">
             Choose your <i>ascalon</i>
           </h2>
@@ -115,200 +115,147 @@ class HomePage extends Component {
         <MDBContainer className="fear">
           <MDBRow>
             <MDBTypography tag="h4" variant="display-4">Mens Best Sellers</MDBTypography>
-            <MDBCol md="12">
-            <MDBCardGroup>
-              <MDBCol md="3">
+              <MDBCardGroup>
+                <MDBCol md="3">
+                  {/* Individual Card */}
+                  <MDBCard
+                    className="z-depth-0"
+                    style={{ height: "384px", width: "220px" }}>
+                    <MDBView hover>
+                      <MDBCardImage className="cardImg z-depth-3" src={lulu} />
+                      <MDBMask overlay="black-light" className="blackLight">
+                        <MDBBtn className="hoverBtn" outline color="white">
+                          View
+                        </MDBBtn>
+                      </MDBMask>
+                    </MDBView>
+
+                  </MDBCard>
+                </MDBCol>
+                <MDBCol md="3">
+                  <MDBCard
+                    className="z-depth-0"
+                    style={{ height: "384px", width: "220px" }}>
+                    <MDBView hover>
+                      <MDBCardImage className="cardImg" src={lulu} />
+                      <MDBMask overlay="black-light" className="blackLight">
+                        <MDBBtn className="hoverBtn" outline color="white">
+                          View
+                        </MDBBtn>
+                      </MDBMask>
+                    </MDBView>
+                  </MDBCard>
+                </MDBCol>
                 {/* Individual Card */}
-                <MDBCard
-                  className="z-depth-0"
-                  style={{ height: "384px", width: "220px" }}
-                >
-                  <MDBView hover>
-                    <MDBCardImage className="cardImg z-depth-3" src={lulu} />
-                    <MDBMask overlay="black-light" className="blackLight">
-                      <MDBBtn className="hoverBtn" outline color="white">
-                        View
-                </MDBBtn>
-                    </MDBMask>
-                  </MDBView>
-
-                  <MDBCardText style={{ fontSize: "12px" }}>
-                    Flow Y Longline Bra
-            </MDBCardText>
-                </MDBCard>
-              </MDBCol>
-              <MDBCol md="3">
-                <MDBCard
-                  className="z-depth-0"
-                  style={{ height: "384px", width: "220px" }}
-                >
-                  <MDBView hover>
-                    <MDBCardImage className="cardImg" src={lulu}  />
-                    <MDBMask overlay="black-light" className="blackLight">
-                      <MDBBtn className="hoverBtn" outline color="white">
-                        View
-                </MDBBtn>
-                    </MDBMask>
-                  </MDBView>
-
-                  <MDBCardText style={{ fontSize: "12px" }}>
-                    Flow Y Longline Bra
-            </MDBCardText>
-                </MDBCard>
-              </MDBCol>
-              {/* Individual Card */}
-              <MDBCol md="3">
-                <MDBCard
-                  className="z-depth-0"
-                  style={{ height: "384px", width: "220px" }}
-                >
-                  <MDBView hover>
-                    <MDBCardImage className="cardImg" src={lulu} />
-                    <MDBMask overlay="black-light" className="blackLight">
-                      <MDBBtn className="hoverBtn" outline color="white">
-                        View
-                </MDBBtn>
-                    </MDBMask>
-                  </MDBView>
-                  <MDBCardText style={{ fontSize: "12px" }}>
-                    Flow Y Longline Bra
-            </MDBCardText>
-                </MDBCard>
-              </MDBCol>
-              {/* Individual Card */}
-              <MDBCol md="3">
-                <MDBCard
-                  className="z-depth-0"
-                  style={{ height: "384px", width: "220px" }}
-                >
-                  <MDBView hover>
-                    <MDBCardImage className="cardImg" src={lulu} />
-                    <MDBMask overlay="black-light" className="blackLight">
-                      <MDBBtn className="hoverBtn" outline color="white">
-                        View
-                </MDBBtn>
-                    </MDBMask>
-                  </MDBView>
-
-                  <MDBCardText style={{ fontSize: "12px" }}>
-                    Flow Y Longline Bra
-            </MDBCardText>
-                </MDBCard>
-              </MDBCol>
-            </MDBCardGroup>
-            </MDBCol>
+                <MDBCol md="3">
+                  <MDBCard
+                    className="z-depth-0"
+                    style={{ height: "384px", width: "220px" }}
+                  >
+                    <MDBView hover>
+                      <MDBCardImage className="cardImg" src={lulu} />
+                      <MDBMask overlay="black-light" className="blackLight">
+                        <MDBBtn className="hoverBtn" outline color="white">
+                          View
+                        </MDBBtn>
+                      </MDBMask>
+                    </MDBView>
+                  </MDBCard>
+                </MDBCol>
+                {/* Individual Card */}
+                <MDBCol md="3">
+                  <MDBCard
+                    className="z-depth-0"
+                    style={{ height: "384px", width: "220px" }}
+                  >
+                    <MDBView hover>
+                      <MDBCardImage className="cardImg" src={lulu} />
+                      <MDBMask overlay="black-light" className="blackLight">
+                        <MDBBtn className="hoverBtn" outline color="white">
+                          View
+                        </MDBBtn>
+                      </MDBMask>
+                    </MDBView>
+                  </MDBCard>
+                </MDBCol>
+              </MDBCardGroup>
           </MDBRow>
         </MDBContainer>
-        {/* </section> */}
+        {/* MENS BEST SELLERS*/}
+        <MDBContainer className="fear">
         <hr className="solid"></hr>
-        <MDBContainer>
           <MDBRow>
             <MDBTypography tag="h4" className="text-right" variant="display-4">Women Best Sellers</MDBTypography>
-            <MDBCardGroup>
-              <MDBCol md="3">
+              <MDBCardGroup>
+                <MDBCol md="3">
+                  {/* Individual Card */}
+                  <MDBCard
+                    className="z-depth-0"
+                    style={{ height: "384px", width: "220px" }}
+                  >
+                    <MDBView hover>
+                      <MDBCardImage className="cardImg" src={lulu} />
+                      <MDBMask overlay="black-light" className="blackLight">
+                        <MDBBtn className="hoverBtn" outline color="white">
+                          View
+                        </MDBBtn>
+                      </MDBMask>
+                    </MDBView>
+                  </MDBCard>
+                </MDBCol>
+                <MDBCol md="3">
+                  <MDBCard
+                    className="z-depth-0"
+                    style={{ height: "384px", width: "220px" }}
+                  >
+                    <MDBView hover>
+                      <MDBCardImage className="cardImg" src={lulu} />
+                      <MDBMask overlay="black-light" className="blackLight">
+                        <MDBBtn className="hoverBtn" outline color="white">
+                          View
+                        </MDBBtn>
+                      </MDBMask>
+                    </MDBView>
+                  </MDBCard>
+                </MDBCol>
                 {/* Individual Card */}
-                <MDBCard
-                  className="z-depth-0"
-                  style={{ height: "384px", width: "220px" }}
-                >
-                  <MDBView hover>
-                    <MDBCardImage className="cardImg" src={lulu} />
-                    <MDBMask overlay="black-light" className="blackLight">
-                      <MDBBtn className="hoverBtn" outline color="white">
-                        View
-                </MDBBtn>
-                    </MDBMask>
-                  </MDBView>
-
-                  <MDBCardText style={{ fontSize: "12px" }}>
-                    Flow Y Longline Bra
-            </MDBCardText>
-                </MDBCard>
-              </MDBCol>
-              <MDBCol md="3">
-                <MDBCard
-                  className="z-depth-0"
-                  style={{ height: "384px", width: "220px" }}
-                >
-                  <MDBView hover>
-                    <MDBCardImage className="cardImg" src={lulu} />
-                    <MDBMask overlay="black-light" className="blackLight">
-                      <MDBBtn className="hoverBtn" outline color="white">
-                        View
-                </MDBBtn>
-                    </MDBMask>
-                  </MDBView>
-
-                  <MDBCardText style={{ fontSize: "12px" }}>
-                    Flow Y Longline Bra
-            </MDBCardText>
-                </MDBCard>
-              </MDBCol>
-              {/* Individual Card */}
-              <MDBCol md="3">
-                <MDBCard
-                  className="z-depth-0"
-                  style={{ height: "384px", width: "220px" }}
-                >
-                  <MDBView hover>
-                    <MDBCardImage className="cardImg" src={lulu} />
-                    <MDBMask overlay="black-light" className="blackLight">
-                      <MDBBtn className="hoverBtn" outline color="white">
-                        View
-                </MDBBtn>
-                    </MDBMask>
-                  </MDBView>
-                  <MDBCardText style={{ fontSize: "12px" }}>
-                    Flow Y Longline Bra
-            </MDBCardText>
-                </MDBCard>
-              </MDBCol>
-              {/* Individual Card */}
-              <MDBCol md="3">
-                <MDBCard
-                  className="z-depth-0"
-                  style={{ height: "384px", width: "220px" }}
-                >
-                  <MDBView hover>
-                    <MDBCardImage className="cardImg" src={lulu} />
-                    <MDBMask overlay="black-light" className="blackLight">
-                      <MDBBtn className="hoverBtn" outline color="white">
-                        View
-                </MDBBtn>
-                    </MDBMask>
-                  </MDBView>
-
-                  <MDBCardText style={{ fontSize: "12px" }}>
-                    Flow Y Longline Bra
-            </MDBCardText>
-                </MDBCard>
-              </MDBCol>
-              {/* Individual Card */}
-              <MDBCol>
-                <MDBCard
-                  className="z-depth-0"
-                  style={{ height: "384px", width: "220px" }}
-                >
-                  <MDBView hover>
-                    <MDBCardImage className="cardImg" src={lulu} />
-                    <MDBMask overlay="black-light" className="blackLight">
-                      <MDBBtn className="hoverBtn" outline color="white">
-                        View
-                </MDBBtn>
-                    </MDBMask>
-                  </MDBView>
-
-                  <MDBCardText style={{ fontSize: "12px" }}>
-                    Flow Y Longline Bra
-            </MDBCardText>
-                </MDBCard>
-              </MDBCol>
-            </MDBCardGroup>
+                <MDBCol md="3">
+                  <MDBCard
+                    className="z-depth-0"
+                    style={{ height: "384px", width: "220px" }}
+                  >
+                    <MDBView hover>
+                      <MDBCardImage className="cardImg" src={lulu} />
+                      <MDBMask overlay="black-light" className="blackLight">
+                        <MDBBtn className="hoverBtn" outline color="white">
+                          View
+                      </MDBBtn>
+                      </MDBMask>
+                    </MDBView>
+                  </MDBCard>
+                </MDBCol>
+                {/* Individual Card */}
+                <MDBCol md="3">
+                  <MDBCard
+                    className="z-depth-0"
+                    style={{ height: "384px", width: "220px" }}
+                  >
+                    <MDBView hover>
+                      <MDBCardImage className="cardImg" src={lulu} />
+                      <MDBMask overlay="black-light" className="blackLight">
+                        <MDBBtn className="hoverBtn" outline color="white">
+                          View
+                       </MDBBtn>
+                      </MDBMask>
+                    </MDBView>
+                  </MDBCard>
+                </MDBCol>
+              </MDBCardGroup>
           </MDBRow>
         </MDBContainer>
         {/*  ATHLETE CAROUSEL */}
-        <hr className="solid"></hr>
         <MDBContainer className="mike">
+        <hr className="solid"></hr>
           <MDBRow>
             <MDBCol md={12}>
               <Carousel />
