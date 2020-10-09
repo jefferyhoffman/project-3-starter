@@ -47,6 +47,7 @@ class App extends Component {
       .then(response => response.data)
       .then(user => this.setState(prevState => ({ auth: { ...prevState.auth, user } })))
       .catch(err => console.log(err));
+
   }
 
   render() {
