@@ -40,7 +40,7 @@ const styles = {
   }
 }
 
-const Form=(props)=> {
+const Form = (props) => {
   const [isOpen, setIsOpen] = useState(false)
   const [companyName, setCompanyName] = useState("")
   const [typeOfBill, setTypeOfBill] = useState("")
@@ -48,27 +48,34 @@ const Form=(props)=> {
   const [dueDate, setDueDate] = useState("")
   const [howOften, setHowOften] = useState("")
 
-  const handleSub =()=>{
+  const handleSub = () => {
     console.log('clicked')
-    const theBill ={
-      company : companyName,
+    const theBill = {
+      company: companyName,
       type: typeOfBill,
       amount: amountDue,
       date: dueDate,
-    frequency: howOften
+      frequency: howOften
     }
     props.submit(theBill)
-  } 
- 
+    // updates form fields
+    setCompanyName("")
+    setTypeOfBill("")
+    setAmountDue("")
+    setDueDate("")
+    setHowOften("")
+
+  }
+
   return (
     <div style={styles.form} className="animate__animated animate__fadeIn animate__delay-1s">
-      
+
       {/* <button type="button" className="btn btn-primary">Hello World</button> */}
       <form>
 
         <div className="form-group w-100">
 
-          {/* <label for="formGroupExampleInput">Title</label> */}
+
           <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Company Name" value={companyName} onChange={e => setCompanyName(e.target.value)} />
         </div>
 
@@ -78,7 +85,7 @@ const Form=(props)=> {
 
             <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="Type of Bill" value={typeOfBill} onChange={e => setTypeOfBill(e.target.value)} />
 
-            {/* <label for="formGroupExampleInput2">Company</label> */}
+
           </div>
           <div className="col">
             <input type="number" className="form-control" id="formGroupExampleInput2" placeholder="Amount Due" value={amountDue} onChange={e => setAmountDue(parseFloat(e.target.value))} />
@@ -87,25 +94,25 @@ const Form=(props)=> {
 
         <div className="row form-group">
           <div className="col">
-            {/* <label for="formGroupExampleInput2">Company</label> */}
+
             <input type="date" className="form-control" id="formGroupExampleInput2" placeholder="Due Date" value={dueDate} onChange={e => setDueDate(e.target.value)} />
           </div>
           <div className="col">
-        
+
             <input type="number" className="form-control" id="formGroupExampleInput2" placeholder="How Often" value={howOften} onChange={e => setHowOften(parseInt(e.target.value))} />
-            
+
           </div>
-          
+
         </div>
         <div style={styles.button} className="row form-group">
-        <button  type="button" className="btn btn-primary " onClick={()=>setIsOpen(true)}>Submit Bill</button>
-        <Modal open ={isOpen} onClose={() => setIsOpen(false)}>
+          <button type="button" className="btn btn-primary " onClick={() => setIsOpen(true)}>Submit Bill</button>
+          <Modal open={isOpen} onClose={() => setIsOpen(false)}>
             Congratulation! You have made a new bill!
-                Close to continue
+            Close to continue
         </Modal>
         </div>
-        
-       </form>
+
+      </form>
     </div>
   )
 }

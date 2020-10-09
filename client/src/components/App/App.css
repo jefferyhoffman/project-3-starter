@@ -22,7 +22,16 @@
 .App-link {
   color: #61dafb;
 }
+.App{
 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.main{
+  flex:1;
+  background-image: url(https://unsplash.it/1920/1080);
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -31,3 +40,4 @@
     transform: rotate(360deg);
   }
 }
+
