@@ -1,4 +1,6 @@
 import React, { Component, useState } from "react";
+import Modal from '../../components/Modal/Modal'
+
 
 // Module 19 exercise 17 example
 
@@ -28,8 +30,18 @@ import React, { Component, useState } from "react";
 //   }
 
 // }
+const styles = {
+  form: {
+    marginTop: "200px"
+  },
+  button: {
+    display: "block",
+    margin: "auto"
+  }
+}
 
 const Form = (props) => {
+  const [isOpen, setIsOpen] = useState(false)
   const [companyName, setCompanyName] = useState("")
   const [typeOfBill, setTypeOfBill] = useState("")
   const [amountDue, setAmountDue] = useState("")
@@ -56,9 +68,9 @@ const Form = (props) => {
   }
 
   return (
-    <div>
-      <button type="button" className="btn btn-primary" onClick={() => handleSub()}>Submit Bill</button>
+    <div style={styles.form} className="animate__animated animate__fadeIn animate__delay-1s">
 
+      {/* <button type="button" className="btn btn-primary">Hello World</button> */}
       <form>
 
         <div className="form-group w-100">
@@ -86,17 +98,20 @@ const Form = (props) => {
             <input type="date" className="form-control" id="formGroupExampleInput2" placeholder="Due Date" value={dueDate} onChange={e => setDueDate(e.target.value)} />
           </div>
           <div className="col">
+
             <input type="number" className="form-control" id="formGroupExampleInput2" placeholder="How Often" value={howOften} onChange={e => setHowOften(parseInt(e.target.value))} />
+
           </div>
 
-
-
-
+        </div>
+        <div style={styles.button} className="row form-group">
+          <button type="button" className="btn btn-primary " onClick={() => setIsOpen(true)}>Submit Bill</button>
+          <Modal open={isOpen} onClose={() => setIsOpen(false)}>
+            Congratulation! You have made a new bill!
+            Close to continue
+        </Modal>
         </div>
 
-
-
-      
       </form>
     </div>
   )
