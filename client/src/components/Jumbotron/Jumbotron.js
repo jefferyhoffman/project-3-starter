@@ -10,7 +10,7 @@ const styles = {
 
 function Hero() {
   return (
-    <section className="hero is-large has-bg-im">
+    <section className="hero is-medium">
       <div className="hero-body content">
         <div className="container">
           <div className="columns">
@@ -19,7 +19,7 @@ function Hero() {
                 Oddly Satisfying
       </h1>
               <h2 className="subtitle">
-                <p>Ways to Ampli-FI your mood</p>
+                <p>Content To Ampli-FI Your Mood</p>
               </h2>
             </div>
           </div>

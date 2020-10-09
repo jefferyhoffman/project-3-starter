@@ -8,7 +8,7 @@ import AuthDropdown from '../../components/AuthDropdown/AuthDropdown';
 const styles = {
   navbar: {
     height: "100px",
-    opacity: "75%"
+    opacity: "85%"
   }
 }
 
@@ -37,7 +37,7 @@ class Navigation extends Component {
         <nav className="navbar is-white" role="navigation" aria-label="main navigation" style={styles.navbar}>
           <div className="navbar-brand">
             <a className="navbar-item" to="#">
-              <img src={logo} width="100" height="200" />
+              <img src={logo} width="100" height="300" />
             </a>
 
             <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -52,27 +52,36 @@ class Navigation extends Component {
               <Link className="navbar-item" to='/' onClick={this.toggleCollapse}>
                 Home
               </Link>
-              <a className="navbar-item">
-                Documentation
-              </a>
-              {user &&
-                <Link className='navbar-item' to='/menu' onClick={this.toggleCollapse}>
-                  Menu
+              
+                {user &&
+                  <Link className='navbar-item' to='/menu' onClick={this.toggleCollapse}>
+                    Menu
              </Link>}
-            </div>
+             <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                  Resources</a>
 
-            <div className="navbar-end">
-              <div className="navbar-item">
-                <div className="buttons">
-                  <a className="button">
-                    {user
-                      ? <AuthDropdown onClick={this.toggleCollapse} />
-                      : <Link to='/login' onClick={this.toggleCollapse}><strong>Sign up/Login</strong></Link>}
-                  </a>
+                <div class="navbar-dropdown">
+                  <a class="navbar-item">
+                    About</a>
+                  <a class="navbar-item">
+                    Jobs</a>
+                </div>
+                </div>
+              </div>
+
+              <div className="navbar-end">
+                <div className="navbar-item">
+                  <div className="buttons">
+                    <a className="button">
+                      {user
+                        ? <AuthDropdown onClick={this.toggleCollapse} />
+                        : <Link to='/login' onClick={this.toggleCollapse}><strong>Sign up/Login</strong></Link>}
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
         </nav>
       </div>
     );

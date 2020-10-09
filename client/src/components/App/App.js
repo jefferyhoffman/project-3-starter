@@ -76,10 +76,10 @@ class App extends Component {
               <PrivateRoute path='/affirmations' component={Affirmations} />
               <PrivateRoute path='/bob' component={Bob} />
               <PrivateRoute path='/breathing' component={Breathing} />
-              <PrivateRoute path='/clinic' component={Clinic} />
+              <Route path='/clinic' component={Clinic} />
               <PrivateRoute path='/comedy' component={Comedy} />
               <PrivateRoute path= '/community' component={Community} />
-              <PrivateRoute path='/hotline' component={Hotline} />
+              <Route path='/hotline' component={Hotline} />
               <PrivateRoute path='/jokes' component={Jokes} />
               <PrivateRoute path= '/odd' component={Odd} />
               <PrivateRoute path= '/profile' component={Profile} />
