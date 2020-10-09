@@ -18,6 +18,7 @@ import {
 import { BrowserRouter as Router } from "react-router-dom";
 import AuthContext from "../../contexts/AuthContext";
 // import AuthDropdown from '../../components/AuthDropdown/AuthDropdown';
+import fav from '../Navigation/fav.gif'
 
 class NavbarPage extends Component {
   state = {
@@ -114,6 +115,15 @@ class NavbarPage extends Component {
           </MDBNavbarNav>
           {/* SEARCH BAR */}
           <MDBNavbarNav right>
+            <MDBNavItem>
+                <MDBLink to="/register">Register</MDBLink>
+              </MDBNavItem>
+            <MDBNavItem>
+                <MDBLink to="/login">Login</MDBLink>
+              </MDBNavItem>
+              <MDBNavItem>
+                <MDBLink to="/checkout"><i class="fa fa-shopping-cart"></i></MDBLink>
+              </MDBNavItem>
             <MDBNavItem>
               <MDBFormInline waves>
                 <div className="md-form my-0">
