@@ -1,75 +1,111 @@
-import React from "react";
+import React, { Component, useState } from "react";
+import Modal from '../../components/Modal/Modal'
+
+
+// Module 19 exercise 17 example
+
+// class Form extends Component {
+//   state = {
+//     companyName: "",
+//     typeOfBill: "",
+//     amountDue: "",
+//     dueDate: "",
+//     howOften: "",
+
+//   };
+//   handleInputChange = event => {
+
+//     const { name, value } = event.target;
+//     this.setState({
+//       [name]: value
+//     });
+//   };
+
+//   handleFormSubmit = event => {
+
+//     event.preventDefault();
+
+//     alert(`Your bill for ${this.state.companyName} is now saved`);
+
+//   }
+
+// }
 const styles = {
   form: {
     marginTop: "200px"
+  },
+  button: {
+    display: "block",
+    margin: "auto"
   }
 }
 
+const Form=(props)=> {
+  const [isOpen, setIsOpen] = useState(false)
+  const [companyName, setCompanyName] = useState("")
+  const [typeOfBill, setTypeOfBill] = useState("")
+  const [amountDue, setAmountDue] = useState("")
+  const [dueDate, setDueDate] = useState("")
+  const [howOften, setHowOften] = useState("")
 
-function Form() {
+  const handleSub =()=>{
+    console.log('clicked')
+    const theBill ={
+      company : companyName,
+      type: typeOfBill,
+      amount: amountDue,
+      date: dueDate,
+    frequency: howOften
+    }
+    props.submit(theBill)
+  } 
+ 
   return (
-    <div style={styles.form} className="animate__animated animate__fadeIn animate__delay-2s">
-      <div className="col">
-        <h1>Your bill</h1>
-      </div>
+    <div style={styles.form} className="animate__animated animate__fadeIn animate__delay-1s">
       
+      {/* <button type="button" className="btn btn-primary">Hello World</button> */}
       <form>
 
         <div className="form-group w-100">
-          
-          
-          <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Company Name" />
+
+          {/* <label for="formGroupExampleInput">Title</label> */}
+          <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Company Name" value={companyName} onChange={e => setCompanyName(e.target.value)} />
         </div>
 
 
         <div className="row form-group">
           <div className="col">
-          <select id="inputState" class="form-control">
-        <option selected disabled>Type of bill?</option>
-        <option>Car</option>
-        <option>Rent</option>
-        <option>Medical</option>
-        <option>Utilities</option>
-      </select>
-          {/* <label for="formGroupExampleInput2">Company</label> */}
+
+            <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="Type of Bill" value={typeOfBill} onChange={e => setTypeOfBill(e.target.value)} />
+
+            {/* <label for="formGroupExampleInput2">Company</label> */}
           </div>
           <div className="col">
-            <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="Amount Due" />
+            <input type="number" className="form-control" id="formGroupExampleInput2" placeholder="Amount Due" value={amountDue} onChange={e => setAmountDue(parseFloat(e.target.value))} />
           </div>
         </div>
 
         <div className="row form-group">
           <div className="col">
             {/* <label for="formGroupExampleInput2">Company</label> */}
-            <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="Due Date" />
+            <input type="date" className="form-control" id="formGroupExampleInput2" placeholder="Due Date" value={dueDate} onChange={e => setDueDate(e.target.value)} />
           </div>
           <div className="col">
-          <select id="inputState" class="form-control">
-        <option selected disabled>How often?</option>
-        <option>One time only</option>
-        <option>Weekly</option>
-        <option>Every two weeks</option>
-        <option>Monthly</option>
-        <option>Every two months</option>
-        <option>quaterly</option>
-        <option>Every six months</option>
-        <option>Yearly</option>
-      </select>
+        
+            <input type="number" className="form-control" id="formGroupExampleInput2" placeholder="How Often" value={howOften} onChange={e => setHowOften(parseInt(e.target.value))} />
+            
           </div>
+          
         </div>
-
-
-
-        {/* <div className="form-group w-25">
-          <label for="formGroupExampleInput">Due Date</label>
-          <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Place title here" />
+        <div style={styles.button} className="row form-group">
+        <button  type="button" className="btn btn-primary " onClick={()=>setIsOpen(true)}>Submit Bill</button>
+        <Modal open ={isOpen} onClose={() => setIsOpen(false)}>
+            Congratulation! You have made a new bill!
+                Close to continue
+        </Modal>
         </div>
-
-        <div className="form-group w-25">
-          <label for="formGroupExampleInput2">Amount Due</label>
-          <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="Company Name" />
-        </div> */}
-      </form>
+        
+       </form>
     </div>
   )
 }

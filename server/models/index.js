@@ -1,4 +1,5 @@
 module.exports = {
   Users: require('./user'),
-  Secrets: require('./secret')
+  Secrets: require('./secret'),
+  Bills: require('./bills')
 }

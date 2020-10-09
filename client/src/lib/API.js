@@ -18,7 +18,22 @@ export default {
       });
     }
   },
-
+  Bills:{
+    create: function(authToken, data){
+      return axios.post('/api/bills',data, {
+        headers: {
+          'Authorization': `Bearer ${authToken}`
+        }
+      } )
+    },
+    getMe: function (authToken) {
+      return axios.get('/api/bills', {
+        headers: {
+          'Authorization': `Bearer ${authToken}`
+        }
+      });
+    }
+  },
   Secrets: {
     getAll: function (authToken) {
       return axios.get('/api/secrets', {
