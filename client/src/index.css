@@ -71,7 +71,7 @@ code {
 
 .slider-text1 {
   background: orange;
-  animation: slide 10s linear infinite;
+  animation: slide 20s linear infinite;
 }
 .slider-text2 {
   background: lightcoral;
@@ -92,15 +92,15 @@ code {
 @keyframes slide {
   0% {margin-top: -500px;}
   5% {margin-top: -500px;}
-  15% {margin-top: -400px;}
+  10% {margin-top: -400px;}
   25% {margin-top: -400px;}
-  35% {margin-top: -300px;}
+  30% {margin-top: -300px;}
   45% {margin-top: -300px;}
-  55% {margin-top: -200px;}
+  50% {margin-top: -200px;}
   65% {margin-top: -200px;}
-  75% {margin-top: -100px;}
+  70% {margin-top: -100px;}
   85% {margin-top: -100px;}
-  95% {margin-top: 0px;}
+  90% {margin-top: 0px;}
   100% {margin-top: 0px;}
 }
 
