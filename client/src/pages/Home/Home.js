@@ -61,7 +61,16 @@ function HomePage() {
         <Col>
           <Form>
             <Form.Label>Search By City</Form.Label>
-            <Form.Control type="text" placeholder="enter City"></Form.Control>
+
+            <Form.Control type="text" placeholder="Enter City"></Form.Control>
+
+            <input
+            value={this.state.city}
+            name="city"
+            onChange={this.handleInputChange}
+            type="text"
+            placeholder="City"
+          />
             <Button className="m-2"  variant="primary" type="submit">Submit</Button>
           </Form>
         </Col>        
