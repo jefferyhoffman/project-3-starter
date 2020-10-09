@@ -53,7 +53,7 @@ const testData = [
 
 function HomePage() {
   return (
-    <Container>
+    <Container >
       <Row>
         <Col>
           <Form>
