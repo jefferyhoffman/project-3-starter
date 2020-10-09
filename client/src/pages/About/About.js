@@ -3,9 +3,9 @@ import Image from 'react-bootstrap/Image'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import css from '../../pages/About/About.css'
+// import css from '../../pages/About/About.css'
 // import Button from 'react-bootstrap/Button'
-import Modal from 'react-bootstrap/Modal'
+// import Modal from 'react-bootstrap/Modal'
 
 
 export default About;
