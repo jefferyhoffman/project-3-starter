@@ -31,11 +31,13 @@ class Navigation extends Component {
             <div class="slider-wrapper">
               Travel to
             <div class="slider">
-                <div class="slider-text1">Europe</div>
-                <div class="slider-text2">America</div>
-                <div class="slider-text3">Asia</div>
-                <div class="slider-text4">Africa</div>
-                <div class="slider-text5">Australia</div>
+                <div class="slider-text1">Australia</div>
+                <div class="slider-text2">Europe</div>
+                <div class="slider-text3">America</div>
+                <div class="slider-text4">Asia</div>
+                <div class="slider-text5">Africa</div>
+                <div class="slider-text6">Australia</div>
+
               </div>
             </div>
           </div>
