@@ -27,7 +27,8 @@ export const Tshirt = (props) => {
                         id: val.id,
                         quantity: val.quantity + 1
                     };
-
+                    var tshirtID = tshirt.id
+                    localStorage.setItem(tshirtID, JSON.stringify(tshirt));
                     return tshirt
                 }
 
@@ -35,6 +36,7 @@ export const Tshirt = (props) => {
             })
             // console.log("mapOfCart", mapOfCart)
             setCart(() => mapOfCart)
+            // localStorage.setItem("cart", JSON.stringify(mapOfCart));
         } else {
             const tshirt = {
                 name: props.name,
@@ -46,8 +48,11 @@ export const Tshirt = (props) => {
             };
             // console.log("first");
             setCart(currentState => [...currentState, tshirt]);
+            var tshirtID = tshirt.id
+            localStorage.setItem(tshirtID, JSON.stringify(tshirt));
+            // localStorage.setItem("cart", JSON.stringify(cart));
         }
-
+        // localStorage.setItem("cart", JSON.stringify(tshirt));
     }
 
     // const removeFromCart = () => {
