@@ -172,4 +172,4 @@ Map.defaultProps = {
     onMount: addMarkers()
 }
 
-// export default Clinic;
+export default Clinic;

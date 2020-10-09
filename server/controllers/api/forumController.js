@@ -41,12 +41,33 @@ forumController.get('/all', JWTVerifier, (req, res) => {
     })
 });
 
+// forumController.save()
+// .then((data) => {
+//   console.log(data);
+// })
+// .catch((err) => {
+//   console.log(err);
+// });
 
+// forumController.save(function(err, forumController){
+//   if(err) {
+//     console.log(err);
+//   }else{
+//     console.log("Your Post Has Been Saved!");
+//   }
+// });
 
+// forumController.delete('/', (req, res) => {
+//   db.Forum.find({})
+//     .then(posts => {
+//       res.json(posts);
+//     }) 
+//     .catch(err => {
+//       console.log(err);
+//       res.json(err);
+//     }) 
+// })
 
-
-
-
-
+// forumController.update
 
 module.exports = forumController;
