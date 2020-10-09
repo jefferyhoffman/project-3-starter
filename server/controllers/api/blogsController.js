@@ -14,6 +14,16 @@ blogsController.get("/city/:city", (req, res) => {
         .then(results => res.json(results))
         .catch(err => res.status(500).json(err))
 })
+blogsController.get("/state/:state", (req, res) => {
+    db.Blogs.find({ city: req.params.state })
+        .then(results => res.json(results))
+        .catch(err => res.status(500).json(err))
+})
+blogsController.get("/image/:image", (req, res) => {
+    db.Blogs.find({ city: req.params.image })
+        .then(results => res.json(results))
+        .catch(err => res.status(500).json(err))
+})
 blogsController.post('/', ((req, res) => {
     db.Blogs.create(req.body)
         .then(results => res.json(results))
