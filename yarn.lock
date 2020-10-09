@@ -521,6 +521,11 @@ dot-prop@^4.2.1:
   dependencies:
     is-obj "^1.0.0"
 
+dotenv@^8.2.0:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.2.0.tgz#97e619259ada750eea3e4ea3e26bceea5424b16a"
+  integrity sha512-8sJ78ElpbDJBHNeBzUbUVLsqKdccaa/BXF1uPTw3GrvQTBgrQrtObr2mUrE38vzYd8cEv+m/JBfDLioYcfXoaw==
+
 duplexer3@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/duplexer3/-/duplexer3-0.1.4.tgz#ee01dd1cac0ed3cbc7fdbea37dc0a8f1ce002ce2"
@@ -1756,6 +1761,25 @@ react-chat-window@^1.2.1:
     react-linkify "^0.2.1"
     socket.io-client "2.0.3"
 
+react-geocode@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/react-geocode/-/react-geocode-0.2.2.tgz#24b50366daf57fc22d7884ab2e5927aa3d17ce2e"
+  integrity sha512-z0fD9TNyn8lXe1+cWr7Gx3Mi2751CjLLHIkMOkBN1HMmE6vxNoQEW/2y5sMkcpkwoleUeuERTaHFea7XGgJ3rw==
+  dependencies:
+    regenerator-runtime "^0.13.3"
+
+react-google-autocomplete@^1.2.6:
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/react-google-autocomplete/-/react-google-autocomplete-1.2.6.tgz#69231a098445922d04e29ec8369fef7e26857606"
+  integrity sha512-qHz0+CLrpPTbrQItonFKY/8NQVioxikeW1/EyFoEMG3ekgqOmjN5b6FQAVy3qwRrUJALx5DCTWtbYOFG0Bw87Q==
+  dependencies:
+    prop-types "^15.5.0"
+
+react-google-location@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/react-google-location/-/react-google-location-1.2.2.tgz#7b158f4762dcd4f95b9666d70114c4e93d11b82d"
+  integrity sha512-eGZRPLtacKHUwEEWT4tYszv0d6HgfrFwPFvx7v7k3+2uxZ93D+4vmEG9VxZD1uAMiqNvos0RTiy7gZGkZpWjNA==
+
 react-google-maps@^9.4.5:
   version "9.4.5"
   resolved "https://registry.yarnpkg.com/react-google-maps/-/react-google-maps-9.4.5.tgz#920c199bdc925e0ce93880edffb09428d263aafa"
@@ -1844,6 +1868,11 @@ regenerator-runtime@^0.11.0:
   version "0.11.1"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.11.1.tgz#be05ad7f9bf7d22e056f9726cee5017fbf19e2e9"
   integrity sha512-MguG95oij0fC3QV3URf4V2SDYGJhJnJGqvIIgdECeODCT98wSWDAJ94SSuVpYQUoTcGUIL6L4yNB7j1DFFHSBg==
+
+regenerator-runtime@^0.13.3:
+  version "0.13.7"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.7.tgz#cac2dacc8a1ea675feaabaeb8ae833898ae46f55"
+  integrity sha512-a54FxoJDIr27pgf7IgeQGxmqUNYrcV338lf/6gH456HZ/PhX+5BcwHXG9ajESmwe6WRO0tAzRUrRmNONWgkrew==
 
 regex-not@^1.0.0, regex-not@^1.0.2:
   version "1.0.2"
