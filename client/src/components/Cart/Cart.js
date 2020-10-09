@@ -1,5 +1,8 @@
 import React, { useContext } from "react";
 import { CartContext } from "../../contexts/CartContext";
+import { Tshirt } from "../Tshirt/Tshirt";
+import { TshirtList } from "../Tshirt/TshirtList";
+import API from "../../lib/API";
 
 export const Cart = () => {
 
@@ -70,7 +73,30 @@ export const Cart = () => {
         }
     }
 
-    return (
+    const checkout = () => {
+        console.log("checkout")
+        console.log(checkout)
+        return (
+            <div>
+            <form>
+            <ul>
+            <input type="text" id="first-name" className="form-control validate" placeholder="First Name" />
+             {/* <li>first={user.first}</li>
+             <li> last={user.last}</li>
+             <li>address={user.address}</li>
+             <li> city={user.city}</li>
+             <li>state={user.state}</li>
+             <li>zip={user.zip}</li>
+            <li>country={user.country}</li>
+            <li>phone={user.phone}</li> */}
+             
+
+            </ul>
+            </form>
+            </div>
+        )
+    }
+    return ( 
         <div>
             <br />
             {cart.length <= 0 ? (
@@ -90,8 +116,9 @@ export const Cart = () => {
                     </div>
                 )}
             <br />
-            <span>Total price : {"$"}{cart.reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2)} </span>
-        </div>
+            <span>Total price : {"$"}{cart.reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2)} </span>   
+            <button onClick={checkout}>Checkout</button>  
+        </div>  
     )
 }
 
