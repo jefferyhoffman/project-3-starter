@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {useState } from "react";
 // import Hero from '../../components/Hero/Hero'
 // import { Row, Col, MDBContainer } from "react-bootstrap";
 import { MDBContainer, MDBRow, MDBCol } from
@@ -8,8 +8,8 @@ import Hero from "../../components/Hero/Hero";
 import Card from '../../components/Cards/Cards'
 // import HeroButton from '../../components/Button/Button'
 import Carousel from '../../components/Carousel/Carousel'
-class HomePage extends Component {
-  render() {
+const HomePage = () =>{
+  const [items, setItems]= useState([{image:"lulu.jpeg", text: "Flow Y Longline Bra"},{image:"lulu.jpeg", text: "Flow Y Longline Bra"},{image:"lulu.jpeg", text: "Flow Y Longline Bra"}])
     return (
       <div>
         {/* HERO IMAGE */}
@@ -21,7 +21,9 @@ class HomePage extends Component {
           <MDBRow>
             <MDBCol md={1}></MDBCol>
             <MDBCol md={10}>
-              <Card />
+              <Card
+              items = {items}
+               />
             </MDBCol>
             <MDBCol md={1}></MDBCol>
           </MDBRow>
@@ -31,7 +33,9 @@ class HomePage extends Component {
           <MDBRow>
             <MDBCol md={1}></MDBCol>
             <MDBCol md={10}>
-              <Card />
+            <Card
+              items = {items}
+               />
             </MDBCol>
             <MDBCol md={1}></MDBCol>
           </MDBRow>
@@ -50,5 +54,5 @@ class HomePage extends Component {
 
     );
   }
-}
+
 export default HomePage;

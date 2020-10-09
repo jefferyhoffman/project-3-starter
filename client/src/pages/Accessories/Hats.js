@@ -4,22 +4,15 @@ import { MDBContainer, MDBCol, MDBRow } from "mdbreact";
 import "../Product.css";
 import Cards from "../../components/Cards/Cards";
 import API from '../../lib/API'
-const MShirts = ()=> {
+const Hats = ()=> {
     const [items, setItems] = useState([])
   
     useEffect(() => {
-        // console.log(props.location.pathname)
-        // const urlArray = props.location.pathname.split("/")
-        // console.log(urlArray)
-        // if(urlArray[2]==="shirts"){
-        //     //some api call
-        //     console.log('its a shirt')
-        // }
         loadItems()
       }, [])
 
       function loadItems() {
-        API.Products.getGender("Shirts","Mens")
+        API.Products.getGender("Hats","Unisex")
           .then(res => {
             console.log(res.data)
             setItems(res.data)
@@ -29,7 +22,7 @@ const MShirts = ()=> {
 
   return (
     <div>
-      <h2 className="title">Men's Shirts</h2>
+      <h2 className="title">Hats</h2>
       <MDBContainer>
         <hr className="solid"></hr>
         <MDBRow style={{ borderLeft: "1px solid lightGray" }}>
@@ -43,4 +36,4 @@ const MShirts = ()=> {
     </div>
   );
 }
-export default MShirts;
+export default Hats;

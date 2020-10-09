@@ -35,10 +35,10 @@ class NavbarPage extends Component {
                   <span className="mr-2">Mens</span>
                   </MDBDropdownToggle>
                   <MDBDropdownMenu className="dropdown-default">
-                    <MDBDropdownItem href="#!">Shirts</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Pants</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Shorts</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Sweat Shirts</MDBDropdownItem>
+                    <MDBDropdownItem href="/mens/shirts">Shirts</MDBDropdownItem>
+                    <MDBDropdownItem href="/mens/pants">Pants</MDBDropdownItem>
+                    <MDBDropdownItem href="/mens/shorts">Shorts</MDBDropdownItem>
+                    <MDBDropdownItem href="/mens/sweatshirts">Sweat Shirts</MDBDropdownItem>
                   </MDBDropdownMenu>
                 </MDBDropdown>
               </MDBNavItem>
@@ -49,11 +49,11 @@ class NavbarPage extends Component {
                     <span className="mr-2">Womens</span>
                   </MDBDropdownToggle>
                   <MDBDropdownMenu className="dropdown-default">
-                    <MDBDropdownItem href="#!">Shirts</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Shorts</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Pants</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Sports Bras</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Sweat Shirts</MDBDropdownItem>
+                    <MDBDropdownItem href="/womens/shirts">Shirts</MDBDropdownItem>
+                    <MDBDropdownItem href="/womens/shorts">Shorts</MDBDropdownItem>
+                    <MDBDropdownItem href="/womens/pants">Pants</MDBDropdownItem>
+                    <MDBDropdownItem href="/womens/sportsbras">Sports Bras</MDBDropdownItem>
+                    <MDBDropdownItem href="/womens/sweatshirts">Sweat Shirts</MDBDropdownItem>
                   </MDBDropdownMenu>
                 </MDBDropdown>
               </MDBNavItem>
@@ -64,10 +64,10 @@ class NavbarPage extends Component {
                     <span className="mr-2">Accessories</span>
                   </MDBDropdownToggle>
                   <MDBDropdownMenu className="dropdown-default">
-                    <MDBDropdownItem href="#!">Bags</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Hats</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Stickers</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Waterbottles</MDBDropdownItem>
+                    <MDBDropdownItem href="/bags">Bags</MDBDropdownItem>
+                    <MDBDropdownItem href="/hats">Hats</MDBDropdownItem>
+                    {/* <MDBDropdownItem href="#!">Stickers</MDBDropdownItem> */}
+                    <MDBDropdownItem href="/waterbottles">Waterbottles</MDBDropdownItem>
                   </MDBDropdownMenu>
                 </MDBDropdown>
               </MDBNavItem>
@@ -78,9 +78,9 @@ class NavbarPage extends Component {
                     <span className="mr-2">Supplements</span>
                   </MDBDropdownToggle>
                   <MDBDropdownMenu className="dropdown-default">
-                    <MDBDropdownItem href="#!">Protein</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Pre-Workout</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Wellness</MDBDropdownItem>
+                    <MDBDropdownItem href="/protein">Protein</MDBDropdownItem>
+                    <MDBDropdownItem href="/preworkout">Pre-Workout</MDBDropdownItem>
+                    <MDBDropdownItem href="/wellness">Wellness</MDBDropdownItem>
                   </MDBDropdownMenu>
                 </MDBDropdown>
               </MDBNavItem>

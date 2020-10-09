@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 // import {Container} from 'react-bootstrap';
 import { MDBContainer, MDBCol, MDBRow } from "mdbreact";
-import "../MShorts/MShorts.css";
+import "../Product.css";
 import Cards from "../../components/Cards/Cards";
 import API from '../../lib/API'
 const MShorts = ()=> {
