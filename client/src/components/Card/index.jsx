@@ -11,7 +11,7 @@ import {
     MDBView,
     MDBMask,
   } from "mdbreact";
-const Card =props=>{
+const Card = props => {
     return(
         <MDBCol>
         <MDBCard

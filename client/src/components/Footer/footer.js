@@ -2,7 +2,7 @@ import React from "react";
 import { MDBFooter, MDBContainer, MDBRow, MDBCol } from "mdbreact";
 const FooterPage = () => {
   return (
-    <MDBFooter color="grey" className="font-small pt-4 mt-4">
+    <MDBFooter color="grey" className="font-small pt-4 mt-4 m-auto">
       <MDBContainer fluid className="text-center text-md-left">
         <MDBRow>
           <MDBCol md="2">

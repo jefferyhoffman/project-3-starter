@@ -23,7 +23,7 @@ export default {
     getAll: function () {
       return axios.get('/api/products');
     },
-    getById: function (id){
+    getProduct: function (id){
       return axios.get('/api/products/' + id);
     },
 
