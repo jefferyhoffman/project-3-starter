@@ -1,17 +1,7 @@
-// import React, { Component } from "react";
-
-// class Hotline extends Component {
-//     render() {
-//       return (
-//        <div></div>
-//       );
-//     }
-//   }
-
 import React, {Component} from 'react'
 import {Launcher} from 'react-chat-window'
  
-class Hotline extends Component {
+class Chat extends Component {
  
   constructor() {
     super();
@@ -42,7 +32,7 @@ class Hotline extends Component {
     return (<div>
       <Launcher
         agentProfile={{
-          teamName: 'Chat',
+          teamName: 'react-chat-window',
           imageUrl: 'https://a.slack-edge.com/66f9/img/avatars-teams/ava_0001-34.png'
         }}
         onMessageWasSent={this._onMessageWasSent.bind(this)}
@@ -52,5 +42,5 @@ class Hotline extends Component {
     </div>)
   }
 }
-  
-  export default Hotline;
+
+export default Chat;

@@ -85,12 +85,16 @@ class App extends Component {
               <PrivateRoute path= '/profile' component={Profile} />
               <PrivateRoute path='/secret' component={Secret} />
               <Route component={NotFound} />
+              
             </Switch>
           </div>
         </div>
       </AuthContext.Provider>
     );
+    
   }
 }
 
 export default App;
+
+
