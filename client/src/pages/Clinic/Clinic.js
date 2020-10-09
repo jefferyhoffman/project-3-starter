@@ -9,3 +9,9 @@ class Clinic extends Component {
   }
   
   export default Clinic;
+
+
+
+
+
+
