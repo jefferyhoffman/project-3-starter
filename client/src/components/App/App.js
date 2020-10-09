@@ -63,6 +63,7 @@ class App extends Component {
 
   render() {
     return (
+      
       <AuthContext.Provider value={this.state.auth}>
         <div className='App'>
           <Navigation />
