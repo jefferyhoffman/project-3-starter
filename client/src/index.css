@@ -3,7 +3,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   animation-name: example;
-  animation-duration: 120s;
+  animation-duration: 30s;
   animation-iteration-count: infinite;
 
 }
@@ -20,16 +20,17 @@ body {
 }
 @keyframes example {
   0%    {background-image: url("./assets/images/wonders/Pyramids1920x1080.jpg");}
-  10%   {background-image: url("./assets/images/wonders/Sphinx1920x1080.jpg");}
-  20%   {background-image: url("./assets/images/wonders/TajMahal1920x1080.jpg");}
-  30%   {background-image: url("./assets/images/wonders/ChichenItza1920x1080.jpg");}
-  40%   {background-image: url("./assets/images/wonders/GreatWall1920x1080.jpg");}
-  50%   {background-image: url("./assets/images/wonders/Rome1920x1080.jpg");}
-  60%   {background-image: url("./assets/images/wonders/BigBen1920x1080.jpg");}
-  70%   {background-image: url("./assets/images/wonders/Paris1920x1080.jpg");}
-  80%   {background-image: url("./assets/images/wonders/Neuschwanstein1920x1080.jpg");}
-  90%   {background-image: url("./assets/images/wonders/Rio1920x1080.jpg");}
-  100%  {background-image: url("./assets/images/wonders/Liberty1920x1080.jpg");}
+  8%   {background-image: url("./assets/images/wonders/Sphinx1920x1080.jpg");}
+  16%   {background-image: url("./assets/images/wonders/TajMahal1920x1080.jpg");}
+  23%   {background-image: url("./assets/images/wonders/ChichenItza1920x1080.jpg");}
+  35%   {background-image: url("./assets/images/wonders/GreatWall1920x1080.jpg");}
+  46%   {background-image: url("./assets/images/wonders/Rome1920x1080.jpg");}
+  55%   {background-image: url("./assets/images/wonders/BigBen1920x1080.jpg");}
+  64%   {background-image: url("./assets/images/wonders/Paris1920x1080.jpg");}
+  72%   {background-image: url("./assets/images/wonders/Neuschwanstein1920x1080.jpg");}
+  82%   {background-image: url("./assets/images/wonders/Rio1920x1080.jpg");}
+  91%  {background-image: url("./assets/images/wonders/Liberty1920x1080.jpg");}
+  100%    {background-image: url("./assets/images/wonders/Pyramids1920x1080.jpg");}
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -68,7 +69,7 @@ code {
 }
 
 .slider-text1 {
-  background: cornflowerblue;
+  background: orange;
   animation: slide 15s linear infinite;
 }
 .slider-text2 {
@@ -81,14 +82,18 @@ code {
   background: purple;
 }
 .slider-text5 {
+  background: cornflowerblue;
+}
+.slider-text6 {
   background: orange;
 }
 
 @keyframes slide {
   0% {margin-top: -500px;}
-  10% {margin-top: -400px;}
-  20% {margin-top: -400px;}
-  30% {margin-top: -300px;}
+  8% {margin-top: -500px;}
+  16% {margin-top: -400px;}
+  24% {margin-top: -400px;}
+  32% {margin-top: -300px;}
   40% {margin-top: -300px;}
   50% {margin-top: -200px;}
   60% {margin-top: -200px;}
