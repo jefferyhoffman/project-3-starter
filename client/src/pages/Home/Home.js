@@ -52,9 +52,6 @@ const testData = [
 
 
 function HomePage() {
-
-
-
   return (
     <Container>
       <Row>
