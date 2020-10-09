@@ -34,7 +34,7 @@ class NavbarPage extends Component {
                   <MDBDropdownToggle nav caret>
                   <span className="mr-2">Mens</span>
                   </MDBDropdownToggle>
-                  <MDBDropdownMenu className="dropdown-default">
+                  <MDBDropdownMenu center className="dropdown-default">
                     <MDBDropdownItem href="/">Shirts</MDBDropdownItem>
                     <MDBDropdownItem href="#!">Pants</MDBDropdownItem>
                     <MDBDropdownItem href="#!">Shorts</MDBDropdownItem>
@@ -48,7 +48,7 @@ class NavbarPage extends Component {
                   <MDBDropdownToggle nav caret>
                     <span className="mr-2">Womens</span>
                   </MDBDropdownToggle>
-                  <MDBDropdownMenu className="dropdown-default">
+                  <MDBDropdownMenu center className="dropdown-default">
                     <MDBDropdownItem href="#!">Shirts</MDBDropdownItem>
                     <MDBDropdownItem href="#!">Shorts</MDBDropdownItem>
                     <MDBDropdownItem href="#!">Pants</MDBDropdownItem>
@@ -63,7 +63,7 @@ class NavbarPage extends Component {
                   <MDBDropdownToggle nav caret>
                     <span className="mr-2">Accessories</span>
                   </MDBDropdownToggle>
-                  <MDBDropdownMenu className="dropdown-default">
+                  <MDBDropdownMenu center className="dropdown-default">
                     <MDBDropdownItem href="#!">Bags</MDBDropdownItem>
                     <MDBDropdownItem href="#!">Hats</MDBDropdownItem>
                     <MDBDropdownItem href="#!">Stickers</MDBDropdownItem>
@@ -77,7 +77,7 @@ class NavbarPage extends Component {
                   <MDBDropdownToggle nav caret>
                     <span className="mr-2">Supplements</span>
                   </MDBDropdownToggle>
-                  <MDBDropdownMenu className="dropdown-default">
+                  <MDBDropdownMenu center className="dropdown-default">
                     <MDBDropdownItem href="#!">Protein</MDBDropdownItem>
                     <MDBDropdownItem href="#!">Pre-Workout</MDBDropdownItem>
                     <MDBDropdownItem href="#!">Wellness</MDBDropdownItem>

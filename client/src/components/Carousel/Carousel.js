@@ -1,5 +1,4 @@
 import React from 'react';
-// import clapping1 from '../Carousel/clapping1.jpg'
 import gk from '../../pages/Images/george3.jpg'
 import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBContainer, MDBRow, MDBCol, MDBMask, MDBTypography} from
 "mdbreact";
