@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/Col'
 import css from '../../pages/About/About.css'
 // import Button from 'react-bootstrap/Button'
 import Modal from 'react-bootstrap/Modal'
+import Footer from '../../components/Footer/Footer'
 
 
 export default About;
@@ -20,10 +21,10 @@ function About() {
         
         <div className="jumbotron text-left">
 
-        <h2>Meet the Team:</h2><br></br><br></br>
+        <h2>Meet the Team <i class="fas fa-shield-virus"></i></h2><br></br><br></br>
         <div>
         <Container>
-        <p id="about-us" >We are a team of UNC-Charlotte full stack developer students with a passion for cleanliness and safety (next to coding). We have collaborated to create a fully functional eCommerce site with a working shopping cart that will fulfill all your PPE needs. Please let us know you stopped by and feel free to connect with us via our individual profiles below.</p>
+        <p id="about-us" >We are a team of UNC-Charlotte full stack developer students with a passion for coding. We have collaborated to create a fully operational eCommerce site with a working shopping cart that will fulfill all your PPE needs. Please let us know you stopped by and feel free to connect with us via our individual profiles below.</p>
         </Container>
         </div>
         </div>
@@ -64,6 +65,7 @@ function About() {
                 </Container>
                 
               </p>
+      
         </>
 
       );

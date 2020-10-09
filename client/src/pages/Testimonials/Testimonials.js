@@ -7,6 +7,7 @@ import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 import Modal from 'react-bootstrap/Modal'
 import CSS from '../../pages/Testimonials/Testimonials.css'
+import Footer from '../../components/Footer/Footer'
 
 
 export default Testimonials;
@@ -18,13 +19,16 @@ function Testimonials() {
         <>
         <div className="jumbotron text-left">
 
-        <h2>Testimonials:</h2><br></br><br></br>
+        <h2>Testimonials <i class="far fa-newspaper"></i></h2>
         <div>
           <Container>
-            <p id="about-us" >"EquiPPE has been wonderful to work with and are always responsive, just like this website!" - Jeffrey Hoffman, UNCC Bootcamp Instructor</p>
-            <p id="about-us" >"EquiPPE came to my resue when I was all out of toilet paper. Thanks EquiPPE!" - Max Allee, UNCC Bootcamp TA</p>
-            <p id="about-us" >"I've always had a good experience working with EquiPPE. They fulfull all my PPE needs!" - Caleb Crum, UNCC Bootcamp TA</p>
+            <p id="test" >"EquiPPE has been wonderful to work with and are always responsive, just like this website!" - Jeff Hoffman, UNCC Coding Bootcamp Instructor<br></br><br></br>
+            "EquiPPE came to my rescue when I unexpectedly ran out of toilet paper. Thanks EquiPPE!" - Max Allee, UNCC Coding Bootcamp TA<br></br><br></br>
+            "I've always had a remarkable experience working with EquiPPE. They fulfill all my PPE needs!" - Caleb Crum, UNCC Coding Bootcamp TA<br></br><br></br>
+            </p>
+            
         </Container>
+        
         </div>
         </div>
         </>

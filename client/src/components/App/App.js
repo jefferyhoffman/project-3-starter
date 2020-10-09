@@ -14,6 +14,8 @@ import NotFound from '../../pages/NotFound/NotFound';
 import About from '../../pages/About/About'
 import Testimonials from '../../pages/Testimonials/Testimonials'
 
+
+
 import './App.css';
 
 class App extends Component {
@@ -67,8 +69,9 @@ class App extends Component {
               <Route component={NotFound} />
             </Switch>
           </div>
-
+          
         </div>
+        
       </AuthContext.Provider>
         
     );
