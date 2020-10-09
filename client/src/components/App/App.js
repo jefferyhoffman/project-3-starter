@@ -16,7 +16,6 @@ import Contact from '../../pages/Contact/Contact';
 import Layout from '../../pages/Layout/Layout';
 import Checkout from '../../pages/Checkout/checkout'
 import Product from '../../pages/ProductPage/Product'
-
 import MShirts from '../../pages/MShirts/MShirts';
 import MShorts from '../../pages/MShorts/MShorts';
 

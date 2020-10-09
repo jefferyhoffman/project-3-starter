@@ -13,14 +13,14 @@ jumbotron {
   max-height: fit-content;
   max-width: fit-content;
 }
-/* .fear{
+.fear{
   position: relative;
-  background-image: url(./fear.svg);
+  background-image: url(./fear2.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left; 
-
-  width: 100%;
+  height: 90vh;
+  width: 100vw;
 }
 .sga{
   position: relative;
@@ -30,6 +30,10 @@ jumbotron {
   background-position: left; 
 
   width: 100%;
-} */
-
-
+} 
+.textright {
+  text-align: right;
+}
+.y {
+  width:fit-content;
+}

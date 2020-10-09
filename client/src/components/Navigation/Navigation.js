@@ -5,6 +5,7 @@ import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBLink, MDBNavbar
 import { BrowserRouter as Router } from 'react-router-dom';
 import AuthContext from '../../contexts/AuthContext';
 // import AuthDropdown from '../../components/AuthDropdown/AuthDropdown';
+import fav from '../Navigation/fav.gif'
 
 class NavbarPage extends Component {
   state = {
@@ -21,6 +22,7 @@ class NavbarPage extends Component {
         <MDBNavbar color="elegant-color" dark expand="md">
           <MDBNavbarBrand>
             <strong className="white-text">Saint George Athleisure</strong>
+          
           </MDBNavbarBrand>
           <MDBNavbarToggler onClick={this.toggleCollapse} />
           <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
@@ -35,9 +37,9 @@ class NavbarPage extends Component {
                   <span className="mr-2">Mens</span>
                   </MDBDropdownToggle>
                   <MDBDropdownMenu center className="dropdown-default">
-                    <MDBDropdownItem href="/">Shirts</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Pants</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Shorts</MDBDropdownItem>
+                    <MDBDropdownItem href="/mens/shirts">Shirts</MDBDropdownItem>
+                    <MDBDropdownItem href="#">Pants</MDBDropdownItem>
+                    <MDBDropdownItem href="/mens/shorts">Shorts</MDBDropdownItem>
                     <MDBDropdownItem href="#!">Sweat Shirts</MDBDropdownItem>
                   </MDBDropdownMenu>
                 </MDBDropdown>
