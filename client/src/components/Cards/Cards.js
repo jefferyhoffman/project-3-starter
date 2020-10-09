@@ -1,20 +1,8 @@
-import React,{useState} from "react";
+import React from "react";
 import { Container } from "react-bootstrap";
-import lulu from "../../components/Cards/lulu.jpeg";
 import "../../components/Cards/Cards.css";
 import Card from '../Card'
-import {
-  MDBBtn,
-  MDBCard,
-  MDBCardBody,
-  MDBCardImage,
-  MDBCardTitle,
-  MDBCardText,
-  MDBCol,
-  MDBRow,
-  MDBView,
-  MDBMask,
-} from "mdbreact";
+import { MDBRow } from "mdbreact";
 
 const Cards=(props)=> {
   

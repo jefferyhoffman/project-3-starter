@@ -3,12 +3,9 @@ import { Link } from "react-router-dom";
 import {
     MDBBtn,
     MDBCard,
-    MDBCardBody,
     MDBCardImage,
-    MDBCardTitle,
     MDBCardText,
     MDBCol,
-    MDBRow,
     MDBView,
     MDBMask,
   } from "mdbreact";
