@@ -63,7 +63,7 @@ const Form = (props) => {
 
         <div className="form-group w-100">
 
-          {/* <label for="formGroupExampleInput">Title</label> */}
+
           <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Company Name" value={companyName} onChange={e => setCompanyName(e.target.value)} />
         </div>
 
@@ -73,7 +73,7 @@ const Form = (props) => {
 
             <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="Type of Bill" value={typeOfBill} onChange={e => setTypeOfBill(e.target.value)} />
 
-            {/* <label for="formGroupExampleInput2">Company</label> */}
+
           </div>
           <div className="col">
             <input type="number" className="form-control" id="formGroupExampleInput2" placeholder="Amount Due" value={amountDue} onChange={e => setAmountDue(parseFloat(e.target.value))} />
@@ -82,34 +82,21 @@ const Form = (props) => {
 
         <div className="row form-group">
           <div className="col">
-            {/* <label for="formGroupExampleInput2">Company</label> */}
+
             <input type="date" className="form-control" id="formGroupExampleInput2" placeholder="Due Date" value={dueDate} onChange={e => setDueDate(e.target.value)} />
           </div>
           <div className="col">
             <input type="number" className="form-control" id="formGroupExampleInput2" placeholder="How Often" value={howOften} onChange={e => setHowOften(parseInt(e.target.value))} />
           </div>
 
-          {/* <div className="alert alert-warning alert-dismissible fade show" role="alert">
-            <strong>Alert!</strong>
-            <button type="button" className="close" data-dismiss="alert" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div> */}
 
-          
+
+
         </div>
 
 
 
-        {/* <div className="form-group w-25">
-          <label for="formGroupExampleInput">Due Date</label>
-          <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Place title here" />
-        </div>
-
-        <div className="form-group w-25">
-          <label for="formGroupExampleInput2">Amount Due</label>
-          <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="Company Name" />
-        </div> */}
+      
       </form>
     </div>
   )

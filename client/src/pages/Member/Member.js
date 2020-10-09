@@ -3,6 +3,8 @@ import MyCalendar from "../../components/MyCalendar";
 import AuthContext from "../../contexts/AuthContext";
 import API from "../../lib/API";
 import { Link } from 'react-router-dom';
+import './member.css'
+
 
 function Member() {
     const user = useContext(AuthContext)
@@ -11,7 +13,7 @@ function Member() {
         .then(res=>console.log(res.data))
     },[user.authToken])
     return (
-        <div>
+        <div > 
             <Link to="/bill"><button type="button" className="btn btn-primary">Add New Bill</button></Link>
         
             <MyCalendar />
