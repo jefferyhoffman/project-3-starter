@@ -1,3 +1,4 @@
+const mongoose = require("mongoose");
 const productsController = require('express').Router();
 const db = require('../../models')
 
@@ -50,7 +51,7 @@ productsController.get("/category/:category/:gender", (req, res) => {
 
 // Find item
 productsController.get("/:id", (req, res) => {
-    db.Products.find({_id: req.params.id })
+    db.Products.findById(req.params.id)
         .then(data => {
             res.json(data);
         })

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import {
     MDBBtn,
     MDBCard,
@@ -12,6 +13,7 @@ import {
     MDBMask,
   } from "mdbreact";
 const Card = props => {
+  console.log(props);
     return(
         <MDBCol>
         <MDBCard
@@ -21,9 +23,11 @@ const Card = props => {
           <MDBView hover>
             <MDBCardImage className="cardImg" src={`/images/${props.item.photo}`} />
             <MDBMask overlay="black-light" className="blackLight">
+            <Link to={`/product/${props.item._id}`}>
               <MDBBtn className="hoverBtn" outline color="white">
                 View
               </MDBBtn>
+            </Link>
             </MDBMask>
           </MDBView>
 
