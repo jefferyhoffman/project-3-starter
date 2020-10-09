@@ -51,6 +51,7 @@ const BlogPost = () => {
           />
           
         </div>
+        
 
         <button type="submit" className="btn btn-primary" onClick={e=>handleSub(e)}>
           Submit

@@ -1,11 +1,13 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import BlogCard from '../../components/BlogCard/BlogCard'
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container"
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import API from "../../lib/API";
+
 
 const testData = [
   {
@@ -52,25 +54,36 @@ const testData = [
 
 
 function HomePage() {
+
+  const [citySearch, setCitySearch] = useState("")
+
+  const handleCitySearchChange = (event) => {
+    setCitySearch(event.target.value);
+  }
+
+  const handleOnSubmit = (event) => {
+    event.preventDefault();
+
+    API.Blog.getAllBlogs().then(data => {
+      console.log(data)
+    })
+
+  }
+
   return (
     <Container >
       <Row style={{marginTop: "100px"}}>
         <Col>
-          <Form>
+          <Form onSubmit={e => handleOnSubmit(e)}>
             <Form.Label>Search By City</Form.Label>
 
-            <Form.Control type="text" placeholder="Enter City"></Form.Control>
+            <Form.Control onChange={e => handleCitySearchChange(e)} type="text" placeholder="Enter City"></Form.Control>
 
-            {/* <input
-            value={this.state.city}
-            name="city"
-            onChange={this.handleInputChange}
-            type="text"
-            placeholder="City"
-          /> */}
             <Button className="m-2"  variant="primary" type="submit">Submit</Button>
+    
+
           </Form>
-        </Col>        
+        </Col>
       </Row>
       <Row>
         <Col>
@@ -87,3 +100,5 @@ function HomePage() {
 }
 
 export default HomePage;
+
+
