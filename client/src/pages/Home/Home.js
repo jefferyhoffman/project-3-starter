@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import BlogCard from '../../components/BlogCard/BlogCard'
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container"
@@ -62,9 +62,9 @@ function HomePage() {
           <Form>
             <Form.Label>Search By City</Form.Label>
             <Form.Control type="text" placeholder="enter City"></Form.Control>
-            <Button className="m-2"  variant="primary" type="submit">Submit</Button>
+            <Button className="m-2" variant="primary" type="submit">Submit</Button>
           </Form>
-        </Col>        
+        </Col>
       </Row>
       <Row>
         <Col>
