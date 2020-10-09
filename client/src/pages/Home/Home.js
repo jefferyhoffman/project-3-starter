@@ -54,7 +54,7 @@ const testData = [
 function HomePage() {
   return (
     <Container >
-      <Row>
+      <Row style={{marginTop: "100px"}}>
         <Col>
           <Form>
             <Form.Label>Search By City</Form.Label>
