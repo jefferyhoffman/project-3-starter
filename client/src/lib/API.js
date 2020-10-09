@@ -39,6 +39,12 @@ export default {
     getJokes: function (authToken) {
       return axios.get('/api/jokes', {});
     }
+  },
+
+  Sendgrid: {
+    sendEmail: function (email) {
+      return axios.post('/api/sendgrid', { email: email });
+    }
   }
 
 }
