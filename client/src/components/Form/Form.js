@@ -29,29 +29,36 @@ import React, { Component, useState } from "react";
 
 // }
 
-const Form=(props)=> {
+const Form = (props) => {
   const [companyName, setCompanyName] = useState("")
   const [typeOfBill, setTypeOfBill] = useState("")
   const [amountDue, setAmountDue] = useState("")
   const [dueDate, setDueDate] = useState("")
   const [howOften, setHowOften] = useState("")
 
-  const handleSub =()=>{
+  const handleSub = () => {
     console.log('clicked')
-    const theBill ={
-      company : companyName,
+    const theBill = {
+      company: companyName,
       type: typeOfBill,
       amount: amountDue,
       date: dueDate,
-    frequency: howOften
+      frequency: howOften
     }
     props.submit(theBill)
-  } 
- 
+    // updates form fields
+    setCompanyName("")
+    setTypeOfBill("")
+    setAmountDue("")
+    setDueDate("")
+    setHowOften("")
+
+  }
+
   return (
     <div>
-      <button type="button" className="btn btn-primary" onClick={()=>handleSub()}>Submit Bill</button>
-      {/* <button type="button" className="btn btn-primary">Hello World</button> */}
+      <button type="button" className="btn btn-primary" onClick={() => handleSub()}>Submit Bill</button>
+
       <form>
 
         <div className="form-group w-100">
@@ -81,6 +88,15 @@ const Form=(props)=> {
           <div className="col">
             <input type="number" className="form-control" id="formGroupExampleInput2" placeholder="How Often" value={howOften} onChange={e => setHowOften(parseInt(e.target.value))} />
           </div>
+
+          {/* <div className="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Alert!</strong>
+            <button type="button" className="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div> */}
+
+          
         </div>
 
 
