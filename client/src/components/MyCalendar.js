@@ -40,8 +40,8 @@ const MyCalendar = props => {
     
 
     return (
-        <div>
-            <button onClick={addEvent}>Add</button>
+        <div className="calendar">
+            {/* <button onClick={addEvent}>Add</button> */}
             <Calendar
                 localizer={localizer}
                 defaultDate={new Date()}

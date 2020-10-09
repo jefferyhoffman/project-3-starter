@@ -14,6 +14,7 @@ import NotFound from '../../pages/NotFound/NotFound';
 import Member from '../../pages/Member/Member';
 import Bill from '../../pages/Bill/Bill';
 
+
 import './App.css';
 
 class App extends Component {
@@ -55,6 +56,7 @@ class App extends Component {
       <AuthContext.Provider value={this.state.auth}>
         <div className='App'>
           <Navigation />
+          <div className="main">
           <div className='container'>
             <Switch>
               <Route exact path='/' component={Home} />
@@ -66,9 +68,12 @@ class App extends Component {
             </Switch>
           </div>
         </div>
+        </div>
       </AuthContext.Provider>
     );
   }
 }
+
+
 
 export default App;
