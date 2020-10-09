@@ -13,9 +13,9 @@ import Register from '../../pages/Register/Register';
 import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
 import Contact from '../../pages/Contact/Contact';
-import Layout from '../../pages/Layout/Layout'
+import Layout from '../../pages/Layout/Layout';
+import Checkout from '../../pages/Checkout/checkout'
 import Product from '../../pages/ProductPage/Product'
-
 import MShirts from '../../pages/MShirts/MShirts';
 import MShorts from '../../pages/MShorts/MShorts';
 
@@ -66,6 +66,7 @@ class App extends Component {
               <Route path='/contact' component={Contact} />
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />
+              <Route path='/checkout' component={Checkout} />
               <Route path = '/layout' component = {Layout}/>
               <Route path = '/product' component = {Product}/>
               <Route exact path = '/mens/shirts' component = {MShirts}/>

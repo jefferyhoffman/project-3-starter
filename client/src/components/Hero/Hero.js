@@ -29,7 +29,7 @@ function Hero() {
             <MDBRow>
                 <MDBCol md="12">
                 <MDBAnimation type="fadeInLeft" delay=".3s">
-                <MDBTypography colorText="white" tag='h1' variant="h1-responsive">Slay Your Dragon</MDBTypography>
+                <MDBTypography colorText="white" tag='h1' variant="display-1">Slay Your Dragon</MDBTypography>
                 </MDBAnimation>
                    
                 </MDBCol>

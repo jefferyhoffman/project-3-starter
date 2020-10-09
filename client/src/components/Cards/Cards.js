@@ -21,9 +21,9 @@ const Cards=(props)=> {
   return (
     <Container>
       <MDBRow>
-      {props.items.map(item=><Card key={item._id } item={item}/>)}
+      {/* {props.items.map(item=><Card key={item._id } item={item}/>)} */}
         
-        {/* <MDBCol>
+         <MDBCol>
           <MDBCard
             className="z-depth-0"
             style={{ height: "384px", width: "220px" }}
@@ -79,7 +79,7 @@ const Cards=(props)=> {
               Flow Y Longline Bra
             </MDBCardText>
           </MDBCard>
-        </MDBCol> */}
+        </MDBCol> 
       </MDBRow>
     </Container>
   );
