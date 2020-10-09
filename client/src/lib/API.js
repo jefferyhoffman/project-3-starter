@@ -40,7 +40,12 @@ export default {
       return axios.get('/api/jokes', {});
     }
   },
-  
+
+  Sendgrid: {
+    sendEmail: function (email) {
+      return axios.post('/api/sendgrid', { email: email });
+    }
+  }
 
 }
 

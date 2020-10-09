@@ -48,8 +48,8 @@ class Menu extends Component {
             </a>
 
                 <ul className="menu-list">
-                  <li><a>Profile</a></li>
-                  <li><a>Community</a></li>
+                  <li ><a style={styles.font}>Profile</a></li>
+                  <li><a style={styles.font}>Community</a></li>
                 </ul>
               </li>
             </ul>
