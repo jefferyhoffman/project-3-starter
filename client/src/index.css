@@ -3,16 +3,11 @@ body {
   background-size: cover;
   background-attachment: fixed;
   animation-name: example;
-  animation-duration: 20s;
+  animation-duration: 120s;
   animation-iteration-count: infinite;
-  animation-direction: reverse
+
 }
 
-@keyframes example {
-  0%   {background-color: rgb(212, 209, 209);}
-  25%  {background-color: white;}
-  50%  {background-color: white;}
-  100% {background-color: rgb(212, 209, 209);}}
 body {
   margin: 0;
   padding: 0;
@@ -21,9 +16,79 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
 
+}
+@keyframes example {
+  0%   {background-image: url("./assets/images/wonders/pyramids.jpg");}
+  20%   {background-image: url("./assets/images/wonders/colloseum.jpg");}
+  40%   {background-image: url("./assets/images/wonders/GreatWall2.jpg");}
+  60%   {background-image: url("./assets/images/wonders/itza.jpg");}
+  80%   {background-image: url("./assets/images/wonders/redeemer.jpg");}
+  100%   {background-image: url("./assets/images/wonders/pyramids.jpg");}
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.travelContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-wrapper {
+  font-size: 20px;
+  color:rgb(0, 0, 0);
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider {
+  height: 50px;
+  padding-left: 5px;
+  overflow: hidden;
+}
+
+.slider div {
+  font-size: 24px;
+  color: antiquewhite;
+  height: 50px;
+  margin-bottom: 50px;
+  padding: 2px 15px;
+  text-align: center;
+}
+
+.slider-text1 {
+  background: cornflowerblue;
+  animation: slide 15s linear infinite;
+}
+.slider-text2 {
+  background: lightcoral;
+}
+.slider-text3 {
+  background: greenyellow;
+}
+.slider-text4 {
+  background: purple;
+}
+.slider-text5 {
+  background: orange;
+}
+
+@keyframes slide {
+  0% {margin-top: -500px;}
+  10% {margin-top: -400px;}
+  20% {margin-top: -400px;}
+  30% {margin-top: -300px;}
+  40% {margin-top: -300px;}
+  50% {margin-top: -200px;}
+  60% {margin-top: -200px;}
+  70% {margin-top: -100px;}
+  80% {margin-top: -100px;}
+  90% {margin-top: 0px;}
+  100% {margin-top: 0px;}
 }

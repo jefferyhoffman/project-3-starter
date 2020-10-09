@@ -19,6 +19,6 @@
     "nodemon": "^1.18.10"
   },
   "dependencies": {
-    "react-router": "^5.2.0"
+    "aos": "^3.0.0-beta.6"
   }
 }
