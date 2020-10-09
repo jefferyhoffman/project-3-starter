@@ -34,36 +34,31 @@ function About() {
                     <Col xs={3} md={3}>
                       <Image id="hover" width="75%" src={require('../../assets/images/adam.jpg')} roundedCircle />
                       <p><strong>Adam Grossman</strong> <br></br> Full Stack Developer</p>
-                      <p><a href="https://www.linkedin.com/in/adam-grossman-charlotte/" target="_blank"><i class="fab fa-linkedin"></i> </a>|
+                      <a href="https://www.linkedin.com/in/adam-grossman-charlotte/" target="_blank"><i class="fab fa-linkedin"></i> </a>|
                       <a href="https://adgrossm.github.io/Portfolio/portfolio.html" target="_blank"> <i class="fas fa-briefcase"></i></a> |
                       <a href="https://github.com/adgrossm" target="_blank"> <i class="fab fa-github-square"></i></a>
-                      </p>
-
                     </Col>
                     <Col xs={3} md={3}>
                       <Image width="75%" src={require('../../assets/images/nick.png')} roundedCircle />
                       <p><strong>Nick Ryder</strong> <br></br> Full Stack Developer</p>
-                      <p><a href="https://www.linkedin.com/in/nicholas-ryder-8a72021b3/" target="_blank"><i class="fab fa-linkedin"></i> </a>|
+                      <a href="https://www.linkedin.com/in/nicholas-ryder-8a72021b3/" target="_blank"><i class="fab fa-linkedin"></i> </a>|
                       <a href="https://nryder7.github.io/ResponsivePortfolio/portfolio.html" target="_blank"> <i class="fas fa-briefcase"></i></a> |
                       <a href="https://github.com/nryder7" target="_blank"> <i class="fab fa-github-square"></i></a>
-                      </p>
                     </Col>
 
                     <Col xs={3} md={3}>
                       <Image width="75%" src={require('../../assets/images/matt.png')} roundedCircle />
                       <p><strong>Matthew Courtney</strong> <br></br> Full Stack Developer</p>
-                      <p><a href="https://www.linkedin.com/in/matthew-courtney-2854811b5/" target="_blank"><i class="fab fa-linkedin"></i> </a>|
+                      <a href="https://www.linkedin.com/in/matthew-courtney-2854811b5/" target="_blank"><i class="fab fa-linkedin"></i> </a>|
                       <a href="https://sharkattack182.github.io/portfolio-experiment/index.html" target="_blank"> <i class="fas fa-briefcase"></i></a> |
                       <a href="https://github.com/sharkattack182" target="_blank"> <i class="fab fa-github-square"></i></a>
-                      </p>
                     </Col>
                     <Col xs={3} md={3}>
                       <Image width="75%" src={require('../../assets/images/ryan.png')} roundedCircle />
                       <p><strong>Ryan Brooks</strong> <br></br> Full Stack Developer</p>
-                      <p><a href="https://www.linkedin.com/in/ryanbrooks0101/" target="_blank"><i class="fab fa-linkedin"></i> </a>|
+                      <a href="https://www.linkedin.com/in/ryanbrooks0101/" target="_blank"><i class="fab fa-linkedin"></i> </a>|
                       <a href="https://ryanbrooks99.github.io/reactportfolio/" target="_blank"> <i class="fas fa-briefcase"></i></a> |
                       <a href="https://github.com/ryanbrooks99" target="_blank"> <i class="fab fa-github-square"></i></a>
-                      </p>
                     </Col>
                   </Row>
                 </Container>
