@@ -27,5 +27,11 @@ export default {
         }
       });
     }
+  },
+
+  Blog: {
+    getAllBlogs: function () {
+      return axios.get("/api/blogs", {})
+    }
   }
 }

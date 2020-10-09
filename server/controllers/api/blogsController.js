@@ -36,7 +36,7 @@ blogsController.delete('/', ((req, res) => {
         .catch(err => res.status(500).json(err))
 
 }))
-blogsController.update('/', ((req, res) => {
+blogsController.put('/', ((req, res) => {
     db.Blogs.updateOne(req.body)
         .then(results => res.json(results))
         .catch(err => res.status(500).json(err))
