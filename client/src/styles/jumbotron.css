@@ -9,11 +9,11 @@
     font-family: 'Raleway', sans-serif;;
   }
 
-  .wrapper {
+  .hero {
     position: relative;
-    height:135h;
+    height: 90h;
     overflow:hidden;
-    margin-top: -79px;
+    margin-top: -70px;
  
   }
 
@@ -22,8 +22,8 @@
   }
   p {
     font-family: 'Raleway', sans-serif;;
-    font-size: 45px;
-    margin-left: 220px;
+    font-size: 36px;
+    margin-left: 175px;
     
 
   }
