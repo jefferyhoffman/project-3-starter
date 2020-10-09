@@ -1,5 +1,5 @@
 body {
-  background-image: url("./assets/images/wonders/pyramids.jpg");
+  background-image: url("./assets/images/wonders/Pyramids1920x1080.jpg");
   background-size: cover;
   background-attachment: fixed;
   animation-name: example;
@@ -19,12 +19,17 @@ body {
 
 }
 @keyframes example {
-  0%   {background-image: url("./assets/images/wonders/pyramids.jpg");}
-  20%   {background-image: url("./assets/images/wonders/colloseum.jpg");}
-  40%   {background-image: url("./assets/images/wonders/GreatWall2.jpg");}
-  60%   {background-image: url("./assets/images/wonders/itza.jpg");}
-  80%   {background-image: url("./assets/images/wonders/redeemer.jpg");}
-  100%   {background-image: url("./assets/images/wonders/pyramids.jpg");}
+  0%    {background-image: url("./assets/images/wonders/Pyramids1920x1080.jpg");}
+  10%   {background-image: url("./assets/images/wonders/Sphinx1920x1080.jpg");}
+  20%   {background-image: url("./assets/images/wonders/TajMahal1920x1080.jpg");}
+  30%   {background-image: url("./assets/images/wonders/ChichenItza1920x1080.jpg");}
+  40%   {background-image: url("./assets/images/wonders/GreatWall1920x1080.jpg");}
+  50%   {background-image: url("./assets/images/wonders/Rome1920x1080.jpg");}
+  60%   {background-image: url("./assets/images/wonders/BigBen1920x1080.jpg");}
+  70%   {background-image: url("./assets/images/wonders/Paris1920x1080.jpg");}
+  80%   {background-image: url("./assets/images/wonders/Neuschwanstein1920x1080.jpg");}
+  90%   {background-image: url("./assets/images/wonders/Rio1920x1080.jpg");}
+  100%  {background-image: url("./assets/images/wonders/Liberty1920x1080.jpg");}
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
