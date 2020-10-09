@@ -38,13 +38,13 @@ body {
   transition: transform .1s cubic-bezier(.5, 0, .5, 1),
     box-shadow .2s;
   
-  &:hover {
+  a:hover {
     box-shadow: 0 0 2em rgba(white, .3);
   }
 
   outline: none;
 
-  &:active {
+  a:active {
     transform: scale(0.8) translateY(10%);
     transition-timing-function: cubic-bezier(.5, 0, .5, 1);
   }
