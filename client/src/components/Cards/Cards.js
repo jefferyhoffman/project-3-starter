@@ -4,7 +4,6 @@ import '../../styles/cards.css';
 const styles = {
     cardOne: {
         backgroundColor: "#718D7B"
-
     },
     cardTwo: {
         backgroundColor: "#71758D"
