@@ -1,7 +1,7 @@
 import React, { Component, useState } from 'react';
 
 function ProductCard() {
-  const [cart, setCart] = useState([cartLocalAll]);
+  const [cart, setCart] = useState(cartLocalAll);
 
   const addToCart = (product) => {
     setCart([...cart[0], product]);
@@ -11,7 +11,6 @@ function ProductCard() {
     <>
       <header><button>Go to Cart ({cart.length})</button>
       </header>
-      <div className="">
         <div className="" >
           {products.map((product) => (
             <div key={product.id}>
@@ -23,7 +22,6 @@ function ProductCard() {
             </div>
           ))}
         </div>
-      </div>
     </>
   );
 }
