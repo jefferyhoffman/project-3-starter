@@ -16,22 +16,23 @@ import Contact from "../../pages/Contact/Contact";
 import Layout from "../../pages/Layout/Layout";
 import Product from "../../pages/ProductPage/Product";
 
-import MShirts from "../../pages/MShirts/MShirts";
-import MShorts from "../../pages/MShorts/MShorts";
-import MPants from "../../pages/MPants/MPants";
-import MSweatshirts from "../../pages/MSweatshirts/MSweatshirts";
-import WShirts from "../../pages/WShirts/WShirts";
-import WShorts from "../../pages/WShorts/WShorts";
-import WPants from "../../pages/WPants/WPants";
-import Sportsbras from "../../pages/Sportsbras/Sportsbras";
-import WSweatshirts from "../../pages/WSweatshirts/WSweatshirts";
-import Bags from "../../pages/Accessories/Bags"
-import Hats from "../../pages/Accessories/Hats"
-import Bottles from "../../pages/Accessories/Bottles"
-import Pre from "../../pages/Supplements/Pre";
-import Protein from "../../pages/Supplements/Protein";
-import Wellness from "../../pages/Supplements/Wellness";
-
+// import MShirts from "../../pages/MShirts/MShirts";
+// import MShorts from "../../pages/MShorts/MShorts";
+// import MPants from "../../pages/MPants/MPants";
+// import MSweatshirts from "../../pages/MSweatshirts/MSweatshirts";
+// import WShirts from "../../pages/WShirts/WShirts";
+// import WShorts from "../../pages/WShorts/WShorts";
+// import WPants from "../../pages/WPants/WPants";
+// import Sportsbras from "../../pages/Sportsbras/Sportsbras";
+// import WSweatshirts from "../../pages/WSweatshirts/WSweatshirts";
+// import Bags from "../../pages/Accessories/Bags"
+// import Hats from "../../pages/Accessories/Hats"
+// import Bottles from "../../pages/Accessories/Bottles"
+// import Pre from "../../pages/Supplements/Pre";
+// import Protein from "../../pages/Supplements/Protein";
+// import Wellness from "../../pages/Supplements/Wellness";
+import Test from "../../pages/Test";
+import Wellness from "../../pages/Test/Wellness";
 
 
 import "./App.css";
@@ -93,7 +94,7 @@ class App extends Component {
               <Route path="/layout" component={Layout} />
               <Route path="/product" component={Product} />
 
-              <Route exact path="/mens/shirts" component={MShirts} />
+              {/* <Route exact path="/mens/shirts" component={MShirts} />
               <Route exact path="/mens/shorts" component={MShorts} />
               <Route exact path="/mens/pants" component={MPants} />
               <Route exact path="/mens/sweatshirts" component={MSweatshirts} />
@@ -101,13 +102,16 @@ class App extends Component {
               <Route exact path="/womens/shorts" component={WShorts} />
               <Route exact path="/womens/pants" component={WPants} />
               <Route exact path="/womens/sportsbras" component={Sportsbras} />
+              <Route path ="/item/*" component={Sportsbras}/>
               <Route exact path="/womens/sweatshirts" component={WSweatshirts} />
               <Route exact path="/bags" component={Bags} />
               <Route exact path="/hats" component={Hats} />
               <Route exact path="/waterbottles" component={Bottles} />
               <Route exact path="/preworkout" component={Pre} />
               <Route exact path="/protein" component={Protein} />
-              <Route exact path="/wellness" component={Wellness} />
+              <Route exact path="/wellness" component={Wellness} /> */}
+              <Route path ="/products/category/:product" component={Wellness}/>
+              <Route path ="/products/:gender/:product" component={Test}/>
              
               
 

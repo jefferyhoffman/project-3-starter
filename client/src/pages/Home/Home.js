@@ -5,11 +5,11 @@ import { MDBContainer, MDBRow, MDBCol } from
   "mdbreact";
 import "../Home/home.css";
 import Hero from "../../components/Hero/Hero";
-import Card from '../../components/Cards/Cards'
+import Cards from '../../components/Cards/Cards'
 // import HeroButton from '../../components/Button/Button'
 import Carousel from '../../components/Carousel/Carousel'
 const HomePage = () =>{
-  const [items, setItems]= useState([{image:"lulu.jpeg", text: "Flow Y Longline Bra"},{image:"lulu.jpeg", text: "Flow Y Longline Bra"},{image:"lulu.jpeg", text: "Flow Y Longline Bra"}])
+  const [items, setItems]= useState([{photo:"lulu.jpeg", text: "Flow Y Longline Bra"},{photo:"lulu.jpeg", text: "Flow Y Longline Bra"},{photo:"lulu.jpeg", text: "Flow Y Longline Bra"}])
     return (
       <div>
         {/* HERO IMAGE */}
@@ -21,7 +21,7 @@ const HomePage = () =>{
           <MDBRow>
             <MDBCol md={1}></MDBCol>
             <MDBCol md={10}>
-              <Card
+              <Cards
               items = {items}
                />
             </MDBCol>
@@ -33,7 +33,7 @@ const HomePage = () =>{
           <MDBRow>
             <MDBCol md={1}></MDBCol>
             <MDBCol md={10}>
-            <Card
+            <Cards
               items = {items}
                />
             </MDBCol>
