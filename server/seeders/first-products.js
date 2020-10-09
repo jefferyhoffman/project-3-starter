@@ -2,7 +2,7 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.bulkInsert('Product', [{
+    return queryInterface.bulkInsert('Products', [{
       product_name: 'N95 Mask',
       product_description: 'NIOSH Certified set 0f 10',
       product_img_one: 'https://i.pinimg.com/originals/27/97/07/27970736454a5ceacafb35218f195aaf.png',
@@ -41,6 +41,6 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete('Product', null, {});
+    return queryInterface.bulkDelete('Products', null, {});
   }
 };

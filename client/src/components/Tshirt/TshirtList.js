@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Cart } from "../Cart/Cart";
 import { Tshirt } from "./Tshirt";
+import API from "../../lib/API";
 
 export const TshirtList = () => {
     const database = [
@@ -33,13 +34,25 @@ export const TshirtList = () => {
         //     id: 3
         // }
     ]
+
+    const [products, setProducts] = useState([])
+
+    useEffect(() => {
+        API.Products.getAllProducts().then(data => {
+            console.log(data.data)
+            setProducts(() => data.data)
+        });
+
+    },[])
+
+
     return (
         <div>
             <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 mw-100">
-                {
-                    database.map(item => (
-                        <Tshirt id={item.id} name={item.name} description={item.description} image={item.image} price={item.price} key={item.id} />
-                    ))
+                {products.length > 0 ? 
+                    products.map(item => (
+                        <Tshirt id={item.id} name={item.product_name} description={item.product_description} image={item.product_img_one} price={item.price} key={item.id} />
+                    )): null
                 }
                 {/* <Cart /> */}
             </div>

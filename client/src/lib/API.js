@@ -19,6 +19,12 @@ export default {
     }
   },
 
+  Products: {
+    getAllProducts: function () {
+      return axios.get('/api/products')
+    }
+  },
+
   Secrets: {
     getAll: function (authToken) {
       return axios.get('/api/secrets', {
