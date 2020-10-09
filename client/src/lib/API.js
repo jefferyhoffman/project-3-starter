@@ -16,6 +16,14 @@ export default {
           'Authorization': `Bearer ${authToken}`
         }
       });
+    },
+
+    addToCart: function (authToken, id){
+      return axios.put('/api/users/me/cart', id, {
+        headers: {
+          'Authorization': `Bearer ${authToken}`
+        }
+      })
     }
   },
 
@@ -23,7 +31,7 @@ export default {
     getAll: function () {
       return axios.get('/api/products');
     },
-    getById: function (id){
+    getProduct: function (id){
       return axios.get('/api/products/' + id);
     },
 
@@ -38,5 +46,6 @@ export default {
     getGender: function (category, gender){
       return axios.get('/api/products/category/' + category + '/' + gender)
     }
+
   }
 }
