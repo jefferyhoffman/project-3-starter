@@ -1,7 +1,23 @@
 import React, { Component, useState } from "react";
 // import Hero from '../../components/Hero/Hero'
 // import { Row, Col, MDBContainer } from "react-bootstrap";
-import { MDBContainer, MDBRow, MDBCol } from
+import {
+  MDBContainer,
+  MDBRow,
+  MDBCol,
+  MDBTypography,
+  MDBCard,
+  MDBIcon,
+  MDBCardGroup,
+  MDBCardImage,
+  MDBCardTitle,
+  MDBBtn,
+  MDBCardBody,
+  MDBCardText,
+  MDBView,
+  MDBMask,
+  MDBBox
+} from
   "mdbreact";
 import "../Home/home.css";
 import Hero from "../../components/Hero/Hero";

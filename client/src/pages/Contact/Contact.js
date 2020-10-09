@@ -1,96 +1,178 @@
-import React, { Component } from "react";
-import { MDBContainer, MDBRow, MDBCol, MDBTabPane, MDBTabContent, MDBNav, MDBNavItem, MDBNavLink } from "mdbreact";
 
-class Pills extends Component {
-  state = {
-    items: {
-      default: "1",
-    }
-  };
+import React from 'react';
+import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBRow, MDBCol, MDBView, MDBIcon, MDBContainer, MDBJumbotron, MDBAnimation } from 'mdbreact';
 
-  togglePills = (type, tab) => e => {
-    e.preventDefault();
-    if (this.state.items[type] !== tab) {
-      let items = { ...this.state.items };
-      items[type] = tab;
-      this.setState({
-        items
-      });
-    }
-  };
+const Contact = () => {
+  return (
+    <>
 
-  render() {
-    return (
-      <MDBContainer className="mt-4">
-          <MDBRow>
-            <MDBCol md="12">
-              <h2>Default</h2>
-              <MDBNav className="mt-5 nav-pills">
-                <MDBNavItem>
-                  <MDBNavLink link to="#" active={this.state.items["default"] === "1"} onClick={this.togglePills("default", "1")} >
-                    Home
-                  </MDBNavLink>
-                </MDBNavItem>
-                <MDBNavItem>
-                  <MDBNavLink link to="#" active={this.state.items["default"] === "2"} onClick={this.togglePills("default", "2")} >
-                    Profile
-                  </MDBNavLink>
-                </MDBNavItem>
-                <MDBNavItem>
-                  <MDBNavLink link to="#" active={this.state.items["default"] === "3"} onClick={this.togglePills("default", "3")} >
-                    Contact
-                  </MDBNavLink>
-                </MDBNavItem>
-              </MDBNav>
-              <MDBTabContent activeItem={this.state.items["default"]}>
-                <MDBTabPane tabId="1">
-                  <p>
-                    Consequat occaecat ullamco amet non eiusmod nostrud dolore
-                    irure incididunt est duis anim sunt officia. Fugiat velit
-                    proident aliquip nisi incididunt nostrud exercitation
-                    proident est nisi. Irure magna elit commodo anim ex veniam
-                    culpa eiusmod id nostrud sit cupidatat in veniam ad. Eiusmod
-                    consequat eu adipisicing minim anim aliquip cupidatat culpa
-                    excepteur quis. Occaecat sit eu exercitation irure Lorem
-                    incididunt nostrud.
-                  </p>
-                </MDBTabPane>
-                <MDBTabPane tabId="2">
-                  <p>
-                    Ad pariatur nostrud pariatur exercitation ipsum ipsum culpa
-                    mollit commodo mollit ex. Aute sunt incididunt amet commodo
-                    est sint nisi deserunt pariatur do. Aliquip ex eiusmod
-                    voluptate exercitation cillum id incididunt elit sunt. Qui
-                    minim sit magna Lorem id et dolore velit Lorem amet
-                    exercitation duis deserunt. Anim id labore elit adipisicing
-                    ut in id occaecat pariatur ut ullamco ea tempor duis.
-                  </p>
-                </MDBTabPane>
-                <MDBTabPane tabId="3">
-                  <p>
-                    Est quis nulla laborum officia ad nisi ex nostrud culpa
-                    Lorem excepteur aliquip dolor aliqua irure ex. Nulla ut duis
-                    ipsum nisi elit fugiat commodo sunt reprehenderit laborum
-                    veniam eu veniam. Eiusmod minim exercitation fugiat irure ex
-                    labore incididunt do fugiat commodo aliquip sit id deserunt
-                    reprehenderit aliquip nostrud. Amet ex cupidatat excepteur
-                    aute veniam incididunt mollit cupidatat esse irure officia
-                    elit do ipsum ullamco Lorem. Ullamco ut ad minim do mollit
-                    labore ipsum laboris ipsum commodo sunt tempor enim
-                    incididunt. Commodo quis sunt dolore aliquip aute tempor
-                    irure magna enim minim reprehenderit. Ullamco consectetur
-                    culpa veniam sint cillum aliqua incididunt velit ullamco
-                    sunt ullamco quis quis commodo voluptate. Mollit nulla
-                    nostrud adipisicing aliqua cupidatat aliqua pariatur mollit
-                    voluptate voluptate consequat non.
-                  </p>
-                </MDBTabPane>
-              </MDBTabContent>
+{/* Jumbo Tron */}
+<MDBAnimation type="fadeInRight" delay=".3s">
+<MDBContainer className="mt-5 text-center">
+      <MDBRow>
+        <MDBCol>
+          <MDBJumbotron>
+            <h2 className="h1 display-3">Meet Our Team</h2>
+            <p className="lead">
+              This is a simple hero unit, a simple Jumbotron-style component for
+              calling extra attention to featured content or information.
+            </p>
+            <hr className="my-2" />
+            <p>
+              It uses utility classes for typgraphy and spacing to space content out
+              within the larger container.
+            </p>
+            <p className="lead">
+              <MDBBtn color="primary">Learn More</MDBBtn>
+            </p>
+          </MDBJumbotron>
+        </MDBCol>
+      </MDBRow>
+    </MDBContainer>
+    </MDBAnimation>
+    <MDBContainer>
+    <MDBRow>
+      <MDBCol md='6'>
+        <MDBCard wide cascade>
+          <MDBView cascade>
+            <MDBCardImage
+              hover
+              overlay='white-slight'
+              className='card-img-top'
+              src='https://mdbootstrap.com/img/Photos/Horizontal/People/6-col/img%20%283%29.jpg'
+              alt='Card cap'
+            />
+          </MDBView>
+
+          <MDBCardBody cascade className='text-center'>
+            <MDBCardTitle className='card-title'>
+              <strong>Kristian Worthy</strong>
+            </MDBCardTitle>
+
+            <p className='font-weight-bold blue-text'>Full-Stack Web Developer</p>
+
+            <MDBCardText>
+                  Sed ut perspiciatis unde omnis iste natus sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam.{' '}
+            </MDBCardText>
+
+            <MDBCol md='12' className='d-flex justify-content-center'>
+              <a href='!#' className='px-2 fa-lg li-ic'>
+                <MDBIcon fab icon='linkedin-in'></MDBIcon>
+              </a>
+
+              <a href='!#' className='px-2 fa-lg tw-ic'>
+                <MDBIcon fab icon='twitter'></MDBIcon>
+              </a>
+
+              <a href='!#' className='px-2 fa-lg fb-ic'>
+                <MDBIcon fab icon='facebook-f'></MDBIcon>
+              </a>
             </MDBCol>
-          </MDBRow>
-        </MDBContainer>
-      );
-    }
+          </MDBCardBody>
+        </MDBCard>
+      </MDBCol>
+
+      <MDBCol md='6'>
+        <MDBCard narrow>
+          <MDBView cascade>
+            <MDBCardImage
+              hover
+              overlay='white-slight'
+              className='card-img-top'
+              src='https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg'
+              alt='food'
+            />
+          </MDBView>
+
+          <MDBCardBody>
+          
+            <MDBCardTitle className='card-title'>
+              <strong>Leonard Love</strong>
+            </MDBCardTitle>
+            <p className='font-weight-bold blue-text'>Full-Stack Web Developer</p>
+            <MDBCardText>
+                  Sed ut perspiciatis unde omnis iste natus sit voluptatem
+                  accusantium doloremque laudantium, totam rem aperiam.
+            </MDBCardText>
+
+            <MDBBtn color='unique'>Button</MDBBtn>
+          </MDBCardBody>
+        </MDBCard>
+      </MDBCol>
+    </MDBRow>
+    <hr></hr>
+  {/* Bottom */}
+<MDBRow>
+      <MDBCol md = "6">
+      <MDBCard narrow>
+          <MDBView cascade>
+            <MDBCardImage
+              hover
+              overlay='white-slight'
+              className='card-img-top'
+              src='https://mdbootstrap.com/img/Photos/Lightbox/Thumbnail/img%20(147).jpg'
+              alt='food'
+            />
+          </MDBView>
+
+        <MDBCardBody>
+            <MDBCardTitle className='card-title'>
+              <strong>Leonard Love</strong>
+            </MDBCardTitle>
+            <p className='font-weight-bold blue-text'>Full-Stack Web Developer</p>
+            <MDBCardText>
+            Sed ut perspiciatis unde omnis iste natus sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam.
+            </MDBCardText>
+
+            <MDBBtn color='unique'>Button</MDBBtn>
+          </MDBCardBody>
+          </MDBCard>
+        </MDBCol>
+
+    <MDBCol md='6'>
+        <MDBCard>
+          <MDBCardImage
+            hover
+            overlay='white-light'
+            className='card-img-top'
+            src='https://mdbootstrap.com/img/Photos/Others/men.jpg'
+            alt='man'
+          />
+
+          <MDBCardBody cascade className='text-center'>
+            <MDBCardTitle className='card-title'>
+              <strong>Aleck Tuluenga</strong>
+            </MDBCardTitle>
+
+            <p className='font-weight-bold blue-text'>Full-Stack Web Developer</p>
+
+            <MDBCardText>
+            Sed ut perspiciatis unde omnis iste natus sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam.{' '}
+            </MDBCardText>
+
+            <MDBCol md='12' className='d-flex justify-content-center'>
+              <MDBBtn rounded floating color='fb'>
+                <MDBIcon size='lg' fab icon='facebook-f'></MDBIcon>
+              </MDBBtn>
+
+              <MDBBtn rounded floating color='tw'>
+                <MDBIcon size='lg' fab icon='twitter'></MDBIcon>
+              </MDBBtn>
+
+              <MDBBtn rounded floating color='dribbble'>
+                <MDBIcon size='lg' fab icon='dribbble'></MDBIcon>
+              </MDBBtn>
+            </MDBCol>
+          </MDBCardBody>
+        </MDBCard>
+      </MDBCol>
+      </MDBRow>
+    </MDBContainer >
+    </>
+  )
 }
 
-export default Pills;
+export default Contact;

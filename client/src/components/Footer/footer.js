@@ -1,111 +1,152 @@
 import React from "react";
-import { MDBFooter, MDBContainer, MDBRow, MDBCol } from "mdbreact";
-const FooterPage = () => {
+import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
+
+const FooterPagePro = () => {
   return (
-    <MDBFooter color="grey" className="font-small pt-4 mt-4 m-auto">
+    <MDBFooter color="stylish-color-dark" className="page-footer font-small pt-4 mt-4">
       <MDBContainer fluid className="text-center text-md-left">
         <MDBRow>
-          <MDBCol md="2">
-            <h5  className="title elegant-color-dark">Slay Your Dragon</h5>
-            <p className="black-text">
+          <MDBCol md="4">
+            <h5 className="text-uppercase mb-4 mt-3 font-weight-bold">
+            Slay Your Dragon
+            </h5>
+            <p>
               Free yourself, stand for what  
               you believe in and never settle. 
             </p>
-          </ MDBCol>
+            <h5 className="text-uppercase mb-4 mt-3 font-weight-bold">
+            <a href="#!">Contact Us</a>
+            </h5>
+          </MDBCol>
+          <hr className="clearfix w-100 d-md-none" />
           <MDBCol md="2">
-            <h5 className="title">Links</h5>
-            <ul>
-              <li className="list-unstyled">
-                <a href="#!">Home</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Mens</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Womens</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Supplements</a>
-              </li>
-            </ul>
-          </ MDBCol>
-          <MDBCol md="2">
-            <h5 className="title">Mens</h5>
-            <ul>
-              <li className="list-unstyled">
+            <h5 className="text-uppercase mb-4 mt-3 font-weight-bold">
+              Mens
+            </h5>
+            <ul className="list-unstyled">
+              <li>
                 <a href="#!">Shirts</a>
               </li>
-              <li className="list-unstyled">
+              <li>
                 <a href="#!">Pants</a>
               </li>
-              <li className="list-unstyled">
+              <li>
                 <a href="#!">Shorts</a>
               </li>
-              <li className="list-unstyled">
+              <li>
                 <a href="#!">Sweat Shirts</a>
               </li>
             </ul>
           </MDBCol>
+          <hr className="clearfix w-100 d-md-none" />
           <MDBCol md="2">
-            <h5 className="title">Womens</h5>
-            <ul>
-              <li className="list-unstyled">
+            <h5 className="text-uppercase mb-4 mt-3 font-weight-bold">
+              Womens
+            </h5>
+            <ul className="list-unstyled">
+              <li>
                 <a href="#!">Shirts</a>
               </li>
-              <li className="list-unstyled">
+              <li>
                 <a href="#!">Shorts</a>
               </li>
-              <li className="list-unstyled">
+              <li>
                 <a href="#!">Pants</a>
               </li>
-              <li className="list-unstyled">
+              <li>
                 <a href="#!">Sports Bras</a>
               </li>
-              <li className="list-unstyled">
+              <li>
                 <a href="#!">Sweat Shirts</a>
               </li>
             </ul>
           </MDBCol>
+          <hr className="clearfix w-100 d-md-none" />
           <MDBCol md="2">
-            <h5 className="title">Accessories</h5>
-            <ul>
-              <li className="list-unstyled">
+            <h5 className="text-uppercase mb-4 mt-3 font-weight-bold">
+              Accessories
+            </h5>
+            <ul className="list-unstyled">
+              <li>
                 <a href="#!">Bags</a>
               </li>
-              <li className="list-unstyled">
+              <li>
                 <a href="#!">Hats</a>
               </li>
-              <li className="list-unstyled">
+              <li>
                 <a href="#!">Stickers</a>
               </li>
-              <li className="list-unstyled">
+              <li>
                 <a href="#!">Water Bottles</a>
               </li>
             </ul>
           </MDBCol>
-          <MDBCol md="1">
-            <h5 className="title">Supplements</h5>
-            <ul>
-              <li className="list-unstyled">
+          <hr className="clearfix w-100 d-md-none" />
+          <MDBCol md="2">
+            <h5 className="text-uppercase mb-4 mt-3 font-weight-bold">
+              Supplements
+            </h5>
+            <ul className="list-unstyled">
+              <li>
                 <a href="#!">Protein</a>
               </li>
-              <li className="list-unstyled">
+              <li>
                 <a href="#!">Pre-Workout</a>
               </li>
-              <li className="list-unstyled">
+              <li>
                 <a href="#!">Wellness</a>
               </li>
             </ul>
           </MDBCol>
-        </ MDBRow>
-      </ MDBContainer>
+        </MDBRow>
+      </MDBContainer>
+      <hr />
+      <div className="text-center py-3">
+        <ul className="list-unstyled list-inline mb-0">
+          <li className="list-inline-item">
+            <h5 className="mb-1">Join Saint George</h5>
+          </li>
+          <li className="list-inline-item">
+            <a href="/register" className="btn btn-danger btn-rounded">
+              Volunteer
+            </a>
+          </li>
+        </ul>
+      </div>
+      <hr />
+      <div className="text-center">
+        <ul className="list-unstyled list-inline">
+          <li className="list-inline-item">
+            <a className="btn-floating btn-sm btn-fb mx-1">
+              <i className="fab fa-facebook-f"> </i>
+            </a>
+          </li>
+          <li className="list-inline-item">
+            <a className="btn-floating btn-sm btn-tw mx-1">
+              <i className="fab fa-twitter"> </i>
+            </a>
+          </li>
+          <li className="list-inline-item">
+            <a className="btn-floating btn-sm btn-gplus mx-1">
+              <i className="fab fa-google-plus"> </i>
+            </a>
+          </li>
+          <li className="list-inline-item">
+            <a className="btn-floating btn-sm btn-li mx-1">
+              <i className="fab fa-linkedin-in"> </i>
+            </a>
+          </li>
+         
+        </ul>
+      </div>
       <div className="footer-copyright text-center py-3">
         <MDBContainer fluid>
-          &copy; {new Date().getFullYear()} Copyright: <a href="https://www.saintgeorgeapparel.com"> SaintGeorgeApparel.com </a>
+        &copy; {new Date().getFullYear()} Copyright: <a href="https://www.saintgeorgeapparel.com"> SaintGeorgeApparel.com </a>
         </MDBContainer>
       </div>
     </MDBFooter>
   );
 }
 
-export default FooterPage;
+export default FooterPagePro;
+
