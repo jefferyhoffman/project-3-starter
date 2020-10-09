@@ -3,7 +3,7 @@ import "./style.css";
 function LOGO(){
   <img
   src="farmFreshMarketLogo2.png"
-  class="img-fluid"
+  className="img-fluid"
   alt="Farm Fresh Market Logo 2"
   id="farmFreshMarketLogo2"
 />
