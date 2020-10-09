@@ -63,6 +63,7 @@ class App extends Component {
 
   render() {
     return (
+      
       <AuthContext.Provider value={this.state.auth}>
         <div className='App'>
           <Navigation />
@@ -85,12 +86,16 @@ class App extends Component {
               <PrivateRoute path= '/profile' component={Profile} />
               <PrivateRoute path='/secret' component={Secret} />
               <Route component={NotFound} />
+              
             </Switch>
           </div>
         </div>
       </AuthContext.Provider>
     );
+    
   }
 }
 
 export default App;
+
+
