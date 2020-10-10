@@ -82,12 +82,13 @@ const UserSchema = new Schema({
       }
     }
   ]
-}, 
-{
-  toJSON: {
-    virtuals: true
+},
+  {
+    toJSON: {
+      virtuals: true
+    }
   }
-});
+);
 
 class newUser {
   constructor({ id, email, password }) {
