@@ -49,11 +49,6 @@ const HomePage = () =>{
           </h2>
           <MDBBox mb={3} ><cite title="Source Title">Ascalon</cite> is a spear or a sword used by Saint George to slay Dragons.</MDBBox>
           <MDBRow>
-            {/* <MDBCol md={1}></MDBCol>
-            <MDBCol md={10}>
-              <Cards
-              items = {items}
-               /> */}
             <br></br>
             <MDBCol lg="3" md="6" className="mb-lg-0 mb-4">
               <div className="view zoom">
