@@ -33,7 +33,7 @@ class NavbarPage extends Component {
     return (
       <MDBNavbar color="elegant-color" dark expand="md">
         <MDBNavbarBrand>
-          <MDBLink to="/"><strong className="white-text">Saint George Apparel</strong></MDBLink>
+          <MDBLink to="/"><strong className="white-text">Saint George Athleisure</strong></MDBLink>
         </MDBNavbarBrand>
         <MDBNavbarToggler onClick={this.toggleCollapse} />
         <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>

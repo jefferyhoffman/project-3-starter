@@ -18,7 +18,7 @@ import {
 } from
   "mdbreact";
 import lulu2 from '../Checkout/lulu2.jpeg'
-import cartCard from '../../components/cartCard/cartCard'
+import CartCard from '../../components/CartCard'
 
 const FormPage = () => {
   return (
@@ -93,7 +93,7 @@ const FormPage = () => {
           <h4 className=" text-center mb-4">Your Cart</h4>
 
             {/* Card Start */}
-              <cartCard/>
+              <CartCard />
             {/* Card End */}
         
            

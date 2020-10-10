@@ -109,18 +109,19 @@ const HomePage = () => {
       </MDBContainer>
 
       {/* </section> */}
-      {/* BEST SELLERS  */}
+      {/* MENS BEST SELLERS  */}
       {/* <section className="sga"> */}
       <hr className="solid"></hr>
       <MDBContainer className="fear">
         <MDBRow>
           <MDBTypography tag="h4" className="text-right" variant="display-4">Men's Best Sellers</MDBTypography>
-          <MDBCol md={1}></MDBCol>
-          <MDBCol md={10}>
+          {/* <MDBCol md={}></MDBCol> */}
+          <MDBCol md={12}>
             <Cards
               items={items}
             />
           </MDBCol>
+          {/* <MDBCol md={1}></MDBCol> */}
         </MDBRow>
       </MDBContainer>
       {/* </section> */}
@@ -128,8 +129,8 @@ const HomePage = () => {
       <MDBContainer>
         <MDBRow>
           <MDBTypography tag="h4" className="text-right" variant="display-4">Women's Best Sellers</MDBTypography>
-          <MDBCol md={1}></MDBCol>
-          <MDBCol md={10}>
+          {/* <MDBCol md={1}></MDBCol> */}
+          <MDBCol md={12}>
             <Cards
               items={items}
             />

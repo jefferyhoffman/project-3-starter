@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {
   MDBContainer,
   MDBRow,
@@ -15,18 +15,29 @@ import {
   MDBMask
 } from
   "mdbreact";
-import API from '../../lib/API'
+import API from '../../lib/API';
 
 
 
 // const cart = (props) => {
-  function Cart (props){
+  const Cart = props => {
   // const [name, setName] = useState("")
   // const [size, setSize] = useState("")
   // const [color, setColor] = useState("")
   // const [price, setPrice] = useState(0)
-  
+  const [items, setItems] = useState([])
   const [count, setCount] = useState(1)
+
+  useEffect(() => {
+    // const authToken = props.match.params.authToken
+  API.Users.getMe()
+  .then(res => {
+    console.log(res.data)
+    setItems(res.data)
+  })
+  .catch(err => console.log(err));
+  })
+  
   
   function decrementCount() {
     setCount(prevCount => prevCount - 1)
@@ -34,7 +45,6 @@ import API from '../../lib/API'
   function incrementCount() {
     setCount(prevCount => prevCount + 1)
   }
-  
   return (
    
 
@@ -61,18 +71,18 @@ import API from '../../lib/API'
       <MDBRow>
         <MDBCol md="6">
           <h5 className="text-left">{props.name}</h5>
-          <p className="mb-3 text-left small">{props.inventory.color}</p>
-          <p className="mb-3 text-left small">{props.inventory.size}</p>
+          {/* <p className="mb-3 text-left small">{props.inventory.color}</p> */}
+          {/* <p className="mb-3 text-left small">{props.inventory.size}</p> */}
         </MDBCol>
 
         <MDBCol md="6">
-          <MDBBtn fluid size="sm" className="inline" onClick={this.decrementCount(props.prevCount)}>
+          <MDBBtn fluid size="sm" className="inline" onClick={decrementCount}>
 
             <i class="fas fa-minus"></i></MDBBtn>
 
-          <input type="text" className="form-control w-25 inline" id="formGroupExampleInput" placeholder="1">{props.prevCount}</input>
+        <span>{count}</span>
 
-          <MDBBtn fluid size="sm" className="inline" onClick={this.incrementCount(props.prevCount)}>
+          <MDBBtn fluid size="sm" className="inline" onClick={incrementCount}>
             <i class="fas fa-plus"></i></MDBBtn>
           <p>{props.price}</p>
         </MDBCol>
