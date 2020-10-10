@@ -120,7 +120,7 @@ class NavbarPage extends Component {
                 <MDBLink to="/login">Login</MDBLink>
               </MDBNavItem>
               <MDBNavItem>
-                <MDBLink to="/checkout"><i class="fa fa-shopping-cart"></i></MDBLink>
+                <MDBLink to="/checkout"><i className="fa fa-shopping-cart"></i></MDBLink>
               </MDBNavItem>
             <MDBNavItem>
               <MDBFormInline waves>
