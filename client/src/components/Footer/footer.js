@@ -141,7 +141,7 @@ const FooterPagePro = () => {
       </div>
       <div className="footer-copyright text-center py-3">
         <MDBContainer fluid>
-        &copy; {new Date().getFullYear()} Copyright: <a href="https://www.saintgeorgeapparel.com"> SaintGeorgeApparel.com </a>
+        &copy; {new Date().getFullYear()} Copyright: <a href="https://saint-george.herokuapp.com/"> SaintGeorgeApparel.com </a>
         </MDBContainer>
       </div>
     </MDBFooter>
