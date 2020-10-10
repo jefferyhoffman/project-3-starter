@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Cart } from "../Cart/Cart";
 import { Tshirt } from "./Tshirt";
 import API from "../../lib/API";
+
 
 export const TshirtList = () => {
     
@@ -9,10 +9,8 @@ export const TshirtList = () => {
 
     useEffect(() => {
         API.Products.getAllProducts().then(data => {
-            console.log(data.data)
             setProducts(() => data.data)
         });
-
     },[])
 
     return (
@@ -23,7 +21,6 @@ export const TshirtList = () => {
                         <Tshirt id={item.id} name={item.product_name} description={item.product_description} image={item.product_img_one} price={item.price} key={item.id} />
                     )): null
                 }
-                {/* <Cart /> */}
             </div>
         </div>
     )
