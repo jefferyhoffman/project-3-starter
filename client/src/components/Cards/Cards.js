@@ -9,7 +9,7 @@ const Cards=(props)=> {
   return (
     <Container>
       <MDBRow>
-      {props.items.map(item=><Card key={item._id } item={item}/>)}
+         {props.items.map(item=><Card key={item._id } item={item}/>)}
       </MDBRow>
     </Container>
   );
