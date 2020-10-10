@@ -1,5 +1,5 @@
-import React from 'react'
-import { Image, Row, Col, Container } from 'react-bootstrap';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBAnimation, MDBTypography } from
     "mdbreact";
 // import stance from '../../pages/Home/stance.jpg'
@@ -7,7 +7,7 @@ import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBAnimation, MDBTypography } fro
 import '../Hero/Hero.css'
 
 
-function Hero() {
+const Hero = props => {
     return (
         <MDBContainer fluid className="img-container">
             <MDBRow>
@@ -42,10 +42,14 @@ function Hero() {
             <MDBRow>
             <MDBCol md="4"></MDBCol>
                 <MDBCol md="2">
+                <Link to={`/products/all/mens`}>
                     <MDBBtn color="mdb-color" >Shop Mens</MDBBtn>
+                    </Link>
                 </MDBCol>
                 <MDBCol md="2">
+                <Link to={`/products/all/womens`}>
                     <MDBBtn color="mdb-color" >Shop Womens</MDBBtn>
+                    </Link>
                 </MDBCol>
                 <MDBCol md="4"></MDBCol>
             </MDBRow>

@@ -19,13 +19,14 @@ import API from '../../lib/API'
 
 
 
-function cart(props) {
+// const cart = (props) => {
+  function Cart (props){
   // const [name, setName] = useState("")
   // const [size, setSize] = useState("")
   // const [color, setColor] = useState("")
   // const [price, setPrice] = useState(0)
-  const [count, setCount] = useState(1)
   
+  const [count, setCount] = useState(1)
   
   function decrementCount() {
     setCount(prevCount => prevCount - 1)
@@ -80,7 +81,7 @@ function cart(props) {
   
 
 
-  )
+  );
 
 }
-export default cart;
+export default Cart;

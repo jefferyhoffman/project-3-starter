@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+
 function increments () {
   const [count, setCount] = useState(2)
   // const [theme, setTheme] = useState('blue')
@@ -13,6 +14,14 @@ function increments () {
   }
   return (
     <>
+     <MDBBtn fluid size="sm" className="inline">
+                
+                <i class="fas fa-minus"></i></MDBBtn>
+
+              <input type="text" className="form-control w-25 inline" id="formGroupExampleInput" placeholder="1"/>  
+
+              <MDBBtn fluid size="sm"  className="inline">
+                <i class="fas fa-plus"></i></MDBBtn>
     <button onClick={decrementCount}>-</button>
     <span>{count}</span>
     {/* <span >{theme}</span> */}
