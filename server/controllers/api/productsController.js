@@ -8,7 +8,6 @@ productsController.get("/all/:gender", (req, res) => {
     db.Products.find({
         'inventory.gender': req.params.gender
     })
-    // .where('inventory.gender').equals(req.params.gender)
     .then(data => {
             res.json(data);
         })

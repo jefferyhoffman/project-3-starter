@@ -4,14 +4,13 @@ import "../Product.css";
 import Cards from "../../components/Cards/Cards";
 import API from '../../lib/API'
 
-const Category = props=> {
+const ProductsByGender = props=> {
     const [items, setItems] = useState([])
     const  [all, setAll] = useState("")
 
     useEffect(() => {
         const gender = cFL(props.match.params.gender);
         setAll(gender)
-        loadItems()
         API.Products.getAllByGender(gender)
         .then(res => {
           console.log(res.data)
@@ -20,9 +19,6 @@ const Category = props=> {
         .catch(err => console.log(err));
       }, [API.Products])
 
-      function loadItems() {
-       
-      };
       function cFL(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
       }
@@ -42,4 +38,4 @@ const Category = props=> {
     </div>
   );
 }
-export default Category;
+export default ProductsByGender;

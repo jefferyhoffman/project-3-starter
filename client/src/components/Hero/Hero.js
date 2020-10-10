@@ -42,12 +42,14 @@ const Hero = props => {
             <MDBRow>
             <MDBCol md="4"></MDBCol>
                 <MDBCol md="2">
-                {/* <Link to={`/product/all/${props.item.gender}`}> */}
+                <Link to={`/products/all/mens`}>
                     <MDBBtn color="mdb-color" >Shop Mens</MDBBtn>
+                    </Link>
                 </MDBCol>
                 <MDBCol md="2">
-                {/* <Link to={`/product/all/${props.item.gender}`}> */}
+                <Link to={`/products/all/womens`}>
                     <MDBBtn color="mdb-color" >Shop Womens</MDBBtn>
+                    </Link>
                 </MDBCol>
                 <MDBCol md="4"></MDBCol>
             </MDBRow>

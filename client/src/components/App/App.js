@@ -19,6 +19,7 @@ import Product from "../../pages/ProductPage/Product";
 // import Wellness from "../../pages/Test/Wellness";
 import Category from '../../pages/Category';
 import Wellness from '../../pages/Wellness';
+import ProductsByGender from '../../pages/ProductsByGender';
 
 import "./App.css";
 
@@ -78,6 +79,7 @@ class App extends Component {
               {/* REMEMBER TO TAKE THIS OUT */}
               <Route path="/layout" component={Layout} />
               <Route path="/product/:id" component={Product} />
+              <Route path ="/products/all/:gender" component={ProductsByGender}/>
               <Route path ="/products/category/:product" component={Wellness}/>
               <Route path ="/products/:gender/:product" component={Category}/>
               <Route component={NotFound} />
