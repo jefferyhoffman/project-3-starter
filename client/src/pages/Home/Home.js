@@ -44,17 +44,16 @@ const HomePage = () =>{
         {/* CHOOSE YOUR LEISURE*/}
         {/* <section className="fear"> */}
         <MDBContainer className="text-center my-5  img-fluid">
+          <MDBRow>
+            <MDBCol md={12}>
           <h2 className="h1-responsive font-weight-bold text-center my-5">
             Choose your <i>ascalon</i>
           </h2>
           <MDBBox mb={3} ><cite title="Source Title">Ascalon</cite> is a spear or a sword used by Saint George to slay Dragons.</MDBBox>
+          </MDBCol>
+          </MDBRow>
           <MDBRow>
-            {/* <MDBCol md={1}></MDBCol>
-            <MDBCol md={10}>
-              <Cards
-              items = {items}
-               /> */}
-            <br></br>
+
             <MDBCol lg="3" md="6" className="mb-lg-0 mb-4">
               <div className="view zoom">
                 <a href="/!">
@@ -117,22 +116,23 @@ const HomePage = () =>{
         <hr className="solid"></hr>
         <MDBContainer className="fear">
           <MDBRow>
-          <MDBTypography tag="h4" className="text-right" variant="display-4">Men's Best Sellers</MDBTypography>
             <MDBCol md={1}></MDBCol>
             <MDBCol md={10}>
-            <Cards
-              items = {items}
-               />
+              <MDBTypography tag="h4" className="text-right" variant="display-4">Men's Best Sellers</MDBTypography>
+              <Cards
+                items = {items}
+                />
             </MDBCol>
+            <MDBCol md={1}></MDBCol>
           </MDBRow>
         </MDBContainer>
         {/* MENS BEST SELLERS*/}
         <MDBContainer className="fear">
-        <hr className="solid"></hr>
+        {/* <hr className="solid"></hr> */}
           <MDBRow>
-            <MDBTypography tag="h4" className="text-right" variant="display-4">Women's Best Sellers</MDBTypography>
             <MDBCol md={1}></MDBCol>
             <MDBCol md={10}>
+              <MDBTypography tag="h4" className="text-right" variant="display-4">Women's Best Sellers</MDBTypography>
               <Cards
               items = {items}
                />
@@ -141,7 +141,7 @@ const HomePage = () =>{
         </MDBContainer>
         {/*  ATHLETE CAROUSEL */}
         <MDBContainer className="mike">
-        <hr className="solid"></hr>
+        {/* <hr className="solid"></hr> */}
           <MDBRow>
             <MDBCol md={12}>
               <Carousel />

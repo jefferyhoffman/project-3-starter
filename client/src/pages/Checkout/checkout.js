@@ -18,6 +18,7 @@ import {
 } from
   "mdbreact";
 import lulu2 from '../Checkout/lulu2.jpeg'
+import cartCard from '../../components/cartCard/cartCard'
 
 const FormPage = () => {
   return (
@@ -92,158 +93,8 @@ const FormPage = () => {
           <h4 className=" text-center mb-4">Your Cart</h4>
 
             {/* Card Start */}
- 
-          <MDBRow> 
-            
-            <MDBRow>
-            <MDBCol md="12">
-              <MDBCard
-                className="z-depth-0"
-                style={{ height: "384px", width: "220px" }}
-              >
-                {/* IMAGE */}
-                <MDBView hover>
-                  <MDBCardImage className="cardImg" src={lulu2} />
-                  <MDBMask overlay="black-light" className="blackLight">
-                    <MDBBtn className="hoverBtn" outline color="white">
-                      View
-                    </MDBBtn>
-                  </MDBMask>
-                </MDBView>
-
-
-              </MDBCard>
-            </MDBCol>
-            </MDBRow>
-
-            <MDBRow>
-              
-            <MDBCol md="6">
-              <h5 className="text-left">Blue Shirt</h5>
-              <p className="mb-3 text-left small">Shirt: Blue</p>
-              <p className="mb-3 text-left small">Color: Blue</p>
-              <p className="mb-3 text-left small">Size: M</p>
-            </MDBCol>
-            
-            <MDBCol md="6">
-              <MDBBtn fluid size="sm" className="inline">
-                
-                <i class="fas fa-minus"></i></MDBBtn>
-
-              <input type="text" className="form-control w-25 inline" id="formGroupExampleInput" placeholder="1"/>  
-
-              <MDBBtn fluid size="sm"  className="inline">
-                <i class="fas fa-plus"></i></MDBBtn>
-              <p>35.99</p>
-            </MDBCol>
-            </MDBRow>
-        </MDBRow>
-         
-
-        {/* Card End */}
-        {/* Product 2 */}
-
-          {/* Card Start */}
- 
-          <MDBRow> 
-            
-            <MDBRow>
-            <MDBCol md="12">
-              <MDBCard
-                className="z-depth-0"
-                style={{ height: "384px", width: "220px" }}
-              >
-                {/* IMAGE */}
-                <MDBView hover>
-                  <MDBCardImage className="cardImg" src={lulu2} />
-                  <MDBMask overlay="black-light" className="blackLight">
-                    <MDBBtn className="hoverBtn" outline color="white">
-                      View
-                    </MDBBtn>
-                  </MDBMask>
-                </MDBView>
-
-
-              </MDBCard>
-            </MDBCol>
-            </MDBRow>
-
-            <MDBRow>
-              
-            <MDBCol md="6">
-              <h5 className="text-left">Blue Shirt</h5>
-              <p className="mb-3 text-left small">Shirt: Blue</p>
-              <p className="mb-3 text-left small">Color: Blue</p>
-              <p className="mb-3 text-left small">Size: M</p>
-            </MDBCol>
-            
-            <MDBCol md="6">
-              <MDBBtn fluid size="sm" className="inline">
-                
-                <i class="fas fa-minus"></i></MDBBtn>
-
-              <input type="text" className="form-control w-25 inline" id="formGroupExampleInput" placeholder="1"/>  
-
-              <MDBBtn fluid size="sm"  className="inline">
-                <i class="fas fa-plus"></i></MDBBtn>
-              <p>35.99</p>
-            </MDBCol>
-            </MDBRow>
-        </MDBRow>
-         
-
-        {/* Card End */}
-        {/* Product 3 */}
-  {/* Card Start */}
- 
-          <MDBRow> 
-            
-            <MDBRow>
-            <MDBCol md="12">
-              <MDBCard
-                className="z-depth-0"
-                style={{ height: "384px", width: "220px" }}
-              >
-                {/* IMAGE */}
-                <MDBView hover>
-                  <MDBCardImage className="cardImg" src={lulu2} />
-                  <MDBMask overlay="black-light" className="blackLight">
-                    <MDBBtn className="hoverBtn" outline color="white">
-                      View
-                    </MDBBtn>
-                  </MDBMask>
-                </MDBView>
-
-
-              </MDBCard>
-            </MDBCol>
-            </MDBRow>
-
-            <MDBRow>
-              
-            <MDBCol md="6">
-              <h5 className="text-left">Blue Shirt</h5>
-              <p className="mb-3 text-left small">Shirt: Blue</p>
-              <p className="mb-3 text-left small">Color: Blue</p>
-              <p className="mb-3 text-left small">Size: M</p>
-            </MDBCol>
-            
-            <MDBCol md="6">
-              <MDBBtn fluid size="sm" className="inline">
-                
-                <i class="fas fa-minus"></i></MDBBtn>
-
-              <input type="text" className="form-control w-25 inline" id="formGroupExampleInput" placeholder="1"/>  
-
-              <MDBBtn fluid size="sm"  className="inline">
-                <i class="fas fa-plus"></i></MDBBtn>
-              <p>35.99</p>
-            </MDBCol>
-            </MDBRow>
-        </MDBRow>
-         
-
-        {/* Card End */}
+              <cartCard/>
+            {/* Card End */}
         
            
 

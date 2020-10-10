@@ -33,7 +33,7 @@ import Product from "../../pages/ProductPage/Product";
 // import Wellness from "../../pages/Supplements/Wellness";
 import Test from "../../pages/Test";
 import Wellness from "../../pages/Test/Wellness";
-
+import Checkout from "../../pages/Checkout/checkout"
 
 import "./App.css";
 
@@ -93,6 +93,8 @@ class App extends Component {
               {/* REMEMBER TO TAKE THIS OUT */}
               <Route path="/layout" component={Layout} />
               <Route path="/product" component={Product} />
+              <Route path ="/checkout" component={Checkout} />
+
 
               {/* <Route exact path="/mens/shirts" component={MShirts} />
               <Route exact path="/mens/shorts" component={MShorts} />
@@ -109,10 +111,11 @@ class App extends Component {
               <Route exact path="/waterbottles" component={Bottles} />
               <Route exact path="/preworkout" component={Pre} />
               <Route exact path="/protein" component={Protein} />
-              <Route exact path="/wellness" component={Wellness} /> */}
+              <Route exact path="/wellness" component={Wellness} />  */}
               <Route path ="/products/category/:product" component={Wellness}/>
               <Route path ="/products/:gender/:product" component={Test}/>
-             
+              
+
               
 
 

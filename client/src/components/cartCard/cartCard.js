@@ -20,14 +20,22 @@ import {
 
 
 const cart = props => {
-  const [something, setSomething] = useState
-  const [somethingElse, setSomethingElse] = useState
-  const [somethingOtherThanElse, setSomethingOtherThanElse] = useState
-  const [someNumber, setSomeNumber] = useState
+  const [quantity, setQuanity] = useState(0)
+  // const [name, setName] = useState("")
+  // const [size, setSize] = useState("")
+  // const [color, setColor] = useState("")
+  // const [price, setPrice] = useState(0)
+    quantity = prevCount
   
   function increments () {
     const [count, setCount] = useState(2) 
     
+    function decrementCount (){
+      setCount(prevCount => prevCount - 1)
+    }
+    function incrementCount(){
+      setCount(prevCount => prevCount + 1)
+    }
   }
  
   return (
@@ -41,11 +49,11 @@ const cart = props => {
       >
         {/* IMAGE */}
         <MDBView hover>
-          <MDBCardImage className="cardImg" src={lulu2} />
+          <MDBCardImage className="cardImg" src={props.photo} />
           <MDBMask overlay="black-light" className="blackLight">
-            <MDBBtn className="hoverBtn" outline color="white">
+            {/* <MDBBtn className="hoverBtn" outline color="white">
               View
-            </MDBBtn>
+            </MDBBtn> */}
           </MDBMask>
         </MDBView>
 
@@ -57,22 +65,21 @@ const cart = props => {
     <MDBRow>
       
     <MDBCol md="6">
-      <h5 className="text-left">Blue Shirt</h5>
-      <p className="mb-3 text-left small">Shirt: Blue</p>
-      <p className="mb-3 text-left small">Color: Blue</p>
-      <p className="mb-3 text-left small">Size: M</p>
+      <h5 className="text-left">{props.name}</h5>
+      <p className="mb-3 text-left small">{props.inventory.color}</p>
+      <p className="mb-3 text-left small">{props.inventory.size}</p>
     </MDBCol>
     
     <MDBCol md="6">
-      <MDBBtn fluid size="sm" className="inline">
+      <MDBBtn fluid size="sm" className="inline" onClick={this.decrementCount(prevCount)}>
         
         <i class="fas fa-minus"></i></MDBBtn>
 
-      <input type="text" className="form-control w-25 inline" id="formGroupExampleInput" placeholder="1"/>  
+      <input type="text" className="form-control w-25 inline" id="formGroupExampleInput" placeholder="1">{prevCount}</input> 
 
-      <MDBBtn fluid size="sm"  className="inline">
+      <MDBBtn fluid size="sm"  className="inline" onClick={this.incrementCount(prevCount)}>
         <i class="fas fa-plus"></i></MDBBtn>
-      <p>35.99</p>
+      <p>{props.price}</p>
     </MDBCol>
     </MDBRow>
 </MDBRow>

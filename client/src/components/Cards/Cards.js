@@ -23,10 +23,10 @@ const Cards=(props)=> {
       <MDBRow>
       {/* {props.items.map(item=><Card key={item._id } item={item}/>)} */}
         
-         <MDBCol>
+         <MDBCol md={4}>
           <MDBCard
             className="z-depth-0"
-            style={{ height: "384px", width: "220px" }}
+            style={{ height: "fit-content", width: "220px" }}
           >
             <MDBView hover>
               <MDBCardImage className="cardImg" src={lulu} />
@@ -42,10 +42,10 @@ const Cards=(props)=> {
             </MDBCardText>
           </MDBCard>
         </MDBCol>
-        <MDBCol>
+        <MDBCol md={4}>
           <MDBCard
             className="z-depth-0"
-            style={{ height: "384px", width: "220px" }}
+            style={{ height: "fit-content", width: "220px" }}
           >
             <MDBView hover>
               <MDBCardImage className="cardImg" src={lulu} />
@@ -61,10 +61,10 @@ const Cards=(props)=> {
             </MDBCardText>
           </MDBCard>
         </MDBCol>
-        <MDBCol>
+        <MDBCol md={4}>
           <MDBCard
             className="z-depth-0"
-            style={{ height: "384px", width: "220px" }}
+            style={{ height: "fit-content", width: "220px" }}
           >
             <MDBView hover>
               <MDBCardImage className="cardImg" src={lulu} />
