@@ -39,7 +39,7 @@ const UserSchema = new Schema({
   cart: {
     total: {
       type: Number,
-      // required: "Total is required"
+      required: "Total is required"
     },
     products: [
       {
