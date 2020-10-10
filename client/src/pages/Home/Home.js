@@ -30,8 +30,11 @@ class HomePage extends Component {
           {/* <hr className="my-4" /> */}
           <p>Take a look at our inventory below.</p>
           <a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+          
         </div>
+
         {/* <row> */}
+
           <CartProvider>
             <div>
               <Cart />

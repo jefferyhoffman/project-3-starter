@@ -12,6 +12,9 @@ import Register from '../../pages/Register/Register';
 import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
 import About from '../../pages/About/About'
+import Testimonials from '../../pages/Testimonials/Testimonials'
+
+
 
 import './App.css';
 
@@ -59,14 +62,16 @@ class App extends Component {
             <Switch>
               <Route exact path='/' component={Home} />
               <Route exact path='/about' component={About} />
+              <Route exact path='/testimonials' component={Testimonials} />
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />
               <PrivateRoute path='/secret' component={Secret} />
               <Route component={NotFound} />
             </Switch>
           </div>
-
+          
         </div>
+        
       </AuthContext.Provider>
         
     );
