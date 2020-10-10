@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-// import {Container} from 'react-bootstrap';
 import { MDBContainer, MDBCol, MDBRow } from "mdbreact";
 import "../Product.css";
 import Cards from "../../components/Cards/Cards";
@@ -7,12 +6,10 @@ import API from '../../lib/API'
 const Wellness = props=> {
     const [items, setItems] = useState([])
     const  [first, setFirst] = useState("")
-    const [second, setSecond] = useState("")
+
     useEffect(() => {
         const product = cFL(props.match.params.product);
-        // const gender = cFL(props.match.params.gender);
         setFirst(product)
-        // setSecond(gender)
         loadItems()
         API.Products.getCategories(product)
         .then(res => {

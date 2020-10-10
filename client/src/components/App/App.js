@@ -92,7 +92,7 @@ class App extends Component {
               <Route path="/register" component={Register} />
               {/* REMEMBER TO TAKE THIS OUT */}
               <Route path="/layout" component={Layout} />
-              <Route path="/product" component={Product} />
+              <Route path="/product/:id" component={Product} />
 
               {/* <Route exact path="/mens/shirts" component={MShirts} />
               <Route exact path="/mens/shorts" component={MShorts} />

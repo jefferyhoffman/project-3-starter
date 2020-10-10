@@ -11,7 +11,7 @@ const productSeed = [
         name: "Flow Y Longline Bra",
         description: "Feels like nothing at all. Powered by buttery-soft fabric, this long-line yoga bra has minimal seams to help keep your mind on the moment.",
         price: 19.99,
-        category: ["Sports-Bras"],
+        category: ["Bras"],
         inventory: [
             {
                 quantity: 25,
@@ -73,7 +73,7 @@ const productSeed = [
         name: "Like a Cloud Bra Light Support",
         description: "This yoga bra’s made with marshmallowy-soft foam cups and supple fabric to keep you comfortable during your practice—but we won’t be surprised if you wear it all day.",
         price: 19.99,
-        category: ["Sports-Bras"],
+        category: ["Bras"],
         inventory: [
             {
                 quantity: 25,
@@ -241,7 +241,7 @@ const productSeed = [
                 quantity: 0,
             }
         ],
-        photo: "MetalVentTechShortSleeve.jpeg"
+        photo: "MetalVentTechShortSleeve.jpg"
     },
     {
         name: "Fast and Free Short Sleeve",
@@ -427,7 +427,7 @@ const productSeed = [
                 quantity: 0,
             }
         ],
-        photo: "DrysenseLongSleeve.jpeg"
+        photo: "DrysenseLongSleeve.jpg"
     },
     {
         name: "Swiftly Breathe Short Sleeve",
@@ -477,7 +477,7 @@ const productSeed = [
                 quantity: 0,
             }
         ],
-        photo: "SwiftlyBreatheShortSleeve.jpeg"
+        photo: "SwiftlyBreatheShortSleeve.jpg"
     },
     {
         name: "Hold Tight Short Sleeve",
@@ -595,7 +595,7 @@ const productSeed = [
                 quantity: 0,
             }
         ],
-        photo: "SwiftlyTechLongSleeve2.0RaceLength.jpeg"
+        photo: "SwiftlyTechLongSleeveRaceLength.jpg"
     },
     {
         name: "Muscle Love Long Sleeve",
@@ -663,7 +663,7 @@ const productSeed = [
                 quantity: 0,
             }
         ],
-        photo: "MuscleLoveLongSleeve.jpeg"
+        photo: "MuscleLoveLongSleeve.jpg"
     },
     {
         name: "Wunder Train Cropped Long Sleeve",
@@ -795,7 +795,7 @@ const productSeed = [
                 quantity: 0,
             }
         ],
-        photo: "AlpineAirCrew.jpeg"
+        photo: "AlpineAirCrew.jpg"
     },
     {
         name: "All Yours Crew Terry",
@@ -859,7 +859,7 @@ const productSeed = [
                 quantity: 0,
             }
         ],
-        photo: "ReadytoRollCrew.jpeg"
+        photo: "ReadytoRollCrew.jpg"
     },
     {
         name: "ABC Jogger 30",
@@ -909,7 +909,7 @@ const productSeed = [
                 quantity: 0,
             }
         ],
-        photo: "ABCJogger30.jpeg"
+        photo: "ABCJogger30.jpg"
     },
     {
         name: "ABC Pant Slim Warpstreme 37",
@@ -979,7 +979,7 @@ const productSeed = [
                 quantity: 0,
             }
         ],
-        photo: "KeepMovingPant7/8High-Rise.jpeg"
+        photo: "KeepMovingPantHighRise.jpg"
     },
     {
         name: "Align Jogger 28",
@@ -1049,7 +1049,7 @@ const productSeed = [
                 quantity: 0,
             }
         ],
-        photo: "AtEaseShort7.jpeg"
+        photo: "AtEaseShort7.jpg"
     },
     {
         name: "Pace Breaker Short 9 Liner",
@@ -1081,7 +1081,7 @@ const productSeed = [
                 quantity: 0,
             }
         ],
-        photo: "PaceBreakerShort9Liner.jpeg"
+        photo: "PaceBreakerShort9Liner.jpg"
     },
     {
         name: "Femme Force Super High Rise Short 8",
@@ -1113,7 +1113,7 @@ const productSeed = [
                 quantity: 0,
             }
         ],
-        photo: "FemmeForceSuperHighRiseShort8.jpeg"
+        photo: "FemmeForceSuperHighRiseShort8.jpg"
     },
     {
         name: "On the Fly Short",
@@ -1145,7 +1145,7 @@ const productSeed = [
                 quantity: 0,
             }
         ],
-        photo: "OntheFlyShort.jpeg"
+        photo: "OntheFlyShort.jpg"
     },
     {
         name: "City Adventurer Backpack",
@@ -1185,7 +1185,7 @@ const productSeed = [
                 quantity: 0,
             }
         ],
-        photo: "OutOfRangeBackpack.jpeg"
+        photo: "OutOfRangeBackpack.jpg"
     },
     {
         name: "Command The Day Duffel",
@@ -1205,7 +1205,7 @@ const productSeed = [
                 quantity: 0,
             }
         ],
-        photo: "CommandTheDayDuffel.jpeg"
+        photo: "CommandTheDayDuffel.jpg"
     },
     {
         name: "Cruiser Backpack",
@@ -1256,7 +1256,7 @@ const productSeed = [
             {
                 quantity: 25,
                 size: "One Size",
-                color: "Navy",
+                color: "Grey",
                 gender: "Unisex"
             }
         ],
@@ -1285,7 +1285,7 @@ const productSeed = [
                 quantity: 0,
             }
         ],
-        photo: "RunforItAllBeanie.jpeg"
+        photo: "RunforItAllBeanie.jpg"
     },
     {
         name: "Cold Terrain Run Beanie",
@@ -1311,7 +1311,7 @@ const productSeed = [
         name: "Stay Hot Keep Cold Bottle",
         description: "Water how you want it. This double-walled stainless steel bottle keeps water cold for 24 hours and hot for 9 hours.",
         price: 40.00,
-        category: ["Water Bottles"],
+        category: ["Bottles"],
         inventory: [
             {
                 quantity: 25,
@@ -1331,7 +1331,7 @@ const productSeed = [
         name: "Stay Hot Keep Cold Bottle",
         description: "Water how you want it. This double-walled stainless steel bottle keeps water cold for 24 hours and hot for 9 hours.",
         price: 40.00,
-        category: ["Water Bottles"],
+        category: ["Bottles"],
         inventory: [
             {
                 quantity: 25,
@@ -1365,7 +1365,7 @@ const productSeed = [
                 quantity: 0,
             }
         ],
-        photo: "your-superfoods-superfood-mix-muscle-power-mix-15044125065291_1024x1024.jpeg"
+        photo: "your-superfoods-superfood-mix-muscle-power-mix-15044125065291_1024x1024.jpg"
     },
     {
         name: "Organic Super Green Mix",
@@ -1385,7 +1385,7 @@ const productSeed = [
                 quantity: 0,
             }
         ],
-        photo: "your-superfoods-superfood-mix-super-green-mix-15259937964107_1024x1024.jpeg"
+        photo: "your-superfoods-superfood-mix-super-green-mix-15259937964107_1024x1024.jpg"
     },
     {
         name: "Plant Collagen Support",
@@ -1405,7 +1405,7 @@ const productSeed = [
                 quantity: 0,
             }
         ],
-        photo: "your-superfoods-superfood-mix-plant-collagen-support-15967619252299_1024x1024.jpeg"
+        photo: "your-superfoods-superfood-mix-plant-collagen-support-15967619252299_1024x1024.jpg"
     },
     {
         name: "Energy Bomb Mix",
@@ -1425,7 +1425,7 @@ const productSeed = [
                 quantity: 0,
             }
         ],
-        photo: "your-superfoods-superfood-mix-energy-bomb-mix-15044004937803_1024x1024.jpeg"
+        photo: "your-superfoods-superfood-mix-energy-bomb-mix-15044004937803_1024x1024.jpg"
     }
 ]
 
