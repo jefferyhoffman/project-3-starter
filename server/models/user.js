@@ -26,7 +26,7 @@ const UserSchema = new Schema({
         default: uniqid()
       },
       status: {},
-      total: {},
+      // total: {},
 
       products: [
         {
@@ -37,10 +37,10 @@ const UserSchema = new Schema({
     }
   ],
   cart: {
-    total: {
-      type: Number
+    // total: {
+    //   type: Number
 
-    },
+    // },
     products: [
       {
         type: Schema.Types.ObjectId,
@@ -83,12 +83,19 @@ const UserSchema = new Schema({
     }
   ]
 },
-  {
-    toJSON: {
-      virtuals: true
-    }
-  }
+  // {
+  //   toJSON: {
+  //     virtuals: true
+  //   }
+  // }
 );
+
+// UserSchema.virtual("Total").get(function () {
+//   return this.exercises.reduce((total, exercise) => {
+//     return total + exercise.duration
+//   }, 0)
+// })
+// const User = mongoose.model("User", UserSchema);
 
 class newUser {
   constructor({ id, email, password }) {
