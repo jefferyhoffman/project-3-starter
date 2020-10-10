@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,600,700,800, 800i, 900&display=swap');
+
+#footer {
+    text-align: center;
+    color: white;
+    background-color: #011586;
+    display: flex;  
+    flex: 1;
+    min-height: 2vh;
+    flex-direction: column;
+    text-shadow: 1px 1px 3px #ec8430;
+    font-family: Poppins, sans-serif;
+    
+}
+
