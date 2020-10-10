@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import ProductView from './../../components/ProductView/productview'
-import ProductCard from './../../components/ProductView/productview'
-import About from '../About/About'
+// import ProductView from './../../components/ProductView/productview'
+// import ProductCard from './../../components/ProductView/productview'
+// import About from '../About/About'
 
 // import React from 'react';
 // import {TshirtList } from "./TshirtList";
@@ -15,7 +15,7 @@ import { CartProvider } from '../../contexts/CartContext';
 // import { TshirtList } from '../Tshirt/TshirtList';
 import { Cart } from '../../components/Cart/Cart';
 import { TshirtList } from '../../components/Tshirt/TshirtList';
-import App from '../../components/App/App';
+// import App from '../../components/App/App';
 
 class HomePage extends Component {
 
@@ -32,15 +32,14 @@ class HomePage extends Component {
           <a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
           
         </div>
-        
-        <row>
+        {/* <row> */}
           <CartProvider>
             <div>
               <Cart />
               <TshirtList />
             </div>
           </CartProvider>
-        </row>
+        {/* </row> */}
       </div>
     );
   }
