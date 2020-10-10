@@ -12,10 +12,10 @@ import {
 const Card = props => {
   console.log(props);
     return(
-        <MDBCol>
+        <MDBCol md={3}>
         <MDBCard
           className="z-depth-0"
-          style={{ height: "384px", width: "220px" }}
+          style={{ height: "fit-content", width: "220px" }}
         >
           <MDBView hover>
             <MDBCardImage className="cardImg" src={`/images/${props.item.photo}`} />
