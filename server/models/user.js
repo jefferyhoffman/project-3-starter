@@ -26,7 +26,7 @@ const UserSchema = new Schema({
         default: uniqid()
       },
       status: {},
-      // total: {},
+      total: {},
 
       products: [
         {
@@ -37,9 +37,10 @@ const UserSchema = new Schema({
     }
   ],
   cart: {
-    // total: {
-    //   type: Number
-    // },
+    total: {
+      type: Number
+
+    },
     products: [
       {
         type: Schema.Types.ObjectId,
@@ -81,7 +82,12 @@ const UserSchema = new Schema({
       }
     }
   ]
-})
+}, 
+{
+  toJSON: {
+    virtuals: true
+  }
+});
 
 class newUser {
   constructor({ id, email, password }) {
