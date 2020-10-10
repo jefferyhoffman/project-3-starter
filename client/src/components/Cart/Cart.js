@@ -94,7 +94,8 @@ export const Cart = () => {
                     </div>
                 )}
             <br />
-            <span>Total price : {"$"}{cart.reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2)} </span>   
+            <span>Total price : {"$"}{cart.reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2)} </span> 
+            <button>Checkout</button>  
              
         </div>  
     )
