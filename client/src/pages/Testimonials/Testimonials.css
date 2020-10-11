@@ -5,6 +5,45 @@
     font-size: 25px;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
-    margin-top: 200px;
+    margin-top: 100px;
     
+}
+
+.testimonials {
+    font-size: 70px;
+    color: #011586;
+    margin-bottom: 100px;
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+}
+
+p:first-letter{
+    text-transform: uppercase;
+}
+p {
+color: #011586;
+font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+letter-spacing:0.1em;
+text-align:center;
+margin: 40px auto;
+text-transform: lowercase;
+line-height: 145%;
+font-size: 14pt;
+font-variant: small-caps;
+}
+
+.Orange {
+    color: #ec8430;
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+}
+
+.title{ 
+    font-size: 30px;
+}
+
+.card-text {
+    font-size: 25px;
+}
+
+.lastCard {
+    margin-bottom: 200px !important;
 }
