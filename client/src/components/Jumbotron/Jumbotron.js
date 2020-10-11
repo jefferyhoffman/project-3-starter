@@ -1,32 +1,34 @@
 import React from 'react';
-import '../../styles/jumbotron.css'
+import '../../styles/jumbotron.css';
+import plants from "../../styles/plants.jpg"
 
 const styles = {
   h1: {
     fontSize: "120px",
     marginRight: "50px",
   }
-}
+
+  }
 
 function Hero() {
-  return (
-    <section className="hero is-fullheight bgimage-1">
-      <div className="hero-body content">
-        <div className="container">
-          <div className="columns">
-            <div className="column is-two-thirds">
-              <h1 className="title" style={styles.h1}>
-                Oddly Satisfying
+    return (
+      <section className="hero is-fullheight" style={styles.hero}>
+        <div className="hero-body content">
+          <div className="container">
+            <div className="columns">
+              <div className="column is-two-thirds">
+                <h1 className="title" style={styles.h1}>
+                  Oddly Satisfying
       </h1>
-              <h2 className="subtitle">
-                <p>Content To Ampli-FI Your Mood</p>
-              </h2>
+                <h2 className="subtitle">
+                  <p>Content To Ampli-FI Your Mood</p>
+                </h2>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  )
+      </section>
+    )
 }
 
 export default Hero;

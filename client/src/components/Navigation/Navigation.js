@@ -37,15 +37,15 @@ class Navigation extends Component {
         <nav className="navbar is-white" role="navigation" aria-label="main navigation" style={styles.navbar}>
           <div className="navbar-brand">
             <a className="navbar-item" to="#">
-              <img src={logo} width="100" height="300" />
+              <img src={logo}  />
             </a>
-
+</div>
             <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>
             </a>
-          </div>
+          
 
           <div id="navbarBasicExample" className="navbar-menu">
             <div className="navbar-start">

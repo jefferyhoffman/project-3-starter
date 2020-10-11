@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../../styles/menu.css';
 import { Link } from 'react-router-dom';
 import AuthContext from '../../contexts/AuthContext';
+import Jokes from '../Jokes/Jokes';
 
 
 const styles = {
@@ -21,6 +22,9 @@ const styles = {
   main: {
     width: "100%",
     height: "150vh"
+  },
+  titles: {
+    textAlign: "center"
   }
 }
 
@@ -35,7 +39,9 @@ class Menu extends Component {
     this.setState({
       collapsed: !this.state.collapsed
     });
-  }
+  };
+
+  
   render() {
     return (
       <div className="columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd">
@@ -85,7 +91,23 @@ class Menu extends Component {
             </ul>
           </aside>
         </div>
-        <div className="column is-main-content">
+        <div className="tile is-ancestor">
+          <div className="tile is-vertical is-parent">
+            <div className="tile is-child box">
+              <p className="title" style={styles.titles}>Daily Affirmation</p>
+             
+            </div>
+            <div className="tile is-child box">
+              <p className="title">Joke of the Day</p>
+              <Jokes />
+            </div>
+          </div>
+          <div className="tile is-parent">
+            <div className="tile is-child box">
+              <p className="title"></p>
+             
+            </div>
+          </div>
         </div>
       </div>
     );
