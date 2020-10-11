@@ -19,6 +19,12 @@ const center = {
     lng: -80.8431
 };
 
+const options = {
+    disableDefaultUI:true
+}
+
+
+
 export default function Clinic(){
     const {isLoaded, loadError} = useLoadScript({
         googleMapsApiKey: process.env.REACT_APP_GOOGLE_API_KEY,
@@ -29,8 +35,9 @@ export default function Clinic(){
     if (!isLoaded) return "Loading Map";
     return <div><GoogleMap 
     mapContainerStyle={mapContainerStyle} 
-    zoom={8}
+    zoom={11}
     center={center}
+    options={options}
     ></GoogleMap></div>;
 }
 
