@@ -10,7 +10,7 @@ import {
     MDBMask,
   } from "mdbreact";
 const Card = props => {
-  console.log(props);
+  // console.log(props);
     return(
         <MDBCol md={3}>
         <MDBCard
