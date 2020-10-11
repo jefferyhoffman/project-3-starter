@@ -31,7 +31,23 @@ export default {
   Orders: {
     getAllOrders: function () {
       return axios.get('api/orders')
-    }
+    },
+
+    latestOrder: function () {
+      return axios.get('api/orders/latest')
+    },
+
+    createOrder: function (products, authToken) {
+      return axios.post('api/orders/processing', {
+        products: products
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${authToken}`
+        }
+      })
+    },
+
   },
 
   Secrets: {
