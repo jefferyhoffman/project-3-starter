@@ -2,49 +2,52 @@ import React, { useContext } from "react";
 import { CartContext } from "../../contexts/CartContext";
 
 export const Tshirt = (props) => {
-    const [cart, setCart] = useContext(CartContext);
+    const [cart, cartDispatch] = useContext(CartContext);
 
     
     const addToCart = () => {
-        
-        const filterCartByID = cart.filter(val => {
-            return props.id === val.id
+        cartDispatch({
+            type:"ADD_TO_CART",
+            payload: props 
         })
+        // const filterCartByID = cart.filter(val => {
+        //     return props.id === val.id
+        // })
 
-        if (filterCartByID.length > 0) {
+        // if (filterCartByID.length > 0) {
 
-            const mapOfCart = cart.map(val => {
+        //     const mapOfCart = cart.map(val => {
 
-                if (val.id === props.id) {
+        //         if (val.id === props.id) {
 
-                    const tshirt = {
-                        name: val.name,
-                        description: val.description,
-                        image: val.image,
-                        price: val.price,
-                        id: val.id,
-                        quantity: val.quantity + 1
-                    };
-                    var tshirtID = tshirt.id
-                    localStorage.setItem(tshirtID, JSON.stringify(tshirt));
-                    return tshirt
-                }
-                return val
-            })
-            setCart(() => mapOfCart)
-        } else {
-            const tshirt = {
-                name: props.name,
-                description: props.description,
-                image: props.image,
-                price: props.price,
-                id: props.id,
-                quantity: 1
-            };
-            setCart(currentState => [...currentState, tshirt]);
-            var tshirtID = tshirt.id
-            localStorage.setItem(tshirtID, JSON.stringify(tshirt));
-        }
+        //             const tshirt = {
+        //                 name: val.name,
+        //                 description: val.description,
+        //                 image: val.image,
+        //                 price: val.price,
+        //                 id: val.id,
+        //                 quantity: val.quantity + 1
+        //             };
+        //             var tshirtID = tshirt.id
+        //             localStorage.setItem(tshirtID, JSON.stringify(tshirt));
+        //             return tshirt
+        //         }
+        //         return val
+        //     })
+        //     setCart(() => mapOfCart)
+        // } else {
+        //     const tshirt = {
+        //         name: props.name,
+        //         description: props.description,
+        //         image: props.image,
+        //         price: props.price,
+        //         id: props.id,
+        //         quantity: 1
+        //     };
+        //     setCart(currentState => [...currentState, tshirt]);
+        //     var tshirtID = tshirt.id
+        //     localStorage.setItem(tshirtID, JSON.stringify(tshirt));
+        // }
     }
 
     return (
