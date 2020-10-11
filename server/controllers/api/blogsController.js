@@ -23,8 +23,8 @@ blogsController.get("/city/:city", (req, res) => {
 })
 //searching state by abrivation
 blogsController.get("/state/:state", (req, res) => {
-    const fullStateName = returnStateName(req.params.state)
-    db.Blogs.find({ state: fullStateName })
+    // const fullStateName = returnStateName(req.params.state)
+    db.Blogs.find({ state: req.params.state })
         .then(results => res.json(results))
         .catch(err => res.status(500).json(err))
 })

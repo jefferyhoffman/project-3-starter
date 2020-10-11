@@ -9,50 +9,6 @@ import Button from "react-bootstrap/Button";
 import API from "../../lib/API";
 
 
-const testData = [
-  {
-    author: "Caleb",
-    city: "Huntersville",
-    state: "North Carolina",
-    text: "I like Huntersville",
-    img: "https://www.lakenormanmike.com/wp-content/uploads/2019/12/Huntersville-NC-birkdale-village-lake-norman-real-estate-agent.jpg"
-  },
-  {
-    author: "Caleb",
-    city: "Huntersville",
-    state: "North Carolina",
-    text: "I like Huntersville",
-    img: "https://www.lakenormanmike.com/wp-content/uploads/2019/12/Huntersville-NC-birkdale-village-lake-norman-real-estate-agent.jpg"
-  },
-  {
-    author: "Caleb",
-    city: "Huntersville",
-    state: "North Carolina",
-    text: "I like Huntersville",
-    img: "https://www.lakenormanmike.com/wp-content/uploads/2019/12/Huntersville-NC-birkdale-village-lake-norman-real-estate-agent.jpg"
-  }, {
-    author: "Caleb",
-    city: "Huntersville",
-    state: "North Carolina",
-    text: "I like Huntersville",
-    img: "https://www.lakenormanmike.com/wp-content/uploads/2019/12/Huntersville-NC-birkdale-village-lake-norman-real-estate-agent.jpg"
-  }, {
-    author: "Caleb",
-    city: "Huntersville",
-    state: "North Carolina",
-    text: "I like Huntersville",
-    img: "https://www.lakenormanmike.com/wp-content/uploads/2019/12/Huntersville-NC-birkdale-village-lake-norman-real-estate-agent.jpg"
-  },
-  {
-    author: "Caleb",
-    city: "Huntersville",
-    state: "North Carolina",
-    text: "I like Huntersville",
-    img: "https://www.lakenormanmike.com/wp-content/uploads/2019/12/Huntersville-NC-birkdale-village-lake-norman-real-estate-agent.jpg"
-  }
-]
-
-
 function HomePage() {
 
   const [citySearch, setCitySearch] = useState("")
