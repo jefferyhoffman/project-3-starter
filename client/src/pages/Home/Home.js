@@ -88,11 +88,10 @@ function HomePage() {
           <Form onSubmit={e => handleOnSubmit(e)}>
             <Form.Label>Search By City</Form.Label>
 
-            <Form.Control onChange={e => handleCitySearchChange(e)} type="text" placeholder="Enter City"></Form.Control>
+            <Form.Control type="text" placeholder="Enter City"></Form.Control>
 
-            <Button className="m-2" variant="primary" type="submit">Submit</Button>
-
-
+    
+            <Button className="m-2"  variant="primary" type="submit">Submit</Button>
           </Form>
         </Col>
       </Row>
