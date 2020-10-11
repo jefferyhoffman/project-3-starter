@@ -28,8 +28,8 @@ export default {
   },
 
   Products: {
-    getAll: function () {
-      return axios.get('/api/products');
+    getAllByGender: function (gender) {
+      return axios.get('/api/products/all/' + gender);
     },
     getProduct: function (id){
       return axios.get('/api/products/' + id);
@@ -43,9 +43,9 @@ export default {
       return axios.get('/api/products/'+ popular);
     },
 
-    getGender: function (category, gender){
+    getCategoryGender: function (category, gender){
       return axios.get('/api/products/category/' + category + '/' + gender)
-    }
+    },
 
   }
 }

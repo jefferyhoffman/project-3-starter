@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 
 const FooterPagePro = () => {
@@ -25,16 +26,13 @@ const FooterPagePro = () => {
             </h5>
             <ul className="list-unstyled">
               <li>
-                <a href="#!">Shirts</a>
+                <a href="/products/mens/shirts">Shirts</a>
               </li>
               <li>
-                <a href="#!">Pants</a>
+                <a href="/products/mens/pants">Pants</a>
               </li>
               <li>
-                <a href="#!">Shorts</a>
-              </li>
-              <li>
-                <a href="#!">Sweat Shirts</a>
+                <a href="/products/mens/sweatshirts">Sweat Shirts</a>
               </li>
             </ul>
           </MDBCol>
@@ -45,19 +43,19 @@ const FooterPagePro = () => {
             </h5>
             <ul className="list-unstyled">
               <li>
-                <a href="#!">Shirts</a>
+              <a href="/products/womens/shirts" >Shirts</a>
               </li>
               <li>
-                <a href="#!">Shorts</a>
+              <a href="/products/womens/shorts" >Shorts</a>
               </li>
               <li>
-                <a href="#!">Pants</a>
+              <a href="/products/womens/pants" >Pants</a>
               </li>
               <li>
-                <a href="#!">Sports Bras</a>
+              {/* <a href="" >Sports Bras</a> */}
               </li>
               <li>
-                <a href="#!">Sweat Shirts</a>
+              <a href="/products/womens/sweatshirts" >Sweat Shirts</a>
               </li>
             </ul>
           </MDBCol>
@@ -68,33 +66,24 @@ const FooterPagePro = () => {
             </h5>
             <ul className="list-unstyled">
               <li>
-                <a href="#!">Bags</a>
+               <a href="/products/category/bags">Bags</a>
               </li>
               <li>
-                <a href="#!">Hats</a>
+                <a href="/products/category/hats">Hats</a>
               </li>
               <li>
-                <a href="#!">Stickers</a>
-              </li>
-              <li>
-                <a href="#!">Water Bottles</a>
+                <a href="#">Water Bottles</a>
               </li>
             </ul>
           </MDBCol>
           <hr className="clearfix w-100 d-md-none" />
           <MDBCol md="2">
             <h5 className="text-uppercase mb-4 mt-3 font-weight-bold">
-              Supplements
+             Wellness
             </h5>
             <ul className="list-unstyled">
               <li>
-                <a href="#!">Protein</a>
-              </li>
-              <li>
-                <a href="#!">Pre-Workout</a>
-              </li>
-              <li>
-                <a href="#!">Wellness</a>
+                <a href="/products/category/wellness">Wellness</a>
               </li>
             </ul>
           </MDBCol>
@@ -141,7 +130,7 @@ const FooterPagePro = () => {
       </div>
       <div className="footer-copyright text-center py-3">
         <MDBContainer fluid>
-        &copy; {new Date().getFullYear()} Copyright: <a href="https://www.saintgeorgeapparel.com"> SaintGeorgeApparel.com </a>
+        &copy; {new Date().getFullYear()} Copyright: <a href="https://saint-george.herokuapp.com/"> SaintGeorgeAthleisure.com </a>
         </MDBContainer>
       </div>
     </MDBFooter>

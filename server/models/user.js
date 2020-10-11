@@ -26,7 +26,7 @@ const UserSchema = new Schema({
         default: uniqid()
       },
       status: {},
-      // total: {},
+      total: {},
 
       products: [
         {
@@ -37,9 +37,10 @@ const UserSchema = new Schema({
     }
   ],
   cart: {
-    // total: {
-    //   type: Number
-    // },
+    total: {
+      type: Number,
+      // required: "Total is required"
+    },
     products: [
       {
         type: Schema.Types.ObjectId,
@@ -81,7 +82,19 @@ const UserSchema = new Schema({
       }
     }
   ]
-})
+},
+  {
+    toJSON: {
+      virtuals: true
+    }
+  }
+);
+
+UserSchema.virtual("Total").get(function () {
+  return this.cart.reduce((total, cart) => {
+    return total + cart.total
+  }, 0)
+});
 
 class newUser {
   constructor({ id, email, password }) {

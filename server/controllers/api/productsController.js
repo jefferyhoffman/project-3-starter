@@ -3,10 +3,12 @@ const productsController = require('express').Router();
 const db = require('../../models')
 
 
-// Find all products
-productsController.get("/", (req, res) => {
-    db.Products.find({})
-        .then(data => {
+// Find all products by gender
+productsController.get("/all/:gender", (req, res) => {
+    db.Products.find({
+        'inventory.gender': req.params.gender
+    })
+    .then(data => {
             res.json(data);
         })
         .catch(err => {
