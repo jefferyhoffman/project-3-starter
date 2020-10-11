@@ -27,7 +27,7 @@ function Product(props) {
         </MDBCol>
         <MDBCol>
           <h4 style = {{fontWeight:"bold"}}>{product.name}</h4>
-          <h6>{product.inventory && product.inventory[3].color}</h6>
+          <h6>{product.inventory && product.inventory[0].color}</h6>
           <h6>${product.price}</h6>
           <hr className="solid"></hr>
           <h6>Select Size</h6>
