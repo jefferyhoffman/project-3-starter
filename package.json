@@ -19,11 +19,14 @@
     "nodemon": "^1.18.10"
   },
   "dependencies": {
+    "@react-google-maps/api": "^1.12.0",
+    "axios": "^0.20.0",
     "dotenv": "^8.2.0",
     "react-chat-window": "^1.2.1",
     "react-geocode": "^0.2.2",
     "react-google-autocomplete": "^1.2.6",
     "react-google-location": "^1.2.2",
-    "react-google-maps": "^9.4.5"
+    "react-google-maps": "^9.4.5",
+    "use-places-autocomplete": "^1.5.3"
   }
 }
