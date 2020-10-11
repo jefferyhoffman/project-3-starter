@@ -12,14 +12,20 @@
 .testimonials {
     font-size: 70px;
     color: #011586;
-    margin-bottom: 100px;
     font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
 }
 
-p:first-letter{
+/* card 1 */
+/* 
+.card4 {
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+    background-image: linear-gradient(white,  #ec8430);
+    border-color:#c0c0c0cb;
+} */
+.card4 p:first-letter{
     text-transform: uppercase;
 }
-p {
+.card4 p {
 color: #011586;
 font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
 letter-spacing:0.1em;
@@ -31,19 +37,96 @@ font-size: 14pt;
 font-variant: small-caps;
 }
 
-.Orange {
+.card4 .Orange {
     color: #ec8430;
     font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
 }
 
-.title{ 
+.card4 .title{ 
     font-size: 30px;
 }
 
-.card-text {
+.card4 .card-text {
     font-size: 25px;
 }
 
+/* just the margin on the last card */
 .lastCard {
     margin-bottom: 200px !important;
+}
+
+/* card 2 */
+.card2 {
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+    background-image: linear-gradient(white,  #ec8430);
+    border-color:#c0c0c0cb;
+}
+.card2 p:first-letter{
+    text-transform: uppercase;
+}
+.card2 p {
+color: white;
+font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+letter-spacing:0.1em;
+text-align:center;
+margin: 40px auto;
+text-transform: lowercase;
+line-height: 145%;
+font-size: 14pt;
+font-variant: small-caps;
+}
+
+.card2 .Orange {
+    color:#011586;
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+}
+
+.card2 .title{ 
+    font-size: 30px;
+}
+
+.card2 .card-text {
+    font-size: 25px;
+}
+
+/* card 3*/
+.card3 {
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+    background-color:  #011586;
+}
+.card3 p:first-letter{
+    text-transform: uppercase;
+}
+.card3 p {
+color: white;
+font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+letter-spacing:0.1em;
+text-align:center;
+margin: 40px auto;
+text-transform: lowercase;
+line-height: 145%;
+font-size: 14pt;
+font-variant: small-caps;
+}
+
+.card3 .Orange {
+    color:#ec8430;
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+}
+
+.card3 .title{ 
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+    font-size: 30px;
+}
+
+.card3 .card-text {
+
+    font-size: 25px;
+}
+
+.trust {
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+    color:  #c0c0c0cb;
+    font-size: 40px;
+    margin-bottom: 100px;
 }
