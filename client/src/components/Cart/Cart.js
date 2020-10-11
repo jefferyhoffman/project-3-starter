@@ -8,72 +8,29 @@ import Modal from 'react-modal';
 
 export const Cart = (props) => {
   const [cart, cartDispatch] = useContext(CartContext);
-  const [modal, setModal] = React.useState(false);
-
-
-  // const totalPrice = cart.reduce((acc, curr) => acc + curr.price, 0);
+  const [modal, setModal] = useState(false);
 
   const modifyCart = (id, amnt) => {
-    // const mapOfCart = cart.map(val => {
-    //   if (val.id === id) {
-    //     val.quantity += amnt;
-    //   }
-    //   return val
-    // }).filter(val => val.quantity)
 
-    // localStorage.setItem("shoppingCart", JSON.stringify(mapOfCart));
     cartDispatch({
       type: "UPDATE_QUANTITY",
       id, amnt
     })
   }
 
-  // const decrementCart = (event) => {
+  const handleCheckoutButton = (event) => {
+    event.preventDefault();
+    // const 
+    // API.Orders.createOrder()
+    //   .then(data => {
+    //     console.log("order created")
+    //   })
+    //   .catch(err => {
+    //     console.log(err)
+    //   })
+    console.log("submited")
 
-  //   var targetId = parseInt(event.target.id)
-
-  //   const filterCartByID3 = cart.filter(val => {
-
-  //     return targetId === val.id
-  //   })
-
-  //   if (filterCartByID3[0].quantity > 0) {
-
-  //     const mapOfCart = cart.map(val => {
-
-  //       if (val.id === targetId) {
-
-  //         const tshirt = {
-  //           name: val.name,
-  //           description: val.description,
-  //           image: val.image,
-  //           price: val.price,
-  //           id: val.id,
-  //           quantity: val.quantity - 1
-  //         };
-
-  //         var tshirtID = tshirt.id
-  //         localStorage.setItem(tshirtID, JSON.stringify(tshirt));
-  //         return tshirt
-  //       }
-  //       return val
-  //     })
-  //     setCart(() => mapOfCart)
-  //   }
-  // }
-
-  // function openModal() {
-  //   setIsOpen(true);
-  // }
-
-  //   function afterOpenModal() {
-  //     // references are now sync'd and can be accessed.
-  //     subtitle.style.color = '#f00';
-  //   }
-
-  // function closeModal() {
-  //   setIsOpen(false);
-  // }
+  };
 
   return (
     <div>
@@ -101,7 +58,8 @@ export const Cart = (props) => {
       <br />
       <span>Total price : ${cart.reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2)} </span>
 
-      {/* added 10/10 5.08pm */}
+      <button onClick={handleCheckoutButton}>Checkout</button>
+      {/* added 10/10 5.08pm
       <div>
 
         <button onClick={() => setModal(true)}>Open Modal</button>
@@ -123,7 +81,7 @@ export const Cart = (props) => {
             <button>the modal</button>
           </form>
         </Modal>
-      </div>
+      </div> */}
 
     </div>
   )
