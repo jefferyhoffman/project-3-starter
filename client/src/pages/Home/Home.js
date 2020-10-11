@@ -8,19 +8,22 @@ import Cards from "../../components/Cards/Cards";
 import HomeButton from '../../components/homeButton/homeButton';
 
 const styles = {
-  background: {
-    height: "100%",
+  hero: {
+    position: "relative",
     backgroundImage: `url(${plants})`,
+    position: "relative",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover"
+
   }
+  
 }
 
 class HomePage extends Component {
   render() {
     return (
-    <div style={styles.background}>
+      <div>
       <div className="wrapper">
         <div className='Home'>
           <Hero />
