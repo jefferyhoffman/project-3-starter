@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../../styles/menu.css';
 import { Link } from 'react-router-dom';
 import AuthContext from '../../contexts/AuthContext';
-import Jokes from '../Jokes/Jokes';
+import Jokes from '../../components/JokesRoute/Jokes';
 
 
 const styles = {

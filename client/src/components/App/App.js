@@ -20,7 +20,7 @@ import Clinic from "../../pages/Clinic/Clinic";
 import Comedy from "../../pages/Comedy/Comedy";
 import Community from "../../pages/Community/Community";
 import Hotline from "../../pages/Hotline/Hotline";
-import Jokes from "../../pages/Jokes/Jokes";
+import Jokes from "../JokesRoute/Jokes";
 import Odd from "../../pages/Odd/Odd";
 import Profile from "../../pages/Profile/Profile";
 
