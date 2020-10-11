@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+// import "./style.css";
 function Footer(){
     return(
         <footer className="page-footer font-small #388e3c green darken-2 animated slideInLeft">

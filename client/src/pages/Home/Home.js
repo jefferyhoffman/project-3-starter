@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-
+import FOOTER from "../../components/FOOTER"
 import logo from './logo.svg';
 
 class HomePage extends Component {
   render() {
     return (
       <div className='Home'>
-        <div className='row'>
+        {/* <div className='row'>
           <div className='col'>
             <img src={logo} className='App-logo' alt='logo' />
             <p>
@@ -21,7 +21,8 @@ class HomePage extends Component {
               Learn React
             </a>
           </div>
-        </div>
+        </div> */}
+        <FOOTER />
       </div>
     );
   }
