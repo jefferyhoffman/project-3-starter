@@ -18,7 +18,6 @@ export default {
       });
     }
   },
-
   Secrets: {
     getAll: function (authToken) {
       return axios.get('/api/secrets', {
@@ -32,6 +31,29 @@ export default {
   Blog: {
     getAllBlogs: function () {
       return axios.get("/api/blogs", {})
+    },
+    getAllBlogsByUser: function (authToken) {
+      return axios.get("/api/blogs/user", {
+        headers: {
+          Authorization: `Bearer ${authToken}`
+        }
+      })
+    },
+    getAllByCity: function (city) {
+      return axios.get("/api/blogs/city/" + city, {})
+    },
+    //searching state by abrivation
+    getAllByState: function (state) {
+      return axios.get("/api/blogs/state/" + state, {})
+    },
+    create: (new_blog) => {
+      return axios.post("/api/blogs", new_blog)
+    },
+    delete: function (blogId) {
+      return axios.delete("/api/blogs", { _id: blogId })
+    },
+    update: function (blogId, text) {
+      return axios.update("/api/blogs", { _id: blogId, blog: text })
     }
   }
 }
