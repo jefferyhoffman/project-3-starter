@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useReducer, useState } from "react";
 // import productsList from "../components/Tshirt/TshirtList";
 // import products from TshirtList
 // import API from "../../lib/API";
@@ -18,21 +18,50 @@ import React, { useEffect, useState } from "react";
 //     }
 // }
 
-var cartLocalAll = [];
+// var cartLocalAll = [];
 
-for (var i = 1; i <= 5; i++) {
-    var cartLocalStorage = JSON.parse(localStorage.getItem(i));
-    if (cartLocalStorage !== null && cartLocalStorage.quantity !== 0 ) {
-        cartLocalAll.push(cartLocalStorage)
-    }
-}
+// for (var i = 1; i <= 5; i++) {
+//     var cartLocalStorage = JSON.parse(localStorage.getItem(i));
+//     if (cartLocalStorage !== null && cartLocalStorage.quantity !== 0 ) {
+//         cartLocalAll.push(cartLocalStorage)
+//     }
+// }
 
+
+const cartLocalAll = JSON.parse(localStorage.getItem('shoppingCart')) || []
 
 export const CartContext = React.createContext();
 
-export const CartProvider = (props) => {
+let mapOfCart;
+function reducer(state, action) {
+    switch (action.type) {
+        case "ADD_TO_CART":
+            let found;
+            mapOfCart = state.map(val => {
+                if (val.id === action.payload.id) {
+                    found = true;
+                    val.quantity += 1
+                }
+                return val
+            })
+            if (!found) mapOfCart.push({...action.payload, quantity : 1})
+            localStorage.setItem("shoppingCart", JSON.stringify(mapOfCart));
 
-    const [cart, setCart] = useState(cartLocalAll);
+            return mapOfCart
+        case "UPDATE_QUANTITY":
+            mapOfCart = state.map(val => {
+                if (val.id === action.id) {
+                    val.quantity += action.amnt;
+                }
+                return val
+            }).filter(val => val.quantity)
+            localStorage.setItem("shoppingCart", JSON.stringify(mapOfCart));
+            return mapOfCart
+    }
+}
+
+export const CartProvider = (props) => {
+    const [cart, setCart] = useReducer(reducer, cartLocalAll);
 
     return (
         <CartContext.Provider value={[cart, setCart]}>

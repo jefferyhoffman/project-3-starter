@@ -21,6 +21,7 @@ apiOrderRoutes.get("/", JWTVerifier, function (req, res)  {
    });
 
 //    find latest orders from userId and product
+
 apiOrderRoutes.get("/latest", JWTVerifier, function (req, res)  {
     db.Order.findAll({
         where: {
