@@ -12,7 +12,9 @@ import Register from '../../pages/Register/Register';
 // import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
 import Blog from '../../pages/Blog/Blog'
-import BlogPost from '../../pages/BlogPost/BlogPost'
+import BlogPost from '../../pages/BlogPost/BlogPost';
+
+
 import './App.css';
 
 
@@ -61,8 +63,9 @@ class App extends Component {
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />
               <PrivateRoute path='/blog' component={Blog} />
-              <PrivateRoute path ='/blogpost' component={BlogPost}/>
+              <PrivateRoute path='/blogpost' component={BlogPost} />
               <Route component={NotFound} />
+
             </Switch>
           </div>
         </div>
