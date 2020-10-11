@@ -13,7 +13,6 @@ class Register extends Component {
     if (password !== confirm) {
       return this.setState({ error: "Passwords do not match." });
     }
-    // do we need to add a else if here to check to see if the email is unique
 
     API.Users.create(email, password, first, last, address, city, state, zip, country, phone)
       .then(response => response.data)
