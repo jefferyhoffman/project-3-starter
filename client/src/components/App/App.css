@@ -51,11 +51,13 @@
   margin-bottom: 0 !important;
   background-color: #011586;
   color: white;
+  
 }
 
 .nav-link {
   color: white;
   font-size: 25px;
+  font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
 }
 
 .nav-link:hover {
@@ -65,17 +67,12 @@
 .navbar-brand {
   color: #ec8430;
   font-size: 35px;
+  font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
 }
 
 .navbar-brand:hover {
   color: #ec8430;
   transform: scale(1.1);
-}
-
-.productview {
-  height: 100vh;
-  width: 100vw;
-  background-color: rgb(255, 255, 255);
 }
 
 .hello {
@@ -96,6 +93,9 @@
   margin-top: 300px;
 }
 
+body {
+  font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+}
 /* Card Styles */
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,600,700,800, 800i, 900&display=swap');
