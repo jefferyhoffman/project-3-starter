@@ -15,6 +15,22 @@ const styles = {
     },
     ForumBody: {
         fontSize: "40px"
+    },
+    h1: {
+        fontSize: "70px",
+        marginBottom: "100px",
+        fontFamily: "raleway",
+        textAlign: "left"
+    },
+    list: {
+        fontSize: "30px"
+    },
+    break: {
+        marginLeft: "100px"
+    },
+    hr: {
+        backgroundColor: "green",
+        marginTop: "50px"
     }
 }
     
@@ -22,6 +38,7 @@ class Community extends Component {
     render() {
       return (
           <div>
+          <h1 style={styles.h1}>Community Forum</h1> <hr style={styles.hr}/>
         <article className="media" style={styles.forumBody}>
         <figure className="media-left" style={styles.forumLeft}>
           <p className="image is-64x64">
@@ -34,8 +51,36 @@ class Community extends Component {
               <strong>Barbara Middleton</strong>
               <br/>
               <p style={styles.forum}> </p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porta eros lacus, nec ultricies elit blandit non. Suspendisse pellentesque mauris sit amet dolor blandit rutrum. Nunc in tempus turpis.
+              <b style={styles.break}>Topic: Self Help Tips</b>
+              <br/>    
               <br/>
+
+              <p style={styles.list}>Hi Everyone, <br/>
+
+Here are some ideas for helping you manage symptoms of anxiety and depression.
+Feel free to add to the list, or let us know what works for you...<br/>
+
+<b>Mindfulness</b> – Grounding exercises: noticing your environment, bodily sensations, and breath
+
+<br/><b>Progressive Muscle Relaxation</b> – Creating a Tension and Release effect with all the muscles in the body
+
+<br/><b>Opposite Actions</b> – By listening to calming music, taking a walk, talking, enjoying sunshine
+
+<br/><b>Safe Place Mental Imagery</b> – Visualising a place where you can go in your mind to feel safe
+
+<br/><b>Calming Affirmations</b> – To help recognise that the moment of panic will pass
+
+<br/><b>Exercise</b> – A valuable way to exhaust excess adrenalin built up in the body
+<br/>
+<br/>
+
+ 
+
+[Moderator's note: this thread is for sharing what has worked for you to manage your anxiety. If you need support to manage your anxiety and would like to discuss this with the community, 
+please start a new thread.</p>
+
+
+                       <br/>
               <small><a>Like</a> · <a>Reply</a> · 3 hrs</small>
             </p>
           </div>
@@ -51,18 +96,35 @@ class Community extends Component {
                 <p style={styles.forumHead}>
                   <strong>Sean Brown</strong>
                   <br/>
-                  Donec sollicitudin urna eget eros malesuada sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam blandit nisl a nulla sagittis, a lobortis leo feugiat.
-                  <br/>
+                  <ul>Stop worry by questioning the worried thought:</ul>
+                  <li style={styles.list}>What’s the evidence that the thought is true? That it’s not true?</li>
+                  <li style={styles.list}>Is there a more positive, realistic way of looking at the situation?</li>
+                  <li style={styles.list}>What’s the probability that what I’m scared of will actually happen?</li>
+                  <li style={styles.list}>If the probability is low, what are some more likely outcomes?</li>
+                  <li style={styles.list}>Is the thought helpful? How will worrying about it help me and how will it hurt me?</li>
+                  <li style={styles.list}>What would I say to a friend who had this worry?</li>
+
+
+ 
+                   <br/>
                   <small><a>Like</a> · <a>Reply</a> · 2 hrs</small>
                 </p>
               </div>
       
               <article className="media">
-                Vivamus quis semper metus, non tincidunt dolor. Vivamus in mi eu lorem cursus ullamcorper sit amet nec massa.
-              </article>
+              <b>Remembering quick and honest phrases: </b>
+             <br/>
+              <br/>
+
+<i>"Be who you are and say what you feel, because those who mind don't matter and those who matter don't mind." - Dr. Seuss</i>
+                      </article>
       
               <article className="media">
-                Morbi vitae diam et purus tincidunt porttitor vel vitae augue. Praesent malesuada metus sed pharetra euismod. Cras tellus odio, tincidunt iaculis diam non, porta aliquet tortor.
+              <b>Inspirational Quote:</b>
+
+              <br/>
+                <i> “Wherever you go, no matter what the weather, <br/>
+                always bring your own sunshine.”</i>
               </article>
             </div>
           </article>
@@ -78,7 +140,12 @@ class Community extends Component {
                 <p  style={styles.forumHead}>
                   <strong>Kayli Eunice </strong>
                   <br/>
-                  Sed convallis scelerisque mauris, non pulvinar nunc mattis vel. Maecenas varius felis sit amet magna vestibulum euismod malesuada cursus libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus lacinia non nisl id feugiat.
+                  <p style={styles.list}>I quite agree with the points you have raised and find walking particularly useful and - for me anyway - having a distraction (such as reading novels).
+                   Whilst in the midst of a period of high anxiety I'm not sure I'm capable of reasoning my way out of it so distraction, either physical or mental has been my best path.
+
+                    For me all these are short term measures to lessen the impact of symptoms at the time and do 
+                    not take the place of long term meds/treatment but supplement them. 
+                </p>
                   <br/>
                   <small><a>Like</a> · <a>Reply</a> · 2 hrs</small>
                 </p>
