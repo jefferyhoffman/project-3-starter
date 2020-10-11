@@ -51,11 +51,13 @@
   margin-bottom: 0 !important;
   background-color: #011586;
   color: white;
+  
 }
 
 .nav-link {
   color: white;
   font-size: 25px;
+  font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
 }
 
 .nav-link:hover {
@@ -65,17 +67,12 @@
 .navbar-brand {
   color: #ec8430;
   font-size: 35px;
+  font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
 }
 
 .navbar-brand:hover {
   color: #ec8430;
   transform: scale(1.1);
-}
-
-.productview {
-  height: 100vh;
-  width: 100vw;
-  background-color: rgb(255, 255, 255);
 }
 
 .hello {
@@ -96,6 +93,9 @@
   margin-top: 300px;
 }
 
+body {
+  font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+}
 /* Card Styles */
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,600,700,800, 800i, 900&display=swap');
@@ -103,7 +103,7 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
 }
 
 
@@ -112,7 +112,7 @@
   margin-right: auto;
 }
 
-.card {
+.card1 {
     position: relative;
     width: 320px;
     height: 450px;
@@ -124,13 +124,14 @@
     margin-top: 100px;
     padding: 0;
     opacity: 0.5;
+    margin-bottom: 200px;
 }
-.card:hover {
+.card1:hover {
   opacity: 1.0;
   transform: scale(1.1);
 }
 
-.card:before {
+.card1:before {
     content: "";
     position: absolute;
     top: 0;
@@ -142,11 +143,11 @@
     transition: 0.5s ease-in-out;
 }
 
-.card:hover:before {
+.card1:hover:before {
     clip-path: circle(300px at 80% -20%);
 }
 
-.card:after {
+.card1:after {
     content: "PPE";
     position: absolute;
     top: 30%;
@@ -158,7 +159,7 @@
 
 }
 
-.card .imgBx {
+.card1 .imgBx {
     position: absolute;
     top: 50%;
     transform: translateY(-60%);
@@ -168,13 +169,13 @@
     transition: .5s;
 }
 
-.card:hover .imgBx {
+.card1:hover .imgBx {
     top: 0%;
     transform: translateY(-25%);
     /* bug  */
 }
 
-.card .imgBx img {
+.card1 .imgBx img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -182,7 +183,7 @@
     width: 270px;
 }
 
-.card .contentBx {
+.card1 .contentBx {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -192,19 +193,19 @@
     z-index: 90;
 }
 
-.card:hover .contentBx {
+.card1:hover .contentBx {
     height: 210px;
 }
 
-.card .contentBx h2 {
+.card1 .contentBx h2 {
     position: relative;
     font-weight: 600;
     letter-spacing: 1px;
     color: #fff;
 }
 
-.card .contentBx .size,
-.card .contentBx .color {
+.card1 .contentBx .size,
+.card1 .contentBx .color {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -214,20 +215,20 @@
     visibility: hidden;
 }
 
-.card:hover .contentBx .size {
+.card1:hover .contentBx .size {
     opacity: 1;
     visibility: visible;
     transition-delay: .5s;
 }
 
-.card:hover .contentBx .color {
+.card1:hover .contentBx .color {
     opacity: 1;
     visibility: visible;
     transition-delay: .6s;
 }
 
-.card .contentBx .size h3,
-.card .contentBx .color h3 {
+.card1 .contentBx .size h3,
+.card1 .contentBx .color h3 {
     color: white;
     font-weight: 300;
     font-size: 14px;
@@ -237,7 +238,7 @@
 }
 
 
-.card .contentBx a {
+.card1 .contentBx a {
     display: inline-block;
     padding: 10px 20px;
     background: #fff;
@@ -251,13 +252,13 @@
     transition: .5s;
 }
 
-.card:hover .contentBx a {
+.card1:hover .contentBx a {
     opacity: 1;
     transform: translateY(0px);
     transition-delay: .2s;
 } 
 
-.card:hover .contentBx p {
+.card1:hover .contentBx p {
   opacity: 1;
   color: white;
   transform: translateY(0px);
@@ -267,3 +268,4 @@
 .contentBx p {
   color: white;
 }
+

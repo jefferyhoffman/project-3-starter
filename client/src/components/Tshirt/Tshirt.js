@@ -48,7 +48,7 @@ export const Tshirt = (props) => {
     }
 
     return (
-        <div className="card">
+        <div className="card1">
             <div className="imgBx">
                 <img src={props.image} alt={props.name} />
             </div>
