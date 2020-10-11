@@ -10,25 +10,26 @@
     background-attachment: fixed;
     font-family: 'Raleway', sans-serif;;  */
   }
-/* 
+ 
   .bgimg-1 {
+   
+    
+    height: 100%;
+  }  
+
+  .hero {
     position: relative;
+    height: 90vh;
+    overflow:hidden;
+    margin-top: -70px;
+ background-image: url("./plants.jpg"); 
+ position: relative;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
-    background-image: url("./plants.jpg");
-    height: 100%;
-  }  */
-
-  .hero {
-    position: relative;
-    height: 90h;
-    overflow:hidden;
-    margin-top: -70px;
- 
   }
 
   h1 {

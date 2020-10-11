@@ -1,31 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Menu from '../Menu/Menu';
+import API from '../../lib/API'
 
-
-
-class Affirmations extends React.Component {
+class Affirmations extends React.Component{
     state = {
         result: []
-
     };
-    // componentDidMount() {
-    //     this.affirmationResults("")
-    // }
-    // affirmationResults = query => {
-    //     API.search(query)
-    //         .then(res => this.setState({ result: res.data }))
-    //         .catch(err => console.log(err))
-    // }
+
+    componentDidMount() {
+        this.resultAffirmation("")
+    }
+
+    resultAffirmation = data => {
+        API.Affirmation.getAffirmation()
+        .then(res => this.setState({ result: res.data.affirmation }))
+        .catch(err => console.log(err))
+    }
 
     render() {
         return (
             <div>
-                <Menu />
-                {this.state.result.map(result => {
-                    return <p>{result.affirmation}</p>
-                })}
+                    {this.state.result.map(result => {
+                        return <ul>
+                    <li>{result.affirmation}</li>
+                    </ul>
+                    })}
+                
             </div>
-        );
+        )
     }
 }
 

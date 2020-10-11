@@ -1,6 +1,6 @@
 const jokesController = require('express').Router();
 const axios = require("axios");
-const BASEURL = "https://sv443.net/jokeapi/v2/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist&amount=4"
+const BASEURL = "https://sv443.net/jokeapi/v2/joke/Miscellaneous,Pun?blacklistFlags=nsfw,religious,political,racist,sexist&amount=4"
 
 jokesController.get('/', (req, res) => {
     axios.get(BASEURL)

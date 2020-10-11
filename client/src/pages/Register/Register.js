@@ -50,7 +50,7 @@ class Register extends Component {
           </div>}
         <div className='columns'>
           <div className='column'>
-            <RegistrationForm onSubmit={this.handleSubmit} />
+            <RegistrationForm onSubmit={this.handleSubmit}/>
           </div>
         </div>
       </div>
