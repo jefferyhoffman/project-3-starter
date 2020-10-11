@@ -24,9 +24,9 @@ class Navigation extends Component {
     const togglerClass = `navbar-toggler ${collapsed && 'collapsed'}`;
 
     return (
-      <div className='Navigation sticky'>
+      <div className='Navigation sticky header-footer-opacity'>
         <nav className='navbar navbar-expand-lg navbar-light bg-light mb-3'>
-          <Link className='navbar-brand' to='#'>Project 3</Link>
+          <Link className='navbar-brand' to='#'>Travel App</Link>
           <div class="travelContent">
             <div class="slider-wrapper">
               Travel to
