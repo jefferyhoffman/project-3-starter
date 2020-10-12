@@ -1,0 +1,25 @@
+.mission {
+    color: #aaa9a9cb !important;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 100px;
+    padding-right: 100px;
+    font-size: 22px;
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+}
+
+h1 {
+    font-size: 70px;
+    color: #011586;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+}
+
+h1 i {
+    color:  #ec8430;
+}
+
+/* Card */
+

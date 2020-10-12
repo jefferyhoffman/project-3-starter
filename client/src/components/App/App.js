@@ -10,6 +10,7 @@ import Home from '../../pages/Home/Home';
 import Login from '../../pages/Login/Login';
 import Register from '../../pages/Register/Register';
 import Secret from '../../pages/Secret/Secret';
+import Shop from '../../pages/Shop/Shop';
 import NotFound from '../../pages/NotFound/NotFound';
 import About from '../../pages/About/About'
 import Testimonials from '../../pages/Testimonials/Testimonials'
@@ -64,6 +65,7 @@ class App extends Component {
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />
               <PrivateRoute path='/secret' component={Secret} />
+              <PrivateRoute path='/shop' component={Shop} />
               <Route component={NotFound} />
             </Switch>
           </div>

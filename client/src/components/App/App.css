@@ -38,6 +38,10 @@
   padding: 0 !important;
 }
 
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
 .jumbotron{
   margin-bottom: 0;
   background-image: 

@@ -32,8 +32,9 @@ function Testimonials() {
             </div>
             <div className="col-md-8">
               <div className="card-body">
-                <h5 className="card-title title"><strong className="Orange">Jeff Hoffman, UNCC Coding Bootcamp Instructor</strong></h5>
+                <h5 className="card-title title"><strong className="orange">Jeff Hoffman, UNCC Coding Bootcamp Instructor</strong></h5>
                 <p className="card-text">"EquiPPE has been wonderful to work with and are always responsive, just like this website!" </p>
+                <p class="card-text grey"><small className="text-muted"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></small></p>
                 <p class="card-text text"><small className="text-muted">October 2020</small></p>
               </div>
             </div>
@@ -46,22 +47,24 @@ function Testimonials() {
             </div>
             <div className="col-md-8">
               <div className="card-body">
-                <h5 className="card-title title"><strong className="Orange">Max Allee, UNCC Coding Bootcamp TA</strong></h5>
+                <h5 className="card-title title"><strong className="orange">Max Allee, UNCC Coding Bootcamp TA</strong></h5>
                 <p className="card-text text">"EquiPPE came to my rescue when I unexpectedly ran out of toilet paper. Thanks EquiPPE!" </p>
+                <p class="card-text grey"><small className="text-muted"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></small></p>
                 <p class="card-text"><small className="text-muted">October 2020</small></p>
               </div>
             </div>
           </div>
         </div>
-        <div className="card card3 lastCard mb-3">
+        <div className="card card4 lastCard mb-3">
           <div className="row no-gutters">
             <div className="col-md-4">
               <img src="https://ca.slack-edge.com/T016SNZ2NCV-U017G045EV7-714fb709eee9-512" class="card-img" alt="..." />
             </div>
             <div className="col-md-8">
               <div className="card-body">
-                <h5 className="card-title title"><strong className="Orange">Caleb Crum, UNCC Coding Bootcamp TA</strong></h5>
+                <h5 className="card-title title"><strong className="orange">Caleb Crum, UNCC Coding Bootcamp TA</strong></h5>
                 <p className="card-text text">"I've always had a remarkable experience working with EquiPPE. They fulfill all my PPE needs!" </p>
+                <p class="card-text grey"><small className="text-muted"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></small></p>
                 <p class="card-text"><small className="text-muted">October 2020</small></p>
               </div>
             </div>

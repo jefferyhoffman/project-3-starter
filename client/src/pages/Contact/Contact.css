@@ -1,0 +1,26 @@
+.blue {
+    background-color: #011586;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 75px;
+    padding-bottom: 20px;
+    border-radius: 25px;
+    margin-bottom: 150px;
+    border-color: #c0c0c0cb;
+    border-width: 5px;
+    border-style: solid;
+}
+
+
+.trusty {
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+    color:  #ec8430;
+    font-size: 40px;
+    margin-top: 80px;
+}
+
+.sbmt {
+    background-color: #ec8430;
+    border-color: #ec8430;
+    font-size: 25px;
+}

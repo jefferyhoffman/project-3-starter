@@ -18,29 +18,46 @@
 .testimonials i {
     color: #ec8430;
 }
+
+
 /* card 1 */
-/* 
+
 .card4 {
     font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
-    background-image: linear-gradient(white,  #ec8430);
+    background-color: #011586;
     border-color:#c0c0c0cb;
-} */
+    border-radius: 25px;
+    border-color: #c0c0c0cb;
+    border-width: 5px;
+    border-style: solid;
+    margin-bottom: 50px !important;
+}
 .card4 p:first-letter{
     text-transform: uppercase;
 }
 .card4 p {
-color: #011586;
+color:white;
 font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
 letter-spacing:0.1em;
 text-align:center;
 margin: 40px auto;
 text-transform: lowercase;
-line-height: 145%;
+line-height: 120%;
 font-size: 14pt;
 font-variant: small-caps;
 }
 
-.card4 .Orange {
+.card4 img {
+    border-radius: 50%;
+    padding: 30px;
+}
+
+.card4 .grey {
+    color: #c0c0c0cb;
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+}
+
+.card4 .orange {
     color: #ec8430;
     font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
 }
@@ -61,30 +78,41 @@ font-variant: small-caps;
 /* card 2 */
 .card2 {
     font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
-    background-image: linear-gradient(white,  #ec8430);
+    background-color: #ec8430;
     border-color:#c0c0c0cb;
-    border-radius: 25px !important;
-}
-.card2 img {
-    border-radius: 25px 0px 0px 25px ;
+    border-radius: 25px;
+    border-color: #c0c0c0cb;
+    border-width: 5px;
+    border-style: solid;
+    margin-bottom: 50px !important;
 }
 .card2 p:first-letter{
     text-transform: uppercase;
 }
 .card2 p {
-color: white;
+color:white;
 font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
 letter-spacing:0.1em;
 text-align:center;
 margin: 40px auto;
 text-transform: lowercase;
-line-height: 145%;
+line-height: 120%;
 font-size: 14pt;
 font-variant: small-caps;
 }
 
-.card2 .Orange {
-    color:#011586;
+.card2 img {
+    border-radius: 50%;
+    padding: 30px;
+}
+
+.card2 .grey {
+    color: #c0c0c0cb;
+    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
+}
+
+.card2 .orange {
+    color: #011586;
     font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
 }
 
@@ -96,43 +124,6 @@ font-variant: small-caps;
     font-size: 25px;
 }
 
-/* card 3*/
-.card3 {
-    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
-    background-color:  #011586;
-}
-.card3 p:first-letter{
-    text-transform: uppercase;
-}
-.card3 p {
-color: white;
-font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
-letter-spacing:0.1em;
-text-align:center;
-margin: 40px auto;
-text-transform: lowercase;
-line-height: 145%;
-font-size: 14pt;
-font-variant: small-caps;
-}
-
-.card3 .Orange {
-    color:#ec8430;
-    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
-}
-
-.card3 .title{ 
-    font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
-    font-size: 30px;
-}
-
-.card3 .card-text {
-
-    font-size: 25px;
-}
-.card3 img {
-    border-radius: 50%;
-}
 
 .trust {
     font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
