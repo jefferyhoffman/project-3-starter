@@ -1,0 +1,313 @@
+{
+    "meta": {
+        "code": 200,
+        "requestId": "5f846d3ac96e3e511e286fd1"
+    },
+    "response": {
+        "venues": [
+            {
+                "id": "5a6ab94a9ba3e51bb8340459",
+                "name": "Excel Psychiatric Associates, P.A.",
+                "location": {
+                    "address": "10225 Hickorywood Hill Ave Ste B",
+                    "lat": 35.4112435,
+                    "lng": -80.86011289999999,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 35.4112435,
+                            "lng": -80.86011289999999
+                        }
+                    ],
+                    "distance": 20556,
+                    "postalCode": "28078",
+                    "cc": "US",
+                    "city": "Huntersville",
+                    "state": "NC",
+                    "country": "United States",
+                    "formattedAddress": [
+                        "10225 Hickorywood Hill Ave Ste B",
+                        "Huntersville, NC 28078",
+                        "United States"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "52e81612bcbc57f1066b7a39",
+                        "name": "Mental Health Office",
+                        "pluralName": "Mental Health Offices",
+                        "shortName": "Mental Health",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/building/medical_doctorsoffice_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1602514234",
+                "hasPerk": false
+            },
+            {
+                "id": "4dcd8b61c65bdac7134a9549",
+                "name": "Atrium Health NorthEast Psychiatric Services",
+                "location": {
+                    "address": "5427 N Carolina 49",
+                    "crossStreet": "#105",
+                    "lat": 35.3200436,
+                    "lng": -80.666591,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 35.3200436,
+                            "lng": -80.666591
+                        }
+                    ],
+                    "distance": 19088,
+                    "postalCode": "28075",
+                    "cc": "US",
+                    "city": "Harrisburg",
+                    "state": "NC",
+                    "country": "United States",
+                    "formattedAddress": [
+                        "5427 N Carolina 49 (#105)",
+                        "Harrisburg, NC 28075",
+                        "United States"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d104941735",
+                        "name": "Medical Center",
+                        "pluralName": "Medical Centers",
+                        "shortName": "Medical",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/building/medical_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1602514234",
+                "hasPerk": false
+            },
+            {
+                "id": "5af85c72bf7dde002c159095",
+                "name": "Atrium Health Neurosciences Institute (Atrium Health Neurosciences Institute - Neurology)",
+                "location": {
+                    "address": "10660 Park Rd",
+                    "crossStreet": "#4500",
+                    "lat": 35.089866638183594,
+                    "lng": -80.8709487915039,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 35.089866638183594,
+                            "lng": -80.8709487915039
+                        }
+                    ],
+                    "distance": 15485,
+                    "postalCode": "28210",
+                    "cc": "US",
+                    "city": "Charlotte",
+                    "state": "NC",
+                    "country": "United States",
+                    "formattedAddress": [
+                        "10660 Park Rd (#4500)",
+                        "Charlotte, NC 28210",
+                        "United States"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d104941735",
+                        "name": "Medical Center",
+                        "pluralName": "Medical Centers",
+                        "shortName": "Medical",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/building/medical_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1602514234",
+                "hasPerk": false
+            },
+            {
+                "id": "5ecfffba51254000075fca0d",
+                "name": "Novant Psychiatric Associates",
+                "location": {
+                    "address": "1900 Randolph Rd",
+                    "lat": 35.210427,
+                    "lng": -80.824439,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 35.210427,
+                            "lng": -80.824439
+                        }
+                    ],
+                    "distance": 2514,
+                    "postalCode": "28207",
+                    "cc": "US",
+                    "city": "Charlotte",
+                    "state": "NC",
+                    "country": "United States",
+                    "formattedAddress": [
+                        "1900 Randolph Rd",
+                        "Charlotte, NC 28207",
+                        "United States"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "52e81612bcbc57f1066b7a39",
+                        "name": "Mental Health Office",
+                        "pluralName": "Mental Health Offices",
+                        "shortName": "Mental Health",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/building/medical_doctorsoffice_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1602514234",
+                "hasPerk": false
+            },
+            {
+                "id": "5af85cff4acb19002c9c7a50",
+                "name": "Atrium Health Neurosciences Institute - Neurology",
+                "location": {
+                    "address": "9625 Northcross Center Ct",
+                    "crossStreet": "STE 102",
+                    "lat": 35.4480571,
+                    "lng": -80.8649804,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 35.4480571,
+                            "lng": -80.8649804
+                        }
+                    ],
+                    "distance": 24676,
+                    "postalCode": "28078",
+                    "cc": "US",
+                    "city": "Huntersville",
+                    "state": "NC",
+                    "country": "United States",
+                    "formattedAddress": [
+                        "9625 Northcross Center Ct (STE 102)",
+                        "Huntersville, NC 28078",
+                        "United States"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d104941735",
+                        "name": "Medical Center",
+                        "pluralName": "Medical Centers",
+                        "shortName": "Medical",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/building/medical_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1602514234",
+                "hasPerk": false
+            },
+            {
+                "id": "5007ed2be4b080f3fdbf7ae8",
+                "name": "Charlotte Treatment Center",
+                "location": {
+                    "address": "3315 Wilkinson Blvd",
+                    "lat": 35.22396291258438,
+                    "lng": -80.89527083161033,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 35.22396291258438,
+                            "lng": -80.89527083161033
+                        },
+                        {
+                            "label": "entrance",
+                            "lat": 35.224149,
+                            "lng": -80.89528
+                        }
+                    ],
+                    "distance": 4756,
+                    "postalCode": "28208",
+                    "cc": "US",
+                    "city": "Charlotte",
+                    "state": "NC",
+                    "country": "United States",
+                    "formattedAddress": [
+                        "3315 Wilkinson Blvd",
+                        "Charlotte, NC 28208",
+                        "United States"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4bf58dd8d48988d104941735",
+                        "name": "Medical Center",
+                        "pluralName": "Medical Centers",
+                        "shortName": "Medical",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/building/medical_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1602514234",
+                "hasPerk": false
+            },
+            {
+                "id": "4f9ecd04e4b04dd7373bcfbd",
+                "name": "L & B Counseling, PLLC",
+                "location": {
+                    "address": "10700 Sikes Pl Ste 325",
+                    "lat": 35.061580657958984,
+                    "lng": -80.76770782470703,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 35.061580657958984,
+                            "lng": -80.76770782470703
+                        }
+                    ],
+                    "distance": 19661,
+                    "postalCode": "28277",
+                    "cc": "US",
+                    "city": "Charlotte",
+                    "state": "NC",
+                    "country": "United States",
+                    "formattedAddress": [
+                        "10700 Sikes Pl Ste 325",
+                        "Charlotte, NC 28277",
+                        "United States"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "4f04b25d2fb6e1c99f3db0c0",
+                        "name": "Travel Lounge",
+                        "pluralName": "Travel Lounges",
+                        "shortName": "Lounge",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/nightlife/default_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1602514234",
+                "hasPerk": false
+            }
+        ],
+        "confident": false
+    }
+}
