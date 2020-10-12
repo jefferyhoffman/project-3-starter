@@ -15,6 +15,7 @@
     "heroku-postbuild": "yarn build"
   },
   "devDependencies": {
+    "@iconify/icons-mdi": "^1.0.144",
     "concurrently": "^4.1.0",
     "nodemon": "^1.18.10"
   },
@@ -25,6 +26,7 @@
     "axios": "^0.20.0",
     "date-fns": "^2.16.1",
     "dotenv": "^8.2.0",
+    "google-map-react": "^2.1.7",
     "node-sass": "^4.14.1",
     "react-chat-window": "^1.2.1",
     "react-geocode": "^0.2.2",

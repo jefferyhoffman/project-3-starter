@@ -1,22 +1,22 @@
-import React from 'react'
-import Map from '../../components/Map/Map'
+import React from "react";
+import Map from "../../components/Map/Map";
+// import logo from "./logo.svg";
 
 
-export default () => (
-  <>
-    
-    <h1>Google Maps</h1>
+const mapCenter = {
+  lat: 35.2271,
+  lng: -80.8431,
+};
 
-    <Map /> 
-  </>
-)
+function Clinic() {
+  return (
+    <div className="App">
+      <Map location={mapCenter} zoomLevel={17} />
+    </div>
+  );
+}
 
-
-
-
-
-
-
+export default Clinic;
 
 
 
