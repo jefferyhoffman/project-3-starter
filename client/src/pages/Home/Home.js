@@ -38,11 +38,16 @@ function HomePage() {
 
   return (
     <Container >
-      <Row style={{ marginTop: "100px" }}>
+      <Row 
+      data-aos="fade-right"
+      data-aos-offset="200"
+      data-aos-delay="850"
+      data-aos-duration="1000"
+>
         <Col>
           <Form onSubmit={e => handleOnSubmit(e)}>
             <Form.Label>Search By City</Form.Label>
-            <Form.Control onChange={e => handleCitySearchChange(e)} type="text" placeholder="Enter City"></Form.Control>
+            <Form.Control onChange={e => handleCitySearchChange(e)} type="text"  placeholder="Enter City"></Form.Control>
             <Button className="m-2"  variant="primary" type="submit">Submit</Button>
           </Form>
         </Col>

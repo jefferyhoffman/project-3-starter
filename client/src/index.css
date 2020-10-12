@@ -38,8 +38,8 @@ code {
 .travelContent {
   /* font-style: oblique ; */
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
 }
 
 .slider-wrapper {
@@ -75,7 +75,7 @@ code {
   background: lightcoral;
 }
 .slider-text3 {
-  background: greenyellow;
+  background: rgb(45, 46, 44);
 }
 .slider-text4 {
   background: purple;
