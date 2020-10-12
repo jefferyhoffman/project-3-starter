@@ -1,5 +1,8 @@
 import React from 'react';
 import gk from '../../pages/Images/george3.jpg'
+import athlete1 from '../Carousel/athlete1.jpg'
+import athlete2 from '../Carousel/athlete2.jpg'
+import athlete3 from '../Carousel/ahtlete3.jpg'
 import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBContainer, MDBRow, MDBCol, MDBMask, MDBTypography} from
 "mdbreact";
 import '../Carousel/caro.css'
@@ -30,7 +33,7 @@ const Carousel = () => {
             <MDBView waves>
               <img
                 className="rounded"
-                src={gk}
+                src={athlete1}
                 alt="First slide"
               />
             </MDBView>
@@ -39,7 +42,7 @@ const Carousel = () => {
             <MDBView waves>
               <img
                 className="rounded"
-                src={gk}
+                src={athlete2}
                 alt="Second slide"
               />
             </MDBView>
@@ -48,7 +51,7 @@ const Carousel = () => {
             <MDBView waves>
               <img
                 className="rounded"
-                src={gk}
+                src={athlete3}
                 alt="Third slide"
               />
             </MDBView>

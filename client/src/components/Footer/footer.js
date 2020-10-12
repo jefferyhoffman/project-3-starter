@@ -108,7 +108,7 @@ const FooterPagePro = () => {
           </li>
           <li className="list-inline-item">
             <a href="/register" className="btn btn-danger btn-rounded">
-              Volunteer
+              Become An Ambassador 
             </a>
           </li>
         </ul>
