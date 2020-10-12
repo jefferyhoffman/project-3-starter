@@ -17,7 +17,7 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-const treatmojis = ["🍬", "🍫", "🍭", "🍡", "🍩", "🍪", "🍒"];
+const treatmojis = ["🍅", "🐓", "🥚", "🌽", "🍏", "🍎", "🍒", "🐈", "🎃", "🍠"];
 const treats = [];
 const radius = 15;
 
@@ -27,10 +27,10 @@ const A = Math.PI * radius * radius / 10000; // m^2
 const ag = 9.81; // m / s^2
 const frameRate = 1 / 60;
 
-function createTreat() /* create a treat */ {
+function createTreat() /* create a treat */{
   const vx = getRandomArbitrary(-10, 10); // x velocity
-  const vy = getRandomArbitrary(-10, 1);  // y velocity
-  
+  const vy = getRandomArbitrary(-10, 1); // y velocity
+
   const el = document.createElement("div");
   el.className = "treat";
 
@@ -38,7 +38,7 @@ function createTreat() /* create a treat */ {
   inner.className = "inner";
   inner.innerText = treatmojis[getRandomInt(0, treatmojis.length - 1)];
   el.appendChild(inner);
-  
+
   elWrapper.appendChild(el);
 
   const rect = el.getBoundingClientRect();
@@ -55,7 +55,7 @@ function createTreat() /* create a treat */ {
     mass: 0.1, //kg
     radius: el.offsetWidth, // 1px = 1cm
     restitution: -.7,
-    
+
     lifetime,
     direction: vx > 0 ? 1 : -1,
 
@@ -69,23 +69,23 @@ function createTreat() /* create a treat */ {
     animate() {
       const treat = this;
       let Fx =
-        -0.5 *
-        Cd *
-        A *
-        rho *
-        treat.velocity.x *
-        treat.velocity.x *
-        treat.velocity.x /
-        Math.abs(treat.velocity.x);
+      -0.5 *
+      Cd *
+      A *
+      rho *
+      treat.velocity.x *
+      treat.velocity.x *
+      treat.velocity.x /
+      Math.abs(treat.velocity.x);
       let Fy =
-        -0.5 *
-        Cd *
-        A *
-        rho *
-        treat.velocity.y *
-        treat.velocity.y *
-        treat.velocity.y /
-        Math.abs(treat.velocity.y);
+      -0.5 *
+      Cd *
+      A *
+      rho *
+      treat.velocity.y *
+      treat.velocity.y *
+      treat.velocity.y /
+      Math.abs(treat.velocity.y);
 
       Fx = isNaN(Fx) ? 0 : Fx;
       Fy = isNaN(Fy) ? 0 : Fy;
@@ -100,11 +100,11 @@ function createTreat() /* create a treat */ {
       // Integrate to get position
       treat.position.x += treat.velocity.x * frameRate * 100;
       treat.position.y += treat.velocity.y * frameRate * 100;
-      
+
       treat.checkBounds();
       treat.update();
     },
-    
+
     checkBounds() {
 
       if (treat.position.y > height - treat.radius) {
@@ -131,8 +131,8 @@ function createTreat() /* create a treat */ {
       this.el.style.setProperty("--x", relX);
       this.el.style.setProperty("--y", relY);
       this.el.style.setProperty("--direction", this.direction);
-    }
-  };
+    } };
+
 
   setTimeout(() => {
     treat.remove();
@@ -174,4 +174,3 @@ window.addEventListener("resize", () => {
   width = window.innerWidth;
   height = window.innerHeight;
 });
-
