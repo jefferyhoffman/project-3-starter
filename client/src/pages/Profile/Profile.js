@@ -65,7 +65,7 @@ class Profile extends Component {
                 <ul>
                   <li><Link to='/affirmations' onClick={this.toggleCollapse} style={styles.font}> Affirmations</Link></li>
                   <li><Link to="/mantras" onClick={this.toggleCollapse} style={styles.font}>Mantras</Link></li>
-                  <li><Link to="/jokes" onClick={this.toggleCollapse} style={styles.font}>Jokes</Link></li>
+                  {/* <li><Link to="/jokes" onClick={this.toggleCollapse} style={styles.font}>Jokes</Link></li> */}
                 </ul>
               </li>
             </ul>

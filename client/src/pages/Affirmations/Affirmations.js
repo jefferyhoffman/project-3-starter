@@ -47,7 +47,7 @@ const styles = {
     },
     tileTitle: {
         fontSize: "60px",
-        fontFamily: "'Playfair Display', serif",
+        fontFamily: "'Raleway', serif",
         color: "#71758D",
         textAlign: "left",
         marginBottom: "60px"
