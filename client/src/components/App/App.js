@@ -11,7 +11,7 @@ import Login from '../../pages/Login/Login';
 import Register from '../../pages/Register/Register';
 import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
-import Menu from '../../pages/Menu/Menu';
+import Profile from '../../pages/Profile/Profile';
 import Mantras from "../../pages/Mantras/Mantras"
 import Affirmations from "../../pages/Affirmations/Affirmations";
 import Bob from "../../pages/Bob/Bob";
@@ -22,7 +22,7 @@ import Community from "../../pages/Community/Community";
 import Hotline from "../../pages/Hotline/Hotline";
 import Jokes from "../JokesRoute/Jokes";
 import Odd from "../../pages/Odd/Odd";
-import Profile from "../../pages/Profile/Profile";
+
 
 
 import './App.css';
@@ -72,7 +72,7 @@ class App extends Component {
               <Route exact path='/' component={Home} />
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />
-              <PrivateRoute path='/menu' component={Menu} />
+              <PrivateRoute path='/profile' component={Profile} />
               <PrivateRoute path='/mantras' component={Mantras} />
               <PrivateRoute path='/affirmations' component={Affirmations} />
               <PrivateRoute path='/bob' component={Bob} />
@@ -83,7 +83,6 @@ class App extends Component {
               <Route path='/hotline' component={Hotline} />
               <PrivateRoute path='/jokes' component={Jokes} />
               <PrivateRoute path= '/odd' component={Odd} />
-              <PrivateRoute path= '/profile' component={Profile} />
               <PrivateRoute path='/secret' component={Secret} />
               <Route component={NotFound} />
               
