@@ -30,7 +30,7 @@ forumController.post('/', (req, res) => {
 // forumController.remove({id, title, post, author})
 
 
-forumController.get('/all', JWTVerifier, (req, res) => {
+forumController.get('/', JWTVerifier, (req, res) => {
   db.Forum.find({}).limit(20)
     .then(posts => {
         res.json(posts);

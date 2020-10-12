@@ -1,5 +1,6 @@
 import React, { Component, useEffect } from "react";
 import { Link } from 'react-router-dom';
+// import api from '../../../../server/controllers/api'
 
 const styles = {
   forum: {
@@ -47,7 +48,55 @@ const styles = {
   }
 }
 
+
+// constructor(props) {
+//   super(props);
+//   this.state = {comment: ''};
+
+//   this.handleChange = this.handleChange.bind(this);
+//   this.handleSubmit = this.handleSubmit.bind(this);
+// }
+
+// handleChange(e) {
+//   this.setState({comment: e.target.value});
+// }
+
+// handleSubmit(e) {
+//   e.preventDefault();
+// }
+
+
+
+
+
+
 class Community extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {comment: ''};
+  
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    // this.handleAuthor = this.handleAuthor.bind(this);
+  }
+  
+  handleChange(e) {
+    this.setState({comment: e.target.value});
+    console.log(this.state.comment)
+  }
+  
+  handleSubmit(e) {
+    e.preventDefault();
+    console.log('commented' + this.state.comment)
+    this.setState({comment:""})
+  }
+
+  // handleAuthor(e) {
+  //   this.setState({author})
+  // } 
+
+
+ 
   render() {
     return (
       <div>
@@ -164,9 +213,6 @@ please start a new thread.</p>
                         <li style={styles.list}>If the probability is low, what are some more likely outcomes?</li>
                         <li style={styles.list}>Is the thought helpful? How will worrying about it help me and how will it hurt me?</li>
                         <li style={styles.list}>What would I say to a friend who had this worry?</li>
-
-
-
                         <br />
                         <small><a>Like</a> · <a>Reply</a> · 2 hrs</small>
                       </p>
@@ -215,6 +261,8 @@ please start a new thread.</p>
                 </article>
               </div>
             </article>
+            {/* Loop through comment database with .map and rendering a component.*/}
+
             <article className="media">
               <figure className="media-left">
                 <p className="image is-64x64">
@@ -224,12 +272,12 @@ please start a new thread.</p>
               <div className="media-content">
                 <div className="field">
                   <p className="control" style={styles.forum}>
-                    <textarea className="textarea" placeholder="Add a comment..."></textarea>
+                    <textarea id="commentArea" className="textarea" value={this.state.comment} onChange={this.handleChange} placeholder="Add a comment..."></textarea>
                   </p>
                 </div>
                 <div className="field">
                   <p className="control">
-                    <button className="button is-success is-light">Post comment</button>
+                    <button onClick={this.handleSubmit} className="button is-success is-light">Post comment</button>
                   </p>
                 </div>
               </div>

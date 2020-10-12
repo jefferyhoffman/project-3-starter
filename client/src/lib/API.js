@@ -45,6 +45,15 @@ export default {
     sendEmail: function (email) {
       return axios.post('/api/sendgrid', { email: email });
     }
+  },
+
+  Forum: {
+    getForum: function () {
+      return axios.get('/api/forum');
+    }, 
+    createForum: function (data) {
+      return axios.post('/api/forum', data)
+    }
   }
 
 }
