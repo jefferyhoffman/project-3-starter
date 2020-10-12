@@ -27,8 +27,14 @@ const app = express();
 
 //-- Mongoose Setup ----------------------------------------------------------
 mongoose.connect(
-  process.env.MONGODB_URI ||
-  'mongodb://localhost/ProjectThree'
+  process.env.MONGODB_URI || 
+  'mongodb://localhost/immense-plains-92614',
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+  }
 )
 mongoose.connection.on('error', err => {
   console.log(`Mongoose connection err:\n${err}`)
