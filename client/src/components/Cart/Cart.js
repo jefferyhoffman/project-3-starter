@@ -3,7 +3,7 @@ import { CartContext } from "../../contexts/CartContext";
 import { Tshirt } from "../Tshirt/Tshirt";
 import { TshirtList } from "../Tshirt/TshirtList";
 import API from "../../lib/API";
-import Modal from 'react-modal';
+// import Modal from 'react-modal';
 
 
 export const Cart = (props) => {

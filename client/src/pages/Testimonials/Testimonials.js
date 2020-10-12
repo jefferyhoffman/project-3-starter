@@ -34,7 +34,7 @@ function Testimonials() {
               <div className="card-body">
                 <h5 className="card-title title"><strong className="Orange">Jeff Hoffman, UNCC Coding Bootcamp Instructor</strong></h5>
                 <p className="card-text">"EquiPPE has been wonderful to work with and are always responsive, just like this website!" </p>
-                <p class="card-text text"><small className="text-muted">October 2020</small></p>
+                <p class="card-text text"><small className="">October 2020</small></p>
               </div>
             </div>
           </div>

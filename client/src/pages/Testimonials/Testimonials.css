@@ -18,18 +18,20 @@
 .testimonials i {
     color: #ec8430;
 }
+
+
 /* card 1 */
-/* 
+
 .card4 {
     font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
-    background-image: linear-gradient(white,  #ec8430);
+    background-image: linear-gradient(white, #c0c0c0cb);
     border-color:#c0c0c0cb;
-} */
+}
 .card4 p:first-letter{
     text-transform: uppercase;
 }
 .card4 p {
-color: #011586;
+color:white;
 font-family: "Adobe Caslon Pro", "Hoefler Text", Georgia, Garamond, Times, serif;
 letter-spacing:0.1em;
 text-align:center;
