@@ -45,6 +45,12 @@ export default {
     sendEmail: function (email) {
       return axios.post('/api/sendgrid', { email: email });
     }
+  },
+
+  Hospitals: {
+    getClinics: function (query) {
+      return axios.get('api/clinics', {});
+    }
   }
 
 }
