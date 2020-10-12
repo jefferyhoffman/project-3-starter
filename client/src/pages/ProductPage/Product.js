@@ -76,7 +76,7 @@ const Product = props => {
             <>
             <h6>Select Size</h6>
             {sizes.map(prod => (
-            <MDBBtn outline color="black" size="sm">{prod.size}</MDBBtn>
+            <MDBBtn outline color="black" size="sm" onClick={() => setSize(prod.size)}>{prod.size}</MDBBtn>
 
           ))}
           </>

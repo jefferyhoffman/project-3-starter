@@ -18,9 +18,11 @@ import Product from "../../pages/ProductPage/Product";
 import Category from '../../pages/Category';
 import Wellness from '../../pages/Wellness';
 import ProductsByGender from '../../pages/ProductsByGender';
-import Checkout from '../../pages/Checkout/checkout'
-
+import Checkout from '../../pages/Checkout/checkout';
+import Intro from '../../pages/Testsomething/index'
+import NavbarSlider from '../NavbarSlider/index'
 import "./App.css";
+import { Nav } from "react-bootstrap";
 
 
 
@@ -64,11 +66,14 @@ class App extends Component {
       .catch((err) => console.log(err));
   }
 
+
+
   render() {
     return (
       <AuthContext.Provider value={this.state.auth}>
         <div className="App">
           <Navigation />
+         {/* <NavbarSlider/> */}
           <div>
             <Switch>
               <Route exact path="/" component={Home} />
@@ -82,6 +87,7 @@ class App extends Component {
               <Route path ="/products/category/:product" component={Wellness}/>
               <Route path ="/products/:gender/:product" component={Category}/>
               <Route path="/checkout" component={Checkout}/>
+              {/* <Route path="/intro" component={Intro}/> */}
               <Route component={NotFound} />
             </Switch>
           </div>
