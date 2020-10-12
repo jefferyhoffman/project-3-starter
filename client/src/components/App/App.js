@@ -14,6 +14,7 @@ import NotFound from '../../pages/NotFound/NotFound';
 import About from '../../pages/About/About'
 import Testimonials from '../../pages/Testimonials/Testimonials'
 import './App.css';
+import Contact from '../../pages/Contact/Contact'
 
 class App extends Component {
   constructor(props) {
@@ -59,6 +60,7 @@ class App extends Component {
               <Route exact path='/' component={Home} />
               <Route exact path='/about' component={About} />
               <Route exact path='/testimonials' component={Testimonials} />
+              <Route exact path='/contact' component={Contact} />
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />
               <PrivateRoute path='/secret' component={Secret} />
