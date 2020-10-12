@@ -54,8 +54,8 @@ class Navigation extends Component {
               </Link>
               
                 {user &&
-                  <Link className='navbar-item' to='/menu' onClick={this.toggleCollapse}>
-                    Menu
+                  <Link className='navbar-item' to='/profile' onClick={this.toggleCollapse}>
+                    Profile
              </Link>}
              <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link">
