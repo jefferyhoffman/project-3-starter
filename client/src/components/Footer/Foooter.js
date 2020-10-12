@@ -4,7 +4,7 @@ import React from 'react';
 function Footer() {
   return (
     <div className="fixed-bottom bg-light header-footer-opacity">
-      <h1>This is footer</h1>
+      <span role="img" aria-label="heart">Made with 💙 by the Travel App © 2020</span>
     </div>
   );
 }
