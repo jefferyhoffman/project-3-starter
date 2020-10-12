@@ -49,7 +49,14 @@ function HomePage() {
 
 
   return (
-    <div className="d-flex flex-wrap justify-content-around">
+    <div 
+      style={{ marginTop: "100px" }}
+      className="d-flex flex-wrap justify-content-around"
+      // data-aos="zoom-in-up"
+      // data-aos-easing="ease-in-out"
+      // data-aos-once="false"
+      class="mt-5"
+    >
       {testData.map(val => {
         return <BlogCard author={val.author} city={val.city} state={val.state} text={val.text} img={val.img} ></BlogCard>
       })}
