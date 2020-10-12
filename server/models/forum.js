@@ -15,25 +15,14 @@ const ForumSchema = new Schema({
     },
 
     author: {
-        type: Schema.Types.ObjectId,
-        ref: 'User'
+        type: String,
+        trim: true,
+        required: 'author is required'
     }
 
 })
 
-class newForum {
-    constructor({ id, title, post, author }) {
-        this.id = id;
-        this.title = title;
-        this.post = post;
-        this.author = author;
-    }
 
-}
+let Forum = mongoose.model('Forum', ForumSchema);
 
-
-
-ForumSchema.loadClass(newForum);
-let User = mongoose.model('Forum', UserSchema);
-
-module.exports = User;
+module.exports = Forum;
