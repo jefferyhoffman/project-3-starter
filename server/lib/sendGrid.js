@@ -5,7 +5,7 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 module.exports = (email) => {
 
    let emailMsg = {
-       to: "sarinaburch52@gmail.com",
+       to: email,
        from: "sarinaburch52@gmail.com",
        html:
        `<strong>and easy to do anywhere, even with Node.js</strong>`
