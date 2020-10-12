@@ -17,17 +17,17 @@ const Jokes =props=>{
 
         return (
             <div>
-                {/* {result.jokes?(
+                {result.data?(
                     <ul>
 
-                    {result.jokes.map(joke=>(
+                    {result.data.map(joke=>(
                         joke.data?<li key={joke.id}>{joke.data}</li>:
                         (<li key={joke.id}>{joke.setup}? {joke.punchline}</li>))
                     
                     )}
                     
                     </ul>
-                ):(<></>)} */}
+                ):(<></>)}
 
         
              </div> 
