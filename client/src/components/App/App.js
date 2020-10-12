@@ -12,7 +12,7 @@ import Register from '../../pages/Register/Register';
 import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
 import Patron from '../../pages/Patron';
-
+import Vendor from '../../pages/Vendor';
 import './App.css';
 
 class App extends Component {
@@ -61,6 +61,7 @@ class App extends Component {
               <Route path='/register' component={Register} />
               <PrivateRoute path='/secret' component={Secret} />
               <Route path='/patron' component={Patron} />
+              <Route path='/vendor' component={Vendor} />
               <Route component={NotFound} />
             </Switch>
           {/* </div> */}

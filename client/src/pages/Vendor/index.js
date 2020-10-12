@@ -144,4 +144,4 @@ function Vendor(){
 
     )
 }
-export default Vender;
+export default Vendor;
