@@ -48,7 +48,9 @@ const Form = (props) => {
   const [dueDate, setDueDate] = useState("")
   const [howOften, setHowOften] = useState("")
 
-  const handleSub = () => {
+  const handleSub = (e) => {
+    e.preventDefault();
+
     console.log('clicked')
     const theBill = {
       company: companyName,
@@ -58,6 +60,7 @@ const Form = (props) => {
       frequency: howOften
     }
     props.submit(theBill)
+    setIsOpen(true);
     // updates form fields
     setCompanyName("")
     setTypeOfBill("")
@@ -71,41 +74,41 @@ const Form = (props) => {
     <div style={styles.form} className="animate__animated animate__fadeIn animate__delay-1s">
 
       {/* <button type="button" className="btn btn-primary">Hello World</button> */}
-      <form>
+      <form onSubmit={handleSub}>
 
         <div className="form-group w-100">
 
 
-          <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Company Name" value={companyName} onChange={e => setCompanyName(e.target.value)} />
+          <input type="text" name="company" className="form-control" id="formGroupExampleInput" placeholder="Company Name" value={companyName} onChange={e => setCompanyName(e.target.value)} />
         </div>
 
 
         <div className="row form-group">
           <div className="col">
 
-            <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="Type of Bill" value={typeOfBill} onChange={e => setTypeOfBill(e.target.value)} />
+            <input type="text" name="type" className="form-control" id="formGroupExampleInput2" placeholder="Type of Bill" value={typeOfBill} onChange={e => setTypeOfBill(e.target.value)} />
 
 
           </div>
           <div className="col">
-            <input type="number" className="form-control" id="formGroupExampleInput2" placeholder="Amount Due" value={amountDue} onChange={e => setAmountDue(parseFloat(e.target.value))} />
+            <input type="number" name="amount" className="form-control" id="formGroupExampleInput2" placeholder="Amount Due" value={amountDue} onChange={e => setAmountDue(parseFloat(e.target.value))} />
           </div>
         </div>
 
         <div className="row form-group">
           <div className="col">
 
-            <input type="date" className="form-control" id="formGroupExampleInput2" placeholder="Due Date" value={dueDate} onChange={e => setDueDate(e.target.value)} />
+            <input type="date" name="date" className="form-control" id="formGroupExampleInput2" placeholder="Due Date" value={dueDate} onChange={e => setDueDate(e.target.value)} />
           </div>
           <div className="col">
 
-            <input type="number" className="form-control" id="formGroupExampleInput2" placeholder="How Often" value={howOften} onChange={e => setHowOften(parseInt(e.target.value))} />
+            <input type="number" name="frequency" className="form-control" id="formGroupExampleInput2" placeholder="How Often" value={howOften} onChange={e => setHowOften(parseInt(e.target.value))} />
 
           </div>
 
         </div>
         <div style={styles.button} className="row form-group">
-          <button type="button" className="btn btn-primary " onClick={() => setIsOpen(true)}>Submit Bill</button>
+          <button type="submit" className="btn btn-primary ">Submit Bill</button>
           <Modal open={isOpen} onClose={() => setIsOpen(false)}>
             Congratulation! You have made a new bill!
             Close to continue

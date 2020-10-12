@@ -15,6 +15,8 @@ import Member from '../../pages/Member/Member';
 import Bill from '../../pages/Bill/Bill';
 
 
+
+
 import './App.css';
 
 class App extends Component {
@@ -57,17 +59,19 @@ class App extends Component {
         <div className='App'>
           <Navigation />
           <div className="main">
-          <div className='container'>
-            <Switch>
-              <Route exact path='/' component={Home} />
-              <Route path='/login' component={Login} />
-              <Route path='/register' component={Register} />
-              <PrivateRoute path='/member' component={Member} />
-              <PrivateRoute path='/bill' component={Bill} />
-              <Route component={NotFound} />
-            </Switch>
+            <div className='container'>
+              <Switch>
+
+
+                <Route exact path='/' component={Home} />
+                <Route path='/login' component={Login} />
+                <Route path='/register' component={Register} />
+                <PrivateRoute path='/member' component={Member} />
+                <PrivateRoute path='/bill' component={Bill} />
+                <Route component={NotFound} />
+              </Switch>
+            </div>
           </div>
-        </div>
         </div>
       </AuthContext.Provider>
     );

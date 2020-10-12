@@ -33,7 +33,7 @@ class Navigation extends Component {
 
     return (
       <div className='Navigation'>
-        <nav className='navbar navbar-expand-lg navbar-dark bg-dark mb-3'>
+        <nav className='navbar navbar-expand-lg navbar-dark bg-dark'>
           <Link style={styles.Name} className='navbar-brand' to='#'>Nest Egg </Link>
           <button className={togglerClass} onClick={this.toggleCollapse} data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
             <span className='navbar-toggler-icon'></span>
