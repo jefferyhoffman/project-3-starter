@@ -34,12 +34,12 @@ class Navigation extends Component {
             <div class="slider-wrapper">
               Travel to
             <div class="slider">
-                <div class="slider-text1 rounded-sm rounded-lg">Australia</div>
-                <div class="slider-text2 rounded-sm rounded-lg">Europe</div>
-                <div class="slider-text3 rounded-sm rounded-lg">America</div>
-                <div class="slider-text4 rounded-sm rounded-lg">Asia</div>
-                <div class="slider-text5 rounded-sm rounded-lg">Africa</div>
-                <div class="slider-text6 rounded-sm rounded-lg">Australia</div>
+                <div class="slider-text1 rounded-sm rounded-lg">Charlotte</div>
+                <div class="slider-text2 rounded-sm rounded-lg">Seattle</div>
+                <div class="slider-text3 rounded-sm rounded-lg">New York</div>
+                <div class="slider-text4 rounded-sm rounded-lg">Chicago</div>
+                <div class="slider-text5 rounded-sm rounded-lg">Boston</div>
+                <div class="slider-text6 rounded-sm rounded-lg">Charlotte</div>
 
               </div>
             </div>
