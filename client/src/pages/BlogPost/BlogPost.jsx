@@ -1,59 +1,89 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import AuthContext from "../../contexts/AuthContext"
+import "./index.css";
+import API from "../../lib/API";
+import { Redirect } from 'react-router-dom';
+import stateAbreviations from "../../lib/stateAbriviations"
+
 
 const BlogPost = () => {
-  const [street, setStreet] = useState("");
-    const handleSub=e=>{
+  const { user } = useContext(AuthContext)
+  const [city, setCity] = useState("");
+  const [state, setState] = useState("");
+  const [blog, setBlog] = useState("");
+  const [imgUrl, setImgUrl] = useState("");
+  const [redirect, setRedirect] = useState(false)
+    const handleSub = e=> {
         e.preventDefault()
-        const newBlog ={
-            streetAddress: street
+        const newPost ={
+            email: user.email,
+            city: city,
+            state: state,
+            blog: blog,
+            image: imgUrl
+
         }
-        console.log(newBlog)
+        API.Blog.create(newPost)
+          .then(data => {
+            console.log("created blog", data);
+            setRedirect(true)
+          })
+          .catch(err => {
+            console.log(err);
+          })
     }
   return (
     <>
-      <form>
+      {redirect? <Redirect to="/blog" />:null}
+      <form onSubmit={e => handleSub(e)}>
         <div className="form-group">
-          <label htmlFor="exampleInputEmail1">Street Address</label>
+          <label htmlFor="exampleInputEmail1">City</label>
           <input
-            type="email"
+            type="text"
             className="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-            value= {street}
-            onChange={e=> setStreet(e.target.value)}
+            onChange={e=> setCity(e.target.value)}
           />
           
         </div>
 
 
         <div className="form-group">
-          <label htmlFor="exampleInputEmail1">IMG URL</label>
-          <input
-            type="email"
-            className="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-            value= {street}
-            onChange={e=> setStreet(e.target.value)}
-          />
+          <label className="mr-1" htmlFor="exampleInputEmail1">State</label>
+          <select onChange={e => setState(e.target.value)}>
+            {stateAbreviations.map(val => {
+              return(
+                <option value={val}>{val}</option>
+              )
+            })}
+          </select>
           
         </div>
 
         <div className="form-group">
-          <label htmlFor="exampleInputEmail1">Blog Text</label>
-          <input
-            type="email"
+          <label htmlFor="exampleInputEmail1">Blog</label>
+          <textarea
+            
             className="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-            value= {street}
-            onChange={e=> setStreet(e.target.value)}
-          />
+            onChange={e=> setBlog(e.target.value)}
+          ></textarea>
           
         </div>
+
+
+        <div className="form-group">
+          <label htmlFor="exampleInputEmail1">Image URL</label>
+          <input
+            type="text"
+            className="form-control"
+            onChange={e=> setImgUrl(e.target.value)}
+          />
+
+          
+        </div>
+
         
 
-        <button type="submit" className="btn btn-primary" onClick={e=>handleSub(e)}>
+        <button type="submit" className="btn btn-primary">
           Submit
         </button>
       </form>
