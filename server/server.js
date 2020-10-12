@@ -46,6 +46,18 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(passport.initialize());
 
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'client', 'public', 'landing-page.html'));
+});
+
+app.get('/landing-page.js', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'client', 'public', 'landing-page.js'));
+});
+
+app.get('/landing-page.css', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'client', 'public', 'landing-page.css'));
+});
+
 //-- Static Server (Production) ----------------------------------------------
 if (process.env.NODE_ENV === 'production') {
   const clientBuildPath = path.join(__dirname, '..', 'client', 'build');
