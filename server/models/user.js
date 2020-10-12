@@ -25,8 +25,8 @@ const UserSchema = new Schema({
         type: String,
         default: uniqid()
       },
-      status: {},
-      total: {},
+      // status: {},
+      // total: {},
 
       products: [
         {
@@ -37,15 +37,21 @@ const UserSchema = new Schema({
     }
   ],
   cart: {
-    total: {
-      type: Number,
-      // required: "Total is required"
-    },
+    // total: {
+    //   type: Number,
+    //   // required: "Total is required"
+    // },
     products: [
       {
+      
+      product:  {
         type: Schema.Types.ObjectId,
         ref: 'Product'
+      },
+      color: {
+        type: String
       }
+    }
     ]
   },
   shippingAddress: [
@@ -90,11 +96,11 @@ const UserSchema = new Schema({
   }
 );
 
-UserSchema.virtual("Total").get(function () {
-  return this.cart.reduce((total, cart) => {
-    return total + cart.total
-  }, 0)
-});
+// UserSchema.virtual("Total").get(function () {
+//   return this.cart.reduce((total, cart) => {
+//     return total + cart.total
+//   }, 0)
+// });
 
 class newUser {
   constructor({ id, email, password }) {

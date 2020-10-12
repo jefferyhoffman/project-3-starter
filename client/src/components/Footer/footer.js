@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 
 const FooterPagePro = () => {
@@ -97,7 +96,7 @@ const FooterPagePro = () => {
           </li>
           <li className="list-inline-item">
             <a href="/register" className="btn btn-danger btn-rounded">
-              Volunteer
+              Become An Ambassador 
             </a>
           </li>
         </ul>
