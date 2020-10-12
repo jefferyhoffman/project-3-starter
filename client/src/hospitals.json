@@ -1,0 +1,53 @@
+
+    {"meta": {
+        "code": 200,
+        "requestId": "5f83dbee727f6113cbb4cf8e"
+    },
+    "response": {
+        "venues": [
+            {
+                "id": "5a6ab94a9ba3e51bb8340459",
+                "name": "Excel Psychiatric Associates, P.A.",
+                "location": {
+                    "address": "10225 Hickorywood Hill Ave Ste B",
+                    "lat": 35.4112435,
+                    "lng": -80.86011289999999,
+                    "labeledLatLngs": [
+                        {
+                            "label": "display",
+                            "lat": 35.4112435,
+                            "lng": -80.86011289999999
+                        }
+                    ],
+                    "distance": 20556,
+                    "postalCode": "28078",
+                    "cc": "US",
+                    "city": "Huntersville",
+                    "state": "NC",
+                    "country": "United States",
+                    "formattedAddress": [
+                        "10225 Hickorywood Hill Ave Ste B",
+                        "Huntersville, NC 28078",
+                        "United States"
+                    ]
+                },
+                "categories": [
+                    {
+                        "id": "52e81612bcbc57f1066b7a39",
+                        "name": "Mental Health Office",
+                        "pluralName": "Mental Health Offices",
+                        "shortName": "Mental Health",
+                        "icon": {
+                            "prefix": "https://ss3.4sqi.net/img/categories_v2/building/medical_doctorsoffice_",
+                            "suffix": ".png"
+                        },
+                        "primary": true
+                    }
+                ],
+                "referralId": "v-1602477038",
+                "hasPerk": false
+            }
+        ],
+        "confident": false
+    }
+}

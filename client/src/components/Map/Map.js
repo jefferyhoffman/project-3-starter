@@ -4,9 +4,11 @@ import React, { useState, useEffect, useRef } from 'react'
 
 
 
+
 function Map({ options, onMount, className, onMountProps }) {
   const ref = useRef()
   const [map, setMap] = useState()
+  
   
   
   useEffect(() => {
@@ -15,12 +17,20 @@ function Map({ options, onMount, className, onMountProps }) {
     // value 'roadmap'. { ...options } prevents this by creating a copy.
     const onLoad = () =>
       setMap(new window.google.maps.Map(ref.current, { ...options }))
+      navigator.geolocation.getCurrentPosition(function (position) 
     
+      
+      {
+        console.log(position)})
+           
     
       if (!window.google) {
       const script = document.createElement(`script`)
+      script.src = 
+      `https://api.foursquare.com/v2/venues/search?ll=35.2271,-80.8431&categoryId=52e81612bcbc57f1066b7a39&client_id=${process.env.FOURSQUARE_REACT_CLIENT_KEY}&client_secret=${process.env.FOURSQUARE_REACT_SECRET_KEY}&limit=1&v=20180628`
+      
       script.src =
-      `https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_API_KEY}`
+      `https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_API_KEY}&region=US&language=en`
       document.head.append(script)
       script.addEventListener(`load`, onLoad)
       return () => script.removeEventListener(`load`, onLoad)
