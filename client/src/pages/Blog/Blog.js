@@ -20,16 +20,7 @@ function HomePage() {
     <div
       style={{ marginTop: "100px" }}
       className="d-flex flex-wrap justify-content-around"
-      class="mt-5"
-      // data-aos="zoom-in-up"
-      // data-aos-offset="200"
-      // data-aos-delay="50"
-      // data-aos-duration="1000"
-      // data-aos-easing="ease-in-out"
-      // data-aos-mirror="true"
-      // data-aos-once="false"
-      // data-aos-anchor-placement="top-center"
-  
+      class="mt-5"  
     >
       {userBlogs.map(val => {
         return <BlogCard author={val.email} city={val.city} state={val.state} text={val.blog} img={val.image} ></BlogCard>

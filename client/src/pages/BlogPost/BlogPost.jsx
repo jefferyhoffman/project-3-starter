@@ -83,7 +83,14 @@ const BlogPost = () => {
 
         
 
-        <button type="submit" className="btn btn-primary">
+        <button 
+          type="submit" 
+          className="btn btn-primary"
+          data-aos="fade-up"
+          data-aos-offset="200"
+          data-aos-delay="2200"
+          data-aos-duration="1000"
+    >
           Submit
         </button>
       </form>
