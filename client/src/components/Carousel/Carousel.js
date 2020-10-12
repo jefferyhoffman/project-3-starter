@@ -1,13 +1,9 @@
 import React from 'react';
 import gk from '../../pages/Images/george3.jpg'
-<<<<<<< HEAD
 import athlete1 from '../Carousel/athlete1.jpg'
 import athlete2 from '../Carousel/athlete2.jpg'
 import athlete3 from '../Carousel/ahtlete3.jpg'
 import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBContainer, MDBRow, MDBCol, MDBMask, MDBTypography} from
-=======
-import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBContainer, MDBRow, MDBCol, MDBTypography} from
->>>>>>> 50fd5f6c9d237cac0604f48d2adb2c0fb5906b34
 "mdbreact";
 import '../Carousel/caro.css'
 
@@ -16,8 +12,8 @@ const Carousel = () => {
     <MDBContainer>
       <MDBRow>
       <MDBCol md="4">
-       
-      <MDBTypography  className="text-right" tag="h3" variant="display-3">Meet The Atheltes</MDBTypography>
+       <br></br>
+      <MDBTypography  className="text-right" tag="h3" variant="display-3">Meet The Athletes</MDBTypography>
       </MDBCol>
         <MDBCol md="4">
       <MDBCarousel
@@ -60,7 +56,10 @@ const Carousel = () => {
       </MDBCarousel>
       </MDBCol>
       <MDBCol md="4">
-        
+        <br></br>
+        <p className="text-center">
+          The Saint George Athletes are here to help you!  At Saint George we carefully choose our athletes through a rigurous application process.  The journey begins as an ambassador and once you've caught our eye we invite you to our headquarters and spend a whole week getting know you!  If we feel you're right a fit you officially become a Saint George Athlete and begin using the fire inside of you to lend a hand to our community.
+        </p>
         
 
       </MDBCol>
@@ -71,3 +70,7 @@ const Carousel = () => {
 
 export default Carousel;
 
+{/* <MDBTypography  className="text-left align-bottom" tag="h3" variant="display-3"><span className="letters">F</span>alse</MDBTypography>
+<MDBTypography className="text-left align-middle" tag="h3" variant="display-3"><span className="letters">E</span>vidence</MDBTypography>
+<MDBTypography className="text-left align-middle" tag="h3" variant="display-3"><span className="letters">A</span>ppearing</MDBTypography>
+<MDBTypography className="text-left align-middle" tag="h3" variant="display-3"><span className="letters">R</span>eal</MDBTypography> */}

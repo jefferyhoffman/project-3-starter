@@ -28,13 +28,8 @@ const Hero = props => {
             </MDBRow>
             <MDBRow>
                 <MDBCol md="12">
-<<<<<<< HEAD
                 <MDBAnimation type="fadeInLeft" delay=".7s">
                 <MDBTypography colorText="white" tag='h1' variant="display-1">Slay Your Dragon</MDBTypography>
-=======
-                <MDBAnimation type="fadeInLeft" delay=".3s">
-                <MDBTypography colorText="white" tag='h1' abbr="false" variant="display-1">Slay Your Dragon</MDBTypography>
->>>>>>> 50fd5f6c9d237cac0604f48d2adb2c0fb5906b34
                 </MDBAnimation>
                    
                 </MDBCol>
