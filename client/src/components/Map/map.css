@@ -14,12 +14,12 @@
   .pin {
     display: flex;
     align-items: center;
-    width: 180px;
+    width: 10px;
     color: var(--main-blue);
   }
   
   .pin-icon {
-    font-size: 4rem;
+    font-size: 10px;
   }
   
   .pin-text {
@@ -37,7 +37,7 @@
     }
   
     .pin {
-      width: 15vw;
+      width: 2050;
     }
   
     .pin-icon {
