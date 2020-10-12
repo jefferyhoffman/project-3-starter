@@ -1,9 +1,13 @@
 import React from 'react';
 import gk from '../../pages/Images/george3.jpg'
+<<<<<<< HEAD
 import athlete1 from '../Carousel/athlete1.jpg'
 import athlete2 from '../Carousel/athlete2.jpg'
 import athlete3 from '../Carousel/ahtlete3.jpg'
 import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBContainer, MDBRow, MDBCol, MDBMask, MDBTypography} from
+=======
+import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBContainer, MDBRow, MDBCol, MDBTypography} from
+>>>>>>> 50fd5f6c9d237cac0604f48d2adb2c0fb5906b34
 "mdbreact";
 import '../Carousel/caro.css'
 
@@ -67,7 +71,3 @@ const Carousel = () => {
 
 export default Carousel;
 
-{/* <MDBTypography  className="text-left align-bottom" tag="h3" variant="display-3"><span className="letters">F</span>alse</MDBTypography>
-<MDBTypography className="text-left align-middle" tag="h3" variant="display-3"><span className="letters">E</span>vidence</MDBTypography>
-<MDBTypography className="text-left align-middle" tag="h3" variant="display-3"><span className="letters">A</span>ppearing</MDBTypography>
-<MDBTypography className="text-left align-middle" tag="h3" variant="display-3"><span className="letters">R</span>eal</MDBTypography> */}

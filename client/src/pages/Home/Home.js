@@ -1,24 +1,5 @@
-import React, { useState } from "react";
-// import Hero from '../../components/Hero/Hero'
-// import { Row, Col, MDBContainer } from "react-bootstrap";
-import {
-  MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBTypography,
-  MDBCard,
-  MDBIcon,
-  MDBCardGroup,
-  MDBCardImage,
-  MDBCardTitle,
-  MDBBtn,
-  MDBCardBody,
-  MDBCardText,
-  MDBView,
-  MDBMask,
-  MDBBox
-} from
-  "mdbreact";
+import React, { useEffect, useState } from "react";
+import {MDBContainer,MDBRow,MDBCol,MDBTypography,MDBCardImage,MDBBox} from "mdbreact";
 import "../Home/home.css";
 import Hero from "../../components/Hero/Hero";
 import Cards from '../../components/Cards/Cards'
@@ -30,9 +11,30 @@ import lulu from '../Home/lulu.jpeg'
 // import HeroButton from '../../components/Button/Button'
 import Carousel from '../../components/Carousel/Carousel'
 import { Link } from "react-router-dom";
+import API from '../../lib/API'
 
 const HomePage = () => {
-  const [items, setItems] = useState([{ photo: "lulu.jpeg", text: "Flow Y Longline Bra" }, { photo: "lulu.jpeg", text: "Flow Y Longline Bra" }, { photo: "lulu.jpeg", text: "Flow Y Longline Bra" }])
+  const [mensBest, setMensBest] = useState([])
+  const [womensBest, setWomensBest] = useState([])
+
+  useEffect(() => {
+    API.Products.getAllByGender("Mens")
+    .then(res => {
+      console.log(res.data)
+      setMensBest(res.data)
+    })
+    .catch(err => console.log(err));
+  }, [API.Products])
+  
+  useEffect(() => {
+    API.Products.getAllByGender("Womens")
+    .then(res => {
+      console.log(res.data)
+      setWomensBest(res.data)
+    })
+    .catch(err => console.log(err));
+  }, [API.Products])
+
   return (
 
     <>
@@ -114,12 +116,19 @@ const HomePage = () => {
       <hr className="solid"></hr>
       <MDBContainer className="">
         <MDBRow>
+<<<<<<< HEAD
           <MDBTypography tag="h4" className="text-right" variant="display-4">Men's Best Sellers</MDBTypography>
           
+=======
+          <MDBTypography tag="h4" abbr="false" className="text-right" variant="display-4">Men's Best Sellers</MDBTypography>
+          {/* <MDBCol md={}></MDBCol> */}
+>>>>>>> 50fd5f6c9d237cac0604f48d2adb2c0fb5906b34
           <MDBCol md={12}>
+         
             <Cards
-              items={items}
+              items={mensBest.slice(0,4)}
             />
+          {/* ))} */}
           </MDBCol>
           
         </MDBRow>
@@ -128,11 +137,16 @@ const HomePage = () => {
       <hr className="solid"></hr>
       <MDBContainer>
         <MDBRow>
+<<<<<<< HEAD
           <MDBTypography tag="h4" className="text-right" variant="display-4">Women's Best Sellers</MDBTypography>
           
+=======
+          <MDBTypography tag="h4" abbr="false" className="text-right" variant="display-4">Women's Best Sellers</MDBTypography>
+          {/* <MDBCol md={1}></MDBCol> */}
+>>>>>>> 50fd5f6c9d237cac0604f48d2adb2c0fb5906b34
           <MDBCol md={12}>
             <Cards
-              items={items}
+              items={womensBest.slice(0,4)}
             />
           </MDBCol>
         </MDBRow>

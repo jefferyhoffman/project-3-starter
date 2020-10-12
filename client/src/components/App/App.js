@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Link} from "react-router-dom";
 
 import API from "../../lib/API";
 import TokenStore from "../../lib/TokenStore";
@@ -10,10 +10,8 @@ import PrivateRoute from "../../components/PrivateRoute/PrivateRoute";
 import Home from "../../pages/Home/Home";
 import Login from "../../pages/Login/Login";
 import Register from "../../pages/Register/Register";
-import Secret from "../../pages/Secret/Secret";
 import NotFound from "../../pages/NotFound/NotFound";
 import Contact from "../../pages/Contact/Contact";
-import Layout from "../../pages/Layout/Layout";
 import Product from "../../pages/ProductPage/Product";
 // import Test from "../../pages/Test";
 // import Wellness from "../../pages/Test/Wellness";
@@ -83,7 +81,7 @@ class App extends Component {
               <Route path="/login" component={Login} />
               <Route path="/register" component={Register} />
               {/* REMEMBER TO TAKE THIS OUT */}
-              <Route path="/layout" component={Layout} />
+              {/* <Route path="/layout" component={Layout} /> */}
               <Route path="/product/:id" component={Product} />
               <Route path ="/products/all/:gender" component={ProductsByGender}/>
               <Route path ="/products/category/:product" component={Wellness}/>
