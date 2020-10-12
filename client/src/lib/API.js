@@ -36,7 +36,7 @@ export default {
     latestOrder: function () {
       return axios.get('api/orders/latest')
     },
-
+    // must pass an array of procut ids and authToken
     createOrder: function (products, authToken) {
       return axios.post('api/orders/processing', {
         products: products
