@@ -6,6 +6,15 @@ export default function BlogCard(props) {
     return (
         <div
             class="mt-5"
+            data-aos="zoom-in-up"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="500"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            // data-aos-anchor-placement="top-center"
+
         >
             <Card className="m-2">
                 <Card.Img variant="top" src={props.img} />
@@ -16,7 +25,7 @@ export default function BlogCard(props) {
                 </Card.Body>
             </Card>
 
-        </div>        
+        </div>
     )
 }
 
