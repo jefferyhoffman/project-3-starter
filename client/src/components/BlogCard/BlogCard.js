@@ -7,13 +7,13 @@ export default function BlogCard(props) {
         <div
             class="mt-5"
             data-aos="zoom-in-up"
-            data-aos-offset="200"
+            data-aos-offset="100"
             data-aos-delay="50"
             data-aos-duration="500"
             data-aos-easing="ease-in-out"
             data-aos-mirror="true"
             data-aos-once="false"
-            // data-aos-anchor-placement="top-center"
+            data-aos-anchor-placement="top-center"
 
         >
             <Card className="m-2">

@@ -29,8 +29,8 @@ class Navigation extends Component {
                     header-footer-opacity
                     '>
         <nav className='navbar navbar-expand-lg navbar-light bg-light mb-3'>
-          <Link className='navbar-brand' to='#'>🌎Travel App</Link>
-          <div class="travelContent">
+          <Link className='navbar-brand' to='#'>🌎 Travel App</Link>
+          <div class="travelContent ">
             <div class="slider-wrapper">
               Travel to
             <div class="slider">
