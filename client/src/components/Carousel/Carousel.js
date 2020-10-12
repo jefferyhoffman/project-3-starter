@@ -12,12 +12,8 @@ const Carousel = () => {
     <MDBContainer>
       <MDBRow>
       <MDBCol md="4">
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-      <MDBTypography  className="text-right" tag="h3" variant="display-3">Meet The</MDBTypography>
+       
+      <MDBTypography  className="text-right" tag="h3" variant="display-3">Meet The Atheltes</MDBTypography>
       </MDBCol>
         <MDBCol md="4">
       <MDBCarousel
@@ -60,12 +56,8 @@ const Carousel = () => {
       </MDBCarousel>
       </MDBCol>
       <MDBCol md="4">
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <MDBTypography className="text-left" tag="h3" variant="display-3">Athletes</MDBTypography>
+        
+        
 
       </MDBCol>
       </MDBRow>
