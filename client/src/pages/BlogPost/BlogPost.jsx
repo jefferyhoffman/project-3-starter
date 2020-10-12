@@ -12,7 +12,7 @@ const BlogPost = () => {
   const [state, setState] = useState("");
   const [blog, setBlog] = useState("");
   const [imgUrl, setImgUrl] = useState("");
-
+  const [redirect, setRedirect] = useState(false)
     const handleSub = e=> {
         e.preventDefault()
         const newPost ={
@@ -26,7 +26,7 @@ const BlogPost = () => {
         API.Blog.create(newPost)
           .then(data => {
             console.log("created blog", data);
-            return <Redirect to="/blog" />
+            setRedirect(true)
           })
           .catch(err => {
             console.log(err);
@@ -34,6 +34,7 @@ const BlogPost = () => {
     }
   return (
     <>
+      {redirect? <Redirect to="/blog" />:null}
       <form onSubmit={e => handleSub(e)}>
         <div className="form-group">
           <label htmlFor="exampleInputEmail1">City</label>
