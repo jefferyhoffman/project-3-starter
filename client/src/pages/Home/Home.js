@@ -43,22 +43,9 @@ function HomePage() {
         <Col>
           <Form onSubmit={e => handleOnSubmit(e)}>
             <Form.Label>Search By City</Form.Label>
-
-            <Form.Control type="text" placeholder="Enter City"></Form.Control>
-
-    
+            <Form.Control onChange={e => handleCitySearchChange(e)} type="text" placeholder="Enter City"></Form.Control>
             <Button className="m-2"  variant="primary" type="submit">Submit</Button>
           </Form>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <div className="d-flex flex-wrap justify-content-around">
-            {searchByCityResults ? searchByCityResults.map(val => {
-              return <BlogCard author={val.email} city={val.city} state={val.state} text={val.blog} img={val.image} ></BlogCard>
-            }) : null}
-          </div>
-
         </Col>
       </Row>
       <Row>
