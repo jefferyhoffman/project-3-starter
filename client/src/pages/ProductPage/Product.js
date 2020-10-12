@@ -9,6 +9,7 @@ import API from "../../lib/API";
 
 function Product(props) {
   const [product, setProduct] = useState({});
+  
   useEffect(() => {
     API.Products.getProduct(props.match.params.id)
     .then(res => setProduct(res.data))
@@ -40,7 +41,7 @@ function Product(props) {
           <h6 style = {{fontWeight:"bold"}}>Product Details</h6>
           <p>{product.description}</p>
           {/* <AddCart/> */}
-          <i className="far fa-comments" style={{textDecoration: "underline",fontSize: 20}}> live chat</i>
+          {/* <i className="far fa-comments" style={{textDecoration: "underline",fontSize: 20}}> live chat</i> */}
           {/* <Chatbot config={config} actionProvider={ActionProvider} messageParser={MessageParser} /> */}
         </MDBCol>
       </MDBRow>
