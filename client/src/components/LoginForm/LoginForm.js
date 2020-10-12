@@ -1,6 +1,24 @@
 import React, { Component } from 'react';
 
 import Octicon, { Mail, Key } from '@githubprimer/octicons-react';
+import {
+  MDBContainer,
+  MDBRow,
+  MDBCol,
+  MDBTypography,
+  MDBCard,
+  MDBIcon,
+  MDBCardGroup,
+  MDBCardImage,
+  MDBCardTitle,
+  MDBBtn,
+  MDBCardBody,
+  MDBCardText,
+  MDBView,
+  MDBMask,
+  MDBBox
+} from
+  "mdbreact";
 
 class LoginForm extends Component {
   state = {
@@ -27,6 +45,9 @@ class LoginForm extends Component {
     const { email, password } = this.state;
 
     return (
+      <MDBContainer>
+        <MDBRow>
+          <MDBCol md={12}>
       <div className='LoginForm'>
         <div className='card'>
           <div className='card-body'>
@@ -61,11 +82,14 @@ class LoginForm extends Component {
                 />
               </div>
 
-              <button className='btn btn-primary' type='submit'>Login</button>
+              <button className='btn btn-dark' type='submit'>Login</button>
             </form>
           </div>
         </div>
       </div>
+      </MDBCol>
+      </MDBRow>
+      </MDBContainer>
     )
   }
 }
