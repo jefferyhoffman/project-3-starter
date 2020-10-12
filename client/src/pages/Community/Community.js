@@ -49,27 +49,6 @@ const styles = {
 }
 
 
-// constructor(props) {
-//   super(props);
-//   this.state = {comment: ''};
-
-//   this.handleChange = this.handleChange.bind(this);
-//   this.handleSubmit = this.handleSubmit.bind(this);
-// }
-
-// handleChange(e) {
-//   this.setState({comment: e.target.value});
-// }
-
-// handleSubmit(e) {
-//   e.preventDefault();
-// }
-
-
-
-
-
-
 class Community extends Component {
   constructor(props) {
     super(props);

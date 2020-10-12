@@ -54,11 +54,15 @@ export default {
     createForum: function (data) {
       return axios.post('/api/forum', data)
     }
+
+  },
+  Hospitals: {
+    getClinics: function (query) {
+      return axios.get('api/clinics', {});
+    }
   }
 
+
+
+
 }
-
-
-
-
-
