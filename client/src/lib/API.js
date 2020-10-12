@@ -62,7 +62,4 @@ export default {
     }
   }
 
-
-
-
 }

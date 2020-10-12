@@ -6,7 +6,9 @@ const jwt = require('jsonwebtoken');
 // const { format } = require('morgan');
 
 forumController.post('/', (req, res) => {
-  db.Forum.create(req.body)
+  console.log(req.body)
+  
+  db.Forums.create(req.body)
     .then(post => res.json(post))
     .catch(err => res.json(err));
 });
@@ -30,8 +32,8 @@ forumController.post('/', (req, res) => {
 // forumController.remove({id, title, post, author})
 
 
-forumController.get('/', JWTVerifier, (req, res) => {
-  db.Forum.find({}).limit(20)
+forumController.get('/', (req, res) => {
+  db.Forums.find({}).limit(20)
     .then(posts => {
         res.json(posts);
     })
