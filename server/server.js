@@ -34,13 +34,7 @@ mongoose.connection.on('error', err => {
   console.log(`Mongoose connection err:\n${err}`)
 })
 
-mongoose.connect(
-  process.env.MONGODB_URI ||
-  'mongodb://localhost/forum'
-)
-mongoose.connection.on('error', err => {
-  console.log(`Mongoose connection err:\n${err}`)
-})
+
 
 //-- Middleware --------------------------------------------------------------
 app.use(logger(LOG_MODE));
