@@ -44,16 +44,24 @@ function reducer(state, action) {
                 }
                 return val
             })
-            if (!found) mapOfCart.push({...action.payload, quantity : 1})
+            if (!found) mapOfCart.push({ ...action.payload, quantity: 1 })
             localStorage.setItem("shoppingCart", JSON.stringify(mapOfCart));
-
             return mapOfCart
+
         case "UPDATE_QUANTITY":
             mapOfCart = state.map(val => {
                 if (val.id === action.id) {
                     val.quantity += action.amnt;
                 }
                 return val
+            }).filter(val => val.quantity)
+            localStorage.setItem("shoppingCart", JSON.stringify(mapOfCart));
+            return mapOfCart
+
+        case "SUBMIT_ORDER":
+            mapOfCart = state.map(val => {
+                val.quantity = 0;
+                return val;
             }).filter(val => val.quantity)
             localStorage.setItem("shoppingCart", JSON.stringify(mapOfCart));
             return mapOfCart

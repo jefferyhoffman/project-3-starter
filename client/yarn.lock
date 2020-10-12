@@ -9448,6 +9448,11 @@ svgo@^1.0.0, svgo@^1.2.2:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
+sweetalert2@^10.4.0:
+  version "10.4.0"
+  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-10.4.0.tgz#65ff66110e720e52a6c1725ff339eec11b69b740"
+  integrity sha512-jr2htLkYR8ZaSEh7vUOs2sFyQrVABNLVu8U0tGlvqIJyXF/aW5SjLVYW23h+h518jlcT6Q3rWWexbYHlTgCxHQ==
+
 symbol-tree@^3.2.2:
   version "3.2.4"
   resolved "https://registry.yarnpkg.com/symbol-tree/-/symbol-tree-3.2.4.tgz#430637d248ba77e078883951fb9aa0eed7c63fa2"

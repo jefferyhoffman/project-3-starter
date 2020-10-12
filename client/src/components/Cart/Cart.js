@@ -20,20 +20,20 @@ export const Cart = (props) => {
     })
   }
 
-//   useEffect(() => {
-//     API.Products.getAllProducts().then(data => {
-//         setProducts(() => data.data)
-//     });
-// }, [])
+  const submitCart = () => {
+    cartDispatch({
+        type: "SUBMIT_ORDER"
+    })
+  }
 
   const handleCheckoutButton = (event) => {
     event.preventDefault();
-    console.log(authToken);
-    console.log(cart)
+    // console.log(authToken);
+    // console.log(cart)
     let productIdArray = [];
     for (let i =0; i<cart.length; i++){
       if(cart[i].quantity >1){
-        for(let x =0; x<cart[x].quantity; x++){
+        for(let x =0; x<cart[i].quantity; x++){
           productIdArray.push(cart[i].id)
         }
       } else {
@@ -42,9 +42,11 @@ export const Cart = (props) => {
     }
     API.Orders.createOrder(productIdArray, authToken)
       .then(data => {
-        console.log("order created", data)
-        
-        
+       
+        // alert("Order Created " + JSON.stringify(data[0].OrderId));
+        alert("order created " +  JSON.stringify(data.data[0][0].OrderId));
+        console.log("order created", data.data[0]);
+        submitCart();
 
       })
       .catch(err => {
