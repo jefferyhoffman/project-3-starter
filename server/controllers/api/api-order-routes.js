@@ -34,6 +34,7 @@ apiOrderRoutes.get("/latest", JWTVerifier, function (req, res) {
             through: { attributes: [] }
         }
     }).then(data => {
+        console.log(data)
         res.json(data)
     }).catch(err => {
         console.log(err)
