@@ -36,14 +36,8 @@ const BlogPost = () => {
     <>
       {redirect? <Redirect to="/blog" />:null}
       <form onSubmit={e => handleSub(e)}>
-        <div 
-          className="form-group"
-          data-aos="fade-right"
-          data-aos-offset="200"
-          data-aos-delay="600"
-          data-aos-duration="1000"
-    >
-          <label htmlFor="exampleInputEmail1">City</label>
+        <div className="form-group">
+          <label htmlFor="exampleInputEmail1">Enter City Name</label>
           <input
             type="text"
             className="form-control"
@@ -53,13 +47,8 @@ const BlogPost = () => {
         </div>
 
 
-        <div 
-          className="form-group"
-          data-aos="flip-down"
-          data-aos-offset="200"
-          data-aos-delay="1000"
-          data-aos-duration="1000">
-          <label className="mr-1" htmlFor="exampleInputEmail1">State</label>
+        <div className="form-group">
+          <label className="mr-1" htmlFor="State">Select A State</label>
           <select onChange={e => setState(e.target.value)}>
             {stateAbreviations.map(val => {
               return(
@@ -70,14 +59,8 @@ const BlogPost = () => {
           
         </div>
 
-        <div 
-          className="form-group"
-          data-aos="fade-right"
-          data-aos-offset="200"
-          data-aos-delay="1400"
-          data-aos-duration="1000"
-    >
-          <label htmlFor="exampleInputEmail1">Blog</label>
+        <div className="form-group">
+          <label htmlFor="exampleInputEmail1">Type Your Blog Text Here!</label>
           <textarea
             
             className="form-control"
@@ -87,14 +70,8 @@ const BlogPost = () => {
         </div>
 
 
-        <div 
-          className="form-group"
-          data-aos="fade-left"
-          data-aos-offset="200"
-          data-aos-delay="1800"
-          data-aos-duration="1000"
-    >
-          <label htmlFor="exampleInputEmail1">Image URL</label>
+        <div className="form-group">
+          <label htmlFor="exampleInputEmail1">Paste Image URL Here</label>
           <input
             type="text"
             className="form-control"
