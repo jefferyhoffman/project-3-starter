@@ -24,6 +24,7 @@ import Checkout from '../../pages/Checkout/checkout';
 import Intro from '../../pages/Intro/index'
 
 import "./App.css";
+import { Nav } from "react-bootstrap";
 
 
 
@@ -67,11 +68,22 @@ class App extends Component {
       .catch((err) => console.log(err));
   }
 
+
+  // fuckingfunction() {
+  //   const isSaintG = props.isSaintG
+  //   if (isSaintG) {
+  //     return <Navigation />
+  //   }
+  // }
+
   render() {
     return (
       <AuthContext.Provider value={this.state.auth}>
         <div className="App">
           <Navigation />
+          {/* {if (this.state.auth == true) {
+            console.log('hello')
+          }} */}
           <div>
             <Switch>
               <Route exact path="/" component={Home} />
