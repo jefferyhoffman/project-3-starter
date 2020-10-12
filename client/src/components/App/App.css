@@ -273,3 +273,12 @@ body {
   color: white;
 }
 
+cart header {
+  border-bottom: .1rem #1d1288 solid;
+
+}
+
+.cart img {
+  width: 7%;
+}
+

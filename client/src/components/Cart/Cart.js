@@ -3,12 +3,14 @@ import { CartContext } from "../../contexts/CartContext";
 import { Tshirt } from "../Tshirt/Tshirt";
 import { TshirtList } from "../Tshirt/TshirtList";
 import API from "../../lib/API";
-// import Modal from 'react-modal';
+import Modal from 'react-modal';
+import AuthContext from "../../contexts/AuthContext"
 
 
 export const Cart = (props) => {
   const [cart, cartDispatch] = useContext(CartContext);
   const [modal, setModal] = useState(false);
+  const {user, authToken} = useContext(AuthContext)
 
   const modifyCart = (id, amnt) => {
 
@@ -18,19 +20,49 @@ export const Cart = (props) => {
     })
   }
 
+//   useEffect(() => {
+//     API.Products.getAllProducts().then(data => {
+//         setProducts(() => data.data)
+//     });
+// }, [])
+
   const handleCheckoutButton = (event) => {
     event.preventDefault();
-    // const 
-    // API.Orders.createOrder()
+    console.log(authToken);
+    console.log(cart)
+    let productIdArray = [];
+    for (let i =0; i<cart.length; i++){
+      if(cart[i].quantity >1){
+        for(let x =0; x<cart[x].quantity; x++){
+          productIdArray.push(cart[i].id)
+        }
+      } else {
+        productIdArray.push(cart[i].id)
+      }
+    }
+    API.Orders.createOrder(productIdArray, authToken)
+      .then(data => {
+        console.log("order created", data)
+        
+        
+
+      })
+      .catch(err => {
+        console.log(err)
+      }) 
+    // cart.map(item => (
+    //   console.log(item.id, item.quantity)
+    // )
     //   .then(data => {
+
     //     console.log("order created")
     //   })
     //   .catch(err => {
     //     console.log(err)
-    //   })
-    console.log("submited")
-
-  };
+    // //   })
+    
+  }
+  
 
   return (
     <div>
@@ -43,7 +75,7 @@ export const Cart = (props) => {
             You have {cart.reduce((acc, curr) => acc + curr.quantity, 0)} item(s) in the cart{" "}
             {cart.map((item, i) => (
               <p key={i + '-key'}>
-                {item.name} {item.quantity} x ${item.price.toFixed(2)}
+               <span> <img src={item.image}/> {item.name} {item.quantity} x ${item.price.toFixed(2)}</span>
                 <button onClick={() => modifyCart(item.id, 1)}>
                   <i className="fas fa-plus"></i>
                 </button>
