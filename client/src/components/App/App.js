@@ -22,7 +22,7 @@ import Wellness from '../../pages/Wellness';
 import ProductsByGender from '../../pages/ProductsByGender';
 import Checkout from '../../pages/Checkout/checkout';
 import Intro from '../../pages/Intro/index'
-
+import NavbarSlider from '../NavbarSlider/index'
 import "./App.css";
 import { Nav } from "react-bootstrap";
 
@@ -75,7 +75,7 @@ class App extends Component {
       <AuthContext.Provider value={this.state.auth}>
         <div className="App">
           <Navigation />
-         
+         {/* <NavbarSlider/> */}
           <div>
             <Switch>
               <Route exact path="/" component={Home} />

@@ -20,7 +20,7 @@ import API from '../../lib/API';
 
 
 // const cart = (props) => {
-  const Cart = props => {
+const Cart = props => {
   // const [name, setName] = useState("")
   // const [size, setSize] = useState("")
   // const [color, setColor] = useState("")
@@ -30,15 +30,15 @@ import API from '../../lib/API';
 
   useEffect(() => {
     // const authToken = props.match.params.authToken
-  API.Users.getMe()
-  .then(res => {
-    console.log(res.data)
-    setItems(res.data)
+    API.Users.getMe()
+      .then(res => {
+        console.log(res.data)
+        setItems(res.data)
+      })
+      .catch(err => console.log(err));
   })
-  .catch(err => console.log(err));
-  })
-  
-  
+
+
   function decrementCount() {
     setCount(prevCount => prevCount - 1)
   }
@@ -46,7 +46,7 @@ import API from '../../lib/API';
     setCount(prevCount => prevCount + 1)
   }
   return (
-   
+
 
     <MDBRow>
       <MDBRow>
@@ -76,19 +76,20 @@ import API from '../../lib/API';
         </MDBCol>
 
         <MDBCol md="6">
-          <MDBBtn fluid size="sm" className="inline" onClick={decrementCount}>
+          
+          <MDBBtn fluid size="sm" className="inline btn-dark" onClick={incrementCount}>
+            <i class="fas fa-plus"></i></MDBBtn>
+
+          <span>{count}</span>
+
+            <MDBBtn fluid size="sm" className="inline btn-dark" onClick={decrementCount}>
 
             <i class="fas fa-minus"></i></MDBBtn>
-
-        <span>{count}</span>
-
-          <MDBBtn fluid size="sm" className="inline" onClick={incrementCount}>
-            <i class="fas fa-plus"></i></MDBBtn>
           <p>{props.price}</p>
         </MDBCol>
       </MDBRow>
     </MDBRow>
-  
+
 
 
   );
