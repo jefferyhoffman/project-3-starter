@@ -49,12 +49,9 @@ function HomePage() {
 
 
   return (
-    <div 
+    <div
       style={{ marginTop: "100px" }}
       className="d-flex flex-wrap justify-content-around"
-      // data-aos="zoom-in-up"
-      // data-aos-easing="ease-in-out"
-      // data-aos-once="false"
       class="mt-5"
     >
       {testData.map(val => {
