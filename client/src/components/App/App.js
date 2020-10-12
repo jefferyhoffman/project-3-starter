@@ -20,7 +20,8 @@ import Product from "../../pages/ProductPage/Product";
 import Category from '../../pages/Category';
 import Wellness from '../../pages/Wellness';
 import ProductsByGender from '../../pages/ProductsByGender';
-import Checkout from '../../pages/Checkout/checkout'
+import Checkout from '../../pages/Checkout/checkout';
+import Intro from '../../pages/Intro/index'
 
 import "./App.css";
 
@@ -84,6 +85,7 @@ class App extends Component {
               <Route path ="/products/category/:product" component={Wellness}/>
               <Route path ="/products/:gender/:product" component={Category}/>
               <Route path="/checkout" component={Checkout}/>
+              <Route path="/intro" component={Intro}/>
               <Route component={NotFound} />
             </Switch>
           </div>
