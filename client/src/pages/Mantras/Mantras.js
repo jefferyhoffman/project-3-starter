@@ -2,8 +2,11 @@ import React from "react";
 import '../../styles/cards.css';
 
 const styles = {
-    cardOne: {
-        backgroundColor: "#718D7B"
+    cardBody: {
+        fontSize: "40px",
+        fontFamily: "'Playfair Display', serif",
+        color: "black"
+
     },
     cardTwo: {
         backgroundColor: "#71758D"
@@ -11,64 +14,135 @@ const styles = {
     cardThree: {
         backgroundColor: "#8D7183"
     },
-    cardFour: {
-        backgroundColor: "#8D7183"
+    cardSix: {
+        fontSize: "40px",
+        fontFamily: "'Playfair Display', serif",
+        color: "black",
+        marginLeft: "20px",
+        marginTop: "80px"
     },
     cardFive: {
-        backgroundColor: "#8D7183"
+        fontSize: "50px",
+        fontFamily: "'Playfair Display', serif",
+        color: "black",
+        marginLeft: "65px",
+        marginTop: "80px",
+        color: "#8d7183"
     },
-    cardSix: {
-        backgroundColor: "#8D7183"
+    cardEight: {
+        fontSize: "40px",
+        fontFamily: "'Playfair Display', serif",
+        color: "black",
+        marginLeft: "20px",
+        marginTop: "80px"
     }
 }
 
 function Mantras() {
     return (
-        <section className="section">
+        // <section className="section">
 
-            <div className="columns">
-                <div className="card column" style={styles.cardOne}>
-                    <h5 className="card-title"><strong>Did you know that...</strong></h5>
-                    <img src="" className="card-img-top" alt="" />
-                    <div className="card-body"> "My mind is brilliant. My body is healthy.
-                    My spirit is tranquil."
-                    </div>
+        //     <div className="columns">
+        //         <div className="card column">
+        //             <h5 className="card-title"></h5>
+        //             {/* <img src="" className="card-img-top" alt="" /> */}
+        //             <div className="card-body" style={styles.cardBody}>"My mind is brilliant. My body is healthy.
+        //             My spirit is tranquil."
+        //             </div>
+        //         </div>
+        //         <div className="card column" >
+        //             {/*    <h5 className="card-title"></h5> */}
+        //             {/* <img src="https://images.pexels.com/photos/697243/pexels-photo-697243.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" className="card-img-top" alt="" /> */}
+        //             <div className="card-body"  style={styles.cardBody}>"I create my own path and walk it with joy."
+        //             </div>
+        //         </div>
+        //         <div className="card column" >
+        //             <h5 className="card-title"></h5>
+        //             {/* <img src="" className="card-img-top" alt="" /> */}
+        //             <div className="card-body"  style={styles.cardBody}> "My positive thoughts guide me to new heights"
+        //             </div>
+        //         </div>
+        //     </div>
+        //     <div className="columns">
+        //         <div className="card column">
+        //             <h5 className="card-title"></h5>
+        //             {/* <img src="https://images.pexels.com/photos/214574/pexels-photo-214574.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" className="card-img-top" alt="" /> */}
+        //             <div className="card-body" style={styles.cardBody}>"I am conquering my feras and becoming stronger each day."
+        //                     </div>
+        //         </div>
+        //         <div className="card column">
+        //             <h5 className="card-title"></h5>
+        //             {/* <img src="" className="card-img-top" alt="" /> */}
+        //             <div className="card-body" style={styles.cardBody} >"I will have a good day, because it's my choice."
+        //             </div>
+        //         </div>
+        //         <div className="card column">
+        //             <h5 className="card-title"></h5>
+        //             {/* <img src= className="card-img-top" alt="" /> */}
+        //             <div className="card-body" style={styles.cardBody}> "My potential is limitless, and I choose where to spend my energy."
+        //             </div>
+        //         </div>
+        //     </div>
+
+        // </section>
+        <div>
+            <div className="tile is-ancestor">
+                <div className="tile is-parent">
+                    <article className="tile is-child box">
+                        <p className="subtitle"style={styles.cardBody}> "My positive thoughts guide me to new heights"
+                    </p>
+                    </article>
                 </div>
-                <div className="card column" style={styles.cardTwo}>
-                    {/*    <h5 className="card-title"></h5> */}
-                    <img src="https://images.pexels.com/photos/697243/pexels-photo-697243.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" className="card-img-top" alt="" />
-                    <div className="card-body">"I create my own path and walk it with joy."
-                    </div>
+                <div className="tile is-parent">
+                    <article className="tile is-child box">
+                        <p className="subtitle" style={styles.cardBody}>"I create my own path and walk it with joy."
+ </p>
+                    </article>
                 </div>
-                <div className="card column" style={styles.cardThree}>
-                    <h5 className="card-title"><strong>Daily Affirmation:</strong></h5>
-                    <img src="" className="card-img-top" alt="" />
-                    <div className="card-body"> "My positive thoughts guide me to new heights"
+                <div className="tile is-parent">
+                    <article className="tile is-child box">
+                        <p className="subtitle" style={styles.cardBody}> "My positive thoughts guide me to new heights"
+    </p>
+                    </article>
+                </div>
+            </div>
+
+            <div className="tile is-ancestor">
+                <div className="tile is-vertical is-12">
+                    <div className="tile">
+                        <div className="tile is-parent">
+                            <article className="tile is-child box">
+                                <p className="content" style={styles.cardBody, styles.cardFive}>"I am conquering my fears and becoming stronger each day."
+       </p>
+                            </article>
+                        </div>
+                        <div className="tile is-8 is-vertical">
+                            <div className="tile">
+                                <div className="tile is-parent">
+                                    <article className="tile is-child box">
+                                        <p className="subtitle" style={styles.cardBody, styles.cardSix} >"I will have a good day, because it's my choice."
+      </p>
+                                    </article>
+                                </div>
+                                <div className="tile is-parent">
+                                    <article className="tile is-child box">
+                                        <p className="subtitle" style={styles.cardBody}> "I am grateful for all that is unfolding in my life and all that is yet to come."
+     </p>
+                                    </article>
+                                </div>
+                            </div>
+                            <div className="tile is-parent">
+                                <article className="tile is-child box">
+                                    <p className="content" style={styles.cardBody, styles.cardEight}> "My potential is limitless, and I choose where to spend my energy."
+     </p>
+                                </article>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div className="columns">
-                <div className="card column" style={styles.cardFour}>
-                    <h5 className="card-title"></h5>
-                    <img src="https://images.pexels.com/photos/214574/pexels-photo-214574.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" className="card-img-top" alt="" />
-                    <div className="card-body">"I am conquering my feras and becoming stronger each day."
-                    </div>
-                </div>
-                <div className="card column" style={styles.cardFive}>
-                    <h5 className="card-title"><strong>Resources:</strong></h5>
-                    <img src="" className="card-img-top" alt="" />
-                    <div className="card-body"> "I will have a good day, because it's my choice."
-                    </div>
-                </div>
-                <div className="card column" style={styles.cardSix}>
-                    <h5 className="card-title"></h5>
-                    <img src="https://images.pexels.com/photos/2531353/pexels-photo-2531353.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" className="card-img-top" alt="" />
-                    <div className="card-body"> "My potential is limitless, and I choose where to spend my energy."
-                    </div>
-                </div>
-            </div>
+        </div>
 
-        </section>
 
     )
 }
