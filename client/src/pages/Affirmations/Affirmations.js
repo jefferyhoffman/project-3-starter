@@ -1,34 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import Menu from '../Menu/Menu';
 import API from '../../lib/API'
 
-class Affirmations extends React.Component{
-    state = {
-        result: []
-    };
+const Affirmations = props => {
+    const[result, setResult] = useState([])
 
-    componentDidMount() {
-        this.resultAffirmation("")
-    }
+    useEffect(() => {
+        API.Affirmations.getAffirmation()
+        .then(({data})=>setResult(data))
 
-    resultAffirmation = data => {
-        API.Affirmation.getAffirmation()
-        .then(res => this.setState({ result: res.data.affirmation }))
-        .catch(err => console.log(err))
-    }
+    }, [API.Affirmations])
+    console.log(result.affirmation)
 
-    render() {
         return (
             <div>
-                    {this.state.result.map(result => {
-                        return <ul>
-                    <li>{result.affirmation}</li>
-                    </ul>
-                    })}
-                
+                <ul>
+        <li>{result.affirmation}</li>
+                </ul>
             </div>
         )
     }
-}
+
 
 export default Affirmations;

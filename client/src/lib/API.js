@@ -29,7 +29,7 @@ export default {
     }
   },
 
-  Affirmation: {
+  Affirmations: {
     getAffirmation: function (authToken) {
       return axios.get('/api/affirmation', {});
     }

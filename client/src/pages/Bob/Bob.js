@@ -14,6 +14,10 @@ const styles = {
   },
   active: {
     backgroundColor: "grey"
+  },
+  videos: {
+    width: "450",
+    height: "205"
   }
 }
 
@@ -22,7 +26,7 @@ class Bob extends Component {
       return (
        <div>
          <div className="columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd">
-        <div className="column is-narrow" >
+        <div className="column is-narrow is-parent" >
           <aside className="menu sticky" style={styles.menu}>
             <ul className='menu-list'>
               <li>
@@ -68,13 +72,20 @@ class Bob extends Component {
             </ul>
           </aside>
         </div>
-        <div className="column">
-         <ReactPlayer url="https://www.youtube.com/watch?time_continue=1&v=VlucWfTUo1A" />
+         <div className="column">
+         <figure> {/* Video 1 */}
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VlucWfTUo1A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </figure>
          </div>
          <div className="column">
-         <ReactPlayer url="https://www.youtube.com/watch?v=dNEp3hoHSDI" />
+        <figure>
+        <iframe width="424" height="238" src="https://www.youtube.com/embed/qx2IsmrCs3c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </figure>
+        
          </div>
+        
          </div>
+         
        </div>
       );
     }
