@@ -12,10 +12,19 @@ const styles = {
 
     },
     cardTwo: {
-        backgroundColor: "#71758D"
+        fontSize: "40px",
+        fontFamily: "'Playfair Display', serif",
+        color: "black",
+        marginLeft: "40px",
+        marginTop: "60px"
     },
     cardThree: {
-        backgroundColor: "#8D7183"
+        fontSize: "40px",
+        fontFamily: "'Playfair Display', serif",
+        color: "black",
+        marginLeft: "40px",
+        marginTop: "75px"
+        
     },
     cardSix: {
         fontSize: "40px",
@@ -28,7 +37,7 @@ const styles = {
         fontSize: "50px",
         fontFamily: "'Playfair Display', serif",
         color: "black",
-        marginLeft: "65px",
+        marginLeft: "50px",
         marginTop: "80px",
         color: "#71758D"
     },
@@ -65,17 +74,20 @@ const Affirmations = props => {
             <div className="tile is-ancestor">
                 <div className="tile is-parent">
                     <article className="tile is-child box">
-                        <p className="subtitle" style={styles.cardBody}>"{result.affirmation}"</p>
+                        <p className="subtitle" style={styles.cardBody}> "I choose to be happy and to love myself today."
+                    </p>
                     </article>
                 </div>
                 <div className="tile is-parent">
                     <article className="tile is-child box">
-                        <p className="subtitle" style={styles.cardBody}>"{result.affirmation}"</p>
+                        <p className="subtitle" style={styles.cardBody, styles.cardTwo}>"My possibilities are ENDLESS."
+ </p>
                     </article>
                 </div>
                 <div className="tile is-parent">
                     <article className="tile is-child box">
-                        <p className="subtitle" style={styles.cardBody}> "{result.affirmation}"</p>
+                        <p className="subtitle" style={styles.cardBody}> "I will be kind to myself and others today."
+    </p>
                     </article>
                 </div>
             </div>
@@ -85,25 +97,28 @@ const Affirmations = props => {
                     <div className="tile">
                         <div className="tile is-parent">
                             <article className="tile is-child box">
-                                <p className="content" style={styles.cardBody, styles.cardFive}>"{result.affirmation}"</p>
+                                <p className="content" style={styles.cardBody, styles.cardFive}>"I'm better than I used to be. Better than I was yesterday. But hopefully not as good as I'll be tomorrow."
+       </p>
                             </article>
                         </div>
                         <div className="tile is-8 is-vertical">
                             <div className="tile">
                                 <div className="tile is-parent">
                                     <article className="tile is-child box">
-                                        <p className="subtitle" style={styles.cardBody, styles.cardSix} >"{result.affirmation}"</p>
+                                        <p className="subtitle" style={styles.cardBody, styles.cardSix} >"I am WORTHY of good things."
+      </p>
                                     </article>
                                 </div>
                                 <div className="tile is-parent">
                                     <article className="tile is-child box">
-                                        <p className="subtitle" style={styles.cardBody}> "{result.affirmation}"</p>
+                                        <p className="subtitle" style={styles.cardBody, styles.cardThree}> "Today is YOUR day."  </p>
                                     </article>
                                 </div>
                             </div>
                             <div className="tile is-parent">
                                 <article className="tile is-child box">
-                                    <p className="content" style={styles.cardBody, styles.cardEight}> "{result.affirmation}"</p>
+                                    <p className="content" style={styles.cardBody, styles.cardEight}> "I CHOOSE happiness. Not because everything is good, but because I can see the good side of everything."
+     </p>
                                 </article>
                             </div>
                         </div>

@@ -12,12 +12,12 @@ const Jokes =props=>{
 
   },[API.Jokes])
 
-  console.log(result)
+  console.log(result.data)
     
 
         return (
             <div>
-                {result.jokes?(
+                {/* {result.jokes?(
                     <ul>
 
                     {result.jokes.map(joke=>(
@@ -27,7 +27,7 @@ const Jokes =props=>{
                     )}
                     
                     </ul>
-                ):(<></>)}
+                ):(<></>)} */}
 
         
              </div> 
