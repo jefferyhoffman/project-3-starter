@@ -29,7 +29,10 @@ const Contact = () => {
     </MDBContainer>
     </MDBAnimation>
     <MDBContainer>
+    <MDBAnimation type="fadeInLeft" delay=".7s">
+
     <MDBRow>
+    
       <MDBCol md='6'>
         <MDBCard wide cascade>
           <MDBView cascade>
@@ -103,8 +106,10 @@ const Contact = () => {
         </MDBCard>
       </MDBCol>
     </MDBRow>
+    </MDBAnimation>
     <hr></hr>
   {/* Bottom */}
+  <MDBAnimation type="fadeInLeft" delay=".7s">
 <MDBRow>
       <MDBCol md = "6">
       <MDBCard narrow>
@@ -124,7 +129,7 @@ const Contact = () => {
             </MDBCardTitle>
             <p className='font-weight-bold blue-text'>Full-Stack Web Developer</p>
             <MDBCardText>
-            Back-End Genius
+            Worked on implementing products and seeding them into the website to where it can successfully speak to the front-end and display. Also helped assist with additional back-end material
             </MDBCardText>
 
             <a href='https://www.linkedin.com/in/aleck-bryson-tuluenga-86295264/' className='px-2 fa-lg li-ic'>
@@ -172,6 +177,7 @@ const Contact = () => {
         </MDBCard>
       </MDBCol>
       </MDBRow>
+      </MDBAnimation>
     </MDBContainer >
     </>
   )

@@ -5,18 +5,7 @@ import {
   MDBContainer,
   MDBRow,
   MDBCol,
-  MDBTypography,
-  MDBCard,
-  MDBIcon,
-  MDBCardGroup,
-  MDBCardImage,
-  MDBCardTitle,
-  MDBBtn,
-  MDBCardBody,
-  MDBCardText,
-  MDBView,
-  MDBMask,
-  MDBBox
+ 
 } from
   "mdbreact";
 
