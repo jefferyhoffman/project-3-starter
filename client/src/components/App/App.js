@@ -69,21 +69,13 @@ class App extends Component {
   }
 
 
-  // fuckingfunction() {
-  //   const isSaintG = props.isSaintG
-  //   if (isSaintG) {
-  //     return <Navigation />
-  //   }
-  // }
 
   render() {
     return (
       <AuthContext.Provider value={this.state.auth}>
         <div className="App">
           <Navigation />
-          {/* {if (this.state.auth == true) {
-            console.log('hello')
-          }} */}
+         
           <div>
             <Switch>
               <Route exact path="/" component={Home} />
