@@ -13,7 +13,7 @@ body {
 }
 
 body {
-  margin: 0;
+  margin-top: 100px;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -121,3 +121,15 @@ code {
   padding-top: 60px;
 }
 
+.Navigation {
+  opacity: .3;
+}
+.Navigation:hover {
+  opacity: .9;
+}
+.Footer {
+  opacity: .3;
+}
+.Footer:hover {
+  opacity: .9;
+}

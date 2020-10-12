@@ -5,9 +5,9 @@ import Card from 'react-bootstrap/Card';
 export default function BlogCard(props) {
     return (
         <div
-            data-aos="zoom-in-up"
-            data-aos-easing="ease-in-out"
-            data-aos-once="false"
+            // data-aos="zoom-in-up"
+            // data-aos-easing="ease-in-out"
+            // data-aos-once="false"
             class="mt-5"
         >
             <Card className="m-2">
@@ -22,3 +22,4 @@ export default function BlogCard(props) {
         </div>        
     )
 }
+
