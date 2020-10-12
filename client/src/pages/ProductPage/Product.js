@@ -47,7 +47,7 @@ const Product = props => {
 
     console.log("ID =====>", id)
 
-    API.Users.addToCart(context.authToken, { product: { id: id }, color: {color} })
+    API.Users.addToCart(context.authToken, { product: { id: id }, color: {color}, size: {size} })
       .then(res => {
         console.log(res)
       })
@@ -76,8 +76,7 @@ const Product = props => {
             <>
             <h6>Select Size</h6>
             {sizes.map(prod => (
-            <MDBBtn outline color="black" size="sm">{prod.size}</MDBBtn>
-
+            <MDBBtn outline color="black" size="sm" onClick={() => setSize(prod.size)}>{prod.size}</MDBBtn>
           ))}
           </>
           ) : null}

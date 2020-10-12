@@ -50,6 +50,9 @@ const UserSchema = new Schema({
       },
       color: {
         type: String
+      },
+      size: {
+        type: String
       }
     }
     ]
