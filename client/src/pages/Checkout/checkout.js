@@ -1,23 +1,7 @@
 import React, { Component } from "react";
 // import Hero from '../../components/Hero/Hero'
 // import { Row, Col, MDBContainer } from "react-bootstrap";
-import {
-  MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBTypography,
-  MDBCard,
-  MDBCardBody,
-  MDBBtn,
-  MDBIcon,
-  MDBCardImage,
-  MDBCardTitle,
-  MDBCardText,
-  MDBView,
-  MDBMask
-} from
-  "mdbreact";
-import lulu2 from '../Checkout/lulu2.jpeg'
+import {MDBContainer,MDBRow,MDBCol,} from  "mdbreact";
 import CartCard from '../../components/CartCard'
 
 const FormPage = () => {
@@ -26,7 +10,7 @@ const FormPage = () => {
       <br></br>
       <MDBRow>
         <MDBCol md="6">
-        {/* Shipping Information */}
+          {/* Shipping Information */}
           <form id="shipping">
             <h4 className=" text-center mb-4">Shipping Address</h4>
             <MDBRow>
@@ -47,9 +31,9 @@ const FormPage = () => {
             <input type="text" placeholder="City" id="defaultFormContactSubjectEx" className="form-control" />
             <br />
             <hr></hr>
-            </form>
+          </form>
           {/* Credit Card Information */}
-            <form id="cci">
+          <form id="cci">
             <h5 className=" text-center mb-4">Credit Card Information</h5>
             <input type="text" placeholder="Card Number" id="defaultFormContactSubjectEx" className="form-control" />
             <br />
@@ -85,18 +69,18 @@ const FormPage = () => {
             <br />
             <input type="text" placeholder="City" id="defaultFormContactSubjectEx" className="form-control" />
             <br />
-            
-            </form>
-     </MDBCol>
+
+          </form>
+        </MDBCol>
         {/* Cart */}
-        <MDBCol md="6"> 
+        <MDBCol md="6">
           <h4 className=" text-center mb-4">Your Cart</h4>
 
-            {/* Card Start */}
-              <CartCard />
-            {/* Card End */}
-        
-           
+          {/* Card Start */}
+          <CartCard />
+          {/* Card End */}
+
+
 
         </MDBCol>
       </MDBRow>
