@@ -1,51 +1,19 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import BlogCard from '../../components/BlogCard/BlogCard'
-// import logo from './logo.svg';
+import API from "../../lib/API";
+import AuthContext from "../../contexts/AuthContext"
 
-const testData = [
-  {
-    author: "Caleb",
-    city: "Huntersville",
-    state: "North Carolina",
-    text: "I like Huntersville",
-    img: "https://www.lakenormanmike.com/wp-content/uploads/2019/12/Huntersville-NC-birkdale-village-lake-norman-real-estate-agent.jpg"
-  },
-  {
-    author: "Caleb",
-    city: "Huntersville",
-    state: "North Carolina",
-    text: "I like Huntersville",
-    img: "https://www.lakenormanmike.com/wp-content/uploads/2019/12/Huntersville-NC-birkdale-village-lake-norman-real-estate-agent.jpg"
-  },
-  {
-    author: "Caleb",
-    city: "Huntersville",
-    state: "North Carolina",
-    text: "I like Huntersville",
-    img: "https://www.lakenormanmike.com/wp-content/uploads/2019/12/Huntersville-NC-birkdale-village-lake-norman-real-estate-agent.jpg"
-  }, {
-    author: "Caleb",
-    city: "Huntersville",
-    state: "North Carolina",
-    text: "I like Huntersville",
-    img: "https://www.lakenormanmike.com/wp-content/uploads/2019/12/Huntersville-NC-birkdale-village-lake-norman-real-estate-agent.jpg"
-  }, {
-    author: "Caleb",
-    city: "Huntersville",
-    state: "North Carolina",
-    text: "I like Huntersville",
-    img: "https://www.lakenormanmike.com/wp-content/uploads/2019/12/Huntersville-NC-birkdale-village-lake-norman-real-estate-agent.jpg"
-  },
-  {
-    author: "Caleb",
-    city: "Huntersville",
-    state: "North Carolina",
-    text: "I like Huntersville",
-    img: "https://www.lakenormanmike.com/wp-content/uploads/2019/12/Huntersville-NC-birkdale-village-lake-norman-real-estate-agent.jpg"
-  }
-]
 
 function HomePage() {
+  const { authToken } = useContext(AuthContext);
+  const [userBlogs, setUserBlogs] = useState([])
+
+  useEffect(() => {
+    API.Blog.getAllBlogsByUser(authToken)
+      .then(data => {
+        setUserBlogs(() => data.data);
+      })
+  }, [])
 
 
   return (
@@ -63,8 +31,8 @@ function HomePage() {
       // data-aos-anchor-placement="top-center"
   
     >
-      {testData.map(val => {
-        return <BlogCard author={val.author} city={val.city} state={val.state} text={val.text} img={val.img} ></BlogCard>
+      {userBlogs.map(val => {
+        return <BlogCard author={val.email} city={val.city} state={val.state} text={val.blog} img={val.image} ></BlogCard>
       })}
     </div>
   );
