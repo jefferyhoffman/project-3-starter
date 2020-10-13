@@ -35,6 +35,12 @@ body {
   box-shadow: 0 0 1em rgba(255, 255, 255, 0.2);
   transition: transform 0.1s cubic-bezier(0.5, 0, 0.5, 1), box-shadow 0.2s;
   outline: none;
+  
+}
+
+.treat-wrapper {
+  margin-top: 25%;
+  position: relative;
 }
 .treat-button:hover {
   box-shadow: 0 0 2em rgba(255, 255, 255, 0.3);
