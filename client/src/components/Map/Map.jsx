@@ -1,175 +1,238 @@
-import React, { Component } from 'react';
-// import logo from './logo.svg';
-// import './App.css';
-import Geocode from "react-geocode";
-import { withScriptjs, withGoogleMap, GoogleMap, Marker, InfoWindow, } from "react-google-maps";
-import "./map.css";
-import hospitals from "./hospitals.json";
+import React, { useEffect, useState } from "react";
+import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+import axios from "axios";
 
+// import "./App.css";
 
-Geocode.setApiKey = `${process.env.REACT_APP_GOOGLE_API_KEY}`
+const containerStyle = {
+  width: "800px",
+  height: "400px",
+};
 
-class Map extends Component {
+function App() {
+  const [center, setCenter] = useState(null);
+  const [hospitals, setHospitals] = useState([]);
 
-    state = {
-        address: '',
-        city: '',
-        area: '',
-        zoom: 15,
-        height: 400,
-        mapPosition: {
-            lat: 0,
-            lng: 0,
-        },
-        markerPosition: {
-            lat: 0,
-            lng: 0,
-        }
-    }
+  useEffect(() => {
+    axios.get("https://api.foursquare.com/v2/venues/search?ll=35.2271,-80.8431&categoryId=52e81612bcbc57f1066b7a39&client_id=GUYLPUB3SWUZFQTKM5DO43DDFN4GDACKUE1N0O4KPCGZ5C2I&client_secret=DZECQ5LKFMJTQY2JXJWKUJBQB0WK5A1Z524BGRM1XTDQLA0K&limit=100&v=20180628")
+      .then(res => {
+        //console.log(res.data);
+        setHospitals(res.data.response.venues);
+      });
 
-    componentDidMount() {
-        if(navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(position =>{
-                this.setState({
-                    mapPosition: {
-                        lat:position.coords.latitude,
-                        lng:position.coords.longitude,
-                    },
-                    markerPosition: {
-                        lat:position.coords.latitude,
-                        lng:position.coords.latitude,
-                    }
+    navigator.geolocation.getCurrentPosition(function (position) {
+      setCenter({
+        lat: position.coords.latitude,
+        lng: position.coords.longitude,
+      });
+    });
+  }, []);
 
-                }, () => {
-                    Geocode.fromLatLng(position.coords.latitude, position.coords.longitude)
-                      .then(response => {
-                       console.log('response',response)
-                       const address = response.results[0].formatted_address,
-                         addressArray = response.results[0].address_components,
-                         city = this.getCity(addressArray),
-                         area = this.getSnapshotBeforeUpdate(addressArray),
-                         state = this.getState(addressArray)
-
-                      this.setState({
-                        address: (address) ? address : "",
-                        area: (area) ? area : "",
-                        city: (city) ? city : "",
-                        state: (state) ? state : "",
-                    
-
-                    })
-            })
-            
-            
-                    
-            })
-        })
-    }
+  return (
+    <div className="App">
+      <LoadScript googleMapsApiKey="AIzaSyD_4YwQwetgH5LeZ80gBw5tU0IJKHP9IJE">
+        <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}>
+          <>
+            {hospitals.map((hospital) => (
+              <Marker
+                key={hospital.id}
+                position={{
+                  lat: hospital.location.lat,
+                  lng: hospital.location.lng,
+                }}
+              />
+            ))}
+          </>
+        </GoogleMap>
+      </LoadScript>
+    </div>
+  );
 }
+
+export default App;
+
+
+
+
+
+
+
+
+
+
+
+// import React, { Component } from 'react';
+// // import logo from './logo.svg';
+// // import './App.css';
+// import Geocode from "react-geocode";
+// import { withScriptjs, withGoogleMap, GoogleMap, Marker, InfoWindow, } from "react-google-maps";
+// import "./map.css";
+// import hospitals from "./hospitals.json";
+
+
+// Geocode.setApiKey = `${process.env.REACT_APP_GOOGLE_API_KEY}`
+
+// class Map extends Component {
+
+//     state = {
+//         address: '',
+//         city: '',
+//         area: '',
+//         zoom: 15,
+//         height: 400,
+//         mapPosition: {
+//             lat: 0,
+//             lng: 0,
+//         },
+//         markerPosition: {
+//             lat: 0,
+//             lng: 0,
+//         }
+//     }
+
+//     componentDidMount() {
+//         if(navigator.geolocation) {
+//             navigator.geolocation.getCurrentPosition(position =>{
+//                 this.setState({
+//                     mapPosition: {
+//                         lat:position.coords.latitude,
+//                         lng:position.coords.longitude,
+//                     },
+//                     markerPosition: {
+//                         lat:position.coords.latitude,
+//                         lng:position.coords.latitude,
+//                     }
+
+//                 }, () => {
+//                     Geocode.fromLatLng(position.coords.latitude, position.coords.longitude)
+//                       .then(response => {
+//                        console.log('response',response)
+//                        const address = response.results[0].formatted_address,
+//                          addressArray = response.results[0].address_components,
+//                          city = this.getCity(addressArray),
+//                          area = this.getSnapshotBeforeUpdate(addressArray),
+//                          state = this.getState(addressArray)
+
+//                       this.setState({
+//                         address: (address) ? address : "",
+//                         area: (area) ? area : "",
+//                         city: (city) ? city : "",
+//                         state: (state) ? state : "",
+                    
+
+//                     })
+//             })
+            
+            
+                    
+//             })
+//         })
+//     }
+// }
                 
 
 
-    getCity = (addressArray) => {
-        let city = '';
-        for (let index = 0; index < addressArray.length; index++) {
-            if (addressArray[index].types[0] && 'administrative_area_level_2' === addressArray[index].types[0]) {
-                city = addressArray[index].long_name;
-                return city;
-            }
-        }
-    }
+//     getCity = (addressArray) => {
+//         let city = '';
+//         for (let index = 0; index < addressArray.length; index++) {
+//             if (addressArray[index].types[0] && 'administrative_area_level_2' === addressArray[index].types[0]) {
+//                 city = addressArray[index].long_name;
+//                 return city;
+//             }
+//         }
+//     }
 
-    getArea = (addressArray) => {
-        let area = '';
-        for (let index = 0; index < addressArray.length; index++) {
-            if (addressArray[index].types[0]) {
-                for (let j = 0; j < addressArray.length; j++) {
-                    if ('sublocally_level_1' === addressArray[index].types[j] || 'locality' === addressArray[j].types[j]) {
-                        area = addressArray[index].long_name;
-                        return area;
-                    }
-                }
-            }
-        }
-    }
+//     getArea = (addressArray) => {
+//         let area = '';
+//         for (let index = 0; index < addressArray.length; index++) {
+//             if (addressArray[index].types[0]) {
+//                 for (let j = 0; j < addressArray.length; j++) {
+//                     if ('sublocally_level_1' === addressArray[index].types[j] || 'locality' === addressArray[j].types[j]) {
+//                         area = addressArray[index].long_name;
+//                         return area;
+//                     }
+//                 }
+//             }
+//         }
+//     }
 
-    getState = (addressArray) => {
-        let state = '';
-        for (let index = 0; index < addressArray.length; index++) {
-            for (let index = 0; index < addressArray.length; index++) {
-                if (addressArray[index].types[0] && 'administrativ_area_level_1' === addressArray[index].types[0]) {
-                    state = addressArray[index].long_name;
-                    return state;
-                }
-
-
-            }
+//     getState = (addressArray) => {
+//         let state = '';
+//         for (let index = 0; index < addressArray.length; index++) {
+//             for (let index = 0; index < addressArray.length; index++) {
+//                 if (addressArray[index].types[0] && 'administrativ_area_level_1' === addressArray[index].types[0]) {
+//                     state = addressArray[index].long_name;
+//                     return state;
+//                 }
 
 
-        }
-    }
+//             }
+
+
+//         }
+//     }
 
 
 
-    onMarkerDragEnd = (event) => {
+//     onMarkerDragEnd = (event) => {
 
-        let newLat = event.latlng.lat();
-        let newLng = event.latlng.lng();
+//         let newLat = event.latlng.lat();
+//         let newLng = event.latlng.lng();
 
-        Geocode.fromLatLng(newLat, newLng)
-            .then(response => {
-                const address = response.results[0].formatted_address,
-                    addressArray = response.results[0].address_components,
-                    city = this.getCity(addressArray),
-                    area = this.getSnapshotBeforeUpdate(addressArray),
-                    state = this.getState(addressArray)
+//         Geocode.fromLatLng(newLat, newLng)
+//             .then(response => {
+//                 const address = response.results[0].formatted_address,
+//                     addressArray = response.results[0].address_components,
+//                     city = this.getCity(addressArray),
+//                     area = this.getSnapshotBeforeUpdate(addressArray),
+//                     state = this.getState(addressArray)
 
-                this.setState({
-                    address: (address) ? address : "",
-                    area: (area) ? area : "",
-                    city: (city) ? city : "",
-                    state: (state) ? state : "",
-                    markerPosition: {
-                        lat: newLat,
-                        lng: newLng
-                    },
-                    mapPosition: {
-                        lat: newLat,
-                        lng: newLng
-                    },
+//                 this.setState({
+//                     address: (address) ? address : "",
+//                     area: (area) ? area : "",
+//                     city: (city) ? city : "",
+//                     state: (state) ? state : "",
+//                     markerPosition: {
+//                         lat: newLat,
+//                         lng: newLng
+//                     },
+//                     mapPosition: {
+//                         lat: newLat,
+//                         lng: newLng
+//                     },
 
-                })
-            })
+//                 })
+//             })
 
 
-        console.log('newlat', newLat)
-        console.log('newlng', newLng)
-    }
+//         console.log('newlat', newLat)
+//         console.log('newlng', newLng)
+//     }
 
    
 
 
 
-    render() {
+//     render() {
 
-            const MapWithAMarker = withScriptjs(withGoogleMap(props =>
-              <GoogleMap
-              defaultZoom={13}
-              defaultCenter={{ lat: 35.2271, lng: -80.8431 }}
-              >
+//             const MapWithAMarker = withScriptjs(withGoogleMap(props =>
+//               <GoogleMap
+//               defaultZoom={13}
+//               defaultCenter={{ lat: 35.2271, lng: -80.8431 }}
+//               >
               
 
                     
-                    <Marker
-                        clickable={true}
-                        draggable={true}
-                        onDragEnd={this.onMarkerDragEnd}
-                        // position={{ newLat, newLng}}
-                    >
-                        <InfoWindow>
-                            <div>You are here</div>
-                        </InfoWindow>
-                    </Marker>
+//                     <Marker
+//                         clickable={true}
+//                         draggable={true}
+//                         onDragEnd={this.onMarkerDragEnd}
+//                         // position={{ newLat, newLng}}
+//                     >
+//                         <InfoWindow>
+//                             <div>You are here</div>
+//                         </InfoWindow>
+//                     </Marker>
 
                      
 
@@ -177,22 +240,22 @@ class Map extends Component {
 
 
 
-                </GoogleMap>
-            ));
+//                 </GoogleMap>
+//             ));
 
 
-            return(
-            <MapWithAMarker
-                googleMapURL = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyD_4YwQwetgH5LeZ80gBw5tU0IJKHP9IJE&libraries=places'
-                loadingElement = {< div style = {{ height: `100%` }} />}
-                containerElement = {< div style = {{ height: `400px` }} />}
-                mapElement = {< div style = {{ height: `100%` }} />}
-            />
-        );
-    }
-}
+//             return(
+//             <MapWithAMarker
+//                 googleMapURL = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyD_4YwQwetgH5LeZ80gBw5tU0IJKHP9IJE&libraries=places'
+//                 loadingElement = {< div style = {{ height: `100%` }} />}
+//                 containerElement = {< div style = {{ height: `400px` }} />}
+//                 mapElement = {< div style = {{ height: `100%` }} />}
+//             />
+//         );
+//     }
+// }
 
-export default Map;
+// export default Map;
 
 
 
