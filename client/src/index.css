@@ -5,8 +5,7 @@ body {
   color: var(--text-color);
   animation-duration: 30s;
   animation-iteration-count: infinite;
-  transition-property: var(--transition-delay);
-  
+  transition: width 2s, height 2s, transform 2s;  
   --light-dark-animation: light;
   --transition-delay: 2s;
 }
@@ -16,7 +15,6 @@ body {
   bottom: 0;
   right: 0;
 }
-
 body.dark {
 --light-dark-animation: dark;
 }
@@ -32,7 +30,6 @@ body.dark {
   transition: var(--transition-delay);
   transform: scale(1);
 }
-
 .theme-toggle-button:hover,
 .theme-toggle-button:focus {
   transform: scale(1.1);
@@ -47,13 +44,14 @@ body.dark {
 }
 .delete {
   background-color: orange;
-  color: black;
+  color: red;
+  font-weight: bold;
   justify-content: right;
   padding:.5em 1em;
   border-radius: .3em;
   cursor: pointer;
-  border: none;
-  outline:none;
+  border: black;
+  outline:#000000;
   transition: var(--transition-delay);
   transform: scale(1);
 
@@ -83,7 +81,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
 }
-Form.Label {
+.form-label {
   font-size: 30px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: white; 
