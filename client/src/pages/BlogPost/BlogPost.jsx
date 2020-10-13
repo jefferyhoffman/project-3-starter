@@ -43,6 +43,7 @@ const BlogPost = () => {
           data-aos-offset="200"
           data-aos-delay="900"
           data-aos-duration="1000"
+          data-aos-once="true"
         >
           <label htmlFor="exampleInputEmail1">Enter City Name</label>
           <input
@@ -58,6 +59,7 @@ const BlogPost = () => {
           data-aos-offset="200"
           data-aos-delay="1000"
           data-aos-duration="1000"
+          data-aos-once="true"
           >
           <label className="mr-1" htmlFor="State">Select A State</label>
           <select onChange={e => setState(e.target.value)}>
@@ -76,6 +78,7 @@ const BlogPost = () => {
           data-aos-offset="200"
           data-aos-delay="1200"
           data-aos-duration="1000"
+          data-aos-once="true"
 >
           <label htmlFor="exampleInputEmail1">Type Your Blog Text Here!</label>
           <textarea
@@ -93,6 +96,7 @@ const BlogPost = () => {
           data-aos-offset="200"
           data-aos-delay="1400"
           data-aos-duration="1000"
+          data-aos-once="true"
           >
           <label htmlFor="exampleInputEmail1">Paste Image URL Here</label>
           <input
@@ -111,6 +115,7 @@ const BlogPost = () => {
           data-aos-offset="200"
           data-aos-delay="1800"
           data-aos-duration="1000"
+          data-aos-once="true"
     >
           Submit
         </button>
