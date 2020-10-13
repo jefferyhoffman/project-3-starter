@@ -8,10 +8,12 @@ const mapCenter = {
   lng: -80.8431,
 };
 
+
+
 function Clinic() {
   return (
     <div className="App">
-      <Map location={mapCenter} zoomLevel={8} />
+      <Map location={mapCenter} zoomLevel={11} />
     </div>
   );
 }

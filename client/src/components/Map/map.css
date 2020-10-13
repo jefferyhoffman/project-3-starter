@@ -19,11 +19,15 @@
   }
   
   .pin-icon {
-    font-size: 10px;
+    font-size: 180px;
   }
   
   .pin-text {
     font-size: 1.3em;
+  }
+
+  .info-box{
+    font-size: small;
   }
   
   @media screen and (min-width: 799px) {
@@ -37,7 +41,7 @@
     }
   
     .pin {
-      width: 2050;
+      width: 30px;
     }
   
     .pin-icon {
