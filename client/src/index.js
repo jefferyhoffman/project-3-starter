@@ -6,12 +6,12 @@ import './index.css';
 import App from './components/App/App';
 import * as serviceWorker from './serviceWorker';
 import 'react-bulma-components/dist/react-bulma-components.min.css';
-import Chat from './components/Chat/Chat';
+
 
 ReactDOM.render(
   <BrowserRouter>
     <App />
-    <Chat />
+
   </BrowserRouter>,
   document.getElementById('root'));
 
