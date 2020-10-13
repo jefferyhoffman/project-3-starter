@@ -6,7 +6,7 @@ function Footer() {
 
 
 
-<footer class="footer">
+<footer >
   <div class="content has-text-centered">
       <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
   </div>

@@ -43,6 +43,10 @@ const styles = {
   },
   quote: {
     marginTop: "80px"
+  },
+  tile: {
+    backgroundColor: "white",
+    opacity: "80%"
   }
 }
 
@@ -112,12 +116,12 @@ class Profile extends Component {
         </div>
         
         <div className="tile is-ancestor">
-          <div className="tile is-vertical is-parent">
-            <div className="tile is-child box">
+          <div className="tile is-vertical is-parent" >
+            <div className="tile is-child box" style={styles.tile}>
               <p className="title" style={styles.inside}>Daily Affirmation</p>
              <AffirmationsApi />
             </div>
-            <div className="tile is-child box">
+            <div className="tile is-child box" style={styles.tile}>
               <p className="title" style={styles.inside}>Joke of the Day</p>
               <Jokes />
             </div>
