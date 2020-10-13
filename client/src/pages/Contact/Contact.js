@@ -22,67 +22,67 @@ const Contact = () => {
                 <p>
                   Everyday we come across obstacles and hurdles that aim to knock us off the line we walk.  The line that we've layed for ourselves to achieve our goals and live the life we seek. Here at Saint George, those obstalces and hurdles, we call them dragons and we slay them each and everyday.  Slay your Dragon for you and your people.
             </p>
-          </MDBJumbotron>
-        </MDBCol>
-      </MDBRow>
-    </MDBContainer>
-    </MDBAnimation>
-    <MDBContainer>
-    <MDBAnimation type="fadeIn" delay=".7s">
-    <MDBRow>
-      <MDBCol md = "6">
-      <MDBCard narrow>
-          <MDBView cascade>
-            <MDBCardImage
-              hover
-              overlay='white-slight'
-              className='card-img-top'
-              src={Aleck}
-              alt='food'
-            />
-          </MDBView>
+              </MDBJumbotron>
+            </MDBCol>
+          </MDBRow>
+        </MDBContainer>
+      </MDBAnimation>
+      <MDBContainer>
+        <MDBAnimation type="fadeIn" delay=".7s">
+          <MDBRow>
+            <MDBCol md="6">
+              <MDBCard narrow>
+                <MDBView cascade>
+                  <MDBCardImage
+                    hover
+                    overlay='white-slight'
+                    className='card-img-top'
+                    src={Aleck}
+                    alt='food'
+                  />
+                </MDBView>
 
-        <MDBCardBody>
-            <MDBCardTitle className='card-title'>
-              <strong>Aleck Tuluenga</strong>
-            </MDBCardTitle>
-            <p className='font-weight-bold blue-text'>Full-Stack Web Developer</p>
-            <MDBCardText>
-            Worked on implementing products and seeding them into the website to where it can successfully speak to the front-end and display. Also helped assist with additional back-end material
+                <MDBCardBody>
+                  <MDBCardTitle className='card-title'>
+                    <strong>Aleck Tuluenga</strong>
+                  </MDBCardTitle>
+                  <p className='font-weight-bold blue-text'>Full-Stack Web Developer</p>
+                  <MDBCardText>
+                    Worked on implementing products and seeding them into the website to where it can successfully speak to the front-end and display. Also helped assist with additional back-end material
             </MDBCardText>
 
-            <a href='https://www.linkedin.com/in/aleck-bryson-tuluenga-86295264/' className='px-2 fa-lg li-ic'>
-                <MDBIcon fab icon='linkedin-in'></MDBIcon>
-              </a>
+                  <a href='https://www.linkedin.com/in/aleck-bryson-tuluenga-86295264/' className='px-2 fa-lg li-ic'>
+                    <MDBIcon fab icon='linkedin-in'></MDBIcon>
+                  </a>
 
-              <a href='https://github.com/aleckbryson' className='px-2 fa-lg tw-ic'>
-                <MDBIcon fab icon='github'></MDBIcon>
-              </a>
-          </MDBCardBody>
-          </MDBCard>
-        </MDBCol>
+                  <a href='https://github.com/aleckbryson' className='px-2 fa-lg tw-ic'>
+                    <MDBIcon fab icon='github'></MDBIcon>
+                  </a>
+                </MDBCardBody>
+              </MDBCard>
+            </MDBCol>
 
-      <MDBCol md='6'>
-        <MDBCard narrow>
-          <MDBView cascade>
-            <MDBCardImage
-              hover
-              cascade
-              overlay='white-slight'
-              className='img-fluid card-img-top'
-              src={Leonard}
-              alt='food'
-            />
-          </MDBView>
+            <MDBCol md='6'>
+              <MDBCard narrow>
+                <MDBView cascade>
+                  <MDBCardImage
+                    hover
+                    cascade
+                    overlay='white-slight'
+                    className='img-fluid card-img-top'
+                    src={Leonard}
+                    alt='food'
+                  />
+                </MDBView>
 
-          <MDBCardBody>
-          
-            <MDBCardTitle className='card-title'>
-              <strong>Leonard Love</strong>
-            </MDBCardTitle>
-            <p className='font-weight-bold blue-text'>Full-Stack Web Developer</p>
-            <MDBCardText>
-            For this project, I led the development of the backend, modeling the database and customizing the route controllers. I also supported the front-end with hooks, API development, and API implementation.
+                <MDBCardBody>
+
+                  <MDBCardTitle className='card-title'>
+                    <strong>Leonard Love</strong>
+                  </MDBCardTitle>
+                  <p className='font-weight-bold blue-text'>Full-Stack Web Developer</p>
+                  <MDBCardText>
+                    For this project, I led the development of the backend, modeling the database and customizing the route controllers. I also supported the front-end with hooks, API development, and API implementation.
             </MDBCardText>
 
                   <MDBCol md='12' className='d-flex justify-content-center'>
@@ -98,79 +98,85 @@ const Contact = () => {
                 </MDBCardBody>
               </MDBCard>
             </MDBCol>
-    </MDBRow>
-    </MDBAnimation>
-    <hr></hr>
-  {/* Bottom */}
-  <MDBAnimation type="fadeInRight" delay=".7s">
+          </MDBRow>
+        </MDBAnimation>
+        <hr></hr>
+        {/* Bottom */}
+        <MDBAnimation type="fadeInRight" delay=".7s">
 
 
-    <MDBRow>
-    
-    <MDBCol md='6'>
-      <MDBCard wide cascade>
-        <MDBView cascade>
-          <MDBCardImage
-            hover
-            overlay='white-slight'
-            className='card-img-top'
-            src={Kristian}
-            alt='Card cap'
-          />
-        </MDBView>
+          <MDBRow>
 
-        <MDBCardBody cascade className='text-center'>
-          <MDBCardTitle className='card-title'>
-            <strong>Kristian Worthy</strong>
-          </MDBCardTitle>
+            <MDBCol md='6'>
+              <MDBCard wide cascade>
+                <MDBView cascade>
+                  <MDBCardImage
+                    hover
+                    overlay='white-slight'
+                    className='card-img-top'
+                    src={Kristian}
+                    alt='Card cap'
+                  />
+                </MDBView>
 
-          <p className='font-weight-bold blue-text'>Full-Stack Web Developer</p>
+                <MDBCardBody cascade className='text-center'>
+                  <MDBCardTitle className='card-title'>
+                    <strong>Kristian Worthy</strong>
+                  </MDBCardTitle>
 
-          <MDBCardText>
-          For this app, I co-led the front-end development by structuring the web pages' design and flow, ensuring the app was mobile-first and collaborating with the back-end team to ensure the front-end pieces matched with the back-end pieces.
+                  <p className='font-weight-bold blue-text'>Full-Stack Web Developer</p>
+
+                  <MDBCardText>
+                    For this app, I co-led the front-end development by structuring the web pages' design and flow, ensuring the app was mobile-first and collaborating with the back-end team to ensure the front-end pieces matched with the back-end pieces.
           </MDBCardText>
 
-          <MDBCol md='12' className='d-flex justify-content-center'>
-          <a href='https://www.linkedin.com/in/ksworthy/' className='px-2 fa-lg li-ic'>
-              <MDBIcon fab icon='linkedin-in'></MDBIcon>
-            </a>
+                  <MDBCol md='12' className='d-flex justify-content-center'>
+                    <a href='https://www.linkedin.com/in/ksworthy/' className='px-2 fa-lg li-ic'>
+                      <MDBIcon fab icon='linkedin-in'></MDBIcon>
+                    </a>
 
-            <a href='https://github.com/oksimone' className='px-2 fa-lg tw-ic'>
-              <MDBIcon fab icon='github'></MDBIcon>
-            </a>
-          </MDBCol>
-        </MDBCardBody>
-      </MDBCard>
-    </MDBCol>
-
-    <MDBCol md='6'>
-        <MDBCard>
-          <MDBCardImage
-            hover
-            overlay='white-light'
-            className='card-img-top'
-            src={gk}
-            alt='man'
-          />
-
-          <MDBCardBody cascade className='text-center'>
-            <MDBCardTitle className='card-title'>
-              <strong>George Kourakos</strong>
-            </MDBCardTitle>
-
-            <p className='font-weight-bold blue-text'>Full-Stack Web Developer</p>
-
-            <MDBCardText>
-            For this project I co-led the front-end development with my partner for the design and flow of the website. I primarily worked on the home and checkout page and worked with the backend team to coorelate API calls for the checkout page.  We manipulated Material Design Bootstrap for the layout of the website and I had my hand in Adobe Photoshop as well as Adobe Illustrator.
-            </MDBCardText>
-                  <a href='https://github.com/aleckbryson' className='px-2 fa-lg tw-ic'>
-                    <MDBIcon fab icon='github'></MDBIcon>
-                  </a>
+                    <a href='https://github.com/oksimone' className='px-2 fa-lg tw-ic'>
+                      <MDBIcon fab icon='github'></MDBIcon>
+                    </a>
+                  </MDBCol>
                 </MDBCardBody>
               </MDBCard>
             </MDBCol>
 
-            
+            <MDBCol md='6'>
+              <MDBCard>
+                <MDBCardImage
+                  hover
+                  overlay='white-light'
+                  className='card-img-top'
+                  src={gk}
+                  alt='man'
+                />
+
+                <MDBCardBody cascade className='text-center'>
+                  <MDBCardTitle className='card-title'>
+                    <strong>George Kourakos</strong>
+                  </MDBCardTitle>
+
+                  <p className='font-weight-bold blue-text'>Full-Stack Web Developer</p>
+
+                  <MDBCardText>
+                    For this project I co-led the front-end development with my partner for the design and flow of the website. I primarily worked on the home and checkout page and worked with the backend team to coorelate API calls for the checkout page.  We manipulated Material Design Bootstrap for the layout of the website and I had my hand in Adobe Photoshop as well as Adobe Illustrator.
+            </MDBCardText>
+                  <MDBCol md='12' className='d-flex justify-content-center'>
+                    <a href='https://www.linkedin.com/in/george-kourakos-93018a1a7/' className='px-2 fa-lg li-ic'>
+                      <MDBIcon fab icon='linkedin-in'></MDBIcon>
+                    </a>
+
+                    <a href='https://github.com/gkourako' className='px-2 fa-lg tw-ic'>
+                      <MDBIcon fab icon='github'></MDBIcon>
+                    </a>
+                  </MDBCol>
+                </MDBCardBody>
+              </MDBCard>
+            </MDBCol>
+
+
           </MDBRow>
         </MDBAnimation>
       </MDBContainer >
