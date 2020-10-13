@@ -7,7 +7,7 @@ function Footer(){
         <div className="footer-copyright text-center py-4 font-weight-bold">
           © 2020 Copyright:
           <a href="https://github.com/ccollins1975/farm-fresh-market">
-            Farm Fresh Market</a>
+            Farm Fresh Market </a>
           and powered by Charlotte Agricultural Tracking Services (C.A.T.S.)
         </div>
         {/* <!-- Copyright --> */}
