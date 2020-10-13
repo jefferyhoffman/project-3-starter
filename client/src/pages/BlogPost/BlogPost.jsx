@@ -38,7 +38,7 @@ const BlogPost = () => {
       {redirect ? <Redirect to="/blog" /> : null}
       <form onSubmit={e => handleSub(e)}>
         <div className="form-group">
-          <label htmlFor="exampleInputEmail1">City</label>
+          <label htmlFor="exampleInputEmail1">Enter City Name</label>
           <input
             type="text"
             className="form-control"
@@ -47,7 +47,7 @@ const BlogPost = () => {
 
         </div>
         <div className="form-group">
-          <label className="mr-1" htmlFor="exampleInputEmail1">State</label>
+          <label className="mr-1" htmlFor="State">Select A State</label>
           <select onChange={e => setState(e.target.value)}>
             {stateAbreviations.map(val => {
               return (
@@ -59,7 +59,7 @@ const BlogPost = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="exampleInputEmail1">Blog</label>
+          <label htmlFor="exampleInputEmail1">Type Your Blog Text Here!</label>
           <textarea
 
             className="form-control"
@@ -70,7 +70,7 @@ const BlogPost = () => {
 
 
         <div className="form-group">
-          <label htmlFor="exampleInputEmail1">Image URL</label>
+          <label htmlFor="exampleInputEmail1">Paste Image URL Here</label>
           <input
             type="text"
             className="form-control"
@@ -80,7 +80,14 @@ const BlogPost = () => {
 
 
 
-        <button type="submit" className="btn btn-primary">
+        <button 
+          type="submit" 
+          className="btn btn-primary"
+          data-aos="fade-up"
+          data-aos-offset="200"
+          data-aos-delay="2200"
+          data-aos-duration="1000"
+    >
           Submit
         </button>
       </form>

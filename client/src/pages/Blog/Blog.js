@@ -26,6 +26,7 @@ function HomePage() {
     <div
       style={{ marginTop: "100px" }}
       className="d-flex flex-wrap justify-content-around"
+
       class="mt-5"
     // data-aos="zoom-in-up"
     // data-aos-offset="200"
