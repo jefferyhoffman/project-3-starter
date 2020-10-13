@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Octicon, { Mail, Key } from '@githubprimer/octicons-react';
-
+import './RegistrationForm.css'
 class RegistrationForm extends Component {
   state = {
     email: '',
@@ -29,7 +29,7 @@ class RegistrationForm extends Component {
 
     return (
       <div className='LoginForm'>
-        <div className='card'>
+        
           <div className='card-body'>
             <form onSubmit={this.handleSubmit}>
               <div className='input-group mb-3'>
@@ -81,7 +81,7 @@ class RegistrationForm extends Component {
             </form>
           </div>
         </div>
-      </div>
+      
     )
   }
 }

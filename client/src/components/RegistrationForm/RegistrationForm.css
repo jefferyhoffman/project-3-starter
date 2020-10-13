@@ -1,0 +1,8 @@
+.form-control {
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
+    outline: none;
+    opacity: 1;
+    color: #ccc;
+}
