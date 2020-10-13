@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import {
   MDBContainer,
   MDBRow,
@@ -16,28 +16,31 @@ import {
 } from
   "mdbreact";
 import API from '../../lib/API';
-import '../CartCard/index.css'
+import '../CartCard/index.css';
+import AuthContext from '../../contexts/AuthContext';
 
-
-
-// const cart = (props) => {
 const Cart = props => {
-  // const [name, setName] = useState("")
-  // const [size, setSize] = useState("")
-  // const [color, setColor] = useState("")
-  // const [price, setPrice] = useState(0)
+  const context = useContext(AuthContext)
+  const [cart, setCart]  = useState()
   const [items, setItems] = useState([])
   const [count, setCount] = useState(1)
 
+  // useEffect(()=>{
+  //     API.Users.getMe()
+  //     .then(res=> {
+  //       if (use)
+  //     })
+  // })
+
   useEffect(() => {
-    // const authToken = props.match.params.authToken
-    API.Users.getMe()
+    API.Users.getMe(context.authToken)
+
       .then(res => {
         console.log(res.data)
         setItems(res.data)
       })
       .catch(err => console.log(err));
-  })
+  },[]);
 
 
   function decrementCount() {
