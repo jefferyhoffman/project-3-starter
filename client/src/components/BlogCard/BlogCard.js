@@ -8,10 +8,10 @@ export default function BlogCard(props) {
             class=" blogCard mt-5"
             data-aos="zoom-in-up"
             data-aos-offset="100"
-            data-aos-delay="50"
+            // data-aos-delay="50"
             data-aos-duration="500"
             data-aos-easing="ease-in-out"
-            data-aos-mirror="false"
+            data-aos-mirror="true"
             data-aos-once="false"
         >
             <Card className="m-2">

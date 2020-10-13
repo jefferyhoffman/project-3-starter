@@ -28,7 +28,7 @@ class Navigation extends Component {
                     sticky 
                     header-footer-opacity
                     '>
-        <nav className='navbar navbar-expand-lg navbar-light bg-light mb-3'>
+        <nav className='navbar navbar-expand-lg navbar-light font-weight-bold bg-light mb-3'>
           <Link className='navbar-brand' to='/'>Travel USA</Link>
           <div class="travelContent">
             <div class="slider-wrapper">
