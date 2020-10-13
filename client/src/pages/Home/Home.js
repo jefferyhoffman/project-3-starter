@@ -55,7 +55,7 @@ function HomePage() {
             <Form.Label>Search By City</Form.Label>
 
             <Form.Control onChange={e => handleCitySearchChange(e)} type="text" placeholder="Enter City"></Form.Control>
-            <Button className="m-2" variant="primary" type="submit">Submit</Button>
+            <Button class="submit"className="m-2" variant="warning" type="submit">Submit</Button>
 
           </Form>
         </Col>
