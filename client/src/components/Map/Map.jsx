@@ -5,12 +5,23 @@ import LocationPin from "./LocationPin";
 import hospitals from "./hospitals.json";
 import "./map.css";
 
+const styles = {
+  mapTitle: {
+    fontSize: "60px",
+    fontFamily: "'Raleway', serif",
+    color: "#8d7183",
+    textAlign: "left",
+    marginBottom: "60px"
+  }
+
+  }
+
 const Map = ({ location, zoomLevel }) => {
   const { venues } = hospitals.response;
 
   return (
     <div className="map">
-      <h2 className="map-h2">blah</h2>
+      <h2 className="map-h2" style={styles.mapTitle}>Clinics Near Me</h2>
       <div className="google-map">
         <GoogleMapReact
           bootstrapURLKeys={{ key: `${process.env.REACT_APP_GOOGLE_API_KEY}` }}
