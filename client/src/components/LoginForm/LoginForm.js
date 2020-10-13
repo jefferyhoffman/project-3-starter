@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Octicon, { Mail, Key } from '@githubprimer/octicons-react';
+import './LoginForm.css'
 
 class LoginForm extends Component {
   state = {
@@ -28,9 +29,9 @@ class LoginForm extends Component {
 
     return (
       <div className='LoginForm'>
-        <div className='card'>
+        
           <div className='card-body'>
-            <form className='LoginForm' onSubmit={this.handleSubmit}>
+            <form className='' onSubmit={this.handleSubmit}>
               <div className='input-group mb-3'>
                 <div className="input-group-prepend">
                   <span className="input-group-text"><Octicon icon={Mail} /></span>
@@ -64,7 +65,7 @@ class LoginForm extends Component {
               <button className='btn btn-primary' type='submit'>Login</button>
             </form>
           </div>
-        </div>
+        
       </div>
     )
   }

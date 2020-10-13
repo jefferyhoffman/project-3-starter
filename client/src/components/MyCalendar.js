@@ -27,14 +27,27 @@ Amount: ${event.billAmount}
 Frequency: ${event.billFrequency} days`);
     }
 
+    console.log(props.bills);
+
     return (
-        <div style={{marginTop: "60px" }} className="calendar">
+        <div style={{ marginTop: "60px" }} className="calendar">
             {/* <button onClick={addEvent}>Add</button> */}
             <Calendar
                 localizer={localizer}
                 defaultDate={new Date()}
                 defaultView="month"
-                events={props.bills.map(bill => ({ start: bill.date, end: bill.date, title: bill.company, billType: bill.type, billAmount: bill.amount, billFrequency: bill.frequency }))}
+                events={props.bills.map(bill => {
+                    const date = new Date(bill.date.split("Z")[0] + "-04:00");
+                    return {
+                        start: date,
+                        end: date,
+                        allDay: true,
+                        title: bill.company,
+                        billType: bill.type, 
+                        billAmount: bill.amount, 
+                        billFrequency: bill.frequency
+                    }
+                })}
                 startAccessor="start"
                 endAccessor="end"
                 onSelectEvent={handleSelect}
