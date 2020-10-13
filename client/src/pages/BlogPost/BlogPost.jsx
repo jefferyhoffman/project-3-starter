@@ -43,6 +43,7 @@ const BlogPost = () => {
           data-aos-offset="200"
           data-aos-delay="900"
           data-aos-duration="1000"
+          data-aos-once="true"
         >
           <label htmlFor="exampleInputEmail1">Enter City Name</label>
           <input
@@ -50,7 +51,6 @@ const BlogPost = () => {
             className="form-control"
             onChange={e => setCity(e.target.value)}
           />
-
         </div>
         <div 
           className="form-group"
@@ -58,6 +58,7 @@ const BlogPost = () => {
           data-aos-offset="200"
           data-aos-delay="1000"
           data-aos-duration="1000"
+          data-aos-once="true"
           >
           <label className="mr-1" htmlFor="State">Select A State</label>
           <select onChange={e => setState(e.target.value)}>
@@ -67,32 +68,29 @@ const BlogPost = () => {
               )
             })}
           </select>
-
         </div>
-
         <div 
           className="form-group"
           data-aos="fade-left"
           data-aos-offset="200"
           data-aos-delay="1200"
           data-aos-duration="1000"
->
+          data-aos-once="true"
+        >
           <label htmlFor="exampleInputEmail1">Type Your Blog Text Here!</label>
           <textarea
 
             className="form-control"
             onChange={e => setBlog(e.target.value)}
           ></textarea>
-
         </div>
-
-
         <div 
           className="form-group"
           data-aos="fade-right"
           data-aos-offset="200"
           data-aos-delay="1400"
           data-aos-duration="1000"
+          data-aos-once="true"
           >
           <label htmlFor="exampleInputEmail1">Paste Image URL Here</label>
           <input
@@ -101,9 +99,6 @@ const BlogPost = () => {
             onChange={e => setImgUrl(e.target.value)}
           />
         </div>
-
-
-
         <button 
           type="submit" 
           className="btn btn-primary"
@@ -111,7 +106,8 @@ const BlogPost = () => {
           data-aos-offset="200"
           data-aos-delay="1800"
           data-aos-duration="1000"
-    >
+          data-aos-once="true"
+        >
           Submit
         </button>
       </form>
