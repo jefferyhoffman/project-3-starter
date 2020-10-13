@@ -3,15 +3,12 @@ import Map from "../../components/Map/Map";
 // import logo from "./logo.svg";
 
 
-const mapCenter = {
-  lat: 35.2271,
-  lng: -80.8431,
-};
+
 
 function Clinic() {
   return (
     <div className="App">
-      <Map location={mapCenter} zoomLevel={10} />
+      <Map/>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-.map-h2 {
+/* .map-h2 {
     text-transform: uppercase;
     font-size: 1rem;
     padding: 20px;
@@ -14,16 +14,20 @@
   .pin {
     display: flex;
     align-items: center;
-    width: 180px;
+    width: 10px;
     color: var(--main-blue);
   }
   
   .pin-icon {
-    font-size: 4rem;
+    font-size: 180px;
   }
   
   .pin-text {
     font-size: 1.3em;
+  }
+
+  .info-box{
+    font-size: small;
   }
   
   @media screen and (min-width: 799px) {
@@ -37,11 +41,11 @@
     }
   
     .pin {
-      width: 15vw;
+      width: 30px;
     }
   
     .pin-icon {
       font-size: 2vw;
     }
   }
-  
+   */
