@@ -1,17 +1,78 @@
 body {
-  background-image: url("./assets/images/wonders/Liberty1920x1080.jpg");
   background-size: cover;
   background-attachment: fixed;
-  animation-name: example;
-  animation-duration: 120s;
+  animation-name: var(--light-dark-animation);
+  color: var(--text-color);
+  animation-duration: 30s;
   animation-iteration-count: infinite;
-
+  transition-property: var(--transition-delay);
+  
+  --light-dark-animation: light;
+  --transition-delay: 2s;
 }
 
+.bottom-right {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+body.dark {
+--light-dark-animation: dark;
+}
+.theme-toggle-button {
+  background-color: orange;
+  color: black;
+  justify-content: right;
+  padding:.5em 1em;
+  border-radius: .3em;
+  cursor: pointer;
+  border: none;
+  outline:none;
+  transition: var(--transition-delay);
+  transform: scale(1);
+}
+
+.theme-toggle-button:hover,
+.theme-toggle-button:focus {
+  transform: scale(1.1);
+}
+.delete:hover,
+.delete:focus {
+  transform: scale(1.1);
+}
+.submit:hover,
+.submit:focus {
+  transform: scale(1.1);
+}
+.delete {
+  background-color: orange;
+  color: black;
+  justify-content: right;
+  padding:.5em 1em;
+  border-radius: .3em;
+  cursor: pointer;
+  border: none;
+  outline:none;
+  transition: var(--transition-delay);
+  transform: scale(1);
+
+}
+.submit {
+  background-color: orange;
+  color: black;
+  justify-content: right;
+  padding:.5em 1em;
+  border-radius: .3em;
+  cursor: pointer;
+  border: none;
+  outline:none;
+  transition: var(--transition-delay);
+  transform: scale(1);
+}
 .header-footer-opacity {
   opacity: 0.5;
 }
-
 body {
   margin-top: 100px;
   padding: 0;
@@ -22,16 +83,21 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
 }
-@keyframes example {
-  0%    {background-image: url("./assets/images/wonders/Liberty1920x1080.jpg");}
-  15%   {background-image: url("./assets/images/wonders/niagraFalls1920x1080.jpg");}
-  27%   {background-image: url("./assets/images/wonders/goldenGate1920x1080.jpg");}
-  42%   {background-image: url("./assets/images/wonders/seattleNeedle1920x1080.jpg");}
-  61%   {background-image: url("./assets/images/wonders/grandCanyon1920x1080.jpg");}
-  75%   {background-image: url("./assets/images/wonders/vegas1920x1080.jpg");}
-  87%   {background-image: url("./assets/images/wonders/rushmore1920x1080.jpg");}
-  100%  {background-image: url("./assets/images/wonders/Liberty1920x1080.jpg");}
-
+@keyframes light {
+  0%    {background-image: url("./assets/images/light/Liberty1920x1080.jpg");}
+  20%   {background-image: url("./assets/images/light/niagraFalls1920x1080.jpg");}
+  40%   {background-image: url("./assets/images/light/goldenGate1920x1080.jpg");}
+  60%   {background-image: url("./assets/images/light/grandCanyon1920x1080.jpg");}
+  80%   {background-image: url("./assets/images/light/rushmore1920x1080.jpg");}
+  100%  {background-image: url("./assets/images/light/Liberty1920x1080.jpg");}
+}
+@keyframes dark {
+  0%   {background-image: url("./assets/images/dark/vegas1920x1080.jpg");}
+  20%   {background-image: url("./assets/images/dark/chicagox1920x1080.jpg");}
+  40%  {background-image: url("./assets/images/dark/chicagox1920x1080.jpg");}
+  60%  {background-image: url("./assets/images/dark/seattleNeedle1920x1080.jpg");}
+  80%  {background-image: url("./assets/images/dark/newYork1920x1080.jpg");}
+  100% {background-image: url("./assets/images/dark/vegas1920x1080.jpg");}
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -130,3 +196,4 @@ code {
 .Footer:hover {
   opacity: .9;
 }
+
