@@ -4,7 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import API from '../../lib/API';
 import TokenStore from '../../lib/TokenStore';
 import AuthContext from '../../contexts/AuthContext';
-import Navigation from '../../components/Navigation/Navigation';
+import Navigation from '../../components/NAVBAR/index';
 import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
 import Home from '../../pages/Home/Home';
 import Login from '../../pages/Login/Login';
@@ -13,6 +13,7 @@ import Secret from '../../pages/Secret/Secret';
 import NotFound from '../../pages/NotFound/NotFound';
 import Patron from '../../pages/Patron';
 import Vendor from '../../pages/Vendor';
+import SearchZip from '../../pages/MAP/MAP'
 import './App.css';
 
 class App extends Component {
@@ -53,7 +54,6 @@ class App extends Component {
     return (
       <AuthContext.Provider value={this.state.auth}>
         <div className='App'>
-          <Navigation />
           {/* <div className='container'> */}
             <Switch>
               <Route exact path='/home' component={Home} />
@@ -61,7 +61,10 @@ class App extends Component {
               <Route path='/register' component={Register} />
               <PrivateRoute path='/secret' component={Secret} />
               <PrivateRoute path='/patron' component={Patron} />
+
               <PrivateRoute path='/vendor' component={Vendor} />
+              <Route path='/searchzip' component={SearchZip} />
+
               <Route component={NotFound} />
             </Switch>
           {/* </div> */}
