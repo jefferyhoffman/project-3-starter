@@ -30,6 +30,14 @@ function Cards() {
         const url = "/login";
         window.open(url);
     }
+    function buttonClick3() {
+        const url = "/clinic";
+        window.open(url);
+    }
+    function buttonClick4() {
+        const url = "/hotline";
+        window.open(url);
+    }
 
         return (
             <section className="section">
@@ -71,10 +79,10 @@ function Cards() {
                         follow the link for resources.
             </div>
                         <br />
-                        <button class="button is-medium is-success is-inverted is-outlined">Hotlines</button>
+                        <button class="button is-medium is-success is-inverted is-outlined" onClick={buttonClick4}>Hotlines</button>
                         <br />
                         <br />
-                        <button class="button is-medium is-success is-light">Clinics Near Me</button>
+                        <button class="button is-medium is-success is-light" onClick={buttonClick3}>Clinics Near Me</button>
 
 
                     </div>

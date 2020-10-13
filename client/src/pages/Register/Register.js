@@ -5,6 +5,16 @@ import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
 import RegistrationForm from '../../components/RegistrationForm/RegistrationForm';
 
+
+const styles={
+
+  title: {
+   
+    fontFamily: "'Raleway', serif",
+    fontSize: "60px",
+  
+  }
+}
 class Register extends Component {
   static contextType = AuthContext;
 
@@ -26,7 +36,7 @@ class Register extends Component {
   }
 
   render() {
-    const { from } = this.props.location.state || { from: { pathname: "/menu" } };
+    const { from } = this.props.location.state || { from: { pathname: "/login" } };
     const { redirectToReferrer } = this.state;
 
     if (redirectToReferrer) {
@@ -37,7 +47,7 @@ class Register extends Component {
       <div className='Register'>
         <div className='columns'>
           <div className='column'>
-            <h1>Register</h1>
+            <h1 style={styles.title}>Register</h1>
           </div>
         </div>
         {this.state.error &&

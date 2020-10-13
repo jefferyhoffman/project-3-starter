@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 
 import Octicon, { Mail, Key } from '@githubprimer/octicons-react';
 
+const styles = {
+  
+  form: {
+    textAlign: "center",
+    marginRight: "100px"
+  }
+}
+
 class RegistrationForm extends Component {
   state = {
     email: '',
@@ -28,12 +36,12 @@ class RegistrationForm extends Component {
     const { email, password, passwordConfirm } = this.state;
 
     return (
-      <div classNameName='LoginForm'>
-        <div classNameName='card'>
-          <div classNameName='card-body'>
+      <div className='LoginForm'>
+        <div style={styles.card}> <div className="column">
+          <div className='card-body'>
             <form onSubmit={this.handleSubmit}>
-
-              <div className="field">
+             
+              <div className="field" style={styles.form}>
                 <p className="control has-icons-left has-icons-right">
                 <Octicon icon={Mail} />
                   <input 
@@ -51,7 +59,7 @@ class RegistrationForm extends Component {
                   </span>
                 </p>
               </div>
-              <div className="field">
+              <div className="field" style={styles.form}>
                 <p className="control has-icons-left">
                 <Octicon icon={Key} />
                   <input 
@@ -66,7 +74,7 @@ class RegistrationForm extends Component {
                   </span>
                 </p>
               </div>
-              <div className="field">
+              <div className="field" style={styles.form}>
                 <p className="control has-icons-left">
                 <Octicon icon={Key} />
                   <input 
@@ -81,8 +89,8 @@ class RegistrationForm extends Component {
                   </span>
                 </p>
               </div>
-              <button classNameName='button is-primary' type='submit'>Register Now!</button>
-            </form>
+              <button className='button is-primary' type='submit'>Register Now!</button>
+            </form></div>
           </div>
         </div>
       </div>
