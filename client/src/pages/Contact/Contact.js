@@ -82,7 +82,7 @@ const Contact = () => {
             </MDBCardTitle>
             <p className='font-weight-bold blue-text'>Full-Stack Web Developer</p>
             <MDBCardText>
-                  Back-End Genius
+            For this project, I led the development of the backend, modeling the database and customizing the route controllers. I also supported the front-end with hooks, API development, and API implementation.
             </MDBCardText>
 
                   <MDBCol md='12' className='d-flex justify-content-center'>
@@ -98,9 +98,6 @@ const Contact = () => {
                 </MDBCardBody>
               </MDBCard>
             </MDBCol>
-          </MDBCardBody>
-        </MDBCard>
-      </MDBCol>
     </MDBRow>
     </MDBAnimation>
     <hr></hr>
@@ -173,39 +170,7 @@ const Contact = () => {
               </MDBCard>
             </MDBCol>
 
-            <MDBCol md='6'>
-              <MDBCard>
-                <MDBCardImage
-                  hover
-                  overlay='white-light'
-                  className='card-img-top'
-                  src={gk}
-                  alt='man'
-                />
-
-                <MDBCardBody cascade className='text-center'>
-                  <MDBCardTitle className='card-title'>
-                    <strong>George Kourakos</strong>
-                  </MDBCardTitle>
-
-                  <p className='font-weight-bold blue-text'>Full-Stack Web Developer</p>
-
-                  <MDBCardText>
-                    Front-End Genius
-            </MDBCardText>
-
-                  <MDBCol md='12' className='d-flex justify-content-center'>
-                    <a href='https://www.linkedin.com/in/george-kourakos-93018a1a7/' className='px-2 fa-lg li-ic'>
-                      <MDBIcon fab icon='linkedin-in'></MDBIcon>
-                    </a>
-
-                    <a href='https://github.com/gkourako' className='px-2 fa-lg tw-ic'>
-                      <MDBIcon fab icon='github'></MDBIcon>
-                    </a>
-                  </MDBCol>
-                </MDBCardBody>
-              </MDBCard>
-            </MDBCol>
+            
           </MDBRow>
         </MDBAnimation>
       </MDBContainer >
