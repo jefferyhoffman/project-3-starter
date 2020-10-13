@@ -1,6 +1,16 @@
 import React, { Component } from "react";
 
-
+const styles = {
+  title: {
+    marginTop: "100px",
+    fontFamily: "'Raleway', serif",
+    paddingBottom: "-60px",
+    fontSize: "60px",
+    textAlign:"left",
+    marginLeft: "30px",
+    color: "#71758D"
+  }
+  }
 
 
 
@@ -8,6 +18,8 @@ import React, { Component } from "react";
 class Comedy extends Component {
     render() {
       return (
+        <div>
+        <h1 class="title is-1" style={styles.title}>Comedy Corner</h1>
               <section>
                 <div className="columns">
                   <div className="card-image column">
@@ -48,6 +60,7 @@ class Comedy extends Component {
                   </div>
                 </div>
               </section>
+              </div>
       
       );
     }
