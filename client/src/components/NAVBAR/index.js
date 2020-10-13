@@ -1,28 +1,30 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
-import AuthContext from '../../contexts/AuthContext';
-import AuthDropdown from '../../components/AuthDropdown/AuthDropdown';
+import AuthContext from "../../contexts/AuthContext";
+import AuthDropdown from "../../components/AuthDropdown/AuthDropdown";
 
 class NAVBAR extends Component {
   static contextType = AuthContext;
 
   state = {
-    collapsed: true
-  }
+    collapsed: true,
+  };
 
   toggleCollapse = () => {
     this.setState({
-      collapsed: !this.state.collapsed
+      collapsed: !this.state.collapsed,
     });
-  }
+  };
+  
   render() {
     const { user } = this.context;
     const { collapsed } = this.state;
-    const targetClass = `collapse navbar-collapse ${!collapsed && 'show'}`;
-    const togglerClass = `navbar-toggler ${collapsed && 'collapsed'}`;
+    const targetClass = `collapse navbar-collapse ${!collapsed && "show"}`;
+    const togglerClass = `navbar-toggler ${collapsed && "collapsed"}`;
+
     return (
-      <div className='Navigation'>
+      <div className="Navigation">
         <nav className="navbar navbar-light bg-green text-black animated slideInLeft">
           {/*<!-- Navbar brand -->*/}
           <Link className="navbar-brand text-black" href="#">
@@ -30,14 +32,20 @@ class NAVBAR extends Component {
           </Link>
 
           {/*<!-- Collapse button -->*/}
-          <button className={togglerClass} onClick={this.toggleCollapse} data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
-            <span className='navbar-toggler-icon'></span>
+          <button
+            className={togglerClass}
+            onClick={this.toggleCollapse}
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
           </button>
 
           {/*<!-- Collapsible content -->*/}
-          <div className={targetClass} 
-            id="navbarSupportedContent41"
-          >
+          <div className={targetClass} id="navbarSupportedContent41">
             {/*<!-- Links -->*/}
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
@@ -58,6 +66,11 @@ class NAVBAR extends Component {
               <li className="nav-item">
                 <a className="nav-link text-black" href="#">
                   Requests
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link text-black" href="#">
+                  Market Search
                 </a>
               </li>
             </ul>
