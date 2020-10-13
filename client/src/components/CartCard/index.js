@@ -18,13 +18,6 @@ const Cart = props => {
   // const [cart, setCart]  = useState(0)
   const [items, setItems] = useState({})
   const [count, setCount] = useState(1)
-  
-  // function emptyCart (){
-  //   if (items === []) {
-  //     return <h1>Your cart is empty!</h1>
-  //   }
-  //     return 
-  // } 
 
   useEffect(() => {
     API.Users.getMe(context.authToken)
