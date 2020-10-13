@@ -22,7 +22,11 @@ const styles = {
   title: {
     marginTop: "100px",
     fontFamily: "'Raleway', serif",
-    paddingBottom: "-50px"
+    paddingBottom: "-60px",
+    fontSize: "60px",
+    textAlign:"left",
+    marginLeft: "30px",
+    color: "#8D7183"
   }
 }
 
