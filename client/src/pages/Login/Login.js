@@ -5,6 +5,8 @@ import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
 import LoginForm from '../../components/LoginForm/LoginForm';
 import LOGO from '../../components/LOGO';
+import Navigation from "../../components/NAVBAR";
+
 class Login extends Component {
   static contextType = AuthContext;
 
