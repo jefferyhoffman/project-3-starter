@@ -27,5 +27,11 @@ export default {
         }
       });
     }
+  },
+
+  Maps: {
+    getMaps: function (zipcode) {
+      return axios.get('/api/maps/' + zipcode, {})
+    }
   }
 }
