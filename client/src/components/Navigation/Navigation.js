@@ -74,7 +74,7 @@ class Navigation extends Component {
 
                   <hr class="navbar-divider" />
 
-                  <a><Link className="navbar-item" to='/comedy' onClick={this.toggleCollapse} >Comedian Corner</ Link></a>
+                  <a><Link className="navbar-item" to='/comedy' onClick={this.toggleCollapse} >Comedy Corner</ Link></a>
                   <a><Link className="navbar-item" to='/bob' onClick={this.toggleCollapse} >Bob Ross Channel</ Link></a>
                   <Link className="navbar-item" to='/breathing' onClick={this.toggleCollapse} >Breathing Exercises</ Link>
                   <Link className="navbar-item" to='/odd' onClick={this.toggleCollapse} >Oddly Satisfying</ Link>

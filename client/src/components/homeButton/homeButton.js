@@ -4,8 +4,7 @@ import API from '../../lib/API';
 
 const styles = {
     button: {
-        marginTop: "-40px",
-        paddingTop: "50px"
+        marginTop: "20px"
     }
 }
 
@@ -23,9 +22,10 @@ function HomeButton() {
                 console.log(data)
                 setEmail("")
             })
+            
             .catch(err => console.log(err));
     }
-
+   
 
 
 
@@ -35,10 +35,10 @@ function HomeButton() {
                 <div className="column"></div>
                 <div className="column">
                     {emailSent ? <div>
-                        Email Sent
+                        Thank you for subscribing!
                     </div> : null}
                     <form onSubmit={e => handleOnSubmit(e)}>
-                        <div className="" style={styles.button}>
+                        <div className="" >
                             <div class="control has-icons-left has-icons-right" >
 
                                 <input class="input is-medium" type="email" placeholder="Email" onChange={e => setEmail(e.target.value)}/>
@@ -49,7 +49,7 @@ function HomeButton() {
                                     <i class="fas fa-check"></i>
                                 </span>
                             </div>
-                            <button class="button is-small is-light" type="submit" >Join Our Email List</button>
+                            <button class="button is-outline" type="submit" style={styles.button}>Join Our Email List</button>
 
                         </div>
                     </form>
