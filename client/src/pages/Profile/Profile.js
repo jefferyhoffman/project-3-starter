@@ -16,7 +16,7 @@ const styles = {
     color: "black"
   },
   active: {
-    backgroundColor: "grey"
+    backgroundColor: "#8D7183"
   },
 
   main: {
@@ -24,7 +24,10 @@ const styles = {
     height: "150vh"
   },
   titles: {
-    textAlign: "center"
+    textAlign: "center",
+  },
+  borderColor:{
+    borderColor:"red"
   }
 }
 
