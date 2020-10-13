@@ -17,7 +17,7 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-const treatmojis = ["🍅", "🐓", "🥚", "🌽", "🍏", "🍎", "🍒", "🐈", "🎃", "🍠"];
+const treatmojis = ["🍅", "🐓", "🥚", "🌽", "🍏", "🍎", "🍒", "🐈", "🎃", "🍠", "🦔", "🐕"];
 const treats = [];
 const radius = 15;
 
@@ -49,7 +49,7 @@ function createTreat() /* create a treat */{
 
   const treat = {
     el,
-    absolutePosition: { x: rect.left, y: rect.top },
+    absolutePosition: { x: rect.left, y: rect.top},
     position: { x: rect.left, y: rect.top },
     velocity: { x: vx, y: vy },
     mass: 0.1, //kg
@@ -167,7 +167,7 @@ function addTreats() {
   }
   setTimeout(() => {
     window.location.assign('/home');
-  }, 1000);
+  }, 5000);
 }
 
 elButton.addEventListener("click", addTreats);
