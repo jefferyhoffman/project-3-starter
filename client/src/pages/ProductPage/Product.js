@@ -7,8 +7,6 @@ import MessageParser from '../../components/Chatbot/MessageParser';
 import config from '../../components/Chatbot/Config';
 import API from "../../lib/API";
 import AuthContext from '../../contexts/AuthContext';
-
-
 const Product = props => {
   const context = useContext(AuthContext)
   // console.log("Does this work? ====>", context)
@@ -17,8 +15,7 @@ const Product = props => {
   const [colorArr, setColorArr] = useState([])
   const [sizes, setSizes] = useState([])
   const [size, setSize] = useState("")
-  const [btnColor, setBtnColor] = useState("black")
-
+  const [button, setButton] = useState("")
   useEffect(() => {
     API.Products.getProduct(props.match.params.id)
       .then(res => {
@@ -29,7 +26,6 @@ const Product = props => {
           else if(item.color!=="N/A")allColors.push(item.color)
         })
         setColorArr(allColors)
-
       })
       .catch(err => console.log(err));
   }, [props.match.params.id]);
@@ -57,15 +53,8 @@ const Product = props => {
       .catch(err => console.log(err))
   }
 
-  const changeBtn = () => {
-    console.log(btnColor);
-    // if(btnColor){setBtnColor('green')}
-    // else{setBtnColor('black')}
-  }
-
   return (
     <MDBContainer fluid>
-
       <h2>{product.category}</h2>
       <hr className="solid"></hr>
       <MDBRow style={{ borderLeft: "1px solid lightGray", margin: "auto" }}>
@@ -74,21 +63,27 @@ const Product = props => {
         </MDBCol>
         <MDBCol>
           <h4 style={{ fontWeight: "bold" }}>{product.name}</h4>
-          {colorArr ? colorArr.map(color => (
-            <MDBBtn outline color="black" size="sm" onClick={() => setColor(color)}>{color}</MDBBtn>
-
-          )) : null}
+          {colorArr.map(buttonColor => {
+            return buttonColor === color ? (
+              <MDBBtn color="white" size="sm" onClick={() => setColor(buttonColor)} active>{buttonColor}</MDBBtn>
+            ) : (
+              <MDBBtn color="white" size="sm" onClick={() => setColor(buttonColor)}>{buttonColor}</MDBBtn>
+            )
+          })}
           <h6>${product.price}</h6>
           <hr className="solid"></hr>
-          {color ? (
+          {color && (
             <>
-            <h6>Select Size</h6>
-            {sizes.map(prod => (
-          <MDBBtn outline color={btnColor} size="sm" onClick={() => setSize(prod.size) && {changeBtn}}>{prod.size}</MDBBtn>
-          ))}
-          </>
-          ) : null}
-         
+              <h6>Select Size</h6>
+              {sizes.map(prod => {
+                return prod.size === size ? (
+                  <MDBBtn color="white" size="sm" onClick={() => setSize(prod.size)} active>{prod.size}</MDBBtn>
+                ) : (
+                  <MDBBtn color="white" size="sm" onClick={() => setSize(prod.size)}>{prod.size}</MDBBtn>
+                )
+              })}
+            </>
+          )}
           <MDBBtn color="black" size="lg" style={{ marginTop: "20px", marginBottom: "20px" }} onClick={cartAdd}>Add to Cart</MDBBtn>
           <h6 style={{ fontWeight: "bold" }}>Product Details</h6>
           <p>{product.description}</p>
@@ -98,8 +93,6 @@ const Product = props => {
         </MDBCol>
       </MDBRow>
     </MDBContainer>
-
   );
 }
-
 export default Product;
