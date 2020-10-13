@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from "react";
 import API from '../../lib/API'
 
+const styles = {
+    card: {
+        fontFamily: "'Playfair Display', serif",
+        color: "black"
+    }
+}
+
 const Jokes = props => {
     const [result, setResult] = useState([])
 
@@ -14,8 +21,8 @@ const Jokes = props => {
 
         return (
             <div>
-                <p> "{result.setup}"</p>
-                <p>{result.punchline}</p>
+                <p style={styles.card}> {result.setup}</p>
+                <p style={styles.card}>{result.punchline}</p>
                 </div> 
                 
         );
@@ -23,14 +30,3 @@ const Jokes = props => {
 }
 
 export default Jokes;
-{/* {result.data?(
-                    <ul>
-
-                    {result.data.map(joke=>(
-                        joke.data?<li key={joke.id}>{joke.data}</li>:
-                        (<li key={joke.id}>{joke.setup}? {joke.punchline}</li>))
-                    
-                    )}
-                    
-                    </ul>
-                ):(<></>)} */}
