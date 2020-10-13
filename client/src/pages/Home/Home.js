@@ -1,17 +1,24 @@
 import React, { Component } from "react";
 import FOOTER from "../../components/FOOTER";
 import LOGO from "../../components/LOGO";
+import PATRONCARD from "../../components/PATRONCARD";
+import VENDORCARD from "../../components/VENDORCARD";
+import MARKETCARD from "../../components/MARKETCARD";
 // import "../../components/App/utils/button"
 class HomePage extends Component {
   render() {
     return (
       <div className="Home">
-        <LOGO />
+        <LOGO></LOGO>
         <div className="row">
-          <div className="col">
-            <div class="treat-wrapper">
-              <button class="treat-button">Produce!</button>
-            </div>
+          <div className="col-sm">
+            <PATRONCARD />
+          </div>
+          <div className="col-sm">
+            <VENDORCARD />
+          </div>
+          <div className="col-sm">
+            <MARKETCARD />
           </div>
         </div>
         <FOOTER />
