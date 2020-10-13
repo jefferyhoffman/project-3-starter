@@ -1,5 +1,5 @@
 body {
-  background-image: url("./assets/images/wonders/Pyramids1920x1080.jpg");
+  background-image: url("./assets/images/wonders/goldenGate1920x1080.jpg");
   background-size: cover;
   background-attachment: fixed;
   animation-name: example;
@@ -23,18 +23,12 @@ body {
 
 }
 @keyframes example {
-  0%    {background-image: url("./assets/images/wonders/Pyramids1920x1080.jpg");}
-  8%   {background-image: url("./assets/images/wonders/Sphinx1920x1080.jpg");}
-  16%   {background-image: url("./assets/images/wonders/TajMahal1920x1080.jpg");}
-  23%   {background-image: url("./assets/images/wonders/ChichenItza1920x1080.jpg");}
-  35%   {background-image: url("./assets/images/wonders/GreatWall1920x1080.jpg");}
-  46%   {background-image: url("./assets/images/wonders/Rome1920x1080.jpg");}
-  55%   {background-image: url("./assets/images/wonders/BigBen1920x1080.jpg");}
-  64%   {background-image: url("./assets/images/wonders/Paris1920x1080.jpg");}
-  72%   {background-image: url("./assets/images/wonders/Neuschwanstein1920x1080.jpg");}
-  82%   {background-image: url("./assets/images/wonders/Rio1920x1080.jpg");}
-  91%  {background-image: url("./assets/images/wonders/Liberty1920x1080.jpg");}
-  100%    {background-image: url("./assets/images/wonders/Pyramids1920x1080.jpg");}
+  0%    {background-image: url("./assets/images/wonders/goldenGate1920x1080.jpg");}
+  25%   {background-image: url("./assets/images/wonders/seattleNeedle1920x1080.jpg");}
+  50%   {background-image: url("./assets/images/wonders/grandCanyon1920x1080.jpg");}
+  75%   {background-image: url("./assets/images/wonders/rushmore1920x1080.jpg");}
+  100%  {background-image: url("./assets/images/wonders/Liberty1920x1080.jpg");}
+
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
