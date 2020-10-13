@@ -6,6 +6,16 @@ import API from '../../lib/API';
 import AuthContext from '../../contexts/AuthContext';
 import LoginForm from '../../components/LoginForm/LoginForm';
 
+const styles={
+
+  title: {
+   
+    fontFamily: "'Raleway', serif",
+    fontSize: "60px",
+  
+  }
+}
+
 class Login extends Component {
   static contextType = AuthContext;
 
@@ -51,7 +61,7 @@ class Login extends Component {
       <div className='Login'>
         <div className='columns'>
           <div className='column'>
-            <h1>Login</h1>
+            <h1 style={styles.title}>Login</h1>
           </div>
         </div>
         {this.state.error &&

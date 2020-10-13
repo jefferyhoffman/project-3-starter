@@ -2,6 +2,17 @@ import React, { Component } from 'react';
 
 import Octicon, { Mail, Key } from '@githubprimer/octicons-react';
 
+const styles = {
+  
+  form: {
+    textAlign: "center",
+    marginRight: "100px"
+  },
+  button: {
+    marginLeft: "115px"
+  }
+}
+
 class LoginForm extends Component {
   state = {
     email: '',
@@ -27,7 +38,7 @@ class LoginForm extends Component {
     const { email, password } = this.state;
 
     return (
-      <div className="card">
+      <div style={styles.form}>
         <form className='LoginForm' onSubmit={this.handleSubmit}>
           <div className="field" >
             <p className="control has-icons-left has-icons-right">
@@ -35,6 +46,7 @@ class LoginForm extends Component {
               <input className="input"
                 type="email"
                 name="email"
+                placeholder="email"
                 value={email}
                 onChange={this.handleInputChange} />
             </p>
@@ -46,6 +58,7 @@ class LoginForm extends Component {
                 className="input"
                 type="password"
                 name="password"
+                placeholder="password"
                 value={password}
                 onChange={this.handleInputChange} />
               <span className="icon is-small is-left">
@@ -53,7 +66,7 @@ class LoginForm extends Component {
               </span>
             </p>
           </div>
-          <button classNameName='button is-primary' type='submit'>Login</button>
+          <button className='button is-primary' type='submit' style={styles.button}>Login</button>
         </form>
       </div >
     )

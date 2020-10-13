@@ -83,7 +83,7 @@ class App extends Component {
               <Route path='/hotline' component={Hotline} />
               <PrivateRoute path='/jokes' component={Jokes} />
               <PrivateRoute path= '/odd' component={Odd} />
-              <PrivateRoute path='/secret' component={Secret} />
+             
               <Route component={NotFound} />
               
             </Switch>
