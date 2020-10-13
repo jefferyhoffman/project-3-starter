@@ -61,8 +61,10 @@ class App extends Component {
               <Route path='/register' component={Register} />
               <PrivateRoute path='/secret' component={Secret} />
               <PrivateRoute path='/patron' component={Patron} />
+
               <PrivateRoute path='/vendor' component={Vendor} />
               <Route path='/searchzip' component={SearchZip} />
+
               <Route component={NotFound} />
             </Switch>
           {/* </div> */}
