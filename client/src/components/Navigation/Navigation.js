@@ -99,7 +99,7 @@ class NavbarPage extends Component {
                     Hats
                   </MDBDropdownItem>
                   {/* change waterbottle link*/}
-                  <MDBDropdownItem href="">Waterbottles</MDBDropdownItem>
+                  <MDBDropdownItem href="/products/category/Bottles">Waterbottles</MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>
             </MDBNavItem>
