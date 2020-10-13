@@ -1,11 +1,23 @@
 import React, { Component } from "react";
 
-
+const styles = {
+  title: {
+    marginTop: "100px",
+    fontFamily: "'Raleway', serif",
+    paddingBottom: "-60px",
+    fontSize: "60px",
+    textAlign:"left",
+    marginLeft: "30px",
+    color: "#8D7183"
+  }
+  }
 
 
 class Odd extends Component {
     render() {
       return (
+        <div>
+        <h1 class="title is-1" style={styles.title}>Oddly Satisfying</h1>
               <section>
                 <div className="columns">
                   <div className="card-image column">
@@ -46,6 +58,7 @@ class Odd extends Component {
                   </div>
                 </div>
               </section>
+              </div>
       
       );
     }

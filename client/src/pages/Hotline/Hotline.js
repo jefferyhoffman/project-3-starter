@@ -17,28 +17,33 @@ const styles = {
     float: "left",
     marginTop: "-10px",
     marginLeft: "20px",
-    fontWeight: "bold"
+    fontWeight: "bold",
+    color: "black"
   },
   headerTwo: {
     float: "left",
     marginTop: "-30px",
     marginLeft: "25px",
     fontSize: "30px",
-    marginBottom: "50px"
+    marginBottom: "50px",
+    color: "black"
   },
   SectionLeft: {
-    marginLeft: "25px",
+    marginLeft: "60px",
     fontSize: "50px",
     textAlign: "left"
   },
   content: {
     textAlign: "left",
     fontSize: "25px",
-    fontWeight: "bold"
+    fontWeight: "bold",
+    marginRight: "30px",
+    color: "black"
   },
   numbers: {
     fontSize: "25px",
-    textAlign: "left"
+    textAlign: "left",
+    color: "black"
   },
   hr: {
     backgroundColor: "grey"

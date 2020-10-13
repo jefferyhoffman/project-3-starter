@@ -1,11 +1,23 @@
 import React, { Component } from "react";
 
-
+const styles = {
+title: {
+  marginTop: "100px",
+  fontFamily: "'Raleway', serif",
+  paddingBottom: "-60px",
+  fontSize: "60px",
+  textAlign:"left",
+  marginLeft: "30px",
+  color: "#71758D"
+}
+}
 
 
 class Breathing extends Component {
     render() {
       return (
+        <div>
+        <h1 class="title is-1" style={styles.title}>Inhale, Exhale</h1>
               <section>
                 <div className="columns">
                   <div className="card-image column">
@@ -46,6 +58,7 @@ class Breathing extends Component {
                   </div>
                 </div>
               </section>
+              </div>
       
       );
     }
