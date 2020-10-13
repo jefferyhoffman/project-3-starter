@@ -161,7 +161,7 @@ const Contact = () => {
             <p className='font-weight-bold blue-text'>Full-Stack Web Developer</p>
 
             <MDBCardText>
-            For this project I co-led the front-end development with my partner for the design and flow of the website. I primarily worked on the home and checkout page.  I worked with the backend team to assist with API routes for the checkout page as well as mapping out the routes for the entire site.  We manipulated Material Design Bootstrap for the layout of the website and I had my hand in Adobe Photoshop as well as Adobe Illustrator.
+            For this project I co-led the front-end development with my partner for the design and flow of the website. I primarily worked on the home and checkout page and worked with the backend team to coorelate API calls for the checkout page.  We manipulated Material Design Bootstrap for the layout of the website and I had my hand in Adobe Photoshop as well as Adobe Illustrator.
             </MDBCardText>
                   <a href='https://github.com/aleckbryson' className='px-2 fa-lg tw-ic'>
                     <MDBIcon fab icon='github'></MDBIcon>
