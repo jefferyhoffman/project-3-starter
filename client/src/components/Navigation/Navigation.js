@@ -40,7 +40,6 @@ class Navigation extends Component {
                 <div class="slider-text4 rounded-sm rounded-lg">Dallas</div>
                 <div class="slider-text5 rounded-sm rounded-lg">San Francisco</div>
                 <div class="slider-text6 rounded-sm rounded-lg">Boston</div>
-
               </div>
             </div>
           </div>
