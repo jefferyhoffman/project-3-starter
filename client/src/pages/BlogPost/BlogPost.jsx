@@ -40,7 +40,7 @@ const BlogPost = () => {
           className="form-group"
           data-aos="fade-right"
           data-aos-offset="200"
-          data-aos-delay="600"
+          data-aos-delay="900"
           data-aos-duration="1000"
     >
           <label htmlFor="exampleInputEmail1">City</label>
@@ -72,7 +72,7 @@ const BlogPost = () => {
 
         <div 
           className="form-group"
-          data-aos="fade-right"
+          data-aos="fade-left"
           data-aos-offset="200"
           data-aos-delay="1400"
           data-aos-duration="1000"
@@ -89,7 +89,7 @@ const BlogPost = () => {
 
         <div 
           className="form-group"
-          data-aos="fade-left"
+          data-aos="fade-right"
           data-aos-offset="200"
           data-aos-delay="1800"
           data-aos-duration="1000"
