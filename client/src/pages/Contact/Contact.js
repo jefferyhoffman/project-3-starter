@@ -127,7 +127,7 @@ const Contact = () => {
           <p className='font-weight-bold blue-text'>Full-Stack Web Developer</p>
 
           <MDBCardText>
-                Front-Genius
+          For this app, I co-led the front-end development by structuring the web pages' design and flow, ensuring the app was mobile-first and collaborating with the back-end team to ensure the front-end pieces matched with the back-end pieces.
           </MDBCardText>
 
           <MDBCol md='12' className='d-flex justify-content-center'>
@@ -161,7 +161,7 @@ const Contact = () => {
             <p className='font-weight-bold blue-text'>Full-Stack Web Developer</p>
 
             <MDBCardText>
-            Front-End Genius
+            For this project I co-led the front-end development with my partner for the design and flow of the website. I primarily worked on the home and checkout page.  I worked with the backend team to assist with API routes for the checkout page as well as mapping out the routes for the entire site.  We manipulated Material Design Bootstrap for the layout of the website and had my hand in Adobe Photoshop as well as Adobe Illustrator.
             </MDBCardText>
                   <a href='https://github.com/aleckbryson' className='px-2 fa-lg tw-ic'>
                     <MDBIcon fab icon='github'></MDBIcon>

@@ -5,6 +5,13 @@ import {MDBContainer,MDBRow,MDBCol,} from  "mdbreact";
 import CartCard from '../../components/CartCard'
 
 const FormPage = () => {
+
+  function emptyCart (cart){
+    if (cart === 0) {
+      return <h1>Your cart is empty!</h1>
+    }
+      return CartCard
+  } 
   return (
     <MDBContainer>
       <br></br>
@@ -77,6 +84,7 @@ const FormPage = () => {
           <h4 className=" text-center mb-4">Your Cart</h4>
 
           {/* Card Start */}
+          
           <CartCard />
           {/* Card End */}
 
