@@ -62,7 +62,7 @@ class Menu extends Component {
 
               <hr class="navbar-divider" />
               <div class="navbar-dropdown">
-                  <Link to='/comedy' onClick={this.toggleCollapse} style={styles.font}>Comedian Corner</ Link>
+                  <Link to='/comedy' onClick={this.toggleCollapse} style={styles.font}>Comedy Corner</ Link>
                   <Link to='/bob' onClick={this.toggleCollapse} style={styles.font}>Bob Ross Channel</ Link>
                   <Link to='/breathing' onClick={this.toggleCollapse} style={styles.font}>Breathing Exercises</ Link>
                   <Link to='/odd' onClick={this.toggleCollapse} style={styles.font}>Oddly Satisfying</ Link>
