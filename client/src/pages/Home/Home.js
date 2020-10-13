@@ -4,7 +4,7 @@ import LOGO from "../../components/LOGO";
 import PATRONCARD from "../../components/PATRONCARD";
 import VENDORCARD from "../../components/VENDORCARD";
 import MARKETCARD from "../../components/MARKETCARD";
-import Navigation from '../../components/NAVBAR';
+import Navigation from "../../components/NAVBAR";
 
 class HomePage extends Component {
   render() {

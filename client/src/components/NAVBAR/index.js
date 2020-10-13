@@ -23,7 +23,7 @@ class NAVBAR extends Component {
     const togglerClass = `navbar-toggler ${collapsed && 'collapsed'}`;
     return (
       <div className='Navigation'>
-        <nav className="navbar navbar-light #388e3c green darken-2 text-black animated slideInLeft">
+        <nav className="navbar navbar-light bg-green text-black animated slideInLeft">
           {/*<!-- Navbar brand -->*/}
           <Link className="navbar-brand text-black" href="#">
             Farm Fresh Market
