@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from "react";
 import API from '../../lib/API'
 
+const styles = {
+    card: {
+        fontFamily: "'Playfair Display', serif",
+        color: "black"
+    }
+}
+
 const AffirmationsApi = props => {
     const [result, setResult] = useState([])
 
@@ -13,7 +20,7 @@ const AffirmationsApi = props => {
 
     return (
         <div>
-            <p> "{result.affirmation}"</p>
+            <p style={styles.card}> "{result.affirmation}"</p>
         </div>
     )
 
