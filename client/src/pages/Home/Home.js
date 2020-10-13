@@ -37,8 +37,8 @@ const HomePage = () => {
 
   return (
 
-    <>
-      <div id="apppage" className="view">
+    <div>
+      <div>
         {/* HERO IMAGE */}
         <Hero />
         <hr className="solid"></hr>
@@ -151,7 +151,7 @@ const HomePage = () => {
         </MDBRow>
       </MDBContainer>
 
-    </>
+    </div>
 
 
   );

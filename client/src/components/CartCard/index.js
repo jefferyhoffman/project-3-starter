@@ -16,6 +16,7 @@ import {
 } from
   "mdbreact";
 import API from '../../lib/API';
+import '../CartCard/index.css'
 
 
 
@@ -77,14 +78,14 @@ const Cart = props => {
 
         <MDBCol md="6">
           
-          <MDBBtn fluid size="sm" className="inline btn-dark" onClick={incrementCount}>
-            <i class="fas fa-plus"></i></MDBBtn>
+          <MDBBtn fluid size="sm" className="inline btn-dark " onClick={incrementCount}>
+            <i class="fas fa-plus chk"></i></MDBBtn>
 
           <span>{count}</span>
 
-            <MDBBtn fluid size="sm" className="inline btn-dark" onClick={decrementCount}>
+            <MDBBtn fluid size="sm" className="inline btn-dark"  onClick={decrementCount}>
 
-            <i class="fas fa-minus"></i></MDBBtn>
+            <i class="fas fa-minus chk2"></i></MDBBtn>
           <p>{props.price}</p>
         </MDBCol>
       </MDBRow>
