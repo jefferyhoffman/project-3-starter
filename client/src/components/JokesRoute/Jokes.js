@@ -11,21 +11,24 @@ const Jokes =props=>{
       .then(({data})=>setResult(data))
 
   },[API.Jokes])
+
+  console.log(result.data)
     
 
         return (
             <div>
-                {result.jokes?(
+                {result.data?(
                     <ul>
 
-                    {result.jokes.map(joke=>(
-                        joke.joke?<li key={joke.id}>{joke.joke}</li>:
-                        (<li key={joke.id}>{joke.setup}? {joke.delivery}</li>))
+                    {result.data.map(joke=>(
+                        joke.data?<li key={joke.id}>{joke.data}</li>:
+                        (<li key={joke.id}>{joke.setup}? {joke.punchline}</li>))
                     
                     )}
                     
                     </ul>
                 ):(<></>)}
+
         
              </div> 
         );
