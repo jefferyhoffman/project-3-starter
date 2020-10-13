@@ -98,9 +98,9 @@ const Contact = () => {
                 </MDBCardBody>
               </MDBCard>
             </MDBCol>
-          </MDBCardBody>
+          {/* </MDBCardBody>
         </MDBCard>
-      </MDBCol>
+      </MDBCol> */}
     </MDBRow>
     </MDBAnimation>
     <hr></hr>
