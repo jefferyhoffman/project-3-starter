@@ -19,8 +19,7 @@ import Category from '../../pages/Category';
 import Wellness from '../../pages/Wellness';
 import ProductsByGender from '../../pages/ProductsByGender';
 import Checkout from '../../pages/Checkout/checkout';
-//import Intro from '../../pages/Testsomething/index'
-//import NavbarSlider from '../NavbarSlider/index'
+
 import "./App.css";
 import { Nav } from "react-bootstrap";
 
