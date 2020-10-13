@@ -60,25 +60,27 @@ const Product = props => {
         <MDBCol>
           <h4 style={{ fontWeight: "bold" }}>{product.name}</h4>
           {/* <h6>{product.inventory && product.inventory[3].color}</h6> */}
-          {colorArr ? colorArr.map(buttonColor => {
-            console.log(buttonColor, color);
+          {colorArr.map(buttonColor => {
             return buttonColor === color ? (
               <MDBBtn color="white" size="sm" onClick={() => setColor(buttonColor)} active>{buttonColor}</MDBBtn>
             ) : (
               <MDBBtn color="white" size="sm" onClick={() => setColor(buttonColor)}>{buttonColor}</MDBBtn>
             )
-          }
-          ) : null}
+          })}
           <h6>${product.price}</h6>
           <hr className="solid"></hr>
-          {color ? (
+          {color && (
             <>
-            <h6>Select Size</h6>
-            {sizes.map(prod => (
-            <MDBBtn outline color={button} size="sm" onClick={() => setSize(prod.size)}>{prod.size}</MDBBtn>
-          ))}
-          </>
-          ) : null}
+              <h6>Select Size</h6>
+              {sizes.map(prod => {
+                return prod.size === size ? (
+                  <MDBBtn color="white" size="sm" onClick={() => setSize(prod.size)} active>{prod.size}</MDBBtn>
+                ) : (
+                  <MDBBtn color="white" size="sm" onClick={() => setSize(prod.size)}>{prod.size}</MDBBtn>
+                )
+              })}
+            </>
+          )}
           {/* <MDBBtn outline color = "black" size = "sm">s</MDBBtn>
           <MDBBtn outline color = "black" size = "sm">m</MDBBtn>
           <MDBBtn outline color = "black" size = "sm">l</MDBBtn>
