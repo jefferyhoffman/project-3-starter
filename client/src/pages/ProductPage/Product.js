@@ -31,18 +31,22 @@ const Product = props => {
   }, [props.match.params.id]);
   useEffect(() => {
     if (color) {
-      console.log("size changes")
+      // console.log("size changes")
       const newList = product.inventory.filter(prod => prod.color === color)
-      console.log(newList)
+      // console.log(newList)
       setSizes(newList)
     }
   }, [color])
-  console.log("PROPS ===>", props);
+  // console.log("PROPS ===>", props);
+
   const cartAdd = () => {
     const id = props.match.params.id
-    console.log(context.authToken)
-    console.log("ID =====>", id)
-    API.Users.addToCart(context.authToken, { product: { id: id }, color: {color}, size: {size} })
+    console.log("authToken ====>", context.authToken)
+    console.log(color)
+    console.log(size)
+    console.log("ID =====>", id) 
+
+    API.Users.addToCart(context.authToken, { product: id, color: color, size: size} )
       .then(res => {
         console.log(res)
       })
@@ -59,7 +63,6 @@ const Product = props => {
         </MDBCol>
         <MDBCol>
           <h4 style={{ fontWeight: "bold" }}>{product.name}</h4>
-          {/* <h6>{product.inventory && product.inventory[3].color}</h6> */}
           {colorArr.map(buttonColor => {
             return buttonColor === color ? (
               <MDBBtn color="white" size="sm" onClick={() => setColor(buttonColor)} active>{buttonColor}</MDBBtn>
@@ -81,10 +84,6 @@ const Product = props => {
               })}
             </>
           )}
-          {/* <MDBBtn outline color = "black" size = "sm">s</MDBBtn>
-          <MDBBtn outline color = "black" size = "sm">m</MDBBtn>
-          <MDBBtn outline color = "black" size = "sm">l</MDBBtn>
-          <MDBBtn outline color = "black" size = "sm">xl</MDBBtn> */}
           <MDBBtn color="black" size="lg" style={{ marginTop: "20px", marginBottom: "20px" }} onClick={cartAdd}>Add to Cart</MDBBtn>
           <h6 style={{ fontWeight: "bold" }}>Product Details</h6>
           <p>{product.description}</p>

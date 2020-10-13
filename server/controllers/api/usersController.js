@@ -33,9 +33,9 @@ usersController.post('/login', (req, res) => {
 });
 
 usersController.put('/me/cart', JWTVerifier, (req, res) => {
-  db.Users.update({ _id: req.user._id }, { $push: { "cart.products": req.body.id } })
+  db.Users.update({ _id: req.user._id }, {$push:{cart: req.body }})
     .then(data => {
-      res.json(data);
+      res.json(data); 
     })
   })
   usersController.get('/me/cart', JWTVerifier, (req, res) => {

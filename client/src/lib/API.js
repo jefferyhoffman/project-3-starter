@@ -18,8 +18,9 @@ export default {
       });
     },
 
-    addToCart: function (authToken, id){
-      return axios.put('/api/users/me/cart', id, {
+    addToCart: function (authToken, data){
+      console.log(authToken)
+      return axios.put('/api/users/me/cart', data, {
         headers: {
           'Authorization': `Bearer ${authToken}`
         }
