@@ -29,17 +29,17 @@ class Navigation extends Component {
                     header-footer-opacity
                     '>
         <nav className='navbar navbar-expand-lg navbar-light bg-light mb-3'>
-          <Link className='navbar-brand' to='#'>🌎Travel App</Link>
+          <Link className='navbar-brand' to='/'>Travel USA</Link>
           <div class="travelContent">
             <div class="slider-wrapper">
-              Travel to
+          <span role="img" aria-label="Liberty">🗽Travel to</span>
             <div class="slider">
-                <div class="slider-text1 rounded-sm rounded-lg">Australia</div>
-                <div class="slider-text2 rounded-sm rounded-lg">Europe</div>
-                <div class="slider-text3 rounded-sm rounded-lg">America</div>
-                <div class="slider-text4 rounded-sm rounded-lg">Asia</div>
-                <div class="slider-text5 rounded-sm rounded-lg">Africa</div>
-                <div class="slider-text6 rounded-sm rounded-lg">Australia</div>
+                <div class="slider-text1 rounded-sm rounded-lg">New York</div>
+                <div class="slider-text2 rounded-sm rounded-lg">Chicago</div>
+                <div class="slider-text3 rounded-sm rounded-lg">Los Angeles</div>
+                <div class="slider-text4 rounded-sm rounded-lg">Dallas</div>
+                <div class="slider-text5 rounded-sm rounded-lg">San Francisco</div>
+                <div class="slider-text6 rounded-sm rounded-lg">Boston</div>
 
               </div>
             </div>
