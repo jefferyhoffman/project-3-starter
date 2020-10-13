@@ -16,7 +16,7 @@ function App() {
   useEffect(() => {
     axios.get("https://api.foursquare.com/v2/venues/search?ll=35.2271,-80.8431&categoryId=52e81612bcbc57f1066b7a39&client_id=GUYLPUB3SWUZFQTKM5DO43DDFN4GDACKUE1N0O4KPCGZ5C2I&client_secret=DZECQ5LKFMJTQY2JXJWKUJBQB0WK5A1Z524BGRM1XTDQLA0K&limit=100&v=20180628")
       .then(res => {
-        //console.log(res.data);
+        console.log(res.data);
         setHospitals(res.data.response.venues);
       });
 
@@ -35,6 +35,9 @@ function App() {
           <>
             {hospitals.map((hospital) => (
               <Marker
+                
+                
+                clickable={true}
                 key={hospital.id}
                 position={{
                   lat: hospital.location.lat,
