@@ -13,8 +13,7 @@ export default function BlogCard(props) {
             data-aos-easing="ease-in-out"
             data-aos-mirror="true"
             data-aos-once="false"
-            // data-aos-anchor-placement="top-center"
-
+        // data-aos-anchor-placement="top-center"
         >
             <Card className="m-2">
                 <Card.Img variant="top" src={props.img} />
@@ -23,6 +22,7 @@ export default function BlogCard(props) {
                     <Card.Subtitle className="mb-2 text-muted">{props.author}</Card.Subtitle>
                     <Card.Text>{props.text}</Card.Text>
                 </Card.Body>
+                <button onClick={() => props.delete(props.id)}>Delete</button>
             </Card>
 
         </div>

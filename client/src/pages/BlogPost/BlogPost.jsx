@@ -13,60 +13,59 @@ const BlogPost = () => {
   const [blog, setBlog] = useState("");
   const [imgUrl, setImgUrl] = useState("");
   const [redirect, setRedirect] = useState(false)
-    const handleSub = e=> {
-        e.preventDefault()
-        const newPost ={
-            email: user.email,
-            city: city,
-            state: state,
-            blog: blog,
-            image: imgUrl
 
-        }
-        API.Blog.create(newPost)
-          .then(data => {
-            console.log("created blog", data);
-            setRedirect(true)
-          })
-          .catch(err => {
-            console.log(err);
-          })
+  const handleSub = e => {
+    e.preventDefault()
+    const newPost = {
+      email: user.email,
+      city: city,
+      state: state,
+      blog: blog,
+      image: imgUrl
+
     }
+    API.Blog.create(newPost)
+      .then(data => {
+        console.log("created blog", data);
+        setRedirect(true)
+      })
+      .catch(err => {
+        console.log(err);
+      })
+  }
   return (
     <>
-      {redirect? <Redirect to="/blog" />:null}
+      {redirect ? <Redirect to="/blog" /> : null}
       <form onSubmit={e => handleSub(e)}>
         <div className="form-group">
           <label htmlFor="exampleInputEmail1">City</label>
           <input
             type="text"
             className="form-control"
-            onChange={e=> setCity(e.target.value)}
+            onChange={e => setCity(e.target.value)}
           />
-          
+
         </div>
-
-
         <div className="form-group">
           <label className="mr-1" htmlFor="exampleInputEmail1">State</label>
           <select onChange={e => setState(e.target.value)}>
             {stateAbreviations.map(val => {
-              return(
+              return (
                 <option value={val}>{val}</option>
               )
             })}
           </select>
-          
+
         </div>
 
         <div className="form-group">
           <label htmlFor="exampleInputEmail1">Blog</label>
           <textarea
-            
+
             className="form-control"
-            onChange={e=> setBlog(e.target.value)}
+            onChange={e => setBlog(e.target.value)}
           ></textarea>
-          
+
         </div>
 
 
@@ -75,13 +74,11 @@ const BlogPost = () => {
           <input
             type="text"
             className="form-control"
-            onChange={e=> setImgUrl(e.target.value)}
+            onChange={e => setImgUrl(e.target.value)}
           />
-
-          
         </div>
 
-        
+
 
         <button type="submit" className="btn btn-primary">
           Submit
