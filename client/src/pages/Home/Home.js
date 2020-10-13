@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import FOOTER from "../../components/FOOTER";
+import FOOTER from "../../components/Footer";
 import LOGO from "../../components/LOGO";
 import PATRONCARD from "../../components/PATRONCARD";
 import VENDORCARD from "../../components/VENDORCARD";
