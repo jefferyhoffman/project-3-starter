@@ -31,15 +31,15 @@
 
 .main {
     flex: 1;
-    background-image: linear-gradient(to right, #FEFEFE, #019CAD, #23a6d5, #23d5ab);
-    animation: gradient 15s ease infinite;
+    background-image: linear-gradient(-55deg, #FEFEFE, #019CAD, #23a6d5, #23d5ab);
+    animation: Animation s ease-in-out infinite;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
+@keyframes Animation {
+    0% {
+        background-position: 0 50%;
     }
-    to {
-        transform: rotate(360deg);
+    50% {
+        background-position: 100% 50%;
     }
 }

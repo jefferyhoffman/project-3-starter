@@ -34,10 +34,10 @@ class Register extends Component {
     }
 
     return (
-      <div className='Login'>
+      <div className='Login animate__animated animate__fadeIn animate__delay-1s'>
         <div className='row'>
           <div className='col'>
-            <h1>Register Account</h1>
+            <h1 className='font'>Register Account</h1>
           </div>
         </div>
         {this.state.error &&

@@ -17,7 +17,7 @@ function Member() {
     }, [user.authToken])
 
     return (
-        <div >
+        <div className='animate__animated animate__fadeIn animate__delay-1s' >
 
             <MyCalendar bills={bills} />
 
