@@ -29,45 +29,39 @@ const Contact = () => {
     </MDBContainer>
     </MDBAnimation>
     <MDBContainer>
-    <MDBAnimation type="fadeInLeft" delay=".7s">
-
+    <MDBAnimation type="fadeIn" delay=".7s">
     <MDBRow>
-    
-      <MDBCol md='6'>
-        <MDBCard wide cascade>
+      <MDBCol md = "6">
+      <MDBCard narrow>
           <MDBView cascade>
             <MDBCardImage
               hover
               overlay='white-slight'
               className='card-img-top'
-              src={Kristian}
-              alt='Card cap'
+              src={Aleck}
+              alt='food'
             />
           </MDBView>
 
-          <MDBCardBody cascade className='text-center'>
+        <MDBCardBody>
             <MDBCardTitle className='card-title'>
-              <strong>Kristian Worthy</strong>
+              <strong>Aleck Tuluenga</strong>
             </MDBCardTitle>
-
             <p className='font-weight-bold blue-text'>Full-Stack Web Developer</p>
-
             <MDBCardText>
-                  Front-Genius
+            Worked on implementing products and seeding them into the website to where it can successfully speak to the front-end and display. Also helped assist with additional back-end material
             </MDBCardText>
 
-            <MDBCol md='12' className='d-flex justify-content-center'>
-            <a href='https://www.linkedin.com/in/ksworthy/' className='px-2 fa-lg li-ic'>
+            <a href='https://www.linkedin.com/in/aleck-bryson-tuluenga-86295264/' className='px-2 fa-lg li-ic'>
                 <MDBIcon fab icon='linkedin-in'></MDBIcon>
               </a>
 
-              <a href='https://github.com/oksimone' className='px-2 fa-lg tw-ic'>
+              <a href='https://github.com/aleckbryson' className='px-2 fa-lg tw-ic'>
                 <MDBIcon fab icon='github'></MDBIcon>
               </a>
-            </MDBCol>
           </MDBCardBody>
-        </MDBCard>
-      </MDBCol>
+          </MDBCard>
+        </MDBCol>
 
       <MDBCol md='6'>
         <MDBCard narrow>
@@ -109,39 +103,46 @@ const Contact = () => {
     </MDBAnimation>
     <hr></hr>
   {/* Bottom */}
-  <MDBAnimation type="fadeInLeft" delay=".7s">
-<MDBRow>
-      <MDBCol md = "6">
-      <MDBCard narrow>
-          <MDBView cascade>
-            <MDBCardImage
-              hover
-              overlay='white-slight'
-              className='card-img-top'
-              src={Aleck}
-              alt='food'
-            />
-          </MDBView>
+  <MDBAnimation type="fadeInRight" delay=".7s">
 
-        <MDBCardBody>
-            <MDBCardTitle className='card-title'>
-              <strong>Aleck Tuluenga</strong>
-            </MDBCardTitle>
-            <p className='font-weight-bold blue-text'>Full-Stack Web Developer</p>
-            <MDBCardText>
-            Worked on implementing products and seeding them into the website to where it can successfully speak to the front-end and display. Also helped assist with additional back-end material
-            </MDBCardText>
 
-            <a href='https://www.linkedin.com/in/aleck-bryson-tuluenga-86295264/' className='px-2 fa-lg li-ic'>
-                <MDBIcon fab icon='linkedin-in'></MDBIcon>
-              </a>
+    <MDBRow>
+    
+    <MDBCol md='6'>
+      <MDBCard wide cascade>
+        <MDBView cascade>
+          <MDBCardImage
+            hover
+            overlay='white-slight'
+            className='card-img-top'
+            src={Kristian}
+            alt='Card cap'
+          />
+        </MDBView>
 
-              <a href='https://github.com/aleckbryson' className='px-2 fa-lg tw-ic'>
-                <MDBIcon fab icon='github'></MDBIcon>
-              </a>
-          </MDBCardBody>
-          </MDBCard>
-        </MDBCol>
+        <MDBCardBody cascade className='text-center'>
+          <MDBCardTitle className='card-title'>
+            <strong>Kristian Worthy</strong>
+          </MDBCardTitle>
+
+          <p className='font-weight-bold blue-text'>Full-Stack Web Developer</p>
+
+          <MDBCardText>
+                Front-Genius
+          </MDBCardText>
+
+          <MDBCol md='12' className='d-flex justify-content-center'>
+          <a href='https://www.linkedin.com/in/ksworthy/' className='px-2 fa-lg li-ic'>
+              <MDBIcon fab icon='linkedin-in'></MDBIcon>
+            </a>
+
+            <a href='https://github.com/oksimone' className='px-2 fa-lg tw-ic'>
+              <MDBIcon fab icon='github'></MDBIcon>
+            </a>
+          </MDBCol>
+        </MDBCardBody>
+      </MDBCard>
+    </MDBCol>
 
     <MDBCol md='6'>
         <MDBCard>
