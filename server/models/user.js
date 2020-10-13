@@ -37,11 +37,7 @@ const UserSchema = new Schema({
     }
   ],
   cart: [
-    // total: {
-    //   type: Number,
-    //   // required: "Total is required"
-    // },
-    //products: [
+    
       {
       
       product:  {
@@ -56,7 +52,7 @@ const UserSchema = new Schema({
       }
     }
     ],
-  //},
+ 
   shippingAddress: [
     {
       firstName: {
