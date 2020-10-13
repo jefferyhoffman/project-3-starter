@@ -7,7 +7,7 @@ function VENDORCARD(){
     <div className="card-body">
       <h5 className="card-title">Vendor</h5>
       <p className="card-text">Vendors please click here.</p>
-      <a href="#" className="btn btn-primary">Vendor Page</a>
+      <a href="/vendor" className="btn btn-primary">Vendor Page</a>
    
     </div>
     </div>
