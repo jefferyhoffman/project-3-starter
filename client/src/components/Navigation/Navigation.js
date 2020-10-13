@@ -25,7 +25,7 @@ class Navigation extends Component {
 
     return (
       <div className='Navigation'>
-        <nav className='navbar navbar-light #388e3c green darken-2 text-white animated slideInLeft'>
+        <nav className='navbar navbar-light #388e3c green darken-2 text-black animated slideInLeft'>
           <Link className='navbar-brand' to='#'>Farm Fresh Market</Link>
           <button className={togglerClass} onClick={this.toggleCollapse} data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
             <span className='navbar-toggler-icon'></span>

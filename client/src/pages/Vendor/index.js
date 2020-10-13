@@ -1,5 +1,7 @@
 import React from "react";
 import "./style.css";
+import Navigation from '../../components/NAVBAR';
+
 function Vendor(){
   
    return (

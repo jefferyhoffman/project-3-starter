@@ -4,7 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import API from '../../lib/API';
 import TokenStore from '../../lib/TokenStore';
 import AuthContext from '../../contexts/AuthContext';
-import Navigation from '../../components/Navigation/Navigation';
+import Navigation from '../../components/NAVBAR/index';
 import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
 import Home from '../../pages/Home/Home';
 import Login from '../../pages/Login/Login';
@@ -53,7 +53,6 @@ class App extends Component {
     return (
       <AuthContext.Provider value={this.state.auth}>
         <div className='App'>
-          <Navigation />
           {/* <div className='container'> */}
             <Switch>
               <Route exact path='/home' component={Home} />
