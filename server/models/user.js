@@ -86,11 +86,11 @@ const UserSchema = new Schema({
     }
   ]
 },
-  // {
-  //   toJSON: {
-  //     virtuals: true
-  //   }
-  // }
+  {
+    toJSON: {
+      virtuals: true
+    }
+  }
 );
 
 // UserSchema.virtual("Total").get(function () {
