@@ -110,14 +110,14 @@ const HomePage = () => {
         </MDBRow>
       </MDBContainer>
 
-      {/* </section> */}
+      
       {/* MENS BEST SELLERS  */}
-      {/* <section className="sga"> */}
+      
       <hr className="solid"></hr>
-      <MDBContainer className="fear">
+      <MDBContainer className="">
         <MDBRow>
-          <MDBTypography tag="h4" abbr="false" className="text-right" variant="display-4">Men's Best Sellers</MDBTypography>
-          {/* <MDBCol md={}></MDBCol> */}
+          <MDBTypography tag="h4" className="text-right" variant="display-4">Men's Best Sellers</MDBTypography>
+          
           <MDBCol md={12}>
          
             <Cards
@@ -125,15 +125,15 @@ const HomePage = () => {
             />
           {/* ))} */}
           </MDBCol>
-          {/* <MDBCol md={1}></MDBCol> */}
+          
         </MDBRow>
       </MDBContainer>
-      {/* </section> */}
+     
       <hr className="solid"></hr>
       <MDBContainer>
         <MDBRow>
-          <MDBTypography tag="h4" abbr="false" className="text-right" variant="display-4">Women's Best Sellers</MDBTypography>
-          {/* <MDBCol md={1}></MDBCol> */}
+          <MDBTypography tag="h4" className="text-right" variant="display-4">Women's Best Sellers</MDBTypography>
+          
           <MDBCol md={12}>
             <Cards
               items={womensBest.slice(0,4)}

@@ -36,12 +36,12 @@ const UserSchema = new Schema({
       ]
     }
   ],
-  cart: {
+  cart: [
     // total: {
     //   type: Number,
     //   // required: "Total is required"
     // },
-    products: [
+    //products: [
       {
       
       product:  {
@@ -55,8 +55,8 @@ const UserSchema = new Schema({
         type: String
       }
     }
-    ]
-  },
+    ],
+  //},
   shippingAddress: [
     {
       firstName: {

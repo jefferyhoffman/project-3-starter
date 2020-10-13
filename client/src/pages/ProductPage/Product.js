@@ -17,6 +17,8 @@ const Product = props => {
   const [colorArr, setColorArr] = useState([])
   const [sizes, setSizes] = useState([])
   const [size, setSize] = useState("")
+  const [btnColor, setBtnColor] = useState("black")
+
   useEffect(() => {
     API.Products.getProduct(props.match.params.id)
       .then(res => {
@@ -33,25 +35,32 @@ const Product = props => {
   }, [props.match.params.id]);
   useEffect(() => {
     if (color) {
-      console.log("size changes")
+      // console.log("size changes")
       const newList = product.inventory.filter(prod => prod.color === color)
-      console.log(newList)
+      // console.log(newList)
       setSizes(newList)
     }
   }, [color])
-  console.log("PROPS ===>", props);
+  // console.log("PROPS ===>", props);
 
   const cartAdd = () => {
     const id = props.match.params.id
-    console.log(context.authToken)
+    console.log("authToken ====>", context.authToken)
+    console.log(color)
+    console.log(size)
+    console.log("ID =====>", id) 
 
-    console.log("ID =====>", id)
-
-    API.Users.addToCart(context.authToken, { product: { id: id }, color: {color}, size: {size} })
+    API.Users.addToCart(context.authToken, { product: id, color: color, size: size} )
       .then(res => {
         console.log(res)
       })
       .catch(err => console.log(err))
+  }
+
+  const changeBtn = () => {
+    console.log(btnColor);
+    // if(btnColor){setBtnColor('green')}
+    // else{setBtnColor('black')}
   }
 
   return (
@@ -65,7 +74,6 @@ const Product = props => {
         </MDBCol>
         <MDBCol>
           <h4 style={{ fontWeight: "bold" }}>{product.name}</h4>
-          {/* <h6>{product.inventory && product.inventory[3].color}</h6> */}
           {colorArr ? colorArr.map(color => (
             <MDBBtn outline color="black" size="sm" onClick={() => setColor(color)}>{color}</MDBBtn>
 
@@ -76,14 +84,11 @@ const Product = props => {
             <>
             <h6>Select Size</h6>
             {sizes.map(prod => (
-            <MDBBtn outline color="black" size="sm" onClick={() => setSize(prod.size)}>{prod.size}</MDBBtn>
+          <MDBBtn outline color={btnColor} size="sm" onClick={() => setSize(prod.size) && {changeBtn}}>{prod.size}</MDBBtn>
           ))}
           </>
           ) : null}
-          {/* <MDBBtn outline color = "black" size = "sm">s</MDBBtn>
-          <MDBBtn outline color = "black" size = "sm">m</MDBBtn>
-          <MDBBtn outline color = "black" size = "sm">l</MDBBtn>
-          <MDBBtn outline color = "black" size = "sm">xl</MDBBtn> */}
+         
           <MDBBtn color="black" size="lg" style={{ marginTop: "20px", marginBottom: "20px" }} onClick={cartAdd}>Add to Cart</MDBBtn>
           <h6 style={{ fontWeight: "bold" }}>Product Details</h6>
           <p>{product.description}</p>
