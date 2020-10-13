@@ -54,10 +54,33 @@ class Navigation extends Component {
                 Home
               </Link>
 
-              {user &&
-                <Link className='navbar-item' to='/profile' onClick={this.toggleCollapse}>
-                  Profile
+              <div class="navbar-item has-dropdown is-hoverable">
+                {user &&
+                  <Link className="navbar-link" to='/profile' onClick={this.toggleCollapse}>
+                    Profile
              </Link>}
+                <hr class="navbar-divider" />
+                <div class="navbar-dropdown">
+                  <Link className="navbar-item" to='/profile' onClick={this.toggleCollapse} >Profile</Link>
+                  <Link className="navbar-item" to='/community' onCick={this.toggleCollapse} >Community</Link>
+
+
+
+                  <hr class="navbar-divider" />
+                  <Link className="navbar-item" to='/affirmations' onClick={this.toggleCollapse} > Affirmations</Link>
+                  <Link className="navbar-item" to="/mantras" onClick={this.toggleCollapse} >Mantras</Link>
+                  <Link className="navbar-item" to="/jokes" onClick={this.toggleCollapse} >Jokes</Link>
+
+
+                  <hr class="navbar-divider" />
+
+                  <a><Link className="navbar-item" to='/comedy' onClick={this.toggleCollapse} >Comedian Corner</ Link></a>
+                  <a><Link className="navbar-item" to='/bob' onClick={this.toggleCollapse} >Bob Ross Channel</ Link></a>
+                  <Link className="navbar-item" to='/breathing' onClick={this.toggleCollapse} >Breathing Exercises</ Link>
+                  <Link className="navbar-item" to='/odd' onClick={this.toggleCollapse} >Oddly Satisfying</ Link>
+                </div>
+              </div>
+
               <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link">
                   Resources</a>
@@ -70,32 +93,7 @@ class Navigation extends Component {
                 </div>
               </div>
 
-              <div class="navbar-item has-dropdown is-hoverable">
-              {user &&
-               <a className='navbar-link'><Link  to='/profile' onClick={this.toggleCollapse}>
-                  Profile
-             </Link></a> }
-                <hr class="navbar-divider" />
-                <div class="navbar-dropdown">
-                  <Link to='/profile' onClick={this.toggleCollapse} style={styles.font}>Profile</Link>
-                  <Link to='/community' onCick={this.toggleCollapse} style={styles.font}>Community</Link>
-                </div>
 
-
-                <div class="navbar-dropdown">
-                  <Link to='/affirmations' onClick={this.toggleCollapse} style={styles.font}> Affirmations</Link>
-                  <Link to="/mantras" onClick={this.toggleCollapse} style={styles.font}>Mantras</Link>
-                  <Link to="/jokes" onClick={this.toggleCollapse} style={styles.font}>Jokes</Link>
-                </div>
-
-                <hr class="navbar-divider" />
-                <div class="navbar-dropdown">
-                  <Link to='/comedy' onClick={this.toggleCollapse} style={styles.font}>Comedian Corner</ Link>
-                  <Link to='/bob' onClick={this.toggleCollapse} style={styles.font}>Bob Ross Channel</ Link>
-                  <Link to='/breathing' onClick={this.toggleCollapse} style={styles.font}>Breathing Exercises</ Link>
-                  <Link to='/odd' onClick={this.toggleCollapse} style={styles.font}>Oddly Satisfying</ Link>
-                </div>
-              </div>
             </div>
 
             <div className="navbar-end">
