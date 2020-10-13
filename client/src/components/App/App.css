@@ -1,43 +1,45 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+    animation: App-logo-spin infinite 20s linear;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
-.App{
 
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.App {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
-.main{
-  flex:1;
-  background-image: url(https://unsplash.it/1920/1080);
+
+.main {
+    flex: 1;
+    background-image: linear-gradient(to right, #FEFEFE, #019CAD, #23a6d5, #23d5ab);
+    animation: gradient 15s ease infinite;
 }
+
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
-

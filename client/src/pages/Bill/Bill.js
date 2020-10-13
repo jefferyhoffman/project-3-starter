@@ -14,7 +14,7 @@ function Bill() {
         <div>
             
             <Form submit={handleSub} />
-           
+         
         </div>
     )
 }
