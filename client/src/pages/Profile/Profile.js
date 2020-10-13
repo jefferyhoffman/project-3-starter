@@ -24,11 +24,25 @@ const styles = {
     width: "100%",
     height: "150vh"
   },
-  titles: {
-    textAlign: "center",
-  },
-  borderColor:{
+  // titles: {
+  //   textAlign: "center",
+  // },
+  border:{
     borderColor:"red"
+  },
+  dose: {
+    fontSize: "50px",
+    textAlign:"left",
+    marginBottom: "-80px",
+    fontFamily: "'Raleway', serif",
+    color: "#718D7B"
+  },
+  inside: {
+    marginRight: "-45px",
+    marginBottom: "90px"
+  },
+  quote: {
+    marginTop: "80px"
   }
 }
 
@@ -48,6 +62,7 @@ class Profile extends Component {
   
   render() {
     return (
+      <div><h1 style={styles.dose}>Daily Dose</h1>
       <div className="columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd">
         <div className="column is-narrow" >
           <aside className="menu sticky" style={styles.menu}>
@@ -65,7 +80,7 @@ class Profile extends Component {
             </ul>
             <ul className="menu-list">
               <li>
-                <a className="menu-label is-active" style={styles.active}>Daily Dose</a>
+                <a className="menu-label is-active" style={styles.active}>Mood Boosters</a>
                 <ul>
                   <li><Link to='/affirmations' onClick={this.toggleCollapse} style={styles.font}> Affirmations</Link></li>
                   <li><Link to="/mantras" onClick={this.toggleCollapse} style={styles.font}>Mantras</Link></li>
@@ -95,24 +110,27 @@ class Profile extends Component {
             </ul>
           </aside>
         </div>
+        
         <div className="tile is-ancestor">
           <div className="tile is-vertical is-parent">
             <div className="tile is-child box">
-              <p className="title" style={styles.titles}>Daily Affirmation</p>
+              <p className="title" style={styles.inside}>Daily Affirmation</p>
              <AffirmationsApi />
             </div>
             <div className="tile is-child box">
-              <p className="title">Joke of the Day</p>
+              <p className="title" style={styles.inside}>Joke of the Day</p>
               <Jokes />
             </div>
           </div>
           <div className="tile is-parent">
             <div className="tile is-child box">
+            <img src="https://images.squarespace-cdn.com/content/v1/5566620be4b0f5a055effbe7/1444012136978-S8WACKWBKQ5N733SCT14/ke17ZwdGBToddI8pDm48kF3Nq5Vh0E6btzUhEfxenawUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8PaoYXhp6HxIwZIk7-Mi3Tsic-L2IOPH3Dwrhl-Ne3Z2X7xmk6LHg8rv0Y7Y5lYZVRH8P98fxlwmdp9hhh-n1DAKMshLAGzx4R3EDFOm1kBS/Mental+Health+Week+Statistics+Austraia?format=750w" className="card-img-top" alt="" />
               <p className="title"></p>
              
             </div>
           </div>
         </div>
+      </div>
       </div>
     );
   }
