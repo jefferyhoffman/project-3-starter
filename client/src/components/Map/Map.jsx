@@ -35,6 +35,8 @@ function App() {
           <>
             {hospitals.map((hospital) => (
               <Marker
+                
+                
                 clickable={true}
                 key={hospital.id}
                 position={{
