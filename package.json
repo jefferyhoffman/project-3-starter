@@ -17,10 +17,6 @@
     "devDependencies": {
         "concurrently": "^4.1.0",
         "nodemon": "^1.18.10"
-    },
-    "dependencies": {
-        "react-modal": "^3.11.2",
-        "react-social-login-buttons": "^3.1.0",
-        "reactstrap": "^8.6.0"
     }
+
 }
