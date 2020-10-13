@@ -13,16 +13,11 @@ import Register from "../../pages/Register/Register";
 import NotFound from "../../pages/NotFound/NotFound";
 import Contact from "../../pages/Contact/Contact";
 import Product from "../../pages/ProductPage/Product";
-// import Test from "../../pages/Test";
-// import Wellness from "../../pages/Test/Wellness";
 import Category from '../../pages/Category';
 import Wellness from '../../pages/Wellness';
 import ProductsByGender from '../../pages/ProductsByGender';
 import Checkout from '../../pages/Checkout/checkout';
-//import Intro from '../../pages/Testsomething/index'
-//import NavbarSlider from '../NavbarSlider/index'
 import "./App.css";
-import { Nav } from "react-bootstrap";
 
 
 
