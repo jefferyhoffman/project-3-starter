@@ -13,98 +13,72 @@ const BlogPost = () => {
   const [blog, setBlog] = useState("");
   const [imgUrl, setImgUrl] = useState("");
   const [redirect, setRedirect] = useState(false)
-    const handleSub = e=> {
-        e.preventDefault()
-        const newPost ={
-            email: user.email,
-            city: city,
-            state: state,
-            blog: blog,
-            image: imgUrl
 
-        }
-        API.Blog.create(newPost)
-          .then(data => {
-            console.log("created blog", data);
-            setRedirect(true)
-          })
-          .catch(err => {
-            console.log(err);
-          })
+  const handleSub = e => {
+    e.preventDefault()
+    const newPost = {
+      email: user.email,
+      city: city,
+      state: state,
+      blog: blog,
+      image: imgUrl
+
     }
+    API.Blog.create(newPost)
+      .then(data => {
+        console.log("created blog", data);
+        setRedirect(true)
+      })
+      .catch(err => {
+        console.log(err);
+      })
+  }
   return (
     <>
-      {redirect? <Redirect to="/blog" />:null}
+      {redirect ? <Redirect to="/blog" /> : null}
       <form onSubmit={e => handleSub(e)}>
-        <div 
-          className="form-group"
-          data-aos="fade-right"
-          data-aos-offset="200"
-          data-aos-delay="600"
-          data-aos-duration="1000"
-    >
-          <label htmlFor="exampleInputEmail1">City</label>
+        <div className="form-group">
+          <label htmlFor="exampleInputEmail1">Enter City Name</label>
           <input
             type="text"
             className="form-control"
-            onChange={e=> setCity(e.target.value)}
+            onChange={e => setCity(e.target.value)}
           />
-          
+
         </div>
-
-
-        <div 
-          className="form-group"
-          data-aos="flip-down"
-          data-aos-offset="200"
-          data-aos-delay="1000"
-          data-aos-duration="1000">
-          <label className="mr-1" htmlFor="exampleInputEmail1">State</label>
+        <div className="form-group">
+          <label className="mr-1" htmlFor="State">Select A State</label>
           <select onChange={e => setState(e.target.value)}>
             {stateAbreviations.map(val => {
-              return(
+              return (
                 <option value={val}>{val}</option>
               )
             })}
           </select>
-          
+
         </div>
 
-        <div 
-          className="form-group"
-          data-aos="fade-right"
-          data-aos-offset="200"
-          data-aos-delay="1400"
-          data-aos-duration="1000"
-    >
-          <label htmlFor="exampleInputEmail1">Blog</label>
+        <div className="form-group">
+          <label htmlFor="exampleInputEmail1">Type Your Blog Text Here!</label>
           <textarea
-            
+
             className="form-control"
-            onChange={e=> setBlog(e.target.value)}
+            onChange={e => setBlog(e.target.value)}
           ></textarea>
-          
+
         </div>
 
 
-        <div 
-          className="form-group"
-          data-aos="fade-left"
-          data-aos-offset="200"
-          data-aos-delay="1800"
-          data-aos-duration="1000"
-    >
-          <label htmlFor="exampleInputEmail1">Image URL</label>
+        <div className="form-group">
+          <label htmlFor="exampleInputEmail1">Paste Image URL Here</label>
           <input
             type="text"
             className="form-control"
-            onChange={e=> setImgUrl(e.target.value)}
+            onChange={e => setImgUrl(e.target.value)}
           />
-
-          
         </div>
 
-        
+
 
         <button 
           type="submit" 

@@ -33,7 +33,13 @@ function HomePage() {
       console.log("hit", data.data)
       setSearchByCityResults(() => data.data)
     })
+  }
 
+  const handleDelete = async (id) => {
+    const deleted = await API.Blog.delete(id).catch(err => console.log(err))
+    const all = await API.Blog.getAllBlogs()
+    alert(JSON.stringify(all))
+    setRandomBlogs(all.data)
   }
 
   return (
@@ -47,8 +53,10 @@ function HomePage() {
         <Col>
           <Form onSubmit={e => handleOnSubmit(e)}>
             <Form.Label>Search By City</Form.Label>
-            <Form.Control onChange={e => handleCitySearchChange(e)} type="text"  placeholder="Enter City"></Form.Control>
-            <Button className="m-2"  variant="primary" type="submit">Submit</Button>
+
+            <Form.Control onChange={e => handleCitySearchChange(e)} type="text" placeholder="Enter City"></Form.Control>
+            <Button className="m-2" variant="primary" type="submit">Submit</Button>
+
           </Form>
         </Col>
       </Row>
@@ -56,9 +64,9 @@ function HomePage() {
         <Col>
           <div className="d-flex flex-wrap justify-content-around">
             {searchByCityResults ? searchByCityResults.map(val => {
-              return <BlogCard author={val.email} city={val.city} state={val.state} text={val.blog} img={val.image} ></BlogCard>
+              return <BlogCard author={val.email} city={val.city} state={val.state} text={val.blog} img={val.image} id={val._id} delete={handleDelete}></BlogCard>
             }) : randomBlogs ? randomBlogs.map(val => {
-              return <BlogCard author={val.email} city={val.city} state={val.state} text={val.blog} img={val.image} ></BlogCard>
+              return <BlogCard author={val.email} city={val.city} state={val.state} text={val.blog} img={val.image} id={val._id} delete={handleDelete}></BlogCard>
             }) : null}
           </div>
         </Col>
