@@ -54,15 +54,16 @@ class App extends Component {
     return (
       <AuthContext.Provider value={this.state.auth}>
         <div className='App'>
+        <Navigation />
           {/* <div className='container'> */}
             <Switch>
               <Route exact path='/home' component={Home} />
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />
               <PrivateRoute path='/secret' component={Secret} />
-              <PrivateRoute path='/patron' component={Patron} />
+              <Route path='/patron' component={Patron} />
 
-              <PrivateRoute path='/vendor' component={Vendor} />
+              <Route path='/vendor' component={Vendor} />
               <Route path='/searchzip' component={SearchZip} />
 
               <Route component={NotFound} />
