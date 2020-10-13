@@ -41,7 +41,7 @@ const Cart = props => {
 
 
   function decrementCount() {
-    setCount(prevCount => prevCount - 1)
+    setCount(prevCount => Math.max(prevCount - 1 , 0))
   }
   function incrementCount() {
     setCount(prevCount => prevCount + 1)
