@@ -37,7 +37,13 @@ const BlogPost = () => {
     <>
       {redirect ? <Redirect to="/blog" /> : null}
       <form onSubmit={e => handleSub(e)}>
-        <div className="form-group">
+        <div 
+          className="form-group"
+          data-aos="fade-right"
+          data-aos-offset="200"
+          data-aos-delay="900"
+          data-aos-duration="1000"
+        >
           <label htmlFor="exampleInputEmail1">Enter City Name</label>
           <input
             type="text"
@@ -46,7 +52,13 @@ const BlogPost = () => {
           />
 
         </div>
-        <div className="form-group">
+        <div 
+          className="form-group"
+          data-aos="flip-up"
+          data-aos-offset="200"
+          data-aos-delay="1000"
+          data-aos-duration="1000"
+          >
           <label className="mr-1" htmlFor="State">Select A State</label>
           <select onChange={e => setState(e.target.value)}>
             {stateAbreviations.map(val => {
@@ -58,7 +70,13 @@ const BlogPost = () => {
 
         </div>
 
-        <div className="form-group">
+        <div 
+          className="form-group"
+          data-aos="fade-left"
+          data-aos-offset="200"
+          data-aos-delay="1200"
+          data-aos-duration="1000"
+>
           <label htmlFor="exampleInputEmail1">Type Your Blog Text Here!</label>
           <textarea
 
@@ -69,7 +87,13 @@ const BlogPost = () => {
         </div>
 
 
-        <div className="form-group">
+        <div 
+          className="form-group"
+          data-aos="fade-right"
+          data-aos-offset="200"
+          data-aos-delay="1400"
+          data-aos-duration="1000"
+          >
           <label htmlFor="exampleInputEmail1">Paste Image URL Here</label>
           <input
             type="text"
@@ -85,7 +109,7 @@ const BlogPost = () => {
           className="btn btn-primary"
           data-aos="fade-up"
           data-aos-offset="200"
-          data-aos-delay="2200"
+          data-aos-delay="1800"
           data-aos-duration="1000"
     >
           Submit
