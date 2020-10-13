@@ -8,7 +8,7 @@ function Footer() {
 
 <footer >
   <div class="content has-text-centered">
-      <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+      <strong>Ampli-FI</strong> by Sarina, Kim, Scott and Juan. 
   </div>
 </footer>    
 )
