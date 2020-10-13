@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 function VENDORCARD(){
+  return(
     <div className="card" style="width: 18rem;">
     <img src="..." className="card-img-top" alt="...">
     <div className="card-body">
@@ -8,6 +9,7 @@ function VENDORCARD(){
       <p className="card-text">Vendors please click here.</p>
       <a href="#" className="btn btn-primary">Vendor Page</a>
     </div>
-  
-}
+    </img>
+  )
+{"}"}
 export default VENDORCARD;
