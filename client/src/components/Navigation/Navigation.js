@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../styles/logo.png'
+import logo from '../../styles/logo.png';
+import Menu from '../Menu/Menu'
 
 import AuthContext from '../../contexts/AuthContext';
 import AuthDropdown from '../../components/AuthDropdown/AuthDropdown';
@@ -37,27 +38,27 @@ class Navigation extends Component {
         <nav className="navbar is-white" role="navigation" aria-label="main navigation" style={styles.navbar}>
           <div className="navbar-brand">
             <a className="navbar-item" to="#">
-              <img src={logo}  />
+              <img src={logo} />
             </a>
-</div>
-            <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-            </a>
-          
+          </div>
+          <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+
 
           <div id="navbarBasicExample" className="navbar-menu">
             <div className="navbar-start">
               <Link className="navbar-item" to='/' onClick={this.toggleCollapse}>
                 Home
               </Link>
-              
-                {user &&
-                  <Link className='navbar-item' to='/profile' onClick={this.toggleCollapse}>
-                    Profile
+
+              {user &&
+                <Link className='navbar-item' to='/profile' onClick={this.toggleCollapse}>
+                  Profile
              </Link>}
-             <div class="navbar-item has-dropdown is-hoverable">
+              <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link">
                   Resources</a>
 
@@ -67,21 +68,48 @@ class Navigation extends Component {
                   <Link class="navbar-item" to='/clinic' onClick={this.toggleCollapse}>
                     Clinics</Link>
                 </div>
-                </div>
               </div>
 
-              <div className="navbar-end">
-                <div className="navbar-item">
-                  <div className="buttons">
-                    <a className="button">
-                      {user
-                        ? <AuthDropdown onClick={this.toggleCollapse} />
-                        : <Link to='/login' onClick={this.toggleCollapse}><strong>Sign up/Login</strong></Link>}
-                    </a>
-                  </div>
+              <div class="navbar-item has-dropdown is-hoverable">
+              {user &&
+               <a className='navbar-link'><Link  to='/profile' onClick={this.toggleCollapse}>
+                  Profile
+             </Link></a> }
+                <hr class="navbar-divider" />
+                <div class="navbar-dropdown">
+                  <Link to='/profile' onClick={this.toggleCollapse} style={styles.font}>Profile</Link>
+                  <Link to='/community' onCick={this.toggleCollapse} style={styles.font}>Community</Link>
+                </div>
+
+
+                <div class="navbar-dropdown">
+                  <Link to='/affirmations' onClick={this.toggleCollapse} style={styles.font}> Affirmations</Link>
+                  <Link to="/mantras" onClick={this.toggleCollapse} style={styles.font}>Mantras</Link>
+                  <Link to="/jokes" onClick={this.toggleCollapse} style={styles.font}>Jokes</Link>
+                </div>
+
+                <hr class="navbar-divider" />
+                <div class="navbar-dropdown">
+                  <Link to='/comedy' onClick={this.toggleCollapse} style={styles.font}>Comedian Corner</ Link>
+                  <Link to='/bob' onClick={this.toggleCollapse} style={styles.font}>Bob Ross Channel</ Link>
+                  <Link to='/breathing' onClick={this.toggleCollapse} style={styles.font}>Breathing Exercises</ Link>
+                  <Link to='/odd' onClick={this.toggleCollapse} style={styles.font}>Oddly Satisfying</ Link>
                 </div>
               </div>
             </div>
+
+            <div className="navbar-end">
+              <div className="navbar-item">
+                <div className="buttons">
+                  <a className="button">
+                    {user
+                      ? <AuthDropdown onClick={this.toggleCollapse} />
+                      : <Link to='/login' onClick={this.toggleCollapse}><strong>Sign up/Login</strong></Link>}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </nav>
       </div>
     );

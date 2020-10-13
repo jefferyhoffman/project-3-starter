@@ -8,6 +8,14 @@ const styles = {
     }
 }
 
+const HomeButton = () => {
+    const [result, setResult] = useState([])
+
+    useEffect(() => {
+        API.Sendgrid.sendEmail()
+        .then(({data}) => setResult(data))
+    }, [API.Sendgrid])
+    console.log(result)
 
         return (
             <section className="container">
@@ -16,7 +24,7 @@ const styles = {
                     <div className="column">
                         <div className="" style={styles.button}>
                             <div class="control has-icons-left has-icons-right">
-                                <input class="input is-medium" type="email" placeholder="Email" onChange={this.handleInputChange} />
+                                <input class="input is-medium" type="email" placeholder="Email" />
                                 <span class="icon is-small is-left">
                                     <i class="fas fa-envelope"></i>
                                 </span>
@@ -24,7 +32,7 @@ const styles = {
                                     <i class="fas fa-check"></i>
                                 </span>
                             </div>
-                            <button onSubmit={this.handleSubmit} class="button is-small is-light" >Join Our Email List</button>
+                            <button class="button is-small is-light" >Join Our Email List</button>
                         </div>
                     </div>
                     <div className="column"></div>
@@ -32,6 +40,5 @@ const styles = {
             </section>
         )
     }
-}
 
 export default HomeButton;
