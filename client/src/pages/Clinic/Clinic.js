@@ -13,7 +13,11 @@ const mapCenter = {
 function Clinic() {
   return (
     <div className="App">
+<<<<<<< HEAD
       <Map location={mapCenter} zoomLevel={11} />
+=======
+      <Map location={mapCenter} zoomLevel={10} />
+>>>>>>> a16060bc164d29126561c04eb306eaa04d2c0319
     </div>
   );
 }

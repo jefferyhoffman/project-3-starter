@@ -37,12 +37,12 @@ class Comedy extends Component {
 
                 <div className="columns">
                   <div className="card-image column">
-                    <figure> {/* Video 3 */}
+                    <figure> {/* Video 5 */}
                       <iframe width="560" height="315" src="https://www.youtube.com/embed/xqKwMFvSLvs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
                     </figure>
                   </div>
                   <div className="card-image column">
-                    <figure> {/* Video 4 */}
+                    <figure> {/* Video 6 */}
                       <iframe width="560" height="315" src="https://www.youtube.com/embed/8oKYK1MPwhM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
                     </figure>
                   </div>
