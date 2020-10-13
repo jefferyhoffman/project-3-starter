@@ -44,12 +44,12 @@ function HomePage() {
 
   return (
     <Container >
-      <Row 
-      data-aos="fade-right"
-      data-aos-offset="200"
-      data-aos-delay="850"
-      data-aos-duration="1000"
->
+      <Row
+        data-aos="fade-right"
+        data-aos-offset="200"
+        data-aos-delay="850"
+        data-aos-duration="1000"
+      >
         <Col>
           <Form onSubmit={e => handleOnSubmit(e)}>
             <Form.Label>Search By City</Form.Label>
