@@ -46,7 +46,7 @@ const HomePage = () => {
 
 
       {/* CHOOSE YOUR LEISURE*/}
-      {/* <section className="fear"> */}
+      
       <MDBContainer className="text-center my-5">
         <h2 className="h1-responsive font-weight-bold text-center my-5">
           Choose your <i>ascalon</i>
@@ -123,7 +123,7 @@ const HomePage = () => {
             <Cards
               items={mensBest.slice(0,4)}
             />
-          {/* ))} */}
+        
           </MDBCol>
           
         </MDBRow>
