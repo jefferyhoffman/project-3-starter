@@ -1,11 +1,7 @@
 {
     "meta": {
         "code": 200,
-<<<<<<< HEAD
         "requestId": "5f849afaa72ce667c87e6e23"
-=======
-        "requestId": "5f8488cff6f5be02d5bb8b7b"
->>>>>>> a16060bc164d29126561c04eb306eaa04d2c0319
     },
     "response": {
         "venues": [
@@ -48,7 +44,6 @@
                         "primary": true
                     }
                 ],
-<<<<<<< HEAD
                 "referralId": "v-1602525946",
                 "hasPerk": false
             },
@@ -97,9 +92,6 @@
                     }
                 ],
                 "referralId": "v-1602525946",
-=======
-                "referralId": "v-1602521295",
->>>>>>> a16060bc164d29126561c04eb306eaa04d2c0319
                 "hasPerk": false
             },
             {
@@ -142,7 +134,6 @@
                         "primary": true
                     }
                 ],
-<<<<<<< HEAD
                 "referralId": "v-1602525946",
                 "hasPerk": false
             },
@@ -186,9 +177,6 @@
                     }
                 ],
                 "referralId": "v-1602525946",
-=======
-                "referralId": "v-1602521295",
->>>>>>> a16060bc164d29126561c04eb306eaa04d2c0319
                 "hasPerk": false
             },
             {
@@ -231,11 +219,7 @@
                         "primary": true
                     }
                 ],
-<<<<<<< HEAD
                 "referralId": "v-1602525946",
-=======
-                "referralId": "v-1602521295",
->>>>>>> a16060bc164d29126561c04eb306eaa04d2c0319
                 "hasPerk": false
             },
             {
@@ -277,7 +261,6 @@
                         "primary": true
                     }
                 ],
-<<<<<<< HEAD
                 "referralId": "v-1602525946",
                 "hasPerk": false
             },
@@ -323,9 +306,6 @@
                     }
                 ],
                 "referralId": "v-1602525946",
-=======
-                "referralId": "v-1602521295",
->>>>>>> a16060bc164d29126561c04eb306eaa04d2c0319
                 "hasPerk": false
             },
             {
@@ -368,11 +348,7 @@
                         "primary": true
                     }
                 ],
-<<<<<<< HEAD
                 "referralId": "v-1602525946",
-=======
-                "referralId": "v-1602521295",
->>>>>>> a16060bc164d29126561c04eb306eaa04d2c0319
                 "hasPerk": false
             },
             {
@@ -420,11 +396,7 @@
                         "primary": true
                     }
                 ],
-<<<<<<< HEAD
                 "referralId": "v-1602525946",
-=======
-                "referralId": "v-1602521295",
->>>>>>> a16060bc164d29126561c04eb306eaa04d2c0319
                 "hasPerk": false
             },
             {
@@ -466,7 +438,6 @@
                         "primary": true
                     }
                 ],
-<<<<<<< HEAD
                 "referralId": "v-1602525946",
                 "hasPerk": false
             },
@@ -646,9 +617,6 @@
                     }
                 ],
                 "referralId": "v-1602525946",
-=======
-                "referralId": "v-1602521295",
->>>>>>> a16060bc164d29126561c04eb306eaa04d2c0319
                 "hasPerk": false
             }
         ],
