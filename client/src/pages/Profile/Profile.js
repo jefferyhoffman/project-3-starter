@@ -98,7 +98,7 @@ class Profile extends Component {
                 <li>
                   <a className="menu-label is-active" style={styles.active}>Videos</a>
                   <ul>
-                    <li><Link to='/comedy' onClick={this.toggleCollapse} style={styles.font}>Comedian Corner</ Link></li>
+                    <li><Link to='/comedy' onClick={this.toggleCollapse} style={styles.font}>Comedy Corner</ Link></li>
                     <li><Link to='/bob' onClick={this.toggleCollapse} style={styles.font}>Bob Ross Channel</ Link></li>
                     <li><Link to='/breathing' onClick={this.toggleCollapse} style={styles.font}>Breathing Exercises</ Link></li>
                     <li><Link to='/odd' onClick={this.toggleCollapse} style={styles.font}>Oddly Satisfying</ Link></li>
