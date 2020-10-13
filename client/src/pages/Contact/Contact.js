@@ -10,19 +10,18 @@ const Contact = () => {
   return (
     <>
 
-{/* Jumbo Tron */}
-<MDBAnimation type="fadeInRight" delay=".3s">
-<MDBContainer className="mt-5 text-center">
-      <MDBRow>
-        <MDBCol>
-          <MDBJumbotron>
-            <h2 className="h1 display-3">Meet The Team</h2>
-            
-            <hr className="my-2" />
-            <p>
-             Everyday we come across obstacles and hurdles that aim to knock us off the line we walk.  The line that we've layed for ourselves to achieve our goals and live the life we seek. Here at Saint George, those obstalces and hurdles, we call them dragons and we slay them each and everyday.  Slay your Dragon for you and your people.
+      {/* Jumbo Tron */}
+      <MDBAnimation type="fadeInRight" delay=".3s">
+        <MDBContainer className="mt-5 text-center">
+          <MDBRow>
+            <MDBCol>
+              <MDBJumbotron>
+                <h2 className="h1 display-3">Meet The Team</h2>
+
+                <hr className="my-2" />
+                <p>
+                  Everyday we come across obstacles and hurdles that aim to knock us off the line we walk.  The line that we've layed for ourselves to achieve our goals and live the life we seek. Here at Saint George, those obstalces and hurdles, we call them dragons and we slay them each and everyday.  Slay your Dragon for you and your people.
             </p>
-            
           </MDBJumbotron>
         </MDBCol>
       </MDBRow>
@@ -86,15 +85,18 @@ const Contact = () => {
                   Back-End Genius
             </MDBCardText>
 
-            <MDBCol md='12' className='d-flex justify-content-center'>
-              <a href='https://www.linkedin.com/in/leonard-love-78085b18/' className='px-2 fa-lg li-ic'>
-                <MDBIcon fab icon='linkedin-in'></MDBIcon>
-              </a>
+                  <MDBCol md='12' className='d-flex justify-content-center'>
+                    <a href='https://www.linkedin.com/in/leonard-love-78085b18/' className='px-2 fa-lg li-ic'>
+                      <MDBIcon fab icon='linkedin-in'></MDBIcon>
+                    </a>
 
-              <a href='https://github.com/komplexnupe' className='px-2 fa-lg tw-ic'>
-                <MDBIcon fab icon='github'></MDBIcon>
-              </a>
+                    <a href='https://github.com/komplexnupe' className='px-2 fa-lg tw-ic'>
+                      <MDBIcon fab icon='github'></MDBIcon>
+                    </a>
 
+                  </MDBCol>
+                </MDBCardBody>
+              </MDBCard>
             </MDBCol>
           </MDBCardBody>
         </MDBCard>
@@ -164,22 +166,49 @@ const Contact = () => {
             <MDBCardText>
             Front-End Genius
             </MDBCardText>
-
-            <MDBCol md='12' className='d-flex justify-content-center'>
-            <a href='https://www.linkedin.com/in/george-kourakos-93018a1a7/' className='px-2 fa-lg li-ic'>
-                <MDBIcon fab icon='linkedin-in'></MDBIcon>
-              </a>
-
-              <a href='https://github.com/gkourako' className='px-2 fa-lg tw-ic'>
-                <MDBIcon fab icon='github'></MDBIcon>
-              </a>
+                  <a href='https://github.com/aleckbryson' className='px-2 fa-lg tw-ic'>
+                    <MDBIcon fab icon='github'></MDBIcon>
+                  </a>
+                </MDBCardBody>
+              </MDBCard>
             </MDBCol>
-          </MDBCardBody>
-        </MDBCard>
-      </MDBCol>
-      </MDBRow>
-      </MDBAnimation>
-    </MDBContainer >
+
+            <MDBCol md='6'>
+              <MDBCard>
+                <MDBCardImage
+                  hover
+                  overlay='white-light'
+                  className='card-img-top'
+                  src={gk}
+                  alt='man'
+                />
+
+                <MDBCardBody cascade className='text-center'>
+                  <MDBCardTitle className='card-title'>
+                    <strong>George Kourakos</strong>
+                  </MDBCardTitle>
+
+                  <p className='font-weight-bold blue-text'>Full-Stack Web Developer</p>
+
+                  <MDBCardText>
+                    Front-End Genius
+            </MDBCardText>
+
+                  <MDBCol md='12' className='d-flex justify-content-center'>
+                    <a href='https://www.linkedin.com/in/george-kourakos-93018a1a7/' className='px-2 fa-lg li-ic'>
+                      <MDBIcon fab icon='linkedin-in'></MDBIcon>
+                    </a>
+
+                    <a href='https://github.com/gkourako' className='px-2 fa-lg tw-ic'>
+                      <MDBIcon fab icon='github'></MDBIcon>
+                    </a>
+                  </MDBCol>
+                </MDBCardBody>
+              </MDBCard>
+            </MDBCol>
+          </MDBRow>
+        </MDBAnimation>
+      </MDBContainer >
     </>
   )
 }
