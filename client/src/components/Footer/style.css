@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
 
+#farmFreshMarketLogo2 {
+  height: 350px;
+  width: 100%;
+}
+
 .body {
   background-color: #e6ffe6;
   font-family: "Fredoka One", cursive;
   font-size: 20px;
-}
-
-.Navigation {
-    color: black;
-    
 }
