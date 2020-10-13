@@ -49,7 +49,8 @@ const styles = {
         fontFamily: "'Raleway', serif",
         color: "#71758D",
         textAlign: "left",
-        marginBottom: "60px"
+        marginBottom: "60px",
+        fontWeight: "bold"
 
     }
 }
