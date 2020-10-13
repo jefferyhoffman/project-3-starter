@@ -1,23 +1,29 @@
 import React, { useEffect, useState } from "react";
-//import jokesController from "../../../../server/controllers/api/jokesController";
-//import jokesController from "../../../../server/controllers/api/jokesController";
 import API from '../../lib/API'
 
-const Jokes =props=>{
-    const[result, setResult] = useState([])
-   
-  useEffect(()=>{
-      API.Jokes.getJokes()
-      .then(({data})=>setResult(data))
+const Jokes = props => {
+    const [result, setResult] = useState([])
 
-  },[API.Jokes])
+    useEffect(() => {
+        API.Jokes.getJokes()
+            .then(({ data }) => setResult(data))
 
-  console.log(result.data)
+    }, [API.Jokes])
+    console.log(result.data)
     
 
         return (
             <div>
-                {result.data?(
+                <p> "{result.setup}"</p>
+                <p>{result.punchline}</p>
+                </div> 
+                
+        );
+    
+}
+
+export default Jokes;
+{/* {result.data?(
                     <ul>
 
                     {result.data.map(joke=>(
@@ -27,12 +33,4 @@ const Jokes =props=>{
                     )}
                     
                     </ul>
-                ):(<></>)}
-
-        
-             </div> 
-        );
-    
-}
-
-export default Jokes;
+                ):(<></>)} */}
