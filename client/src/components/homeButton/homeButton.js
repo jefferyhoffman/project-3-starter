@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
 import API from '../../lib/API'
 
 
@@ -9,48 +9,45 @@ const styles = {
     }
 }
 
-export default class HomeButton extends Component {
+function HomeButton() {
 
-    constructor(props) {
-        super(props)
+//     const [email, setEmail] = useState([])
+//   const [formObject, setFormObject] = useState({
+//     email: ""
+//   })
 
-        this.onSubmit = this.onSubmit.bind(this);
-        this.onChangeUserEmail = this.onChangeUserEmail.bind(this);
+  
+
+//     function handleInputChange(event) {
+//         const { email, value } = event.target;
+//         setFormObject({...formObject, [email]: value})
+//       };
+    
+  
+//       function handleFormSubmit(event) {
+//         event.preventDefault();
         
-        this.state = {
-            email: ""
-        }
-    }
-    onChangeUserEmail(e) {
-        this.setState({ email: e.target.value })
-    }
-    onSubmit(e) {
-        e.preventDefault()
-
-        const userObject = {
-            email: this.state.email
-        };
-
-        API.Sendgrid.sendEmail()
-            .then((res) => {
-                console.log(res.data)
-            }).catch((error) => {
-                console.log(error)
-            });
-
-        this.setState({ email: '' })
-    }
-
-
-render() {
+//         useEffect(() => {
+//         API.sendGrid.sendEmail()
+//             .then(() => setFormObject({
+//               email: ""
+//             }))
+//             .then(() => setEmail(email))
+//             .catch(err => console.log(err));
+        
+//       };
+//     )
+    
         return (
             <section className="container">
                 <div className="columns">
                     <div className="column"></div>
                     <div className="column">
-                        <div className="" style={styles.button} onSubmit={this.onSubmit}>
+                        <form>
+                        <div className="" style={styles.button}>
                             <div class="control has-icons-left has-icons-right" >
-                                <input class="input is-medium" type="email" placeholder="Email" value={this.email} onChange={this.onChangeUserEmail}/>
+                                
+                                <input class="input is-medium" type="email" placeholder="Email"/>
                                 <span class="icon is-small is-left">
                                     <i class="fas fa-envelope"></i>
                                 </span>
@@ -59,11 +56,14 @@ render() {
                                 </span>
                             </div>
                             <button class="button is-small is-light" type="submit" >Join Our Email List</button>
+                            
                         </div>
+                        </form>
                     </div>
                     <div className="column"></div>
                 </div>
             </section>
         )
     }
-}
+
+export default HomeButton;
