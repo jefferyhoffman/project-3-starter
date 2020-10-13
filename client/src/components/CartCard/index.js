@@ -1,16 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react'
 import {
-  MDBContainer,
   MDBRow,
   MDBCol,
-  MDBTypography,
   MDBCard,
-  MDBCardBody,
   MDBBtn,
-  MDBIcon,
   MDBCardImage,
-  MDBCardTitle,
-  MDBCardText,
   MDBView,
   MDBMask
 } from
