@@ -4,6 +4,7 @@ import '../../styles/jumbotron.css'
 import plants from "../../styles/plants.jpg";
 import Cards from "../../components/Cards/Cards";
 import HomeButton from '../../components/homeButton/homeButton';
+import Footer from '../../components/Footer/Footer'
 
 const styles = {
   hero: {
@@ -29,6 +30,7 @@ class HomePage extends Component {
           <Cards/>
         </div>
       </div>      
+      <Footer />
   </div>
     );
   }

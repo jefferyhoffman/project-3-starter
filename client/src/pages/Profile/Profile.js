@@ -3,6 +3,7 @@ import '../../styles/menu.css';
 import { Link } from 'react-router-dom';
 import AuthContext from '../../contexts/AuthContext';
 import Jokes from '../../components/JokesRoute/Jokes';
+import AffirmationsApi from '../../components/Affirmation/AffirmationApi';
 
 
 const styles = {
@@ -95,7 +96,7 @@ class Profile extends Component {
           <div className="tile is-vertical is-parent">
             <div className="tile is-child box">
               <p className="title" style={styles.titles}>Daily Affirmation</p>
-             
+             <AffirmationsApi />
             </div>
             <div className="tile is-child box">
               <p className="title">Joke of the Day</p>

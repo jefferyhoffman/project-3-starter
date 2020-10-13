@@ -1,5 +1,4 @@
-import React from "react";
-import '../../styles/cards.css';
+import React, { useEffect, useState } from "react";
 
 const styles = {
     cardBody: {
@@ -54,8 +53,8 @@ const styles = {
 
     }
 }
-
 function Affirmations() {
+
     return (
 
         <div>
