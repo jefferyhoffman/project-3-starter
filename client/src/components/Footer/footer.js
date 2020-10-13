@@ -15,7 +15,7 @@ const FooterPagePro = () => {
               you believe in and never settle. 
             </p>
             <h5 className="text-uppercase mb-4 mt-3 font-weight-bold">
-            <a href="#!">Contact Us</a>
+            <a href="/contact">Contact Us</a>
             </h5>
           </MDBCol>
           <hr className="clearfix w-100 d-md-none" />
@@ -71,7 +71,7 @@ const FooterPagePro = () => {
                 <a href="/products/category/hats">Hats</a>
               </li>
               <li>
-                <a href="#">Water Bottles</a>
+                <a href="/products/category/Bottles">Water Bottles</a>
               </li>
             </ul>
           </MDBCol>
