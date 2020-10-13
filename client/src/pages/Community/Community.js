@@ -230,7 +230,9 @@ const styles = {
     fontSize: "70px",
     marginBottom: "100px",
     fontFamily: "raleway",
-    textAlign: "left"
+    textAlign: "left",
+    color: "#718D7B"
+    
   },
   list: {
     fontSize: "30px"
