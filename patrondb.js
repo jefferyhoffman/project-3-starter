@@ -31,4 +31,15 @@ if (req.body.email &&
             }
         });
     }
-    
+      //hashing before saving
+
+    patronSchema.pre('save', function (next) {
+        var patron = this;
+        bcrypt.hash(patron.password,15, function (err, hash) {
+            if (err) {
+                return next (err);
+            }
+            patron.password = hash;
+            next();
+        })
+    });
