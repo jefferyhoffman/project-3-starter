@@ -5,6 +5,7 @@ import PATRONCARD from "../../components/PATRONCARD";
 import VENDORCARD from "../../components/VENDORCARD";
 import MARKETCARD from "../../components/MARKETCARD";
 import Navigation from "../../components/NAVBAR";
+import "./style.css";
 
 class HomePage extends Component {
   render() {
