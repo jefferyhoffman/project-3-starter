@@ -43,3 +43,10 @@ if (req.body.email &&
             next();
         })
     });
+  //sessions to track logins 
+
+app.use(session({
+    secret:'hange',
+    resave: true,
+     saveUninitialized: false
+})); 
