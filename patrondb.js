@@ -50,3 +50,23 @@ app.use(session({
     resave: true,
      saveUninitialized: false
 })); 
+patronSchema.statics.authenticate = function (email,password, callback) {
+    patron.findOne ({email:email})
+    .exec(function (err,user) {
+        if (err) {
+            return callback(err) 
+        } else if (!user) {
+            var err = new Error('User not found.');
+            err.status = 401;
+            return callback(err);
+        }
+        bcrypt.compare(password,patron.password,function (err, result)
+        {
+            if (result === true) {
+                return callback(null, user);
+            } else {
+                return callback ();
+            }
+        })
+    });
+}
