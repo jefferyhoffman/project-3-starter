@@ -20,7 +20,7 @@ const Contact = () => {
 
                 <hr className="my-2" />
                 <p>
-                  Everyday we come across obstacles and hurdles that aim to knock us off the line we walk.  The line that we've layed for ourselves to achieve our goals and live the life we seek. Here at Saint George, those obstalces and hurdles, we call them dragons and we slay them each and everyday.  Slay your Dragon for you and your people.
+                Everyday we come across obstacles and hurdles that aim to knock us off the line we walk. The line that we've laid for ourselves to achieve our goals and live the life we seek. Here at Saint George, those obstalces and hurdles, we call them dragons and we slay them each and everyday. Slay your Dragon for you and your people.
             </p>
               </MDBJumbotron>
             </MDBCol>
