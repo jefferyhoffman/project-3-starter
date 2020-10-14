@@ -19,6 +19,7 @@
     "nodemon": "^1.18.10"
   },
   "dependencies": {
-    "install": "^0.13.0"
+    "install": "^0.13.0",
+    "react-chatbot-kit": "^1.1.0"
   }
 }

@@ -864,7 +864,7 @@ const productSeed = [
                 quantity: 0,
             }
         ],
-        photo: "ReadytoRollCrew.jpg"
+        photo: "ReadyToRollCrew.jpg"
     },
     {
         name: "ABC Jogger 30",
