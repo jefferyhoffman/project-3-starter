@@ -57,7 +57,7 @@ class App extends Component {
           
           {/* <div className='container'> */}
             <Switch>
-            <Route exact path='/' component={Home} />
+              <Route exact path='/' render={()=>{window.location.href = "/landing-page.html"}} /> 
               <Route exact path='/home' component={Home} />
               <Route path='/login' component={Login} />
               <Route path='/register' component={Register} />

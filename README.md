@@ -64,6 +64,9 @@ A Pen created on CodePen.io. Original URL: [https://codepen.io/silkybubbly/pen/r
 ## For our landing page Logo
 ### Canva.com
 
+## For our FavIcon
+### https://favicon.io/favicon-converter/
+
 
 
 # Links

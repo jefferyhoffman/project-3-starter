@@ -166,7 +166,7 @@ function addTreats() {
     treats.push(createTreat());
   }
   setTimeout(() => {
-    window.location.assign('/home');
+    window.location.assign('http://localhost:3000/home');
   }, 5000);
 }
 
