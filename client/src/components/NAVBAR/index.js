@@ -65,7 +65,7 @@ class NAVBAR extends Component {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-black" href="/zip-code">
+                <a className="nav-link text-black" href="searchzip">
                   Market Search
                 </a>
               </li>
