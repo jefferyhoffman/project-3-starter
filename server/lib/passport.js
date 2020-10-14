@@ -11,7 +11,6 @@ var JWT_STRATEGY_OPTS = {
 passport.use(
   new JwtStrategy(JWT_STRATEGY_OPTS, function (jwtPayload, done) {
     db.Users.findOne({ _id: jwtPayload.sub })
-      .populate({path: 'cart', select: 'product'})
       .then(user => done(null, user || false))
       .catch(err => done(err, false));
   })

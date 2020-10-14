@@ -48,6 +48,7 @@ const Product = props => {
 
     API.Users.addToCart(context.authToken, { product: id, color: color, size: size} )
       .then(res => {
+        context.onRefresh();
         console.log(res)
       })
       .catch(err => console.log(err))
