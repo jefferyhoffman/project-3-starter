@@ -87,6 +87,8 @@ function Vendor() {
 	}
 
 	return (
+    <>
+    <Navigation />
 		<main className="body animated slideInLeft">
 			<img
 				src="farmFreshMarketLogo2.png"
@@ -303,6 +305,7 @@ function Vendor() {
 			<br />
 			<br />
 		</main>
+    </>
 	);
 }
 export default Vendor;
