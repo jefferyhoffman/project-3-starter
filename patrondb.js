@@ -27,7 +27,7 @@ if (req.body.email &&
             if (err) {
                 return next (err)
             } else {
-                return res.redirect('/home');
+                return res.redirect('/index');
             }
         });
     }
