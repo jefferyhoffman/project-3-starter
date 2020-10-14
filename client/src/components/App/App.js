@@ -54,7 +54,6 @@ class App extends Component {
     return (
       <AuthContext.Provider value={this.state.auth}>
         <div className='App'>
-        <Navigation />
           {/* <div className='container'> */}
             <Switch>
               <Route exact path='/home' component={Home} />
