@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './style.css';
-import Navigation from '../../components/NAVBAR';
+import Navigation from "../../components/NAVBAR";
 import API from '../../lib/API';
 import { Redirect } from 'react-router-dom';
 function Patron() {
@@ -44,6 +44,8 @@ function Patron() {
 	}
 
 	return (
+    <>
+    <Navigation />
 		<main className="body animated slideInLeft">
 			<img
 				src="farmFreshMarketLogo2.png"
@@ -172,6 +174,7 @@ function Patron() {
 
 			
 		</main>
+    </>
 	);
 }
 export default Patron;
