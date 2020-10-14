@@ -70,6 +70,7 @@ body.dark {
 }
 .header-footer-opacity {
   opacity: 0.5;
+
 }
 body {
   margin-top: 100px;
@@ -191,14 +192,21 @@ code {
 
 .Navigation {
   opacity: .3;
+  transition: 1s;
+
 }
 .Navigation:hover {
+  transition: 1s;
   opacity: .9;
 }
 .Footer {
   opacity: .3;
+  transition: 1s;
+
 }
 .Footer:hover {
   opacity: .9;
+  transition: 1s;
+
 }
 
