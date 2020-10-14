@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import FOOTER from "../../components/Footer";
 import LOGO from "../../components/LOGO";
+import Navigation from "../../components/NAVBAR";
 import API from '../../lib/API';
 // import "../../components/App/utils/button"
 function HomePage () {
@@ -19,6 +20,7 @@ function HomePage () {
     return (
       <div className="Home">
         <LOGO></LOGO>
+        <Navigation />
         <form onSubmit={e => handleSubmit(e)}>
           <div className="form-group">
             <label for="zip-code">Zip Code</label>

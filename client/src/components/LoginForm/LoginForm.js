@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./style.css";
 
 import Octicon, { Mail, Key } from '@githubprimer/octicons-react';
 

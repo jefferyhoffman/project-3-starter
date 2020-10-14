@@ -16,16 +16,15 @@ class NAVBAR extends Component {
       collapsed: !this.state.collapsed,
     });
   };
-  
   render() {
     const { user } = this.context;
     const { collapsed } = this.state;
     const targetClass = `collapse navbar-collapse ${!collapsed && "show"}`;
     const togglerClass = `navbar-toggler ${collapsed && "collapsed"}`;
-
+    
     return (
       <div className="Navigation">
-        <nav className="navbar navbar-light bg-green text-black animated slideInLeft">
+        <nav className="navbar navbar-light">
           {/*<!-- Navbar brand -->*/}
           <Link className="navbar-brand text-black" href="#">
             Farm Fresh Market
