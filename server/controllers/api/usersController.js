@@ -3,6 +3,7 @@ const usersController = require('express').Router();
 const db = require('../../models');
 const { JWTVerifier } = require('../../lib/passport');
 const jwt = require('jsonwebtoken');
+const Product = require('../../models/product');
 
 usersController.post('/', (req, res) => {
   const { email, password } = req.body;

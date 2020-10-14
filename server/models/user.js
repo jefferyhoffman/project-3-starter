@@ -25,8 +25,7 @@ const UserSchema = new Schema({
         type: String,
         default: uniqid()
       },
-      // status: {},
-      // total: {},
+
 
       products: [
         {
@@ -37,7 +36,9 @@ const UserSchema = new Schema({
     }
   ],
   cart: [
+
     {
+
       product: {
         type: Schema.Types.ObjectId,
         ref: 'Product'

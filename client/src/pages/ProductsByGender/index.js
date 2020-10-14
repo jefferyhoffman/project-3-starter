@@ -13,7 +13,7 @@ const ProductsByGender = props=> {
         setAll(gender)
         API.Products.getAllByGender(gender)
         .then(res => {
-          console.log(res.data)
+          // console.log(res.data)
           setItems(res.data)
         })
         .catch(err => console.log(err));
