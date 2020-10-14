@@ -48,7 +48,7 @@ SO THAT … I can buy local and support local farmers!
 # Installation
 To install this program:
 
-    npm install react heroku 
+    yarn install
 
 # How to use
 This application can be used to find USDA approved Farmer's Markets and Local produce vendors. Users can register to create an account; vendors so that they be added to a list of vendors and consumers so that they make requests for available vendors who are offereing what they want.
@@ -60,6 +60,10 @@ This application can be used to find USDA approved Farmer's Markets and Local pr
 ### Candy Clicker [Cool Button]
 
 A Pen created on CodePen.io. Original URL: [https://codepen.io/silkybubbly/pen/rNexaOr](https://codepen.io/silkybubbly/pen/rNexaOr).
+
+## For our landing page Logo
+### Canva.com
+
 
 
 # Links
@@ -84,22 +88,22 @@ C.A.T.S, which stands for Charlotte Agricultural Tracking Services is a team of 
 ## Chris Collins:
 Email: ccollins36@icloud.com
   
-Github: ccollins1775
+Github: https://github.com/ccollins1975
 
 ## Zona Garcia:
 Email: azonagarcia@aol.com
   
-Github: azonagarcia
+Github: https://github.com/AZonaGarcia
 
 ## Jared Gober:
 Email: jaredcgober@gmail.com
    
-Github: JCGober
+Github: https://github.com/JCGober
 
 ## Eden Stapleton:
 Email: edenrstapleton@gmail.com
   
-Github: ERStapleton
+Github: https://github.com/ERStapleton
 
 
  
