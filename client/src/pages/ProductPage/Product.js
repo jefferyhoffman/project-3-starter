@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBBtn } from "mdbreact";
 import AddCart from '../../components/AddCart/AddCart'
 import Chatbot from 'react-chatbot-kit';
@@ -15,7 +15,7 @@ const Product = props => {
   const [colorArr, setColorArr] = useState([])
   const [sizes, setSizes] = useState([])
   const [size, setSize] = useState("")
-  const [button, setButton] = useState("")
+ 
   useEffect(() => {
     API.Products.getProduct(props.match.params.id)
       .then(res => {
