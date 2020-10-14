@@ -9,7 +9,7 @@ function MARKETCARD(){
       <h5 className="card-title">Market</h5>
 
       <p className="card-text">Type in your zipcode to find a Farmer Markets near you! </p>
-      <a href="/zip-code" className="btn btn-primary">Market Search</a>
+      <a href="/searchzip" className="btn btn-primary">Market Search</a>
 
     </div>
     </div>
