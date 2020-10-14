@@ -70,9 +70,9 @@ const Cart = props => {
             <MDBView hover>
               <MDBCardImage className="cardImg" src={props.photo} />
               <MDBMask overlay="black-light" className="blackLight">
-                {/* <MDBBtn className="hoverBtn" outline color="white">
+                <MDBBtn className="hoverBtn" outline color="white">
               View
-            </MDBBtn> */}
+            </MDBBtn>
               </MDBMask>
             </MDBView>
           </MDBCard>
