@@ -53,23 +53,19 @@ class NAVBAR extends Component {
                   Home <span className="sr-only">(current)</span>
                 </a>
               </li>
+              
               <li className="nav-item">
-                <a className="nav-link text-black" href="#">
-                  Map
+                <a className="nav-link text-black" href="/Vendor">
+                  Vendors
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-black" href="#">
-                  Farmers
+                <a className="nav-link text-black" href="/Patron">
+                  Patron
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-black" href="#">
-                  Requests
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link text-black" href="#">
+                <a className="nav-link text-black" href="searchzip">
                   Market Search
                 </a>
               </li>
