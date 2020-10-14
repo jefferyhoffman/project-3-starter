@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Switch, Route, Link} from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
 
 import API from "../../lib/API";
 import TokenStore from "../../lib/TokenStore";
@@ -39,12 +39,25 @@ class App extends Component {
       }));
     };
 
+    this.handleRefresh = () => {
+      const { authToken } = this.state.auth;
+      if (!authToken) return;
+
+      API.Users.getMe(authToken)
+        .then((response) => response.data)
+        .then((user) =>
+          this.setState((prevState) => ({ auth: { ...prevState.auth, user } }))
+        )
+        .catch((err) => console.log(err));
+    }
+
     this.state = {
       auth: {
         user: undefined,
         authToken: TokenStore.getToken(),
         onLogin: this.handleLogin,
         onLogout: this.handleLogout,
+        onRefresh: this.handleRefresh
       },
     };
   }
@@ -68,7 +81,7 @@ class App extends Component {
       <AuthContext.Provider value={this.state.auth}>
         <div className="App">
           <Navigation />
-         {/* <NavbarSlider/> */}
+          {/* <NavbarSlider/> */}
           <div>
             <Switch>
               <Route exact path="/" component={Home} />
@@ -78,10 +91,10 @@ class App extends Component {
               {/* REMEMBER TO TAKE THIS OUT */}
               {/* <Route path="/layout" component={Layout} /> */}
               <Route path="/product/:id" component={Product} />
-              <Route path ="/products/all/:gender" component={ProductsByGender}/>
-              <Route path ="/products/category/:product" component={Wellness}/>
-              <Route path ="/products/:gender/:product" component={Category}/>
-              <Route path="/checkout" component={Checkout}/>
+              <Route path="/products/all/:gender" component={ProductsByGender} />
+              <Route path="/products/category/:product" component={Wellness} />
+              <Route path="/products/:gender/:product" component={Category} />
+              <Route path="/checkout" component={Checkout} />
               {/* <Route path="/intro" component={Intro}/> */}
               <Route component={NotFound} />
             </Switch>

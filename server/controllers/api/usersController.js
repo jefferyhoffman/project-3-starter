@@ -14,7 +14,10 @@ usersController.post('/', (req, res) => {
 });
 
 usersController.get('/me', JWTVerifier, (req, res) => {
-  res.json(req.user);
+  db.Users.findOne({ _id: req.user._id })
+    .populate("cart.product")
+    .then(user => res.json(user))
+    .catch(err => console.log(err));
 });
 
 usersController.post('/login', (req, res) => {
@@ -34,6 +37,7 @@ usersController.post('/login', (req, res) => {
 });
 
 usersController.put('/me/cart', JWTVerifier, (req, res) => {
+  console.log(req.body);
   db.Users.update({ _id: req.user._id }, {$push:{cart: req.body }})
     .then(data => {
       res.json(data); 
