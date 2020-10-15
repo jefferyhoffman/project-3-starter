@@ -93,20 +93,27 @@ Email: ccollins36@icloud.com
   
 Github: https://github.com/ccollins1975
 
+linkedIn: https://www.linkedin.com/in/chris-collins-629293151/
+
 ## Zona Garcia:
 Email: azonagarcia@aol.com
   
 Github: https://github.com/AZonaGarcia
+
+linkedIn: https://www.linkedin.com/in/azonagarcia/
 
 ## Jared Gober:
 Email: jaredcgober@gmail.com
    
 Github: https://github.com/JCGober
 
+linkedIn: https://www.linkedin.com/in/jared-gober-7562611b3/
+
 ## Eden Stapleton:
 Email: edenrstapleton@gmail.com
   
 Github: https://github.com/ERStapleton
 
+linkedIn: https://www.linkedin.com/in/eden-stapleton-2244241b5/
 
  
