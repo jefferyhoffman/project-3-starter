@@ -22,7 +22,7 @@ import fav from '../Navigation/fav.gif'
 
 class NavbarPage extends Component {
   state = {
-    isOpen: true,
+    isOpen: false,
   };
 
   toggleCollapse = () => {

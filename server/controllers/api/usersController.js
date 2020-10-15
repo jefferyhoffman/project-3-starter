@@ -38,20 +38,27 @@ usersController.post('/login', (req, res) => {
 
 usersController.put('/me/cart', JWTVerifier, (req, res) => {
   console.log(req.body);
-  db.Users.update({ _id: req.user._id }, {$push:{cart: req.body }})
+  db.Users.update({ _id: req.user._id }, { $push: { cart: req.body } })
     .then(data => {
-      res.json(data); 
+      res.json(data);
     })
-  })
-  usersController.get('/me/cart', JWTVerifier, (req, res) => {
-    db.Users.findById(req.user._id)
-      .then(data => {
-        res.json(data);
-      })
-      .catch(err => {
-        console.log(err);
-        res.status(400).json(err)
-      });
-  });
+})
 
-  module.exports = usersController;
+usersController.put('/me/cart/remove', JWTVerifier, (req, res) => {
+  console.log(req.user._id)
+  console.log(req.body)
+  db.Users.findOneAndUpdate(
+    { _id: req.user._id },
+    { $pull: { cart:  {_id: req.body._id}  } },
+    {new: true}
+  )
+    .then(data => {
+      res.json(data);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(400).json(err)
+    });
+});
+
+module.exports = usersController;

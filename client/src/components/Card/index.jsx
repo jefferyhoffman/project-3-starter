@@ -12,7 +12,7 @@ import {
 const Card = props => {
   // console.log(props);
     return(
-        <MDBCol md={3}>
+        <MDBCol md={3} >
         <MDBCard
           className="z-depth-0"
           style={{ height: "fit-content", width: "220px" }}

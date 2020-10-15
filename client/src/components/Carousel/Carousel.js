@@ -13,7 +13,7 @@ const Carousel = () => {
       <MDBRow>
       <MDBCol md="4">
        <br></br>
-      <MDBTypography  className="text-right" tag="h3" variant="display-3">Meet The Athletes</MDBTypography>
+      <MDBTypography  className="text-md-right text-sm-center" tag="h3" variant="display-3">Meet The Athletes</MDBTypography>
       </MDBCol>
         <MDBCol md="4">
       <MDBCarousel
@@ -57,7 +57,7 @@ const Carousel = () => {
       </MDBCol>
       <MDBCol md="4">
         <br></br>
-        <p className="text-center">
+        <p className="text-md-center text-sm-center">
           The Saint George Athletes are here to help you!  At Saint George we carefully choose our athletes through a rigurous application process.  The journey begins as an ambassador and once you've caught our eye we invite you to our headquarters and spend a whole week getting know you!  If we feel you're right a fit you officially become a Saint George Athlete and begin using the fire inside of you to lend a hand to our community.
         </p>
         
