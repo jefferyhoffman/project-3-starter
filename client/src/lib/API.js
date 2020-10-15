@@ -25,6 +25,15 @@ export default {
           'Authorization': `Bearer ${authToken}`
         }
       })
+    },
+
+    removeCartItem: function (authToken, data){
+      console.log(authToken)
+      return axios.put('/api/users/me/cart/remove', data, {
+        headers: {
+          'Authorization': `Bearer ${authToken}`
+        }
+      })
     }
   },
 
