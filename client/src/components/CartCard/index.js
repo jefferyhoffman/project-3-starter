@@ -9,20 +9,11 @@ const Cart = props => {
   const context = useContext(AuthContext)
   const [items, setItems] = useState({})
 
-  useEffect(() => {
-    API.Users.getMe(context.authToken)
-      .then(res => {
-        setItems(res.data);
-      })
-      .catch(err => console.log(err));
-  }, [API.Users]);
-
-
-  // console.log("CART =====>", items.cart)
+ 
 
   return (
     <MDBRow className="ml-4">
-      {items.cart && items.cart.map(item => (
+      {context.user.cart && context.user.cart.map(item => (
         <CartCardItem key={item._id}
         item={item}/>
       ))}
