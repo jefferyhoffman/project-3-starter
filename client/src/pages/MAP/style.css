@@ -1,0 +1,104 @@
+/* // Original Design by @keyframers [https://codepen.io/team/keyframers/pen/wvvoBQW]   */
+
+@import url('https://fonts.googleapis.com/css?family=Fascinate+Inline&display=swap');
+
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+  position: relative;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #14192C;
+}
+
+.treat-button {
+  font-family: 'Fascinate Inline', cursive;
+  font-size: 4vmin;
+  appearance: none;
+  background: linear-gradient(to bottom, #F46001, #E14802);
+  border: none;
+  color: #FFF;
+  border-radius: 2em;
+  padding: .6em 1.5em;
+  overflow: hidden;
+  user-select: none;
+  cursor: pointer;
+  z-index: 1;
+  box-shadow: 0 0 1em rgba(white, .2);
+  transition: transform .1s cubic-bezier(.5, 0, .5, 1),
+    box-shadow .2s;
+  
+  &:hover {
+    box-shadow: 0 0 2em rgba(white, .3);
+  }
+
+  outline: none;
+
+  &:active {
+    transform: scale(0.8) translateY(10%);
+    transition-timing-function: cubic-bezier(.5, 0, .5, 1);
+  }
+}
+
+.treat {
+  --scale-x: 0;
+  --scale-y: 0;
+  pointer-events: none;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: calc(50% - .5rem);
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5vmin;
+  transform: 
+    translate(
+      calc( var(--x) * 1px ), 
+      calc( var(--y) * 1px )
+    ) 
+    translate(-50%, -50%);
+  pointer-events: none;
+  animation: 
+    treat-enter .1s ease-in backwards, 
+    treat-exit 300ms linear 
+    calc( (var(--lifetime, 3000) * 1ms) - 300ms) 
+    forwards;
+
+  @keyframes treat-enter {
+    from {
+      opacity: 0;
+    }
+  }
+  @keyframes treat-exit {
+    to {
+      opacity: 0;
+    }
+  }
+  
+  .inner {
+    animation: inner-rotate .6s linear infinite;
+    transform: rotate( 
+      calc(-1turn * var(--direction) )
+    ); 
+    @keyframes inner-rotate {
+      to { 
+        transform: none;
+      } 
+    }
+  }
+}
