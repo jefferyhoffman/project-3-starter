@@ -6,8 +6,8 @@ export default {
       return axios.post('/api/users/login', { email, password });
     },
 
-    create: function (email, password) {
-      return axios.post('/api/users', { email, password });
+    create: function (bodyObj) {
+      return axios.post('/api/users', bodyObj);
     },
 
     getMe: function (authToken) {
@@ -26,6 +26,12 @@ export default {
           'Authorization': `Bearer ${authToken}`
         }
       });
+    }
+  },
+
+  Maps: {
+    getMaps: function (zipcode) {
+      return axios.get('/api/maps/' + zipcode, {})
     }
   }
 }

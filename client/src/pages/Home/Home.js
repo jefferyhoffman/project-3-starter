@@ -1,27 +1,30 @@
-import React, { Component } from 'react';
-
-import logo from './logo.svg';
+import React, { Component } from "react";
+import FOOTER from "../../components/Footer";
+import LOGO from "../../components/LOGO";
+import PATRONCARD from "../../components/PATRONCARD";
+import VENDORCARD from "../../components/VENDORCARD";
+import MARKETCARD from "../../components/MARKETCARD";
+import Navigation from "../../components/NAVBAR";
+import "./style.css";
 
 class HomePage extends Component {
   render() {
     return (
-      <div className='Home'>
-        <div className='row'>
-          <div className='col'>
-            <img src={logo} className='App-logo' alt='logo' />
-            <p>
-              Edit <code>src/pages/Home.js</code> and save to reload.
-            </p>
-            <a
-              className='App-link'
-              href='https://reactjs.org'
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
+      <div className="Home">
+        <LOGO></LOGO>
+        <Navigation />
+        <div className="row">
+          <div className="col-sm">
+            <PATRONCARD />
+          </div>
+          <div className="col-sm">
+            <VENDORCARD />
+          </div>
+          <div className="col-sm">
+            <MARKETCARD />
           </div>
         </div>
+        <FOOTER />
       </div>
     );
   }

@@ -6,12 +6,14 @@
   "dependencies": {
     "@githubprimer/octicons-react": "^8.5.0",
     "axios": "^0.18.1",
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3",
+    "bootstrap": "^4.5.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-gravatar": "^2.6.3",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.1.1"
+    "react-scripts": "3.1.1",
+    "reactstrap": "^8.6.0"
   },
   "scripts": {
     "start": "react-scripts start",

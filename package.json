@@ -17,5 +17,11 @@
   "devDependencies": {
     "concurrently": "^4.1.0",
     "nodemon": "^1.18.10"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "reactstrap": "^8.6.0",
+    "sass": "^1.27.0"
   }
 }
